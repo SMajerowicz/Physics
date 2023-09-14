@@ -1,0 +1,61 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% Example of the Memoir class, an alternative to the default LaTeX classes such as article and book, with many added features built into the class itself.
+
+\documentclass[12pt,a4paper]{memoir} % for a long document
+%\documentclass[12pt,a4paper,article]{memoir} % for a short document
+
+\usepackage[utf8]{inputenc} % set input encoding to utf8
+% Three next lines to use french language
+\usepackage[french]{babel}
+\usepackage[autolanguage]{numprint}
+\usepackage[T1]{fontenc}
+
+% Don't forget to read the Memoir manual: memman.pdf
+
+%%% PAGE DIMENSIONS
+% Set up the paper to be as close as possible to both A4 & letter:
+\settrimmedsize{11in}{210mm}{*} % letter = 11in tall; a4 = 210mm wide
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{\stockwidth}
+\addtolength{\trimedge}{-\paperwidth}
+\settypeblocksize{*}{\lxvchars}{1.618} % we want to the text block to have golden proportionals
+\setulmargins{50pt}{*}{*} % 50pt upper margins
+\setlrmargins{*}{*}{1.618} % golden ratio again for left/right margins
+\setheaderspaces{*}{*}{1.618}
+\checkandfixthelayout 
+% This is from memman.pdf
+
+%%% \maketitle CUSTOMISATION
+\posttitle{\par\end{center}\vskip 0.5em}
+
+%%% ToC (table of contents) APPEARANCE
+\maxtocdepth{subsection} % include subsections
+
+%% END Memoir customization
+
+\title{\'Etapes de calcul et d\'emonstrations du tome 1 <<M\'ecanique>>  de Physique Th\'eorique de L. Landau \&  E. Lifchitz}
+\author{S\'ebastien Majerowicz}
+\date{2023} % Delete this line to display the current date
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Ce document est une aide pour la compréhension du premier livre des célèbres cours de Landau \& Lifschitz au travers de la démonstration des formules et de la résolution des exercices propos\'es.
+\end{abstract}
+
+\tableofcontents* % the asterisk means that the contents itself isn't put into the ToC
+
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\chapter{\'Equations du mouvement}
+\section{Coordonn\'ees g\'en\'eralis\'ees}
+
+
+\end{document}
