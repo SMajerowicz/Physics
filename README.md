@@ -1,2 +1,2 @@
 # Physics
-Ce document est une aide pour la compréhension du premier livre des célèbres cours de Landau & Lifschitz au travers de la démonstration des formules et de la résolution des exercices proposés.
+Ces documents LaTeX sont une aide pour la compréhension des livres issus des célèbres cours de Landau & Lifschitz au travers de la démonstration des formules et de la résolution des exercices proposés. Ils ne sont pas une reproduction du contenu des livres, achetez-les, ils le vallent largement. Mais ils vous permettront de passer d'une formule à l'autre ou d'avoir le déroulé de correction des exercices proposés.
