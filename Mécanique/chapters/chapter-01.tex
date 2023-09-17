@@ -2,8 +2,23 @@
 \section{Coordonn\'ees g\'en\'eralis\'ees}
 
 Pour un point mat\'eriel, nous avons en coordonn\'ees cart\'esiennes :
-\begin{enumerate}
-\item le rayon vecteur $\vec{r}$
-\item la vitesse $\vec{v}$
-\item l'acc\'el\'eration $\vec{a}$
-\end{enumerate}
+\begin{itemize}
+\item le rayon vecteur tel que :
+	\be
+		\vec{r}=\begin{pmatrix} x \\ y \\ z \end{pmatrix}
+	\ee
+\item la vitesse telle que :
+	\be
+		\vec{v}=\frac{{\rm d}\vec{r}}{{\rm dt}}
+	\ee
+\item l'acc\'el\'eration telle que :
+	\be
+		\vec{a}=\frac{{\rm d}\vec{v}}{{\rm d}t}=\frac{{\rm d}^{2}\vec{r}}{{\rm dt^{2}}}
+	\ee
+\end{itemize}
+
+Les coordonn\'ees cart\'esiennes ne sont pas toujours les plus adapt\'ees. Un autre syt\`eme de coordonn\'ees peut \^etre plus commode \`a utiliser. Il convient de choisir alors $s$ grandeurs quelconques $\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1}$ pour d\'efinir la position d'un syst\`eme ($s$ degr\'es de libert\'es), ce sont ses \textbf{coordonn\'ees g\'en\'eralis\'ees} et les d\'riv\'ees $\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}$, ses \textbf{vitesses g\'en\'eralis\'ees}.
+
+Les relations qui lient les acc\'el\'erations aux coordonn\'ees et aux vitesses sont appel\'ees les \textbf{\'equations du mouvement}.
+
+\section{Le principe de moindre action}
