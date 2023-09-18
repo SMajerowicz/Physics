@@ -5,35 +5,94 @@ Pour un point mat\'eriel, nous avons en coordonn\'ees cart\'esiennes :
 \begin{itemize}
 \item le rayon vecteur tel que :
 	\be
-		\vec{r}=\begin{pmatrix} x \\ y \\ z \end{pmatrix}
+		\vec{r} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}
 	\ee
 \item la vitesse telle que :
 	\be
-		\vec{v}=\frac{{\rm d}\vec{r}}{{\rm dt}}
+		\vec{v} = \dfrac{{\rm d}\vec{r}}{{\rm dt}}
 	\ee
 \item l'acc\'el\'eration telle que :
 	\be
-		\vec{a}=\frac{{\rm d}\vec{v}}{{\rm d}t}=\frac{{\rm d}^{2}\vec{r}}{{\rm dt^{2}}}
+		\vec{a} = \dfrac{{\rm d}\vec{v}}{{\rm d}t} = \frac{{\rm d}^{2}\vec{r}}{{\rm dt^{2}}}
 	\ee
 \end{itemize}
 
-Les coordonn\'ees cart\'esiennes ne sont pas toujours les plus adapt\'ees. Un autre syt\`eme de coordonn\'ees peut \^etre plus commode \`a utiliser. Il convient de choisir alors $s$ grandeurs quelconques $\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1}$ pour d\'efinir la position d'un syst\`eme ($s$ degr\'es de libert\'es), ce sont ses \textbf{coordonn\'ees g\'en\'eralis\'ees} et les d\'riv\'ees $\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}$, ses \textbf{vitesses g\'en\'eralis\'ees}.
+Les coordonn\'ees cart\'esiennes ne sont pas toujours les plus adapt\'ees. Un autre syt\`eme de coordonn\'ees peut \^etre plus commode \`a utiliser. Il convient de choisir alors $s$ grandeurs quelconques $\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1}$ pour d\'efinir la position d'un syst\`eme ($s$ degr\'es de libert\'es), ce sont ses \emph{coordonn\'ees g\'en\'eralis\'ees} et les d\'riv\'ees $\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}$, ses \emph{vitesses g\'en\'eralis\'ees}.
 
-Les relations qui lient les acc\'el\'erations aux coordonn\'ees et aux vitesses sont appel\'ees les \textbf{\'equations du mouvement}.
+Les relations qui lient les acc\'el\'erations aux coordonn\'ees et aux vitesses sont appel\'ees les \emph{\'equations du mouvement}.
 
 \section{Le principe de moindre action}
 
-La formule la plus g\'en\'erale de la loi du mouvement des syst\`emes mécaniques est celle du \textbf{principe de moindre action} (ou principe de Hamilton). Il introduit la \textbf{fonction de Lagrange} d\'efinie telle que :
+La formule la plus g\'en\'erale de la loi du mouvement des syst\`emes mécaniques est celle du \emph{principe de moindre action} (ou principe de Hamilton). Il introduit la \emph{fonction de Lagrange} d\'efinie telle que :
 \be
-	L(\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1},\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}, {\rm t})=L(q,\dot{q},{\rm t})
+	L(\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1},\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}, {\rm t}) = L(q,\dot{q},{\rm t})
 \ee
-Entre les instants ${\rm t}_{1}$ et ${\rm t}_{2}$, le système se meut de telle mani\`ere que l'\textbf{action} :
+Entre les instants ${\rm t}_{1}$ et ${\rm t}_{2}$, le système se meut de telle mani\`ere que l'\emph{action} :
 \be
-	S=\int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} \label{EQ:2_1}
+	S = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} \label{EQ:2_1}
 \ee
 ait la plus petite valeur possible.
 
-Partons qu'un seul degr\'e de libert\'e et d\'efinissons $q=q({\rm t})$ telle que $S$ soit minimale. Cela signifie que $S$ a une valeur plus grande si :
+Partons d'un seul degr\'e de libert\'e et d\'efinissons $q=q({\rm t})$ telle que $S$ soit minimale. Cela signifie que $S$ a une valeur plus grande si :
 \be
 	q({\rm t}) \rightarrow q({\rm t})+\delta q({\rm t}) \label{EQ:2_2}
+\ee
+avec $\delta q({\rm t})$ est la variation de $q({\rm t})$. Or en ${\rm t}_{1}$ et ${\rm t}_{2}$, toutes les fonctions $q({\rm t})$ doivent avoir des valeurs identiques (les trajectoires diff\`erent mais pas les conditions initiales, ni finales). Donc $\forall q({\rm t})$, nous avons :
+\be
+	\delta q({\rm t}_{1})=\delta q({\rm t}_{2})=0 \label{EQ:2_3}
+\ee
+De plus $\dot{q}=\dfrac{{\rm d}q}{\rm dt}$ dont $\dfrac{{\rm d}(q+\delta q)}{\rm dt}=\dot{q}+\delta\dot{q}$.
+\be
+	S(q+\delta q, \dot{q}+\delta \dot{q}, {\rm t}) - S(q,\dot{q},{\rm t}) = \delta S = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q+\delta q, \dot{q}+\delta \dot{q}, {\rm t}) d{\rm t} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t}
+\ee
+Or par d\'efinition, nous avons :
+\be
+	\delta L(q,\dot{q},{\rm t}) = \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q} + \dfrac{\partial L}{\partial {\rm t}}\delta {\rm t}
+\ee
+Mais puisque $\delta {\rm t}=0$, cela donne, au premier ordre (développement en s\'erie de Taylor) :
+\be
+	L(q+\delta q, \dot{q}+\delta \dot{q}, {\rm t}) \approx L(q,\dot{q},{\rm t}) + \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q}
+\ee
+ou encore, le principe de moindre action peut s'\'ecrire :
+\be
+	\delta S = \delta \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} = 0 \label{EQ:2_4}
+\ee
+et, de facto :
+\be
+	\int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q}\right) {\rm dt} = 0
+\ee
+Ensuite, remarquons que :
+\be
+	\delta \dot{q} = \delta\left(\dfrac{{\rm d}q}{{\rm dt}}\right) = \dfrac{{\rm d}\delta q}{{\rm dt}}
+\ee
+L'\'equation \ref{EQ:2_4} devient alors :
+\be
+	\int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\dfrac{{\rm d}\delta q}{{\rm dt}} \delta {\rm t} = 0
+\ee
+En se rappelant l'intégration par parties de Brook Taylor qui dit que :
+\be
+	\int_{a}^{b} u(x)v'(x){\rm dx} = \left[u(x)v(x)\right]_{a}^{b} - \int_{a}^{b} u'(x)v(x){\rm dx}
+\ee
+alors :
+\be
+	\int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial \dot{q}}\dfrac{{\rm d}\delta q}{{\rm dt}} \delta {\rm t} = \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q{\rm dt}
+\ee
+L'\'equation \ref{EQ:2_4} s'\'ecrit donc :
+\be
+	\begin{split}
+		\delta S & = \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial q}\delta q {\rm dt} + \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q{\rm dt} \\
+		& = \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q{\rm dt} \label{EQ:2_5}
+	\end{split}
+\ee
+or l'application de \ref{EQ:2_3} dans \ref{EQ:2_5} implique directement :
+\be
+	\delta S = \int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q{\rm dt}
+\ee
+Le principe de moindre action donne $\forall q$, $\delta S = 0$ et l'expression ci-dessus doit \^etre valide quelque soit la valeur de $\delta q$. Cela a pour cons\'equence :
+\be
+	\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) = 0
+\ee
+ce qui donne les \emph{\'equations de Lagrange} lorsqu'il y a $s$ degr\'es de libert\'e :
+\be
+	\forall i \in \left(1, 2, \ldots, s\right), \dfrac{\partial L}{\partial q_{i}}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q_{i}}}\right) = 0\label{EQ:2_6}
 \ee
