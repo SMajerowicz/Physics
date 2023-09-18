@@ -22,3 +22,18 @@ Les coordonn\'ees cart\'esiennes ne sont pas toujours les plus adapt\'ees. Un au
 Les relations qui lient les acc\'el\'erations aux coordonn\'ees et aux vitesses sont appel\'ees les \textbf{\'equations du mouvement}.
 
 \section{Le principe de moindre action}
+
+La formule la plus g\'en\'erale de la loi du mouvement des syst\`emes mécaniques est celle du \textbf{principe de moindre action} (ou principe de Hamilton). Il introduit la \textbf{fonction de Lagrange} d\'efinie telle que :
+\be
+	L(\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1},\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}, {\rm t})=L(q,\dot{q},{\rm t})
+\ee
+Entre les instants ${\rm t}_{1}$ et ${\rm t}_{2}$, le système se meut de telle mani\`ere que l'\textbf{action} :
+\be
+	S=\int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} \label{EQ:2_1}
+\ee
+ait la plus petite valeur possible.
+
+Partons qu'un seul degr\'e de libert\'e et d\'efinissons $q=q({\rm t})$ telle que $S$ soit minimale. Cela signifie que $S$ a une valeur plus grande si :
+\be
+	q({\rm t}) \rightarrow q({\rm t})+\delta q({\rm t}) \label{EQ:2_2}
+\ee
