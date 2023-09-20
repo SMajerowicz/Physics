@@ -96,3 +96,57 @@ ce qui donne les \emph{\'equations de Lagrange} lorsqu'il y a $s$ degr\'es de li
 \be
 	\forall i \in \left(1, 2, \ldots, s\right), \dfrac{\partial L}{\partial q_{i}}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q_{i}}}\right) = 0\label{EQ:2_6}
 \ee
+c'est-\`a-dire $s$ \'equations diff\'erentielles du second ordre à $s$ inconnues, $q_{i}({\rm t})$.
+
+Si (A) et (B) sont deux syst\`emes ferm\'es suffisamment \'eloign\'es pour n\'egliger leur interaction mutuelle alors :
+\be
+	\lim L = L_{A} + L_{B} \label{EQ:2_7}
+\ee
+Il s'agit de l'additivit\'e de la fonction de Lagrange. De la m\^eme mani\`ere, la multiplication par une constante de la fonction de Lagrange d'un syst\`eme ferm\'e n'influe pas les \'equations du mouvement.
+
+Une derni\`ere remarque en consid\'erant la fonction de Lagrange $L'$ telle que :
+\be
+	L'(q,\dot{q},t)=L(q,\dot{q},t) + \frac{{\rm d}f(q,{\rm t})}{{\rm dt}}
+\ee
+alors les int\'egrales \ref{EQ:2_1} donnent :
+\be
+	\begin{split}
+		S' & = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L'(q,\dot{q},{\rm t}) d{\rm t} = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} + \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}f(q,{\rm t})}{{\rm dt}} d{\rm t} \\
+		& = S + \int_{{\rm t}_{1}}^{{\rm t}_{2}} {\rm d}f(q,{\rm t}) = S + f(q({\rm t}_{2})) - f(q({\rm t}_{1}))
+	\end{split}
+\ee
+et impliquent que le principe de moindre action $\delta S = 0$ co\"incide avec $\delta S' = 0$. Ainsi, la fonction de Lagrange n'est d\'etermin\'ee qu'\`a la d\'eriv\'ee totale d'une fonction quelconque des coordonn\'ees et du temps.
+
+\section{Le principe de relativit\'e de Galil\'ee}
+
+Il est n\'ecessaire de choisir un syst\`eme de r\'ef\'erence pour \'etudier les ph\'enom\`enes m\'ecaniques et il est pr\'ef\'erable de le choisir afin que les lois de la m\'ecanique y soit les plus simples possibles. Et il est toujours possible de trouver un r\'ef\'erentiel tel que l'espace est homog\`ene et isotrope et le temps uniforme. En d'autres termes, la fonction de Lagrange d'un point mat\'eriel se mouvant librement dans un syst\`eme galil\'een en coordonn\'ees cart\'esiennes :
+\begin{itemize}
+	\item homog\'en\'it\'e de l'espace : $L(\vec{r},\vec{v},{\rm t}) \Rightarrow L(\vec{v},{\rm t})$
+	\item uniformit\'e du temps : $L(\vec{v},{\rm t}) \Rightarrow L(\vec{v})$
+	\item isotropie de l'espace : $L(\vec{v}) \Rightarrow L(\lVert\vec{v}\rVert)$
+\end{itemize}
+En r\'esum\'e, nous avons :
+\be
+	L = L(v^{2}) \label{EQ:3_1}
+\ee
+ce qui implique que $\dfrac{\partial L}{\partial \vec{r}} = 0$. Et par application des \'equations de Lagrange (\ref{EQ:2_6}), nous avons :
+\be
+	\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \vec{v}}\right) = 0
+\ee
+et comme la fonction de Lagrange n'est fonction que de la vitesse, ou encore $\dfrac{\partial L({\vec{v}}^{2})}{\partial \vec{v}} \propto \vec{v}$ (voir \ref{EQ:3_1}), dans ce cas alors :
+\be
+	\vec{v} = \vec{Cte} \label{EQ:3_2}
+\ee
+Dans un r\'ef\'erentiel galil\'een, tout mouvement libre s'effectue donc \`a une vitesse constante en grandeur et en direction. C'est la \emph{loi de l'inertie}.
+
+Supposons deux r\'ef\'erentiels galil\'eens ($K$) et ($K'$) tels que $\vec{KK'}=\vec{V}{\rm t}$. Alors $\vec{r}=\vec{KK'}+\vec{r'}$, soit :
+\be
+	\vec{r} = \vec{r'} + \vec{V}{\rm t} \label{EQ:3_3}
+\ee
+En M\'ecanique classique, le temps est absolu, aussi :
+\be
+	{\rm t} = {\rm t'} \label{EQ:3_4}
+\ee
+Les formules (\ref{EQ:3_3}) et (\ref{EQ:3_4}) sont les \emph{transformations de Galil\'ee}.
+
+\section{Fonction de Lagrange d'un point mat\'eriel libre}
