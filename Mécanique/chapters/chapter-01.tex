@@ -78,12 +78,10 @@ alors :
 	\int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial \dot{q}}\dfrac{{\rm d}\delta q}{{\rm dt}} \delta {\rm t} = \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q{\rm dt}
 \ee
 L'\'equation \ref{EQ:2_4} s'\'ecrit donc :
-\be
-	\begin{split}
-		\delta S & = \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial q}\delta q {\rm dt} + \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q{\rm dt} \\
-		& = \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q{\rm dt} \label{EQ:2_5}
-	\end{split}
-\ee
+\bea
+	\delta S & = & \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial q}\delta q {\rm dt} + \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q{\rm dt} \nonumber \\
+	& = & \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q{\rm dt} \label{EQ:2_5}
+\eea
 or l'application de \ref{EQ:2_3} dans \ref{EQ:2_5} implique directement :
 \be
 	\delta S = \int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q{\rm dt}
@@ -109,12 +107,10 @@ Une derni\`ere remarque en consid\'erant la fonction de Lagrange $L'$ telle que 
 	L'(q,\dot{q},t)=L(q,\dot{q},t) + \frac{{\rm d}f(q,{\rm t})}{{\rm dt}}
 \ee
 alors les int\'egrales \ref{EQ:2_1} donnent :
-\be
-	\begin{split}
-		S' & = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L'(q,\dot{q},{\rm t}) d{\rm t} = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} + \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}f(q,{\rm t})}{{\rm dt}} d{\rm t} \\
-		& = S + \int_{{\rm t}_{1}}^{{\rm t}_{2}} {\rm d}f(q,{\rm t}) = S + f(q({\rm t}_{2})) - f(q({\rm t}_{1}))
-	\end{split}
-\ee
+\bea
+	S' & = & \int_{{\rm t}_{1}}^{{\rm t}_{2}} L'(q,\dot{q},{\rm t}) d{\rm t} = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} + \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}f(q,{\rm t})}{{\rm dt}} d{\rm t} \nonumber \\
+	& = & S + \int_{{\rm t}_{1}}^{{\rm t}_{2}} {\rm d}f(q,{\rm t}) = S + f(q({\rm t}_{2})) - f(q({\rm t}_{1}))
+\eea
 et impliquent que le principe de moindre action $\delta S = 0$ co\"incide avec $\delta S' = 0$. Ainsi, la fonction de Lagrange n'est d\'etermin\'ee qu'\`a la d\'eriv\'ee totale d'une fonction quelconque des coordonn\'ees et du temps.
 
 \section{Le principe de relativit\'e de Galil\'ee}
@@ -137,9 +133,7 @@ et comme la fonction de Lagrange n'est fonction que de la vitesse, ou encore $\d
 \be
 	\vec{v} = \vec{Cte} \label{EQ:3_2}
 \ee
-Dans un r\'ef\'erentiel galil\'een, tout mouvement libre s'effectue donc \`a une vitesse constante en grandeur et en direction. C'est la \emph{loi de l'inertie}.
-
-Supposons deux r\'ef\'erentiels galil\'eens ($K$) et ($K'$) tels que $\vec{KK'}=\vec{V}{\rm t}$. Alors $\vec{r}=\vec{KK'}+\vec{r'}$, soit :
+Dans un r\'ef\'erentiel galil\'een, tout mouvement libre s'effectue donc \`a une vitesse constante en grandeur et en direction. C'est la \emph{loi de l'inertie}. Supposons deux r\'ef\'erentiels galil\'eens ($K$) et ($K'$) tels que $\vec{KK'}=\vec{V}{\rm t}$. Alors $\vec{r}=\vec{KK'}+\vec{r'}$, soit :
 \be
 	\vec{r} = \vec{r'} + \vec{V}{\rm t} \label{EQ:3_3}
 \ee
