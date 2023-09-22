@@ -17,7 +17,7 @@ Pour un point mat\'eriel, nous avons en coordonn\'ees cart\'esiennes :
 	\ee
 \end{itemize}
 
-Les coordonn\'ees cart\'esiennes ne sont pas toujours les plus adapt\'ees. Un autre syt\`eme de coordonn\'ees peut \^etre plus commode \`a utiliser. Il convient de choisir alors $s$ grandeurs quelconques $\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1}$ pour d\'efinir la position d'un syst\`eme ($s$ degr\'es de libert\'es), ce sont ses \emph{coordonn\'ees g\'en\'eralis\'ees} et les d\'riv\'ees $\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}$, ses \emph{vitesses g\'en\'eralis\'ees}.
+Les coordonn\'ees cart\'esiennes ne sont pas toujours les plus adapt\'ees. Un autre syt\`eme de coordonn\'ees peut \^etre plus commode \`a utiliser. Il convient de choisir alors $s$ grandeurs quelconques $\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1}$ pour d\'efinir la position d'un syst\`eme ($s$ degr\'es de libert\'es), ce sont ses \emph{coordonn\'ees g\'en\'eralis\'ees} et les d\'eriv\'ees $\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}$, ses \emph{vitesses g\'en\'eralis\'ees}.
 
 Les relations qui lient les acc\'el\'erations aux coordonn\'ees et aux vitesses sont appel\'ees les \emph{\'equations du mouvement}.
 
@@ -65,7 +65,7 @@ Ensuite, remarquons que :
 \be
 	\delta \dot{q} = \delta\left(\dfrac{{\rm d}q}{{\rm dt}}\right) = \dfrac{{\rm d}\delta q}{{\rm dt}}
 \ee
-L'\'equation \ref{EQ:2_4} devient alors :
+L'\'equation (\ref{EQ:2_4}) devient alors :
 \be
 	\int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\dfrac{{\rm d}\delta q}{{\rm dt}} \delta {\rm t} = 0
 \ee
@@ -77,12 +77,12 @@ alors :
 \be
 	\int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial \dot{q}}\dfrac{{\rm d}\delta q}{{\rm dt}} \delta {\rm t} = \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q{\rm dt}
 \ee
-L'\'equation \ref{EQ:2_4} s'\'ecrit donc :
+L'\'equation (\ref{EQ:2_4}) s'\'ecrit donc :
 \bea
 	\delta S & = & \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial q}\delta q {\rm dt} + \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q{\rm dt} \nonumber \\
 	& = & \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q{\rm dt} \label{EQ:2_5}
 \eea
-or l'application de \ref{EQ:2_3} dans \ref{EQ:2_5} implique directement :
+or l'application de (\ref{EQ:2_3}) dans (\ref{EQ:2_5}) implique directement :
 \be
 	\delta S = \int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q{\rm dt}
 \ee
@@ -106,7 +106,7 @@ Une derni\`ere remarque en consid\'erant la fonction de Lagrange $L'$ telle que 
 \be
 	L'(q,\dot{q},t)=L(q,\dot{q},t) + \frac{{\rm d}f(q,{\rm t})}{{\rm dt}} \label{EQ:2_8}
 \ee
-alors les int\'egrales \ref{EQ:2_1} donnent :
+alors les int\'egrales (\ref{EQ:2_1}) donnent :
 \bea
 	S' & = & \int_{{\rm t}_{1}}^{{\rm t}_{2}} L'(q,\dot{q},{\rm t}) d{\rm t} = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} + \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}f(q,{\rm t})}{{\rm dt}} d{\rm t} \nonumber \\
 	& = & S + \int_{{\rm t}_{1}}^{{\rm t}_{2}} {\rm d}f(q,{\rm t}) = S + f(q({\rm t}_{2})) - f(q({\rm t}_{1}))
@@ -145,7 +145,7 @@ Les formules (\ref{EQ:3_3}) et (\ref{EQ:3_4}) sont les \emph{transformations de 
 
 \section{Fonction de Lagrange d'un point mat\'eriel libre}
 
-Consid\'erons le mouvement libre d'un point mat\'eriel dans un syst\`eme gali\'een. Cela implique \ref{EQ:3_1}, soit $L = L(v^{2})$. Avec un r\'ef\'erentiel $(K)$ qui se d\'eplace par rapport \`a un autre r\'ef\'erentiel (K') telle que $\vec{v'}=\vec{v} + \vec{\epsilon}$, nous avons :
+Consid\'erons le mouvement libre d'un point mat\'eriel dans un syst\`eme gali\'een. Cela implique (\ref{EQ:3_1}), soit $L = L(v^{2})$. Avec un r\'ef\'erentiel $(K)$ qui se d\'eplace par rapport \`a un autre r\'ef\'erentiel (K') telle que $\vec{v'}=\vec{v} + \vec{\epsilon}$, nous avons :
 \bea
 L' = L(\vec{v'}^{\,2}) & = & L(\vec{v}^{\,2} + 2\vec{v}.\vec{\epsilon} + \vec{\epsilon}^{\,2}) \nonumber \\
  & = & L(\vec{v}^{\,2}) + \dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}.\vec{\epsilon}
@@ -163,4 +163,19 @@ En reprenant la fonction de Lagrange qui peut se d\'efinir comme (\ref{EQ:2_8}),
 n'est vraie que si et seulement si $\dfrac{\partial L}{\partial \vec{v}^{\,2}} = \alpha$, avec $\alpha$ une constante. Or nous avons \ref{EQ:3_1}, qui implique :
 \be
 	L = L(\vec{v}^{\,2}) = \alpha\vec{v}^{\,2}
+\ee
+Dans le cadre où le r\'ef\'erentiel $(K)$ se meut à une vitesse $\vec{V}$ par rapport à $(K')$, la fonction de Lagrange devient :
+\bea
+L' = \alpha\vec{v'}^{\,2} & = & \alpha.(\vec{v} + \vec{V})^{2} \nonumber \\
+& = & \alpha\vec{v}^{\,2} + 2\alpha\vec{v}.\vec{V} + \alpha\vec{V}^{\,2} \nonumber \\
+& = & L + 2\alpha\dfrac{{\rm d}\vec{r}}{{\rm dt}}.\vec{V} + \alpha\dfrac{{\rm dt}}{{\rm dt}}\vec{V}^{\,2} \nonumber \\
+& = & L + \dfrac{{\rm d}}{{\rm dt}}\left(2\alpha\vec{r}.\vec{V} + \alpha\vec{V}^{\,2}{\rm t}\right)
+\eea
+dont le second terme est une d\'eriv\'ee totale par rapport au temps d'une fonction qui ne d\'epend que de la position et du temps. Ce second terme peut donc être omis, voir (\ref{EQ:2_8}) et la fonction de Lagrange devient, en posant $\alpha=m/2$ :
+\be
+	L = \dfrac{m\vec{v}^{\,2}}{2} \label{EQ:4_1}
+\ee
+où $m$ est appel\'ee $masse$ du point mat\'eriel. Par additivité de la fonction de Lagrange :
+\be
+	L = \sum_{a}\dfrac{m_{a}\vec{v_{a}}^{\,2}}{2} \label{EQ:4_2}
 \ee
