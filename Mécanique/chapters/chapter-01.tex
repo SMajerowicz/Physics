@@ -104,7 +104,7 @@ Il s'agit de l'additivit\'e de la fonction de Lagrange. De la m\^eme mani\`ere, 
 
 Une derni\`ere remarque en consid\'erant la fonction de Lagrange $L'$ telle que :
 \be
-	L'(q,\dot{q},t)=L(q,\dot{q},t) + \frac{{\rm d}f(q,{\rm t})}{{\rm dt}}
+	L'(q,\dot{q},t)=L(q,\dot{q},t) + \frac{{\rm d}f(q,{\rm t})}{{\rm dt}} \label{EQ:2_8}
 \ee
 alors les int\'egrales \ref{EQ:2_1} donnent :
 \bea
@@ -123,7 +123,7 @@ Il est n\'ecessaire de choisir un syst\`eme de r\'ef\'erence pour \'etudier les 
 \end{itemize}
 En r\'esum\'e, nous avons :
 \be
-	L = L(v^{2}) \label{EQ:3_1}
+	L = L(\vec{v}^{\,2}) \label{EQ:3_1}
 \ee
 ce qui implique que $\dfrac{\partial L}{\partial \vec{r}} = 0$. Et par application des \'equations de Lagrange (\ref{EQ:2_6}), nous avons :
 \be
@@ -144,3 +144,23 @@ En M\'ecanique classique, le temps est absolu, aussi :
 Les formules (\ref{EQ:3_3}) et (\ref{EQ:3_4}) sont les \emph{transformations de Galil\'ee}.
 
 \section{Fonction de Lagrange d'un point mat\'eriel libre}
+
+Consid\'erons le mouvement libre d'un point mat\'eriel dans un syst\`eme gali\'een. Cela implique \ref{EQ:3_1}, soit $L = L(v^{2})$. Avec un r\'ef\'erentiel $(K)$ qui se d\'eplace par rapport \`a un autre r\'ef\'erentiel (K') telle que $\vec{v'}=\vec{v} + \vec{\epsilon}$, nous avons :
+\bea
+L' = L(\vec{v'}^{\,2}) & = & L(\vec{v}^{\,2} + 2\vec{v}.\vec{\epsilon} + \vec{\epsilon}^{\,2}) \nonumber \\
+ & = & L(\vec{v}^{\,2}) + \dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}.\vec{\epsilon}
+\eea
+en supprimant les ordres sup\'erieurs à 2 en $\vec{\epsilon}$ dans le d\'eveloppement en s\'erie de Taylor de :
+\be
+	L(\vec{v}^{\,2} + 2\vec{v}.\vec{\epsilon} + \vec{\epsilon}^{\,2}) \approx L(\vec{v}^{\,2} + \dfrac{\partial L}{\partial \vec{v}^{\,2}}.(2\vec{v}.\vec{\epsilon}+\vec{\epsilon}^{\,2}) + \dfrac{\partial L}{2\partial \vec{v}^{\,4}}.(2\vec{v}.\vec{\epsilon}+\vec{\epsilon}^{\,2})^{2} + \ldots
+\ee
+En reprenant la fonction de Lagrange qui peut se d\'efinir comme (\ref{EQ:2_8}), nous pouvons pos\'e :
+\bea
+	\dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}.\vec{\epsilon} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}} \nonumber \\
+	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{{\rm d}\vec{r}}{{\rm dt}}.\vec{\epsilon} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}} \nonumber \\
+	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{{\rm d}(\vec{r}.\vec{\epsilon})}{{\rm dt}} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}}
+\eea
+n'est vraie que si et seulement si $\dfrac{\partial L}{\partial \vec{v}^{\,2}} = \alpha$, avec $\alpha$ une constante. Or nous avons \ref{EQ:3_1}, qui implique :
+\be
+	L = L(\vec{v}^{\,2}) = \alpha\vec{v}^{\,2}
+\ee
