@@ -175,7 +175,50 @@ dont le second terme est une d\'eriv\'ee totale par rapport au temps d'une fonct
 \be
 	L = \dfrac{m\vec{v}^{\,2}}{2} \label{EQ:4_1}
 \ee
-où $m$ est appel\'ee $masse$ du point mat\'eriel. Par additivité de la fonction de Lagrange :
+où $m$ est appel\'ee $masse$ du point mat\'eriel. Par additivité de la fonction de Lagrange dans le cadre de particules sans interactions :
 \be
 	L = \sum_{a}\dfrac{m_{a}\vec{v_{a}}^{\,2}}{2} \label{EQ:4_2}
+\ee
+Un point int\'eressant est que la masse ne peut \^etre n\'egative. En effet, dans un tel cas, l'action :
+\be
+	S = \int_{{\rm t_{1}}}^{{\rm t_{2}}}\dfrac{m\vec{v}^{\,2}}{2}{\rm dt}
+\ee
+ne peut alors pas avoir de minimum et le principe de moindre action ne peut pas \^etre rempli !
+
+De mani\`ere \'evidente, le carr\'e de la vitesse s'\'ecrit en fonction de la longueur $l$ d'un arc tel que :
+\be
+	\vec{v}^{\,2} = \left(\dfrac{{\rm d}l}{{\rm dt}}\right)^{2} = \dfrac{{{\rm d}l}^{2}}{{\rm dt}^{2}} \label{EQ:4_3}
+\ee
+Cela permet d'\'ecrire la fonction de Lagrange :
+\begin{itemize}
+	\item en coordonn\'ees cart\'esiennes :
+		\bea
+			{{\rm d}l}^{2} & = & {{\rm d}x}^{2} + {{\rm d}y}^{2} + {{\rm d}z}^{2} \nonumber \\
+			\Rightarrow L & = & \dfrac{m}{2}\left(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}\right) \label{EQ:4_4}
+		\eea
+	\item en coordonn\'ees cylindriques :
+		\bea
+			{{\rm d}l}^{2} & = & {{\rm d}r}^{2} + r^{2}{{\rm d}\phi}^{2} + {{\rm d}z}^{2} \nonumber \\
+			\Rightarrow L & = & \dfrac{m}{2}\left(\dot{r}^{2} + r^{2}\dot{\phi}^{2} + \dot{z}^{2}\right) \label{EQ:4_5}
+		\eea
+	\item en coordonn\'ees sph\'eriques :
+		\bea
+			{{\rm d}l}^{2} & = & {{\rm d}r}^{2} + r^{2}{{\rm d}\theta}^{2} + r^{2}\sin^{2}(\theta){{\rm d}\varphi}^{2} \nonumber \\
+			\Rightarrow L & = & \dfrac{m}{2}\left(\dot{r}^{2} + r^{2}\dot{\theta}^{2} + r^{2}\sin^{2}(\theta)\dot{\varphi}^{2}\right) \label{EQ:4_6}
+		\eea
+\end{itemize}
+
+\section{Fonction de Lagrange d'un syst\`eme de points mat\'eriels}
+
+Dans ce cas, un syst\`eme est ferm\'e s'il est compos\'e de points mat\'erielsr\'eagissant les uns avec les autres mais isol\'es de tout corps ext\'erieur. L'int\'eraction entre les points mat\'eriels peut \^etre d\'ecrite en ajoutant à la fonction de Lagrange une fonction d\'ependante des seules coordonn\'ees des particules. Ainsi, en reprenant (\ref{EQ:4_2}) :
+\be
+	L = \sum_{a}\dfrac{m_{a}\vec{v_{a}}^{\,2}}{2} - U\left(\begin{Bmatrix}\vec{r_{i}}\end{Bmatrix}_{1}^{s}\right) = T - U \label{EQ:5_1}
+\ee
+avec $T$ l'\'energie cin\'etique et $U$ l'\'energie potentielle du syst\`eme.
+
+En m\'ecanique classique, les int\'eractions entre particules sont instantan\'ees (uniformit\'e du temps et relativit\'e de Galil\'ee). De la m\^eme mani\`ere, le changement de $t$ en $-t$ ne change ne la fonction de Lagrange, ni les \'equations du mouvement, c'est la r\'eversibili\'e de la m\'ecanique classique.
+
+En passant l'\'equation (\ref{EQ:2_6}) des coordonn\'ees g\'en\'eralis\'ees en coordonn\'ees cart\'esiennes, nous avons pour la particule $a$ :
+\be
+	\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right) = \dfrac{\partial L}{\partial \vec{r}_{a}} \label{EQ:5_2}
 \ee
