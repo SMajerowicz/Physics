@@ -222,3 +222,23 @@ En passant l'\'equation (\ref{EQ:2_6}) des coordonn\'ees g\'en\'eralis\'ees en c
 \be
 	\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right) = \dfrac{\partial L}{\partial \vec{r}_{a}} \label{EQ:5_2}
 \ee
+En introduisant la fonction de Lagrange de (\ref{EQ:5_1}) :
+\be
+	\dfrac{\partial L}{\partial\vec{v}_{a}} = \dfrac{m_{a}}{2}\dfrac{\partial\vec{v}_{a}^{\,2}}{\partial\vec{v}_{a}} - \dfrac{\partial U}{\partial\vec{v}_{a}} = m_{a}\vec{v}_{a}
+\ee
+car l'\'energie potentielle ne d\'epend que des coordonn\'ees donc $\dfrac{\partial U}{\partial\vec{v}_{a}} = 0$. Et :
+\bea
+	\dfrac{\partial L}{\partial\vec{r}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{\partial\vec{v}_{a}^{\,2}}{\partial\vec{r}_{a}} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
+	& = & \dfrac{m_{a}}{2}\dfrac{\partial}{\partial\vec{r}_{a}}\left(\dfrac{{\rm d}\vec{r}_{a}}{{\rm dt}}\right)^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
+	& = & \dfrac{m_{a}}{2}\left[\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial\vec{r}_{a}}{\partial\vec{r}_{a}}\right)\right]^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
+	& = & - \dfrac{\partial U}{\partial\vec{r}_{a}}
+\eea
+car $\dfrac{\partial\vec{r}_{a}}{\partial\vec{r}_{a}} = 1$ ! Nous obtenons ainsi :
+\be
+	m_{a}\dfrac{{\rm d}\vec{r}_{a}}{{\rm dt}} = - \dfrac{\partial U}{\partial\vec{r}_{a}} \label{EQ:5_3}
+\ee
+Il s'agit des \emph{\'equations de Newton} et le vecteur :
+\be
+	\vec{F}_{a} = - \dfrac{\partial U}{\partial\vec{r}_{a}} \label{EQ:5_4}
+\ee
+est appel\'e la \emph{force} agissant sur le point mat\'eriel $a$. L'\'energie potentielle $U$ ne d\'ependant que des coordonn\'ees alors les acc\'el\'erations, voir (\ref{EQ:5_3}), ne d\'ependent \'egalement que des coordonn\'ees.
