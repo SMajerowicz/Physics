@@ -1,2 +1,23 @@
 \chapter{Lois de conservation}
+
 \section{\'Energie}
+
+Les \emph{int\'egrales premi\`eres} ou \emph{int\'egrales du mouvement}, sont les fonctions de $q_{i}$ et $\dot{q}_{i}$ qui conservent une valeur constante au cours du mouvement. Elles sont additives, c'est-\`a-dire qu'avant et après une int\'eraction, leur somme garde une valeur identique.
+
+Commen\c{c}ons par l'int\'egrale premi\`ere qui d\'ecoule de l'\emph{uniformi\'e du temps}.
+
+Pour un syst\`eme ferm\'e \`a $s$ degr\'es de libert\'e, nous avons :
+\be
+	\dfrac{{\rm d}L}{{\rm dt}} = \sum_{i=1}^{s}\dfrac{\partial L}{\partial q_{i}}\dfrac{{\rm d} q_{i}}{{\rm dt}} + \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dfrac{{\rm d}\dot{q}_{i}}{{\rm dt}} + \dfrac{\partial L}{\partial {\rm t}}
+\ee
+L'uniformit\'e du temps donne $\dfrac{\partial L}{\partial {\rm t}} = 0$ et en utilisant l'\'equation (\ref{EQ:2_6}), nous avons :
+\bea
+	\dfrac{{\rm d}L}{{\rm dt}} & = & \sum_{i=1}^{s}\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) + \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\ddot{q}_{i} \nonumber \\
+	& = & \sum_{i=1}^{s}\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) \nonumber \\
+	0 & = & \dfrac{{\rm d}}{{\rm dt}}\left(\sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i} - L\right)
+\eea
+Par cons\'equent, la quantit\'e :
+\be
+	E = \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i} - L \label{EQ:6_1}
+\ee
+est constante dans le temps pour un syst\`eme ferm\'e. $E$ est l'\emph{\'energie} du syst\`eme.
