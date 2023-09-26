@@ -242,3 +242,52 @@ Il s'agit des \emph{\'equations de Newton} et le vecteur :
 	\vec{F}_{a} = - \dfrac{\partial U}{\partial\vec{r}_{a}} \label{EQ:5_4}
 \ee
 est appel\'e la \emph{force} agissant sur le point mat\'eriel $a$. L'\'energie potentielle $U$ ne d\'ependant que des coordonn\'ees alors les acc\'el\'erations, voir (\ref{EQ:5_3}), ne d\'ependent \'egalement que des coordonn\'ees.
+Si l'\'energie potentielle est d\'efinie \`a une constante pr\`es telle que $U'(\vec{r}_{a}) = U(\vec{r}_{a}) + \alpha$ alors l'\'equation (\ref{EQ:5_3}) ne change pas car $\dfrac{\partial U'}{\partial\vec{r}_{a}} = \dfrac{\partial U}{\partial\vec{r}_{a}}$. Pr\'ef\'erentiellement, $\alpha$ est choisie de telle mani\`ere \`a ce que l'\'energie potentielle tende vers z\'ero quand la distance entre les points mat\'eriels augmentent.
+
+Pour passer des coordonn\'ees cart\'esiennes au coordonn\'ees g\'en\'eralis\'ees, il faut d\'efinir une transformation ind\'ependante du temps telle que :
+\bea
+	x_{a} & = & f_{a}\left(\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}_{1}^{s}\right) \\
+	\Rightarrow \dot{x}_{a} = \dfrac{{\rm d}x_{a}}{{\rm dt}} & = & \sum_{k=1}^{s}\dfrac{\partial f_{a}(q_{k})}{\partial q_{k}}\dfrac{{\rm d}q_{k}}{{\rm dt}}
+\eea
+en employant la diff\'erentiel totale.
+
+En reportant cela dans l'\'equation (\ref{EQ:5_1}), nous avons :
+\bea
+	L & = & \dfrac{1}{2}\sum_{a}m_{a}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) - U \nonumber \\
+	& = & \dfrac{1}{2}\sum_{a}m_{a}\left[\left(\sum_{k=1}^{s}\dfrac{\partial f_{a}(q_{k})}{\partial q_{k}}\dot{q}_{k}\right)^{2} + \left(\sum_{k=1}^{s}\dfrac{\partial g_{a}(q_{k})}{\partial q_{k}}\dot{q}_{k}\right)^{2} + \left(\sum_{k=1}^{s}\dfrac{\partial h_{a}(q_{k})}{\partial q_{k}}\dot{q}_{k}\right)^{2}\right] - U(q) \nonumber \\
+	& = & \dfrac{1}{2}\sum_{a}m_{a}\left[\sum_{i,j=1}^{s}\dfrac{\partial f_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial f_{a}(q_{j})}{\partial q_{j}}\dot{q}_{i}\dot{q}_{j} + \sum_{i,j=1}^{s}\dfrac{\partial g_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial g_{a}(q_{j})}{\partial q_{j}}\dot{q}_{i}\dot{q}_{j} + \sum_{i,j=1}^{s}\dfrac{\partial h_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial h_{a}(q_{j})}{\partial q_{j}}\dot{q}_{i}\dot{q}_{j}\right] - U(q) \nonumber
+\eea
+Nous avons donc la fonction de Lagrange sous la forme :
+\be
+	L = \dfrac{1}{2}\sum_{a}m_{a}\left[\sum_{i,j=1}^{s}a_{ij}(q)\dot{q}_{i}\dot{q}_{j}\right] - U(q) \label{EQ:5_5}
+\ee
+avec :
+\be
+	a_{ij}(q) = \dfrac{\partial f_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial f_{a}(q_{j})}{\partial q_{j}} + \dfrac{\partial g_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial g_{a}(q_{j})}{\partial q_{j}} + \dfrac{\partial h_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial h_{a}(q_{j})}{\partial q_{j}}
+\ee
+o\`u les c{\oe}fficients $a_{ij}$ ne d\'ependent que des coordonn\'ees. Aussi dans un syst\`eme de coordonn\'ees g\'en\'eralis\'ees, l'\'energie cin\'etique est fonction quadratique des vitesses mais peut aussi d\'ependre des coordon\'ees.
+
+Consid\'erons le syst\`eme $A$ non ferm\'e et interagissant avec le syst\`eme $B$ anim\'e d'un mouvement potentiellement fonction du temps. $A$ se meut dans le champ cr\'e\'e par $B$ et le syst\`eme $A+B$ est ferm\'e. La fonction de Lagrange s'\'ecrit alors :
+\be
+	L_{A+B} = T_{A}(q_{A},\dot{q}_{A}) + T_{B}(q_{B},\dot{q}_{B}) - U(q_{A},q_{B})
+\ee
+L'\'energie cin\'etique $T_{B}$ n'est fonction que du temps et est donc le r\'esultat de la d\'eriv\'ee totale par rapport au temps d'une fonction, voir (\ref{EQ:2_8}). Par cons\'equent, elle peut \^etre soustrait de la fonction de Lagrange totale. Nous avons donc :
+\be
+	L_{A+B} = T_{A}(q_{A},\dot{q}_{A}) - U(q_{A},q_{B}({\rm t}))
+\ee
+avec $U$ qui d\'epend explicitement des coordonn\'ees et du temps.
+
+Dans le cas particulier d'une unique particule dans un champ ext\'erieur, la fonction de Lagrange est :
+\be
+	L = \dfrac{mv^{2}}{2} - U(\vec{r},{\rm t}) \label{EQ:5_6}
+\ee
+et l'\'equation de Newton (\ref{EQ:5_3}) devient :
+\be
+	m\dfrac{{\rm d}\vec{v}}{{\rm dt}} = -\dfrac{\partial U(\vec{r},{\rm t})}{\partial \vec{r}} \label{EQ:5_7}
+\ee
+Dans le cadre d'un champ uniforme ($U$ ne d\'epend plus du temps), la force d\'efinie en (\ref{EQ:5_4}) devient :
+\bea
+	\vec{F} & = & -\dfrac{{\rm d} U(\vec{r})}{{\rm d}\vec{r}} \nonumber \\
+	\vec{F}.d\vec{r} & = & - {\rm d} U(\vec{r}) \nonumber \\
+	\vec{F}.\vec{r} & = & - U(\vec{r}) \label{EQ:5_8}
+\eea
