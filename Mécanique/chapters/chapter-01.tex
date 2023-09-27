@@ -147,18 +147,18 @@ Les formules (\ref{EQ:3_3}) et (\ref{EQ:3_4}) sont les \emph{transformations de 
 
 Consid\'erons le mouvement libre d'un point mat\'eriel dans un syst\`eme gali\'een. Cela implique (\ref{EQ:3_1}), soit $L = L(v^{2})$. Avec un r\'ef\'erentiel $(K)$ qui se d\'eplace par rapport \`a un autre r\'ef\'erentiel (K') telle que $\vec{v'}=\vec{v} + \vec{\epsilon}$, nous avons :
 \bea
-L' = L(\vec{v'}^{\,2}) & = & L(\vec{v}^{\,2} + 2\vec{v}.\vec{\epsilon} + \vec{\epsilon}^{\,2}) \nonumber \\
- & = & L(\vec{v}^{\,2}) + \dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}.\vec{\epsilon}
+L' = L(\vec{v'}^{\,2}) & = & L(\vec{v}^{\,2} + 2\vec{v}\cdot\vec{\epsilon} + \vec{\epsilon}^{\,2}) \nonumber \\
+ & = & L(\vec{v}^{\,2}) + \dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}\cdot\vec{\epsilon}
 \eea
 en supprimant les ordres sup\'erieurs à 2 en $\vec{\epsilon}$ dans le d\'eveloppement en s\'erie de Taylor de :
 \be
-	L(\vec{v}^{\,2} + 2\vec{v}.\vec{\epsilon} + \vec{\epsilon}^{\,2}) \approx L(\vec{v}^{\,2} + \dfrac{\partial L}{\partial \vec{v}^{\,2}}.(2\vec{v}.\vec{\epsilon}+\vec{\epsilon}^{\,2}) + \dfrac{\partial L}{2\partial \vec{v}^{\,4}}.(2\vec{v}.\vec{\epsilon}+\vec{\epsilon}^{\,2})^{2} + \ldots
+	L(\vec{v}^{\,2} + 2\vec{v}\cdot\vec{\epsilon} + \vec{\epsilon}^{\,2}) \approx L(\vec{v}^{\,2} + \dfrac{\partial L}{\partial \vec{v}^{\,2}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2}) + \dfrac{\partial L}{2\partial \vec{v}^{\,4}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2})^{2} + \ldots
 \ee
 En reprenant la fonction de Lagrange qui peut se d\'efinir comme (\ref{EQ:2_8}), nous pouvons pos\'e :
 \bea
-	\dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}.\vec{\epsilon} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}} \nonumber \\
-	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{{\rm d}\vec{r}}{{\rm dt}}.\vec{\epsilon} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}} \nonumber \\
-	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{{\rm d}(\vec{r}.\vec{\epsilon})}{{\rm dt}} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}}
+	\dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}\cdot\vec{\epsilon} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}} \nonumber \\
+	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{{\rm d}\vec{r}}{{\rm dt}}\cdot\vec{\epsilon} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}} \nonumber \\
+	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{{\rm d}(\vec{r}\cdot\vec{\epsilon})}{{\rm dt}} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}}
 \eea
 n'est vraie que si et seulement si $\dfrac{\partial L}{\partial \vec{v}^{\,2}} = \alpha$, avec $\alpha$ une constante. Or nous avons \ref{EQ:3_1}, qui implique :
 \be
@@ -167,9 +167,9 @@ n'est vraie que si et seulement si $\dfrac{\partial L}{\partial \vec{v}^{\,2}} =
 Dans le cadre où le r\'ef\'erentiel $(K)$ se meut à une vitesse $\vec{V}$ par rapport à $(K')$, la fonction de Lagrange devient :
 \bea
 L' = \alpha\vec{v'}^{\,2} & = & \alpha.(\vec{v} + \vec{V})^{2} \nonumber \\
-& = & \alpha\vec{v}^{\,2} + 2\alpha\vec{v}.\vec{V} + \alpha\vec{V}^{\,2} \nonumber \\
-& = & L + 2\alpha\dfrac{{\rm d}\vec{r}}{{\rm dt}}.\vec{V} + \alpha\dfrac{{\rm dt}}{{\rm dt}}\vec{V}^{\,2} \nonumber \\
-& = & L + \dfrac{{\rm d}}{{\rm dt}}\left(2\alpha\vec{r}.\vec{V} + \alpha\vec{V}^{\,2}{\rm t}\right)
+& = & \alpha\vec{v}^{\,2} + 2\alpha\vec{v}\cdot\vec{V} + \alpha\vec{V}^{\,2} \nonumber \\
+& = & L + 2\alpha\dfrac{{\rm d}\vec{r}}{{\rm dt}}\cdot\vec{V} + \alpha\dfrac{{\rm dt}}{{\rm dt}}\vec{V}^{\,2} \nonumber \\
+& = & L + \dfrac{{\rm d}}{{\rm dt}}\left(2\alpha\vec{r}\cdot\vec{V} + \alpha\vec{V}^{\,2}{\rm t}\right)
 \eea
 dont le second terme est une d\'eriv\'ee totale par rapport au temps d'une fonction qui ne d\'epend que de la position et du temps. Ce second terme peut donc être omis, voir (\ref{EQ:2_8}) et la fonction de Lagrange devient, en posant $\alpha=m/2$ :
 \be
