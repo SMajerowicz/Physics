@@ -20,4 +20,28 @@ Par cons\'equent, la quantit\'e :
 \be
 	E = \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i} - L \label{EQ:6_1}
 \ee
-est constante dans le temps pour un syst\`eme ferm\'e. $E$ est l'\emph{\'energie} du syst\`eme.
+est constante dans le temps pour un syst\`eme ferm\'e. $E$ est l'\emph{\'energie} du syst\`eme. Et puisque la fonction de Lagrange est additive, l'\'energie l'est aussi. Les syst\`emes m\'ecaniques dont l'\'energie se conserve sont appel\'es \emph{syst\`emes conservatifs}. Enfin, si le syst\`eme est plac\'e dans un champ ext\'erieur constant par rapport au temps alors la loi de conservation de l'\'energie reste valable car la fonction de Lagrange est implicitement ind\'ependant du temps.
+
+\`A partir de l'\'equation (\ref{EQ:5_1}, nous pouvons \'ecrire :
+\be
+	\sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i} = \sum_{i=1}^{s}\dfrac{\partial (T-U)}{\partial\dot{q}_{i}}\dot{q}_{i} = \sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i}
+\ee
+car l'\'energie potentielle $U$ ne d\'epend que des coordonn\'ees (voire du temps).
+Nous savons que l'\'energie cin\'etique $T = f(\dot{q}^{2})$. Or pour une fonction homog\`ene de degr\'e $\alpha$, telle $f(t.x) = t^{\alpha}f(x)$, alors le th\'eor\`eme d'Euler donne pour cette fonction :
+\be
+	\sum_{i} x_{i}\dfrac{\partial f(x)}{\partial x_{i}} = \alpha f(x)
+\ee
+Appliqu\'ee \`a l'\'energie cin\'etique, cela donne :
+\be
+	\sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i} = 2T = \sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i}
+\ee
+ce qui permet de conclure \`a, en compl\'etant l'\'equation (\ref{EQ:6_1}) :
+\be
+	E = T(q,\dot{q}) + U(q) \label{EQ:6_2}
+\ee
+soit en coordonn\'ees cart\'esiennes :
+\be
+	E = \sum_{a}\dfrac{m_{a}\vec{v}_{a}^{\,2}}{2} + U(\begin{Bmatrix}\vec{r}_{i}\end{Bmatrix}_{1}^{s}) \label{EQ:6_3}
+\ee
+
+\section{Impulsion}
