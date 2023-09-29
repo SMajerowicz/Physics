@@ -45,3 +45,38 @@ soit en coordonn\'ees cart\'esiennes :
 \ee
 
 \section{Impulsion}
+
+Apr\`es l'unformit\'e du temps, nous allons \'etudier les cons\'equences de l'homog\'en\'eit\'e de l'espace. Dans ce cadre, les propri\'et\'es m\'ecaniques d'un syst\`eme ferm\'e ne changent pas lors d'un d\'eplacement parall\`ele du syst\`eme dans son entier. Supposons ainsi que la fonction de Lagrange reste inchang\'ee pour un d\'eplacement infinit\'esimal tel que : $\vec{r}_{a} \rightarrow \vec{r}_{a} + \vec{\epsilon}$, i.e. $\delta L = 0$ :
+\bea
+	\delta L(\vec{r}_{a},\vec{v}_{a}) & = & \sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}}\delta\vec{r}_{a} + \sum_{a}\dfrac{\partial L}{\partial\vec{v}_{a}}\delta\vec{v}_{a} \nonumber \\
+	& = & \sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}}\vec{\epsilon} \text{ puisque }\delta\vec{v}_{a} = \vec{0} \nonumber \\
+\eea
+donc $\delta L = 0$ est \'equivalent \`a :
+\bea
+	\forall \vec{\epsilon}\text{, }\sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}}\vec{\epsilon} & = & 0 \nonumber \\
+	\forall \vec{\epsilon}\text{, }\vec{\epsilon}\cdot\sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}} & = & 0 \nonumber \\
+	\Leftrightarrow \sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}} & = & 0 \label{EQ:7_1}
+\eea
+Or les \'equations de Lagrange (\ref{EQ:5_2}) donnent :
+\bea
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right) & = & \dfrac{\partial L}{\partial \vec{r}_{a}} \nonumber \\
+	\Leftrightarrow \sum_{a}\left(\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right)\right) & = & \sum_{a}\left(\dfrac{\partial L}{\partial \vec{r}_{a}}\right) \nonumber
+\eea
+En appliquant l'\'equation (\ref{EQ:7_1}), nous avons :
+\be
+	\sum_{a}\left(\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right)\right) = \dfrac{\mathrm{d}}{\mathrm{dt}}\sum_{a}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right) = \vec{0}
+\ee
+Ainsi, dans un syst\`eme ferm\'e, la quantit\'e vectorielle :
+\be
+	\vec{P} = \sum_{a}\dfrac{\partial L}{\partial \vec{v}_{a}} \label{EQ:7_2}
+\ee
+est inchang\'ee pendant le mouvement. Le vecteur $\vec{P}$ est l'\emph{impulsion} du syt\`eme. En utilisant l'\'equation (\ref{EQ:5_1}), nous obtenons :
+\bea
+	L & = & \sum_{a}\dfrac{m_{a}\vec{v}_{a}^{\,2}}{2} - U(\begin{Bmatrix}\vec{r}_{a}\end{Bmatrix}_{1}^{s}) \nonumber \\
+	\Rightarrow \dfrac{\partial L}{\partial \vec{v}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{2\partial\vec{v}_{a}}{\partial\vec{v}_{a}} - \dfrac{\partial U}{\partial\vec{v}_{a}} \nonumber \\
+	& = & m_{a}\vec{v}_{a}
+\eea
+Ainsi :
+\be
+	\vec{P} = \sum_{a}m_{a}\vec{v}_{a} \label{EQ:7_3}
+\ee
