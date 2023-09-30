@@ -70,7 +70,7 @@ Ainsi, dans un syst\`eme ferm\'e, la quantit\'e vectorielle :
 \be
 	\vec{P} = \sum_{a}\dfrac{\partial L}{\partial \vec{v}_{a}} \label{EQ:7_2}
 \ee
-est inchang\'ee pendant le mouvement. Le vecteur $\vec{P}$ est l'\emph{impulsion} du syt\`eme. En utilisant l'\'equation (\ref{EQ:5_1}), nous obtenons :
+est inchang\'ee pendant le mouvement. Le vecteur $\vec{P}$ est l'\emph{impulsion}\footnote{Anciennement appel\'ee \emph{quantit\'e de mouvement}} du syt\`eme. En utilisant l'\'equation (\ref{EQ:5_1}), nous obtenons :
 \bea
 	L & = & \sum_{a}\dfrac{m_{a}\vec{v}_{a}^{\,2}}{2} - U(\begin{Bmatrix}\vec{r}_{a}\end{Bmatrix}_{1}^{s}) \nonumber \\
 	\Rightarrow \dfrac{\partial L}{\partial \vec{v}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{2\partial\vec{v}_{a}}{\partial\vec{v}_{a}} - \dfrac{\partial U}{\partial\vec{v}_{a}} \nonumber \\
@@ -80,3 +80,36 @@ Ainsi :
 \be
 	\vec{P} = \sum_{a}m_{a}\vec{v}_{a} \label{EQ:7_3}
 \ee
+avec $\vec{P} = \sum_{a}\vec{p}_{a}$ pour un syst\`eme ferm\'e en l'absence de champ ext\'erieur.
+
+Supposons l'existence d'un champ ext\'erieur telle que $U\rightarrow U(z)$ en coordonn\'ees cart\'esiennes, les \'equations de Newton (\ref{EQ:5_3}) donnent :
+\bea
+	m_{a}\dfrac{\mathrm{d}v_{x}}{\mathrm{d}x} & = & - \dfrac{\partial U}{\partial x} = 0 \nonumber \\
+	m_{a}\dfrac{\mathrm{d}v_{y}}{\mathrm{d}y} & = & - \dfrac{\partial U}{\partial y} = 0 \nonumber \\
+	m_{a}\dfrac{\mathrm{d}v_{z}}{\mathrm{d}z} & = & - \dfrac{\partial U}{\partial z} \nonumber
+\eea
+et donc, dans ce cas, $P_{x}$ et $P_{y}$ se conservent donc.
+
+Une cons\'equence de l'\'equation (\ref{EQ:7_1}) en accord avec celle de (\ref{EQ:5_4}) pour la force $\vec{F}_{a}$ agissant sur le point mat\'eriel $a$ est que :
+\be
+	\sum_{a}\vec{F}_{a} = \vec{0} \label{EQ:7_4}
+\ee
+i.e. que la somme de toutes les forces s'exer\c{c}ant sur toutes les particules d'un syst\`eme ferm\'e est absolument nulle. Dans le cas particulier de deux particules, il y a $\vec{F}_{1} + \vec{F}_{2} = \vec{0}$. Les deux forces sont \'egales mais oppos\'ees, il s'agit de la loi de l'\'egalit\'e entre l'action et la r\'eaction.
+
+Dans le cadre du mouvement d\'ecrit par les coordonn\'ees g\'en\'eralis\'ees, nous avons :
+\begin{itemize}
+	\item les \emph{impulsions g\'en\'eralis\'ees} :
+	\be
+		p_{i} = \dfrac{\partial L}{\partial\dot{q}_{i}}
+	\ee
+	\item les \emph{forces g\'en\'eralis\'ees} :
+	\be
+		F_{i} = \dfrac{\partial L}{\partial q_{i}}
+	\ee
+	\item les \'equations de Lagrange :
+	\be
+		\dot p_{i} = F_{i}
+	\ee
+\end{itemize}
+
+\section{Centre d'inertie}
