@@ -113,3 +113,20 @@ Dans le cadre du mouvement d\'ecrit par les coordonn\'ees g\'en\'eralis\'ees, no
 \end{itemize}
 
 \section{Centre d'inertie}
+
+Supposons deux r\'ef\'erentiels $(K)$ et $(K')$ tels que le second se meut à la vitesse $\vec{V}$ par rapport au premier. Nous avons donc $\vec{v}_{a} = \vec{v'}_{a} + \vec{V}$, soit, pour l'impulsion :
+\bea
+	\vec{P} = \sum_{a}m_{a}\vec{v}_{a} & = & \sum_{a}m_{a}\vec{v'}_{a} + \sum_{a}m_{a}\vec{V} \nonumber \\
+	\Leftrightarrow \vec{P} & = & \vec{P'} + \vec{V}\sum_{a}m_{a} \label{EQ:8_1}
+\eea
+Il existe toujours un r\'ef\'erentiel $(K')$ tel que le syst\`eme est consid\'er\'e comme au repos, soit $\vec{P'} = \vec{0}$. La vitesse de ce r\'ef\'erentiel par rapport \`a $(K)$ peut s'\'ecrire :
+\be
+	\vec{V} = \dfrac{\vec{P}}{\sum_{a}m_{a}} = \dfrac{\sum_{a}m_{a}\vec{v}_{a}}{\sum_{a}m_{a}} \label{EQ:8_2}
+\ee
+et elle d\'efinit la vitesse dans son ensemble du syst\`eme m\'ecanique ayant une impulsion $\vec{P}$ non nulle. Et une analogie avec le mouvement d'un point mat\'eriel est \'evidente en posant sa masse comme $\mu = \sum_{a}m_{a}$. La masse est donc \emph{additive}.
+La relation (\ref{EQ:8_2}) peut aussi s'\'ecrire comme :
+\bea
+	\vec{V} = \dfrac{\vec{R}}{\mathrm{dt}} & = & \dfrac{\sum_{a}m_{a}\dfrac{\vec{r}_{a}}{\mathrm{dt}}}{\sum_{a}m_{a}} = \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\sum_{a}m_{a}\vec{r}_{a}}{\sum_{a}m_{a}}\right) \nonumber \\
+	\Leftrightarrow \vec{R} & = & \dfrac{\sum_{a}m_{a}\vec{r}_{a}}{\sum_{a}m_{a}} \label{EQ:8_3}
+\eea
+Ainsi la vitesse d'un syst\`eme dans son ensemble est la vitesse de d\'eplacement du point de l'espace dont le rayon vecteur est d\'efini par l'\'equation (\ref{EQ:8_3}). Ce point est appel\'e \emph{centre d'inertie} du syst\`eme m\'ecanique.
