@@ -130,3 +130,27 @@ La relation (\ref{EQ:8_2}) peut aussi s'\'ecrire comme :
 	\Leftrightarrow \vec{R} & = & \dfrac{\sum_{a}m_{a}\vec{r}_{a}}{\sum_{a}m_{a}} \label{EQ:8_3}
 \eea
 Ainsi la vitesse d'un syst\`eme dans son ensemble est la vitesse de d\'eplacement du point de l'espace dont le rayon vecteur est d\'efini par l'\'equation (\ref{EQ:8_3}). Ce point est appel\'e \emph{centre d'inertie} du syst\`eme m\'ecanique.
+
+Il s'agit d'une g\'en\'eralisation de la loi d'inertie \'enonc\'ee en (\ref{EQ:3_2}) pour un syst\`eme ferm\'e dont le centre d'inertie co\"incide avec le point mat\'eriel. En conclusion, pour \'etudier les propri\'et\'es m\'ecaniques d'une syst\`eme ferm\'e, il est int\'eressant de choisir le r\'ef\'erentiel dans lequel son centre d'inertie est au repos et le mouvement rectiligne et uniforme du syst\`eme peut alors \^etre occult\'e.
+Soit $E_{\mathrm{int}}$ l'\'energie interne d'un syst\`eme ferm\'e au repos, elle comprend l'\'energie cin\'etiques du mouvement relatif des particules dans le syst\`eme ainsi que l'\'energie potentielle de leur int\'eraction mutuelle. L'\'energie totale d'un syst\`eme m\^u dans son ensemble par une vitesse $\vec{V}$ peut s'\'ecrire :
+\be
+	E = \dfrac{\mu \vec{V}^{\,2}}{2} + E_{\mathrm{int}} \label{EQ:8_4}
+\ee
+En effet, dans le r\'ef\'erentiel $(K)$ :
+\bea
+	E & = & \dfrac{1}{2}\sum_{a}m_{a}\vec{v}_{a}^{\,2} + U = \dfrac{1}{2}\sum_{a}m_{a}(\vec{v'}_{a} + \vec{V})^{\,2} + U \nonumber \\
+	& = & \dfrac{1}{2}\sum_{a}m_{a}\vec{v'}_{a}^{\,2} + \dfrac{1}{2}\sum_{a}m_{a}\vec{V}^{\,2} + \sum_{a}m_{a}\vec{v'}_{a}\vec{V} + U \nonumber \\
+	& = & \dfrac{\mu}{2}\vec{V} + \vec{V}\sum_{a}m_{a}\vec{v'}_{a} + \dfrac{1}{2}\sum_{a}m_{a}\vec{v'}_{a}^{\,2} + U \\
+\eea
+Puisque :
+\bea
+	E' & = & \dfrac{1}{2}\sum_{a}m_{a}\vec{v'}_{a}^{\,2} + U \nonumber \\
+	\vec{P'} & = & \sum_{a}m_{a}\vec{v'}_{a} \nonumber
+\eea
+alors nous arrivons \`a :
+\be
+	E = E' + \vec{V}\cdot\vec{P'} + \dfrac{\mu}{2}\vec{V} \label{EQ:8_5}
+\ee
+qui est la loi de transformation de l'\'energie lors d'un changement de r\'ef\'erentiel se mouvant l'un par rapport \`a l'autre comme d\'efini. Aussi, dans le cas d'un syst\`eme m\'ecanique au repos dans le r\'ef\'erentiel $(K')$, alors $\vec{P'} = \vec{0}$  et $E'$ est l'\'energie interne de ce syst\`eme. Nous retombons alors sur l'\'equation (\ref{EQ:8_4}).
+
+\section{Moment cinétique}
