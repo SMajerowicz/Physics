@@ -6,8 +6,14 @@ Trouver la fonction de Lagrange dans les cas suivants plac\'es dans un champ de 
 
 \begin{figure}[h!]
 	\begin{picture}(300,400)(0,0)
+ 		%axis
 		\linethickness{0.05mm}
-			\multiput(0,0)(0,15){10}{\line(0,10){5}}
+  		\multiput(0,0)(20,0){10}{\line(1,0){15}}
+    		\multiput(0,400)(0,20){15}{\line(0,-1){15}}
+      		%socle
+		\put(0,400){{\color{black}\square*{10}}
+  		%arms
+    		\linethickness{0.5mm}
 	\end{picture}
 	\caption{Pendule double oscillant}\label{FIG:1_1}
 \end{figure}
