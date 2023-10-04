@@ -1,19 +1,24 @@
 \chapter{Probl\`emes d'\'equations du mouvement}
 
-Trouver la fonction de Lagrange dans les cas suivants plac\'es dans un champ de pesanteur constant $g$.
+L'objectif est de trouver la fonction de Lagrange dans les cas suivants plac\'es dans un champ de pesanteur constant $g$.
 
 \section{Probl\`eme 1}
 
-\begin{figure}[h!]
-	\begin{picture}(300,400)(0,0)
- 		%axis
-		\linethickness{0.05mm}
-  		\multiput(0,0)(20,0){10}{\line(1,0){15}}
-    		\multiput(0,400)(0,20){15}{\line(0,-1){15}}
-      		%socle
-		\put(0,400){{\color{black}\square*{10}}
-  		%arms
-    		\linethickness{0.5mm}
-	\end{picture}
-	\caption{Pendule double oscillant}\label{FIG:1_1}
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,200)(10,0){15}{\line(1,0){8}}\put(150,195){$x$}
+			\multiput(0,0)(0,10){20}{\line(0,1){8}}\put(-5,-10){$y$}
+			\multiput(75,90)(0,10){7}{\line(0,-1){8}}
+			%socle
+			\put(0,200){\color{black}\circle*{5}}
+			%arms
+			\linethickness{0.5mm}
+			\put(0,200){\line(10,-15){75}}\put(75,90){\color{black}\circle*{10}}\put(80,95){$m_{1}$}
+			\put(75,90){\line(15,-10){50}}\put(125,55){\color{black}\circle*{10}}\put(130,60){$m_{2}$}
+		\end{picture}
+		\caption{Pendule double oscillant}\label{FIG:1_1}
+	\end{center}
 \end{figure}
