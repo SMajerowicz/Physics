@@ -11,14 +11,59 @@ L'objectif est de trouver la fonction de Lagrange dans les cas suivants plac\'es
 			\linethickness{0.05mm}
 			\multiput(0,200)(10,0){15}{\line(1,0){8}}\put(150,195){$x$}
 			\multiput(0,0)(0,10){20}{\line(0,1){8}}\put(-5,-10){$y$}
-			\multiput(75,90)(0,10){7}{\line(0,-1){8}}
+			\multiput(75,90)(0,-10){7}{\line(0,-1){8}}
 			%socle
 			\put(0,200){\color{black}\circle*{5}}
 			%arms
 			\linethickness{0.5mm}
-			\put(0,200){\line(10,-15){75}}\put(75,90){\color{black}\circle*{10}}\put(80,95){$m_{1}$}
-			\put(75,90){\line(15,-10){50}}\put(125,55){\color{black}\circle*{10}}\put(130,60){$m_{2}$}
+			\put(0,200){\line(10,-15){75}}
+			\put(40,150){$l_{1}$}
+			\put(75,90){\color{black}\circle*{10}}\put(80,95){$m_{1}$}
+			\put(75,90){\line(15,-10){50}}
+			\put(105,75){$l_{2}$}
+			\put(125,55){\color{black}\circle*{10}}\put(130,60){$m_{2}$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(0,180),(5,182),(10,185)
+			\put(3,170){$\varphi_{1}$}
+			\qbezier(75,70),(82,70),(93,80)
+			\put(83,60){$\varphi_{2}$}
 		\end{picture}
 		\caption{Pendule double oscillant}\label{FIG:1_1}
 	\end{center}
 \end{figure}
+
+\section{Probl\`eme 2}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,150)(10,0){15}{\line(1,0){8}}\put(150,145){$x$}
+			\multiput(0,0)(0,10){15}{\line(0,1){8}}\put(-5,-10){$y$}
+			\multiput(50,150)(0,-10){10}{\line(0,-1){8}}
+			%arms
+			\linethickness{0.5mm}
+			\put(50,150){\color{black}\circle*{10}}\put(60,140){$m_{1}$}
+			\put(50,150){\line(10,-15){75}}
+			\put(90,100){$l$}
+			\put(125,40){\color{black}\circle*{10}}\put(130,45){$m_{2}$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(50,130),(55,132),(60,135)
+			\put(53,120){$\varphi$}
+		\end{picture}
+		\caption{Pendule plan}\label{FIG:1_2}
+	\end{center}
+\end{figure}
+
+\section{Probl\`eme 3}
+
+\subsection{Cas 1}
+
+\subsection{Cas 2}
+
+\subsection{Cas 3}
+
+\section{Probl\`eme 4}
