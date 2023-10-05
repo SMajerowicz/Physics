@@ -2,7 +2,7 @@
 
 L'objectif est de trouver la fonction de Lagrange dans les cas suivants plac\'es dans un champ de pesanteur constant $g$.
 
-\section{Probl\`eme 1}
+\section{Probl\`eme du pendule double oscillant}
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -33,7 +33,62 @@ L'objectif est de trouver la fonction de Lagrange dans les cas suivants plac\'es
 	\end{center}
 \end{figure}
 
-\section{Probl\`eme 2}
+La fonction de Lagrange du syst\`eme $L = L_{1} + L_{2}$. Calculons d'abord $L_{1} = T_{1} - U_{1}$ avec :
+\be
+	\begin{cases}
+		T_{1} = \dfrac{m_{1}}{2}\left(l_{1}\dot{\varphi_{1}}\right)^{2} \\
+		U_{1} = -m_{1}gl_{1}\cos(\varphi_{1})
+	\end{cases}
+\ee
+Pour $L_{2}$, partons des coordonn\'ees cart\'esiennes de $m_{2}$, soit :
+\be
+	\begin{cases}
+		x_{2} = l_{1}\sin(\varphi_{1}) + l_{2}\sin(\varphi_{2}) \\
+		y_{2} = l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2}) \\
+	\end{cases}
+\ee
+or il est clair que :
+\be
+\dfrac{\mathrm{d}f(u(\mathrm{t}))}{\mathrm{dt}} = \dfrac{\mathrm{d}f(u(\mathrm{t}))}{\mathrm{d}u(\mathrm{t})}\dfrac{\mathrm{d}u(\mathrm{t})}{\mathrm{dt}}
+\ee
+Cela implique donc :
+\be
+	\begin{cases}
+		\dot{x_{2}} = \dfrac{\mathrm{d}x}{\mathrm{dt}} = l_{1}\cos(\varphi_{1})\dot{\varphi_{1}} + l_{2}\cos(\varphi_{2})\dot{\varphi_{2}} \\[0.25cm]
+		\dot{y_{2}} = \dfrac{\mathrm{d}y}{\mathrm{dt}} = -l_{2}\sin(\varphi_{1})\dot{\varphi_{1}} - l_{2}\sin(\varphi_{2})\dot{\varphi_{2}} \\
+	\end{cases}
+\ee
+L'\'energie cin\'etique $T_{2}$ s'\'ecrit alors :
+\bea
+	T_{2} & = & \dfrac{m_{2}}{2}(\dot{x_{2}}^{2} + \dot{y_{2}}^{2}) \nonumber \\
+	& = & \dfrac{m_{2}}{2}(l_{1}^{2}\cos^{2}(\varphi_{1})\dot{\varphi_{1}}^{2} + 2l_{1}l_{2}\cos(\varphi_{1})\cos(\varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}} + l_{2}^{2}\cos^{2}(\varphi_{2})\dot{\varphi_{2}}^{2} \nonumber \\
+	& + & l_{1}^{2}\sin^{2}(\varphi_{1})\dot{\varphi_{1}}^{2} + 2l_{1}l_{2}\sin(\varphi_{1})\sin(\varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}} + l_{2}^{2}\sin^{2}(\varphi_{2})\dot{\varphi_{2}}^{2}) \nonumber
+\eea
+or, nous savons que :
+\be
+	\begin{cases}
+		\cos^2(\alpha) + \sin^{2}(\alpha) = 1 \\
+		\cos(\alpha - \beta) = \cos(\alpha)\cos(\beta) + \sin(\alpha)\sin(\beta)
+	\end{cases}
+\ee
+ce qui conclut pour l'\'energie cin\'etique \`a :
+\be
+	T_{2} = \dfrac{m_{2}}{2}(l_{1}^{2}\dot{\varphi_{1}}^{2} + l_{2}^{2}\dot{\varphi_{2}}^{2} + 2l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}})
+\ee
+De mani\`ere \'evidente, l'\'energie potentielle est :
+\be
+	U_{2} = -m_{2}g(l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2}))
+\ee
+En rassemblant, la fonction de Lagrange du syst\`eme m\'ecanique total :
+\bea
+	L & = & T_{1} + T_{2} - U_{1} - U{_2} \nonumber \\
+	& = & \dfrac{m_{1}}{2}\left(l_{1}\dot{\varphi_{1}}\right)^{2} + \dfrac{m_{2}}{2}(l_{1}^{2}\dot{\varphi_{1}}^{2} + l_{2}^{2}\dot{\varphi_{2}}^{2} + 2l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}}) \nonumber \\
+	& + & m_{1}gl_{1}\cos(\varphi_{1}) + m_{2}g(l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2})) \nonumber \\
+	& = & \dfrac{m_{1}+m_{2}}{2}l_{1}^{2}\dot{\varphi_{1}}^{2} + \dfrac{m_{2}}{2}l_{2}^{2}\dot{\varphi_{2}}^{2} + m_{2}l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}} \nonumber \\
+	& + & (m_{1}+m_{2})gl_{1}\cos(\varphi_{1}) + m_{2}gl_{2}\cos(\varphi_{2})
+\eea
+
+\section{Probl\`eme du pendule plan}
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -58,12 +113,20 @@ L'objectif est de trouver la fonction de Lagrange dans les cas suivants plac\'es
 	\end{center}
 \end{figure}
 
-\section{Probl\`eme 3}
+En suivant la m\^eme m\'ethodologie que dans l'exercice pr\'ec\'edent, nous avons avec $x$ l'abscisse de $m_{1}$ :
+\be
+	\begin{cases}
+		T_{1} = \dfrac{m_{1}}{2}\dot{x}^{2} \\
+		U_{1} = 0
+	\end{cases}
+\ee
 
-\subsection{Cas 1}
+\section{Probl\`eme du pendule plan sur un cercle}
 
-\subsection{Cas 2}
+\subsection{Cas fr\'equence constante}
 
-\subsection{Cas 3}
+\subsection{Cas oscillations horizontales}
 
-\section{Probl\`eme 4}
+\subsection{Cas oscillations verticales}
+
+\section{Probl\`eme du pendule rotatif à trois masses}
