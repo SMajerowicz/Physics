@@ -120,10 +120,71 @@ En suivant la m\^eme m\'ethodologie que dans l'exercice pr\'ec\'edent, nous avon
 		U_{1} = 0
 	\end{cases}
 \ee
+et :
+\be
+	\begin{cases}
+		T_{2} = \dfrac{m_{2}}{2}(\dot{x}^{2} + \dot{y}^{2}) \\
+		U_{2} = -lm_{2}g\cos(\varphi)
+	\end{cases}
+\ee
+En développant $T_{2}$ :
+\bea
+	T_{2} & = & \dfrac{m_{2}}{2}\left(\left(\dfrac{\mathrm{d}(x + l\sin(\varphi))}{\mathrm{dt}}\right)^{2} + (\left(\dfrac{\mathrm{d}l\cos(\varphi)}{\mathrm{dt}}\right)^{2}\right) \nonumber \\
+	& = & \dfrac{m_{2}}{2}\left((\dot{x} + l\cos(\varphi)\dot{\varphi})^{2} + (-l\sin(\varphi)\dot{\varphi})^{2}\right) \nonumber \\
+	& = & \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2} + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2}\right) \nonumber \\
+	& = & \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\dot{\varphi}^{2}\right)
+\eea
+La fonction de Lagrange du syst\`eme s'\'ecrit ainsi :
+\bea
+	L & = & T_{1} + T_{2} - U_{1} - U{_2} \nonumber \\
+	& = & \dfrac{m_{1}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\dot{\varphi}^{2}\right) - 0 + lm_{2}g\cos(\varphi) \nonumber \\
+	& = & \dfrac{m_{1} + m_{2}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(l^{2}\dot{\varphi}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi}\right) + m_{2}gl\cos(\varphi)
+\eea
 
 \section{Probl\`eme du pendule plan sur un cercle}
 
-\subsection{Cas fr\'equence constante}
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(50,150)(10,0){10}{\line(1,0){8}}\put(150,145){$x$}
+			\multiput(50,50)(0,10){15}{\line(0,1){8}}\put(48,40){$y$}
+			\multiput(75,140)(0,-10){7}{\line(0,-1){8}}
+			%circle
+			\put(50,150){\color{black}\circle{50}}
+			\put(50,150){\vector(1,1){17}}\put(62,156){$a$}
+			\multiput(50,150)(5,-2){5}{\line(2,-1){4}}\put(75,142){$\alpha\mathrm{t}$}
+			%arm
+			\linethickness{0.5mm}
+			\put(75,140){\line(10,-15){50}}
+			\put(105,105){$l$}
+			\put(125,65){\color{black}\circle*{10}}\put(132,63){$m$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(75,120),(80,122),(85,125)
+			\put(77,115){$\varphi$}
+		\end{picture}
+		\caption{Pendule plan sur un cercle}\label{FIG:1_3}
+	\end{center}
+\end{figure}
+
+\subsection{Cas pulsation constante}
+
+Dans ce syst\`eme, \'etablissons les coordonn\'ees cart\'esiennes du point mat\'eriel $m$ :
+\be
+	\begin{cases}
+		x = a\cos(\alpha\mathrm{t}) + l\sin(\varphi) \\
+		y = a\sin(2\pi - \alpha\mathrm{t}) + l\cos(\varphi) = -a\sin(\alpha\mathrm{t}) + l\cos(\varphi)
+	\end{cases}
+\ee
+Soit :
+\be
+	\begin{cases}
+		\dot{x} = -a\alpha\sin(\alpha\mathrm{t}) + l\cos(\varphi)\dot{\varphi} \\
+		\dot{y} = -a\alpha\cos(\alpha\mathrm{t}) - l\sin(\varphi)\dot{\varphi}
+	\end{cases}
+\ee
 
 \subsection{Cas oscillations horizontales}
 
