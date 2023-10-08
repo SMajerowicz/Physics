@@ -185,9 +185,32 @@ Soit :
 		\dot{y} = -a\alpha\cos(\alpha\mathrm{t}) - l\sin(\varphi)\dot{\varphi}
 	\end{cases}
 \ee
+L'\'energie cin\'etique s'\'ecrit :
+\bea
+	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2la\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + l^{2}\cos^{2}(\alpha\mathrm{t})\dot{\varphi}^{2} \nonumber \\
+	& + & a^{2}\alpha^{2}\cos^{2}(\alpha\mathrm{t}) + 2la\alpha\cos(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + l^{2}\sin^{2}(\alpha\mathrm{t})\dot{\varphi}^{2}) \nonumber
+\eea
+or :
+\be
+	\sin(\varphi - \alpha\mathrm{t}) = \cos(\alpha\mathrm{t})\sin(\varphi) - \sin(\alpha\mathrm{t})\cos(\varphi)
+\ee
+donc finalement :
+\be
+	T = \dfrac{m}{2}\left[a^{2}\alpha^{2} + l^{2}\dot{\varphi}^{2} + 2al\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi}\right]
+\ee
+Dans l'\'edition du livre en ma possession, l'\'energie cin\'etique propos\'ee avec un terme en $2al\alpha^{2}\sin(\varphi - \alpha\mathrm{t})$ que je n'arrive pas à obtenir ici. En continuant avec l'\'energie potentielle :
+\be
+	U = -mg(l\cos(\varphi)-a\sin(\alpha\mathrm{t}))
+\ee
+où le second terme est une d\'eriv\'ee totale d'une fonction par rapport au temps uniquement et d'apr\`es l'\'equation (\ref{EQ:2_8}) peut être omis du résultat de la fonction de Lagrange, comme le terme strictement constant $a^{2}\alpha^{2}$ provenant de l'\'energie cin\'etique. La fonction de Lagrange du point mat\'eriel s'\'ecrit finalement :
+\bea
+	L & = & T - U \nonumber \\
+	L & = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi)
+\eea
 
-\subsection{Cas oscillations horizontales}
+\subsection{Cas des oscillations horizontales}
 
-\subsection{Cas oscillations verticales}
+\subsection{Cas des oscillations verticales}
 
 \section{Probl\`eme du pendule rotatif à trois masses}
