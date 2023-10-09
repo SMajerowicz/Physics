@@ -199,7 +199,7 @@ donc finalement :
 \be
 	T = \dfrac{m}{2}\left[a^{2}\alpha^{2} + l^{2}\dot{\varphi}^{2} + 2al\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi}\right]
 \ee
-Dans l'\'edition du livre en ma possession, l'\'energie cin\'etique propos\'ee avec un terme en $2al\alpha^{2}\sin(\varphi - \alpha\mathrm{t})$ que je n'arrive pas à obtenir ici. En continuant avec l'\'energie potentielle :
+\emph{Dans l'\'edition du livre en ma possession, l'\'energie cin\'etique est propos\'ee avec un terme en $2al\alpha^{2}\sin(\varphi - \alpha\mathrm{t})$ que je n'arrive pas à obtenir ici}. En continuant avec l'\'energie potentielle :
 \be
 	U = -mg(l\cos(\varphi)-a\sin(\alpha\mathrm{t}))
 \ee
@@ -211,6 +211,87 @@ où le second terme est une d\'eriv\'ee totale d'une fonction par rapport au tem
 
 \subsection{Cas des oscillations horizontales}
 
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,150)(10,0){15}{\line(1,0){8}}\put(150,147){$x$}
+			\multiput(75,0)(0,10){15}{\line(0,1){8}}\put(72,-7){$y$}
+			\multiput(100,150)(0,-10){10}{\line(0,-1){8}}
+			%limits
+			\linethickness{0.1mm}
+			\put(140,145){\line(0,1){10}}\put(142,152){$a$}
+			\put(10,145){\line(0,1){10}}\put(12,152){$-a$}
+			%arms
+			\linethickness{0.5mm}
+			\put(100,150){\color{black}\circle*{5}}
+			\put(100,150){\line(10,-15){70}}
+			\put(140,100){$l$}
+			\put(170,45){\color{black}\circle*{10}}\put(177,45){$m$}
+			%angle
+			\linethickness{0.05mm}
+			\qbezier(100,130),(105,132),(110,135)
+			\put(103,120){$\varphi$}
+		\end{picture}
+		\caption{Pendule avec oscillations horizontales}\label{FIG:1_4}
+	\end{center}
+\end{figure}
+
+Dans ce cas pr\'ecis, les oscillations sont de la forme $a\cos(\alpha\mathrm{t})$ sur l'axe des abscisses comme d\'ecrit sur la figure (\ref{FIG:1_4}). Dans ce syst\`eme, les coordonn\'ees cart\'esiennes du point mat\'eriel $m$ sont :
+\be
+	\begin{cases}
+		x = a\cos(\alpha\mathrm{t}) + l\sin(\varphi) \\
+		y = l\cos(\varphi)
+	\end{cases}
+\ee
+Soit :
+\be
+	\begin{cases}
+		\dot{x} = -a\alpha\sin(\alpha\mathrm{t}) + l\cos(\varphi)\dot{\varphi} \\
+		\dot{y} = -l\sin(\varphi)\dot{\varphi}
+	\end{cases}
+\ee
+L'\'energie cin\'etique est donc :
+\bea
+	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} \nonumber \\
+	& + & l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2}) \nonumber \\
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + l^{2}\dot{\varphi}^{2})
+\eea
+Sachant que l'\'energie potentielle s'\'ecrit $U = -mgl\cos(\varphi)$, la fonction de Lagrange est :
+\bea
+	L & = & T - U \nonumber \\
+	L & = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi)
+\eea
+car la fonction $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique n'est qu'une fonction unique du temps et peut donc \^etre omise, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $2al\alpha^{2}\cos(\alpha\mathrm{t})\sin(\varphi)$ que je n'arrive pas à obtenir ici}.
+
 \subsection{Cas des oscillations verticales}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,75)(10,0){15}{\line(1,0){8}}\put(150,72){$x$}
+			\multiput(75,0)(0,10){15}{\line(0,1){8}}\put(72,-7){$y$}
+			%limits
+			\linethickness{0.1mm}
+			\put(70,140){\line(1,0){10}}\put(55,137){$-a$}
+			\put(70,10){\line(1,0){10}}\put(62,7){$a$}
+			%arms
+			\linethickness{0.5mm}
+			\put(75,100){\color{black}\circle*{5}}
+			\put(75,100){\line(10,-15){70}}
+			\put(120,40){$l$}
+			\put(145,-5){\color{black}\circle*{10}}\put(152,-8){$m$}
+			%angle
+			\linethickness{0.05mm}
+			\qbezier(75,80),(80,82),(85,85)
+			\put(78,70){$\varphi$}
+		\end{picture}
+		\caption{Pendule avec oscillations verticales}\label{FIG:1_5}
+	\end{center}
+\end{figure}
 
 \section{Probl\`eme du pendule rotatif à trois masses}
