@@ -262,9 +262,9 @@ L'\'energie cin\'etique est donc :
 Sachant que l'\'energie potentielle s'\'ecrit $U = -mgl\cos(\varphi)$, la fonction de Lagrange est :
 \bea
 	L & = & T - U \nonumber \\
-	L & = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi)
+	L & = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} - mla\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi)
 \eea
-car la fonction $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique n'est qu'une fonction unique du temps et peut donc \^etre omise, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $2al\alpha^{2}\cos(\alpha\mathrm{t})\sin(\varphi)$ que je n'arrive pas à obtenir ici}.
+car la fonction $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique n'est qu'une fonction unique du temps et peut donc \^etre omise, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $mla\alpha^{2}\cos(\alpha\mathrm{t})\sin(\varphi)$ que je n'arrive pas à obtenir ici}.
 
 \subsection{Cas des oscillations verticales}
 
@@ -293,5 +293,31 @@ car la fonction $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie
 		\caption{Pendule avec oscillations verticales}\label{FIG:1_5}
 	\end{center}
 \end{figure}
+
+Dans ce cas, les oscillations sont de la forme $a\cos(\alpha\mathrm{t})$ sur l'axe des ordonn\'ees, voir la figure (\ref{FIG:1_5}). Les coordonn\'ees cart\'esiennes du point mat\'eriel $m$ sont :
+\be
+	\begin{cases}
+		x = l\sin(\varphi) \\
+		y = a\cos(\alpha\mathrm{t}) + l\cos(\varphi)
+	\end{cases}
+\ee
+Et sa vitesse :
+\be
+	\begin{cases}
+		\dot{x} = l\cos(\varphi)\dot{\varphi} \\
+		\dot{y} = -a\alpha\sin(\alpha\mathrm{t}) - l\sin(\varphi)\dot{\varphi}
+	\end{cases}
+\ee
+L'\'energie cin\'etique s'\'ecrit alors :
+\bea
+	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
+	& = & \dfrac{m}{2}(l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2} + a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2} \nonumber \\
+	& + & 2al\alpha\sin(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi}) \nonumber \\
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + 2al\alpha\sin(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + l^{2}\dot{\varphi}^{2})
+\eea
+Sachant que l'\'energie potentielle s'\'ecrit $U = -mg(a\cos(\alpha\mathrm{t}) + l\cos(\varphi))$, la fonction de Lagrange est :
+\bea
+	L & = & T - U \nonumber \\
+\eea
 
 \section{Probl\`eme du pendule rotatif à trois masses}
