@@ -9,11 +9,11 @@ Pour un point mat\'eriel, nous avons en coordonn\'ees cart\'esiennes :
 	\ee
 \item la vitesse telle que :
 	\be
-		\vec{v} = \dfrac{{\rm d}\vec{r}}{{\rm dt}}
+		\vec{v} = \dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}
 	\ee
 \item l'acc\'el\'eration telle que :
 	\be
-		\vec{a} = \dfrac{{\rm d}\vec{v}}{{\rm d}t} = \frac{{\rm d}^{2}\vec{r}}{{\rm dt^{2}}}
+		\vec{a} = \dfrac{\mathrm{d}\vec{v}}{\mathrm{dt}} = \frac{\mathrm{d}^{2}\vec{r}}{\mathrm{dt}^{2}}
 	\ee
 \end{itemize}
 
@@ -25,76 +25,76 @@ Les relations qui lient les acc\'el\'erations aux coordonn\'ees et aux vitesses 
 
 La formule la plus g\'en\'erale de la loi du mouvement des syst\`emes mécaniques est celle du \emph{principe de moindre action} (ou principe de Hamilton). Il introduit la \emph{fonction de Lagrange} d\'efinie telle que :
 \be
-	L(\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1},\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}, {\rm t}) = L(q,\dot{q},{\rm t})
+	L(\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1},\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}, \mathrm{t}) = L(q,\dot{q},\mathrm{t})
 \ee
-Entre les instants ${\rm t}_{1}$ et ${\rm t}_{2}$, le système se meut de telle mani\`ere que l'\emph{action} :
+Entre les instants $\mathrm{t}_{1}$ et $\mathrm{t}_{2}$, le système se meut de telle mani\`ere que l'\emph{action} :
 \be
-	S = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} \label{EQ:2_1}
+	S = \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} L(q,\dot{q},\mathrm{t}) \mathrm{dt} \label{EQ:2_1}
 \ee
 ait la plus petite valeur possible.
 
-Partons d'un seul degr\'e de libert\'e et d\'efinissons $q=q({\rm t})$ telle que $S$ soit minimale. Cela signifie que $S$ a une valeur plus grande si :
+Partons d'un seul degr\'e de libert\'e et d\'efinissons $q=q(\mathrm{t})$ telle que $S$ soit minimale. Cela signifie que $S$ a une valeur plus grande si :
 \be
-	q({\rm t}) \rightarrow q({\rm t})+\delta q({\rm t}) \label{EQ:2_2}
+	q(\mathrm{t}) \rightarrow q(\mathrm{t})+\delta q(\mathrm{t}) \label{EQ:2_2}
 \ee
-avec $\delta q({\rm t})$ est la variation de $q({\rm t})$. Or en ${\rm t}_{1}$ et ${\rm t}_{2}$, toutes les fonctions $q({\rm t})$ doivent avoir des valeurs identiques (les trajectoires diff\`erent mais pas les conditions initiales, ni finales). Donc $\forall q({\rm t})$, nous avons :
+avec $\delta q(\mathrm{t})$ est la variation de $q(\mathrm{t})$. Or en $\mathrm{t}_{1}$ et $\mathrm{t}_{2}$, toutes les fonctions $q(\mathrm{t})$ doivent avoir des valeurs identiques (les trajectoires diff\`erent mais pas les conditions initiales, ni finales). Donc $\forall q(\mathrm{t})$, nous avons :
 \be
-	\delta q({\rm t}_{1})=\delta q({\rm t}_{2})=0 \label{EQ:2_3}
+	\delta q(\mathrm{t}_{1})=\delta q(\mathrm{t}_{2})=0 \label{EQ:2_3}
 \ee
-De plus $\dot{q}=\dfrac{{\rm d}q}{\rm dt}$ dont $\dfrac{{\rm d}(q+\delta q)}{\rm dt}=\dot{q}+\delta\dot{q}$.
+De plus $\dot{q}=\dfrac{\mathrm{d}q}{\mathrm{dt}}$ dont $\dfrac{\mathrm{d}(q+\delta q)}{\mathrm{dt}}=\dot{q}+\delta\dot{q}$.
 \be
-	S(q+\delta q, \dot{q}+\delta \dot{q}, {\rm t}) - S(q,\dot{q},{\rm t}) = \delta S = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q+\delta q, \dot{q}+\delta \dot{q}, {\rm t}) d{\rm t} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t}
+	S(q+\delta q, \dot{q}+\delta \dot{q}, \mathrm{t}) - S(q,\dot{q},\mathrm{t}) = \delta S = \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} L(q+\delta q, \dot{q}+\delta \dot{q}, \mathrm{t}) d\mathrm{t} - \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} L(q,\dot{q},\mathrm{t}) d\mathrm{t}
 \ee
 Or par d\'efinition, nous avons :
 \be
-	\delta L(q,\dot{q},{\rm t}) = \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q} + \dfrac{\partial L}{\partial {\rm t}}\delta {\rm t}
+	\delta L(q,\dot{q},\mathrm{t}) = \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q} + \dfrac{\partial L}{\partial \mathrm{t}}\delta \mathrm{t}
 \ee
-Mais puisque $\delta {\rm t}=0$, cela donne, au premier ordre (développement en s\'erie de Taylor) :
+Mais puisque $\delta \mathrm{t}=0$, cela donne, au premier ordre (développement en s\'erie de Taylor) :
 \be
-	L(q+\delta q, \dot{q}+\delta \dot{q}, {\rm t}) \approx L(q,\dot{q},{\rm t}) + \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q}
+	L(q+\delta q, \dot{q}+\delta \dot{q}, \mathrm{t}) \approx L(q,\dot{q},\mathrm{t}) + \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q}
 \ee
 ou encore, le principe de moindre action peut s'\'ecrire :
 \be
-	\delta S = \delta \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} = 0 \label{EQ:2_4}
+	\delta S = \delta \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} L(q,\dot{q},\mathrm{t}) \mathrm{dt} = 0 \label{EQ:2_4}
 \ee
 et, de facto :
 \be
-	\int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q}\right) {\rm dt} = 0
+	\int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \left(\dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q}\right) \mathrm{dt} = 0
 \ee
 Ensuite, remarquons que :
 \be
-	\delta \dot{q} = \delta\left(\dfrac{{\rm d}q}{{\rm dt}}\right) = \dfrac{{\rm d}\delta q}{{\rm dt}}
+	\delta \dot{q} = \delta\left(\dfrac{\mathrm{d}q}{\mathrm{dt}}\right) = \dfrac{\mathrm{d}\delta q}{\mathrm{dt}}
 \ee
 L'\'equation (\ref{EQ:2_4}) devient alors :
 \be
-	\int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\dfrac{{\rm d}\delta q}{{\rm dt}} \delta {\rm t} = 0
+	\int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\dfrac{\mathrm{d}\delta q}{\mathrm{dt}} \delta \mathrm{t} = 0
 \ee
 En se rappelant l'intégration par parties de Brook Taylor qui dit que :
 \be
-	\int_{a}^{b} u(x)v'(x){\rm dx} = \left[u(x)v(x)\right]_{a}^{b} - \int_{a}^{b} u'(x)v(x){\rm dx}
+	\int_{a}^{b} u(x)v'(x)\mathrm{d}x = \left[u(x)v(x)\right]_{a}^{b} - \int_{a}^{b} u'(x)v(x)\mathrm{d}x
 \ee
 alors :
 \be
-	\int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial \dot{q}}\dfrac{{\rm d}\delta q}{{\rm dt}} \delta {\rm t} = \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q{\rm dt}
+	\int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \dfrac{\partial L}{\partial \dot{q}}\dfrac{\mathrm{d}\delta q}{\mathrm{dt}} \delta \mathrm{t} = \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} - \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q\mathrm{dt}
 \ee
 L'\'equation (\ref{EQ:2_4}) s'\'ecrit donc :
 \bea
-	\delta S & = & \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{\partial L}{\partial q}\delta q {\rm dt} + \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q{\rm dt} \nonumber \\
-	& = & \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{{\rm t}_{1}}^{{\rm t}_{2}} - \int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q{\rm dt} \label{EQ:2_5}
+	\delta S & = & \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \dfrac{\partial L}{\partial q}\delta q \mathrm{dt} + \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} - \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q\mathrm{dt} \nonumber \\
+	& = & \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} - \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q\mathrm{dt} \label{EQ:2_5}
 \eea
 or l'application de (\ref{EQ:2_3}) dans (\ref{EQ:2_5}) implique directement :
 \be
-	\delta S = \int_{{\rm t}_{1}}^{{\rm t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q{\rm dt}
+	\delta S = \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q\mathrm{dt}
 \ee
 Le principe de moindre action donne $\forall q$, $\delta S = 0$ et l'expression ci-dessus doit \^etre valide quelque soit la valeur de $\delta q$. Cela a pour cons\'equence :
 \be
-	\dfrac{\partial L}{\partial q}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) = 0
+	\dfrac{\partial L}{\partial q}-\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) = 0
 \ee
 ce qui donne les \emph{\'equations de Lagrange} lorsqu'il y a $s$ degr\'es de libert\'e :
 \be
-	\forall i \in \left(1, 2, \ldots, s\right), \dfrac{\partial L}{\partial q_{i}}-\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \dot{q_{i}}}\right) = 0\label{EQ:2_6}
+	\forall i \in \left(1, 2, \ldots, s\right), \dfrac{\partial L}{\partial q_{i}}-\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q_{i}}}\right) = 0\label{EQ:2_6}
 \ee
-c'est-\`a-dire $s$ \'equations diff\'erentielles du second ordre à $s$ inconnues, $q_{i}({\rm t})$.
+c'est-\`a-dire $s$ \'equations diff\'erentielles du second ordre à $s$ inconnues, $q_{i}(\mathrm{t})$.
 
 Si (A) et (B) sont deux syst\`emes ferm\'es suffisamment \'eloign\'es pour n\'egliger leur interaction mutuelle alors :
 \be
@@ -104,12 +104,12 @@ Il s'agit de l'additivit\'e de la fonction de Lagrange. De la m\^eme mani\`ere, 
 
 Une derni\`ere remarque en consid\'erant la fonction de Lagrange $L'$ telle que :
 \be
-	L'(q,\dot{q},t)=L(q,\dot{q},t) + \frac{{\rm d}f(q,{\rm t})}{{\rm dt}} \label{EQ:2_8}
+	L'(q,\dot{q},t)=L(q,\dot{q},t) + \frac{\mathrm{d}f(q,\mathrm{t})}{\mathrm{dt}} \label{EQ:2_8}
 \ee
 alors les int\'egrales (\ref{EQ:2_1}) donnent :
 \bea
-	S' & = & \int_{{\rm t}_{1}}^{{\rm t}_{2}} L'(q,\dot{q},{\rm t}) d{\rm t} = \int_{{\rm t}_{1}}^{{\rm t}_{2}} L(q,\dot{q},{\rm t}) d{\rm t} + \int_{{\rm t}_{1}}^{{\rm t}_{2}} \dfrac{{\rm d}f(q,{\rm t})}{{\rm dt}} d{\rm t} \nonumber \\
-	& = & S + \int_{{\rm t}_{1}}^{{\rm t}_{2}} {\rm d}f(q,{\rm t}) = S + f(q({\rm t}_{2})) - f(q({\rm t}_{1}))
+	S' & = & \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} L'(q,\dot{q},\mathrm{t}) d\mathrm{t} = \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} L(q,\dot{q},\mathrm{t}) d\mathrm{t} + \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \dfrac{\mathrm{d}f(q,\mathrm{t})}{\mathrm{dt}} d\mathrm{t} \nonumber \\
+	& = & S + \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \mathrm{d}f(q,\mathrm{t}) = S + f(q(\mathrm{t}_{2})) - f(q(\mathrm{t}_{1}))
 \eea
 et impliquent que le principe de moindre action $\delta S = 0$ co\"incide avec $\delta S' = 0$. Ainsi, la fonction de Lagrange n'est d\'etermin\'ee qu'\`a la d\'eriv\'ee totale d'une fonction quelconque des coordonn\'ees et du temps.
 
@@ -117,8 +117,8 @@ et impliquent que le principe de moindre action $\delta S = 0$ co\"incide avec $
 
 Il est n\'ecessaire de choisir un syst\`eme de r\'ef\'erence pour \'etudier les ph\'enom\`enes m\'ecaniques et il est pr\'ef\'erable de le choisir afin que les lois de la m\'ecanique y soit les plus simples possibles. Et il est toujours possible de trouver un r\'ef\'erentiel tel que l'espace est homog\`ene et isotrope et le temps uniforme. En d'autres termes, la fonction de Lagrange d'un point mat\'eriel se mouvant librement dans un syst\`eme galil\'een en coordonn\'ees cart\'esiennes :
 \begin{itemize}
-	\item homog\'en\'it\'e de l'espace : $L(\vec{r},\vec{v},{\rm t}) \Rightarrow L(\vec{v},{\rm t})$
-	\item uniformit\'e du temps : $L(\vec{v},{\rm t}) \Rightarrow L(\vec{v})$
+	\item homog\'en\'it\'e de l'espace : $L(\vec{r},\vec{v},\mathrm{t}) \Rightarrow L(\vec{v},\mathrm{t})$
+	\item uniformit\'e du temps : $L(\vec{v},\mathrm{t}) \Rightarrow L(\vec{v})$
 	\item isotropie de l'espace : $L(\vec{v}) \Rightarrow L(\lVert\vec{v}\rVert)$
 \end{itemize}
 En r\'esum\'e, nous avons :
@@ -127,19 +127,19 @@ En r\'esum\'e, nous avons :
 \ee
 ce qui implique que $\dfrac{\partial L}{\partial \vec{r}} = 0$. Et par application des \'equations de Lagrange (\ref{EQ:2_6}), nous avons :
 \be
-	\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \vec{v}}\right) = 0
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}}\right) = 0
 \ee
 et comme la fonction de Lagrange n'est fonction que de la vitesse, ou encore $\dfrac{\partial L({\vec{v}}^{\,2})}{\partial \vec{v}} \propto \vec{v}$ (voir \ref{EQ:3_1}), dans ce cas alors :
 \be
 	\vec{v} = \vec{Cte} \label{EQ:3_2}
 \ee
-Dans un r\'ef\'erentiel galil\'een, tout mouvement libre s'effectue donc \`a une vitesse constante en grandeur et en direction. C'est la \emph{loi de l'inertie}. Supposons deux r\'ef\'erentiels galil\'eens ($K$) et ($K'$) tels que $\vec{KK'}=\vec{V}{\rm t}$. Alors $\vec{r}=\vec{KK'}+\vec{r'}$, soit :
+Dans un r\'ef\'erentiel galil\'een, tout mouvement libre s'effectue donc \`a une vitesse constante en grandeur et en direction. C'est la \emph{loi de l'inertie}. Supposons deux r\'ef\'erentiels galil\'eens ($K$) et ($K'$) tels que $\vec{KK'}=\vec{V}\mathrm{t}$. Alors $\vec{r}=\vec{KK'}+\vec{r'}$, soit :
 \be
-	\vec{r} = \vec{r'} + \vec{V}{\rm t} \label{EQ:3_3}
+	\vec{r} = \vec{r'} + \vec{V}\mathrm{t} \label{EQ:3_3}
 \ee
 En M\'ecanique classique, le temps est absolu, aussi :
 \be
-	{\rm t} = {\rm t'} \label{EQ:3_4}
+	\mathrm{t} = \mathrm{t'} \label{EQ:3_4}
 \ee
 Les formules (\ref{EQ:3_3}) et (\ref{EQ:3_4}) sont les \emph{transformations de Galil\'ee}.
 
@@ -147,18 +147,18 @@ Les formules (\ref{EQ:3_3}) et (\ref{EQ:3_4}) sont les \emph{transformations de 
 
 Consid\'erons le mouvement libre d'un point mat\'eriel dans un syst\`eme gali\'een. Cela implique (\ref{EQ:3_1}), soit $L = L(v^{2})$. Avec un r\'ef\'erentiel $(K)$ qui se d\'eplace par rapport \`a un autre r\'ef\'erentiel (K') telle que $\vec{v'}=\vec{v} + \vec{\epsilon}$, nous avons :
 \bea
-L' = L(\vec{v'}^{\,2}) & = & L(\vec{v}^{\,2} + 2\vec{v}.\vec{\epsilon} + \vec{\epsilon}^{\,2}) \nonumber \\
- & = & L(\vec{v}^{\,2}) + \dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}.\vec{\epsilon}
+L' = L(\vec{v'}^{\,2}) & = & L(\vec{v}^{\,2} + 2\vec{v}\cdot\vec{\epsilon} + \vec{\epsilon}^{\,2}) \nonumber \\
+ & = & L(\vec{v}^{\,2}) + \dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}\cdot\vec{\epsilon}
 \eea
 en supprimant les ordres sup\'erieurs à 2 en $\vec{\epsilon}$ dans le d\'eveloppement en s\'erie de Taylor de :
 \be
-	L(\vec{v}^{\,2} + 2\vec{v}.\vec{\epsilon} + \vec{\epsilon}^{\,2}) \approx L(\vec{v}^{\,2} + \dfrac{\partial L}{\partial \vec{v}^{\,2}}.(2\vec{v}.\vec{\epsilon}+\vec{\epsilon}^{\,2}) + \dfrac{\partial L}{2\partial \vec{v}^{\,4}}.(2\vec{v}.\vec{\epsilon}+\vec{\epsilon}^{\,2})^{2} + \ldots
+	L(\vec{v}^{\,2} + 2\vec{v}\cdot\vec{\epsilon} + \vec{\epsilon}^{\,2}) \approx L(\vec{v}^{\,2} + \dfrac{\partial L}{\partial \vec{v}^{\,2}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2}) + \dfrac{\partial L}{2\partial \vec{v}^{\,4}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2})^{2} + \ldots
 \ee
 En reprenant la fonction de Lagrange qui peut se d\'efinir comme (\ref{EQ:2_8}), nous pouvons pos\'e :
 \bea
-	\dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}.\vec{\epsilon} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}} \nonumber \\
-	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{{\rm d}\vec{r}}{{\rm dt}}.\vec{\epsilon} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}} \nonumber \\
-	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{{\rm d}(\vec{r}.\vec{\epsilon})}{{\rm dt}} & = & \dfrac{{\rm d}f(\vec{r},t)}{{\rm dt}}
+	\dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}\cdot\vec{\epsilon} & = & \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}} \nonumber \\
+	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}\cdot\vec{\epsilon} & = & \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}} \nonumber \\
+	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{\mathrm{d}(\vec{r}\cdot\vec{\epsilon})}{\mathrm{dt}} & = & \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}}
 \eea
 n'est vraie que si et seulement si $\dfrac{\partial L}{\partial \vec{v}^{\,2}} = \alpha$, avec $\alpha$ une constante. Or nous avons \ref{EQ:3_1}, qui implique :
 \be
@@ -167,9 +167,9 @@ n'est vraie que si et seulement si $\dfrac{\partial L}{\partial \vec{v}^{\,2}} =
 Dans le cadre où le r\'ef\'erentiel $(K)$ se meut à une vitesse $\vec{V}$ par rapport à $(K')$, la fonction de Lagrange devient :
 \bea
 L' = \alpha\vec{v'}^{\,2} & = & \alpha.(\vec{v} + \vec{V})^{2} \nonumber \\
-& = & \alpha\vec{v}^{\,2} + 2\alpha\vec{v}.\vec{V} + \alpha\vec{V}^{\,2} \nonumber \\
-& = & L + 2\alpha\dfrac{{\rm d}\vec{r}}{{\rm dt}}.\vec{V} + \alpha\dfrac{{\rm dt}}{{\rm dt}}\vec{V}^{\,2} \nonumber \\
-& = & L + \dfrac{{\rm d}}{{\rm dt}}\left(2\alpha\vec{r}.\vec{V} + \alpha\vec{V}^{\,2}{\rm t}\right)
+& = & \alpha\vec{v}^{\,2} + 2\alpha\vec{v}\cdot\vec{V} + \alpha\vec{V}^{\,2} \nonumber \\
+& = & L + 2\alpha\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}\cdot\vec{V} + \alpha\dfrac{\mathrm{dt}}{\mathrm{dt}}\vec{V}^{\,2} \nonumber \\
+& = & L + \dfrac{\mathrm{d}}{\mathrm{dt}}\left(2\alpha\vec{r}\cdot\vec{V} + \alpha\vec{V}^{\,2}\mathrm{t}\right)
 \eea
 dont le second terme est une d\'eriv\'ee totale par rapport au temps d'une fonction qui ne d\'epend que de la position et du temps. Ce second terme peut donc être omis, voir (\ref{EQ:2_8}) et la fonction de Lagrange devient, en posant $\alpha=m/2$ :
 \be
@@ -181,29 +181,29 @@ où $m$ est appel\'ee $masse$ du point mat\'eriel. Par additivité de la fonctio
 \ee
 Un point int\'eressant est que la masse ne peut \^etre n\'egative. En effet, dans un tel cas, l'action :
 \be
-	S = \int_{{\rm t_{1}}}^{{\rm t_{2}}}\dfrac{m\vec{v}^{\,2}}{2}{\rm dt}
+	S = \int_{\mathrm{t_{1}}}^{\mathrm{t_{2}}}\dfrac{m\vec{v}^{\,2}}{2}\mathrm{dt}
 \ee
 ne peut alors pas avoir de minimum et le principe de moindre action ne peut pas \^etre rempli !
 
 De mani\`ere \'evidente, le carr\'e de la vitesse s'\'ecrit en fonction de la longueur $l$ d'un arc tel que :
 \be
-	\vec{v}^{\,2} = \left(\dfrac{{\rm d}l}{{\rm dt}}\right)^{2} = \dfrac{{{\rm d}l}^{2}}{{\rm dt}^{2}} \label{EQ:4_3}
+	\vec{v}^{\,2} = \left(\dfrac{\mathrm{d}l}{\mathrm{dt}}\right)^{2} = \dfrac{{\mathrm{d}l}^{2}}{\mathrm{dt}^{2}} \label{EQ:4_3}
 \ee
 Cela permet d'\'ecrire la fonction de Lagrange :
 \begin{itemize}
 	\item en coordonn\'ees cart\'esiennes :
 		\bea
-			{{\rm d}l}^{2} & = & {{\rm d}x}^{2} + {{\rm d}y}^{2} + {{\rm d}z}^{2} \nonumber \\
+			{\mathrm{d}l}^{2} & = & {\mathrm{d}x}^{2} + {\mathrm{d}y}^{2} + {\mathrm{d}z}^{2} \nonumber \\
 			\Rightarrow L & = & \dfrac{m}{2}\left(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}\right) \label{EQ:4_4}
 		\eea
 	\item en coordonn\'ees cylindriques :
 		\bea
-			{{\rm d}l}^{2} & = & {{\rm d}r}^{2} + r^{2}{{\rm d}\phi}^{2} + {{\rm d}z}^{2} \nonumber \\
+			{\mathrm{d}l}^{2} & = & {\mathrm{d}r}^{2} + r^{2}{\mathrm{d}\phi}^{2} + {\mathrm{d}z}^{2} \nonumber \\
 			\Rightarrow L & = & \dfrac{m}{2}\left(\dot{r}^{2} + r^{2}\dot{\phi}^{2} + \dot{z}^{2}\right) \label{EQ:4_5}
 		\eea
 	\item en coordonn\'ees sph\'eriques :
 		\bea
-			{{\rm d}l}^{2} & = & {{\rm d}r}^{2} + r^{2}{{\rm d}\theta}^{2} + r^{2}\sin^{2}(\theta){{\rm d}\varphi}^{2} \nonumber \\
+			{\mathrm{d}l}^{2} & = & {\mathrm{d}r}^{2} + r^{2}{\mathrm{d}\theta}^{2} + r^{2}\sin^{2}(\theta){\mathrm{d}\varphi}^{2} \nonumber \\
 			\Rightarrow L & = & \dfrac{m}{2}\left(\dot{r}^{2} + r^{2}\dot{\theta}^{2} + r^{2}\sin^{2}(\theta)\dot{\varphi}^{2}\right) \label{EQ:4_6}
 		\eea
 \end{itemize}
@@ -220,7 +220,7 @@ En m\'ecanique classique, les int\'eractions entre particules sont instantan\'ee
 
 En passant l'\'equation (\ref{EQ:2_6}) des coordonn\'ees g\'en\'eralis\'ees en coordonn\'ees cart\'esiennes, nous avons pour la particule $a$ :
 \be
-	\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right) = \dfrac{\partial L}{\partial \vec{r}_{a}} \label{EQ:5_2}
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right) = \dfrac{\partial L}{\partial \vec{r}_{a}} \label{EQ:5_2}
 \ee
 En introduisant la fonction de Lagrange de (\ref{EQ:5_1}) :
 \be
@@ -229,13 +229,13 @@ En introduisant la fonction de Lagrange de (\ref{EQ:5_1}) :
 car l'\'energie potentielle ne d\'epend que des coordonn\'ees donc $\dfrac{\partial U}{\partial\vec{v}_{a}} = 0$. Et :
 \bea
 	\dfrac{\partial L}{\partial\vec{r}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{\partial\vec{v}_{a}^{\,2}}{\partial\vec{r}_{a}} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
-	& = & \dfrac{m_{a}}{2}\dfrac{\partial}{\partial\vec{r}_{a}}\left(\dfrac{{\rm d}\vec{r}_{a}}{{\rm dt}}\right)^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
-	& = & \dfrac{m_{a}}{2}\left[\dfrac{{\rm d}}{{\rm dt}}\left(\dfrac{\partial\vec{r}_{a}}{\partial\vec{r}_{a}}\right)\right]^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
+	& = & \dfrac{m_{a}}{2}\dfrac{\partial}{\partial\vec{r}_{a}}\left(\dfrac{\mathrm{d}\vec{r}_{a}}{\mathrm{dt}}\right)^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
+	& = & \dfrac{m_{a}}{2}\left[\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial\vec{r}_{a}}{\partial\vec{r}_{a}}\right)\right]^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
 	& = & - \dfrac{\partial U}{\partial\vec{r}_{a}}
 \eea
 car $\dfrac{\partial\vec{r}_{a}}{\partial\vec{r}_{a}} = 1$ ! Nous obtenons ainsi :
 \be
-	m_{a}\dfrac{{\rm d}\vec{r}_{a}}{{\rm dt}} = - \dfrac{\partial U}{\partial\vec{r}_{a}} \label{EQ:5_3}
+	m_{a}\dfrac{\mathrm{d}\vec{r}_{a}}{\mathrm{dt}} = - \dfrac{\partial U}{\partial\vec{r}_{a}} \label{EQ:5_3}
 \ee
 Il s'agit des \emph{\'equations de Newton} et le vecteur :
 \be
@@ -247,7 +247,7 @@ Si l'\'energie potentielle est d\'efinie \`a une constante pr\`es telle que $U'(
 Pour passer des coordonn\'ees cart\'esiennes au coordonn\'ees g\'en\'eralis\'ees, il faut d\'efinir une transformation ind\'ependante du temps telle que :
 \bea
 	x_{a} & = & f_{a}\left(\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}_{1}^{s}\right) \\
-	\Rightarrow \dot{x}_{a} = \dfrac{{\rm d}x_{a}}{{\rm dt}} & = & \sum_{k=1}^{s}\dfrac{\partial f_{a}(q_{k})}{\partial q_{k}}\dfrac{{\rm d}q_{k}}{{\rm dt}}
+	\Rightarrow \dot{x}_{a} = \dfrac{\mathrm{d}x_{a}}{\mathrm{dt}} & = & \sum_{k=1}^{s}\dfrac{\partial f_{a}(q_{k})}{\partial q_{k}}\dfrac{\mathrm{d}q_{k}}{\mathrm{dt}}
 \eea
 en employant la diff\'erentiel totale.
 
@@ -273,21 +273,21 @@ Consid\'erons le syst\`eme $A$ non ferm\'e et interagissant avec le syst\`eme $B
 \ee
 L'\'energie cin\'etique $T_{B}$ n'est fonction que du temps et est donc le r\'esultat de la d\'eriv\'ee totale par rapport au temps d'une fonction, voir (\ref{EQ:2_8}). Par cons\'equent, elle peut \^etre soustrait de la fonction de Lagrange totale. Nous avons donc :
 \be
-	L_{A+B} = T_{A}(q_{A},\dot{q}_{A}) - U(q_{A},q_{B}({\rm t}))
+	L_{A+B} = T_{A}(q_{A},\dot{q}_{A}) - U(q_{A},q_{B}(\mathrm{t}))
 \ee
 avec $U$ qui d\'epend explicitement des coordonn\'ees et du temps.
 
 Dans le cas particulier d'une unique particule dans un champ ext\'erieur, la fonction de Lagrange est :
 \be
-	L = \dfrac{mv^{2}}{2} - U(\vec{r},{\rm t}) \label{EQ:5_6}
+	L = \dfrac{mv^{2}}{2} - U(\vec{r},\mathrm{t}) \label{EQ:5_6}
 \ee
 et l'\'equation de Newton (\ref{EQ:5_3}) devient :
 \be
-	m\dfrac{{\rm d}\vec{v}}{{\rm dt}} = -\dfrac{\partial U(\vec{r},{\rm t})}{\partial \vec{r}} \label{EQ:5_7}
+	m\dfrac{\mathrm{d}\vec{v}}{\mathrm{dt}} = -\dfrac{\partial U(\vec{r},\mathrm{t})}{\partial \vec{r}} \label{EQ:5_7}
 \ee
 Dans le cadre d'un champ uniforme ($U$ ne d\'epend plus du temps), la force d\'efinie en (\ref{EQ:5_4}) devient :
 \bea
-	\vec{F} & = & -\dfrac{{\rm d} U(\vec{r})}{{\rm d}\vec{r}} \nonumber \\
-	\vec{F}.d\vec{r} & = & - {\rm d} U(\vec{r}) \nonumber \\
+	\vec{F} & = & -\dfrac{\mathrm{d} U(\vec{r})}{\mathrm{d}\vec{r}} \nonumber \\
+	\vec{F}.d\vec{r} & = & - \mathrm{d} U(\vec{r}) \nonumber \\
 	\vec{F}.\vec{r} & = & - U(\vec{r}) \label{EQ:5_8}
 \eea

@@ -1,0 +1,156 @@
+\chapter{Lois de conservation}
+
+\section{\'Energie}
+
+Les \emph{int\'egrales premi\`eres} ou \emph{int\'egrales du mouvement}, sont les fonctions de $q_{i}$ et $\dot{q}_{i}$ qui conservent une valeur constante au cours du mouvement. Elles sont additives, c'est-\`a-dire qu'avant et après une int\'eraction, leur somme garde une valeur identique.
+
+Commen\c{c}ons par l'int\'egrale premi\`ere qui d\'ecoule de l'\emph{uniformi\'e du temps}.
+
+Pour un syst\`eme ferm\'e \`a $s$ degr\'es de libert\'e, nous avons :
+\be
+	\dfrac{\mathrm{d}L}{\mathrm{dt}} = \sum_{i=1}^{s}\dfrac{\partial L}{\partial q_{i}}\dfrac{\mathrm{d} q_{i}}{\mathrm{dt}} + \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dfrac{\mathrm{d}\dot{q}_{i}}{\mathrm{dt}} + \dfrac{\partial L}{\partial \mathrm{t}}
+\ee
+L'uniformit\'e du temps donne $\dfrac{\partial L}{\partial \mathrm{t}} = 0$ et en utilisant l'\'equation (\ref{EQ:2_6}), nous avons :
+\bea
+	\dfrac{\mathrm{d}L}{\mathrm{dt}} & = & \sum_{i=1}^{s}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) + \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\ddot{q}_{i} \nonumber \\
+	& = & \sum_{i=1}^{s}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) \nonumber \\
+	0 & = & \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i} - L\right)
+\eea
+Par cons\'equent, la quantit\'e :
+\be
+	E = \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i} - L \label{EQ:6_1}
+\ee
+est constante dans le temps pour un syst\`eme ferm\'e. $E$ est l'\emph{\'energie} du syst\`eme. Et puisque la fonction de Lagrange est additive, l'\'energie l'est aussi. Les syst\`emes m\'ecaniques dont l'\'energie se conserve sont appel\'es \emph{syst\`emes conservatifs}. Enfin, si le syst\`eme est plac\'e dans un champ ext\'erieur constant par rapport au temps alors la loi de conservation de l'\'energie reste valable car la fonction de Lagrange est implicitement ind\'ependant du temps.
+
+\`A partir de l'\'equation (\ref{EQ:5_1}, nous pouvons \'ecrire :
+\be
+	\sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i} = \sum_{i=1}^{s}\dfrac{\partial (T-U)}{\partial\dot{q}_{i}}\dot{q}_{i} = \sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i}
+\ee
+car l'\'energie potentielle $U$ ne d\'epend que des coordonn\'ees (voire du temps).
+Nous savons que l'\'energie cin\'etique $T = f(\dot{q}^{2})$. Or pour une fonction homog\`ene de degr\'e $\alpha$, telle $f(t.x) = t^{\alpha}f(x)$, alors le th\'eor\`eme d'Euler donne pour cette fonction :
+\be
+	\sum_{i} x_{i}\dfrac{\partial f(x)}{\partial x_{i}} = \alpha f(x)
+\ee
+Appliqu\'ee \`a l'\'energie cin\'etique, cela donne :
+\be
+	\sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i} = 2T = \sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i}
+\ee
+ce qui permet de conclure \`a, en compl\'etant l'\'equation (\ref{EQ:6_1}) :
+\be
+	E = T(q,\dot{q}) + U(q) \label{EQ:6_2}
+\ee
+soit en coordonn\'ees cart\'esiennes :
+\be
+	E = \sum_{a}\dfrac{m_{a}\vec{v}_{a}^{\,2}}{2} + U(\begin{Bmatrix}\vec{r}_{i}\end{Bmatrix}_{1}^{s}) \label{EQ:6_3}
+\ee
+
+\section{Impulsion}
+
+Apr\`es l'unformit\'e du temps, nous allons \'etudier les cons\'equences de l'homog\'en\'eit\'e de l'espace. Dans ce cadre, les propri\'et\'es m\'ecaniques d'un syst\`eme ferm\'e ne changent pas lors d'un d\'eplacement parall\`ele du syst\`eme dans son entier. Supposons ainsi que la fonction de Lagrange reste inchang\'ee pour un d\'eplacement infinit\'esimal tel que : $\vec{r}_{a} \rightarrow \vec{r}_{a} + \vec{\epsilon}$, i.e. $\delta L = 0$ :
+\bea
+	\delta L(\vec{r}_{a},\vec{v}_{a}) & = & \sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}}\delta\vec{r}_{a} + \sum_{a}\dfrac{\partial L}{\partial\vec{v}_{a}}\delta\vec{v}_{a} \nonumber \\
+	& = & \sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}}\vec{\epsilon} \text{ puisque }\delta\vec{v}_{a} = \vec{0} \nonumber \\
+\eea
+donc $\delta L = 0$ est \'equivalent \`a :
+\bea
+	\forall \vec{\epsilon}\text{, }\sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}}\vec{\epsilon} & = & 0 \nonumber \\
+	\forall \vec{\epsilon}\text{, }\vec{\epsilon}\cdot\sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}} & = & 0 \nonumber \\
+	\Leftrightarrow \sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}} & = & 0 \label{EQ:7_1}
+\eea
+Or les \'equations de Lagrange (\ref{EQ:5_2}) donnent :
+\bea
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right) & = & \dfrac{\partial L}{\partial \vec{r}_{a}} \nonumber \\
+	\Leftrightarrow \sum_{a}\left(\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right)\right) & = & \sum_{a}\left(\dfrac{\partial L}{\partial \vec{r}_{a}}\right) \nonumber
+\eea
+En appliquant l'\'equation (\ref{EQ:7_1}), nous avons :
+\be
+	\sum_{a}\left(\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right)\right) = \dfrac{\mathrm{d}}{\mathrm{dt}}\sum_{a}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right) = \vec{0}
+\ee
+Ainsi, dans un syst\`eme ferm\'e, la quantit\'e vectorielle :
+\be
+	\vec{P} = \sum_{a}\dfrac{\partial L}{\partial \vec{v}_{a}} \label{EQ:7_2}
+\ee
+est inchang\'ee pendant le mouvement. Le vecteur $\vec{P}$ est l'\emph{impulsion}\footnote{Anciennement appel\'ee \emph{quantit\'e de mouvement}} du syt\`eme. En utilisant l'\'equation (\ref{EQ:5_1}), nous obtenons :
+\bea
+	L & = & \sum_{a}\dfrac{m_{a}\vec{v}_{a}^{\,2}}{2} - U(\begin{Bmatrix}\vec{r}_{a}\end{Bmatrix}_{1}^{s}) \nonumber \\
+	\Rightarrow \dfrac{\partial L}{\partial \vec{v}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{2\partial\vec{v}_{a}}{\partial\vec{v}_{a}} - \dfrac{\partial U}{\partial\vec{v}_{a}} \nonumber \\
+	& = & m_{a}\vec{v}_{a}
+\eea
+Ainsi :
+\be
+	\vec{P} = \sum_{a}m_{a}\vec{v}_{a} \label{EQ:7_3}
+\ee
+avec $\vec{P} = \sum_{a}\vec{p}_{a}$ pour un syst\`eme ferm\'e en l'absence de champ ext\'erieur.
+
+Supposons l'existence d'un champ ext\'erieur telle que $U\rightarrow U(z)$ en coordonn\'ees cart\'esiennes, les \'equations de Newton (\ref{EQ:5_3}) donnent :
+\bea
+	m_{a}\dfrac{\mathrm{d}v_{x}}{\mathrm{d}x} & = & - \dfrac{\partial U}{\partial x} = 0 \nonumber \\
+	m_{a}\dfrac{\mathrm{d}v_{y}}{\mathrm{d}y} & = & - \dfrac{\partial U}{\partial y} = 0 \nonumber \\
+	m_{a}\dfrac{\mathrm{d}v_{z}}{\mathrm{d}z} & = & - \dfrac{\partial U}{\partial z} \nonumber
+\eea
+et donc, dans ce cas, $P_{x}$ et $P_{y}$ se conservent donc.
+
+Une cons\'equence de l'\'equation (\ref{EQ:7_1}) en accord avec celle de (\ref{EQ:5_4}) pour la force $\vec{F}_{a}$ agissant sur le point mat\'eriel $a$ est que :
+\be
+	\sum_{a}\vec{F}_{a} = \vec{0} \label{EQ:7_4}
+\ee
+i.e. que la somme de toutes les forces s'exer\c{c}ant sur toutes les particules d'un syst\`eme ferm\'e est absolument nulle. Dans le cas particulier de deux particules, il y a $\vec{F}_{1} + \vec{F}_{2} = \vec{0}$. Les deux forces sont \'egales mais oppos\'ees, il s'agit de la loi de l'\'egalit\'e entre l'action et la r\'eaction.
+
+Dans le cadre du mouvement d\'ecrit par les coordonn\'ees g\'en\'eralis\'ees, nous avons :
+\begin{itemize}
+	\item les \emph{impulsions g\'en\'eralis\'ees} :
+	\be
+		p_{i} = \dfrac{\partial L}{\partial\dot{q}_{i}}
+	\ee
+	\item les \emph{forces g\'en\'eralis\'ees} :
+	\be
+		F_{i} = \dfrac{\partial L}{\partial q_{i}}
+	\ee
+	\item les \'equations de Lagrange :
+	\be
+		\dot p_{i} = F_{i}
+	\ee
+\end{itemize}
+
+\section{Centre d'inertie}
+
+Supposons deux r\'ef\'erentiels $(K)$ et $(K')$ tels que le second se meut à la vitesse $\vec{V}$ par rapport au premier. Nous avons donc $\vec{v}_{a} = \vec{v'}_{a} + \vec{V}$, soit, pour l'impulsion :
+\bea
+	\vec{P} = \sum_{a}m_{a}\vec{v}_{a} & = & \sum_{a}m_{a}\vec{v'}_{a} + \sum_{a}m_{a}\vec{V} \nonumber \\
+	\Leftrightarrow \vec{P} & = & \vec{P'} + \vec{V}\sum_{a}m_{a} \label{EQ:8_1}
+\eea
+Il existe toujours un r\'ef\'erentiel $(K')$ tel que le syst\`eme est consid\'er\'e comme au repos, soit $\vec{P'} = \vec{0}$. La vitesse de ce r\'ef\'erentiel par rapport \`a $(K)$ peut s'\'ecrire :
+\be
+	\vec{V} = \dfrac{\vec{P}}{\sum_{a}m_{a}} = \dfrac{\sum_{a}m_{a}\vec{v}_{a}}{\sum_{a}m_{a}} \label{EQ:8_2}
+\ee
+et elle d\'efinit la vitesse dans son ensemble du syst\`eme m\'ecanique ayant une impulsion $\vec{P}$ non nulle. Et une analogie avec le mouvement d'un point mat\'eriel est \'evidente en posant sa masse comme $\mu = \sum_{a}m_{a}$. La masse est donc \emph{additive}.
+La relation (\ref{EQ:8_2}) peut aussi s'\'ecrire comme :
+\bea
+	\vec{V} = \dfrac{\vec{R}}{\mathrm{dt}} & = & \dfrac{\sum_{a}m_{a}\dfrac{\vec{r}_{a}}{\mathrm{dt}}}{\sum_{a}m_{a}} = \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\sum_{a}m_{a}\vec{r}_{a}}{\sum_{a}m_{a}}\right) \nonumber \\
+	\Leftrightarrow \vec{R} & = & \dfrac{\sum_{a}m_{a}\vec{r}_{a}}{\sum_{a}m_{a}} \label{EQ:8_3}
+\eea
+Ainsi la vitesse d'un syst\`eme dans son ensemble est la vitesse de d\'eplacement du point de l'espace dont le rayon vecteur est d\'efini par l'\'equation (\ref{EQ:8_3}). Ce point est appel\'e \emph{centre d'inertie} du syst\`eme m\'ecanique.
+
+Il s'agit d'une g\'en\'eralisation de la loi d'inertie \'enonc\'ee en (\ref{EQ:3_2}) pour un syst\`eme ferm\'e dont le centre d'inertie co\"incide avec le point mat\'eriel. En conclusion, pour \'etudier les propri\'et\'es m\'ecaniques d'une syst\`eme ferm\'e, il est int\'eressant de choisir le r\'ef\'erentiel dans lequel son centre d'inertie est au repos et le mouvement rectiligne et uniforme du syst\`eme peut alors \^etre occult\'e.
+Soit $E_{\mathrm{int}}$ l'\'energie interne d'un syst\`eme ferm\'e au repos, elle comprend l'\'energie cin\'etiques du mouvement relatif des particules dans le syst\`eme ainsi que l'\'energie potentielle de leur int\'eraction mutuelle. L'\'energie totale d'un syst\`eme m\^u dans son ensemble par une vitesse $\vec{V}$ peut s'\'ecrire :
+\be
+	E = \dfrac{\mu \vec{V}^{\,2}}{2} + E_{\mathrm{int}} \label{EQ:8_4}
+\ee
+En effet, dans le r\'ef\'erentiel $(K)$ :
+\bea
+	E & = & \dfrac{1}{2}\sum_{a}m_{a}\vec{v}_{a}^{\,2} + U = \dfrac{1}{2}\sum_{a}m_{a}(\vec{v'}_{a} + \vec{V})^{\,2} + U \nonumber \\
+	& = & \dfrac{1}{2}\sum_{a}m_{a}\vec{v'}_{a}^{\,2} + \dfrac{1}{2}\sum_{a}m_{a}\vec{V}^{\,2} + \sum_{a}m_{a}\vec{v'}_{a}\vec{V} + U \nonumber \\
+	& = & \dfrac{\mu}{2}\vec{V} + \vec{V}\sum_{a}m_{a}\vec{v'}_{a} + \dfrac{1}{2}\sum_{a}m_{a}\vec{v'}_{a}^{\,2} + U \\
+\eea
+Puisque :
+\bea
+	E' & = & \dfrac{1}{2}\sum_{a}m_{a}\vec{v'}_{a}^{\,2} + U \nonumber \\
+	\vec{P'} & = & \sum_{a}m_{a}\vec{v'}_{a} \nonumber
+\eea
+alors nous arrivons \`a :
+\be
+	E = E' + \vec{V}\cdot\vec{P'} + \dfrac{\mu}{2}\vec{V} \label{EQ:8_5}
+\ee
+qui est la loi de transformation de l'\'energie lors d'un changement de r\'ef\'erentiel se mouvant l'un par rapport \`a l'autre comme d\'efini. Aussi, dans le cas d'un syst\`eme m\'ecanique au repos dans le r\'ef\'erentiel $(K')$, alors $\vec{P'} = \vec{0}$  et $E'$ est l'\'energie interne de ce syst\`eme. Nous retombons alors sur l'\'equation (\ref{EQ:8_4}).
+
+\section{Moment cinétique}
