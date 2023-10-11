@@ -206,7 +206,7 @@ donc finalement :
 où le second terme est une d\'eriv\'ee totale d'une fonction par rapport au temps uniquement et d'apr\`es l'\'equation (\ref{EQ:2_8}) peut être omis du résultat de la fonction de Lagrange, comme le terme strictement constant $a^{2}\alpha^{2}$ provenant de l'\'energie cin\'etique. La fonction de Lagrange du point mat\'eriel s'\'ecrit finalement :
 \bea
 	L & = & T - U \nonumber \\
-	L & = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi)
+	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi)
 \eea
 
 \subsection{Cas des oscillations horizontales}
@@ -257,12 +257,12 @@ L'\'energie cin\'etique est donc :
 	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
 	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} \nonumber \\
 	& + & l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2}) \nonumber \\
-	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + l^{2}\dot{\varphi}^{2})
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2})
 \eea
 Sachant que l'\'energie potentielle s'\'ecrit $U = -mgl\cos(\varphi)$, la fonction de Lagrange est :
 \bea
 	L & = & T - U \nonumber \\
-	L & = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} - mla\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi)
+	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} - mla\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + mgl\cos(\varphi)
 \eea
 car la fonction $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique n'est qu'une fonction unique du temps et peut donc \^etre omise, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $mla\alpha^{2}\cos(\alpha\mathrm{t})\sin(\varphi)$ que je n'arrive pas à obtenir ici}.
 
@@ -313,11 +313,45 @@ L'\'energie cin\'etique s'\'ecrit alors :
 	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
 	& = & \dfrac{m}{2}(l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2} + a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2} \nonumber \\
 	& + & 2al\alpha\sin(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi}) \nonumber \\
-	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + 2al\alpha\sin(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + l^{2}\dot{\varphi}^{2})
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + 2al\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2})
 \eea
 Sachant que l'\'energie potentielle s'\'ecrit $U = -mg(a\cos(\alpha\mathrm{t}) + l\cos(\varphi))$, la fonction de Lagrange est :
 \bea
 	L & = & T - U \nonumber \\
+	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + mgl\cos(\varphi)
 \eea
+car les fonctions $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique et $-mg(a\cos(\alpha\mathrm{t})$ issue de l'\'energie potentielle ne sont que des fonctions uniques du temps et peuvent donc \^etre omises, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $mla\alpha^{2}\cos(\alpha\mathrm{t})\cos(\varphi)$ que je n'arrive pas à obtenir ici}.
 
 \section{Probl\`eme du pendule rotatif à trois masses}
+
+Dans le cas trait\'e ici, l'ensemble du syst\`eme tourne avec une vitesse angulaire constante $\Omega$ et la masse $m_{2}$ ne peut se déplacer que sur l'axe verticale des ordonn\'ees.
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,150)(10,0){15}{\line(1,0){8}}\put(150,147){$x$}
+			\multiput(75,0)(0,10){15}{\line(0,1){8}}\put(72,-7){$y$}
+			%arms
+			\linethickness{0.5mm}
+			\put(75,150){\color{black}\circle*{5}}
+			\put(75,150){\line(1,-1){50}}
+			\put(115,115){$a$}
+			\put(125,100){\color{black}\circle*{10}}\put(131,98){$m_{1}$}
+			\put(125,100){\line(-1,-1){50}}
+			\put(105,75){$a$}
+			\put(75,50){\color{black}\circle*{10}}\put(82,48){$m_{2}$}
+			\put(75,150){\line(-1,-1){50}}
+			\put(32,115){$a$}
+			\put(25,100){\color{black}\circle*{10}}\put(5,98){$m_{1}$}
+			\put(25,100){\line(1,-1){50}}
+			\put(32,75){$a$}
+			%angle
+			\linethickness{0.05mm}
+			\qbezier(75,130),(80,130),(90,135)
+			\put(80,121){$\theta$}
+		\end{picture}
+		\caption{Pendule en rotation à trois masses}\label{FIG:1_5}
+	\end{center}
+\end{figure}
