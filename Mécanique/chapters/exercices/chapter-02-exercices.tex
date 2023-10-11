@@ -1,3 +1,31 @@
-\chapter{Probl\`emes des lois du mouvement}
+\chapter{Probl\`emes sur les lois de conservation}
 
-\section{Probl\`eme impulsion}
+\section{Changement de direction d'une particule}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,100)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(75,0)(0,10){10}{\line(0,1){8}}
+			\multiput(20,50)(7,0){6}{\line(1,0){5}}
+			\multiput(100,50)(7,0){6}{\line(1,0){5}}
+			%particles
+			\put(20,50){\color{black}\circle*{5}}\put(6,47){$m$}
+			\put(100,50){\color{black}\circle*{5}}
+			%velocities
+			\put(20,50){\color{black}\vector(3,1){40}}\put(35,65){$\vec{v}_{1}$}
+			\put(100,50){\color{black}\vector(2,1){40}}\put(110,65){$\vec{v}_{2}$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(40,50),(40,52),(38,55)
+			\put(45,52){$\theta_{1}$}
+			\qbezier(115,50),(115,52),(113,55)
+			\put(120,52){$\theta_{2}$}
+			%potential energies
+			\put(25,10){$U_{1}(t_{1})$}
+			\put(110,10){$U_{2}(t_{2})$}
+		\end{picture}
+		\caption{Trajectoire de la particule}\label{FIG:2_1}
+	\end{center}
+\end{figure}
