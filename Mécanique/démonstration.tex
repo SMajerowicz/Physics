@@ -6,8 +6,11 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsfonts,amsmath,amssymb}
 
-\setlength{\paperwidth}{29.7cm}
-\setlength{\paperheight}{21cm}
+\usepackage[pdftex]{pict2e}
+\usepackage[dvipsnames]{xcolor}
+
+\setlength{\paperwidth}{21cm}
+\setlength{\paperheight}{29.7cm}
 \setlength{\evensidemargin}{0cm}
 \setlength{\oddsidemargin}{-0.5cm}
 \setlength{\topmargin}{-2cm}
@@ -41,6 +44,7 @@ Ce document est une aide pour la compr\'ehension du premier livre des célèbres
 \end{abstract}
 
 \tableofcontents
+\listoffigures
 
 \clearpage
 \pagenumbering{arabic}
@@ -48,5 +52,10 @@ Ce document est une aide pour la compr\'ehension du premier livre des célèbres
 
 \include{chapters/chapter-01}
 \include{chapters/chapter-02}
+
+\appendix
+
+\include{chapters/exercices/chapter-01-exercices}
+\include{chapters/exercices/chapter-02-exercices}
 
 \end{document}

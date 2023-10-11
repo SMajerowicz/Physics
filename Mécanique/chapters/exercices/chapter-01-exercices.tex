@@ -1,0 +1,381 @@
+\chapter{Probl\`emes d'\'equations du mouvement}
+
+L'objectif est de trouver la fonction de Lagrange dans les cas suivants plac\'es dans un champ de pesanteur constant $g$.
+
+\section{Probl\`eme du pendule double oscillant}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,200)(10,0){15}{\line(1,0){8}}\put(150,195){$x$}
+			\multiput(0,0)(0,10){20}{\line(0,1){8}}\put(-5,-10){$y$}
+			\multiput(75,90)(0,-10){7}{\line(0,-1){8}}
+			%socle
+			\put(0,200){\color{black}\circle*{5}}
+			%arms
+			\linethickness{0.5mm}
+			\put(0,200){\line(10,-15){75}}
+			\put(40,150){$l_{1}$}
+			\put(75,90){\color{black}\circle*{10}}\put(80,95){$m_{1}$}
+			\put(75,90){\line(15,-10){50}}
+			\put(105,75){$l_{2}$}
+			\put(125,55){\color{black}\circle*{10}}\put(130,60){$m_{2}$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(0,180),(5,182),(10,185)
+			\put(3,170){$\varphi_{1}$}
+			\qbezier(75,70),(82,70),(93,80)
+			\put(83,60){$\varphi_{2}$}
+		\end{picture}
+		\caption{Pendule double oscillant}\label{FIG:1_1}
+	\end{center}
+\end{figure}
+
+La fonction de Lagrange du syst\`eme $L = L_{1} + L_{2}$. Calculons d'abord $L_{1} = T_{1} - U_{1}$ avec :
+\be
+	\begin{cases}
+		T_{1} = \dfrac{m_{1}}{2}\left(l_{1}\dot{\varphi_{1}}\right)^{2} \\
+		U_{1} = -m_{1}gl_{1}\cos(\varphi_{1})
+	\end{cases}
+\ee
+Pour $L_{2}$, partons des coordonn\'ees cart\'esiennes de $m_{2}$, soit :
+\be
+	\begin{cases}
+		x_{2} = l_{1}\sin(\varphi_{1}) + l_{2}\sin(\varphi_{2}) \\
+		y_{2} = l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2}) \\
+	\end{cases}
+\ee
+or il est clair que :
+\be
+\dfrac{\mathrm{d}f(u(\mathrm{t}))}{\mathrm{dt}} = \dfrac{\mathrm{d}f(u(\mathrm{t}))}{\mathrm{d}u(\mathrm{t})}\dfrac{\mathrm{d}u(\mathrm{t})}{\mathrm{dt}}
+\ee
+Cela implique donc :
+\be
+	\begin{cases}
+		\dot{x_{2}} = \dfrac{\mathrm{d}x}{\mathrm{dt}} = l_{1}\cos(\varphi_{1})\dot{\varphi_{1}} + l_{2}\cos(\varphi_{2})\dot{\varphi_{2}} \\[0.25cm]
+		\dot{y_{2}} = \dfrac{\mathrm{d}y}{\mathrm{dt}} = -l_{2}\sin(\varphi_{1})\dot{\varphi_{1}} - l_{2}\sin(\varphi_{2})\dot{\varphi_{2}} \\
+	\end{cases}
+\ee
+L'\'energie cin\'etique $T_{2}$ s'\'ecrit alors :
+\bea
+	T_{2} & = & \dfrac{m_{2}}{2}(\dot{x_{2}}^{2} + \dot{y_{2}}^{2}) \nonumber \\
+	& = & \dfrac{m_{2}}{2}(l_{1}^{2}\cos^{2}(\varphi_{1})\dot{\varphi_{1}}^{2} + 2l_{1}l_{2}\cos(\varphi_{1})\cos(\varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}} + l_{2}^{2}\cos^{2}(\varphi_{2})\dot{\varphi_{2}}^{2} \nonumber \\
+	& + & l_{1}^{2}\sin^{2}(\varphi_{1})\dot{\varphi_{1}}^{2} + 2l_{1}l_{2}\sin(\varphi_{1})\sin(\varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}} + l_{2}^{2}\sin^{2}(\varphi_{2})\dot{\varphi_{2}}^{2}) \nonumber
+\eea
+or, nous savons que :
+\be
+	\begin{cases}
+		\cos^2(\alpha) + \sin^{2}(\alpha) = 1 \\
+		\cos(\alpha - \beta) = \cos(\alpha)\cos(\beta) + \sin(\alpha)\sin(\beta)
+	\end{cases}
+\ee
+ce qui conclut pour l'\'energie cin\'etique \`a :
+\be
+	T_{2} = \dfrac{m_{2}}{2}(l_{1}^{2}\dot{\varphi_{1}}^{2} + l_{2}^{2}\dot{\varphi_{2}}^{2} + 2l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}})
+\ee
+De mani\`ere \'evidente, l'\'energie potentielle est :
+\be
+	U_{2} = -m_{2}g(l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2}))
+\ee
+En rassemblant, la fonction de Lagrange du syst\`eme m\'ecanique total :
+\bea
+	L & = & T_{1} + T_{2} - U_{1} - U{_2} \nonumber \\
+	& = & \dfrac{m_{1}}{2}\left(l_{1}\dot{\varphi_{1}}\right)^{2} + \dfrac{m_{2}}{2}(l_{1}^{2}\dot{\varphi_{1}}^{2} + l_{2}^{2}\dot{\varphi_{2}}^{2} + 2l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}}) \nonumber \\
+	& + & m_{1}gl_{1}\cos(\varphi_{1}) + m_{2}g(l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2})) \nonumber \\
+	& = & \dfrac{m_{1}+m_{2}}{2}l_{1}^{2}\dot{\varphi_{1}}^{2} + \dfrac{m_{2}}{2}l_{2}^{2}\dot{\varphi_{2}}^{2} + m_{2}l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}} \nonumber \\
+	& + & (m_{1}+m_{2})gl_{1}\cos(\varphi_{1}) + m_{2}gl_{2}\cos(\varphi_{2})
+\eea
+
+\section{Probl\`eme du pendule plan}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,150)(10,0){15}{\line(1,0){8}}\put(150,145){$x$}
+			\multiput(0,0)(0,10){15}{\line(0,1){8}}\put(-5,-10){$y$}
+			\multiput(50,150)(0,-10){10}{\line(0,-1){8}}
+			%arms
+			\linethickness{0.5mm}
+			\put(50,150){\color{black}\circle*{10}}\put(60,140){$m_{1}$}
+			\put(50,150){\line(10,-15){75}}
+			\put(90,100){$l$}
+			\put(125,40){\color{black}\circle*{10}}\put(130,45){$m_{2}$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(50,130),(55,132),(60,135)
+			\put(53,120){$\varphi$}
+		\end{picture}
+		\caption{Pendule plan}\label{FIG:1_2}
+	\end{center}
+\end{figure}
+
+En suivant la m\^eme m\'ethodologie que dans l'exercice pr\'ec\'edent, nous avons avec $x$ l'abscisse de $m_{1}$ :
+\be
+	\begin{cases}
+		T_{1} = \dfrac{m_{1}}{2}\dot{x}^{2} \\
+		U_{1} = 0
+	\end{cases}
+\ee
+et :
+\be
+	\begin{cases}
+		T_{2} = \dfrac{m_{2}}{2}(\dot{x}^{2} + \dot{y}^{2}) \\
+		U_{2} = -lm_{2}g\cos(\varphi)
+	\end{cases}
+\ee
+En développant $T_{2}$ :
+\bea
+	T_{2} & = & \dfrac{m_{2}}{2}\left(\left(\dfrac{\mathrm{d}(x + l\sin(\varphi))}{\mathrm{dt}}\right)^{2} + (\left(\dfrac{\mathrm{d}l\cos(\varphi)}{\mathrm{dt}}\right)^{2}\right) \nonumber \\
+	& = & \dfrac{m_{2}}{2}\left((\dot{x} + l\cos(\varphi)\dot{\varphi})^{2} + (-l\sin(\varphi)\dot{\varphi})^{2}\right) \nonumber \\
+	& = & \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2} + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2}\right) \nonumber \\
+	& = & \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\dot{\varphi}^{2}\right)
+\eea
+La fonction de Lagrange du syst\`eme s'\'ecrit ainsi :
+\bea
+	L & = & T_{1} + T_{2} - U_{1} - U{_2} \nonumber \\
+	& = & \dfrac{m_{1}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\dot{\varphi}^{2}\right) - 0 + lm_{2}g\cos(\varphi) \nonumber \\
+	& = & \dfrac{m_{1} + m_{2}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(l^{2}\dot{\varphi}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi}\right) + m_{2}gl\cos(\varphi)
+\eea
+
+\section{Probl\`eme du pendule plan sur un cercle}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(50,150)(10,0){10}{\line(1,0){8}}\put(150,145){$x$}
+			\multiput(50,50)(0,10){15}{\line(0,1){8}}\put(48,40){$y$}
+			\multiput(75,140)(0,-10){7}{\line(0,-1){8}}
+			%circle
+			\put(50,150){\color{black}\circle{50}}
+			\put(50,150){\vector(1,1){17}}\put(62,156){$a$}
+			\multiput(50,150)(5,-2){5}{\line(2,-1){4}}\put(75,142){$\alpha\mathrm{t}$}
+			%arm
+			\linethickness{0.5mm}
+			\put(75,140){\line(10,-15){50}}
+			\put(105,105){$l$}
+			\put(125,65){\color{black}\circle*{10}}\put(132,63){$m$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(75,120),(80,122),(85,125)
+			\put(77,115){$\varphi$}
+		\end{picture}
+		\caption{Pendule plan sur un cercle}\label{FIG:1_3}
+	\end{center}
+\end{figure}
+
+\subsection{Cas pulsation constante}
+
+Dans ce syst\`eme, \'etablissons les coordonn\'ees cart\'esiennes du point mat\'eriel $m$ :
+\be
+	\begin{cases}
+		x = a\cos(\alpha\mathrm{t}) + l\sin(\varphi) \\
+		y = a\sin(2\pi - \alpha\mathrm{t}) + l\cos(\varphi) = -a\sin(\alpha\mathrm{t}) + l\cos(\varphi)
+	\end{cases}
+\ee
+Soit :
+\be
+	\begin{cases}
+		\dot{x} = -a\alpha\sin(\alpha\mathrm{t}) + l\cos(\varphi)\dot{\varphi} \\
+		\dot{y} = -a\alpha\cos(\alpha\mathrm{t}) - l\sin(\varphi)\dot{\varphi}
+	\end{cases}
+\ee
+L'\'energie cin\'etique s'\'ecrit :
+\bea
+	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2la\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + l^{2}\cos^{2}(\alpha\mathrm{t})\dot{\varphi}^{2} \nonumber \\
+	& + & a^{2}\alpha^{2}\cos^{2}(\alpha\mathrm{t}) + 2la\alpha\cos(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + l^{2}\sin^{2}(\alpha\mathrm{t})\dot{\varphi}^{2}) \nonumber
+\eea
+or :
+\be
+	\sin(\varphi - \alpha\mathrm{t}) = \cos(\alpha\mathrm{t})\sin(\varphi) - \sin(\alpha\mathrm{t})\cos(\varphi)
+\ee
+donc finalement :
+\be
+	T = \dfrac{m}{2}\left[a^{2}\alpha^{2} + l^{2}\dot{\varphi}^{2} + 2al\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi}\right]
+\ee
+\emph{Dans l'\'edition du livre en ma possession, l'\'energie cin\'etique est propos\'ee avec un terme en $2al\alpha^{2}\sin(\varphi - \alpha\mathrm{t})$ que je n'arrive pas à obtenir ici}. En continuant avec l'\'energie potentielle :
+\be
+	U = -mg(l\cos(\varphi)-a\sin(\alpha\mathrm{t}))
+\ee
+où le second terme est une d\'eriv\'ee totale d'une fonction par rapport au temps uniquement et d'apr\`es l'\'equation (\ref{EQ:2_8}) peut être omis du résultat de la fonction de Lagrange, comme le terme strictement constant $a^{2}\alpha^{2}$ provenant de l'\'energie cin\'etique. La fonction de Lagrange du point mat\'eriel s'\'ecrit finalement :
+\bea
+	L & = & T - U \nonumber \\
+	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi)
+\eea
+
+\subsection{Cas des oscillations horizontales}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,150)(10,0){15}{\line(1,0){8}}\put(150,147){$x$}
+			\multiput(75,0)(0,10){15}{\line(0,1){8}}\put(72,-7){$y$}
+			\multiput(100,150)(0,-10){10}{\line(0,-1){8}}
+			%limits
+			\linethickness{0.1mm}
+			\put(140,145){\line(0,1){10}}\put(142,152){$a$}
+			\put(10,145){\line(0,1){10}}\put(12,152){$-a$}
+			%arms
+			\linethickness{0.5mm}
+			\put(100,150){\color{black}\circle*{5}}
+			\put(100,150){\line(10,-15){70}}
+			\put(140,100){$l$}
+			\put(170,45){\color{black}\circle*{10}}\put(177,45){$m$}
+			%angle
+			\linethickness{0.05mm}
+			\qbezier(100,130),(105,132),(110,135)
+			\put(103,120){$\varphi$}
+		\end{picture}
+		\caption{Pendule avec oscillations horizontales}\label{FIG:1_4}
+	\end{center}
+\end{figure}
+
+Dans ce cas pr\'ecis, les oscillations sont de la forme $a\cos(\alpha\mathrm{t})$ sur l'axe des abscisses comme d\'ecrit sur la figure (\ref{FIG:1_4}). Dans ce syst\`eme, les coordonn\'ees cart\'esiennes du point mat\'eriel $m$ sont :
+\be
+	\begin{cases}
+		x = a\cos(\alpha\mathrm{t}) + l\sin(\varphi) \\
+		y = l\cos(\varphi)
+	\end{cases}
+\ee
+Soit :
+\be
+	\begin{cases}
+		\dot{x} = -a\alpha\sin(\alpha\mathrm{t}) + l\cos(\varphi)\dot{\varphi} \\
+		\dot{y} = -l\sin(\varphi)\dot{\varphi}
+	\end{cases}
+\ee
+L'\'energie cin\'etique est donc :
+\bea
+	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} \nonumber \\
+	& + & l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2}) \nonumber \\
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2})
+\eea
+Sachant que l'\'energie potentielle s'\'ecrit $U = -mgl\cos(\varphi)$, la fonction de Lagrange est :
+\bea
+	L & = & T - U \nonumber \\
+	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} - mla\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + mgl\cos(\varphi)
+\eea
+car la fonction $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique n'est qu'une fonction unique du temps et peut donc \^etre omise, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $mla\alpha^{2}\cos(\alpha\mathrm{t})\sin(\varphi)$ que je n'arrive pas à obtenir ici}.
+
+\subsection{Cas des oscillations verticales}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,75)(10,0){15}{\line(1,0){8}}\put(150,72){$x$}
+			\multiput(75,0)(0,10){15}{\line(0,1){8}}\put(72,-7){$y$}
+			%limits
+			\linethickness{0.1mm}
+			\put(70,140){\line(1,0){10}}\put(55,137){$-a$}
+			\put(70,10){\line(1,0){10}}\put(62,7){$a$}
+			%arms
+			\linethickness{0.5mm}
+			\put(75,100){\color{black}\circle*{5}}
+			\put(75,100){\line(10,-15){70}}
+			\put(120,40){$l$}
+			\put(145,-5){\color{black}\circle*{10}}\put(152,-8){$m$}
+			%angle
+			\linethickness{0.05mm}
+			\qbezier(75,80),(80,82),(85,85)
+			\put(78,70){$\varphi$}
+		\end{picture}
+		\caption{Pendule avec oscillations verticales}\label{FIG:1_5}
+	\end{center}
+\end{figure}
+
+Dans ce cas, les oscillations sont de la forme $a\cos(\alpha\mathrm{t})$ sur l'axe des ordonn\'ees, voir la figure (\ref{FIG:1_5}). Les coordonn\'ees cart\'esiennes du point mat\'eriel $m$ sont :
+\be
+	\begin{cases}
+		x = l\sin(\varphi) \\
+		y = a\cos(\alpha\mathrm{t}) + l\cos(\varphi)
+	\end{cases}
+\ee
+Et sa vitesse :
+\be
+	\begin{cases}
+		\dot{x} = l\cos(\varphi)\dot{\varphi} \\
+		\dot{y} = -a\alpha\sin(\alpha\mathrm{t}) - l\sin(\varphi)\dot{\varphi}
+	\end{cases}
+\ee
+L'\'energie cin\'etique s'\'ecrit alors :
+\bea
+	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
+	& = & \dfrac{m}{2}(l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2} + a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2} \nonumber \\
+	& + & 2al\alpha\sin(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi}) \nonumber \\
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + 2al\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2})
+\eea
+Sachant que l'\'energie potentielle s'\'ecrit $U = -mg(a\cos(\alpha\mathrm{t}) + l\cos(\varphi))$, la fonction de Lagrange est :
+\bea
+	L & = & T - U \nonumber \\
+	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + mgl\cos(\varphi)
+\eea
+car les fonctions $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique et $-mg(a\cos(\alpha\mathrm{t})$ issue de l'\'energie potentielle ne sont que des fonctions uniques du temps et peuvent donc \^etre omises, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $mla\alpha^{2}\cos(\alpha\mathrm{t})\cos(\varphi)$ que je n'arrive pas à obtenir ici}.
+
+\section{Probl\`eme du pendule rotatif à trois masses}
+
+Dans le cas trait\'e ici, l'ensemble du syst\`eme tourne avec une vitesse angulaire constante $\Omega = \dfrac{\mathrm{d}\omega}{\mathrm{dt}} = \dot{\omega}$ et la masse $m_{2}$ ne peut se déplacer que sur l'axe verticale des ordonn\'ees. La point d'attache du syst\`eme m\'ecanique est fixe et est consid\'er\'e comme l'origine du r\'ef\'erentiel.
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,150)(10,0){15}{\line(1,0){8}}\put(150,147){$x$}
+			\multiput(75,0)(0,10){15}{\line(0,1){8}}\put(72,-7){$y$}
+			%arms
+			\linethickness{0.5mm}
+			\put(75,150){\color{black}\circle*{5}}
+			\put(75,150){\line(1,-1){50}}
+			\put(115,115){$a$}
+			\put(125,100){\color{black}\circle*{10}}\put(131,98){$m_{1}$}
+			\put(125,100){\line(-1,-1){50}}
+			\put(105,75){$a$}
+			\put(75,50){\color{black}\circle*{10}}\put(82,48){$m_{2}$}
+			\put(75,150){\line(-1,-1){50}}
+			\put(32,115){$a$}
+			\put(25,100){\color{black}\circle*{10}}\put(5,98){$m_{1}$}
+			\put(25,100){\line(1,-1){50}}
+			\put(32,75){$a$}
+			%angle
+			\linethickness{0.05mm}
+			\qbezier(75,130),(80,130),(90,135)
+			\put(80,121){$\theta$}
+		\end{picture}
+		\caption{Pendule en rotation à trois masses}\label{FIG:1_6}
+	\end{center}
+\end{figure}
+En coordonn\'ees sph\'eriques, nous avons de facto :
+\be
+	\begin{cases}
+		\mathrm{d}l_{1}^{2} = \mathrm{d}l_{2}^{2} = \mathrm{d}r_{1}^{2} + r_{1}^{2}\mathrm{d}\theta^{2} + r_{1}^{2}\sin^{2}(\theta)\mathrm{d}\omega^{2} \\
+		\mathrm{d}l_{3} = -2a\sin(\theta)\mathrm{d}\theta
+	\end{cases}
+\ee
+Or $r_{1} = r_{2} = a$ donc $\mathrm{d}r_{1} = \mathrm{d}r_{2} = 0$, ce qui permet d'\'ecrire :
+\be
+	\begin{cases}
+		T_{1} = T_{2} = \dfrac{m_{1}a^{2}}{2}(\dot{\theta}^{2} + \sin^{2}(\theta)\dot{\omega}^{2}) \\
+		T_{3} = \dfrac{4m_{2}a^{2}}{2}\sin^{2}(\theta)\dot{\theta}^{2} \\
+		U_{1} = U_{2} = -m_{1}ga\cos(\theta) \\
+		U_{3} = -2m_{2}ga\cos(\theta)
+	\end{cases}
+\ee
+La fonction de Lagrange du syst\`eme m\'ecanique est alors :
+\bea
+	L & = & T_{1} + T_{2} + T_{3} - U_{1} - U_{2} - U_{3} \nonumber \\
+	& = & 2T_{1} + T_{3} - 2U_{1} - U_{3} \nonumber \\
+	& = & m_{1}a^{2}(\dot{\theta}^{2} + \sin^{2}(\theta)\dot{\omega}^{2}) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} \nonumber \\
+	& + & 2m_{1}ga\cos(\theta) + 2m_{2}ga\cos(\theta) \nonumber \\
+	& = & m_{1}a^{2}(\dot{\theta}^{2} + \Omega^{2}\sin^{2}(\theta)) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} + 2(m_{1}+m_{2})ga\cos(\theta)
+\eea
