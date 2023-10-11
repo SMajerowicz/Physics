@@ -324,7 +324,7 @@ car les fonctions $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energ
 
 \section{Probl\`eme du pendule rotatif à trois masses}
 
-Dans le cas trait\'e ici, l'ensemble du syst\`eme tourne avec une vitesse angulaire constante $\Omega = \dfrac{\mathrm{d}\omega}{\mathrm{dt}} = dot{\omega}$ et la masse $m_{2}$ ne peut se déplacer que sur l'axe verticale des ordonn\'ees. La point d'attache du syst\`eme m\'ecanique est fixe et est consid\'er\'e comme l'origine du r\'ef\'erentiel.
+Dans le cas trait\'e ici, l'ensemble du syst\`eme tourne avec une vitesse angulaire constante $\Omega = \dfrac{\mathrm{d}\omega}{\mathrm{dt}} = \dot{\omega}$ et la masse $m_{2}$ ne peut se déplacer que sur l'axe verticale des ordonn\'ees. La point d'attache du syst\`eme m\'ecanique est fixe et est consid\'er\'e comme l'origine du r\'ef\'erentiel.
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -352,30 +352,30 @@ Dans le cas trait\'e ici, l'ensemble du syst\`eme tourne avec une vitesse angula
 			\qbezier(75,130),(80,130),(90,135)
 			\put(80,121){$\theta$}
 		\end{picture}
-		\caption{Pendule en rotation à trois masses}\label{FIG:1_5}
+		\caption{Pendule en rotation à trois masses}\label{FIG:1_6}
 	\end{center}
 \end{figure}
 En coordonn\'ees sph\'eriques, nous avons de facto :
 \be
 	\begin{cases}
-		\mathrm{d}l_{1}^{2} = \mathrm{d}l_{2}^{2} = \mathrm{d}r_{1}^{2} + r_{1}^{2}\mathrm{d}\vartheta^{2} + r_{1}^{2}\sin^{2}(\vartheta)\mathrm{d}\omega^{2} \\
-		\mathrm{d}l_{3} = -2a\sin(\vartheta)\mathrm{d}\vartheta
+		\mathrm{d}l_{1}^{2} = \mathrm{d}l_{2}^{2} = \mathrm{d}r_{1}^{2} + r_{1}^{2}\mathrm{d}\theta^{2} + r_{1}^{2}\sin^{2}(\theta)\mathrm{d}\omega^{2} \\
+		\mathrm{d}l_{3} = -2a\sin(\theta)\mathrm{d}\theta
 	\end{cases}
 \ee
 Or $r_{1} = r_{2} = a$ donc $\mathrm{d}r_{1} = \mathrm{d}r_{2} = 0$, ce qui permet d'\'ecrire :
 \be
 	\begin{cases}
-		T_{1} = T_{2} = \dfrac{m_{1}a^{2}}{2}(\dot{\vartheta}^{2} + \sin^{2}(\vartheta)\dot{\omega}^{2}) \\
-		T_{3} = \dfrac{4m_{2}a^{2}}{2}\sin^{2}(\vartheta)\dot{\vartheta}^{2} \\
-		U_{1} = U_{2} = -m_{1}ga\cos(\vartheta) \\
-		U_{3} = -2m_{2}ga\cos(\vartheta)
+		T_{1} = T_{2} = \dfrac{m_{1}a^{2}}{2}(\dot{\theta}^{2} + \sin^{2}(\theta)\dot{\omega}^{2}) \\
+		T_{3} = \dfrac{4m_{2}a^{2}}{2}\sin^{2}(\theta)\dot{\theta}^{2} \\
+		U_{1} = U_{2} = -m_{1}ga\cos(\theta) \\
+		U_{3} = -2m_{2}ga\cos(\theta)
 	\end{cases}
 \ee
 La fonction de Lagrange du syst\`eme m\'ecanique est alors :
 \bea
 	L & = & T_{1} + T_{2} + T_{3} - U_{1} - U_{2} - U_{3} \nonumber \\
 	& = & 2T_{1} + T_{3} - 2U_{1} - U_{3} \nonumber \\
-	& = & m_{1}a^{2}(\dot{\vartheta}^{2} + \sin^{2}(\vartheta)\dot{\omega}^{2}) + 2m_{2}a^{2}\sin^{2}(\vartheta)\dot{\vartheta}^{2} \nonumber \\
-	& + & 2m_{1}ga\cos(\vartheta) + 2m_{2}ga\cos(\vartheta) \nonumber \\
-	& = & m_{1}a^{2}(\dot{\vartheta}^{2} + \Omega^{2}\sin^{2}(\vartheta)) + 2m_{2}a^{2}\sin^{2}(\vartheta)\dot{\vartheta}^{2} + 2(m_{1}+m_{2})ga\cos(\vartheta)
+	& = & m_{1}a^{2}(\dot{\theta}^{2} + \sin^{2}(\theta)\dot{\omega}^{2}) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} \nonumber \\
+	& + & 2m_{1}ga\cos(\theta) + 2m_{2}ga\cos(\theta) \nonumber \\
+	& = & m_{1}a^{2}(\dot{\theta}^{2} + \Omega^{2}\sin^{2}(\theta)) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} + 2(m_{1}+m_{2})ga\cos(\theta)
 \eea
