@@ -29,3 +29,22 @@
 		\caption{Trajectoire de la particule}\label{FIG:2_1}
 	\end{center}
 \end{figure}
+
+Par application de la conservation de l'\'energie, nous pouvons \'ecrire :
+\bea
+	E_{1} & = & E_{2} \nonumber \\
+	\dfrac{m\vec{v_{1}}^{\,2}}{2} + U_{1} & = & \dfrac{m\vec{v_{2}}^{\,2}}{2} + U_{2}
+\eea
+Alors que l'application de la conservation de mouvement suivant l'axe vertical, puisque l'\'energie potentielle est constante suivant cette axe, permet d'\'ecrire :
+\bea
+	mv_{1}\sin(\theta_{1}) & = & mv_{2}\sin(\theta_{2}) \nonumber \\
+	\Leftrightarrow v_{2} & = & v_{1}\dfrac{\sin(\theta_{1})}{\sin(\theta_{2})}
+\eea
+En reprenant la conservation de l'\'energie, nous avons ainsi :
+\bea
+	\dfrac{m\vec{v_{1}}^{\,2}}{2} + U_{1} & = & \dfrac{m\vec{v_{2}}^{\,2}}{2} + U_{2} \nonumber \\
+	\Leftrightarrow \dfrac{mv_{1}^{2}}{2} + U_{1} & = & \dfrac{mv_{2}^{2}}{2} + U_{2} \nonumber \\
+	\Leftrightarrow \dfrac{mv_{1}^{2}}{2} + U_{1} & = & \dfrac{mv_{1}^{2}\sin^{2}(\theta_{1})}{2\sin^{2}(\theta_{2})} + U_{2} \nonumber \\
+	\Leftrightarrow \dfrac{mv_{1}^{2}}{2}\left(\dfrac{\sin^{2}(\theta_{1})}{\sin^{2}(\theta_{2})} - 1\right) & = & U_{1} - U_{2} \nonumber \\
+	\Leftrightarrow \dfrac{\sin(\theta_{1})}{\sin(\theta_{2})} & = & \sqrt{1+2\dfrac{U_{1} - U_{2}}{mv_{1}^{2}}}
+\eea
