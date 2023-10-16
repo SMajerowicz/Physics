@@ -253,17 +253,17 @@ en employant la diff\'erentiel totale.
 
 En reportant cela dans l'\'equation (\ref{EQ:5_1}), nous avons :
 \bea
-	L & = & \dfrac{1}{2}\sum_{a}m_{a}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) - U \nonumber \\
+	L & = & \dfrac{1}{2}\sum_{a}m_{a}(\dot{x_{a}}^{2} + \dot{y_{a}}^{2} + \dot{z_{a}}^{2}) - U \nonumber \\
 	& = & \dfrac{1}{2}\sum_{a}m_{a}\left[\left(\sum_{k=1}^{s}\dfrac{\partial f_{a}(q_{k})}{\partial q_{k}}\dot{q}_{k}\right)^{2} + \left(\sum_{k=1}^{s}\dfrac{\partial g_{a}(q_{k})}{\partial q_{k}}\dot{q}_{k}\right)^{2} + \left(\sum_{k=1}^{s}\dfrac{\partial h_{a}(q_{k})}{\partial q_{k}}\dot{q}_{k}\right)^{2}\right] - U(q) \nonumber \\
 	& = & \dfrac{1}{2}\sum_{a}m_{a}\left[\sum_{i,j=1}^{s}\dfrac{\partial f_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial f_{a}(q_{j})}{\partial q_{j}}\dot{q}_{i}\dot{q}_{j} + \sum_{i,j=1}^{s}\dfrac{\partial g_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial g_{a}(q_{j})}{\partial q_{j}}\dot{q}_{i}\dot{q}_{j} + \sum_{i,j=1}^{s}\dfrac{\partial h_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial h_{a}(q_{j})}{\partial q_{j}}\dot{q}_{i}\dot{q}_{j}\right] - U(q) \nonumber
 \eea
 Nous avons donc la fonction de Lagrange sous la forme :
 \be
-	L = \dfrac{1}{2}\sum_{a}m_{a}\left[\sum_{i,j=1}^{s}a_{ij}(q)\dot{q}_{i}\dot{q}_{j}\right] - U(q) \label{EQ:5_5}
+	L = \dfrac{1}{2}\sum_{i,j=1}^{s}a_{ij}(q)\dot{q}_{i}\dot{q}_{j} - U(q) \label{EQ:5_5}
 \ee
 avec :
 \be
-	a_{ij}(q) = \dfrac{\partial f_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial f_{a}(q_{j})}{\partial q_{j}} + \dfrac{\partial g_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial g_{a}(q_{j})}{\partial q_{j}} + \dfrac{\partial h_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial h_{a}(q_{j})}{\partial q_{j}}
+	a_{ij}(q) = \sum_{a}m_{a}\left[\dfrac{\partial f_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial f_{a}(q_{j})}{\partial q_{j}} + \dfrac{\partial g_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial g_{a}(q_{j})}{\partial q_{j}} + \dfrac{\partial h_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial h_{a}(q_{j})}{\partial q_{j}}\right]
 \ee
 o\`u les c{\oe}fficients $a_{ij}$ ne d\'ependent que des coordonn\'ees. Aussi dans un syst\`eme de coordonn\'ees g\'en\'eralis\'ees, l'\'energie cin\'etique est fonction quadratique des vitesses mais peut aussi d\'ependre des coordon\'ees.
 

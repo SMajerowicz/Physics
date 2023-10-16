@@ -154,3 +154,77 @@ alors nous arrivons \`a :
 qui est la loi de transformation de l'\'energie lors d'un changement de r\'ef\'erentiel se mouvant l'un par rapport \`a l'autre comme d\'efini. Aussi, dans le cas d'un syst\`eme m\'ecanique au repos dans le r\'ef\'erentiel $(K')$, alors $\vec{P'} = \vec{0}$  et $E'$ est l'\'energie interne de ce syst\`eme. Nous retombons alors sur l'\'equation (\ref{EQ:8_4}).
 
 \section{Moment cinétique}
+
+Apr\`es l'uniformit\'e du temps, l'homog\'en\'eit\'e de l'espace, nous allons \'etudier les cons\'equences de l'isotropie de l'espace. Celle-ci implique que les propri\'et\'es m\'ecaniques d'un syst\`eme ferm\'e ne changent pas lors d'une rotation. Nous consid\'erons donc que la fonction de Lagrange reste inchang\'ee lors d'une rotation infinit\'esimale.
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\put(25,0){\vector(0,1){200}}\put(30,180){$\delta\vec{\varphi}$}
+			\multiput(25,125)(5,0){20}{\line(1,0){3}}
+			\multiput(25,125)(8,2){10}{\line(4,1){4}}
+			%arms
+			\linethickness{0.5mm}
+			\put(25,25){\vector(1,1){100}}\put(75,50){$\vec{r}$}
+			\put(12,20){$O$}
+			\put(25,25){\vector(2,3){80}}
+			\put(125,125){\vector(-1,1){20}}\put(120,135){$\delta\vec{r}$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(50,50),(50,55),(45,55)
+			\put(52,57){$\theta$}
+			\qbezier(50,125),(50,130),(45,130)
+			\put(50,115){$\delta\varphi$}
+		\end{picture}
+		\caption{Rotation infinit\'esimale}\label{FIG:CHAP9_1}
+	\end{center}
+\end{figure}
+
+Sur la figure (\ref{FIG:CHAP9_1}), le syst\`eme subit une rotation $\delta\vec{\varphi}$ qui donne la direction, l'axe de la rotation, et l'angle $\delta\varphi$ de rotation. Nous avons $\lvert\delta\vec{r}\rvert = r\sin\theta\sin\delta\varphi$. Or $\sin\delta\varphi \approx \delta\varphi$ puisque la rotation est infinit\'esimale. Donc $\lvert\delta\vec{r}\rvert = r\sin\theta\delta\varphi$. De plus, $\delta\vec{r}$ est perpendiculaire au plan défini par $(\delta\vec{\varphi},\vec{r})$, on peut en conclure :
+\be
+	\delta\vec{r} = \delta\vec{\varphi}\wedge\vec{r} \label{EQ:9_1}
+\ee
+Par d\'efinition :
+\bea
+	\dfrac{\mathrm{d}\delta\vec{r}}{\mathrm{dt}} & = & \delta\left(\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}\right) \nonumber \\
+	\Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{dt}}(\delta\vec{\varphi}\wedge\vec{r}) & = & \delta\vec{v} \nonumber \\
+	\Leftrightarrow \delta\vec{v} & = & \dfrac{\mathrm{d}\delta\vec{\varphi}}{\mathrm{dt}}\wedge\vec{r} + \vec{\varphi}\wedge\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}} \nonumber \\
+	\Leftrightarrow \delta\vec{v} & = & \delta\vec{\varphi}\wedge\vec{v} \label{EQ:9_2}
+\eea
+car la rotation est ici ind\'ependante du temps.
+
+La fonction de Lagrange est une fonction des coordonn\'ees et des vitesses des points mat\'eriels du syst\`eme aussi :
+\be
+	L = \sum_{a=1}^{s}L_{a}(\vec{r}_{a},\vec{v}_{a})
+\ee
+et sa variation s'\'ecrit :
+\be
+	\delta L = \sum_{a=1}^{s}\left(\dfrac{\partial L}{\partial\vec{r}_{a}}\delta\vec{r}_{a} + \dfrac{\partial L}{\partial\vec{v}_{a}}\delta\vec{v}_{a}\right)
+\ee
+et nous pouvons \'ecrire que cette variation est nulle car nous avons suppos\'e plus haut que la fonction de Lagrange est invariante dans le cadre d'une rotation. Les \'equations de Lagrange (\ref{EQ:2_6}) associ\'ees à l'\'egalit\'e (\ref{EQ:7_2}) implique :
+\bea
+	\delta L & = & \sum_{a}(\vec{\dot{p}}_{a}\cdot\delta\vec{r}_{a} + \vec{p}_{a}\cdot\delta\vec{v}_{a}) \nonumber \\
+	& = & \sum_{a}\left(\vec{\dot{p}}_{a}\cdot(\delta\vec{\varphi}\wedge\vec{r}_{a}) + \vec{p}_{a}\cdot(\delta\vec{\varphi}\wedge\vec{v}_{a})\right)
+\eea
+en y incluant les \'equations (\ref{EQ:9_1}) et (\ref{EQ:9_2}). Cela donne gr\^ace \`a l'invariance par permutation circulaire du produit mixte\footnote{$(\vec{u}\wedge\vec{v})\cdot\vec{w} = (\vec{v}\wedge\vec{w})\cdot\vec{u} = (\vec{w}\wedge\vec{u})\cdot\vec{v} $} :
+\be
+	\delta L = \delta\vec{\varphi}\cdot\sum_{a}(\vec{r}_{a}\wedge\vec{\dot{p}}_{a} + \vec{v}_{a}\wedge\vec{p}_{a})
+\ee
+or :
+\bea
+	\dfrac{\mathrm{d}\vec{r}_{a}\wedge\vec{p}_{a}}{\mathrm{dt}} & = & \dfrac{\mathrm{d}\vec{r}_{a}}{\mathrm{dt}}\wedge\vec{p}_{a} + \vec{r}_{a}\wedge\dfrac{\mathrm{d}\vec{p}_{a}}{\mathrm{dt}} \nonumber \\
+	& = & \vec{v}_{a}\wedge\vec{p}_{a} + \vec{r}_{a}\wedge\vec{\dot{p}}_{a}
+\eea
+Donc par l'invariance de la fonction de Lagrange du syst\`eme et par le fait nous raisonnons avec $\delta\vec{\varphi}$ arbitrairement choisi, nous arrivons \`a :
+\be
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{a}\vec{r}_{a}\wedge\vec{p}_{a}\right) = 0
+\ee
+permettant de conclure que lors du mouvement d'un sys\`eme ferm\'e, la quantit\'e d\'efinie comme le \emph{moment cin\'etique} :
+\be
+	\vec{M} = \sum_{a}\vec{r}_{a}\wedge\vec{p}_{a} \label{EQ:9_3}
+\ee
+se conserve et poss\`ede le comportement d'additivit\'e.
+
+Au final, nous avons donc sept int\'egrales premi\`eres additives : l'\'energie et les trois composantes des vecteurs quantit\'e et moment cin\'etique.
