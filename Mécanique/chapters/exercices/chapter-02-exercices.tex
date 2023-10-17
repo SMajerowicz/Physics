@@ -84,3 +84,26 @@ Donc l'action devient :
 	S & = & S' + \vec{V}\cdot\int\mu\dfrac{\vec{R'}}{\mathrm{dt}}\mathrm{dt} + \dfrac{1}{2}\mu\vec{V}^{\,2}\mathrm{t} \nonumber \\
 	& = & S' + \mu\vec{V}\cdot\vec{R'} + \dfrac{1}{2}\mu\vec{V}^{\,2}\mathrm{t}
 \eea
+
+\section{Exercices sur le moment cin\'etique}
+
+\subsection{En coordonn\'ees cylindriques}
+
+Pour un point mat\'eriel de masse $m$ :
+\bea
+	\vec{M} & = & \vec{r}\wedge\vec{P} \nonumber \\
+	& = & \begin{pmatrix} r\cos\varphi \\ r\sin\varphi \\ z \end{pmatrix} \wedge m \begin{pmatrix} -r\sin\varphi\dot{\varphi} + \dot{r}\cos\varphi \\ r\cos\varphi\dot{\varphi} + \dot{r}\sin\varphi \\ \dot{z} \end{pmatrix} \nonumber \\
+	& = & m \begin{pmatrix} r\sin\varphi\dot{z} - z(r\cos\varphi\dot{\varphi} + \dot{r}\sin\varphi) \\ -r\cos\varphi\dot{z} + z(\dot{r}\cos\varphi - r\sin\varphi\dot{\varphi}) \\ r^{2}\cos^{2}\varphi\dot{\varphi} + r\dot{r}\cos\varphi\sin\varphi + r^{2}\sin^{2}\varphi\dot{\varphi} - r\dot{r}\cos\varphi\sin\varphi \end{pmatrix} \nonumber \\
+	\begin{pmatrix} M_{x} \\ M_{y} \\ M_{z} \end{pmatrix} & = & m \begin{pmatrix} \sin\varphi(r\dot{z} - \dot{r}z) - rz\cos\varphi\dot{\varphi} \\ -\cos\varphi(r\dot{z} - \dot{r}z) - rz\sin\varphi\dot{\varphi} \\ r^{2}\dot{\varphi} \end{pmatrix}
+\eea
+pour arriver à la norme au carr\'e :
+\bea
+	M^{2} & = & M_{x}^{2} + M_{y}^{2} + M_{z}^{2} \nonumber \\
+	& = & m^{2}(\sin^{2}\varphi(r\dot{z} - \dot{r}z)^{2} + r^{2}z^{2}\cos^{2}\varphi\dot{\varphi}^{2} - 2rz(r\dot{z} - \dot{r}z)\cos\varphi\sin\varphi\dot{\varphi} \nonumber \\
+	& + & \cos^{2}\varphi(r\dot{z} - \dot{r}z)^{2} + r^{2}z^{2}\sin^{2}\varphi\dot{\varphi}^{2} + 2rz(r\dot{z} - \dot{r}z)\cos\varphi\sin\varphi\dot{\varphi} + r^{4}\dot{\varphi}^{2} \nonumber \\
+	M^{2} & = & m^{2}(r\dot{z} - \dot{r}z)^{2} + m^{2}r^{2}\dot{\varphi}^{2}(r^{2} + z^{2})
+\eea
+
+\subsection{En coordonn\'ees sph\'eriques}
+
+\subsection{Conservation de l'impulsion et du moment cin\'etique dans des cas particuliers}
