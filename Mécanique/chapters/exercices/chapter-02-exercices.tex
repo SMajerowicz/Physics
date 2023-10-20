@@ -98,7 +98,7 @@ Pour un point mat\'eriel de masse $m$ :
 \eea
 pour arriver à la norme au carr\'e :
 \bea
-	M^{2} & = & M_{x}^{2} + M_{y}^{2} + M_{z}^{2} \nonumber \\
+	\parallel \vec{M} \parallel^{2} & = & M_{x}^{2} + M_{y}^{2} + M_{z}^{2} \nonumber \\
 	& = & m^{2}(\sin^{2}\varphi(r\dot{z} - \dot{r}z)^{2} + r^{2}z^{2}\cos^{2}\varphi\dot{\varphi}^{2} - 2rz(r\dot{z} - \dot{r}z)\cos\varphi\sin\varphi\dot{\varphi} \nonumber \\
 	& + & \cos^{2}\varphi(r\dot{z} - \dot{r}z)^{2} + r^{2}z^{2}\sin^{2}\varphi\dot{\varphi}^{2} + 2rz(r\dot{z} - \dot{r}z)\cos\varphi\sin\varphi\dot{\varphi} + r^{4}\dot{\varphi}^{2} \nonumber \\
 	M^{2} & = & m^{2}(r\dot{z} - \dot{r}z)^{2} + m^{2}r^{2}\dot{\varphi}^{2}(r^{2} + z^{2})
@@ -106,4 +106,52 @@ pour arriver à la norme au carr\'e :
 
 \subsection{En coordonn\'ees sph\'eriques}
 
+Pour un point mat\'eriel de masse $m$ :
+\bea
+	\vec{M} & = & \vec{r}\wedge\vec{P} \nonumber \\
+	& = & \begin{pmatrix} r\sin\theta\cos\varphi \\ r\sin\theta\sin\varphi \\ r\cos\theta \end{pmatrix} \wedge m \begin{pmatrix} \dot{r}\sin\theta\cos\varphi + r\cos\theta\cos\varphi\dot{\theta} - r\sin\theta\sin\varphi\dot{\varphi} \\ \dot{r}\sin\theta\sin\varphi + r\cos\theta\sin\varphi\dot{\theta} - r\sin\theta\cos\varphi\dot{\varphi} \\ \dot{r}\cos\theta + r\sin\theta\dot{\theta} \end{pmatrix} \nonumber \\
+	& = & m \begin{pmatrix} r\dot{r}\cos\theta\sin\theta\sin\varphi - r^{2}\sin^{2}\theta\sin\varphi\dot{\theta} - r\dot{r}\cos\theta\sin\theta\sin\varphi \\ r\dot{r}\cos\theta\sin\theta\cos\varphi + r^{2}\cos^{2}\theta\cos\varphi\dot{\theta} - r\dot{r}\cos\theta\sin\theta\cos\varphi \\ r\dot{r}\sin^{2}\theta\cos\varphi\sin\varphi + r^{2}\cos\theta\sin\theta\cos\varphi\sin\varphi\dot{\theta} + r^{2}\sin^{2}\theta\cos^{2}\varphi\dot{\varphi} \end{pmatrix} \nonumber \\
+	& + & m \begin{pmatrix} -r^{2}\cos^{2}\theta\sin\varphi\dot{\theta} - r^{2}\cos\theta\sin\theta\cos\varphi\dot{\varphi} \\ r^{2}\sin^{2}\theta\cos\varphi\dot{\theta} - r^{2}\cos\theta\sin\theta\sin\varphi\dot{\varphi} \\ -r\dot{r}\sin^{2}\theta\cos\varphi\sin\varphi - r^{2}\cos\theta\sin\theta\cos\varphi\sin\varphi\dot{\theta} + r^{2}\sin^{2}\theta\sin^{2}\varphi\dot{\varphi} \end{pmatrix} \nonumber \\
+	& = & m \begin{pmatrix} -r^{2}\sin\varphi\dot{\theta} - r^{2}\cos\theta\sin\theta\cos\varphi\dot{\varphi} \\ r^{2}\cos\varphi\dot{\theta} - r^{2}\cos\theta\sin\theta\cos\varphi\dot{\varphi} \\ r^{2}\sin^{2}\theta\dot{\varphi} \end{pmatrix}
+\eea
+Cela donne pour la norme au carr\'e :
+\bea
+	\parallel \vec{M} \parallel^{2} & = & m^{2} ( r^{4}\sin^{2}\varphi\dot{\theta}^{2} + r^{4}\cos^{2}\theta\sin^{2}\theta\cos^{2}\dot{\varphi}^{2} + 2r^{4}\cos\theta\sin\theta\cos\varphi\sin\varphi\dot{\theta}\dot{\varphi} \nonumber \\
+	& + & r^{4}\cos^{2}\varphi\dot{\theta}^{2} + r^{4}\cos^{2}\theta\sin^{2}\theta\sin^{2}\dot{\varphi}^{2} - 2r^{4}\cos\theta\sin\theta\cos\varphi\sin\varphi\dot{\theta}\dot{\varphi} \nonumber \\
+	& + & r^{4}\sin^{4}\theta\dot{\varphi}^{2} ) \nonumber \\
+	& = & m^{2} ( r^{4}\dot{\theta}^{2} + r^{4}\cos^{2}\theta\sin^{2}\theta\dot{\varphi}^{2} + r^{4}\sin^{4}\theta\dot{\varphi}^{2} )
+\eea
+Soit finalement :
+\be
+	M^{2} = m^{2}r^{4} (\dot{\theta}^{2} + sin^{2}\theta\dot{\varphi}^{2})
+\ee
+
 \subsection{Conservation de l'impulsion et du moment cin\'etique dans des cas particuliers}
+
+Dans cette s\'erie d'exemples, cela consiste \`a appliquer l'invariance de la fonction de Lagrange lors d'une rotation et/ou d'une translation pour d\'eterminer quelles composantes se conservent. Ainsi :
+\begin{itemize}
+	\item[a)] avec champ issu d'un plan homog\`ene d\'efini par $(x,y)$, l'invariance lors d'une translation permet de conclure \`a la conservation de $P_{x}$ et $P_{y}$ alors que l'invariance lors d'une rotation ne peut conserver que $M_{z}$ ;
+	\item[b)] avec champ issu d'un cylindre homog\`ene autour de l'axe $z$, l'invariance lors d'une translation ne permet de conclure qu'\`a la conservation de $P_{z}$ alors que l'invariance lors d'une rotation ne peut conserver que $M_{z}$ ;
+	\item[c)] avec champ issu d'un prisme homog\`ene infini suivant l'axe $z$, l'invariance lors d'une translation permet de conclure \`a la conservation de $P_{x}$ et $P_{y}$ alors qu'il n'y a pas d'axe de rotation permettant une rotation infinit\'esimale possible et une invariance de la fonction de Lagrange ;
+	\item[d)] avec champ issu de points, seule l'invariance lors d'une rotation autour de l'axe d\'efini par la droite passant par les deux points peut conserver la projection du moment cin\'etique sur cette axe ;
+	\item[e)] avec champ issu d'un demi-plan homog\`ene d\'efini par $(x,y > 0)$, l'invariance lors d'une translation permet de conclure \`a la conservation de $P_{y}$ alors que l'invariance lors d'une rotation ne peut conserver que $M_{z}$ ;
+	\item[f)] avec champ issu d'un c\^one homog\`ene suivant l'axe $z$, seule l'invariance lors d'une rotation autour de l'axe $z$ peut conserver $M_{z}$ ;
+	\item[g)] avec champ issu d'un tore circulaire homog\`ene dont l'axe est $z$, seule l'invariance lors d'une rotation autour de l'axe $z$ peut conserver $M_{z}$ ;
+	\item[h)] avec champ issu d'une h\'elice cylindrique homog\`ene et infinie suivant l'axe $z$ dont le pas est $h$. L'invariance de la fonction de Lagrange est possible selon un d\'eplacement issu d'une rotation d'angle $\delta\varphi$ autour de l'axe $z$ et d'une translation simultan\'ee le long de $z$ de $\delta z = \dfrac{h}{2\pi}\delta\varphi$. Par d\'efinition :
+		\bea
+			\delta L & = & \dfrac{\partial L}{\partial z}\delta z + \dfrac{\partial L}{\partial\varphi}\delta\varphi \nonumber \\
+			& = & \dot{P}_{z}\delta z + \dot{M}_{z}\delta\varphi
+		\eea
+		car l'\'equation (\ref{EQ:7_7}) a donn\'e $\dot{p}_{i} = \dfrac{\partial L}{\partial q_{i}}$ et l'\'equation (\ref{EQ:9_7}) que $M_{z} = \dfrac{\partial L}{\partial\dot{\varphi}}$. Ce qui implique que $\dot{M}_{z} = \dfrac{d}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{\varphi}}\right) = \dfrac{\partial L}{\partial\varphi}$ selon les \'equations de Lagrange (\ref{EQ:2_6}). Et on en vient \`a :
+		\be
+			\forall \delta\varphi\text{, }\delta L = \delta\varphi\left(\dfrac{h}{2\pi}\dot{P}_{z} + \dot{M}_{z}\right)
+		\ee
+		soit $\delta L = 0$ si et seulement si :
+		\be
+			\dfrac{h}{2\pi}\dot{P}_{z} + \dot{M}_{z} = 0
+		\ee
+		ou encore, par int\'egration par rapport au temps :
+		\be
+			\dfrac{h}{2\pi}P_{z} + M_{z} = Cste
+		\ee
+\end{itemize}
