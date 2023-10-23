@@ -278,3 +278,30 @@ Quelques cas particuliers où un champ ext\'erieur est pr\'esent :
 		M_{z} = \sum_{a}\dfrac{\partial L}{\partial \dot{\varphi_{a}}} \label{EQ:9_7}
 	\ee
 \end{itemize}
+
+\subsection{Similitude m\'ecanique}
+
+Nous avons d\'ej\`a vu que les \'equations de Lagrange (\ref{EQ:2_6}) sont toujours valables lorsque la fonction de Lagrange est multipli\'ee par une constante. Consid\'erons le cas o\`u l'\'energie potentielle $U$ d'un syst\`eme soit une fonction homog\`ene de degr\'e $k$, i.e. telle que :
+\be
+	U\left(\alpha\begin{Bmatrix}\vec{r}_{i}\end{Bmatrix}_{1}^{n}\right) = \alpha^{k}U\left(\begin{Bmatrix}\vec{r}_{i}\end{Bmatrix}_{1}^{n}\right) \label{EQ:10_1}
+\ee
+Effectuons la transformation suivante, si $\vec{r}_{a} \mapsto \vec{r'}_{a} = \alpha\vec{r}_{a}$, alors $\mathrm{t} \mapsto \mathrm{t}' = \beta\mathrm{t}$. En cons\'equence :
+\bea
+	\forall a \in {1,\ldots\,n}\text{, }\vec{v}_{a} = \dfrac{\mathrm{d}\vec{r}_{a}}{\mathrm{dt}} & \mapsto & \dfrac{\mathrm{d}\vec{r'}_{a}}{\mathrm{dt}'} = \dfrac{\alpha\mathrm{d}\vec{r}_{a}}{\beta\mathrm{dt}} = \dfrac{\alpha}{\beta}\vec{v}_{a} \nonumber \\
+	T_{a} = \dfrac{m_{a}}{2}v_{a}^{2} & \mapsto & \dfrac{m_{a}}{2}\left(\dfrac{\alpha}{\beta}\right)^{2}v_{a}^{2} = \left(\dfrac{\alpha}{\beta}\right)^{2}T_{a}^{2} \nonumber \\
+	U & \mapsto & \alpha^{k}U \nonumber
+\eea
+En posant la condition suivante :
+\be
+	\left(\dfrac{\alpha}{\beta}\right)^{2} = \alpha^{k} \Leftrightarrow \beta = \alpha^{1 - \dfrac{k}{2}}
+\ee
+la fonction de Lagrange se transforme ainsi :
+\bea
+	L = \sum_{a}T_{a} - U & \mapsto & \left(\dfrac{\alpha}{\beta}\right)^{2}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
+	& = & \dfrac{\alpha^{2}}{\alpha^{2-k}}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
+	& = & \alpha^{k}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
+	L & \mapsto & \alpha^{k}L
+\eea
+et comme $\alpha^{k}$ est une constante alors les \'equations de Lagrange (\ref{EQ:2_6}) restent inchang\'ees et pleinement valables. En conclusion, si l'\'energie potentielle d'un syst\`eme est une fonction homog\`ene de degr\'e $k$ des coordonn\'ees alors les \'equations du mouvement admettent des trajectoires g\'eom\'etriques semblables et nous pouvons en d\'eduire certaines caract\'eristiques de proportionnalit\'e.
+
+Puisque
