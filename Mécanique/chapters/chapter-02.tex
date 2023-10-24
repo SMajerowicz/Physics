@@ -33,7 +33,7 @@ Nous savons que l'\'energie cin\'etique $T = f(\dot{q}^{2})$. Or pour une foncti
 \ee
 Appliqu\'ee \`a l'\'energie cin\'etique, cela donne :
 \be
-	\sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i} = 2T = \sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i}
+	\sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i} = 2T = \sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i} \label{EQ:6_1_1}
 \ee
 ce qui permet de conclure \`a, en compl\'etant l'\'equation (\ref{EQ:6_1}) :
 \be
@@ -155,3 +155,247 @@ qui est la loi de transformation de l'\'energie lors d'un changement de r\'ef\'e
 
 \section{Moment cinétique}
 
+Apr\`es l'uniformit\'e du temps, l'homog\'en\'eit\'e de l'espace, nous allons \'etudier les cons\'equences de l'isotropie de l'espace. Celle-ci implique que les propri\'et\'es m\'ecaniques d'un syst\`eme ferm\'e ne changent pas lors d'une rotation. Nous consid\'erons donc que la fonction de Lagrange reste inchang\'ee lors d'une rotation infinit\'esimale.
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\put(25,0){\vector(0,1){200}}\put(30,180){$\delta\vec{\varphi}$}
+			\multiput(25,125)(5,0){20}{\line(1,0){3}}
+			\multiput(25,125)(8,2){10}{\line(4,1){4}}
+			%arms
+			\linethickness{0.5mm}
+			\put(25,25){\vector(1,1){100}}\put(75,50){$\vec{r}$}
+			\put(12,20){$O$}
+			\put(25,25){\vector(2,3){80}}
+			\put(125,125){\vector(-1,1){20}}\put(120,135){$\delta\vec{r}$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(50,50),(50,55),(45,55)
+			\put(52,57){$\theta$}
+			\qbezier(50,125),(50,130),(45,130)
+			\put(50,115){$\delta\varphi$}
+		\end{picture}
+		\caption{Rotation infinit\'esimale}\label{FIG:CHAP9_1}
+	\end{center}
+\end{figure}
+
+Sur la figure (\ref{FIG:CHAP9_1}), le syst\`eme subit une rotation $\delta\vec{\varphi}$ qui donne la direction, l'axe de la rotation, et l'angle $\delta\varphi$ de rotation. Nous avons $\lvert\delta\vec{r}\rvert = r\sin\theta\sin\delta\varphi$. Or $\sin\delta\varphi \approx \delta\varphi$ puisque la rotation est infinit\'esimale. Donc $\lvert\delta\vec{r}\rvert = r\sin\theta\delta\varphi$. De plus, $\delta\vec{r}$ est perpendiculaire au plan défini par $(\delta\vec{\varphi},\vec{r})$, on peut en conclure :
+\be
+	\delta\vec{r} = \delta\vec{\varphi}\wedge\vec{r} \label{EQ:9_1}
+\ee
+Par d\'efinition :
+\bea
+	\dfrac{\mathrm{d}\delta\vec{r}}{\mathrm{dt}} & = & \delta\left(\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}\right) \nonumber \\
+	\Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{dt}}(\delta\vec{\varphi}\wedge\vec{r}) & = & \delta\vec{v} \nonumber \\
+	\Leftrightarrow \delta\vec{v} & = & \dfrac{\mathrm{d}\delta\vec{\varphi}}{\mathrm{dt}}\wedge\vec{r} + \vec{\varphi}\wedge\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}} \nonumber \\
+	\Leftrightarrow \delta\vec{v} & = & \delta\vec{\varphi}\wedge\vec{v} \label{EQ:9_2}
+\eea
+car la rotation est ici ind\'ependante du temps.
+
+La fonction de Lagrange est une fonction des coordonn\'ees et des vitesses des points mat\'eriels du syst\`eme aussi :
+\be
+	L = \sum_{a=1}^{s}L_{a}(\vec{r}_{a},\vec{v}_{a})
+\ee
+et sa variation s'\'ecrit :
+\be
+	\delta L = \sum_{a=1}^{s}\left(\dfrac{\partial L}{\partial\vec{r}_{a}}\delta\vec{r}_{a} + \dfrac{\partial L}{\partial\vec{v}_{a}}\delta\vec{v}_{a}\right)
+\ee
+et nous pouvons \'ecrire que cette variation est nulle car nous avons suppos\'e plus haut que la fonction de Lagrange est invariante dans le cadre d'une rotation. Les \'equations de Lagrange (\ref{EQ:2_6}) associ\'ees à l'\'egalit\'e (\ref{EQ:7_2}) implique :
+\bea
+	\delta L & = & \sum_{a}(\vec{\dot{p}}_{a}\cdot\delta\vec{r}_{a} + \vec{p}_{a}\cdot\delta\vec{v}_{a}) \nonumber \\
+	& = & \sum_{a}\left(\vec{\dot{p}}_{a}\cdot(\delta\vec{\varphi}\wedge\vec{r}_{a}) + \vec{p}_{a}\cdot(\delta\vec{\varphi}\wedge\vec{v}_{a})\right)
+\eea
+en y incluant les \'equations (\ref{EQ:9_1}) et (\ref{EQ:9_2}). Cela donne gr\^ace \`a l'invariance par permutation circulaire du produit mixte\footnote{$(\vec{u}\wedge\vec{v})\cdot\vec{w} = (\vec{v}\wedge\vec{w})\cdot\vec{u} = (\vec{w}\wedge\vec{u})\cdot\vec{v} $} :
+\be
+	\delta L = \delta\vec{\varphi}\cdot\sum_{a}(\vec{r}_{a}\wedge\vec{\dot{p}}_{a} + \vec{v}_{a}\wedge\vec{p}_{a})
+\ee
+or :
+\bea
+	\dfrac{\mathrm{d}\vec{r}_{a}\wedge\vec{p}_{a}}{\mathrm{dt}} & = & \dfrac{\mathrm{d}\vec{r}_{a}}{\mathrm{dt}}\wedge\vec{p}_{a} + \vec{r}_{a}\wedge\dfrac{\mathrm{d}\vec{p}_{a}}{\mathrm{dt}} \nonumber \\
+	& = & \vec{v}_{a}\wedge\vec{p}_{a} + \vec{r}_{a}\wedge\vec{\dot{p}}_{a}
+\eea
+Donc par l'invariance de la fonction de Lagrange du syst\`eme et par le fait nous raisonnons avec $\delta\vec{\varphi}$ arbitrairement choisi, nous arrivons \`a :
+\be
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{a}\vec{r}_{a}\wedge\vec{p}_{a}\right) = 0
+\ee
+permettant de conclure que lors du mouvement d'un sys\`eme ferm\'e, la quantit\'e d\'efinie comme le \emph{moment cin\'etique} :
+\be
+	\vec{M} = \sum_{a}\vec{r}_{a}\wedge\vec{p}_{a} \label{EQ:9_3}
+\ee
+se conserve et poss\`ede le comportement d'additivit\'e.
+
+Au final, nous avons donc sept int\'egrales premi\`eres additives : l'\'energie et les trois composantes des vecteurs quantit\'e et moment cin\'etique.
+
+Comme les rayons vecteurs des points mat\'eriels interviennent dans la d\'efinition du moment cin\'etique, sa valeur d\'epend du choix de l'origine des coordonn\'ees. Prenons l'exemple de deux r\'f\'erentiels tels $\vec{r}_{a} = \vec{r'}_{a} + \vec{a}$, soit $\vec{v}_{a} = \vec{v'}_{a} \Leftrightarrow \vec{p}_{a} = \vec{p'}_{a}$, alors le moment cin\'etique s'\'ecrit :
+\bea
+	\vec{M} & = & \sum_{a}\vec{r}_{a}\wedge\vec{p}_{a} \nonumber \\
+	& = & \sum_{a}\vec{r'}_{a}\wedge\vec{p}_{a} + \sum_{a}\vec{a}\wedge\vec{p}_{a} \nonumber \\
+	& = & \sum_{a}\vec{r'}_{a}\wedge\vec{p'}_{a} + \vec{a}\wedge\sum_{a}\vec{p}_{a} \nonumber \\
+	\vec{M} & = & \vec{M'} + \vec{a}\wedge\vec{P} \label{EQ:9_4}
+\eea
+avec $\vec{M'} = \sum_{a}\vec{r'}_{a}\wedge\vec{p'}_{a}$. Par voie de cons\'equence, le moment cin\'etique ne d\'epend du choix de l'origine des coordonn\'ees si et seulement si le syst\`eme est au repose, i.e. $\vec{P} = \vec{0}$.
+
+Consid\'erons d\'esormais deux r\'f\'erentiels $(K)$ et $(K')$ tels $\vec{v}_{a} = \vec{v'}_{a} + \vec{V}$ et \`a l'instant donn\'e, $\vec{r}_{a} = \vec{r'}_{a}$ alors :
+\bea
+	\vec{M} & = & \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v}_{a} \nonumber \\
+	& = & \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v'}_{a} + \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{V} \nonumber \\
+	& = & \sum_{a}m_{a}\vec{r'}_{a}\wedge\vec{v'}_{a} + \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{V} \nonumber \\
+	\vec{M} & = & \vec{M'} + \mu\vec{R}\wedge\vec{V} \label{EQ:9_5}
+\eea
+avec $\mu$ et $\vec{R}$ d\'efinis par la relation (\ref{EQ:8_3}). \`A l'instar des \'equations (\ref{EQ:8_1}) pour l'\'energie et (\ref{EQ:8_5}) pour l'impulsion, l'\'equation (\ref{EQ:9_5}) est la loi de transformation du moment cin\'etique lors du passage d'un r\'ef\'erentiel \`a un autre. Si dans le r\'ef\'erentiel $(K')$, le syst\`eme est au repos alors la relation ((\ref{EQ:8_2}) qui d\'efinit $\vec{V}$ comme la vitesse du centre d'inertie par rapport à $(K)$ permet d'\'ecrire $\mu\vec{V}$ comme l'impulsion totale et :
+\be
+	\vec{M} = \vec{M'} + \vec{R}\wedge\vec{P} \label{EQ:9_6}
+\ee
+où $\vec{M'}$ est le moment cin\'etique propre, soit le moment dans le r\'ef\'erentiel dans lequel le syst\`eme est au repos et $\vec{R}\wedge\vec{P}$ est le moment cin\'etique li\'e au mouvement du syst\`eme dans son ensemble.
+Quelques cas particuliers où un champ ext\'erieur est pr\'esent :
+\begin{itemize}
+	\item le champ est sym\'etrique par rapport \`a un axe. $\delta L = 0$ reste vrai si la rotation du syst\`eme est d\'efinie autour de l'axe de sym\'etrie du champ ext\'erieur. En cons\'equence, la projection du moment cin\'etique sur cet axe se conserve ;
+	\item le champ est \`a sym\'etrie centrale. L'invariance de la fonction de Lagrange est vraie dans le cas o\`u la rotation s'effectue autour d'un axe quelconque passant par le centre de sym\'etrie du champ et donc la projection du moment cin\'etique sur cet axe dont l'origine est le centre de sym\'etrie du champ se conserve ;
+	\item le champ est uniforme le long d'un axe, disons $z$. En coordonn\'ees cylindriques, nous avons :
+	\be
+		\vec{r}_{a} = \begin{pmatrix} r_{a}\cos\varphi_{a} \\ r_{a}\sin\varphi_{a} \\ z_{a} \end{pmatrix}
+	\ee
+	et donc\footnote{$\vec{u}\wedge\vec{v} = (u_{y}v_{z}-u_{z}v_{y}\,;\,u_{z}v_{x}-u_{x}v_{z}\,;\,u_{y}v_{z}-u_{z}v_{y})$} :
+	\bea
+		M_{z} & = & \sum_{a}{M_{a}}_{z} \nonumber \\
+		& = & \sum_{a}\left(r_{a}\cos\varphi_{a}m_{a}r_{a}\cos\varphi_{a}\dot{\varphi_{a}} + r_{a}\sin\varphi_{a}m_{a}r_{a}\sin\varphi_{a}\right) \nonumber \\
+		& = & \sum_{a}\left(r_{a}^{2}m_{a}\dot{\varphi_{a}}(\cos^{2}\varphi_{a} + \sin^{2}\varphi_{a})\right) \nonumber \\
+		& = & \sum_{a}r_{a}^{2}m_{a}\dot{\varphi_{a}} \label{EQ:9_8}
+	\eea
+	La relation (\ref{EQ:4_5}) donne en coordonn\'ees cylindriques la fonction de Lagrange :
+	\be
+		L = \sum_{a}\dfrac{m_{a}}{2}(\dot{r_{a}}^{2} + r_{a}^{2}\dot{\varphi_{a}}^{2} + \dot{z_{a}}^{2}) - U
+	\ee
+	donc :
+	\be
+		\sum_{a}\dfrac{\partial L}{\partial \dot{\varphi_{a}}} = \sum_{a}\dfrac{m_{a}}{2}2r_{a}^{2}\dot{\varphi_{a}}
+	\ee
+	car $\dfrac{\partial U}{\partial \dot{\varphi_{a}}} = 0$, ce qui permet de conclure \`a :
+	\be
+		M_{z} = \sum_{a}\dfrac{\partial L}{\partial \dot{\varphi_{a}}} \label{EQ:9_7}
+	\ee
+\end{itemize}
+
+\subsection{Similitude m\'ecanique}
+
+Nous avons d\'ej\`a vu que les \'equations de Lagrange (\ref{EQ:2_6}) sont toujours valables lorsque la fonction de Lagrange est multipli\'ee par une constante. Consid\'erons le cas o\`u l'\'energie potentielle $U$ d'un syst\`eme soit une fonction homog\`ene de degr\'e $k$, i.e. telle que :
+\be
+	U\left(\alpha\begin{Bmatrix}\vec{r}_{i}\end{Bmatrix}_{1}^{n}\right) = \alpha^{k}U\left(\begin{Bmatrix}\vec{r}_{i}\end{Bmatrix}_{1}^{n}\right) \label{EQ:10_1}
+\ee
+Effectuons la transformation suivante, si $\vec{r}_{a} \mapsto \vec{r'}_{a} = \alpha\vec{r}_{a}$, alors $\mathrm{t} \mapsto \mathrm{t}' = \beta\mathrm{t}$. En cons\'equence :
+\bea
+	\forall a \in {1,\ldots\,n}\text{, }\vec{v}_{a} = \dfrac{\mathrm{d}\vec{r}_{a}}{\mathrm{dt}} & \mapsto & \dfrac{\mathrm{d}\vec{r'}_{a}}{\mathrm{dt}'} = \dfrac{\alpha\mathrm{d}\vec{r}_{a}}{\beta\mathrm{dt}} = \dfrac{\alpha}{\beta}\vec{v}_{a} \nonumber \\
+	T_{a} = \dfrac{m_{a}}{2}v_{a}^{2} & \mapsto & \dfrac{m_{a}}{2}\left(\dfrac{\alpha}{\beta}\right)^{2}v_{a}^{2} = \left(\dfrac{\alpha}{\beta}\right)^{2}T_{a}^{2} \nonumber \\
+	U & \mapsto & \alpha^{k}U \nonumber
+\eea
+En posant la condition suivante :
+\be
+	\left(\dfrac{\alpha}{\beta}\right)^{2} = \alpha^{k} \Leftrightarrow \beta = \alpha^{1 - \dfrac{k}{2}}
+\ee
+la fonction de Lagrange se transforme ainsi :
+\bea
+	L = \sum_{a}T_{a} - U & \mapsto & \left(\dfrac{\alpha}{\beta}\right)^{2}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
+	& = & \dfrac{\alpha^{2}}{\alpha^{2-k}}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
+	& = & \alpha^{k}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
+	L & \mapsto & \alpha^{k}L
+\eea
+et comme $\alpha^{k}$ est une constante alors les \'equations de Lagrange (\ref{EQ:2_6}) restent inchang\'ees et pleinement valables. En conclusion, si l'\'energie potentielle d'un syst\`eme est une fonction homog\`ene de degr\'e $k$ des coordonn\'ees alors les \'equations du mouvement admettent des trajectoires g\'eom\'etriques semblables et nous pouvons en d\'eduire certaines caract\'eristiques de proportionnalit\'e.
+
+Puisque la transformation peut aussi s'\'ecrire : $l' = \alpha l$ et $\mathrm{t}' = \beta \mathrm{t}$ alors, nous avons de facto en appliquant la condition ci-dessus :
+\be
+	\dfrac{\mathrm{t}'}{\mathrm{t}} = \left(\dfrac{l'}{l}\right)^{1-\frac{k}{2}} \label{EQ:10_2}
+\ee
+et plusieurs relations peuvent en \^etre d\'eduites :
+\bea
+	\dfrac{l'}{l} & = & \dfrac{l'}{\mathrm{t}'}\dfrac{\mathrm{t}}{l} = \dfrac{l'}{l}\dfrac{\mathrm{t}}{\mathrm{t}'} = \dfrac{l'}{l}\left(\dfrac{l'}{l}\right)^{\frac{k}{2}-1} = \left(\dfrac{l'}{l}\right)^{\frac{k}{2}} \\
+	\dfrac{E'}{E} & = & \left(\dfrac{v'}{v}\right)^{2} = \left(\dfrac{l'}{l}\right)^{k} \\
+	\dfrac{M'}{M} & = & \dfrac{l'v'}{lv} = \dfrac{l'}{l}\left(\dfrac{l'}{l}\right)^{\frac{k}{2}} = \left(\dfrac{l'}{l}\right)^{1+\frac{k}{2}} \label{EQ:10_3}
+\eea
+Regardons quelques cas particuliers :
+\begin{itemize}
+	\item celui des petites oscillations pour lesquelles $k=2$ alors l'\'equation (\ref{EQ:10_2}) dont $\mathrm{t}' = \mathrm{t}$ impliquant que la période d'oscillation ne d\'epend pas de l'amplitude du mouvement ;
+	\item celui d'un champ de force homog\`ene, l'\'equation (\ref{EQ:5_8}) a pour conlusion que l'\'energie potentielle est fonction lin\'eaire des coordonn\'ees, soit $k=1$ et l'\'equation (\ref{EQ:10_2}) donne :
+		\be
+			\dfrac{\mathrm{t}'}{\mathrm{t}} = \left(\dfrac{l'}{l}\right)^{\frac{1}{2}}
+		\ee
+	\item celui de l'attraction newtonienne, gravitationnelle de deux masses, ou coulombienne entre deux charges, l'\'energie potentielle est une fonction inverse de la distance entre les deux points mat\'eriels, i.e. $k=-1$. Nous obtenons donc :
+		\bea
+			\dfrac{\mathrm{t}'}{\mathrm{t}} & = & \left(\dfrac{l'}{l}\right)^{\frac{3}{2}} \nonumber \\
+			\Leftrightarrow \left(\dfrac{\mathrm{t}'}{\mathrm{t}}\right)^{2} = \left(\dfrac{l'}{l}\right)^{3}
+		\eea
+		C'est exactement la \emph{troisi\`eme loi de Kepler}.
+\end{itemize}
+
+D\'esormais, nous allons supposer que le mouvement du syst\`eme s'effectue dans une r\'egion limit\'ee de l'espace pour en d\'eduire une relation entre la moyenne des \'energies cin\'etique et potentielle, connue comme le \emph{th\'eor\`eme du Viriel}. Puisque l'\'energie cin\'etique $T$ est une fonction quadratique des vitesses, le th\'eor\`eme d'Euler donne, voir l'\'equation (\ref{EQ:6_1_1}) :
+\be
+	\sum_{a}\dfrac{\partial T}{\partial\vec{v}_{a}} = 2T
+\ee
+or en utilisant l'\'equation (\ref{EQ:7_2}) :
+\be
+	\dfrac{\partial T}{\partial\vec{v}_{a}} = \vec{p}_{a}
+\ee
+et le fait que :
+\be
+	\dfrac{\mathrm{d}}{\mathrm{dt}}(\sum_{a}\vec{p}_{a}\vec{r}_{a}) = \sum_{a}\vec{\dot{p}}_{a}\vec{r}_{a} + \sum_{a}\vec{p}_{a}\vec{v}_{a}
+\ee
+nous pouvons \'ecrire :
+\be
+	2T = \sum_{a}\vec{p}_{a}\vec{v}_{a} = \dfrac{\mathrm{d}}{\mathrm{dt}}(\sum_{a}\vec{p}_{a}\vec{r}_{a}) - \sum_{a}\vec{\dot{p}}_{a}\vec{r}_{a} \label{EQ:10_4}
+\ee
+
+La d\'efinition de la moyenne d'une fonction quelconque du temps $f(\mathrm{t})$ est :
+\be
+	\overline{f} = \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} f(\mathrm{t})\mathrm{dt}
+\ee
+Dans le cas où $f(\mathrm{t})=\dfrac{\mathrm{d}F(\mathrm{t})}{\mathrm{dt}}$ avec $F(\mathrm{t})$ une fonction born\'ee, i.e. sans valeurs infinies alors :
+\be
+	\overline{f} = \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} \dfrac{\mathrm{d}F(\mathrm{t})}{\mathrm{dt}}\mathrm{dt} = \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} \mathrm{d}F(\mathrm{t}) = \lim_{\tau\to\infty}\dfrac{F(\tau) - F(0)}{\tau} = 0
+\ee
+car $F(\tau) - F(0)$ est une quantit\'e finie.
+
+Prenons l'exemple d'un syst\`eme m\'ecanique en mouvement dans une r\'egion finie de l'espace avec des vitesses finies. Par cons\'equent, la quantit\'e $\sum_{a}\vec{p}_{a}\vec{r}_{a}$ est born\'ee et dans le calcul de la valeur moyenne de l'\'energie cin\'etique, le premier terme de l'\'equation (\ref{EQ:10_4}) s'annule.
+
+Les \'equations de Newton (\ref{EQ:5_4}) et (\ref{EQ:7_7}) donne :
+\be
+	\vec{F}_{a} = -\dfrac{\partial U}{\partial\vec{r}_{a}} = \vec{\dot{p}}_{a}
+\ee
+ce qui donne finalement :
+\be
+	2\overline{T} = \sum_{a}\vec{r}_{a}\dfrac{\partial \overline{U}}{\partial\vec{r}_{a}} \label{EQ:10_5}
+\ee
+Le th\'eor\`eme d'Euler appliqu\'e \`a l'\'energie potentielle, fonction homogn\`ene de degr\'e $k$, donne :
+\bea
+	\sum_{a}\vec{r}_{a}\dfrac{\partial U}{\partial\vec{r}_{a}} & = & kU \nonumber \\
+	\sum_{a}\vec{r}_{a}\dfrac{\partial \overline{U}}{\partial\vec{r}_{a}} & = & k\overline{U}
+\eea
+et donc \emph{le th\'eor\`eme du Viriel} :
+\be
+	2\overline{T} = k\overline{U} \label{EQ:10_6}
+\ee
+Parce que la loi de conservation de l'\'energie s'applique, nous avons $\overline{E} = E$. Or :
+\bea
+	E & = & T + U \nonumber \\
+	\overline{E} & = & \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} T+U\mathrm{dt} \nonumber \\
+	\overline{E} & = & \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} T\mathrm{dt} + \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} U\mathrm{dt}\nonumber \\
+	\overline{E} & = & \overline{T} + \overline{U}
+\eea
+et en appliquant le th\'eor\`eme du Viriel (\ref{EQ:10_6}), on obtient :
+\be
+	E = (\frac{k}{2} +1)\overline{U} = (1 + \frac{2}{k})\overline{T}
+\ee
+soit finalement :
+\be
+	\begin{cases}
+		\overline{U} = \dfrac{2}{2+k}E \\
+		\overline{T} = \dfrac{k}{2+k}E \label{EQ:10_7}
+	\end{cases}
+\ee
+
+De la m\^eme mani\`ere que pr\'ec\'edemment, quelques cas particuliers :
+\begin{itemize}
+	\item pour les petites oscillations, $k=2$ donne $\overline{T} = \overline{U} = \frac{1}{2}E$
+	\item pour l'int\'eraction newtonienne ou coulombienne, $k=-1$, il y a $2\overline{T} = -\overline{U}$, impliquant $\overline{T} = -E$ et $\overline{U} = E$. En conclusion, le mouvement s'effectue dans une r\'egion finie de l'espace si et seulement si l'\'energie totale du syst\`eme est n\'egative.
+\end{itemize}
