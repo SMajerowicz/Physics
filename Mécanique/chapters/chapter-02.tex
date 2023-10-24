@@ -33,7 +33,7 @@ Nous savons que l'\'energie cin\'etique $T = f(\dot{q}^{2})$. Or pour une foncti
 \ee
 Appliqu\'ee \`a l'\'energie cin\'etique, cela donne :
 \be
-	\sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i} = 2T = \sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i}
+	\sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i} = 2T = \sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i} \label{EQ:6_1_1}
 \ee
 ce qui permet de conclure \`a, en compl\'etant l'\'equation (\ref{EQ:6_1}) :
 \be
@@ -100,15 +100,15 @@ Dans le cadre du mouvement d\'ecrit par les coordonn\'ees g\'en\'eralis\'ees, no
 \begin{itemize}
 	\item les \emph{impulsions g\'en\'eralis\'ees} :
 	\be
-		p_{i} = \dfrac{\partial L}{\partial\dot{q}_{i}}
+		p_{i} = \dfrac{\partial L}{\partial\dot{q}_{i}} \label{EQ:7_5}
 	\ee
 	\item les \emph{forces g\'en\'eralis\'ees} :
 	\be
-		F_{i} = \dfrac{\partial L}{\partial q_{i}}
+		F_{i} = \dfrac{\partial L}{\partial q_{i}} \label{EQ:7_6}
 	\ee
 	\item les \'equations de Lagrange :
 	\be
-		\dot p_{i} = F_{i}
+		\dot p_{i} = F_{i} \label{EQ:7_7}
 	\ee
 \end{itemize}
 
@@ -304,4 +304,98 @@ la fonction de Lagrange se transforme ainsi :
 \eea
 et comme $\alpha^{k}$ est une constante alors les \'equations de Lagrange (\ref{EQ:2_6}) restent inchang\'ees et pleinement valables. En conclusion, si l'\'energie potentielle d'un syst\`eme est une fonction homog\`ene de degr\'e $k$ des coordonn\'ees alors les \'equations du mouvement admettent des trajectoires g\'eom\'etriques semblables et nous pouvons en d\'eduire certaines caract\'eristiques de proportionnalit\'e.
 
-Puisque
+Puisque la transformation peut aussi s'\'ecrire : $l' = \alpha l$ et $\mathrm{t}' = \beta \mathrm{t}$ alors, nous avons de facto en appliquant la condition ci-dessus :
+\be
+	\dfrac{\mathrm{t}'}{\mathrm{t}} = \left(\dfrac{l'}{l}\right)^{1-\frac{k}{2}} \label{EQ:10_2}
+\ee
+et plusieurs relations peuvent en \^etre d\'eduites :
+\bea
+	\dfrac{l'}{l} & = & \dfrac{l'}{\mathrm{t}'}\dfrac{\mathrm{t}}{l} = \dfrac{l'}{l}\dfrac{\mathrm{t}}{\mathrm{t}'} = \dfrac{l'}{l}\left(\dfrac{l'}{l}\right)^{\frac{k}{2}-1} = \left(\dfrac{l'}{l}\right)^{\frac{k}{2}} \\
+	\dfrac{E'}{E} & = & \left(\dfrac{v'}{v}\right)^{2} = \left(\dfrac{l'}{l}\right)^{k} \\
+	\dfrac{M'}{M} & = & \dfrac{l'v'}{lv} = \dfrac{l'}{l}\left(\dfrac{l'}{l}\right)^{\frac{k}{2}} = \left(\dfrac{l'}{l}\right)^{1+\frac{k}{2}} \label{EQ:10_3}
+\eea
+Regardons quelques cas particuliers :
+\begin{itemize}
+	\item celui des petites oscillations pour lesquelles $k=2$ alors l'\'equation (\ref{EQ:10_2}) dont $\mathrm{t}' = \mathrm{t}$ impliquant que la période d'oscillation ne d\'epend pas de l'amplitude du mouvement ;
+	\item celui d'un champ de force homog\`ene, l'\'equation (\ref{EQ:5_8}) a pour conlusion que l'\'energie potentielle est fonction lin\'eaire des coordonn\'ees, soit $k=1$ et l'\'equation (\ref{EQ:10_2}) donne :
+		\be
+			\dfrac{\mathrm{t}'}{\mathrm{t}} = \left(\dfrac{l'}{l}\right)^{\frac{1}{2}}
+		\ee
+	\item celui de l'attraction newtonienne, gravitationnelle de deux masses, ou coulombienne entre deux charges, l'\'energie potentielle est une fonction inverse de la distance entre les deux points mat\'eriels, i.e. $k=-1$. Nous obtenons donc :
+		\bea
+			\dfrac{\mathrm{t}'}{\mathrm{t}} & = & \left(\dfrac{l'}{l}\right)^{\frac{3}{2}} \nonumber \\
+			\Leftrightarrow \left(\dfrac{\mathrm{t}'}{\mathrm{t}}\right)^{2} = \left(\dfrac{l'}{l}\right)^{3}
+		\eea
+		C'est exactement la \emph{troisi\`eme loi de Kepler}.
+\end{itemize}
+
+D\'esormais, nous allons supposer que le mouvement du syst\`eme s'effectue dans une r\'egion limit\'ee de l'espace pour en d\'eduire une relation entre la moyenne des \'energies cin\'etique et potentielle, connue comme le \emph{th\'eor\`eme du Viriel}. Puisque l'\'energie cin\'etique $T$ est une fonction quadratique des vitesses, le th\'eor\`eme d'Euler donne, voir l'\'equation (\ref{EQ:6_1_1}) :
+\be
+	\sum_{a}\dfrac{\partial T}{\partial\vec{v}_{a}} = 2T
+\ee
+or en utilisant l'\'equation (\ref{EQ:7_2}) :
+\be
+	\dfrac{\partial T}{\partial\vec{v}_{a}} = \vec{p}_{a}
+\ee
+et le fait que :
+\be
+	\dfrac{\mathrm{d}}{\mathrm{dt}}(\sum_{a}\vec{p}_{a}\vec{r}_{a}) = \sum_{a}\vec{\dot{p}}_{a}\vec{r}_{a} + \sum_{a}\vec{p}_{a}\vec{v}_{a}
+\ee
+nous pouvons \'ecrire :
+\be
+	2T = \sum_{a}\vec{p}_{a}\vec{v}_{a} = \dfrac{\mathrm{d}}{\mathrm{dt}}(\sum_{a}\vec{p}_{a}\vec{r}_{a}) - \sum_{a}\vec{\dot{p}}_{a}\vec{r}_{a} \label{EQ:10_4}
+\ee
+
+La d\'efinition de la moyenne d'une fonction quelconque du temps $f(\mathrm{t})$ est :
+\be
+	\overline{f} = \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} f(\mathrm{t})\mathrm{dt}
+\ee
+Dans le cas où $f(\mathrm{t})=\dfrac{\mathrm{d}F(\mathrm{t})}{\mathrm{dt}}$ avec $F(\mathrm{t})$ une fonction born\'ee, i.e. sans valeurs infinies alors :
+\be
+	\overline{f} = \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} \dfrac{\mathrm{d}F(\mathrm{t})}{\mathrm{dt}}\mathrm{dt} = \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} \mathrm{d}F(\mathrm{t}) = \lim_{\tau\to\infty}\dfrac{F(\tau) - F(0)}{\tau} = 0
+\ee
+car $F(\tau) - F(0)$ est une quantit\'e finie.
+
+Prenons l'exemple d'un syst\`eme m\'ecanique en mouvement dans une r\'egion finie de l'espace avec des vitesses finies. Par cons\'equent, la quantit\'e $\sum_{a}\vec{p}_{a}\vec{r}_{a}$ est born\'ee et dans le calcul de la valeur moyenne de l'\'energie cin\'etique, le premier terme de l'\'equation (\ref{EQ:10_4}) s'annule.
+
+Les \'equations de Newton (\ref{EQ:5_4}) et (\ref{EQ:7_7}) donne :
+\be
+	\vec{F}_{a} = -\dfrac{\partial U}{\partial\vec{r}_{a}} = \vec{\dot{p}}_{a}
+\ee
+ce qui donne finalement :
+\be
+	2\overline{T} = \sum_{a}\vec{r}_{a}\dfrac{\partial \overline{U}}{\partial\vec{r}_{a}} \label{EQ:10_5}
+\ee
+Le th\'eor\`eme d'Euler appliqu\'e \`a l'\'energie potentielle, fonction homogn\`ene de degr\'e $k$, donne :
+\bea
+	\sum_{a}\vec{r}_{a}\dfrac{\partial U}{\partial\vec{r}_{a}} & = & kU \nonumber \\
+	\sum_{a}\vec{r}_{a}\dfrac{\partial \overline{U}}{\partial\vec{r}_{a}} & = & k\overline{U}
+\eea
+et donc \emph{le th\'eor\`eme du Viriel} :
+\be
+	2\overline{T} = k\overline{U} \label{EQ:10_6}
+\ee
+Parce que la loi de conservation de l'\'energie s'applique, nous avons $\overline{E} = E$. Or :
+\bea
+	E & = & T + U \nonumber \\
+	\overline{E} & = & \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} T+U\mathrm{dt} \nonumber \\
+	\overline{E} & = & \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} T\mathrm{dt} + \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} U\mathrm{dt}\nonumber \\
+	\overline{E} & = & \overline{T} + \overline{U}
+\eea
+et en appliquant le th\'eor\`eme du Viriel (\ref{EQ:10_6}), on obtient :
+\be
+	E = (\frac{k}{2} +1)\overline{U} = (1 + \frac{2}{k})\overline{T}
+\ee
+soit finalement :
+\be
+	\begin{cases}
+		\overline{U} = \dfrac{2}{2+k}E \\
+		\overline{T} = \dfrac{k}{2+k}E \label{EQ:10_7}
+	\end{cases}
+\ee
+
+De la m\^eme mani\`ere que pr\'ec\'edemment, quelques cas particuliers :
+\begin{itemize}
+	\item pour les petites oscillations, $k=2$ donne $\overline{T} = \overline{U} = \frac{1}{2}E$
+	\item pour l'int\'eraction newtonienne ou coulombienne, $k=-1$, il y a $2\overline{T} = -\overline{U}$, impliquant $\overline{T} = -E$ et $\overline{U} = E$. En conclusion, le mouvement s'effectue dans une r\'egion finie de l'espace si et seulement si l'\'energie totale du syst\`eme est n\'egative.
+\end{itemize}
