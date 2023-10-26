@@ -36,5 +36,22 @@ et par conservation de l'\'energie totale :
 \be
 	E = E(\varphi_{0}) = -mgl\cos\varphi_{0}
 \ee
-
- l'\'equation (\ref{EQ:11_3}) peut s'\'ecrire :
+Par sym\'etrie du mouvement, la p\'eriode est \'egale au temps de parcours entre $\varphi=0$ et $\varphi=\varphi_{0}$. Sachant que la quantit\'e, $E-U$ vaut $-mgl\cos\varphi_{0} + mgl\cos\varphi$, l'\'equation (\ref{EQ:11_3}) peut s'\'ecrire :
+\bea
+	\mathrm{T} & = & 4\sqrt{\frac{m}{2}}\int_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}(l\varphi)}{\sqrt{mgl(\cos\varphi - \cos\varphi_{0})}}} \nonumber \\
+	& = & 4\sqrt{\frac{l}{2g}}\int_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{\cos\varphi - \cos\varphi_{0}}}}
+\eea
+Notons que :
+\bea
+	\sin^{2}\frac{\alpha}{2} & = & \left(\dfrac{e^{i\frac{\alpha}{2}} - e^{-i\frac{\alpha}{2}}}{2i}\right)^{2} \nonumber \\
+	& = & -\frac{1}{4}\left(e^{i\alpha} + e^{-i\alpha} - 2e^{i\frac{\alpha}{2}-i\frac{\alpha}{2}}\right) \nonumber \\
+	& = & -\frac{1}{4}\left(e^{i\alpha} + e^{-i\alpha} - 2\right) \nonumber \\
+	& = & \frac{1}{2}\left(1-\cos\alpha\right) \nonumber \\
+	\Leftrightarrow \cos\alpha & = & 1 - 2\sin^{2}\frac{\alpha}{2}
+\eea
+Cela permet de d\'evelopper la p\'eriode telle que :
+\bea
+	\mathrm{T} & = & 4\sqrt{\frac{l}{2g}}\int_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{1-2\sin\frac{\varphi}{2} - 1 + \sin\frac{\varphi_{0}}{2}}}} \nonumber \\
+	& = & 4\sqrt{\frac{l}{2g}}\int_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{2\left(\sin\frac{\varphi_{0}}{2} - \sin\frac{\varphi}{2}\right)}}} \nonumber \\
+	& = & 2\sqrt{\frac{l}{2g}}\int_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{\sin\frac{\varphi_{0}}{2} - \sin\frac{\varphi}{2}}}}
+\eea
