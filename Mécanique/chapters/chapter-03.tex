@@ -1,3 +1,60 @@
 \chapter{Int\'egration des \'equations du mouvement}
 
 \section{Mouvement lin\'eaire}
+
+L'\'equation (\ref{EQ:5_5}) appliqu\'ee \`a un point mat\'eriel donne en coordonn\'ees g\'en\'eralis\'ees :
+\be
+	L = \frac{1}{2}a(q)\dot{q}^{2} - U(q) \label{EQ:11_1}
+\ee
+qui s'\'ecrit en coordonn\'ees cart\'esiennes :
+\be
+	L = \frac{1}{2}m\dot{x}^{2} - U(x) \label{EQ:11_2}
+\ee
+En \'ecrivant l'\'energie totale :
+\bea
+	E = T + U & = & \frac{1}{2}m\dot{x}^{2} + U(x) \nonumber \\
+	\dot{x}^{2} & = & \frac{2}{m}(E-U(x)) \nonumber \\
+	\dfrac{\mathrm{d}x}{\mathrm{dt}} & = & \sqrt{\frac{2}{m}(E-U(x))} \nonumber \\
+	t & = & \sqrt{\frac{m}{2}}\int{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}} + cste \label{EQ:11_3}
+\eea
+o\`u $E$ et $cste$ sont des constantes du mouvement, la premi\`ere par la loi de conservation de l'\'energie et la seconde par int\'egration.
+
+Lors d'un mouvement, l'\'energie totale est toujours sup\'erieure \`a l'\'energie potentielle car l'\'energie cint\'etique ne peut \^etre n\'egative. Aussi le mouvement ne peut \^etre possible que si $U(x)<E$.
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(200,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\put(0,0){\line(1,0){200}}\put(202,-2){$x$}
+			\put(0,0){\line(0,1){140}}\put(-2,142){$U$}
+			%curve
+			\linethickness{0.5mm}
+			\qbezier(-5,130),(15,130),(25,110)
+			\qbezier(25,110),(35,90),(55,90)
+			\qbezier(55,90),(80,90),(90,100)
+			\qbezier(90,100),(100,110),(125,110)
+			\qbezier(125,110),(150,110),(190,20)
+			%limit
+			\linethickness{0.05mm}
+			\multiput(-5,100)(10,0){20}{\line(1,0){8}}\put(195,98){$U=E$}
+			\multiput(32,0)(0,5){20}{\line(0,1){3}}\put(34,102){$A$}\put(28,-7){$x_{1}$}
+			\multiput(90,0)(0,5){20}{\line(0,1){3}}\put(82,102){$B$}\put(86,-7){$x_{2}$}
+			\put(142,102){$C$}
+		\end{picture}
+		\caption{Exemple d'une fonction d\'efinissant l'\'energie potentielle}\label{FIG:3_1}
+	\end{center}
+\end{figure}
+
+Sur la figure (\ref{FIG:3_1}), la condition $U(x)<E$ implique que le mouvement n'est possible que sur les intervalles tels que $x\in\left[A\,;B\right]$ et $x\in\left[C\,;+\infty\right[$. Dans le premier cas, le mouvement est dit fini et oscillatoire. Dans le second cas, le mouvement est dit inifini. Les points tels que :
+\be
+	U(x) = E \label{EQ:11_4}
+\ee
+sont les \emph{points d'arr\^et}. En effet, dans ce cas, l'\'energie cin\'etique du point mat\'eriel est nulle car sa vitesse aussi de facto.
+
+Dans la relation (\ref{EQ:5_1}), nous avons vu que le temps n'est pas qu'uniforme, il est aussi isotrope. Ainsi la transformation $\mathrm{t}\mapsto -\mathrm{t}$ laisse inchang\'ee la fonction de Lagrange et les \'equations du mouvement. Ainsi $\Delta\mathrm{t}(x_{1}\rightarrow x_{2}) = \Delta\mathrm{t}(x_{2}\rightarrow x_{1})$ et la période d'oscillation $\mathrm{T}(E)=\Delta\mathrm{t}(x_{1}\rightarrow x_{2}\rightarrow x_{1})$ vaut $2\Delta\mathrm{t}(x_{1}\rightarrow x_{2})$. L'\'equation (\ref{EQ:11_3}) s'\'ecrit alors :
+\bea
+	\mathrm{T}(E) & = & 2\sqrt{\frac{m}{2}}\int_{x_{1}(E)}^{x_{2}(E)}{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}} \nonumber \\
+	\mathrm{T}(E) & = & \sqrt{2m}\int_{x_{1}(E)}^{x_{2}(E)}{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}}\label{EQ:11_5}
+\eea
+qui d\'etermine la p\'eriode d'oscillation de la particule mat\'erielle en fonction de son \'energie totale.
