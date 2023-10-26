@@ -4,3 +4,37 @@
 
 \subsection{Oscillations d'un pendule math\'ematique plan}
 
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(100,100)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,100)(10,0){10}{\line(1,0){8}}\put(102,95){$x$}
+			\multiput(0,0)(0,10){10}{\line(0,1){8}}\put(-5,-10){$y$}
+			%socle
+			\put(0,100){\color{black}\circle*{5}}
+			%arms
+			\linethickness{0.5mm}
+			\put(0,100){\line(10,-15){70}}
+			\put(40,50){$l$}
+			\put(68,-5){\color{black}\circle*{10}}\put(75,-7){$m$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(0,80),(5,82),(10,85)
+			\put(3,70){$\varphi$}
+		\end{picture}
+		\caption{Pendule double oscillant}\label{FIG:3_1_1}
+	\end{center}
+\end{figure}
+
+Il s'agit de trouver la p\'eriode d'oscillation du pendule en fonction de l'amplitude du mouvement. En supposant $\varphi_{0}$ l'angle maximal par rapport \`a la verticale, o\`u la vitesse du pendule est nulle, l'\'energie totale du pendule est :
+\bea
+	E & = & \frac{m}{2}\left[\dfrac{\mathrm{d}(l\varphi)}{\mathrm{dt}}\right]^{2} - mgl\cos\varphi \nonumber \\
+	& = & \frac{m}{2}l^{2}\dot{\varphi}^{2} - mgl\cos\varphi
+\eea
+et par conservation de l'\'energie totale :
+\be
+	E = E(\varphi_{0}) = -mgl\cos\varphi_{0}
+\ee
+
+ l'\'equation (\ref{EQ:11_3}) peut s'\'ecrire :
