@@ -96,12 +96,87 @@ et en premi\`ere approximation, la p\'eriode du mouvement n'est d\'ependante ni 
 
 \subsection{Cas d'\'energies potentielles particuli\`eres}
 
+Il s'agit de d\'eterminer la p\'eriode d'oscillations en fonction de l'\'energie pour le mouvement d'une particule de masse $m$ dans un champ o\`u l'\'energie potentielle $U$ est d\'efinie telle que :
+
 \subsubsection{$U = A\lvert x \rvert^{n}$}
 
 \begin{figure}[htb!]
 	\begin{center}
 		\includegraphics[width=10cm]{chapter_03_exercice_2a}
-		\caption{$U = \lvert x \rvert^{3}$}\label{FIG:3_2_a}
+		\caption{$U = \lvert x \rvert^{n}$ pour $n \in \{1,2,3,4,5\}$}\label{FIG:3_2_a}
+	\end{center}
+\end{figure}
+
+Dans ce cas pr\'ecis, commençons par d\'efinir les points d'arr\^et tels que $E=U$, soit $x = \pm\left(\dfrac{E}{A}\right)^{\frac{1}{n}}$. Cela permet d'\'ecrire l'\'equation (\ref{EQ:11_5}) telle que :
+\bea
+	\mathrm{T}(E) & = & \sqrt{2m}\int_{-\left(\frac{E}{A}\right)^{\frac{1}{n}}}^{+\left(\frac{E}{A}\right)^{\frac{1}{n}}}\dfrac{\mathrm{d}x}{\sqrt{E - A\lvert x \rvert^{n}}} \nonumber \\
+	& = & 2\sqrt{2m}\int_{0}^{+\left(\frac{E}{A}\right)^{\frac{1}{n}}}\dfrac{\mathrm{d}x}{\sqrt{E - Ax^{n}}} \nonumber \\
+	& = & 2\sqrt{\dfrac{2m}{E}}\int_{0}^{+\left(\frac{E}{A}\right)^{\frac{1}{n}}}\dfrac{\mathrm{d}x}{\sqrt{1 - \dfrac{Ax^{n}}{E}}}
+\eea
+car la fonction $U$ est paire, i.e. $U(x) = U(-x)$. En posant :
+\be
+	y = \left(\dfrac{A}{E}\right)^{\frac{1}{n}}x
+\ee
+qui permet d'\'ecrire :
+\be
+	\begin{cases}
+		y^{n} = \dfrac{A}{E}x^{n} \\
+		\mathrm{d}y = \left(\dfrac{A}{E}\right)^{\frac{1}{n}}\mathrm{d}x
+	\end{cases}
+\ee
+et :
+\be
+	\begin{cases}
+		x = 0 \Rightarrow y = 0 \\
+		x = \left(\dfrac{E}{A}\right)^{\frac{1}{n}} \Rightarrow y = \left(\dfrac{A}{E}\right)^{\frac{1}{n}}\left(\dfrac{E}{A}\right)^{\frac{1}{n}} = 1
+	\end{cases}
+\ee
+La p\'eriode $\mathrm{T}$ devient :
+\bea
+	\mathrm{T} & = & 2\sqrt{\dfrac{2m}{E}}\int_{0}^{1}\left(\dfrac{E}{A}\right)^{\frac{1}{n}}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{n}}} \nonumber \\
+	& = & 2\dfrac{\sqrt{2mE^{\frac{1}{n}-\frac{1}{2}}}}{A^{\frac{1}{n}}}\int_{0}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{n}}}
+\eea
+De la m\^eme mani\`ere, en posant $u=y^{n}$, nous avons :
+\be
+	\begin{cases}
+		y = 0 \Rightarrow u = 0 \\
+		y = 1 \Rightarrow u = 1
+	\end{cases}
+\ee
+ainsi que :
+\be
+	\begin{cases}
+		y = u^{\frac{1}{n}} \Rightarrow y^{n-1} = u^{\frac{n-1}{n}} = u^{1 - \frac{1}{n}} \\
+		ny^{n-1}\mathrm{d}y = \mathrm{d}u \Leftrightarrow \mathrm{d}y = \dfrac{u^{\frac{1}{n} - 1}}{n}\mathrm{d}u
+	\end{cases}
+\ee
+Nous arrivons \`a :
+\bea
+	\mathrm{T} & = & 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{A^{\frac{1}{n}}}\int_{0}^{1}\dfrac{u^{\frac{1}{n} - 1}\mathrm{d}u}{n(1-u)^{\frac{1}{2}}} \nonumber \\
+	& = & 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{nA^{\frac{1}{n}}}\int_{0}^{1}u^{\frac{1}{n} - 1}(1-u)^{\frac{-1}{2}}\mathrm{d}u \label{EQ:APP3_2_a}
+\eea
+Utilisons ici les int\'egrales d'Euler de premi\`ere esp\`ece, \emph{fonction Béta}, d\'efinies telles que :
+\be
+	\mathrm{B}(x,y) = \int_{0}^{1}\mathrm{t}^{x-1}(1-\mathrm{t})^{y-1}\mathrm{dt} = \dfrac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} \label{EQ:INT_EULER_BETA}
+\ee
+et celles de seconde esp\`ece, \emph{fonction Gamma} :
+\be
+	\Gamma(z) = \int_{0}^{+\infty}\mathrm{t}^{z-1}e^{-\mathrm{t}}\mathrm{dt} \label{EQ:INT_EULER_GAMMA}
+\ee
+L'\'equation (\ref{EQ:APP3_2_a}) s'\'ecrit alors :
+\bea
+	\mathrm{T} & = & 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{nA^{\frac{1}{n}}}\mathrm{B}\left(\frac{1}{n},\frac{1}{2}\right) \nonumber \\
+	& = & 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{nA^{\frac{1}{n}}}\dfrac{\Gamma\left(\frac{1}{n}\right)\Gamma\left(\frac{1}{2}\right)}{\Gamma\left(\frac{1}{n}+\frac{1}{2}\right)} \nonumber
+\eea
+Or $\Gamma(1/2) = \sqrt{\pi}$, nous avons donc finalement :
+\be
+	\mathrm{T} = 2\dfrac{\sqrt{2\pi m}\Gamma\left(\frac{1}{n}\right)}{nA^{\frac{1}{n}}\Gamma\left(\frac{1}{n}+\frac{1}{2}\right)}E^{\frac{1}{n}-\frac{1}{2}}
+\ee
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_03_exercice_2a_result}
+		\caption{$\mathrm{T}(E)$ pour $m=1$, $A=1$ et $n \in \{1,2,3,4,5\}$}\label{FIG:3_2_a_result}
 	\end{center}
 \end{figure}
 
@@ -110,7 +185,7 @@ et en premi\`ere approximation, la p\'eriode du mouvement n'est d\'ependante ni 
 \begin{figure}[htb!]
 	\begin{center}
 		\includegraphics[width=10cm]{chapter_03_exercice_2b}
-		\caption{$U = -2 / \cosh^{2}(0.75x)$}\label{FIG:3_2_b}
+		\caption{$U = -2 / \cosh^{2}(\alpha x)$ pour $\alpha \in \{0.25,0.35,0.45,0.55,0.65,0.75\}$}\label{FIG:3_2_b}
 	\end{center}
 \end{figure}
 
@@ -119,6 +194,6 @@ et en premi\`ere approximation, la p\'eriode du mouvement n'est d\'ependante ni 
 \begin{figure}[htb!]
 	\begin{center}
 		\includegraphics[width=10cm]{chapter_03_exercice_2c}
-		\caption{$U = 4\tan^{2}(0.25 x)$}\label{FIG:3_2_c}
+		\caption{$U = 4\tan^{2}(\alpha x)$ pour $\alpha \in \{0.25,0.35,0.45,0.55,0.65,0.75\}$}\label{FIG:3_2_c}
 	\end{center}
 \end{figure}
