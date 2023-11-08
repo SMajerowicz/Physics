@@ -107,7 +107,7 @@ Il s'agit de d\'eterminer la p\'eriode d'oscillations en fonction de l'\'energie
 	\end{center}
 \end{figure}
 
-Dans ce cas pr\'ecis, commençons par d\'efinir les points d'arr\^et tels que $E=U$, soit $x = \pm\left(\dfrac{E}{A}\right)^{\frac{1}{n}}$. Cela permet d'\'ecrire l'\'equation (\ref{EQ:11_5}) telle que :
+Dans ce cas pr\'ecis, commen\c{c}ons par d\'efinir les points d'arr\^et tels que $E=U$, soit $x = \pm\left(\dfrac{E}{A}\right)^{\frac{1}{n}}$. Cela permet d'\'ecrire l'\'equation (\ref{EQ:11_5}) telle que :
 \bea
 	\mathrm{T}(E) & = & \sqrt{2m}\int_{-\left(\frac{E}{A}\right)^{\frac{1}{n}}}^{+\left(\frac{E}{A}\right)^{\frac{1}{n}}}\dfrac{\mathrm{d}x}{\sqrt{E - A\lvert x \rvert^{n}}} \nonumber \\
 	& = & 2\sqrt{2m}\int_{0}^{+\left(\frac{E}{A}\right)^{\frac{1}{n}}}\dfrac{\mathrm{d}x}{\sqrt{E - Ax^{n}}} \nonumber \\
@@ -180,7 +180,7 @@ Or $\Gamma(1/2) = \sqrt{\pi}$, nous avons donc finalement :
 	\end{center}
 \end{figure}
 
-\subsubsection{$U = -U_{0}/\cosh^{2}(\alpha x)$}
+\subsubsection{$U = -U_{0}/\cosh^{2}(\alpha x)$ avec $-U_{0} < E < 0$}
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -188,6 +188,28 @@ Or $\Gamma(1/2) = \sqrt{\pi}$, nous avons donc finalement :
 		\caption{$U = -2 / \cosh^{2}(\alpha x)$ pour $\alpha \in \{0.25,0.35,0.45,0.55,0.65,0.75\}$}\label{FIG:3_2_b}
 	\end{center}
 \end{figure}
+
+Les point d'arr\^et sont toujours d\'efinis tels que $U=E$, i.e. :
+\bea
+	\cosh^{2}(\alpha x) & = & -\dfrac{U_{0}}{E} \nonumber \\
+	\Leftrightarrow \alpha x & = & \pm \arccosh\left(\sqrt{\dfrac{-U_{0}}{E}}\right)
+\eea
+Ceci est possible car $-U_{0} < E < 0$ et donc $-U_{0}/E > 0$. Les points d'arr\^et sont donc :
+\be
+	x = \pm \dfrac{1}{\alpha}\arccosh\left(\sqrt{\dfrac{-U_{0}}{E}}\right)
+\ee
+
+L'\'equation (\ref{EQ:11_5}) peut donc s'\'ecrire :
+\bea
+	\mathrm{T}(E) & = & \sqrt{2m}\int_{-\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}^{\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}\dfrac{\mathrm{d}x}{\sqrt{E + \dfrac{U_{0}}{\cosh^{2}(\alpha x)}}} \nonumber \\
+	& = & 2\sqrt{2m}\int_{0}^{\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}\dfrac{\mathrm{d}x}{\sqrt{E + \dfrac{U_{0}}{\cosh^{2}(\alpha x)}}} \nonumber \\
+	& = & 2\sqrt{\dfrac{2m}{\lvert E \rvert}}\int_{0}^{\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}\dfrac{\mathrm{d}x}{\sqrt{1 + \dfrac{U_{0}}{E\cosh^{2}(\alpha x)}}}
+\eea
+car la fonction qui donne $\cosh^{2}(\alpha x)$ est paire et $E < 0$. En choisissant :
+\be
+	y = \sqrt{\frac{-U_{0}}{E}}\dfrac{1}{\cosh(\alpha x)}
+\ee
+
 
 \subsubsection{$U = U_{0}\tan^{2}(\alpha x)$}
 
