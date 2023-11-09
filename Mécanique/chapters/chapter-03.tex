@@ -58,3 +58,30 @@ Dans la relation (\ref{EQ:5_1}), nous avons vu que le temps n'est pas qu'uniform
 	\mathrm{T}(E) & = & \sqrt{2m}\int_{x_{1}(E)}^{x_{2}(E)}{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}}\label{EQ:11_5}
 \eea
 qui d\'etermine la p\'eriode d'oscillation de la particule mat\'erielle en fonction de son \'energie totale.
+
+\section{D\'efinition de l'\'energie potentielle en fonction de la p\'eriode des oscillations}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(200,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\put(0,0){\line(1,0){200}}\put(202,-2){$x$}
+			\put(100,0){\line(0,1){140}}\put(98,142){$U$}
+			%curve
+			\linethickness{0.5mm}
+			\qbezier(35,120),(40,0),(100,0)
+			\qbezier(100,0),(175,0),(180,120)
+			\put(47,50){$x_{1}(U)$}
+			\put(132,50){$x_{2}(U)$}
+			%limit
+			\linethickness{0.05mm}
+			\multiput(-5,80)(10,0){20}{\line(1,0){8}}\put(195,78){$U=E$}
+			\multiput(40,0)(0,5){16}{\line(0,1){3}}\put(35,-7){$x_{1}$}
+			\multiput(175,0)(0,5){16}{\line(0,1){3}}\put(170,-7){$x_{2}$}
+		\end{picture}
+		\caption{Fonction d\'efinissant l'\'energie potentielle ayant qu'un unique minimum}\label{FIG:3_2}
+	\end{center}
+\end{figure}
+
+L'objectif de ce paragraphe est de trouver la fonction d\'efinissant l'\'energie potentielle d'un champ $U$ connaissant la p\'eriode d'oscillations $\mathrm{T}(E)$ du mouvement animant une particule. Pour cela, nous supposons que la fonction recherch\'ee $U$ n'a qu'un unique minimum dans la r\'egion du mouvement et que, comme sur la figure (\ref{FIG:3_2}), $U(0) = 0$.
