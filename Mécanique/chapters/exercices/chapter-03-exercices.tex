@@ -234,9 +234,15 @@ En posant $u = y^{2}$, soit $y = u^{1/2}$ et $\mathrm{d}u = 2y\mathrm{d}y = 2u^{
 	& = & -\dfrac{1}{\alpha}\sqrt{\dfrac{-U_{0}}{E}}\sqrt{\dfrac{2m}{\lvert E \rvert}} \mathrm{B}\left(-\frac{1}{2},\frac{1}{2}\right) \nonumber \\
 	& = & \dfrac{2\pi}{\alpha}\sqrt{\dfrac{-U_{0}}{E}}\sqrt{\dfrac{2m}{\lvert E \rvert}}
 \eea
-car $\Gamma(0) = 1$, $\Gamma(\frac{1}{2}) = \sqrt{\pi}$ et $\Gamma(-\frac{1}{2}) = -2\sqrt{\pi}$. Ici, je trouve une solution diff\'erente de celle propos\'ee par le livre qui est : $\mathrm{T}(E) = \dfrac{\pi}{\alpha}\sqrt{\dfrac{2m}{\lvert E \rvert}}$ et j'avoue ne pas savoir en quoi la p\'riode ne pourrait pas d\'ependre de la profondeur du puits d'\'energie potentielle $U_{0}$.
+car $\Gamma(0) = 1$, $\Gamma(\frac{1}{2}) = \sqrt{\pi}$ et $\Gamma(-\frac{1}{2}) = -2\sqrt{\pi}$. Ici, je trouve une solution diff\'erente de celle propos\'ee par le livre qui est : $\mathrm{T}(E) = \dfrac{\pi}{\alpha}\sqrt{\dfrac{2m}{\lvert E \rvert}}$ et j'avoue ne pas savoir en quoi la p\'eriode ne pourrait pas d\'ependre de la profondeur du puits d'\'energie potentielle $U_{0}$.
 
 \subsubsection{$U = U_{0}\tan^{2}(\alpha x)$}
+
+Tout d'abord quelques rappels sur la fonction \emph{tangente} :
+\bea
+	\tan\alpha & = & \dfrac{\sin\alpha}{\cos\alpha} = \dfrac{e^{i\alpha} - e^{-i\alpha}}{i(e^{i\alpha} + e^{-i\alpha})} \nonumber \\
+	\tan'\alpha & = & \dfrac{1}{\cos^{2}\alpha} = 1 + \tan^{2}\alpha
+\eea
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -244,3 +250,26 @@ car $\Gamma(0) = 1$, $\Gamma(\frac{1}{2}) = \sqrt{\pi}$ et $\Gamma(-\frac{1}{2})
 		\caption{$U = 4\tan^{2}(\alpha x)$ pour $\alpha \in \{0.25,0.35,0.45,0.55,0.65,0.75\}$}\label{FIG:3_2_c}
 	\end{center}
 \end{figure}
+
+Les points d'arr\^et du mobile sont d\'efinis tels que $U = E = U_{0}\tan^{2}(\alpha x)$, soit $\tan(\alpha x) = \pm\sqrt(E/U_{0})$ :
+\be
+	\begin{cases}
+		x_{1} = -\frac{1}{\alpha}\arctan\left(\sqrt{\dfrac{E}{U_{0}}}\right) \\
+		x_{2} = +\frac{1}{\alpha}\arctan\left(\sqrt{\dfrac{E}{U_{0}}}\right)
+	\end{cases}
+\ee
+car la fonction $\arctan$ est impaire. Par cons\'equence, la p\'eriode $\mathrm{T}$ s'\'ecrit \`a partir de l'\'equation (\ref{EQ:11_5}) :
+\bea
+	\mathrm{T}(E) & = & \sqrt{2m}\int_{-\frac{1}{\alpha}\arctan\left(\sqrt{\frac{E}{U_{0}}}\right)}^{\frac{1}{\alpha}\arctan\left(\sqrt{\frac{E}{U_{0}}}\right)}\dfrac{\mathrm{d}x}{\sqrt{E - U_{0}\tan^{2}(\alpha x)}} \nonumber \\
+	& = & 2\sqrt{\dfrac{2m}{E}}\int_{0}^{\frac{1}{\alpha}\arctan\left(\sqrt{\frac{E}{U_{0}}}\right)}\dfrac{\mathrm{d}x}{\sqrt{1 - \frac{U_{0}}{E}\tan^{2}(\alpha x)}}
+\eea
+car la fonction $\tan^{2}$ est paire.
+
+Toutefois, \`a partir de ce moment l\`a de la d\'emonstration, en posant :
+\be
+	y = \sqrt{\dfrac{U_{0}}{E}}\tan(\alpha x)
+\ee
+je n'arrive pas \`a aller jusqu'au bout et trouver le r\'esultat annonc\'e par le livre, \`a savoir :
+\be
+	\mathrm{T}(E) = \dfrac{\pi\sqrt{2m}}{\alpha\sqrt{(E + U_{0})}}
+\ee
