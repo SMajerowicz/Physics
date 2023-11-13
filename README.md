@@ -4,3 +4,5 @@ Ces documents LaTeX sont une aide pour la compréhension des livres issus des c�
 Vous pouvez cloner ce répertoire et après avoir installé MikTex (https://miktex.org/download), par exemple, lancer la commande :
 pdflatex Mécanique/démonstration.tex
 afin de pouvoir compiler les fichiers LaTeX du livre 1 de physique théorique en un document PDF consultable et partageable.
+
+Consulter les releases de ce projet pour avoir le fichier PDF directement sans avoir à compiler si nécessaire :-)
