@@ -121,3 +121,34 @@ et :
 		E = \alpha \Rightarrow y = \dfrac{-U + \alpha}{\alpha - U} = 1
 	\end{cases}
 \ee
+Ainsi :
+\bea
+	\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} & = & \int_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\sqrt{\frac{(2\alpha - (\alpha - U)y + U + \alpha)}{2}\frac{((\alpha - U)y + U + \alpha - 2U)}{2}}} \nonumber \\
+	& = & \int_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\sqrt{\frac{(\alpha - U - (\alpha - U)y)}{2}\frac{(\alpha - U + (\alpha - U)y)}{2}}} \nonumber \\
+	& = & \int_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\frac{\alpha - U}{2}\sqrt{(1 - y)(1 + y)}} \nonumber \\
+	& = & \int_{-1}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{2}}}
+\eea
+En posant $u = y^{2}$ soit $y = u^{1/2}$ et $\mathrm{d}u = 2y\mathrm{d}y = 2u^{1/2}\mathrm{d}y \Leftrightarrow \mathrm{d}y = \frac{1}{2}u^{-1/2}\mathrm{d}u$, l'int\'egrale pr\'ec\'edente s'\'ecrit :
+\bea
+	\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} & = & \int_{-1}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{2}}} \nonumber \\
+	& = & 2 \int_{0}^{1}\dfrac{1}{2}\dfrac{u^{-1/2}\mathrm{d}u}{(1-u)^{1/2}} \nonumber \\
+	& = & \int_{0}^{1}u^{-1/2}(1-u)^{-1/2}\mathrm{d}u \nonumber \\
+	& = & \mathrm{B}\left(\frac{1}{2},\frac{1}{2}\right) = \dfrac{\Gamma(\frac{1}{2})\Gamma(\frac{1}{2})}{\Gamma(1)} = \pi
+\eea
+De fait :
+\bea
+	\int_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} & = & \sqrt{2m}\pi\int_{0}^{\alpha}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\mathrm{d}U \nonumber \\
+	& = & \sqrt{2m}\pi\left[x_{2}(\alpha) - x_{2}(0) - x_{1}(\alpha) + x_{1}(0)\right]
+\eea
+Or par hypoth\`ese, $x_{2}(0) = x_{1}(0) = 0$, donc :
+\be
+	\int_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} = \sqrt{2m}\pi\left[x_{2}(\alpha) - x_{1}(\alpha)\right]
+\ee
+Dans le cas o\`u nous posons $\alpha = U$, nous pouvons en d\'eduire :
+\be
+	x_{2}(U) - x_{1}(U) = \dfrac{1}{\sqrt{2m}\pi}\int_{0}^{U}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{U - E}} \label{EQ:12_1}
+\ee
+De plus, si le champ d'\'energie potentielle est paire tel que $U(x) = U(-x)$ ou encore $x_{1}(U) = -x_{2}(U) = x(U)$, alors l'\'equation (\ref{EQ:12_1}) devient, puisque $x_{2}(U) - x_{1}(U) = 2x(U)$ :
+\be
+	x(U) = \dfrac{1}{2\pi\sqrt{2m}}\int_{0}^{U}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{U - E}} \label{EQ:12_2}
+\ee
