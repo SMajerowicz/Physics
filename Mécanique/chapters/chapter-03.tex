@@ -58,3 +58,144 @@ Dans la relation (\ref{EQ:5_1}), nous avons vu que le temps n'est pas qu'uniform
 	\mathrm{T}(E) & = & \sqrt{2m}\int_{x_{1}(E)}^{x_{2}(E)}{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}}\label{EQ:11_5}
 \eea
 qui d\'etermine la p\'eriode d'oscillation de la particule mat\'erielle en fonction de son \'energie totale.
+
+\section{D\'efinition de l'\'energie potentielle en fonction de la p\'eriode des oscillations}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(200,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\put(0,0){\line(1,0){200}}\put(202,-2){$x$}
+			\put(100,0){\line(0,1){140}}\put(98,142){$U$}
+			%curve
+			\linethickness{0.5mm}
+			\qbezier(35,120),(40,0),(100,0)
+			\qbezier(100,0),(175,0),(180,120)
+			\put(47,50){$x_{1}(U)$}
+			\put(132,50){$x_{2}(U)$}
+			%limit
+			\linethickness{0.05mm}
+			\multiput(-5,80)(10,0){20}{\line(1,0){8}}\put(195,78){$U=E$}
+			\multiput(40,0)(0,5){16}{\line(0,1){3}}\put(35,-7){$x_{1}$}
+			\multiput(175,0)(0,5){16}{\line(0,1){3}}\put(170,-7){$x_{2}$}
+		\end{picture}
+		\caption{Fonction d\'efinissant l'\'energie potentielle ayant qu'un unique minimum}\label{FIG:3_2}
+	\end{center}
+\end{figure}
+
+L'objectif de ce paragraphe est de trouver la fonction d\'efinissant l'\'energie potentielle d'un champ $U$ connaissant la p\'eriode d'oscillations $\mathrm{T}(E)$ du mouvement animant une particule. Pour cela, nous supposons que la fonction recherch\'ee $U$ n'a qu'un unique minimum dans la r\'egion du mouvement et que, comme sur la figure (\ref{FIG:3_2}), $U(0) = 0$.
+
+Transformons l'int\'egrale (\ref{EQ:11_5}) avec $x$ fonction de $U$ telle que pour une valeur de l'\'energie potentielle $U$ il existe deux valeurs de $x$ diff\'erentes. Elle devient alors la somme de deux int\'egrales sur deux r\'egions diff\'erentes :
+\bea
+	\mathrm{T}(E) & = & \sqrt{2m}\int_{x_{1}(E)}^{x_{2}(E)}\dfrac{\mathrm{d}x}{\sqrt{E - U(x)}} \nonumber \\
+	& = & -\sqrt{2m}\int_{0}^{E}\dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\dfrac{\mathrm{d}U}{\sqrt{E - U}} + \sqrt{2m}\int_{0}^{E}\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U}\dfrac{\mathrm{d}U}{\sqrt{E - U}} \nonumber \\
+	& = & \sqrt{2m}\int_{0}^{E}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\dfrac{\mathrm{d}U}{\sqrt{E - U}}
+\eea
+Elle peut \^etre \'etendue \`a :
+\bea
+	\int_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} & = & \sqrt{2m}\int_{0}^{\alpha}\int_{0}^{E}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\dfrac{\mathrm{d}U\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} \nonumber \\
+	& =& \sqrt{2m}\int_{0}^{\alpha}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\mathrm{d}U\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}}
+\eea
+La seconde implication dans sa deuxi\`eme int\'egrale est en $\int_{U}^{\alpha}$ car en dehors de cet intervalle, $\int_{0}^{U}$ et $\int_{\alpha}^{E}$ sont ind\'efinie car $(E-U)$ et $(\alpha-E)$ sont respectivement n\'egatives.
+
+Faisons d\'esormais le calcul de la seconde int\'egrale, soit :
+\be
+	\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}}
+\ee
+en posant :
+\be
+	y = \dfrac{2E - U - \alpha}{\alpha - U}
+\ee
+qui donne :
+\be
+	\begin{cases}
+		E = \dfrac{(\alpha - U)y + U + \alpha}{2} \\
+		\mathrm{d}y = \dfrac{2\mathrm{d}E}{\alpha - U} \Leftrightarrow \mathrm{d}E = \dfrac{\alpha - U}{2}\mathrm{d}y
+	\end{cases}
+\ee
+et :
+\be
+	\begin{cases}
+		E = U \Rightarrow y = \dfrac{U - \alpha}{\alpha - U} = -1 \\
+		E = \alpha \Rightarrow y = \dfrac{-U + \alpha}{\alpha - U} = 1
+	\end{cases}
+\ee
+Ainsi :
+\bea
+	\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} & = & \int_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\sqrt{\frac{(2\alpha - (\alpha - U)y + U + \alpha)}{2}\frac{((\alpha - U)y + U + \alpha - 2U)}{2}}} \nonumber \\
+	& = & \int_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\sqrt{\frac{(\alpha - U - (\alpha - U)y)}{2}\frac{(\alpha - U + (\alpha - U)y)}{2}}} \nonumber \\
+	& = & \int_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\frac{\alpha - U}{2}\sqrt{(1 - y)(1 + y)}} \nonumber \\
+	& = & \int_{-1}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{2}}}
+\eea
+En posant $u = y^{2}$ soit $y = u^{1/2}$ et $\mathrm{d}u = 2y\mathrm{d}y = 2u^{1/2}\mathrm{d}y \Leftrightarrow \mathrm{d}y = \frac{1}{2}u^{-1/2}\mathrm{d}u$, l'int\'egrale pr\'ec\'edente s'\'ecrit :
+\bea
+	\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} & = & \int_{-1}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{2}}} \nonumber \\
+	& = & 2 \int_{0}^{1}\dfrac{1}{2}\dfrac{u^{-1/2}\mathrm{d}u}{(1-u)^{1/2}} \nonumber \\
+	& = & \int_{0}^{1}u^{-1/2}(1-u)^{-1/2}\mathrm{d}u \nonumber \\
+	& = & \mathrm{B}\left(\frac{1}{2},\frac{1}{2}\right) = \dfrac{\Gamma(\frac{1}{2})\Gamma(\frac{1}{2})}{\Gamma(1)} = \pi
+\eea
+De fait :
+\bea
+	\int_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} & = & \sqrt{2m}\pi\int_{0}^{\alpha}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\mathrm{d}U \nonumber \\
+	& = & \sqrt{2m}\pi\left[x_{2}(\alpha) - x_{2}(0) - x_{1}(\alpha) + x_{1}(0)\right]
+\eea
+Or par hypoth\`ese, $x_{2}(0) = x_{1}(0) = 0$, donc :
+\be
+	\int_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} = \sqrt{2m}\pi\left[x_{2}(\alpha) - x_{1}(\alpha)\right]
+\ee
+Dans le cas o\`u nous posons $\alpha = U$, nous pouvons en d\'eduire :
+\be
+	x_{2}(U) - x_{1}(U) = \dfrac{1}{\sqrt{2m}\pi}\int_{0}^{U}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{U - E}} \label{EQ:12_1}
+\ee
+De plus, si le champ d'\'energie potentielle est paire tel que $U(x) = U(-x)$ ou encore $x_{1}(U) = -x_{2}(U) = x(U)$, alors l'\'equation (\ref{EQ:12_1}) devient, puisque $x_{2}(U) - x_{1}(U) = 2x(U)$ :
+\be
+	x(U) = \dfrac{1}{2\pi\sqrt{2m}}\int_{0}^{U}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{U - E}} \label{EQ:12_2}
+\ee
+
+\section{Masse r\'eduite}
+
+L'important probl\`eme du mouvement s'un syst\`eme ferm\'e \`a deux particules r\'eagissant l'une sur l'autre, ou encore \emph{probl\`eme des deux corps}, admet une solution g\'en\'erale compl\`ete. Pour le r\'esoudre, nous allons le simplifier en d\'ecomposant le mouvement du syst\`eme en celui du centre d'inertie et des deux points mat\'eriels par rapport \`a ce dernier. L'\'energie potentielle d'int\'eraction ne d\'epend que de la distance entre les deux particules, aussi la fonction de Lagrange s'\'ecrit :
+\be
+	L = \dfrac{m_{1}\dot{r}_{1}^{2}}{2} + \dfrac{m_{2}\dot{r}_{2}^{2}}{2} - U(\lvert \vec{r}_{1} - \vec{r}_{2} \rvert) \label{EQ:13_1}
+\ee
+D\'efinissons $\vec{r} = \vec{r}_{1} - \vec{r}_{2}$ et pla\c{c}ons l'origine des coordonn\'ees au centre d'inertie. Alors l'\'equation (\ref{EQ:8_3}) donne $\vec{R} = \vec{0}$ ou encore : $\sum m_{a}\vec{r}_{a} = \vec{0}$, soit :
+\be
+	m_{1}\vec{r}_{1} + m_{2}\vec{r}_{2} = \vec{0}
+\ee
+Nous pouvons en conclure que :
+\be
+	\vec{r} = \begin{cases}
+		\vec{r}_{1} + \dfrac{m_{1}}{m_{2}}\vec{r}_{1} = \dfrac{m_{1} + m_{2}}{m_{2}}\vec{r}_{1} \\
+		- \dfrac{m_{2}}{m_{1}}\vec{r}_{2} - \vec{r}_{2} = -\dfrac{m_{1} + m_{2}}{m_{1}}\vec{r}_{2}
+	\end{cases}
+\ee
+soit :
+\be
+	\begin{cases}
+		\vec{r}_{1} = \dfrac{m_{2}}{m_{1} + m_{2}}\vec{r} \\
+		\vec{r}_{2} = \dfrac{-m_{1}}{m_{1} + m_{2}}\vec{r}
+	\end{cases}\label{EQ:13_2}
+\ee
+Puisque :
+\be
+	\begin{cases}
+		\vec{\dot{r}}_{1} = \dfrac{m_{2}}{m_{1} + m_{2}}\vec{\dot{r}} \\
+		\vec{\dot{r}}_{2} = \dfrac{-m_{1}}{m_{1} + m_{2}}\vec{\dot{r}}
+	\end{cases}
+\ee
+la fonction de Lagrange se d\'eveloppe ainsi :
+\bea
+	L & = & \dfrac{m_{1}}{2}\left(\dfrac{m_{2}}{m_{1} + m_{2}}\right)^{2}\vec{\dot{r}}^{\,2} + \dfrac{m_{2}}{2}\left(\dfrac{-m_{1}}{m_{1} + m_{2}}\right)^{2}\vec{\dot{r}}^{\,2} - U(\vec{r}) \nonumber \\
+	& = & \dfrac{m_{1}m_{2}^{2} + m_{1}^{2}m_{2}}{2(m_{1} + m_{2})^{2}}\vec{\dot{r}}^{\,2} - U(\vec{r}) \nonumber \\
+	& = & \dfrac{m_{1}m_{2}(m_{2} + m_{1})}{2(m_{1} + m_{2})^{2}}\vec{\dot{r}}^{\,2} - U(\vec{r})
+\eea
+et on peut conclure en posant \emph{la masse r\'eduite} :
+\be
+	m = \dfrac{m_{1}m_{2}}{(m_{1} + m_{2})} \label{EQ:13_4}
+\ee
+\`a :
+\be
+	L = \dfrac{m}{2}\vec{\dot{r}}^{\,2} - U(\vec{r}) \label{EQ:13_3}
+\ee
+qui est la fonction de Lagrange d'un point mat\'eriel de masse $m$ se d\'epla\c{c}ant dans le champ ext\'erieur $U(\vec{r})$ qui est sym\'etrique par rapport au point immobile des coordonn\'ees, soit le centre d'inertie. Ainsi le calcul de $\vec{r} = \vec{r}(\mathrm{t})$ permet gr\^ace aux \'equations (\ref{EQ:13_2}) d'en d\'eduire les trajectoires $\vec{r}_{1}(\mathrm{t})$ et $\vec{r}_{2}(\mathrm{t})$ des particules de masse respective $m_{1}$ et $m_{2}$.
