@@ -273,3 +273,29 @@ je n'arrive pas \`a aller jusqu'au bout et trouver le r\'esultat annonc\'e par l
 \be
 	\mathrm{T}(E) = \dfrac{\pi\sqrt{2m}}{\alpha\sqrt{(E + U_{0})}}
 \ee
+
+\section{Contraction de la fonction de Lagrange pour un syst\`eme de n + 1 particules}
+
+Consid\'erons un syst\`eme ferm\'e compos\'e de $n$ particules de masse $m$ dont chancune a pour rayon vecteur $\vec{R}_{a}$ et d'une particule de masse $M$ qui a pour rayon vecteur $\vec{R}$. Le fonction de Lagrange du syst\`eme s'\'ecrit alors :
+\be
+	L = \dfrac{M}{2}\vec{\dot{R}}^{\,2} + \sum_{a=1}^{n}\dfrac{m}{2}\vec{\dot{R}}_{a}^{\,2} - U(\vec{R},\begin{Bmatrix}\vec{R}_{a}\end{Bmatrix}_{1}^{n})
+\ee
+En d\'efinissant $\vec{r}_{a} = \vec{R}_{a} - \vec{R}$ et en appliquant le centre de masse en tant qu'origine du syst\`eme de coordonn\'ees alors $M\vec{R} + \sum_{a}m\vec{R}_{a} = \vec{0}$, cela permet d'avancer :
+\bea
+	M\vec{R} + m\sum_{a}\vec{R}_{a} & = & \vec{0} \nonumber \\
+	M\vec{R} + m\sum_{a}(\vec{r}_{a} - \vec{R}) & = & \vec{0} \nonumber \\
+	m\sum_{a}\vec{r}_{a} & = & -(M + nm)\vec{R} \nonumber \\
+	\vec{R} & = & \dfrac{-m}{M + nm}\sum_{a}\vec{r}_{a}
+\eea
+La fonction de Lagrange \'ecrite plus haut peut alors se d\'evelopper en :
+\bea
+	L & = & \dfrac{M}{2}\vec{\dot{R}}^{\,2} + \dfrac{m}{2}\sum_{a}(\vec{\dot{R}}^{\,2} + 2\vec{\dot{r_{a}}}\cdot\vec{\dot{R}} + \vec{\dot{r}}_{a}^{\,2}) - U \nonumber \\
+	& = & \dfrac{M}{2}\dfrac{m^{2}}{(M + nm)^{2}}\left(\sum_{a}\vec{r}_{a}\right)^{2} + \dfrac{m}{2}\sum_{a}\left(\dfrac{m^{2}}{(M + nm)^{2}}\left(\sum_{a}\vec{r}_{a}\right)^{2} + \vec{\dot{r}}_{a}^{\,2} - 2\vec{\dot{r_{a}}}\dfrac{m}{M + nm}\sum_{a}\vec{r}_{a}\right) - U \nonumber \\
+	& = & \dfrac{Mm^{2}}{2(M + nm)^{2}}\left(\sum_{a}\vec{r}_{a}\right)^{2} + \dfrac{m^{3}}{2(M + nm)^{2}}\left(\sum_{a}\vec{r}_{a}\right)^{2} + \dfrac{m}{2}\vec{\dot{r}}_{a}^{\,2} - \dfrac{m^{2}}{M + nm}\sum_{a}\vec{r}_{a}\cdot\sum_{a}\vec{r}_{a} - U \nonumber \\
+	& = & \dfrac{m^{2}(M + nm)}{2(M + nm)^{2}}\left(\sum_{a}\vec{r}_{a}\right)^{2} + \dfrac{m}{2}\vec{\dot{r}}_{a}^{\,2} - \dfrac{m^{2}}{(M + nm)}\left(\sum_{a}\vec{r}_{a}\right)^{2} - U \nonumber
+\eea
+soit :
+\be
+	L = \dfrac{m}{2}\vec{\dot{r}}_{a}^{\,2} - \dfrac{m^{2}}{2(M + nm)}\left(\sum_{a}\vec{r}_{a}\right)^{2} - U
+\ee
+Comme $U$ ne d\'epend que de la distance entre toutes les particules, elle peut s'\'ecrire comme une fonction de $\vec{r}_{a}$, la fonction de Lagrange d\'eduite se r\'esoud \`a celle de n particules.
