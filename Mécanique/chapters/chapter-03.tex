@@ -277,7 +277,7 @@ Pour obtenir la solution compl\`ete du mouvement d'une particule dans un champ c
 \ee
 qui implique directement :
 \be
-	\dot{r} = \dfrac{\mathrm{d}r}{\mathrm{dt}} = \sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}} \label{EQ:14_5}
+	\dot{r} = \dfrac{\mathrm{d}r}{\mathrm{dt}} = \pm\sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}} \label{EQ:14_5}
 \ee
 En renversant, nous obtenons :
 \be
@@ -303,6 +303,13 @@ et en l'injection dans la relation (\ref{EQ:14_5}), nous avons :
 
 Les formules (\ref{EQ:14_6}) et (\ref{EQ:14_7}) forment la solution g\'en\'erale. La premi\`ere donne implicitement la distance au centre $r$ en fonction du temps alors que la seconde \'etablit la relation entre $r$ et $\varphi$, soit l'\'equation du mouvement.
 
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_03_paragraph_14_fig_09}
+		\caption{Trajectoire dans un champ central}\label{FIG:3_9}
+	\end{center}
+\end{figure}
+
 L'\'equation (\ref{EQ:14_4}) :
 \be
 	E = T + U = \dfrac{m}{2}\dot{r}^{2} + \dfrac{M^{2}}{2mr^{2}} + U(r)
@@ -317,13 +324,6 @@ avec :
 \ee
 se d\'efinissant comme une \'energie potentielle efficace o\`u le terme $\frac{M^{2}}{2mr^{2}}$ est l'\emph{\'energie centrifuge}. Ainsi, la partie radiale du mouvement de la particule peut \^etre consid\'er\'ee comme un mouvement lin\'eaire dans un champ dot\'e d'une \'energie potentielle efficace.
 
-\begin{figure}[htb!]
-	\begin{center}
-		\includegraphics[width=10cm]{chapter_03_paragraph_14_fig_09}
-		\caption{Trajectoire dans un champ central}\label{FIG:3_9}
-	\end{center}
-\end{figure}
-
 Les valeurs de la distance telle que l'\'energie cin\'etique radiale s'annule ou encore $E = U_{\mathrm{eff}}(r)$ d\'elimitent le domaine du mouvement de la particule car cela n\'ecessite de facto $\dot{r} = 0$. Cela d\'efinit les \emph{points de rebroussement} o\`u la particule peut encore avoir une vitesse angulaire $\dot{\varphi}\neq 0$. La fonction $r(\mathrm{t})$ devient ensuite croissante ou d\'ecroissante. Il existe alors deux possibilit\'es :
 \begin{itemize}
 	\item $r \gg r_{min}$ alors le mouvement est infini
@@ -333,3 +333,31 @@ Dans le second cas, la variation angulaire $\Delta\varphi$ de la trajectoire de 
 \be
 	\Delta\varphi = 2\int_{r_{min}}^{r_{max}}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:14_10}
 \ee
+La trajectoire de la particule est finie, i.e. elle se referme, si et seulement si $\Delta\varphi = \frac{m}{n}\times 2\pi$ avec ${m;n}\in\mathbb{N}$. Ainsi, quand le rayon vecteur parcourt $n$ p\'eriodes, il fait \'egalement $m$ tours complets et la trajectoire se referme. Toutefois, cela reste un cas particulier. En g\'en\'eral $U(r)$ ne permet par d'obtenir $\Delta\varphi$ comme une fraction rationnelle de $2\pi$ et la trajectoire ne se referme pas et finit par remplir tout l'espace de l'anneau compris entre $r_{min}$ et $r_{max}$. Finalement, la trajectoire est ferm\'ee pour les \'energies potentielles en $\frac{1}{r}$, voir le paragraphe \ref{PAR:15} et en $r^{2}$, voir l'exercice \ref{EX:5_14}.
+
+Aux points de rebroussement d\'efinis tels que $\dot{r} = 0$, il y a un changement de signe de la vitesse radiale et donc de la direction radiale prise par la particule. Que ce soit en $r_{min}$ ou $r_{max}$, la quantit\'e $\dfrac{\dot{r}(\mathrm{t} - \delta\mathrm{t})}{\dot{r}(\mathrm{t} + \delta\mathrm{t})}$ est n\'egative. La trajectoire est ainsi sym\'etrique par rapport \`a la direction indiqu\'ee.
+
+Pour le mouvement d'une particule ayant une moment cin\'etique non nulle, la position $r=0$ est inatteignable car :
+\be
+	\lim_{r\rightarrow 0}\dfrac{M^{2}}{2mr^{2}} \rightarrow +\infty
+\ee
+
+L'\'equation (\ref{EQ:14_4}) implique de facto\footnote{Dans l'expression finale de cette s\'equence, le livre affiche le signe $<$ au lieu de $>$.} :
+\bea
+	E - U(r) - \dfrac{M^{2}}{2mr^{2}} & = & \dfrac{m\dot{r}^{2}}{2} > 0 \nonumber \\
+	r^{2}E - r^{2}U(r) & > & \dfrac{M^{2}}{2m} \nonumber \\
+	r^{2}E & > & r^{2}U(r) + \dfrac{M^{2}}{2m}
+\eea
+
+Par conservation de l'\'energie, nous avons si $\lim_{r\rightarrow 0} r^{2}E = 0$, aussi $r$ ne peut tendre vers 0 que si :
+\bea
+	0 & > & \lim_{r\rightarrow 0}(r^{2}U(r)) + \dfrac{M^{2}}{2mr^{2}} \nonumber \\
+	\lim_{r\rightarrow 0}(r^{2}U(r)) & < & -\dfrac{M^{2}}{2mr^{2}} \label{EQ:14_11}
+\eea
+Et cette derni\`ere in\'egalit\'e n'est vraie que dans deux situations et implique que $r$ peut ainsi tendre vers le centre du champ d'\'energie potentielle :
+\begin{itemize}
+	\item $U(r)=\dfrac{-\alpha}{r^{2}}$ avec $\alpha > \dfrac{M^{2}}{2mr^{2}}$
+	\item $U(r)=\dfrac{-\alpha}{r^{n}}$ avec $n > 2$ car $\lim_{r\rightarrow 0}(r^{2}U(r)) = \lim_{r\rightarrow 0}\left(\dfrac{-\alpha}{r^{n-2}}\right) = -\infty < -\dfrac{M^{2}}{2mr^{2}}$
+\end{itemize}
+
+\section{Le probl\`eme de Kepler}\label{PAR:15}
