@@ -391,4 +391,118 @@ est une \'equation du troisi\`eme degr\'e en $\cos\theta$ qui a implicitement de
 
 \subsection{Cas du pendule sur un c\^one}
 
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(150,300)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(75,0)(0,10){25}{\line(0,1){8}}\put(73,253){$y$}
+			\put(71,-10){$O$}
+			%cone
+			\put(75,0){\line(2,4){125}}
+			\put(75,0){\line(-2,4){125}}
+			\qbezier(75,225),(200,225),(200,250)
+			\qbezier(75,275),(200,275),(200,250)
+			\qbezier(75,225),(-50,225),(-50,250)
+			\qbezier(75,275),(-50,275),(-50,250)
+			%circle
+			\put(175,198){\color{black}\circle*{10}}\put(182,194){$m$}
+			%arm
+			\linethickness{0.5mm}
+			\put(75,0){\line(2,4){100}}\put(135,100){$r$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(75,25),(85,25),(85,20)
+			\put(77,27){$\alpha$}
+		\end{picture}
+		\caption{Trajectoire sur la surface d'un c\^one}\label{FIG:3_EX2}
+	\end{center}
+\end{figure}
+
+Dans le r\'ef\'erentiel dont l'origine est plac\'e \`a la pointe du c\^one et dont l'axe polaire est point\'e vers le haut et co\"incide avec l'axe du c\^one, la fonction de Lagrange s'\'ecrit naturellement :
+\be
+	L = \dfrac{m}{2}(\dot{r}^{2} + r^{2}\sin^{2}\alpha\dot{\varphi}^{2}) - mgr\cos\alpha
+\ee
+La coordonn\'ee $\varphi$ est cyclique et permet d'\'ecrire, comme dans l'exercice pr\'ec\'edent, que :
+\be
+	p_{\varphi} = M_{z} = mr^{2}\sin^{2}\alpha\dot{\varphi}
+\ee
+L'\'energie de la particule vaut :
+\bea
+	E & = & \dfrac{m}{2}(\dot{r}^{2} + r^{2}\sin^{2}\alpha\dot{\varphi}^{2}) + mgr\cos\alpha \nonumber \\
+	& = & \dfrac{m}{2}\dot{r}^{2} + \dfrac{m}{2}r^{2}\sin^{2}\alpha\dfrac{M_{z}^{2}}{m^{2}r^{4}\sin^{4}\alpha} + mgr\cos\alpha \nonumber \\
+	& = & \dfrac{m}{2}\dot{r}^{2} + \dfrac{M_{z}^{2}}{2mr^{2}\sin^{2}\alpha} + mgr\cos\alpha
+\eea
+Et par cons\'equent :
+\bea
+	\dot{r} = \dfrac{\mathrm{d}r}{\mathrm{dt}} & = & \sqrt{\dfrac{2}{m}\left(E - \left(\dfrac{M_{z}^{2}}{2mr^{2}\sin^{2}\alpha} + mgr\cos\alpha\right)\right)} \nonumber \\
+	\Leftrightarrow \mathrm{dt} & = & \dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}} \nonumber \\
+	\Leftrightarrow \mathrm{t} & = & \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}}}
+\eea
+avec :
+\be
+	U_{eff}(r) = \dfrac{M_{z}^{2}}{2mr^{2}\sin^{2}\alpha} + mgr\cos\alpha
+\ee
+De plus, comme $M_{z} = mr^{2}\sin^{2}\alpha\dot{\varphi}$, alors :
+\be
+	\mathrm{dt} = \dfrac{mr^{2}sin^{2}\alpha}{M_{z}}\mathrm{d}\varphi
+\ee
+Soit :
+\bea
+	\dfrac{mr^{2}sin^{2}\alpha}{M_{z}}\mathrm{d}\varphi & = & \dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}} \nonumber \\
+	\Leftrightarrow \mathrm{d}\varphi & = & \dfrac{M_{z}}{mr^{2}sin^{2}\alpha}\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}} \nonumber \\
+	\mathrm{d}\varphi & = & \dfrac{M_{z}}{\sqrt{2m}\sin^{2}\alpha}\dfrac{\mathrm{d}r}{r^{2}\sqrt{E - U_{eff}(r)}} \nonumber \\
+	\varphi & = & \dfrac{M_{z}}{\sqrt{2m}\sin^{2}\alpha}\int{\dfrac{\mathrm{d}r}{r^{2}\sqrt{E - U_{eff}(r)}}}
+\eea
+
+Les limites de $r$ sont d\'efinies telles que $E = U_{eff}(r)$, i.e. :
+\bea
+	E & = & \dfrac{M_{z}^{2}}{2mr^{2}\sin^{2}\alpha} + mgr\cos\alpha \nonumber \\
+	\Leftrightarrow  Er^{2} & = & \dfrac{M_{z}^{2}}{2m\sin^{2}\alpha} + mgr^{3}\cos\alpha \nonumber \\
+	\Leftrightarrow r^{2}(mgr\cos\alpha  - E) & = & -\dfrac{M_{z}^{2}}{2m\sin^{2}\alpha} < 0
+\eea
+car $\alpha \in ]0;\frac{\pi}{2}[$. Et comme $r^{2} > 0$, alors c'est la quantit\'e $mgr\cos\alpha  - E$ qui doit \^etre n\'egative, soit $r < \frac{E}{mg\cos\alpha}$. La derni\`ere \'equation est aussi une \'equation du troisi\`eme degr\'e en $r$ qui a au moins deux racines positives. Elles d\'eterminent les deux cercles horizontaux entre lesquels la particule se meut.
+
 \subsection{Cas du pendule plan avec le point de suspension mobile}
+
+Ici, nous reprenons le cas pr\'esent\'e sur la figure (\ref{FIG:1_2}) o\`u la fonction de Lagrange a d\'ej\`a \'et\'e calcul\'ee :
+\be
+	L = \dfrac{m_{1} + m_{2}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(l^{2}\dot{\varphi}^{2} + 2l\cos\varphi\dot{x}\dot{\varphi}\right) + m_{2}gl\cos\varphi
+\ee
+La coordonn\'ee $x$ n'appara\^it pas dans la fonction de Lagrange et est donc une coordonn\'ee cyclique qui permet de conclure la constance dans le mouvement de l'impulsion g\'en\'eralis\'ee $p_{x}$ qui se d\'efinit ainsi\footnote{Dans ce cas, il n'y a pas de rotation donc l\'energie cin\'etique est \'evidemment nulle.} :
+\bea
+	p_{x} = \dfrac{\partial L}{\partial\dot{x}} & = & (m_{1} + m_{2})\dot{x} + 2l\dfrac{m_{2}}{2}\dot{\varphi}\cos\varphi \nonumber \\
+	& = & (m_{1} + m_{2})\dot{x} + m_{2}l\dot{\varphi}\cos\varphi = cste
+\eea
+
+Pour le mouvement du centre d'inertie du syst\`eme suivant l'horizontale, il y a $p_{x} = 0$ puisqu'il est immobile, au repos et permet d'\'ecrire :
+\be
+	\dot{x} = \dfrac{-m_{2}l\dot{\varphi}\cos\varphi}{(m_{1} + m_{2})}
+\ee
+L'\'energie du syst\`eme est :
+\bea
+	E & = & \dfrac{(m_{1} + m_{2})}{2}\dfrac{m_{2}^{2}l^{2}\dot{\varphi}^{2}\cos^{2}\varphi}{(m_{1} + m_{2})^{2}} + \dfrac{m_{2}}{2}\left(l^{2}\dot{\varphi}^{2} - \dfrac{2m_{2}l^{2}\cos^{2}\varphi\dot{\varphi}^{2}}{(m_{1} + m_{2})}\right) - m_{2}gl\cos\varphi \nonumber \\
+	& = & \dfrac{m_{2}^{2}l^{2}\dot{\varphi}^{2}\cos^{2}\varphi}{2(m_{1} + m_{2})} + \dfrac{m_{2}l^{2}\dot{\varphi}^{2}}{2} - \dfrac{m_{2}^{2}l^{2}\cos^{2}\varphi\dot{\varphi}^{2}}{(m_{1} + m_{2})} - m_{2}gl\cos\varphi \nonumber \\
+	& = & \dfrac{m_{2}l^{2}\dot{\varphi}^{2}}{2}\left(1 - \dfrac{m_{2}\cos^{2}\varphi}{(m_{1} + m_{2})}\right) - m_{2}gl\cos\varphi
+\eea
+et permet de d\'eterminer une solution g\'en\'erale :
+\bea
+	\Leftrightarrow \dot{\varphi} = \dfrac{\mathrm{d}\varphi}{\mathrm{dt}} & = & \sqrt{\dfrac{2}{m_{2}l^{2}}\dfrac{E + m_{2}gl\cos\varphi}{\left(1 - \dfrac{m_{2}\cos^{2}\varphi}{(m_{1} + m_{2})}\right)}} \nonumber \\
+	\Leftrightarrow \mathrm{dt} & = & l\sqrt{\dfrac{m_{2}}{2}}\dfrac{\mathrm{d}\varphi}{\sqrt{\dfrac{(m_{1} + m_{2})(E + m_{2}gl\cos\varphi)}{m_{1} + m_{2} - m_{2} + m_{2}\cos^{2}\varphi}}} \nonumber \\
+	& = & l\sqrt{\dfrac{m_{2}}{m_{1} + m_{2}}}\dfrac{m_{1} + m_{2}\cos^{2}\varphi}{\sqrt{E + m_{2}gl\cos\varphi}}\mathrm{d}\varphi \nonumber \\
+	\Leftrightarrow \mathrm{t} & = & l\sqrt{\dfrac{m_{2}}{m_{1} + m_{2}}}\int{\dfrac{m_{1} + m_{2}\cos^{2}\varphi}{\sqrt{E + m_{2}gl\cos\varphi}}\mathrm{d}\varphi}
+\eea
+Remarquons enfin, en int\'egrant $p_{x} = 0 \Rightarrow (m_{1} + m_{2})x + m_{2}l\sin\varphi = K$ avec K une constante par rapport au temps. Or :
+\be
+	\begin{cases}
+		x_{2} = x + l\sin\varphi \\
+		y_{2} = l\cos\varphi
+	\end{cases}
+\ee
+soit :
+\bea
+	\Leftrightarrow	x_{2} & = & \dfrac{K-m_{2}l\sin\varphi}{(m_{1} + m_{2})} + l\sin\varphi \nonumber \\
+	& = & \dfrac{K}{(m_{1} + m_{2})} + l\left(1 - \dfrac{m_{2}}{(m_{1} + m_{2})}\right)\sin\varphi \nonumber \\
+	& = & \dfrac{K}{(m_{1} + m_{2})} + \dfrac{m_{1}l}{(m_{1} + m_{2})}\sin\varphi
+\eea
+L'ensemble des positions issues de $x_{2}$ et $y_{2}$ d\'efinissent une portion d'ellipse de demi-axe horizontal $\frac{m_{1}l}{(m_{1} + m_{2})}$ et de demi-axe verticale $l$.
