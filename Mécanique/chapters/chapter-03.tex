@@ -199,3 +199,165 @@ et on peut conclure en posant \emph{la masse r\'eduite} :
 	L = \dfrac{m}{2}\vec{\dot{r}}^{\,2} - U(\vec{r}) \label{EQ:13_3}
 \ee
 qui est la fonction de Lagrange d'un point mat\'eriel de masse $m$ se d\'epla\c{c}ant dans le champ ext\'erieur $U(\vec{r})$ qui est sym\'etrique par rapport au point immobile des coordonn\'ees, soit le centre d'inertie. Ainsi le calcul de $\vec{r} = \vec{r}(\mathrm{t})$ permet gr\^ace aux \'equations (\ref{EQ:13_2}) d'en d\'eduire les trajectoires $\vec{r}_{1}(\mathrm{t})$ et $\vec{r}_{2}(\mathrm{t})$ des particules de masse respective $m_{1}$ et $m_{2}$.
+
+\section{Mouvement dans un champ central}
+
+Le fait de ramener le probl\`eme \`a deux corps \`a celui d'un seul nous conduit \`a devoir d\'eterminer le mouvement d'une particule dans un champ ext\'erieur o\`u son \'energie potentielle ne d\'epend que de la distance $r$ \`a un point immobile. Ce champ est appel\'e \emph{champ central}. De la relation (\ref{EQ:5_4}), la force est donn\'ee par :
+\be
+	\vec{F} = -\dfrac{\partial U(r)}{\partial\vec{r}} = -\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\vec{r}}{r}
+\ee
+et agissant sur la particule, elle ne d\'epend aussi que de $r$.
+
+Par d\'efinition, \'equation (\ref{EQ:9_3}), le moment cin\'etique est :
+\be
+	\vec{M} = \vec{r}\wedge\vec{p}
+\ee
+et dans un champ central, il se conserve dans un r\'ef\'erentiel dont un axe passe par le centre et ce dernier est le centre du r\'ef\'erentiel. Dans ce cas de conservation et parce que $\vec{M}\perp\vec{p}$ alors le mouvement de la particule reste toujours dans le m\^eme plan perpendiculaire au moment cin\'etique. Ainsi, en coordonn\'ees polaires (cylindriques), nous avons de facto $\dot{z} = 0$ et la fonction de Lagrange est, voir l'\'equation (\ref{EQ:4_5}) :
+\be
+	L = \dfrac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2}) - U(r) \label{EQ:14_1}
+\ee
+La coordonn\'ee $\varphi$ est dite \emph{cyclique} car elle n'appara\^it pas explicitement dans la d\'efinition de la fonction de Lagrange, alors que $r$ et $\dot{\varphi}$ en sont des coordonn\'ees \emph{principales}. Pour la coordonn\'ee $\varphi$, les \'equations de Lagrange (\ref{EQ:2_6}) sont :
+\be
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{q}_{i}}\right) = \dfrac{\partial L}{\partial q_{i}} = 0
+\ee
+Ainsi, l'impulsion g\'en\'eralis\'ee, \'equation (\ref{EQ:7_5}) :
+\be
+	p_{i} = \dfrac{\partial L}{\partial\dot{q}_{i}}
+\ee
+est constante dans le temps, i.e. $p_{i}$ est une int\'egrale premi\`ere, soit une int\'egrale du mouvement qui conserve sa valeur pendant le mouvement. L'\'equation (\ref{EQ:14_1}) permet d'\'ecrire\footnote{Il s'agit bien de $p_{\varphi}$ et non pas de $\dot{p}_{\varphi}$ commme inscrit dans le livre.} :
+\be
+	\dfrac{\partial L}{\partial\dot{q}_{i}} = mr^{2}\dot{\varphi} = p_{\varphi}
+\ee
+et la valeur de $p_{\varphi}$ se conserve dans le temps. En appliquant l'\'equation (\ref{EQ:9_7}) car nous avons choisi le r\'ef\'erentiel tel que la particule tourne dans un plan perpendiculaire \`a un axe passant par le centre du champ :
+\bea
+	M_{z} & = & \dfrac{\partial L}{\partial\dot{\varphi}_{i}} \nonumber \\
+	\Leftrightarrow M & = & mr^{2}\dot{\varphi} \label{EQ:14_2}
+\eea
+Car les valeurs de $M$ et de $M_{z}$ se confondent par d\'efinition du choix fait pr\'ec\'edemment. La valeur de $M$ est donc conserv\'ee \'egalement. $\dot{\varphi}$ ne changeant pas de signe au cours du mouvement\footnote{En effet, $M$ est une valeur constante, commme $m$ alors que $r^{2}$ est toujours positive.}, $\varphi$ \'evolue de mani\`ere monotone.
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(200,150)(0,0)
+			%curve
+			\linethickness{0.5mm}
+			\qbezier(120,150),(150,125),(170,75)
+			\qbezier(170,75),(180,50),(190,5)
+			%vectors
+			\linethickness{0.05mm}
+			\put(-8,47){$0$}
+			\put(0,50){\vector(1,0){178}}
+			\put(75,80){$\vec{r}$}
+			\put(0,50){\vector(8,2){163}}
+			%tangent
+			\multiput(162,50)(0,5){8}{\line(0,1){3}}
+			\put(135,65){$r\mathrm{d}\varphi$}
+			%angle
+			\qbezier(25,50),(25,55),(20,55)
+			\put(27,52){$\mathrm{d}\varphi$}
+		\end{picture}
+		\caption{Aire balay\'ee}\label{FIG:3_7}
+	\end{center}
+\end{figure}
+
+R\'efl\'echissons d\'esormais à l'interpr\'etation g\'eom\'etrique de la loi pr\'ec\'edente (\ref{EQ:14_2}) en remarquant que l'expression $\frac{1}{2}\vec{r}\cdot\vec{r}\mathrm{d}\varphi$ repr\'sente la surface form\'ee par les deux rayons vecteurs infiniment voisins et l'arc de la trajectoire de la figure (\ref{FIG:3_9}). En d\'esignant par $\mathrm{d}f$ cet \'el\'ement de surface, le moment cin\'etique de la particule devient :
+\be
+	M = 2m\dot{f} \label{EQ:14_3}
+\ee
+car en s'aidant de la relation (\ref{EQ:14_2}) :
+\bea
+	\mathrm{d}f & = & \dfrac{1}{2}\vec{r}\cdot\vec{r}\mathrm{d}\varphi \nonumber \\
+	& = & \dfrac{1}{2}r^{2}\mathrm{d}\varphi \nonumber \\
+	\dot{f} = \dfrac{\mathrm{d}f}{\mathrm{dt}} & = & \dfrac{1}{2}r^{2}\dot{\varphi} \nonumber
+\eea
+La grandeur $\dot{f}$ est alors appel\'ee \emph{vitesse a\'erolaire}. Et comme le moment cin\'etique $M$ est constant pendant le mouvement alors la vitesse a\'erolaire est constante \'egalement, il s'agit de la \emph{seconde loi de Kepler}, \`a savoir que pendant des intervalles de temps \'egaux, le rayon vecteur d'un point mobile balaye des aires \'egales. Cette seconde loi est aussi appel\'ee \emph{int\'egrale des aires} qui est la loi de conservation du moment cin\'etique d'une particule en mouvement dans un champ central.
+
+Pour obtenir la solution compl\`ete du mouvement d'une particule dans un champ central, utilisons les lois de conservation de l'\'energie (\'equation (\ref{EQ:6_1}) et du moment cin\'etique (\'equation (\ref{EQ:9_3}). D'apr\`es la relation (\ref{EQ:14_2}), $\dot{\varphi} = \frac{M}{mr^{2}}$, donc l'\'energie peut s'\'ecrire comme :
+\be
+	E = T + U = \dfrac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2}) + U(r) = \dfrac{m}{2}\dot{r}^{2} + \dfrac{M^{2}}{2mr^{2}} + U(r) \label{EQ:14_4}
+\ee
+qui implique directement :
+\be
+	\dot{r} = \dfrac{\mathrm{d}r}{\mathrm{dt}} = \pm\sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}} \label{EQ:14_5}
+\ee
+En renversant, nous obtenons :
+\be
+	\mathrm{dt} = \dfrac{\mathrm{d}r}{\sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}}}
+\ee
+qui permet d'obtenir par intégration :
+\be
+	t = \int{\dfrac{\mathrm{d}r}{\sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}}}} + cste \label{EQ:14_6}
+\ee
+
+En reprenant l'\'equation (\ref{EQ:14_2}) sous la forme :
+\bea
+	M & = & mr^{2}\dot{\varphi} \nonumber \\
+	\mathrm{d}\varphi & = & \dfrac{M}{mr^{2}}\mathrm{dt}
+\eea
+et en l'injection dans la relation (\ref{EQ:14_5}), nous avons :
+\bea
+	\dfrac{\mathrm{d}r}{\mathrm{dt}} = \dfrac{M\mathrm{d}r}{mr^{2}\mathrm{d}\varphi} & = & \sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}} \nonumber \\
+	\Leftrightarrow \mathrm{d}\varphi & = & \dfrac{M\mathrm{d}r}{mr^{2}\sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}}} \nonumber \\
+	& = & \dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}} \nonumber \\
+	\Leftrightarrow \varphi & = & \int{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} + cste \label{EQ:14_7}
+\eea
+
+Les formules (\ref{EQ:14_6}) et (\ref{EQ:14_7}) forment la solution g\'en\'erale. La premi\`ere donne implicitement la distance au centre $r$ en fonction du temps alors que la seconde \'etablit la relation entre $r$ et $\varphi$, soit l'\'equation du mouvement.
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_03_paragraph_14_fig_09}
+		\caption{Trajectoire dans un champ central}\label{FIG:3_9}
+	\end{center}
+\end{figure}
+
+L'\'equation (\ref{EQ:14_4}) :
+\be
+	E = T + U = \dfrac{m}{2}\dot{r}^{2} + \dfrac{M^{2}}{2mr^{2}} + U(r)
+\ee
+peut se r\'e\'ecrire en identifiant $\frac{m}{2}\dot{r}^{2}$ comme l'\'energie cin\'etique radiale de la particule comme :
+\be
+	E = \dfrac{m}{2}\dot{r}^{2} + U_{\mathrm{eff}}(r)
+\ee
+avec :
+\be
+	U_{\mathrm{eff}}(r) = \dfrac{M^{2}}{2mr^{2}} + U(r) \label{EQ:14_8}
+\ee
+se d\'efinissant comme une \'energie potentielle efficace o\`u le terme $\frac{M^{2}}{2mr^{2}}$ est l'\emph{\'energie centrifuge}. Ainsi, la partie radiale du mouvement de la particule peut \^etre consid\'er\'ee comme un mouvement lin\'eaire dans un champ dot\'e d'une \'energie potentielle efficace.
+
+Les valeurs de la distance telle que l'\'energie cin\'etique radiale s'annule ou encore $E = U_{\mathrm{eff}}(r)$ d\'elimitent le domaine du mouvement de la particule car cela n\'ecessite de facto $\dot{r} = 0$. Cela d\'efinit les \emph{points de rebroussement} o\`u la particule peut encore avoir une vitesse angulaire $\dot{\varphi}\neq 0$. La fonction $r(\mathrm{t})$ devient ensuite croissante ou d\'ecroissante. Il existe alors deux possibilit\'es :
+\begin{itemize}
+	\item $r \gg r_{min}$ alors le mouvement est infini
+	\item $r_{min} \leqslant r \leqslant r_{max}$ alors la trajectoire est contenue dans l'anneau d\'efini par les cercles de rayon $r_{min}$ et $r_{max}$
+\end{itemize}
+Dans le second cas, la variation angulaire $\Delta\varphi$ de la trajectoire de la particule pendant qu'elle fait le trajet $r_{max} \rightarrow r_{min} \rightarrow r_{max}$\footnote{Ou l'\'equivalent sym\'etrique $r_{min} \rightarrow r_{max} \rightarrow r_{min}$.} vaut d'apr\`es l'\'equation (\ref{EQ:14_7}) :
+\be
+	\Delta\varphi = 2\int_{r_{min}}^{r_{max}}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:14_10}
+\ee
+La trajectoire de la particule est finie, i.e. elle se referme, si et seulement si $\Delta\varphi = \frac{m}{n}\times 2\pi$ avec ${m;n}\in\mathbb{N}$. Ainsi, quand le rayon vecteur parcourt $n$ p\'eriodes, il fait \'egalement $m$ tours complets et la trajectoire se referme. Toutefois, cela reste un cas particulier. En g\'en\'eral $U(r)$ ne permet par d'obtenir $\Delta\varphi$ comme une fraction rationnelle de $2\pi$ et la trajectoire ne se referme pas et finit par remplir tout l'espace de l'anneau compris entre $r_{min}$ et $r_{max}$. Finalement, la trajectoire est ferm\'ee pour les \'energies potentielles en $\frac{1}{r}$, voir le paragraphe \ref{PAR:15} et en $r^{2}$, voir l'exercice \ref{EX:5_14}.
+
+Aux points de rebroussement d\'efinis tels que $\dot{r} = 0$, il y a un changement de signe de la vitesse radiale et donc de la direction radiale prise par la particule. Que ce soit en $r_{min}$ ou $r_{max}$, la quantit\'e $\dfrac{\dot{r}(\mathrm{t} - \delta\mathrm{t})}{\dot{r}(\mathrm{t} + \delta\mathrm{t})}$ est n\'egative. La trajectoire est ainsi sym\'etrique par rapport \`a la direction indiqu\'ee.
+
+Pour le mouvement d'une particule ayant une moment cin\'etique non nulle, la position $r=0$ est inatteignable car :
+\be
+	\lim_{r\rightarrow 0}\dfrac{M^{2}}{2mr^{2}} \rightarrow +\infty
+\ee
+
+L'\'equation (\ref{EQ:14_4}) implique de facto\footnote{Dans l'expression finale de cette s\'equence, le livre affiche le signe $<$ au lieu de $>$.} :
+\bea
+	E - U(r) - \dfrac{M^{2}}{2mr^{2}} & = & \dfrac{m\dot{r}^{2}}{2} > 0 \nonumber \\
+	r^{2}E - r^{2}U(r) & > & \dfrac{M^{2}}{2m} \nonumber \\
+	r^{2}E & > & r^{2}U(r) + \dfrac{M^{2}}{2m}
+\eea
+
+Par conservation de l'\'energie, nous avons si $\lim_{r\rightarrow 0} r^{2}E = 0$, aussi $r$ ne peut tendre vers 0 que si :
+\bea
+	0 & > & \lim_{r\rightarrow 0}(r^{2}U(r)) + \dfrac{M^{2}}{2mr^{2}} \nonumber \\
+	\lim_{r\rightarrow 0}(r^{2}U(r)) & < & -\dfrac{M^{2}}{2mr^{2}} \label{EQ:14_11}
+\eea
+Et cette derni\`ere in\'egalit\'e n'est vraie que dans deux situations et implique que $r$ peut ainsi tendre vers le centre du champ d'\'energie potentielle :
+\begin{itemize}
+	\item $U(r)=\dfrac{-\alpha}{r^{2}}$ avec $\alpha > \dfrac{M^{2}}{2mr^{2}}$
+	\item $U(r)=\dfrac{-\alpha}{r^{n}}$ avec $n > 2$ car $\lim_{r\rightarrow 0}(r^{2}U(r)) = \lim_{r\rightarrow 0}\left(\dfrac{-\alpha}{r^{n-2}}\right) = -\infty < -\dfrac{M^{2}}{2mr^{2}}$
+\end{itemize}
+
+\section{Le probl\`eme de Kepler}\label{PAR:15}
