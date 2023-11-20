@@ -302,7 +302,92 @@ Comme $U$ ne d\'epend que de la distance entre toutes les particules, elle peut 
 
 \section{Mouvement dans un champ central}
 
+L'objectif des exercices ci-dessous est de trouver la solution g\'en\'erale par rapport aux situations pos\'ees.
+
 \subsection{Cas du pendule sphérique}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(400,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(50,100)(10,0){9}{\line(1,0){8}}\put(142,98){$x$}
+			\multiput(50,100)(0,-10){9}{\line(0,-1){8}}\put(48,0){$y$}
+			\put(42,102){$O$}
+			\multiput(250,100)(10,0){9}{\line(1,0){8}}\put(341,98){$x$}
+			\multiput(250,100)(0,-10){9}{\line(0,-1){8}}\put(248,0){$z$}
+			\put(242,102){$O$}
+			%circles
+			\put(50,100){\color{black}\circle{100}}
+			\put(250,100){\color{black}\circle{100}}
+			%arm
+			\linethickness{0.5mm}
+			\put(50,100){\line(10,-10){35}}
+			\put(75,80){$l$}
+			\put(85,65){\color{black}\circle*{10}}\put(92,62){$m$}
+			\put(250,100){\line(10,-10){35}}
+			\put(275,80){$l$}
+			\put(285,65){\color{black}\circle*{10}}\put(292,62){$m$}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(50,80),(60,80),(60,90)
+			\put(53,70){$\theta$}
+			\qbezier(260,90),(270,90),(270,100)
+			\put(268,85){$\varphi$}
+		\end{picture}
+		\caption{Vues de face, \`gauche et du dessus, \`a droite du pendule sph\'erique}\label{FIG:3_EX1}
+	\end{center}
+\end{figure}
+
+La fonction de Lagrange en coordonn\'ees sph\'eriques s'\'ecrit, voir l'\'equation (\ref{EQ:4_6}), dans notre cas pr\'esent :
+\be
+	L = \dfrac{m}{2}(\dot{l}^{2} + l^{2}\dot{\theta}^{2} + l^{2}\sin^{2}\theta\dot{\varphi}^{2}) + mgl\cos\theta
+\ee
+or la distance $l$ est constante dans le mouvement, donc nous pouvons smplifier :
+\be
+	L = \dfrac{ml^{2}}{2}(\dot{\theta}^{2} + \sin^{2}\theta\dot{\varphi}^{2}) + mgl\cos\theta
+\ee
+La coordonn\'ee $\varphi$ n'appara\^it pas dans l'espression de la fonction de Lagrange, elle est donc une coordonn\'ee cyclique. Et il y a conservation de l'impulsion g\'en\'eralis\'ee telle que d\'ej\`a vu avec l'\'equation (\ref{EQ:14_2}), soit :
+\be
+	p_{\varphi} = M_{z} = m(l\sin\theta)^{2}\dot{\varphi} = cste
+\ee
+
+L'\'energie de la particule peut donc s'\'ecrire :
+\bea
+	E &= & T + U \nonumber \\
+	& = & \dfrac{ml^{2}}{2}(\dot{\theta}^{2} + \sin^{2}\theta\dot{\varphi}^{2}) - mgl\cos\theta \nonumber \\
+	& = & \dfrac{ml^{2}}{2}\dot{\theta}^{2} + \dfrac{ml^{2}}{2}\dfrac{\sin^{2}\theta M_{z}^{2}}{m^{2}l^{4}\sin^{4}\theta} - mgl\cos\theta \nonumber \\
+	& = & \dfrac{ml^{2}}{2}\dot{\theta}^{2} + \dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta
+\eea
+et nous pouvons continuer tel que :
+\bea
+	\dot{\theta} = \dfrac{\mathrm{d}\theta}{\mathrm{dt}} & = & \sqrt{\dfrac{2}{ml^{2}}\left(E - \left(\dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta\right)\right)} \nonumber \\
+	\Leftrightarrow \mathrm{dt} & = & \dfrac{\mathrm{d}\theta}{\sqrt{\dfrac{2}{ml^{2}}\left(E - U_{eff}(\theta)\right)}} \nonumber \\
+	\mathrm{t} & = & \int{\dfrac{\mathrm{d}\theta}{\sqrt{\dfrac{2}{ml^{2}}\left(E - U_{eff}(\theta)\right)}}}
+\eea
+Nous avons donc la relation entre $\mathrm{r}$ et $\theta$ qui se trouve \^etre une int\'egrale elliptique de premi\`ere esp\`ece d\'efinie ici avec :
+\be
+	U_{eff}(\theta) = \dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta
+\ee
+
+Ensuite, nous avons $M_{z} = m(l\sin\theta)^{2}\dot{\varphi}$ qui permet d'arriver \`a :
+\be
+	\mathrm{dt} = \dfrac{ml^{2}}{M_{z}}\sin^{2}\theta\mathrm{d}\varphi
+\ee
+Connaissant $\mathrm{dt}$ en fonction de $\theta$, nous pouvons exprimer $\varphi$ telle que :
+\bea
+	\mathrm{\varphi} & = & \dfrac{M_{z}\mathrm{d}\theta}{ml^{2}\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}} \nonumber \\
+	& = & \dfrac{M_{z}}{l\sqrt{2m}}\dfrac{\mathrm{d}\theta}{\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}} \nonumber \\
+	\varphi & = & \dfrac{M_{z}}{l\sqrt{2m}}\int{\dfrac{\mathrm{d}\theta}{\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}}}
+\eea
+Nous avons ici la relation entre $\varphi$ et $\theta$ qui est une int\'egrale elliptique de troisi\`eme esp\`ece. $\theta$ varie telle que $E - U_{eff}(\theta) > 0$ et ses valeurs limites se d\'efinissent telles que $E = U_{eff}(\theta)$, soit :
+\bea
+	E & = & \dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta \nonumber \\
+	\Leftrightarrow lE(1-\cos^{2}\theta) & = & \dfrac{M_{z}^{2}}{2ml} - mgl^{2}(1-\cos^{2}\theta)\cos\theta \nonumber \\
+	\Leftrightarrow lE - lE\cos^{2}\theta & = & \dfrac{M_{z}^{2}}{2ml} - mgl^{2}\cos\theta + mgl^{2}\cos^{3}\theta \nonumber \\
+	\Leftrightarrow mgl^{2}\cos^{3}\theta + lE\cos^{2}\theta - mgl^{2}\cos\theta + \dfrac{M_{z}^{2}}{2ml} - lE & = & 0
+\eea
+est une \'equation du troisi\`eme degr\'e en $\cos\theta$ qui a implicitement deux racines dans l'intervalle $\left]-1;1\right[$. Il existe donc deux angles $\theta_{min}$ et $\theta_{max}$ qui d\'efinissent deux cercles respectifs entre lesqueles toute la trajectoire de la particule est comprise.
 
 \subsection{Cas du pendule sur un c\^one}
 
