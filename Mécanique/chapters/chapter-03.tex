@@ -361,3 +361,68 @@ Et cette derni\`ere in\'egalit\'e n'est vraie que dans deux situations et impliq
 \end{itemize}
 
 \section{Le probl\`eme de Kepler}\label{PAR:15}
+
+L'\'etude du champ central inversement proportionnel \`a $r$ est tr\`es important\footnote{Cela correspond \`a une force inversement proportionnel au carr\'e de la distance, voir l'\'equation (\ref{EQ:7_4}) donnant $\vec{F} = \dfrac{\partial L}{\partial U}$} car il s'agit du champ gravitationnel, attractif, et du champ \'electrostatique de Coulomb, attractif ou r\'epulsif. Ainsi, d\'efinissons un champ d'attraction tel que :
+\be
+	U(r) = -\dfrac{\alpha}{r} \label{EQ:15_1}
+\ee
+avec la constante $\alpha > 0$. Selon la relation (\ref{EQ:14_8}), l'\'energie potentielle efficace s'\'ecrit alors :
+\be
+	U_{eff}(r) = -\dfrac{\alpha}{r} + \dfrac{M^{2}}{2mr^{2}} \label{EQ:15_2}
+\ee
+qui est repr\'esent\'ee sur la figure (\ref{FIG:3_10}).
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_03_paragraph_15_fig_10}
+		\caption{\'Energie portentielle pour $\alpha\in \{1;2;3;4;5\}$ et $M^{2}/m = 1$}\label{FIG:3_10}
+	\end{center}
+\end{figure}
+
+Le minimum de la fonction pr\'ec\'edente s'obtient avec :
+\bea
+	\dfrac{\mathrm{d}U_{eff}(r)}{\mathrm{d}r} & = & 0 \nonumber \\
+	\Leftrightarrow \dfrac{\alpha}{r^{2}} - \dfrac{2M^{2}}{2mr^{3}} & = & 0 \nonumber \\
+	\Leftrightarrow \dfrac{\alpha}{r^{2}} & = & \dfrac{M^{2}}{mr^{3}} \nonumber \\
+	\Leftrightarrow r & = & \dfrac{M^{2}}{\alpha m}
+\eea
+et par cons\'equence, nous avons :
+\be
+	(U_{eff})_{min} = -\dfrac{\alpha^{2}m}{2M^{2}} \label{EQ:15_3}
+\ee
+
+D'apr\`es la courbe de la figure (\ref{FIG:3_10}), il est \'evident que pour $E > 0$, la trajectoire est infinie alors que pour $E < 0$, elle est finie. La forme g\'en\'erale de la trajectoire se d\'eduit de l'\'equation (\ref{EQ:14_7}) en y posant $U(r) = -\alpha / r$. Nous \'ecrivons alors :
+\be
+	\varphi = \int{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{r^{2}}}}}
+\ee
+L'objectif est ici de faire un changement de variable permettant de faire ressortir la fonction $\arccos$\footnote{En effet, $\arccos'(u(x)) = \dfrac{\mathrm{d}\arccos(u(x))}{\mathrm{d}u(x)}\dfrac{\mathrm{d}u(x)}{\mathrm{d}x}$. Soit avec $u(x) = 1/x$, $\arccos'(u(x)) = \dfrac{-1}{\sqrt{1 - \frac{1}{x^{2}}}}$.}. Pour cela, nous posons le changement de variable $u = \frac{M}{r} - \frac{m\alpha}{M}$. Ce qui implique :
+\be
+	\begin{cases}
+		\dfrac{1}{r} = \dfrac{u}{M} + \dfrac{m\alpha}{M^{2}} \\
+		\mathrm{d}u = -\dfrac{M}{r^{2}}\mathrm{d}r
+	\end{cases}
+\ee
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(300,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(50,100)(10,0){29}{\line(1,0){8}}\put(342,98){$x$}
+			\multiput(250,10)(0,10){18}{\line(0,1){8}}\put(247,192){$y$}
+			%ellipse
+			\linethickness{0.5mm}
+			\qbezier(75,100),(75,25),(200,25)
+			\qbezier(200,25),(325,25),(325,100)
+			\qbezier(325,100),(325,175),(200,175)
+			\qbezier(200,175),(75,175),(75,100)
+			%lines
+			\linethickness{0.05mm}
+			\put(75,100){\line(0,-1){100}}\put(325,100){\line(0,-1){100}}
+			\put(200,25){\line(-1,0){175}}\put(200,175){\line(-1,0){175}}
+			%arrows
+			
+		\end{picture}
+		\caption{Ellipse et param\`etres}\label{FIG:3_11}
+	\end{center}
+\end{figure}
