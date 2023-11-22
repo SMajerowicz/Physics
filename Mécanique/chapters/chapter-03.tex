@@ -403,6 +403,46 @@ L'objectif est ici de faire un changement de variable permettant de faire ressor
 	\end{cases}
 \ee
 
+La variation de l'angle $\varphi$ dans le plan de la trajectoire devient donc :
+\bea
+	\varphi & = & \int{\dfrac{-\mathrm{d}u}{\sqrt{2m\left(E + \dfrac{\alpha u}{M} + \dfrac{m\alpha^{2}}{M^{2}}\right) - \left(u + \dfrac{m\alpha}{M}\right)^{2}}}} \nonumber \\
+	& = & \int{\dfrac{-\mathrm{d}u}{\sqrt{2mE + 2m\dfrac{\alpha u}{M} + 2\dfrac{m^{2}\alpha^{2}}{M^{2}} - u^{2} - \dfrac{m^{2}\alpha^{2}}{M^{2}} - 2u\dfrac{\alpha m}{M}}}} \nonumber \\
+	& = & \int{\dfrac{-\mathrm{d}u}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}} - u^{2}}}} \nonumber \\
+	& = & \dfrac{1}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}}\int{\dfrac{-\mathrm{d}u}{\sqrt{1 - \dfrac{u^{2}}{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}}}}
+\eea
+
+En posant enfin :
+\be
+	\begin{cases}
+		v = \dfrac{u}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}} \\
+		\mathrm{d}u = \sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}\mathrm{d}v
+	\end{cases}
+\ee
+Nous obtenons :
+\bea
+	\varphi & = & \int{\dfrac{-\mathrm{d}v}{\sqrt{1 - v^{2}}}} \nonumber \\
+	& = & \arccos v + cste \nonumber \\
+\eea
+Soit finalement :
+\be
+	\varphi = \arccos\left(\dfrac{\dfrac{M}{r} - \dfrac{m\alpha}{M}}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}}\right) + cste
+\ee
+En choisissant l'origine de $\varphi$ telle que la constante s'annule, nous posons :
+\be
+	p = \dfrac{M^{2}}{m\alpha}\text{ et } e = \sqrt{1 + \dfrac{2EM^{2}}{m\alpha^{2}}} \label{EQ:15_4}
+\ee
+pour permettre d'\'ecrire :
+\bea
+	\cos\varphi & = & \dfrac{\dfrac{M}{r} - \dfrac{m\alpha}{M}}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}} \nonumber \\
+	& = & \dfrac{\dfrac{M}{r} - \dfrac{m\alpha}{M}}{\dfrac{m\alpha}{M}\sqrt{\dfrac{2mEM^{2}}{m^{2}\alpha^{2}}} + 1} \nonumber \\
+	& = & \dfrac{\dfrac{M^{2}}{m\alpha r} - 1}{\sqrt{1 + \dfrac{2mEM^{2}}{m^{2}\alpha^{2}}}}
+\eea
+Avec les deux d\'efinitions (\ref{EQ:15_4}), l'\'egalit\'e ci-dessus se r\'eduit \`a :
+\be
+	\dfrac{p}{r} = 1 + e\cos\varphi \label{EQ:15_5}
+\ee
+qui est l'\'equation d'une section conique ayant son foyer \`a l'origine des coordonn\'ees et telle que $p$ est le \emph{param\`etre} et $e$ l'\emph{excentricit\'e} de la trajectoire.
+
 \begin{figure}[htb!]
 	\begin{center}
 		\begin{picture}(300,200)(0,0)
@@ -426,3 +466,45 @@ L'objectif est ici de faire un changement de variable permettant de faire ressor
 		\caption{Ellipse et param\`etres}\label{FIG:3_11}
 	\end{center}
 \end{figure}
+
+Le choix pr\'ec\'edemment fait pour avoir la constante d'int\'egration nulle correspond au point le plus proche du centre du champ et il correspond \`a $\varphi = 0$ d'apr\`es l'\'equation de la trajectoire (\ref{EQ:15_5}). Ce point est appel\'e les \emph{p\'erih\'elie} de l'orbite.
+
+Dans le cas o\`u deux corps interagissent selon le champ d'attraction (\ref{EQ:15_1}), alors l'orbite de chacun des deux corps est une section conique dont le foyer se trouve \`a leur centre d'inertie commun, voir les \'equations (\ref{EQ:8_3}) et (\ref{EQ:13_2}).
+
+D'apr\`es la relation (\ref{EQ:15_4}), il est \'evident que si $-\frac{m\alpha^{2}}{2M^{2}} \le E < 0$ alors $e < 1$. L'orbite est alors une ellipse telle que montr\'ee sur la figure (\ref{FIG:3_11}) et le mouvement est fini et la trajectoire ferm\'ee. Dans ce cas pr\'ecis et en utilisant $\lvert E \rvert$, le grand demi-axe $a$ s'\'ecrit :
+\bea
+	a = \dfrac{p}{1 - e^{2}} & = & \dfrac{M^{2}}{m\alpha\left(1 - 1 - \dfrac{2EM^{2}}{m\alpha^{2}}\right)} \nonumber \\
+	& = & \dfrac{M^{2}}{\dfrac{2\lvert E \rvert M^{2}}{m\alpha}} \nonumber \\
+	& = & \dfrac{\alpha}{2\lvert E \rvert} \label{EQ:15_6a}
+\eea
+et le petit demi-axe $b$ :
+\bea
+	b = \dfrac{p}{\sqrt{1 - e^{2}}} & = & \dfrac{M^{2}}{m\alpha\sqrt{1 - 1 - \dfrac{2EM^{2}}{m\alpha^{2}}}} \nonumber \\
+	& = & \dfrac{M^{2}}{m\alpha\sqrt{\dfrac{2\lvert E \rvert M^{2}}{m\alpha^{2}}}} \nonumber \\
+	& = & \dfrac{M}{\sqrt{2m\lvert E \rvert}} \label{EQ:15_6b}
+\eea
+
+De plus, la plus petite valeur de l'\'energie co\"incide avec l'\'energie cin\'etique nulle et par consé\'equent avec $(U_{eff})_{min}$, voir l'\'equation (\ref{EQ:15_3}). Dans ce cas, l'excentricit\'e $e$ de la section conique est \'egale \`a 1, correspond \`a un cercle dont le rayon vaut $p$. Pour d'autres valeurs de l'\'energie telle que $E < 0$, les distances minimum et maximum au centre du champ central s'obtiennent en r\'esolvant l'\'equation $E = U_{eff}(r)$ qui s'\'ecrit :
+\bea
+	Er^{2} & = & -\alpha r + \dfrac{M^{2}}{2m} \nonumber \\
+	\Leftrightarrow Er^{2} + \alpha r - \dfrac{M^{2}}{2m} & = & 0
+\eea
+qui est une \'equation du second degr\'e\footnote{Les deux solutions de l'\'equation $ax^{2} + bx + c = 0$ sont $x = (b \pm \sqrt{\Delta})/2a$ avec $\Delta = b^{2} - 4ac$} en $r$ pour laquelle, nous avons :
+\be
+	\begin{cases}
+		r_{min} = \dfrac{\alpha - \sqrt{\alpha^{2}\left(1 + \dfrac{2EM^{2}}{m\alpha^{2}}\right)}}{2\lvert E \rvert} = a(1 - e) \\
+		r_{max} = \dfrac{\alpha + \sqrt{\alpha^{2}\left(1 + \dfrac{2EM^{2}}{m\alpha^{2}}\right)}}{2\lvert E \rvert} = a(1 + e) \label{EQ:15_7}
+	\end{cases}
+\ee
+
+Dans notre cas qui nous occupe, il est aussi int\'eressant de d\'etermine la p\'eriode de r\'evolution $T$ sur l'orbite de la particule. La loi de conservation du mouvement associ\'ee \`a la loi des aires (\ref{EQ:14_3}) permet d'\'ecrire :
+\bea
+	M & = & 2m\dot{f} \nonumber \\
+	\Leftrightarrow \int_{0}^{T} M\mathrm{dt} & = & 2m\int_{0}^{T} \dot{f}\mathrm{dt} \nonumber \\
+	\Leftrightarrow MT & = & 2m\int_{0}^{T} \mathrm{d}f \nonumber \\
+	\Leftrightarrow T & = & \dfrac{2m}{M}\pi ab
+\eea
+car $\int_{0}^{T} \mathrm{d}f$ vaut par d\'efinition la surface totale de l'ellipse parcourue, soit $\pi ab$. \`A l'aide des formules (\ref{EQ:15_6a}) et (\ref{EQ:15_6b}) d\'efinissant $a$ et $b$, la p\'eriode de r\'evolution est :
+\be
+	T = \dfrac{2m}{M}\pi \dfrac{\alpha}{2\lvert E \rvert} \dfrac{M}{\sqrt{2m\lvert E \rvert}} = \alpha\pi\sqrt{\dfrac{m}{2{\lvert E \rvert}^{3}}} \label{EQ:15_8}
+\ee
