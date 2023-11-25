@@ -460,10 +460,23 @@ qui est l'\'equation d'une section conique ayant son foyer \`a l'origine des coo
 			\linethickness{0.05mm}
 			\put(75,100){\line(0,-1){100}}\put(325,100){\line(0,-1){100}}
 			\put(200,25){\line(-1,0){175}}\put(200,175){\line(-1,0){175}}
+			\put(200,100){\line(0,-1){50}}
+			\put(220,170){\line(1,0){30}}
 			%arrows
-			
+			\put(25,50){\vector(0,-1){25}}
+			\put(25,65){\vector(0,1){110}}
+			\put(20,55){$2b$}
+			\put(125,10){\vector(-1,0){50}}
+			\put(135,10){\vector(1,0){190}}
+			\put(126,8){$2a$}
+			\put(215,60){\vector(-1,0){15}}
+			\put(225,60){\vector(1,0){25}}
+			\put(215,58){$ae$}
+			\put(225,155){\vector(0,1){15}}
+			\put(225,145){\vector(0,-1){45}}
+			\put(223,148){$p$}
 		\end{picture}
-		\caption{Ellipse et param\`etres}\label{FIG:3_11}
+		\caption{Trajectoire elliptique et ses param\`etres}\label{FIG:3_11}
 	\end{center}
 \end{figure}
 
@@ -496,6 +509,7 @@ qui est une \'equation du second degr\'e\footnote{Les deux solutions de l'\'equa
 		r_{max} = \dfrac{\alpha + \sqrt{\alpha^{2}\left(1 + \dfrac{2EM^{2}}{m\alpha^{2}}\right)}}{2\lvert E \rvert} = a(1 + e) \label{EQ:15_7}
 	\end{cases}
 \ee
+avec $r_{min}$ le pr\'erih\'elie de la trajectoire.
 
 Dans notre cas qui nous occupe, il est aussi int\'eressant de d\'etermine la p\'eriode de r\'evolution $T$ sur l'orbite de la particule. La loi de conservation du mouvement associ\'ee \`a la loi des aires (\ref{EQ:14_3}) permet d'\'ecrire :
 \bea
@@ -508,3 +522,35 @@ car $\int_{0}^{T} \mathrm{d}f$ vaut par d\'efinition la surface totale de l'elli
 \be
 	T = \dfrac{2m}{M}\pi \dfrac{\alpha}{2\lvert E \rvert} \dfrac{M}{\sqrt{2m\lvert E \rvert}} = \alpha\pi\sqrt{\dfrac{m}{2{\lvert E \rvert}^{3}}} \label{EQ:15_8}
 \ee
+Au-del\`a du fait que la p\'eriode ne d\'epend que de l'\'energie de la particule, nous retrouvons la troisi\`eme loi de Kepler \'enonc\'ee dans l'\'equation (\ref{EQ:10_KEPLER}).
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(300,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,100)(10,0){29}{\line(1,0){8}}\put(292,98){$x$}
+			\multiput(100,0)(0,10){19}{\line(0,1){8}}\put(98,193){$y$}
+			%hyperbole
+			\linethickness{0.5mm}
+			\qbezier(0,0),(150,25),(200,100)
+			\qbezier(200,100),(150,175),(0,200)
+			%lines
+			\linethickness{0.05mm}
+			\put(75,100){\line(0,-1){100}}\put(325,100){\line(0,-1){100}}
+			\put(200,25){\line(-1,0){175}}\put(200,175){\line(-1,0){175}}
+			\put(200,100){\line(0,-1){50}}
+			\put(220,170){\line(1,0){30}}
+			%arrows
+			\put(25,50){\vector(0,-1){25}}
+			\put(25,65){\vector(0,1){110}}
+			\put(20,55){$2b$}
+			\put(125,10){\vector(-1,0){50}}
+			\put(135,10){\vector(1,0){190}}
+			\put(126,8){$2a$}
+		\end{picture}
+		\caption{Trajectoire hyperbolique}\label{FIG:3_12}
+	\end{center}
+\end{figure}
+
+Pour $E \le 0$, le mouvement est infini et plus pr\'ecis\'ement pour $E > 0$, l'excentricit\'e $e > 1$ et la trajectoire est alors une hyperbole, voir la figure (\ref{FIG:3_12}). Dans ce cas, le p\'erih\'lie est $r_{min} = a(e - 1) = \frac{p}{1 + e}$, avec le demi-axe de l'hyperbole $a = \frac{\alpha}{2\lvert E \rvert} = \frac{\alpha}{2E}$, car $E > 0$.
