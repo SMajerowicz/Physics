@@ -537,20 +537,91 @@ Au-del\`a du fait que la p\'eriode ne d\'epend que de l'\'energie de la particul
 			\qbezier(200,100),(150,175),(0,200)
 			%lines
 			\linethickness{0.05mm}
-			\put(75,100){\line(0,-1){100}}\put(325,100){\line(0,-1){100}}
-			\put(200,25){\line(-1,0){175}}\put(200,175){\line(-1,0){175}}
-			\put(200,100){\line(0,-1){50}}
-			\put(220,170){\line(1,0){30}}
+			\put(100,174){\line(-1,0){30}}
+			\put(200,100){\line(0,-1){30}}
 			%arrows
-			\put(25,50){\vector(0,-1){25}}
-			\put(25,65){\vector(0,1){110}}
-			\put(20,55){$2b$}
-			\put(125,10){\vector(-1,0){50}}
-			\put(135,10){\vector(1,0){190}}
-			\put(126,8){$2a$}
+			\put(80,130){\vector(0,-1){30}}
+			\put(80,140){\vector(0,1){35}}
+			\put(78,133){$p$}
+			\put(130,80){\vector(-1,0){30}}
+			\put(175,80){\vector(1,0){25}}
+			\put(132,78){$a(e-1)$}
 		\end{picture}
 		\caption{Trajectoire hyperbolique}\label{FIG:3_12}
 	\end{center}
 \end{figure}
 
-Pour $E \le 0$, le mouvement est infini et plus pr\'ecis\'ement pour $E > 0$, l'excentricit\'e $e > 1$ et la trajectoire est alors une hyperbole, voir la figure (\ref{FIG:3_12}). Dans ce cas, le p\'erih\'lie est $r_{min} = a(e - 1) = \frac{p}{1 + e}$, avec le demi-axe de l'hyperbole $a = \frac{\alpha}{2\lvert E \rvert} = \frac{\alpha}{2E}$, car $E > 0$.
+Pour $E \le 0$, le mouvement est infini et plus pr\'ecis\'ement pour $E > 0$, l'excentricit\'e $e > 1$ et la trajectoire est alors une hyperbole, voir la figure (\ref{FIG:3_12}). Dans ce cas, le p\'erih\'lie est :
+\be
+	r_{min} = a(e - 1) = \frac{p}{1 + e} \label{EQ:15:9}
+\ee
+avec le demi-axe de l'hyperbole $a = \frac{\alpha}{2\lvert E \rvert} = \frac{\alpha}{2E}$, car $E > 0$.
+Dans le cas particulier o\`u $E = 0$, l'excentricit\'e $e$ vaut 1 et la particule a une trajectoire parabolique telle que la distance du p\'erih\'elie $r_{min}$ vaut $\frac{p}{2}$. $E = 0$ n'est possible que si la particule part de l'infini \`a $\mathrm{t} = 0$.
+
+Cherchons d\'esormais la relation entre les coordonn\'ees et le temps \`a partir de l'\'equation (\ref{EQ:14_6}) sous une forme param\'etrique dans le cadre d'une orbite elliptique, i.e. $E < 0\Leftrightarrow \lvert E \rvert = -E$. La relation (\ref{EQ:14_6}) est :
+\bea
+	\mathrm{t} & = & \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U(r)\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} \nonumber \\
+	& = & \sqrt{\dfrac{m}{2\lvert E \rvert}}\int{\dfrac{\mathrm{d}r}{\sqrt{-1 + \dfrac{\alpha}{r\lvert E \rvert} - \dfrac{M^{2}}{2m\lvert E \rvert r^{2}}}}} \nonumber \\
+	& = & \sqrt{\dfrac{m}{2\lvert E \rvert}}\int{\dfrac{r\mathrm{d}r}{\sqrt{-r^{2} + \dfrac{\alpha r}{\lvert E \rvert} - \dfrac{M^{2}}{2m\lvert E \rvert}}}}
+\eea
+Or, nous remarquons que :
+\bea
+	a^{2}e^{2} - (r - a)^{2} & = & \dfrac{\alpha^{2}}{4E^{2}}\left(1+\dfrac{2EM^{2}}{m\alpha^{2}}\right) - r^{2} - \dfrac{\alpha^{2}}{4E^{2}} + \dfrac{2r\alpha}{2\lvert E \rvert} \nonumber \\
+	& = & -r^{2} + \dfrac{\alpha r}{\lvert E \rvert} - \dfrac{M^{2}}{2m\lvert E \rvert}
+\eea
+car $-E = \lvert E \rvert$. Et comme $\sqrt{\dfrac{m}{2\lvert E \rvert}} = \sqrt{\dfrac{m\alpha}{2\alpha\lvert E \rvert}} = \sqrt{\dfrac{ma}{\alpha}}$ alors :
+\be
+	\mathrm{t} = \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{a^{2}e^{2} - (r - a)^{2}}}}
+\ee
+En posant :
+\be
+	\begin{cases}
+		r - a = -ae\cos\xi \\
+		\mathrm{d}(r - a) = \mathrm{d}r = ae\sin\xi\mathrm{d}\xi
+	\end{cases}
+\ee
+nous pouvons \'ecrire :
+\bea
+	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a^{2}(1 - e\cos\xi)e\sin\xi\mathrm{d}\xi}{a^{2}e^{2} - a^{2}e^{2}\cos^{2}\xi}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a^{2}(1 - e\cos\xi)e\sin\xi\mathrm{d}\xi}{a^{2}e^{2}(1 - \cos^{2}\xi)}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\dfrac{a^{2}e}{ae}\int{(1 - e\cos\xi)\mathrm{d}\xi} \nonumber \\
+	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(1 - e\cos\xi)\mathrm{d}\xi} \nonumber \\
+	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}(\xi - e\sin\xi) + cste
+\eea
+En choisissant l'origine du temps telle que la constante d'int\'egration soit nulle, nous obtenons bien la repr\'esentation param\'etrique de la trajectoire entre $r$ et $t$ telle que :
+\be
+	r = a(1 - e\cos\xi)\text{ et }\mathrm{t} = \sqrt{\dfrac{ma^{3}}{\alpha}}(\xi - e\sin\xi) \label{EQ:15_10}
+\ee
+L'instant $t = 0$ est \'equivalent \`a $(\xi - e\sin\xi) = 0$ qui n'est possible que pour $\xi = 0$. Cela correspond exactement \`a la position du p\'erih\'elie car $r = a(1 - e) = r_{min}$.
+
+Dans le plan de la trajectoire, en coordonn\'ees cart\'esiennes telles que les axes $x$ et $y$ suivent respectivement le grand et le petit demi-axe de l'ellipse, alors :
+\be
+	\begin{cases}
+		x = r\cos\varphi \\
+		y = r\sin\varphi
+	\end{cases}
+\ee
+En utilisant les relations (\ref{EQ:15_5}) et (\ref{EQ:15_10}), nous pouvons \'ecrire :
+\bea
+	p & = & r + er\cos\varphi \nonumber \\
+	& = & r + ex \nonumber \\
+	\Leftrightarrow x = \dfrac{p - r}{e}
+\eea
+Or la relation (\ref{EQ:15_6a}) se prolonge en :
+\bea
+	p & = & a(1 - e^{2}) \nonumber \\
+	ex & = & a(1 - e^{2}) - r = a(1 - e^{2}) - a(1 - e\cos\xi) \nonumber \\
+	ex & = & ae(\cos\xi - e)
+\eea
+et comme $y^{2} = r^{2} - x^{2}$, nous avons :
+\bea
+	y^{2} & = & a^{2}(1 - e\cos\xi)^{2}) - a^{2}(\cos\xi -e)^{2} \nonumber \\
+	& = & a^{2}(1 + e^{2}\cos^{2}\xi - 2e\cos\xi - \cos^{2}\xi - e^{2} + 2e\cos\xi) \nonumber \\
+	& = & a^{2}(1 + e^{2}\cos^{2}\xi - e^{2} - \cos^{2}\xi) \nonumber \\
+	& = & a^{2}(1 + e^{2} - e^{2}\sin^{2}\xi - e^{2} - 1 + \sin^{2}\xi) \nonumber \\
+	& = & a^{2}(- e^{2}\sin^{2}\xi + \sin^{2}\xi) \nonumber \\
+\eea
+Nous pouvons en conclure :
+\be
+	x = a(\cos\xi - 1)\text{ et }y = a\sqrt{1 - e^{2}}\sin\xi \label{EQ:15_11}
+\ee
