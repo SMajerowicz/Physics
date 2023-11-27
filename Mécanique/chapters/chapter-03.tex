@@ -306,7 +306,7 @@ Les formules (\ref{EQ:14_6}) et (\ref{EQ:14_7}) forment la solution g\'en\'erale
 \begin{figure}[htb!]
 	\begin{center}
 		\includegraphics[width=10cm]{chapter_03_paragraph_14_fig_09}
-		\caption{Trajectoire dans un champ central}\label{FIG:3_9}
+		\caption{Trajectoire dans un champ central attracteur}\label{FIG:3_9}
 	\end{center}
 \end{figure}
 
@@ -375,7 +375,7 @@ qui est repr\'esent\'ee sur la figure (\ref{FIG:3_10}).
 \begin{figure}[htb!]
 	\begin{center}
 		\includegraphics[width=10cm]{chapter_03_paragraph_15_fig_10}
-		\caption{\'Energie portentielle pour $\alpha\in \{1;2;3;4;5\}$ et $M^{2}/m = 1$}\label{FIG:3_10}
+		\caption{\'Energie potentielle attractrice pour $\alpha\in \{1;2;3;4;5\}$ et $M^{2}/m = 1$}\label{FIG:3_10}
 	\end{center}
 \end{figure}
 
@@ -605,7 +605,7 @@ En utilisant les relations (\ref{EQ:15_5}) et (\ref{EQ:15_10}), nous pouvons \'e
 \bea
 	p & = & r + er\cos\varphi \nonumber \\
 	& = & r + ex \nonumber \\
-	\Leftrightarrow x = \dfrac{p - r}{e}
+	\Leftrightarrow x & = & \dfrac{p - r}{e}
 \eea
 Or la relation (\ref{EQ:15_6a}) se prolonge en :
 \bea
@@ -625,3 +625,114 @@ Nous pouvons en conclure :
 \be
 	x = a(\cos\xi - 1)\text{ et }y = a\sqrt{1 - e^{2}}\sin\xi \label{EQ:15_11}
 \ee
+et nous pouvons observer que le parcours de $\xi$ de $0$ \`a $2\pi$ permet de d\'ecrire une r\'evolution compl\`ete sur l'ellipse.
+
+Cherchons de la m\^eme mani\`ere \`a d\'eterminer la repr\'esentation param\'etrique de la trajectoire dans le cas de la solution hyperbolique, \`a savoir $E > 0$. La relation (\ref{EQ:14_6}) reste :
+\bea
+	\mathrm{t} & = & \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} \nonumber \\
+	& = & \sqrt{\dfrac{m}{2E}}\int{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} + \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}}}}
+\eea
+Maintenant, en posant :
+\be
+	\begin{cases}
+		r = a(e\cosh\xi -1) \\
+		\mathrm{d}r = ae\sinh\xi\mathrm{d}\xi
+	\end{cases}
+\ee
+nous pouvons remarquer que :
+\bea
+	a^{2}e^{2} - (r + a)^{2} & = & \dfrac{\alpha^{2}}{4E^{2}}\left(1 + \dfrac{2EM^{2}}{m\alpha^{2}}\right) - r^{2} - \dfrac{\alpha^{2}}{4E^{2}} - \dfrac{2\alpha r}{2E} \nonumber \\
+	& = & -\left(r^{2} + \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}\right)
+\eea
+Aussi, nous pouvons poursuivre avec $\mathrm{t}$ avec \'egalement\footnote{En ajoutant aussi que $\cosh^{2}\xi - \sinh^{2}\xi = 1$} $\sqrt{\dfrac{m}{2E}} = \sqrt{\dfrac{m\alpha}{2\alpha E}} = \sqrt{\dfrac{ma}{\alpha}}$  :
+\bea
+	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{-\left(r^{2} + \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}\right)}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{(r + a)^{2} - a^{2}e^{2}}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{\left(a(e\cosh\xi - 1) + a\right)^{2} - a^{2}e^{2}}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{a^{2}e^{2}\cosh^{2}\xi - a^{2}e^{2}}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{ae\sqrt{\cosh^{2}\xi - 1}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\dfrac{a^{2}e}{ae}\int{(e\cosh\xi - 1)\mathrm{d}\xi} \nonumber \\
+	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(e\cosh\xi -1)\mathrm{d}\xi} \nonumber \\
+	\mathrm{t} & = & \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi - \xi) \nonumber \\
+\eea
+Avec la m\^eme hypoth\`ese que dans le cas elliptique qui permet d'\'ecrire $x = r\cos\varphi$ et $y = r\sin\varphi$ et sachant (\ref{EQ:15_9}), nous avons :
+\be
+	p = a(e^{2} - 1)\text{ et }p - r = ex
+\ee
+donc :
+\bea
+	ex & = & a(e^{2} - 1) - a(e\cosh\xi - 1) \nonumber \\
+	& = & ae^{2} - a - ae\cosh\xi + a \nonumber \\
+	\Leftrightarrow x & = & a(e - \cosh\xi)
+\eea
+et avec $y^{2} = r^{2} - x^{2}$ :
+\bea
+	y^{2} & = & a^{2}e^{2}\cosh^{2}\xi + a^{2} - 2ae\cosh\xi - a^{2}e^{2} - a^{2}\cosh^{2}\xi + 2ae\cosh\xi \nonumber \\
+	& = & a^{2}e^{2}(1 + \sinh^{2}\xi) + a^{2} a^{2}e^{2} - a^{2}(1 + \sinh^{2}\xi) \nonumber \\
+	\Leftrightarrow y & = & a\sqrt{e^{2} - 1}\sinh\xi
+\eea
+avec $\xi \in ]-\infty ; +\infty[$. Nous avons ainsi la trajectoire param\'etrique telle que :
+\be
+	\begin{cases}
+		r = a(e\cosh\xi -1)\text{ et }\mathrm{t} = \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi - \xi) \\
+		x = a(e - \cosh\xi)\text{ et }y = a\sqrt{e^{2} - 1}\sinh\xi \label{EQ:15_12}
+	\end{cases}
+\ee
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(300,200)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,100)(10,0){29}{\line(1,0){8}}\put(292,98){$x$}
+			\multiput(10,0)(0,10){19}{\line(0,1){8}}\put(8,193){$y$}
+			%hyperbole
+			\linethickness{0.5mm}
+			\qbezier(250,0),(150,25),(100,100)
+			\qbezier(100,100),(150,175),(250,200)
+			%lines
+			\linethickness{0.05mm}
+			\put(100,100){\line(0,-1){30}}
+			%arrows
+			\put(30,80){\vector(-1,0){20}}
+			\put(75,80){\vector(1,0){25}}
+			\put(33,78){$a(1+e)$}
+		\end{picture}
+		\caption{Trajectoire hyperbolique dans le cas r\'epulsif}\label{FIG:3_13}
+	\end{center}
+\end{figure}
+
+Dans le cas d'un champ d'\'energie potentielle r\'epulsif, champ de Coulomb entre deux charges de m\^eme signe par exemple, alors :
+\be
+	U(r) = \dfrac{\alpha}{r} \label{EQ:15_13}
+\ee
+avec $\alpha > 0$. Alors par analogie, l'\'equation (\ref{EQ:14_8}) peut s'\'ecrire et une illustration est partag\'ee sur la figure (\ref{FIG:3_13a}) :
+\be
+	U_{eff}(r) = \dfrac{\alpha}{r} + \dfrac{M^{2}}{2mr^{2}}
+\ee
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_03_paragraph_15_fig_13a}
+		\caption{\'Energie potentielle r\'epulsive pour $\alpha\in \{1;2;3;4;5\}$ et $M^{2}/m = 1$}\label{FIG:3_13a}
+	\end{center}
+\end{figure}
+
+L'\'energie de la particule en jeu est de facto strictement positive \`a la vue de la courbe obtenue pour l'\'energie potentielle, sachant que l'\'energie cin\'etique est toujours positive. En reprenant l'\'equation (\ref{EQ:14_7}), soit :
+\be
+	\varphi = \int{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \frac{M^{2}}{r^{2}}}}}
+\ee
+et en substituant la quantit\'e $\alpha$ par $-\alpha$, nous obtenons :
+\be
+	\cos\varphi = \dfrac{\dfrac{M}{r} + \dfrac{m\alpha}{M}}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}}
+\ee
+Avec les relations (\ref{EQ:15_4}), nous obtenons ici :
+\bea
+	\cos\varphi & = & \dfrac{\dfrac{p}{r} + 1}{e} \nonumber \\
+	\dfrac{p}{r} & = & -1 + e\cos\varphi \label{EQ:15_14}
+\eea
+dont une repr\'esentation est sur la figure (\ref{FIG:3_13}). Nous pouvons aussi observer ici que $r$ est minimale quand la quantit\'e $\cos\varphi$ est maximale, donc le p\'erih\'elie s'\'ecrit ici :
+\be
+	r_{min} = \dfrac{p}{e - 1} = a(1 + e) \label{EQ:15_15}
+\ee
+car $a = \frac{\alpha}{2E}$.
