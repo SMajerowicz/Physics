@@ -824,4 +824,22 @@ Ainsi le vecteur :
 \be
 	\vec{v}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{r} = \vec{cste} \label{EQ:15_17}
 \ee
-se conserve dans le temps, en direction et en norme. Par d\'efinition, le vecteur $\vec{v}\wedge\vec{M}$ a la m\^eme direction que $\vec{r}$ et \`a la position du p\'erih\'elie, la vitesse radiale est nulle, donc le vecteur conservatif d\'efinit par (\ref{EQ:15_17}) est dirig\'e vers le grand axe du foyer.
+se conserve dans le temps, en direction et en norme. Par d\'efinition, le vecteur $\vec{v}\wedge\vec{M}$ a la m\^eme direction que $\vec{r}$ et \`a la position du p\'erih\'elie, la vitesse radiale est nulle, donc le vecteur conservatif d\'efinit par (\ref{EQ:15_17}) est dirig\'e vers le grand axe du foyer. De plus, au p\'erih\'elie, nous avons $r = r_{min}$ par d\'efinition et la composante radiale de la vitesse de la particule est nulle. Aussi, la quantité (\ref{EQ:15_17}) se d\'eveloppe au p\'erih\'elie ainsi :
+\bea
+	\vec{v}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{r} & = & \begin{pmatrix} 0 \\ v_{\varphi} \\ 0 \end{pmatrix} \wedge \begin{pmatrix} 0 \\ 0 \\ M_{z} \end{pmatrix} + \begin{pmatrix} \alpha \\ 0 \\ 0 \end{pmatrix} \nonumber \\
+	& = & \begin{pmatrix} v_{\varphi}M_{z} + \alpha \\ 0 \\ 0 \end{pmatrix}
+\eea
+avec $v_{\varphi}$ la vitesse selon $\varphi$ au p\'erih\'elie. Or l'\'equation (\ref{EQ:14_2}) donne $M = mr^{2}\dot{\varphi}$ ou encore dans notre cas \`a la position du p\'erih\'elie, $M_{z} = M = mr_{min}^{2}\dot{\varphi}$. Cette relation peut aussi s'\'ecrire :
+\bea
+	\dfrac{\mathrm{d}\varphi}{\mathrm{dt}} & = & \dfrac{M}{mr_{min}^{2}} \nonumber \\
+	v_{\varphi} & = & \dfrac{M}{mr_{min}}
+\eea
+car $v_{\varphi} = r_{min}\dot{\varphi}$. La quantité :
+\bea
+	v_{\varphi}M_{z} + \alpha & = & \dfrac{M^{2}}{mr_{min}} + \alpha \nonumber \\
+	& = & \dfrac{M^{2}(e - 1)}{mp} + \alpha \nonumber \\
+	& = & \dfrac{M^{2}(e - 1)m\alpha}{mM^{2}} + \alpha \nonumber \\
+	& = & (e - 1)\alpha + \alpha \nonumber \\
+	& = & \alpha e
+\eea
+en prenant pour r\'ef\'erence pour la valeur du param\`etre $p$ la relation (\ref{EQ:15_15}). Le vecteur d\'efini en (\ref{EQ:15_17}) est donc constant en norme qui est \'egale \`a $\alpha e$. L'int\'egrale premi\`ere (\ref{EQ:15_17}) comme les lois de conservation de l'\'energie et du moment cin\'etique est une fonction uniforme de l'\'etat de la particule, position et vitesse. L'apparition de l'int\'egrale (\ref{EQ:15_17}) suppl\'ementaire est due à la d\'eg\'en\'erescence du mouvement, \'etudi\'e au paragraphe (\ref{PAR:50}).
