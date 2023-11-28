@@ -362,6 +362,8 @@ Et cette derni\`ere in\'egalit\'e n'est vraie que dans deux situations et impliq
 
 \section{Le probl\`eme de Kepler}\label{PAR:15}
 
+\subsection{G\'en\'eralit\'es}
+
 L'\'etude du champ central inversement proportionnel \`a $r$ est tr\`es important\footnote{Cela correspond \`a une force inversement proportionnel au carr\'e de la distance, voir l'\'equation (\ref{EQ:7_4}) donnant $\vec{F} = \dfrac{\partial L}{\partial U}$} car il s'agit du champ gravitationnel, attractif, et du champ \'electrostatique de Coulomb, attractif ou r\'epulsif. Ainsi, d\'efinissons un champ d'attraction tel que :
 \be
 	U(r) = -\dfrac{\alpha}{r} \label{EQ:15_1}
@@ -484,6 +486,8 @@ Le choix pr\'ec\'edemment fait pour avoir la constante d'int\'egration nulle cor
 
 Dans le cas o\`u deux corps interagissent selon le champ d'attraction (\ref{EQ:15_1}), alors l'orbite de chacun des deux corps est une section conique dont le foyer se trouve \`a leur centre d'inertie commun, voir les \'equations (\ref{EQ:8_3}) et (\ref{EQ:13_2}).
 
+\subsection{Cas de la trajectoire elliptique}
+
 D'apr\`es la relation (\ref{EQ:15_4}), il est \'evident que si $-\frac{m\alpha^{2}}{2M^{2}} \le E < 0$ alors $e < 1$. L'orbite est alors une ellipse telle que montr\'ee sur la figure (\ref{FIG:3_11}) et le mouvement est fini et la trajectoire ferm\'ee. Dans ce cas pr\'ecis et en utilisant $\lvert E \rvert$, le grand demi-axe $a$ s'\'ecrit :
 \bea
 	a = \dfrac{p}{1 - e^{2}} & = & \dfrac{M^{2}}{m\alpha\left(1 - 1 - \dfrac{2EM^{2}}{m\alpha^{2}}\right)} \nonumber \\
@@ -524,6 +528,8 @@ car $\int_{0}^{T} \mathrm{d}f$ vaut par d\'efinition la surface totale de l'elli
 \ee
 Au-del\`a du fait que la p\'eriode ne d\'epend que de l'\'energie de la particule, nous retrouvons la troisi\`eme loi de Kepler \'enonc\'ee dans l'\'equation (\ref{EQ:10_KEPLER}).
 
+\subsection{Cas de la trajectoire hyperbolique}
+
 \begin{figure}[htb!]
 	\begin{center}
 		\begin{picture}(300,200)(0,0)
@@ -553,7 +559,7 @@ Au-del\`a du fait que la p\'eriode ne d\'epend que de l'\'energie de la particul
 
 Pour $E \le 0$, le mouvement est infini et plus pr\'ecis\'ement pour $E > 0$, l'excentricit\'e $e > 1$ et la trajectoire est alors une hyperbole, voir la figure (\ref{FIG:3_12}). Dans ce cas, le p\'erih\'lie est :
 \be
-	r_{min} = a(e - 1) = \frac{p}{1 + e} \label{EQ:15:9}
+	r_{min} = a(e - 1) = \frac{p}{1 + e} \label{EQ:15_9}
 \ee
 avec le demi-axe de l'hyperbole $a = \frac{\alpha}{2\lvert E \rvert} = \frac{\alpha}{2E}$, car $E > 0$.
 Dans le cas particulier o\`u $E = 0$, l'excentricit\'e $e$ vaut 1 et la particule a une trajectoire parabolique telle que la distance du p\'erih\'elie $r_{min}$ vaut $\frac{p}{2}$. $E = 0$ n'est possible que si la particule part de l'infini \`a $\mathrm{t} = 0$.
@@ -652,7 +658,7 @@ Aussi, nous pouvons poursuivre avec $\mathrm{t}$ avec \'egalement\footnote{En aj
 	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{a^{2}e^{2}\cosh^{2}\xi - a^{2}e^{2}}}} \nonumber \\
 	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{ae\sqrt{\cosh^{2}\xi - 1}}} \nonumber \\
 	& = & \sqrt{\dfrac{ma}{\alpha}}\dfrac{a^{2}e}{ae}\int{(e\cosh\xi - 1)\mathrm{d}\xi} \nonumber \\
-	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(e\cosh\xi -1)\mathrm{d}\xi} \nonumber \\
+	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(e\cosh\xi - 1)\mathrm{d}\xi} \nonumber \\
 	\mathrm{t} & = & \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi - \xi) \nonumber \\
 \eea
 Avec la m\^eme hypoth\`ese que dans le cas elliptique qui permet d'\'ecrire $x = r\cos\varphi$ et $y = r\sin\varphi$ et sachant (\ref{EQ:15_9}), nous avons :
@@ -668,16 +674,18 @@ donc :
 et avec $y^{2} = r^{2} - x^{2}$ :
 \bea
 	y^{2} & = & a^{2}e^{2}\cosh^{2}\xi + a^{2} - 2ae\cosh\xi - a^{2}e^{2} - a^{2}\cosh^{2}\xi + 2ae\cosh\xi \nonumber \\
-	& = & a^{2}e^{2}(1 + \sinh^{2}\xi) + a^{2} a^{2}e^{2} - a^{2}(1 + \sinh^{2}\xi) \nonumber \\
+	& = & a^{2}e^{2}(1 + \sinh^{2}\xi) + a^{2} - a^{2}e^{2} - a^{2}(1 + \sinh^{2}\xi) \nonumber \\
 	\Leftrightarrow y & = & a\sqrt{e^{2} - 1}\sinh\xi
 \eea
 avec $\xi \in ]-\infty ; +\infty[$. Nous avons ainsi la trajectoire param\'etrique telle que :
 \be
 	\begin{cases}
-		r = a(e\cosh\xi -1)\text{ et }\mathrm{t} = \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi - \xi) \\
+		r = a(e\cosh\xi - 1)\text{ et }\mathrm{t} = \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi - \xi) \\
 		x = a(e - \cosh\xi)\text{ et }y = a\sqrt{e^{2} - 1}\sinh\xi \label{EQ:15_12}
 	\end{cases}
 \ee
+
+\subsection{Cas de la trajectoire hyperbolique dans un champ r\'epulsif}
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -736,3 +744,84 @@ dont une repr\'esentation est sur la figure (\ref{FIG:3_13}). Nous pouvons aussi
 	r_{min} = \dfrac{p}{e - 1} = a(1 + e) \label{EQ:15_15}
 \ee
 car $a = \frac{\alpha}{2E}$.
+
+L'\'equation (\ref{EQ:14_6}) se d\'eveloppe :
+\bea
+	\mathrm{t} & = & \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}}}}
+\eea
+En remarquant que :
+\bea
+	a^{2}e^{2} - (r - a)^{2} & = & a^{2}e^{2} - r^{2} - a^{2} + 2ar \nonumber \\
+	& = & \dfrac{\alpha^{2}}{4E^{2}}\left(1 + \dfrac{2EM^{2}}{m\alpha^{2}}\right) - r^{2} - \dfrac{\alpha^{2}}{4E^{2}} + \dfrac{2\alpha r}{2E} \nonumber \\
+	& = & -\left(r^{2} - \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}\right)
+\eea
+nous pouvons reprendre tel que :
+\be
+	\mathrm{t} = \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{(r - a)^{2} - a^{2}e^{e}}}}
+\ee
+En posant :
+\be
+	\begin{cases}
+		r = a(e\cosh\xi + 1) \\
+		\mathrm{d}r = ae\sinh\xi\mathrm{d}\xi
+	\end{cases}
+\ee
+nous prolongeons en :
+\bea
+	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi + 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{a^{2}e^{2}\cosh^{2}\xi - a^{2}e^{2}}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi + 1)ae\sin\xi\mathrm{d}\xi}{ae\sqrt{\cosh^{2}\xi - 1}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(e\cosh\xi + 1)\mathrm{d}\xi} \nonumber \\
+	\mathrm{t} & = & \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi + \xi) \nonumber \\
+\eea
+Avec la m\^eme technique calculatoire que pr\'ec\'edemment, nous posons $x = r\cos\varphi$ et $y = r\sin\varphi$ et sachant (\ref{EQ:15_14}), nous avons :
+\be
+	p = a(e^{2} - 1)\text{ et }p + r = ex
+\ee
+donc :
+\bea
+	ex & = & a(e^{2} - 1) + a(e\cosh\xi + 1) \nonumber \\
+	& = & ae^{2} + ae\cosh\xi \nonumber \\
+	\Leftrightarrow x & = & a(\cosh\xi + e)
+\eea
+et avec $y^{2} = r^{2} - x^{2}$ :
+\bea
+	y^{2} & = & a^{2}e^{2}\cosh^{2}\xi + a^{2} + 2ae\cosh\xi - a^{2}e^{2} - a^{2}\cosh^{2}\xi - 2ae\cosh\xi \nonumber \\
+	& = & a^{2}e^{2}(1 + \sinh^{2}\xi) + a^{2} - a^{2}e^{2} - a^{2}(1 + \sinh^{2}\xi) \nonumber \\
+	\Leftrightarrow y & = & a\sqrt{e^{2} - 1}\sinh\xi
+\eea
+avec $\xi \in ]-\infty ; +\infty[$. Nous avons ainsi la trajectoire param\'etrique telle que :
+\be
+	\begin{cases}
+		r = a(e\cosh\xi + 1)\text{ et }\mathrm{t} = \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi + \xi) \\
+		x = a(\cosh\xi + e)\text{ et }y = a\sqrt{e^{2} - 1}\sinh\xi \label{EQ:15_16}
+	\end{cases}
+\ee
+
+\subsection{Int\'egrale sp\'ecifique du champ en $\alpha/r$}
+
+Cherchons une int\'egrale premi\`ere, i.e. constante dans le temps, sp\'ecifique \`a ce type de champ en $\frac{\alpha}{r}$ avec $\alpha\in\mathbb{R}$ en remarquant que :
+\bea
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\vec{v}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{r}\right) & = & \vec{\dot{v}}\wedge\vec{M} + \vec{v}\wedge\vec{\dot{M}} + \dfrac{\alpha}{r}\vec{\dot{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r}) \nonumber \\
+	& = & \vec{\dot{v}}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{\dot{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r})
+\eea
+car il y a toujours conservation du moment cin\'etique et donc $\vec{\dot{M}} = \vec{0}$. De plus $\vec{M} = m\vec{r}\wedge\vec{v}$ donc :
+\be
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\vec{v}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{r}\right)  = m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m(\vec{\dot{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r})
+\ee
+En revenant à l'\'equation du mouvement (\ref{EQ:5_3}) :
+\be
+	m\vec{\dot{v}} = -\dfrac{\partial U}{\partial\vec{r}} = \dfrac{\alpha}{r^{3}}\vec{r}
+\ee
+La quantit\'e :
+\bea
+	m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m(\vec{\dot{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r}) & = & m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m(\vec{\dot{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} - m\vec{\dot{v}}(\vec{v}\cdot\vec{r}) \nonumber \\
+	& = & m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m\vec{\dot{v}}(\vec{v}\cdot\vec{r}) - (m\vec{\dot{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} \nonumber \\
+	& = & m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - \dfrac{\alpha}{r}\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} \nonumber \\
+	& = & \vec{0}
+\eea
+Ainsi le vecteur :
+\be
+	\vec{v}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{r} = \vec{cste} \label{EQ:15_17}
+\ee
+se conserve dans le temps, en direction et en norme. Par d\'efinition, le vecteur $\vec{v}\wedge\vec{M}$ a la m\^eme direction que $\vec{r}$ et \`a la position du p\'erih\'elie, la vitesse radiale est nulle, donc le vecteur conservatif d\'efinit par (\ref{EQ:15_17}) est dirig\'e vers le grand axe du foyer.
