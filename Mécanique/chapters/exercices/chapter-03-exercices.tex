@@ -536,6 +536,14 @@ or :
 	\Leftrightarrow \dfrac{mp^{3}}{\alpha} & = &  \dfrac{M^{6}}{m^{2}\alpha^{2}} \nonumber \\
 	\Leftrightarrow \sqrt{\dfrac{mp^{3}}{\alpha}} & = &  \dfrac{M^{3}}{m\alpha} \nonumber \\
 \eea
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_03_exercice_15_1_result}
+		\caption{Trajectoire pour diff\'erentes valeurs de $p$}\label{FIG:3_15_EX1}
+	\end{center}
+\end{figure}
+
 Nous arrivons donc \`a exprimer :
 \bea
 	\mathrm{t} & = & \dfrac{1}{2}\sqrt{\dfrac{mp^{3}}{\alpha}}\int{(1 + \eta^{2})\mathrm{d}\eta} \nonumber \\
@@ -554,8 +562,31 @@ et avec $y^{2} = r^{2} - x^{2}$ :
 	& = & 4\eta^{2}\dfrac{p^{2}}{4} \nonumber \\
 	\Leftrightarrow y & = & p\eta
 \eea
-avec $\eta \in ]-\infty ; +\infty[$.
+avec $\eta \in ]-\infty ; +\infty[$. Sur la figure (\ref{FIG:3_15_EX1}), des exemples de trajectoire sont pr\'esent\'ees.
 
 \subsection{Solution pour $U = -\alpha/r^{2}$ et $\alpha > 0$}
+
+La relation (\ref{EQ:14_6}) donne dans ce cas pr\'ecis :
+\bea
+	\mathrm{t} & = & \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r^{2}}\right) - \dfrac{M^{2}}{mr^{2}}}}} \nonumber \\
+	& = & \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2E}{m} + \left(\dfrac{2\alpha}{m} - \dfrac{M^{2}}{m^{2}}\right)\dfrac{1}{r^{2}}}}} \nonumber \\
+	& = & \int{\dfrac{r\mathrm{d}r}{\sqrt{\dfrac{2E}{m}r^{2} + \left(\dfrac{2\alpha}{m} - \dfrac{M^{2}}{m^{2}}\right)}}} \nonumber \\
+	& = & \dfrac{m}{2E}\int{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} + \dfrac{\alpha}{E} - \dfrac{M^{2}}{2mE}}}}
+\eea
+En posant :
+\be
+	\begin{cases}
+		u = r^{2} + \dfrac{\alpha}{E} - \dfrac{M^{2}}{2mE} \\
+		\mathrm{d}u = 2r\mathrm{d}r
+	\end{cases}
+\ee
+nous pouvons \'ecrire :
+\bea
+	\mathrm{t} & = & \dfrac{m}{2E}\int{\dfrac{\mathrm{d}u}{2\sqrt{u}}} \nonumber \\
+	& = & \dfrac{m}{2E}\sqrt{u} \nonumber \\
+	& = & \dfrac{m}{2E}\sqrt{r^{2} + \dfrac{\alpha}{E} - \dfrac{M^{2}}{2mE}} \nonumber \\
+	& = & \dfrac{m}{2}\dfrac{1}{E}\sqrt{Er^{2} + \alpha - \dfrac{M^{2}}{2m}}
+\eea
+en choisissant la constante d'int\'egration telle qu'elle soit nulle.
 
 \subsection{Perturbation dans l'\'energie potentielle}
