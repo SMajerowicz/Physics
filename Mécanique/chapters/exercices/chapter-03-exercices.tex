@@ -515,6 +515,46 @@ Nous sommes dans le cas elliptique o\`u $e = 1$ et $p = \dfrac{M^{2}}{m\alpha}$.
 \be
 	\mathrm{t} = \int{\dfrac{r\mathrm{d}r}{\sqrt{\dfrac{2\alpha}{m}r - \dfrac{M^{2}}{m}}}}
 \ee
+En posant :
+\be
+	\begin{cases}
+		r = \dfrac{M^{2}}{2m\alpha}(1 + \eta^{2}) \\
+		\mathrm{d}r = \dfrac{M^{2}}{m\alpha}\eta\mathrm{d}\eta
+	\end{cases}
+\ee
+nous pouvons \'ecrire :
+\bea
+	\mathrm{t} & = & \int{\dfrac{\dfrac{M^{2}}{2m\alpha}(1 + \eta^{2})\dfrac{M^{2}}{m\alpha}\eta\mathrm{d}\eta}{\sqrt{\dfrac{2\alpha}{m}\dfrac{M^{2}}{2m\alpha}(1 + \eta^{2}) - \dfrac{M^{2}}{m^{2}}}}} \nonumber \\
+	& = & \int{\dfrac{\dfrac{M^{4}}{2m^{2}\alpha^{2}}(1 + \eta^{2})\eta\mathrm{d}\eta}{\sqrt{\dfrac{M^{2}}{m^{2}}(1 + \eta^{2}) - \dfrac{M^{2}}{m^{2}}}}} \nonumber \\
+	& = & \int{\dfrac{\dfrac{M^{4}}{2m^{2}\alpha^{2}}(1 + \eta^{2})\eta\mathrm{d}\eta}{\dfrac{M}{m}\eta}} \nonumber \\
+	& = & \dfrac{M^{3}}{2m\alpha^{2}}\int{(1 + \eta^{2})\mathrm{d}\eta} \nonumber \\
+\eea
+or :
+\bea
+	p & = & \dfrac{M^{2}}{m\alpha} \nonumber \\
+	\Leftrightarrow p^{3} & = &  \dfrac{M^{6}}{m^{3}\alpha^{3}} \nonumber \\
+	\Leftrightarrow \dfrac{mp^{3}}{\alpha} & = &  \dfrac{M^{6}}{m^{2}\alpha^{2}} \nonumber \\
+	\Leftrightarrow \sqrt{\dfrac{mp^{3}}{\alpha}} & = &  \dfrac{M^{3}}{m\alpha} \nonumber \\
+\eea
+Nous arrivons donc \`a exprimer :
+\bea
+	\mathrm{t} & = & \dfrac{1}{2}\sqrt{\dfrac{mp^{3}}{\alpha}}\int{(1 + \eta^{2})\mathrm{d}\eta} \nonumber \\
+	\Leftrightarrow \mathrm{t} & = & \dfrac{1}{2}\sqrt{\dfrac{mp^{3}}{\alpha}}\left(\eta + \dfrac{\eta^{3}}{3}\right) \nonumber \\
+	\Leftrightarrow \mathrm{t} & = & \sqrt{\dfrac{mp^{3}}{\alpha}}\dfrac{\eta}{2}\left(1 + \dfrac{\eta^{2}}{3}\right)
+\eea
+Nous posons $x = r\cos\varphi$ et sachant (\ref{EQ:15_5}), nous avons :
+\bea
+	p + r & = & ex\nonumber \\
+	\Leftrightarrow x & = & p - \dfrac{p}{2}(1 + \eta^{2}) \nonumber \\
+	\Leftrightarrow x & = & \dfrac{p}{2}(1 + \eta^{2}) \nonumber \\
+\eea
+et avec $y^{2} = r^{2} - x^{2}$ :
+\bea
+	y^{2} & = & \dfrac{p^{2}}{4}(1 + \eta^{4} + 2\eta^{2}) - \dfrac{p^{2}}{4}(1 + \eta^{4} - 2\eta^{2}) \nonumber \\
+	& = & 4\eta^{2}\dfrac{p^{2}}{4} \nonumber \\
+	\Leftrightarrow y & = & p\eta
+\eea
+avec $\eta \in ]-\infty ; +\infty[$.
 
 \subsection{Solution pour $U = -\alpha/r^{2}$ et $\alpha > 0$}
 
