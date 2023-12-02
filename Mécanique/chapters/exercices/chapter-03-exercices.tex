@@ -723,4 +723,43 @@ alors :
 	\Delta\varphi & = & -2\dfrac{\partial}{\partial M}\left(\int_{r_{min}}^{r_{max}}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}\right) \nonumber \\
 	& = & -2\dfrac{\partial}{\partial M}\left(\int_{r_{min}}^{r_{max}}{\sqrt{2m(E + \dfrac{\alpha}{r} - \delta U) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}\right)
 \eea
-R\'ealisons le d\'eveloppement limit\'e de $\Delta\varphi$ \`a l'ordre 0.
+R\'ealisons le d\'eveloppement limit\'e de $\Delta\varphi$ \`a l'ordre 0 :
+\be
+	\Delta\varphi_{0} = -2\dfrac{\partial}{\partial M}\left(\int_{r_{min}}^{r_{max}}{\sqrt{2m(E + \dfrac{\alpha}{r}) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}\right)
+\ee
+Nous sommes dans le cas d'une trajectoire finie comme pr\'esent\'ee sur la figure (\ref{FIG:3_9}). L'ordre 0 correspond ainsi \`a la composante elliptique avec, comme pour l'\'equation (\ref{EQ:15_5}), \`a savoir $p/r = 1 + e\cos\varphi$. Les relations (\ref{EQ:15_7}) permettent d'obtenir :
+\bea
+	r_{min} & = & \dfrac{p}{1 + e} \nonumber \\
+	\Leftrightarrow 1 + e & = & 1 + e\cos\varphi_{min} \nonumber \\
+	\Leftrightarrow \cos\varphi_{min} & = & 1 \Rightarrow \varphi_{min} = 0 \nonumber \\
+	r_{max} & = & \dfrac{p}{1 - e} \nonumber \\
+	\Leftrightarrow 1 - e & = & 1 + e\cos\varphi_{max} \nonumber \\
+	\Leftrightarrow \cos\varphi_{max} & = & -1 \Rightarrow \varphi_{max} = \pi
+\eea
+Nous pouvons en conclure que $\Delta\varphi_{0} = -2\pi$. Le terme d'ordre 1 peut s'identifier \`a $\delta\varphi = \Delta\varphi_{1}$. Il se calcule ainsi :
+\bea
+	\Delta\varphi_{1} & = & -2\dfrac{\partial}{\partial M}\left(\int_{r_{min}}^{r_{max}}{\dfrac{-\dfrac{1}{2}2m\delta U\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \frac{M^{2}}{r^{2}}}}}\right) \nonumber \\
+	& = & \dfrac{\partial}{\partial M}\left(\int_{r_{min}}^{r_{max}}{\dfrac{2m\delta U\mathrm{d}r}{\sqrt{2m(E + \dfrac{\alpha}{r}) - \frac{M^{2}}{r^{2}}}}}\right)
+\eea
+Or dans le cadre d'une trajectoire non perturb\'ee, l'\'equation (\ref{EQ:14_7}) est :
+\be
+	\mathrm{d}\varphi = \dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \frac{M^{2}}{r^{2}}}}
+\ee
+donc, nous pouvons reprendre avec $r = r_{min} \Leftrightarrow \varphi = 0$ et $r = r_{max} \Leftrightarrow \varphi = \pi$ et \'ecrire :
+\bea
+	\delta\varphi & = & \dfrac{\partial}{\partial M}\left(\int_{0}^{\pi}{\delta U\dfrac{2mr^{2}}{M}\mathrm{d}\varphi}\right) \nonumber \\
+	& = & \dfrac{\partial}{\partial M}\left(\dfrac{2mr^{2}}{M}\int_{0}^{\pi}{r^{2}\delta U\mathrm{d}\varphi}\right) \nonumber \\
+	& = & \dfrac{\partial}{\partial M}\left(\dfrac{2mr^{2}}{M}r^{2}\delta U\pi\right) \nonumber \\
+	& = & -\dfrac{2mr^{2}\delta U\pi}{M^{2}}
+\eea
+
+Dans le cas o\`u $\delta U = \dfrac{\beta}{r^{2}}$ alors $\delta\varphi = -\dfrac{2\pi\beta m}{M^{2}} = -\dfrac{2\pi\beta}{\alpha p}$ avec $p = \dfrac{M^{2}}{m\alpha}$ via l'utilisation de la relation (\ref{EQ:15_4}).
+
+Dans le cas o\`u $\delta U = \dfrac{\gamma}{r^{3}} \Leftrightarrow r^{2}\delta U = \dfrac{\gamma}{r}$, alors :
+\bea
+	\delta\varphi & = & \dfrac{\partial}{\partial M}\left(\dfrac{2m}{M}\int_{0}^{\pi}{\dfrac{\gamma}{r}\mathrm{d}\varphi}\right) \nonumber \\
+	& = & \dfrac{\partial}{\partial M}\left(\dfrac{2m}{M}\int_{0}^{\pi}{\dfrac{\gamma}{p}(1 + e\cos\varphi)\mathrm{d}\varphi}\right) \nonumber \\
+	& = & \dfrac{\partial}{\partial M}\left(\dfrac{2m}{M}\dfrac{\gamma\pi}{p}\right) = \dfrac{\partial}{\partial M}\left(\dfrac{2m^{2}\gamma\alpha\pi}{M^{3}}\right) \nonumber \\
+	& = & -\dfrac{6m^{2}\gamma\alpha\pi}{M^{4}} = -\dfrac{6m^{2}\gamma\alpha\pi}{m^{2}\alpha^{2}p^{2}} \nonumber \\
+	& = & -\dfrac{6\gamma\pi}{\alpha p^{2}} \nonumber \\
+\eea
