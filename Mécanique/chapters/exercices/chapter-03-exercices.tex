@@ -511,7 +511,7 @@ L'ensemble des positions issues de $x_{2}$ et $y_{2}$ d\'efinissent une portion 
 
 \subsection{Repr\'esentation param\'trique pour $U = -\alpha/r$ et $E = 0$}
 
-Nous sommes dans le cas elliptique o\`u $e = 1$ et $p = \dfrac{M^{2}}{m\alpha}$. La relation (\ref{EQ:14_6}) donne dans notre cas pr\'ecis :
+Nous sommes dans le cas parabolique o\`u $e = 1$ et $p = \dfrac{M^{2}}{m\alpha}$. La relation (\ref{EQ:14_6}) donne dans notre cas pr\'ecis :
 \be
 	\mathrm{t} = \int{\dfrac{r\mathrm{d}r}{\sqrt{\dfrac{2\alpha}{m}r - \dfrac{M^{2}}{m}}}}
 \ee
@@ -540,7 +540,7 @@ or :
 \begin{figure}[htb!]
 	\begin{center}
 		\includegraphics[width=10cm]{chapter_03_exercice_15_1_result}
-		\caption{Trajectoire pour diff\'erentes valeurs de $p$}\label{FIG:3_15_EX1}
+		\caption{Trajectoires paraboliques pour diff\'erentes valeurs de $p$}\label{FIG:3_15_EX1}
 	\end{center}
 \end{figure}
 
@@ -585,8 +585,142 @@ nous pouvons \'ecrire :
 	\mathrm{t} & = & \dfrac{m}{2E}\int{\dfrac{\mathrm{d}u}{2\sqrt{u}}} \nonumber \\
 	& = & \dfrac{m}{2E}\sqrt{u} \nonumber \\
 	& = & \dfrac{m}{2E}\sqrt{r^{2} + \dfrac{\alpha}{E} - \dfrac{M^{2}}{2mE}} \nonumber \\
-	& = & \dfrac{m}{2}\dfrac{1}{E}\sqrt{Er^{2} + \alpha - \dfrac{M^{2}}{2m}}
+	& = & \dfrac{m}{2}\dfrac{1}{E}\sqrt{Er^{2} + \alpha - \dfrac{M^{2}}{2m}} \label{EQ:15_EX2_2}
 \eea
 en choisissant la constante d'int\'egration telle qu'elle soit nulle.
 
+La relation (\ref{EQ:14_7}) permet de calculer $\varphi$ \`a partir de :`
+\bea
+	\varphi & = & \int{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r^{2}}\right) - \dfrac{M^{2}}{r^{2}}}}} \nonumber \\
+	& = & \int{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{\dfrac{2}{m}E + (2m\alpha - M^{2})\dfrac{1}{r^{2}}}}} \label{EQ:15_EX2_1}
+\eea
+
+Pour passer \`a la suite, il faut envisager trois cas diff\'erents.
+
+\subsubsection{Cas $E > 0$ et $M^{2} > 2m\alpha$}
+
+Le fait que l'\'energie $E$ soit positive permet d'\'ecrire la quantit\'e $\sqrt{E}$, ains l'\'equation (\ref{EQ:15_EX2_1}) se d\'eveloppe en :
+\be
+	\varphi = \dfrac{M}{\sqrt{2mE}}\int{\dfrac{\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{M^{2} - 2m\alpha}{2mEr^{2}}}}}
+\ee
+De plus, parce que nous avons suppos\'e $M^{2} > 2m\alpha$, nous pouvons faire la substitution suivante :
+\be
+	\begin{cases}
+		u = \sqrt{\dfrac{M^{2} - 2m\alpha}{2mE}}\dfrac{1}{r} \\
+		\mathrm{d}u = -\sqrt{\dfrac{M^{2} - 2m\alpha}{2mE}}\dfrac{1}{r^{2}}\mathrm{d}r
+	\end{cases}
+\ee
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_03_exercice_15_2a_result}
+		\caption{Solutions exprim\'ees pour $\sqrt{1 - \dfrac{2m\alpha}{M^{2}}} = {0.1,0.3,0.5}$ et $\dfrac{2mE}{M^{2} - 2m\alpha} = 1$}\label{FIG:3_15_EX2A}
+	\end{center}
+\end{figure}
+
+La variable $\varphi$ devient, avec l'apparition d'un signe n\'egatif car $u$ est inversement proportionnel \`a $r$ donc nous avons \`a inverser les bornes de l'int\'egrale :
+\bea
+	\varphi & = & -\dfrac{M}{\sqrt{2mE}}\int{\dfrac{-\sqrt{2mE}\mathrm{d}u}{\sqrt{M^{2} - 2m\alpha}\sqrt{1 - u^{2}}}} \nonumber \\
+	& = & -\dfrac{M}{\sqrt{M^{2} - 2m\alpha}}\int{\dfrac{-\mathrm{d}u}{\sqrt{1 - u^{2}}}} \nonumber \\
+	& = & \dfrac{1}{\sqrt{1 - \dfrac{2m\alpha}{M^{2}}}}\arccosh\left(-\sqrt{\dfrac{M^{2} - 2m\alpha}{2mE}}\dfrac{1}{r}\right)
+\eea
+ou encore :
+\bea
+	\dfrac{1}{r} & = & \dfrac{2mE}{M^{2} - 2m\alpha}\cos\left(-\varphi\sqrt{1 - \dfrac{2m\alpha}{M^{2}}}\right) \nonumber \\
+	\Leftrightarrow \dfrac{1}{r} & = & \dfrac{2mE}{M^{2} - 2m\alpha}\cos\left(\varphi\sqrt{1 - \dfrac{2m\alpha}{M^{2}}}\right)
+\eea
+car la fonction $\cos$ est paire. Certaines solutions sont repr\'esent\'ees sur la figure (\ref{FIG:3_15_EX2A}).
+
+\subsubsection{Cas $E > 0$ et $M^{2} < 2m\alpha$}
+
+Dans le cas o\`u $M^{2} < 2m\alpha \Leftrightarrow 2m\alpha - M^{2} > 0$ permet d'\'ecrire la relation (\ref{EQ:15_EX2_1}) ainsi :
+\be
+	\varphi = \dfrac{M}{\sqrt{2mE}}\int{\dfrac{\mathrm{d}r}{r^{2}\sqrt{1 + \dfrac{2m\alpha - M^{2}}{2mEr^{2}}}}}
+\ee
+En posant :
+\be
+	\begin{cases}
+		u = \sqrt{\dfrac{2m\alpha - M^{2}}{2mE}}\dfrac{1}{r} \\
+		\mathrm{d}u = -\sqrt{\dfrac{2m\alpha - M^{2}}{2mE}}\dfrac{1}{r^{2}}\mathrm{d}r
+	\end{cases}
+\ee
+La variable $\varphi$ devient avec l'apparition d'un signe n\'egatif car $u$ est inversement proportionnel \`a $r$ donc nous inversons les bornes de l'int\'egrale :
+\bea
+	\varphi & = & -\dfrac{M}{\sqrt{2mE}}\int{-\dfrac{\sqrt{\dfrac{2m\alpha - M^{2}}{2mE}}\mathrm{d}u}{\sqrt{1 + u^{2}}}} \nonumber \\
+	& = & \sqrt{\dfrac{M^{2}}{2m\alpha - M^{2}}}\int{\dfrac{\mathrm{d}u}{\sqrt{1 + u^{2}}}}
+\eea
+or $\arcsinh'u = \dfrac{1}{\sqrt{1 + u^{2}}}$ donc :
+\bea
+	\varphi & = & \sqrt{\dfrac{M^{2}}{2m\alpha - M^{2}}}\arcsinh\left(\sqrt{\dfrac{2m\alpha - M^{2}}{2mE}}\dfrac{1}{r}\right) \nonumber \\
+	\Leftrightarrow \dfrac{1}{r} & = & \dfrac{2mE}{2m\alpha - M^{2}}\sinh\left(\varphi\sqrt{\dfrac{2m\alpha}{M^{2}} - 1}\right)
+\eea
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_03_exercice_15_2b_result}
+		\caption{Solutions exprim\'ees pour $\sqrt{\dfrac{2m\alpha}{M^{2}} - 1}$ de 1.1 à 3 par pas de 0.2 et $\dfrac{2mE}{2m\alpha - M^{2}} = 1$}\label{FIG:3_15_EX2B}
+	\end{center}
+\end{figure}
+
+Des repr\'esentations de trajectoires param\'etriques pour cette solution sont repr\'esent\'ees sur la figure (\ref{FIG:3_15_EX2B}).
+
+\subsubsection{Cas $E < 0$ et $M^{2} > 2m\alpha$}
+
+Dans le cas o\`u $M^{2} > 2m\alpha \Leftrightarrow M^{2} - 2m\alpha > 0$ permet d'\'ecrire la relation (\ref{EQ:14_7}) ainsi :
+\bea
+	\varphi & = & \int{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r^{2}}\right) - \dfrac{M^{2}}{r^{2}}}}} \nonumber \\
+	& = & \int{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{-\dfrac{2}{m}\lvert E \rvert + (2m\alpha - M^{2})\dfrac{1}{r^{2}}}}} \nonumber \\
+	& = & \dfrac{M}{2m\lvert E \rvert}\int{\dfrac{\mathrm{d}r}{\dfrac{1}{r^{2}}\left(\dfrac{2m\alpha - M^{2}}{2m\lvert E \rvert}\right) - 1}}
+\eea
+et parce que l'\'energie est n\'egative obligeant \`a \'ecrire $E = -\lvert E \rvert$. En posant :
+\be
+	\begin{cases}
+		u = \sqrt{\dfrac{2m\alpha - M^{2}}{2m\lvert E \rvert}}\dfrac{1}{r} \\
+		\mathrm{d}u = -\sqrt{\dfrac{2m\alpha - M^{2}}{2m\lvert E \rvert}}\dfrac{1}{r^{2}}\mathrm{d}r
+	\end{cases}
+\ee
+La variable $\varphi$ devient avec l'apparition d'un signe n\'egatif car $u$ est inversement proportionnel \`a $r$ donc nous inversons les bornes de l'int\'egrale :
+\bea
+	\varphi & = & -\dfrac{M}{\sqrt{2mE}}\int{-\dfrac{\sqrt{\dfrac{2m\alpha - M^{2}}{2m\lvert E \rvert}}\mathrm{d}u}{\sqrt{u^{2} - 1}}} \nonumber \\
+	& = & \sqrt{\dfrac{M^{2}}{2m\alpha - M^{2}}}\int{\dfrac{\mathrm{d}u}{\sqrt{u^{2} - 1}}}
+\eea
+or $\arccosh'u = \dfrac{1}{\sqrt{u^{2} - 1}}$ donc :
+\bea
+	\sqrt{\dfrac{2m\alpha}{M^{2}} - 1}\varphi & = & \arccosh\left(\sqrt{\dfrac{2m\alpha - M^{2}}{2m\lvert E\rvert }}\dfrac{1}{r}\right) \nonumber \\
+	\Leftrightarrow \dfrac{1}{r} & = & \dfrac{2m\lvert E \rvert}{2m\alpha - M^{2}}\cosh\left(\varphi\sqrt{\dfrac{2m\alpha}{M^{2}} - 1}\right)
+\eea
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_03_exercice_15_2c_result}
+		\caption{Solutions exprim\'ees pour $\sqrt{\dfrac{2m\alpha}{M^{2}} - 1}$ de 1.1 à 3 par pas de 0.2 et $\dfrac{2m\lvert E \rvert}{2m\alpha - M^{2}} = 1$}\label{FIG:3_15_EX2C}
+	\end{center}
+\end{figure}
+
+Des repr\'esentations de trajectoires param\'etriques pour cette solution sont repr\'esent\'ees sur la figure (\ref{FIG:3_15_EX2C}).
+
+Dans les deux derniers \'etudi\'es, il est int\'eressant de notre que quand $\varphi \rightarrow +\infty$ alors $\frac{1}{r} \rightarrow +\infty$ et donc $r \rightarrow 0$. En s'appuyant sur l'\'equation (\ref{EQ:15_EX2_2}), le temps mis par la particule pour chuter de $r$ \`a 0 vaut :
+\bea
+	\Delta\mathrm{t} & = & \mathrm{t}(r) - \mathrm{t}(0) \nonumber \\
+	& = & \dfrac{m}{2}\dfrac{1}{E}\left(\sqrt{Er^{2} + \alpha - \dfrac{M^{2}}{2m}} - \sqrt{\alpha - \dfrac{M^{2}}{2m}}\right)
+\eea
+il s'agit d'une valeur finie.
+
 \subsection{Perturbation dans l'\'energie potentielle}
+
+En perturbant l'\'energie potentielle $\frac{-\alpha}{r}$ avec une petite quantit\'e $\delta U$, d\'eterminons le d\'ecalage angulaire du p\'erih\'elie de la trajectoire \`a chaque r\'evolution, soit $\delta\varphi$. Cette quantit\'e est d\'efinie quand la particule va de $r_{min}$ \`a $r_{maw}$ pour finalement revenir \`a $r_{min}$.
+
+L'\'equation (\ref{EQ:14_10}) est :
+\be
+	\Delta\varphi = 2\int_{r_{min}}^{r_{max}}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}}
+\ee
+En remarquant que :
+\be
+	\dfrac{\partial}{\partial M}\left(\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}\mathrm{d}r\right) = \dfrac{\dfrac{-2M}{2r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}
+\ee
+alors :
+\bea
+	\Delta\varphi & = & -2\dfrac{\partial}{\partial M}\left(\int_{r_{min}}^{r_{max}}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}\right) \nonumber \\
+	& = & -2\dfrac{\partial}{\partial M}\left(\int_{r_{min}}^{r_{max}}{\sqrt{2m(E + \dfrac{\alpha}{r} - \delta U) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}\right)
+\eea
+R\'ealisons le d\'eveloppement limit\'e de $\Delta\varphi$ \`a l'ordre 0.
