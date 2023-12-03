@@ -1,0 +1,48 @@
+\chapter{Chocs de particules}
+
+\section{D\'esint\'egration des particules}
+
+Les lois de conservations ne d\'ependent absolument pas de l'esp\`ece d'interaction entre les particules et permettent ainsi d'arriver \`a des conclusions pourtant importantes pour les processus m\'ecaniques en jeu.
+
+Pour commencer, choisissons la d\'esint\'egration spontan\'ee, i.e. non provoqu\'ee par des forces ext\'erieures, d'une particule en deux autres particules se d\'epla\c{c}ant apr\`es la d\'esint\'egration ind\'ependamment l'une de l'autre. Sa forme la plus simple est quand il est consid\'er\'e dans un syst\`eme de r\'ef\'erence o\`u la particule initiale est au repos. La conservation d' l'impulsions implique :
+\bea
+	\vec{p}_{1} + \vec{p}_{2} & = & \vec{0} \nonumber \\
+	\vec{p}_{1} & = & -\vec{p}_{2}
+\eea
+ainsi les particules r\'esultantes de la d\'esint\'egration s'\'eloignent l'une de l'autre avec des impulsions \'egales, ,$\lVert \vec{p}_{1} \rVert = \lVert \vec{p}_{2} \rVert = p_{0}$ et dirig\'ees en sens inverse.
+
+En utilisant la loi de conservation de l'\'energie et en particulier l'\'equation (\ref{EQ:8_4}) et parce que l'\'energie cin\'etique de la particule initiale est nulle, nous pouvons \'ecrire :
+\be
+	E_{int} = E_{1int} + \dfrac{p_{0}^{2}}{2m_{1}} + E_{2int} + \dfrac{p_{0}^{2}}{2m_{2}}
+\ee
+avec $E_{int}$ l'\'energie interne de la particule initiale, $E_{1int}$ et $E_{2int}$ l'\'energie interne des deux particules cr\'e\'ees. En d\'efinissant l'\'energie de d\'esint\'egration $\epsilon$ telle que :
+\be
+	\epsilon = E_{int} - (E_{1int} + E_{2int}) \label{EQ:16_1}
+\ee
+sa valeur est de facto positive. Or :
+\be
+	E_{int} - (E_{1int} + E_{2int}) = p_{0}^{2}\left(\dfrac{1}{2m_{1}} + \dfrac{1}{2m_{2}}\right)
+\ee
+Donc :
+\be
+	\epsilon = p_{0}^{2}\left(\dfrac{1}{2m_{1}} + \dfrac{1}{2m_{2}}\right) = \dfrac{p_{0}^{2}}{2m} \label{EQ:16_2}
+\ee
+avec $m = \dfrac{m_{1} + m_{2}}{m_{1}m_{2}}$ qui est la masse r\'eduite du syst\`eme apr\`es d\'esint\'egration.
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(500,300)(0,0)
+			%circles
+			\linethickness{0.05mm}
+			\put(100,150){\circle{200}}
+			\put(400,150){\circle{200}}
+			%vector circle #1
+			\linethickness{0.5mm}
+			\put(40,150){\vector(1,0){60}}\put(60,135){$\vec{V}$}
+			%angles circle #1
+			\linethickness{0.05mm}
+			\multiput(-5,100)(10,0){20}{\line(1,0){8}}\put(195,98){$U=E$}
+		\end{picture}
+		\caption{Repr\'esentation g\'eom\'etrique de d\'esint\'egrations}\label{FIG:4_14}
+	\end{center}
+\end{figure}
