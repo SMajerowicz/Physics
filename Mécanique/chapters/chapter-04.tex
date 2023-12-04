@@ -34,15 +34,41 @@ avec $m = \dfrac{m_{1} + m_{2}}{m_{1}m_{2}}$ qui est la masse r\'eduite du syst\
 		\begin{picture}(500,300)(0,0)
 			%circles
 			\linethickness{0.05mm}
-			\put(100,150){\circle{200}}
-			\put(400,150){\circle{200}}
+			\put(100,150){\circle{200}}\put(90,25){$V < v_{0}$}
+			\put(400,150){\circle{200}}\put(390,25){$V > v_{0}$}
 			%vector circle #1
 			\linethickness{0.5mm}
-			\put(40,150){\vector(1,0){60}}\put(60,135){$\vec{V}$}
+			\put(40,150){\vector(1,0){60}}\put(65,135){$\vec{V}$}
+			\put(100,150){\vector(1,1){72}}\put(140,180){$\vec{v}_{0}$}
+			\put(40,150){\vector(9,5){130}}\put(90,185){$\vec{v}$}
 			%angles circle #1
 			\linethickness{0.05mm}
-			\multiput(-5,100)(10,0){20}{\line(1,0){8}}\put(195,98){$U=E$}
+			\qbezier(55,150)(55,155)(50,155)\put(60,152){$\theta$}
+			\qbezier(110,150)(110,155)(105,155)\put(112,153){$\theta_{0}$}
+			\multiput(100,150)(10,0){10}{\line(1,0){8}}
+			%vector circle #2
+			\linethickness{0.5mm}
+			\put(250,150){\vector(1,0){150}}\put(320,135){$\vec{V}$}
+			\put(400,150){\vector(1,1){72}}\put(440,180){$\vec{v}_{0}$}
+			\put(250,150){\vector(10,3){220}}\put(370,190){$\vec{v}$}
+			%angles circle #2
+			\linethickness{0.05mm}
+			\qbezier(280,150)(280,158)(275,158)\put(287,152){$\theta$}
+			\qbezier(410,150)(410,155)(405,155)\put(412,153){$\theta_{0}$}
+			\multiput(400,150)(10,0){10}{\line(1,0){8}}
 		\end{picture}
 		\caption{Repr\'esentation g\'eom\'etrique de d\'esint\'egrations}\label{FIG:4_14}
 	\end{center}
 \end{figure}
+
+\'Etudions maintenant le cas o\`u la particule initiale poss\`ede une vitesse $\vec{V}$ non nulle avant la d\'esint\'egration dans le syst\`eme de r\'ef\'erence. Il en existe deux :
+\begin{itemize}
+	\item le syst\`eme du laboratoire ou <<~l~>>,
+	\item le syst\`eme du centre d'inertie ou <<~c~>> dans lequel, par d\'efinition, la somme des impulsions est nulle, voir le paragraphe (\ref{PAR:8}).
+\end{itemize}
+Pour une des particules r\'esultantes de la d\'esint\'egration, d\'efinissions $\vec{v}$ sa vitesse dans le syst\`eme <<~l~>> et $\vec{v}_{0}$, sa vitesse dans le syst\`eme <<~c~>>. Par construction, nous avons $\vec{v} = \vec{V} + \vec{v}_{0} \Leftrightarrow \vec{v}_{0} = \vec{v} + \vec{V}$. De plus, la formule d'Al-Kashi donne directement :
+\bea
+	v_{0}{2} & = & v^{2} + V^{2} + 2vV\cos(\langle \vec{v},\vec{V}\rangle) \nonumber \\
+	& = & v^{2} + V^{2} + 2vV\cos(\theta)
+\eea
+en se basant sur la figure (\ref{FIG:4_14}).
