@@ -132,3 +132,42 @@ Dans la plupart des applications physiques, ce sont de nombreuses particules qui
 \be
 	\dfrac{\mathrm{d}\omega_{0}}{4\pi} = \dfrac{1}{2}\pi\sin\theta_{0}\mathrm{d}\theta_{0} \label{EQ:16_7}
 \ee
+Pour obtenir la r\'epartition dans le r\'ef\'erentiel <<~l~>>, partons du calcul de l'\'energie cin\'etique et de sa distribution. Nous savons que :
+\bea
+	\vec{v} & = & \vec{V} + \vec{v}_{0} \nonumber \\
+	\Leftrightarrow v^{2} & = & v_{0}^{2} + V^{2} + 2v_{0}V\cos\theta_{0} \nonumber \\
+	\Leftrightarrow \cos\theta_{0} & = & \dfrac{v^{2} - v_{0}^{2} - V^{2}}{2v_{0}V}
+\eea
+Or par rapport \`a $\theta_{0}$, les quantit\'es $\lVert\vec{v}_{0}\rVert$ et $\lVert\vec{V}\rVert$ sont constantes au contraire de $\lVert\vec{v}\rVert$ aussi, nous pouvons en conclure que :
+\be
+	\mathrm{d}\cos\theta_{0} = -\sin\theta_{0}\mathrm{d}\theta_{0} = \dfrac{\mathrm{d}(v^{2})}{2v_{0}V}
+\ee
+Or l'\'energie cin\'etique d'une particule r\'esultante de masse $m$ s\'ecrit $T = \frac{1}{2}mv^{2} \Leftrightarrow \mathrm{d}T = \frac{1}{2}m\mathrm{d}(v^{2})$. Donc en reprenant l'\'equation (\ref{EQ:16_7}) :
+\bea
+	\dfrac{\mathrm{d}\omega_{0}}{4\pi} & = & \dfrac{1}{2}\pi\sin\theta_{0}\mathrm{d}\theta_{0} = -\dfrac{\mathrm{d}(v^{2})}{4v_{0}V} \nonumber \\
+	\Leftrightarrow \dfrac{\mathrm{d}\omega_{0}}{4\pi} & = & -\dfrac{\mathrm{d}(T)}{4mv_{0}V} \label{EQ:16_8}
+\eea
+En reprenant $v^{2} = v_{0}^{2} + V^{2} + 2v_{0}V\cos\theta_{0}$, nous en d\'eduisons que :
+\begin{itemize}
+	\item l'\'energie cin\'etique maximale est obtenue pour $\theta_{0} = 0$ et $T_{max} = \frac{m}{2}(v_{0} + V)^{2}$
+	\item l'\'energie cin\'etique minimale est obtenue pour $\theta_{0} = \pi$ et $T_{max} = \frac{m}{2}(v_{0} - V)^{2}$
+\end{itemize}
+et dans cet intervalle, l'\'energie cin\'etique se distribue suivant la relation (\ref{EQ:16_8}).
+
+Si la d\'esint\'egration donne plus de deux composantes, cela complexifie l'\'etude et en particulier, l'\'energie des composantes est loin d'\^etre unique dans le r\'ef\'erentiel <<~c~>>. Toutefois il existe une valeur maximale de l'\'energie cin\'etique pour chaque particule r\'esultante. Parmi l'ensemble des particules r\'esultants, consid\'erons-en une de masse $m_{1}$ et en posant $E_{int}'$, l'\'energie <<~interne~>> de l'ensemble des particules restantes moins $m_{1}$. Puisque cette situation permet de revenir \`a un probl\`eme \`a deux corps, la formule (\ref{EQ:16_1}) permet d'\'ecrire :
+\be
+	E_{int} = E_{int}' + T' + T_{10} + E_{1int}
+\ee
+avec $T'$ l'\'energie cin\'etique de l'ensemble des particules restantes moins $m_{1}$, $T_{10}$ l'\'energie cin\'etique de $m_{1}$ et $E_{1int}$ son \'energie interne. Les \'energies cin\'etiques peuvent s'\'ecrire avec $M$ la masse de la particule initiale :
+\be
+	T' = \dfrac{p_{0}^{2}}{2(M - m_{1})}\text{ et }T_{10} = \dfrac{p_{0}^{2}}{2m_{1}}
+\ee
+donc :
+\bea
+	E_{int} - E_{int}' - E_{1int} & = & \dfrac{M}{M - m_{1}}\dfrac{p_{0}^{2}}{2m_{1}} \nonumber \\
+	\Leftrightarrow T_{10} & = & \dfrac{M - m_{1}}{M}(E_{int} - E_{int}' - E_{1int})
+\eea
+Aussi $T_{10}$ est maximale si et seulement si $E_{int}'$ est minimale. Ceci intervient lorsque toutes les particules r\'esultantes, sauf $m_{1}$, ont la m\^eme vitesse, i.e. une agitation du syst\`eme minimale et $E_{int}'$ devient simplement la somme des \'energies internes de cet ensemble de particules. Dans ce cas pr\'ecis, la quantit\'e $E_{int} - E_{int}' - E_{1int}$ repr\'esente $\epsilon$, l'\'energie de d\'esint\'egration d\'efinie dans l'\'equation (\ref{EQ:16_2}). Nous en concluons :
+\be
+	T_{10max} = \dfrac{M - m_{1}}{M}\epsilon \label{EQ:16_9}
+\ee
