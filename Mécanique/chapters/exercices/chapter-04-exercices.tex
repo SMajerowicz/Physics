@@ -69,7 +69,59 @@ et
 	1 + \dfrac{\tan\theta_{1}}{\tan\theta_{2}} & = & \dfrac{\tan\theta_{1} + \tan\theta_{2}}{\tan\theta_{2}} = \left(\dfrac{\cos\theta_{1}}{\sin\theta_{1}} + \dfrac{\cos\theta_{2}}{\sin\theta_{2}}\right)\dfrac{\cos\theta_{2}}{\sin\theta_{2}} \nonumber \\
 	& = & \dfrac{(\cos\theta_{1}\sin\theta_{2} + \sin\theta_{1}\cos\theta_{2})\cos\theta_{2}}{\cos\theta_{1}\cos\theta_{2}\sin\theta_{2}} = \dfrac{\sin(\theta_{1} + \theta_{2})}{\cos\theta_{1}\sin\theta_{2}}
 \eea
+L'\'equation principale devient alors :
+\be
+	\dfrac{(v_{10}^{2} - V^{2})m_{1}}{(m_{1} + m_{2})V^{2}}\sin^{2}(\theta_{1} + \theta_{2}) = \dfrac{m_{1} + m_{2}}{m_{1}}\sin^{2}\theta_{2} - 2\cos\theta_{1}\sin\theta_{2}\sin(\theta_{1} + \theta_{2})
+\ee
+Toutefois :
+\bea
+	\cos\theta_{1}\sin\theta_{2}\sin(\theta_{1} + \theta_{2}) & = & \cos\theta_{1}\sin\theta_{2}(\cos\theta_{1}\sin\theta_{2} + \sin\theta_{1}\cos\theta_{2}) \nonumber \\
+	& = & \cos^{2}\theta_{1}\sin^{2}\theta_{2} + \cos\theta_{1}\sin\theta_{1}\cos\theta_{2}\sin\theta_{2} \nonumber \\
+	& = & \sin^{2}\theta_{2} - \sin^{2}\theta_{1}\sin^{2}\theta_{2} + \cos\theta_{1}\sin\theta_{1}\cos\theta_{2}\sin\theta_{2} \nonumber \\
+	& = & \sin^{2}\theta_{2} - \sin\theta_{1}\sin\theta_{2}(\sin\theta_{1}\sin\theta_{2} - \cos\theta_{1}\cos\theta_{2}) \nonumber \\
+	& = & \sin^{2}\theta_{2} + \sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2})
+\eea
+ce qui permet d'avancer ainsi :
+\bea
+	\dfrac{(v_{10}^{2} - V^{2})m_{1}}{(m_{1} + m_{2})V^{2}}\sin^{2}(\theta_{1} + \theta_{2}) & = & \dfrac{m_{1} + m_{2}}{m_{1}}\sin^{2}\theta_{2} - 2\sin^{2}\theta_{2} - 2\sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2})\nonumber \\
+	& = & \dfrac{m_{2}}{m_{1}}\sin^{2}\theta_{2} + \sin^{2}\theta_{2} - 2\sin^{2}\theta_{2} - 2\sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2})\nonumber \\
+	& = & \dfrac{m_{2}}{m_{1}}\sin^{2}\theta_{2} - \sin^{2}\theta_{2} - 2\sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2})
+\eea
 
 \subsection{Distribution des directions dans <<~l~>>}
+
+Pour \'etablie la distribution des directions des particules r\'esultantes dans le r\'ef\'erentiel <<~l~>>, nous allons repartir de l'\'equation (\ref{EQ:16_6}) qui apporte la solution pour deux domaines diff\'erents.
+
+\subsubsection{$v_{0} > V$}
+
+Dans ce cas, $\theta \in [0;\pi]$ \`a la vue de la figure (\ref{FIG:4_14}) et l'\'equation (\ref{EQ:16_6}) s'\'ecrit :
+\be
+	\cos\theta_{0} = -\dfrac{V}{v_{0}}\sin^{2}\theta + \cos\theta\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}
+\ee
+La distribution $\dfrac{\mathrm{d}\omega_{0}}{4\pi}$ vaut $\dfrac{1}{2}\sin\theta_{0}\mathrm{d}\theta_{0} = -\dfrac{\mathrm{d}(\cos\theta_{0})}{2}$ selon l'\'equation (\ref{EQ:16_7}). Cela permet donc d'\'ecrire avec la relation pr\'ec\'edente :
+\bea
+	\begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{1} & = & \dfrac{V}{v_{0}}\sin\theta\cos\theta\mathrm{d}\theta + \dfrac{\sin\theta}{2}\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}\mathrm{d}\theta - \dfrac{\cos\theta}{4}\dfrac{-2\dfrac{V^{2}}{v_{0}^{2}}\sin\theta\cos\theta\mathrm{d}\theta}{\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}} \nonumber \\
+	& = & \dfrac{V}{v_{0}}\sin\theta\cos\theta\mathrm{d}\theta + \dfrac{\mathrm{d}\theta}{2\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}}\left(\sin\theta - \dfrac{V^{2}}{v_{0}^{2}}\sin^{3}\theta + \dfrac{V^{2}}{v_{0}^{2}}\sin\theta\cos^{2}\theta\right) \nonumber \\
+	& = & \dfrac{1}{2}\sin\theta\mathrm{d}\theta\left[2\dfrac{V}{v_{0}}\cos\theta + \dfrac{V^{2}}{v_{0}^{2}\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}}(\dfrac{v_{0}^{2}}{V^{2}} + \cos^{2}\theta - \sin^{2}\theta)\right] \nonumber \\
+	& = & \dfrac{1}{2}\sin\theta\left[2\dfrac{V}{v_{0}}\cos\theta + \dfrac{1+\dfrac{V^{2}}{v_{0}^{2}}\cos(2\theta)}{\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}}\right]\mathrm{d}\theta\label{EQ:16_EX2A}
+\eea
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_04_paragraph_16_exercice_2a}
+		\caption{Exemples de distribution pour diff\'erentes valeurs de $\frac{V}{v_{0}}$, de 0.1 à 0.99, par int\'egration de l'\'equation (\ref{EQ:16_EX2A})}\label{FIG:4_16_EX2}
+	\end{center}
+\end{figure}
+
+\subsubsection{$v_{0} < V$}
+
+Dans ce cas, la m\^eme s\'equence calculatoire am\`ene \`a \'ecrire pour $\theta \in [0;\theta_{max}]$ :
+\be
+	\begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{2} = \dfrac{1}{2}\sin\theta\left[2\dfrac{V}{v_{0}}\cos\theta - \dfrac{1 + \dfrac{V^{2}}{v_{0}^{2}}\cos(2\theta)}{\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}}\right]\mathrm{d}\theta
+\ee
+sachant qu'il faut prendre cette fois-ci dans l'\'equation (\ref{EQ:16_6}) les deux solutions, celles avec le signe - et celle avec le signe +, d\'eduite pr\'ec\`edemment. Ainsi la distribution totale pour $v_{0} < V$ s'obtient en faisant :
+\be
+	\begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{1} - \begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{2} = \dfrac{1 + \dfrac{V^{2}}{v_{0}^{2}}\cos(2\theta)}{\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}}\sin\theta\mathrm{d}\theta\label{EQ:16_EX2B}
+\ee
 
 \subsection{Intervalles angulaires dans <<~l~>>}
