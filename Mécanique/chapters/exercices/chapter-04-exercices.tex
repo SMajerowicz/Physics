@@ -109,7 +109,7 @@ La distribution $\dfrac{\mathrm{d}\omega_{0}}{4\pi}$ vaut $\dfrac{1}{2}\sin\thet
 \begin{figure}[htb!]
 	\begin{center}
 		\includegraphics[width=10cm]{chapter_04_paragraph_16_exercice_2a}
-		\caption{Exemples de distribution pour diff\'erentes valeurs de $\frac{V}{v_{0}}$, de 0.1 à 0.99, par int\'egration de l'\'equation (\ref{EQ:16_EX2A})}\label{FIG:4_16_EX2}
+		\caption{Exemples de distribution pour diff\'erentes valeurs de $\frac{V}{v_{0}}$, de 0.1 à 0.99, par int\'egration de l'\'equation (\ref{EQ:16_EX2A})}\label{FIG:4_16_EX2A}
 	\end{center}
 \end{figure}
 
@@ -124,4 +124,24 @@ sachant qu'il faut prendre cette fois-ci dans l'\'equation (\ref{EQ:16_6}) les d
 	\begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{1} - \begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{2} = \dfrac{1 + \dfrac{V^{2}}{v_{0}^{2}}\cos(2\theta)}{\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}}\sin\theta\mathrm{d}\theta\label{EQ:16_EX2B}
 \ee
 
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_04_paragraph_16_exercice_2b}
+		\caption{Exemples de distribution pour diff\'erentes valeurs de $\frac{V}{v_{0}}$, de 1.5 à 10, par int\'egration de l'\'equation (\ref{EQ:16_EX2B})}\label{FIG:4_16_EX2B}
+	\end{center}
+\end{figure}
+
 \subsection{Intervalles angulaires dans <<~l~>>}
+
+Dans le r\'ef\'erentiel <<~l~>>, d\'eterminons l'angle $\theta$ d\'efini comme la somme $\theta_{1} + \theta_{2}$ :
+\bea
+	\tan\theta & = & \tan(\theta_{1} + \theta_{2}) = \dfrac{\tan\theta_{1} + \tan\theta_{2}}{1 - \tan\theta_{1}\tan\theta_{2}} \nonumber \\
+	& = & \dfrac{\dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}} + \dfrac{v_{20}\sin\theta_{20}}{V + v_{20}\cos\theta_{20}}}{1 - \dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}}\dfrac{v_{20}\sin\theta_{20}}{V + v_{20}\cos\theta_{20}}} \nonumber \\
+\eea
+or $\theta_{20} = \pi - \theta_{10}$, donc :
+\bea
+	\tan\theta & = & \dfrac{\dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}} + \dfrac{v_{20}\sin\theta_{10}}{V - v_{20}\cos\theta_{10}}}{1 - \dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}}\dfrac{v_{20}\sin\theta_{10}}{V - v_{20}\cos\theta_{10}}} \nonumber \\
+	& = & \dfrac{v_{10}\sin\theta_{10}(V - v_{20}\cos\theta_{10}) + v_{20}\sin\theta_{10}(v_{10}\cos\theta_{10} + V)}{(V + v_{10}\cos\theta_{10})(V - v_{20}\cos\theta_{10}) - v_{10}v_{20}\sin^{2}\theta_{10}} \nonumber \\
+	& = & \dfrac{v_{10}V\sin\theta_{10} - v_{10}v_{20}\cos\theta_{10}\sin\theta_{10} + v_{10}v_{20}\cos\theta_{10}\sin\theta_{10} + v_{20}V\sin\theta_{10}}{v_{10}V\cos\theta_{10} - v_{10}v_{20}\cos^{2}\theta_{10} + V^{2} - v_{20}V\cos\theta_{10} - v_{10}v_{20}\sin^{2}\theta_{10}} \nonumber \\
+	& = & \dfrac{(v_{10} + v_{20})V\sin\theta_{10}}{V^{2} - v_{10}v_{20} + (v_{10} - v_{20})V\cos\theta_{10}}
+\eea
