@@ -171,3 +171,83 @@ Aussi $T_{10}$ est maximale si et seulement si $E_{int}'$ est minimale. Ceci int
 \be
 	T_{10max} = \dfrac{M - m_{1}}{M}\epsilon \label{EQ:16_9}
 \ee
+
+\section{Chocs \'elastiques des particules}
+
+Le choc entre deux particules est dit \'elastique lorsqu'il n'y a pas de modifications de leur \'etat interne. Lors de l'application de la loi de conservation de l'\'energie, il n'est donc pas n\'ecessaire de prendre en compte les \'energies internes respectives. Dans le r\'ef\'erentiel du centre d'inertie <<~c~>>, ce dernier est de facto au repos. Avant le choc, par application de la conservation de l'impulsion, nous avons dans <<~c~>> : $m_{1}\vec{v}_{10} + m_{2}\vec{v}_{20} = \vec{0}$. Dans <<~l~>>, la position du centre d'inertie s'\'ecrit :
+\be
+	\vec{R} = \dfrac{m_{1}\vec{r}_{1} + m_{2}\vec{r}_{2}}{m_{1} + m_{2}}
+\ee
+et la loi de composition des vitesses am\`ene \`a \'ecrire :
+\be
+	\begin{cases}
+		\vec{v}_{1} = \vec{v}_{10} + \frac{\mathrm{d}\vec{R}}{\mathrm{dt}} \\
+		\vec{v}_{2} = \vec{v}_{20} + \frac{\mathrm{d}\vec{R}}{\mathrm{dt}}
+	\end{cases}
+\ee
+donc en soustrayant les deux relations et en d\'efinissant\footnote{Voir une \'equivalence avec les relations (\ref{EQ:13_2})} $\vec{v} = \vec{v}_{1} - \vec{v}_{2}$ :
+\be
+	\vec{v} = \vec{v}_{10} - \vec{v}_{20}
+\ee
+En reprenant la conservation de l'impulsion dans <<~c~>>, nous avons alors :
+\be
+	\begin{cases}
+		\vec{v} = \vec{v}_{10} + \frac{m_{1}}{m_{2}}\vec{v}_{10} \Leftrightarrow \vec{v}_{10} = \frac{m_{2}}{m_{1} + m_{2}}\vec{v} \\
+		\vec{v} = -\vec{v}_{20} - \frac{m_{2}}{m_{1}}\vec{v}_{20} \Leftrightarrow \vec{v}_{20} = -\frac{m_{1}}{m_{1} + m_{2}}\vec{v}
+	\end{cases}
+\ee
+
+Comme le choc est \'elastique, dans <<~c~>>, la conservation de l'impulsion après le choc donne $m_{1}\vec{v'}_{10} + m_{2}\vec{v'}_{20} = \vec{0}$ et comme avant le choc, nous avons $m_{1}\vec{v}_{10} + m_{2}\vec{v}_{20} = \vec{0}$, nous pouvons en conclure que c'est vrai si $m_{1}(\vec{v'}_{10} + \vec{v}_{10}) + m_{2}(\vec{v'}_{20} + \vec{v}_{20}) = \vec{0}$, soit $\vec{v'}_{10} = -\vec{v}_{10}$ et $\vec{v'}_{20} = -\vec{v}_{20}$. De m\^eme, la conservation de l'\'energie avant et apr\`es le choc, et qui ne concerne que les \'energies cin\'etiques, implique que l'\'energie de chacune des deux particules est conserv\'ees car $v'_{10} = v_{10}$ et $v'_{20} = v_{20}$.
+Par cons\'equent, dans <<~c~>>, l'unique diff\'erence entre avant et apr\`es le choc se situe dans l'inversion de la direction de la vitesse de chacune des deux particules.
+
+D\'efinissons le vecteur unitaire $\vec{n}_{0}$ dans la direction de la vitesse apr\`es le choc de la particule de masse $m_{1}$. Alors $\vec{v'}_{10} = v'_{10}\vec{n}_{0} = v_{10}\vec{n}_{0}$. Le vecteur $\vec{n}_{0}$ absorbe l'inversion de direction apr\`es le choc et permet de reprendre les relations ci-dessous pour en conclure :
+\be
+	\begin{cases}
+		\vec{v'}_{10} = \frac{m_{2}}{m_{1} + m_{2}}v\vec{n}_{0} \\
+		\vec{v'}_{20} = -\frac{m_{1}}{m_{1} + m_{2}}v\vec{n}_{0} \label{EQ:17_1}
+	\end{cases}
+\ee
+Le passage de <<~c~>> \`a <<~l~>> via la loi de composition des vitesses et l'expression de la vitesse du centre d'inertie dans <<~l~>> permet d'\'ecrire :
+\be
+	\begin{cases}
+		\vec{v'}_{1} = \vec{v'}_{10} + \frac{\mathrm{d}\vec{R'}}{\mathrm{dt}} \\
+		\vec{v'}_{2} = \vec{v'}_{20} + \frac{\mathrm{d}\vec{R'}}{\mathrm{dt}}
+	\end{cases}
+\ee
+avec :
+\be
+	\dfrac{\mathrm{d}\vec{R'}}{\mathrm{dt}} = \dfrac{m_{1}\vec{v'}_{1} + m_{2}\vec{v'}_{2}}{m_{1} + m_{2}} = \dfrac{m_{1}\vec{v}_{1} + m_{2}\vec{v}_{2}}{m_{1} + m_{2}}
+\ee
+par l'additivit\'e des int\'egrales du mouvement, voir le paragraphe (\ref{PAR:6}) qui implique que les lois de conservation ne d\'ependent pas des interactions en jeu, en particulier pour celle de l'impulsion ici. Par cons\'equent, en reportant les \'equations (\ref{EQ:17_1}) :
+\be
+	\begin{cases}
+		\vec{v'}_{1} = \frac{m_{2}}{m_{1} + m_{2}}v\vec{n}_{0} + \frac{m_{1}\vec{v}_{1} + m_{2}\vec{v}_{2}}{m_{1} + m_{2}} \\
+		\vec{v'}_{2} = -\frac{m_{1}}{m_{1} + m_{2}}v\vec{n}_{0} + \frac{m_{1}\vec{v}_{1} + m_{2}\vec{v}_{2}}{m_{1} + m_{2}} \label{EQ:17_2}
+	\end{cases}
+\ee
+o\`u seul le vecteur $\vec{n}_{0}$ est une cons\'equence de la loi d'interaction entre les particules. En multipliant les relations (\ref{EQ:17_2}) par la masse respective des particules, nous arrivons \`a exprimer leur impulsion apr\`es le choc en fonction de celle avant le choc, le tout dans le r\'ef\'erentiel <<~l~>> :
+\be
+	\begin{cases}
+		\vec{p'}_{1} = mv\vec{n}_{0} + \frac{m_{1}}{m_{1} + m_{2}}(\vec{p}_{1} + \vec{p}_{2}) \\
+		\vec{p'}_{2} = -mv\vec{n}_{0} + \frac{m_{2}}{m_{1} + m_{2}}(\vec{p}_{1} + \vec{p}_{2}) \label{EQ:17_3}
+	\end{cases}
+\ee
+avec $m$ la masse r\'eduite du syt\`eme d\'efinie telle que $m = \frac{m_{1}m_{2}}{m_{1} + m_{2}}$.
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(300,300)(0,0)
+			%circle
+			\linethickness{0.05mm}
+			\put(150,150){\circle{200}}
+			%vectors circle
+			\linethickness{0.5mm}
+			\put(40,150){\vector(1,0){60}}\put(65,135){$\vec{V}$}
+			\put(100,150){\vector(1,1){72}}\put(140,180){$\vec{v}_{0}$}
+			\put(40,150){\vector(9,5){130}}\put(90,185){$\vec{v}$}
+			%points circle
+			\put(30,147){$A$}
+		\end{picture}
+		\caption{Repr\'esentation g\'eom\'etrique d'un choc entre deux particules}\label{FIG:4_17_1}
+	\end{center}
+\end{figure}
