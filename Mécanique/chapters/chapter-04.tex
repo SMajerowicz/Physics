@@ -242,12 +242,134 @@ avec $m$ la masse r\'eduite du syt\`eme d\'efinie telle que $m = \frac{m_{1}m_{2
 			\put(150,150){\circle{200}}
 			%vectors circle
 			\linethickness{0.5mm}
-			\put(40,150){\vector(1,0){60}}\put(65,135){$\vec{V}$}
-			\put(100,150){\vector(1,1){72}}\put(140,180){$\vec{v}_{0}$}
-			\put(40,150){\vector(9,5){130}}\put(90,185){$\vec{v}$}
+			\put(60,150){\vector(1,0){90}}
+			\put(150,150){\vector(1,0){50}}
+			\put(60,150){\vector(7,6){115}}\put(90,190){$\vec{p'}_{1}$}
+			\put(150,150){\vector(1,5){20}}\put(160,185){$\vec{n}_{0}$}
+			\put(170,246){\vector(3,-10){29}}\put(195,190){$\vec{p'}_{2}$}
 			%points circle
-			\put(30,147){$A$}
+			\put(146,138){$O$}
+			\put(51,148){$A$}
+			\put(202,146){$B$}
+			\put(175,250){$C$}
 		\end{picture}
-		\caption{Repr\'esentation g\'eom\'etrique d'un choc entre deux particules}\label{FIG:4_17_1}
+		\caption{Repr\'esentation g\'eom\'etrique d'un choc entre deux particules}\label{FIG:4_15}
+	\end{center}
+\end{figure}
+
+Sur la figure (\ref{FIG:4_15}) est trac\'e le cercle de rayon $mv$. Les vecteurs $\vec{AC}$ et $\vec{CB}$ donnent respectivement $\vec{p'}_{1}$ et $\vec{p'}_{2}$ en accord avec les relations (\ref{EQ:17_3}). Les impulsions initiales $\vec{p}_{1}$ et $\vec{p}_{2}$ impliquent que les points $A$ et $B$ ne changent pas de position, aussi seul le point $C$ peut avoir une position quelconque sur le cercle de rayon $mv$. Par construction g\'eom\'etrique, les relations (\ref{EQ:17_3}) donnent :
+\be
+	\begin{cases}
+		\vec{AO} = \frac{m_{1}}{m_{1} + m_{2}}(\vec{p}_{1} + \vec{p}_{2}) \\
+		\vec{OB} = \frac{m_{2}}{m_{1} + m_{2}}(\vec{p}_{1} + \vec{p}_{2})
+	\end{cases}
+\ee
+
+\subsection{Cas de la particule $m_{2}$ au repos avant le choc}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(500,300)(0,0)
+			%circles
+			\linethickness{0.05mm}
+			\put(100,150){\circle{200}}\put(90,25){$m_{1} < m_{2}$}
+			\put(400,150){\circle{200}}\put(390,25){$m_{1} > m_{2}$}
+			%vectors circle #1
+			\linethickness{0.5mm}
+			\put(40,150){\vector(1,0){160}}
+			\put(40,150){\vector(9,5){130}}\put(90,190){$\vec{p'}_{1}$}
+			\put(169,221){\vector(3,-7){32}}\put(165,180){$\vec{p'}_{2}$}
+			%angles circle #1
+			\linethickness{0.05mm}
+			\multiput(100,150)(10,10){7}{\line(1,1){8}}
+			\qbezier(55,150)(55,155)(50,155)\put(60,153){$\theta_{1}$}
+			\qbezier(110,150)(110,155)(105,155)\put(114,154){$\xi$}
+			\qbezier(180,150)(188,165)(194,165)\put(170,155){$\theta_{2}$}
+			%points circle #1
+			\put(95,135){$O$}
+			\put(30,147){$A$}
+			\put(202,147){$B$}
+			\put(175,220){$C$}
+			%vectors circle #2
+			\linethickness{0.5mm}
+			\put(250,150){\vector(1,0){250}}
+			\put(250,150){\vector(10,3){220}}\put(390,200){$\vec{p'}_{1}$}
+			\put(469,221){\vector(3,-7){32}}\put(465,180){$\vec{p'}_{2}$}
+			%\theta_{max} case
+			\linethickness{0.05mm}
+			\put(250,150){\line(10,9){90}}
+			\put(400,150){\line(-11,15){60}}
+			%angles circle #2
+			\linethickness{0.05mm}
+			\multiput(400,150)(10,10){7}{\line(1,1){8}}
+			\qbezier(280,150)(280,158)(275,158)\put(287,152){$\theta_{1}$}
+			\qbezier(410,150)(410,155)(405,155)\put(412,153){$\xi$}
+			\qbezier(480,150)(488,165)(494,165)\put(470,155){$\theta_{2}$}
+			\qbezier(320,150)(320,190)(294,190)\put(315,182){$\theta_{max}$}
+			%points circle #2
+			\put(395,135){$O$}
+			\put(240,147){$A$}
+			\put(502,147){$B$}
+			\put(475,220){$C$}
+		\end{picture}
+		\caption{Repr\'esentation g\'eom\'etrique de d\'esint\'egrations dans le cas $\vec{v}_{2} = \vec{0}$}\label{FIG:4_16}
+	\end{center}
+\end{figure}
+
+Si la particule de masse $m_{2}$ est au repos avant le choc, cela se traduit par $v_{2} = \vec{0} = p_{2}$. Nous avons aussi :
+\be
+	\vec{OB} = \dfrac{m_{2}}{m_{1} + m_{2}}(\vec{p}_{1} + \vec{p}_{2}) = \frac{m_{1}m_{2}}{m_{1} + m_{2}}\vec{v}_{1} = m\vec{v}_{1} = m\vec{v}
+\ee
+car par d\'efinition, $\vec{v} = \vec{v}_{1} - \vec{v}_{2}$ et donc \'egal \`a $\vec{v}_{1}$ dans le cas qui nous occupe. Donc le point $B$ se trouve positionner sur le cercle de rayon $mv$. De plus :
+\be
+	\vec{AB} = \vec{AO} + \vec{OB} = \frac{m_{1}}{m_{1} + m_{2}}\vec{p}_{1} + \dfrac{m_{2}}{m_{1} + m_{2}}\vec{p}_{1} = \vec{p}_{1}
+\ee
+Le vecteur $\vec{AB}$ repr\'esente donc l'impulsion de d\'epart de la particule de masse $m_{1}$.
+
+Les points $A$, $O$ et $B$ se situant sur la m\^eme droite, nous pouvons en d\'eduire :
+\be
+	AO = AB - OB = m_{1}v_{1} - \dfrac{m_{1}m_{2}}{m_{1} + m_{2}}v_{1} = \dfrac{m_{1}^{2}}{m_{1} + m_{2}}v_{1} = \dfrac{m_{1}}{m_{2}}OB
+\ee
+Par cons\'equent :
+\begin{itemize}
+	\item si $m_{1} < m_{2}$ alors le point $A$ se situe \`a l'int\'erieur du cercle
+	\item si $m_{1} = m_{2}$ alors le point $A$ se situe sur le cercle
+	\item si $m_{1} > m_{2}$ alors le point $A$ se situe \`a l'ext\'erieur du cercle
+\end{itemize}
+Ces cas sont repr\'esent\'es sur la figure (\ref{FIG:4_16}). Sur celle-ci, les angles $\theta_{1}$ et $\theta_{2}$ sont les angles de d\'eviation dans <<~l~>> par rapport \`a la direction du choc, d\'efinie par $\vec{p}_{1}$ et $\xi$ est l'angle de d\'eviation de la particule de masse $m_{1}$ dans <<~c~>>. Les angles $\theta_{1}$ et $\theta_{2}$ peuvent \^etre calcul\'es ainsi :
+\be
+	\begin{cases}
+		\tan\theta_{1} = \dfrac{mv\sin\xi}{AO + mv\cos\xi} = \dfrac{\dfrac{m_{1}m_{2}}{m_{1} + m_{2}}v\sin\xi}{\dfrac{m_{1}^{2}}{m_{1} + m_{2}}v + \dfrac{m_{1}m_{2}}{m_{1} + m_{2}}v\cos\xi} = \dfrac{m_{2}\sin\xi}{m_{1} + m_{2}\cos\xi} \\
+		\\
+		\pi = \dfrac{\pi}{2} + \dfrac{\xi}{2} + \theta_{2} \Leftrightarrow \theta_{2} = \dfrac{\pi - \xi}{2} \label{EQ:17_4}
+	\end{cases}
+\ee
+
+\subsection{Cas d'un choc entre deux particules de même masse dont l'une au repos avant le choc}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(300,300)(0,0)
+			%circles
+			\linethickness{0.05mm}
+			\put(150,150){\circle{200}}
+			%vectors circle #1
+			\linethickness{0.5mm}
+			\put(50,150){\vector(1,0){200}}
+			\put(50,150){\vector(9,4){170}}\put(140,200){$\vec{p'}_{1}$}
+			\put(219,221){\vector(3,-7){32}}\put(215,180){$\vec{p'}_{2}$}
+			%angles circle #1
+			\linethickness{0.05mm}
+			\multiput(150,150)(10,10){7}{\line(1,1){8}}
+			\qbezier(65,150)(65,155)(60,155)\put(75,153){$\theta_{1}$}
+			\qbezier(160,150)(160,155)(155,155)\put(164,154){$\xi$}
+			\qbezier(230,150)(238,165)(244,165)\put(220,155){$\theta_{2}$}
+			%points circle #1
+			\put(145,135){$O$}
+			\put(40,147){$A$}
+			\put(252,147){$B$}
+			\put(225,220){$C$}
+		\end{picture}
+		\caption{Repr\'esentation g\'eom\'etrique de d\'esint\'egrations dans le cas $\vec{v}_{2} = \vec{0}$ et $m_{1} = m_{2}$}\label{FIG:4_17}
 	\end{center}
 \end{figure}
