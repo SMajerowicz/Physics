@@ -145,3 +145,23 @@ or $\theta_{20} = \pi - \theta_{10}$, donc :
 	& = & \dfrac{v_{10}V\sin\theta_{10} - v_{10}v_{20}\cos\theta_{10}\sin\theta_{10} + v_{10}v_{20}\cos\theta_{10}\sin\theta_{10} + v_{20}V\sin\theta_{10}}{v_{10}V\cos\theta_{10} - v_{10}v_{20}\cos^{2}\theta_{10} + V^{2} - v_{20}V\cos\theta_{10} - v_{10}v_{20}\sin^{2}\theta_{10}} \nonumber \\
 	& = & \dfrac{(v_{10} + v_{20})V\sin\theta_{10}}{V^{2} - v_{10}v_{20} + (v_{10} - v_{20})V\cos\theta_{10}}
 \eea
+
+\section{Chocs \'elastiques de deux particules}
+
+Dans le r\'ef\'erentiel <<~l~>>, exprimons les vitesses apr\`es le choc $v'_{1}$ et $v'_{2}$ en fonction de l'angle de d\'eviation sous lequel elles s'\'ecartent, sachant qu'avant le choc $v_{2} = 0$ et donc $v_{1} = v$.
+
+Puisque la grandeur $2OB$ est un diam\`etre du cercle de rayon $mv$, nous avons $p'_{2} = 2OB\cos\theta_{2}$, donc :
+\be
+	v'_{2} = \dfrac{2OB}{m_{2}}\cos\theta_{2} = \dfrac{2mv}{m_{2}}\cos\theta_{2}
+\ee
+avec $m$ la masse r\'eduite du syst\`eme compos\'e des deux particules.
+
+Ensuite, nous utilisons la formule d'Al-Kashi dans le triangle form\'e des points $A$, $O$ et $C$, voir la figure (\ref{FIG:4_16}) pour faire intervenir l'angle $\theta_{1}$ tel que :
+\bea
+	OC^{2} & = & AO^{2} + {p'}_{1}^{2} - 2 AOp'_{1}\cos\theta_{1} \nonumber \\
+	m^{2}v^{2} & = & \dfrac{m_{1}^{2}}{m_{2}^{2}}OB^{2} + m_{1}^{2}{v'}_{1}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}OBv'_{1}\cos\theta_{1} \nonumber \\
+	\left(1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\right)m^{2}v^{2} & = & m_{1}^{2}{v'}_{1}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}mvv'_{1}\cos\theta_{1} \nonumber \\
+	\dfrac{(m_{2} + m_{1})(m_{2} - m_{1})}{m_{2}^{2}}m^{2} & = & m_{1}^{2}\dfrac{v'_{1}}{v}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}m\dfrac{v'_{1}}{v}\cos\theta_{1} \nonumber \\
+	\dfrac{(m_{2} + m_{1})(m_{2} - m_{1})m_{1}^{2}m_{2}^{2}}{m_{2}^{2}(m_{1} + m_{2})} & = & m_{1}^{2}\dfrac{v'_{1}}{v}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}m\dfrac{v'_{1}}{v}\cos\theta_{1} \nonumber \\
+	0 & = & \dfrac{v'_{1}}{v}^{2} - 2\dfrac{m}{m_{2}}\dfrac{v'_{1}}{v}\cos\theta_{1} + \dfrac{m_{1} - m_{2}}{m_{1} + m_{2}}
+\eea
