@@ -345,6 +345,38 @@ Ces cas sont repr\'esent\'es sur la figure (\ref{FIG:4_16}). Sur celle-ci, les a
 	\end{cases}
 \ee
 
+D\'eterminons ensuite la valeur de la vitesse apr\`es le choc pour les deux particules dans <<~l~>>. Nous avons d\'ej\`a vu que $\vec{v'}_{1} = \vec{v'}_{10} + \vec{\dot{R'}}$ sachant que $\vec{\dot{R'}} = \vec{\dot{R}}$, aussi :
+\be
+	{v'}_{1}^{\,2} = {v'}_{10}^{\,2} + {\lVert \vec{\dot{R}} \rVert}^{2} + 2v'_{10}\lVert \vec{\dot{R}} \rVert\cos\theta_{10}
+\ee
+or $\theta_{10} = \xi$ par d\'efinition, donc :
+\be
+	{v'}_{1}^{\,2} = \dfrac{m_{2}^{2}}{(m_{1} + m_{2})^{2}}v^{2} + \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v_{1}^{2} + 2\dfrac{m_{1}m_{2}}{(m_{1} + m_{2})^{2}}vv_{1}\cos\xi
+\ee
+et comme $v_{1} = v$, nous avons :
+\be
+	v'_{1} = \dfrac{\sqrt{m_{1}^{2} + m_{2}^{2} + 2m_{1}m_{2}\cos\xi}}{m_{1} + m_{2}}v \label{EQ:17_5A}
+\ee
+De mani\`ere similaire pour $v'_{2}$, nous avons $\vec{v'}_{1} = \vec{v'}_{10} + \vec{\dot{R}}$, soit :
+\bea
+	{v'}_{2}^{\,2} & = & {v'}_{20}^{\,2} + {\lVert \vec{\dot{R}} \rVert}^{2} + 2v'_{20}\lVert \vec{\dot{R}} \rVert\cos(\langle \vec{v'}_{20},\vec{\dot{R}} \rangle) \nonumber \\
+	& = & \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2} + \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v_{1}^{2} + 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}vv_{1}\cos\theta_{20}
+\eea
+et comme $v_{1} = v$ et $\theta_{20} = \pi - \xi$ :
+\bea
+	{v'}_{2}^{\,2} & = &  2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2} - 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2}\cos\xi \nonumber \\
+	& = & 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2}(1 - \cos\xi) = 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2}\left(1 - 1 + 2\sin^{2}\left(\dfrac{\xi}{2}\right)\right) \nonumber \\
+	& = & 4\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2}\sin^{2}\left(\dfrac{\xi}{2}\right)
+\eea
+car :
+\be
+	\cos\xi = \cos\left(\dfrac{\xi}{2} + \dfrac{\xi}{2}\right) = \cos^{2}\left(\dfrac{\xi}{2}\right) - \sin^{2}\left(\dfrac{\xi}{2}\right) = 1 - 2\sin^{2}\left(\dfrac{\xi}{2}\right)
+\ee
+Nous arrivons donc \`a :
+\be
+	v'_{2} = \dfrac{m_{1}}{m_{1} + m_{2}}v\sin\left(\dfrac{\xi}{2}\right) \label{EQ:17_5B}
+\ee
+
 \subsection{Cas d'un choc entre deux particules de même masse dont l'une au repos avant le choc}
 
 \begin{figure}[htb!]
