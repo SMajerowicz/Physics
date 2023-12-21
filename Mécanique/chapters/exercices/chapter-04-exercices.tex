@@ -163,5 +163,14 @@ Ensuite, nous utilisons la formule d'Al-Kashi dans le triangle form\'e des point
 	\left(1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\right)m^{2}v^{2} & = & m_{1}^{2}{v'}_{1}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}mvv'_{1}\cos\theta_{1} \nonumber \\
 	\dfrac{(m_{2} + m_{1})(m_{2} - m_{1})}{m_{2}^{2}}m^{2} & = & m_{1}^{2}\dfrac{v'_{1}}{v}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}m\dfrac{v'_{1}}{v}\cos\theta_{1} \nonumber \\
 	\dfrac{(m_{2} + m_{1})(m_{2} - m_{1})m_{1}^{2}m_{2}^{2}}{m_{2}^{2}(m_{1} + m_{2})} & = & m_{1}^{2}\dfrac{v'_{1}}{v}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}m\dfrac{v'_{1}}{v}\cos\theta_{1} \nonumber \\
-	0 & = & \dfrac{v'_{1}}{v}^{2} - 2\dfrac{m}{m_{2}}\dfrac{v'_{1}}{v}\cos\theta_{1} + \dfrac{m_{1} - m_{2}}{m_{1} + m_{2}}
+	0 & = & \left(\dfrac{v'_{1}}{v}\right)^{2} - 2\dfrac{m}{m_{2}}\dfrac{v'_{1}}{v}\cos\theta_{1} + \dfrac{m_{1} - m_{2}}{m_{1} + m_{2}}
 \eea
+
+Il s'agit d'une \'equation du second degr\'e en $v'_{1}/v$ dont les solutions sont :
+\bea
+	\dfrac{v'_{1}}{v} & = & \dfrac{1}{2}\left(\dfrac{2m_{1}m_{2}}{m_{2}(m_{1} + m_{2})}\cos\theta_{1} \pm \sqrt{\dfrac{4m_{1}^{2}m_{2}^{2}}{m_{2}^{2}(m_{1} + m_{2})^{2}}\cos^{2}\theta_{1} - \dfrac{4(m_{1} - m_{2})}{m_{2}(m_{1} + m_{2})}}\right) \nonumber \\
+	& = & \dfrac{m_{1}}{m_{1} + m_{2}}\cos\theta_{1} \pm \sqrt{\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}\cos^{2}\theta_{1} - \dfrac{m_{1}^{2} - m_{2}^{2}}{(m_{1} + m_{2})^{2}}} \nonumber \\
+	& = & \dfrac{m_{1}}{m_{1} + m_{2}}\cos\theta_{1} \pm \dfrac{1}{m_{1} + m_{2}}\sqrt{m_{2}^{2} + (\cos^{2}\theta_{1} - 1)m_{1}^{2}} \nonumber \\
+	& = & \dfrac{m_{1}}{m_{1} + m_{2}}\cos\theta_{1} \pm \dfrac{m_{2}}{m_{1} + m_{2}}\sqrt{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}
+\eea
+De mani\`ere \'equivalente \`a l'\'equation (\ref{EQ:16_6}), pour $m_{1} > m_{2}$, la solution est univoque avec le signe $+$ alors que pour $m_{1} < m_{2}$, les deux solutions sont admises. La repr\'esentation de ces solutions est \'egalement similaire \`a ce qui est repr\'esent\'e sur les figures (\ref{FIG:4_14A}) et (\ref{FIG:4_14B}).
