@@ -448,3 +448,29 @@ et remarquons que $\theta_{2} - \theta_{1} = \frac{\pi}{2}$, i.e. que les deux p
 \ee
 
 \section{Diffusion des particules}
+
+Dans le paragraphe pr\'ec\'edent, nous avons \'etudi\'e les param\`etres de la trajectoire des particules apr\`es le choc \`a partir des \'el\'ements avant le choc. Mais pour d\'eterminer pleinement le r\'esultat du choc, il faut tenir compte de la loi d'interaction entre les particules. Consid\'erons d'abord la d\'eviation d'une particule de masse $m$ dans un champ d'\'energie potentielle $U(r)$ o\`u` le centre de force\footnote{Le centre de force est le point tel que $r = 0$  dans le champ de force, i.e. le champ d'\'energie potentielle} est immobile, i.e. plac\'e \`a la position du centre d'inertie du syst\`eme de particules.
+
+Le point de rebroussement d\'efini par $\dot{r} = 0$ entre les \'equations (\ref{EQ:14_8}) et (\ref{EQ:14_10}) implique que la trajectoire est sym\'etrique par rapport à ce point, qui, de facto correspond au p\'erih\'elie de la trajectoire, voir la figure (\ref{FIG:4_18}). Sur celle-ci, $\xi$ correspond \`a l'angle de d\'eviation par rapport \`a la direction initiale de la particule. $\varphi_{0}$ est l'angle de d\'eviation lorsque la particule passe au plus pr\`es du centre du champ de force, soit le p\'erih\'elie. Par construction, nous avons :
+\be
+	\xi = \lvert \pi - 2\varphi_{0} \rvert \label{EQ:18_1}
+\ee
+et par application de l'\'equation (\ref{EQ:14_7}) :
+\be
+	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:18_2}
+\ee
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(300,300)(0,0)
+			%dashed lines
+			\linethickness{0.05mm}
+			\multiput(0,0)(10,0){30}{\line(1,0){8}}
+			\multiput(0,50)(10,0){30}{\line(1,0){8}}
+			%curve
+			%angles
+			%points
+		\end{picture}
+		\caption{D\'eviation d'une particule dans un champ de force}\label{FIG:4_18}
+	\end{center}
+\end{figure}
