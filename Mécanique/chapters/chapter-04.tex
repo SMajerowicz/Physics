@@ -459,18 +459,90 @@ et par application de l'\'equation (\ref{EQ:14_7}) :
 \be
 	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:18_2}
 \ee
+Dans le cadre d'un mouvement infini, il est commode d'\'ecrire l'\'energie $E$ et le moment cin\'etique $M$ en fonction de $v_{\infty}$, la vitesse de la particule incidente pour $r\leftarrow\infty$, et $\rho$, la \emph{distance de vis\'ee}, i.e., la distance minimale par rapport au centre de force s'il n'y avait pas de champ de force. Par conservation de l'\'energie, et parce que $U(\infty) = 0$, et du moment cin\'etique et en accord avec les d\'efinitinos pr\'ec\'edentes, la particule incidente poss\`ede les caract\'eristiques du mouvement suivantes :
+\be
+	E = \dfrac{mv_{\infty}^{2}}{2}\text{ et } M = m\rho v_{\infty} \label{EQ:18_3}
+\ee
+L'\'equation (\ref{EQ:18_2}) devient alors dans ce contexte :
+\be
+	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{m\rho v_{\infty}}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(\dfrac{mv_{\infty}^{2}}{2} - U(r)\right) - \dfrac{m^{2}\rho^{2}v_{\infty}^{2}}{r^{2}}}}} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}} \label{EQ:18_4}
+\ee
+Avec l'\'equation (\ref{EQ:18_1}), nous avons donc une relation entre $\xi$ et $\rho$.
+
+Dans les applications physiques, nous avons affaire \`a un faisceau de particules semblables arrivant avec la m\^eme vitesse $v_{\infty}$ mais avec des distances de vis\'ee $\rho$ diff\'erentes. Elles sont alors diffus\'ees suivant des angles $\xi$ diff\'erents. Il s'agit du ph\'enom\`ene de \emph{diffusion}.
 
 \begin{figure}[htb!]
 	\begin{center}
-		\begin{picture}(300,300)(0,0)
+		\begin{picture}(300,200)(0,0)
 			%dashed lines
 			\linethickness{0.05mm}
 			\multiput(0,0)(10,0){30}{\line(1,0){8}}
 			\multiput(0,50)(10,0){30}{\line(1,0){8}}
+			\multiput(25,0)(10,10){10}{\line(1,1){8}}
+			\multiput(75,50)(-1,10){15}{\line(-1,8){1}}
 			%curve
+			\qbezier(65,200)(70,70)(300,55)
 			%angles
+			\qbezier(40,0)(40,10)(35,10)\put(42,5){$\varphi_{0}$}
+			\qbezier(65,50)(65,60)(73,60)\put(60,63){$\xi$}
+			%vector
+			\put(150,30){\vector(0,1){20}}
+			\put(150,20){\vector(0,-1){20}}
+			\put(148,23){$\rho$}
 			%points
+			\put(17,3){$O$}
+			\put(123,100){$A$}
 		\end{picture}
 		\caption{D\'eviation d'une particule dans un champ de force}\label{FIG:4_18}
 	\end{center}
 \end{figure}
+
+Soit $\mathrm{d}N$ le nombre de particules diffus\'ees par unit\'e de temps dans l'angle compris entre $\xi$ et $\xi + \mathrm{d}\xi$. $\mathrm{d}N$ est par d\'efinition proportionnel \`a la densit\'e du faisceau incident. Soit :
+\be
+	\mathrm{d}\sigma = \dfrac{\mathrm{d}N}{n} \label{EQ:18_5}
+\ee
+o\`u $n$ est le nombre de particules traversant l'unit\'e de surface d'une section droite du faisceau incident par unit\'e de temps\footnote{Restons dans l'hypoth\`ese d'un faisceau homog\`ene sur toute sa section.}. Alors la quantit\'e $\mathrm{d}\sigma$ a la dimension d'une surface et est appel\'ee la \emph{section efficace du faisceau}. Ce param\`etre est la caract\'eristique la plus importante du processus de diffusion.
+
+Consid\'erons par hypoth\`ese que $\xi$ et $\rho$ sont r\'eciproquement univoque. D\'emontrons que c'est vrai lorsque $\xi$ est une fonction monotone et d\'ecroissante de $\rho$, i.e. $\forall\rho$, $\frac{\partial\xi}{\partial\rho} < 0$ et $\forall\xi$, $\frac{\partial\rho}{\partial\xi} < 0$, donc au premier ordre, le d\'eveloppement de Taylor donne :
+\be
+	\begin{cases}
+		\xi(\rho + \delta\rho) = \xi(\rho) + \frac{\partial\xi}{\partial\rho}\delta\rho \Rightarrow \xi(\rho + \delta\rho) < \xi(\rho) \\
+		\rho(\xi + \delta\xi) = \rho(\xi) + \frac{\partial\rho}{\partial\xi}\delta\xi \Rightarrow \rho(\xi + \delta\xi) < \rho(\xi)
+	\end{cases}
+\ee
+et nous avons donc bien \'etabli cette relation univoque.
+
+Le nombre de particules diffus\'ees entre $\xi$ et $\xi + \mathrm{d}\xi$ par unit\'e de temps est \'egal au nombre de particules issu du cercle de surface $2\pi\rho(\xi + \mathrm{d}\xi)$ diminu\'e par le nombre de particules issu du cercle de surface $2\pi\rho(\xi)$, soit :
+\be
+	\mathrm{d}N = 2\pi(\rho(\xi + \mathrm{d}\xi) - \rho(\xi))n = 2\pi\mathrm{d}\rho n
+\ee
+car au premier ordre, nous avons toujours $\rho(\xi + \mathrm{d}\xi) = \rho(\xi) + \mathrm{d}\rho(\xi)$ et la section efficace d\'efinie \`a l'\'equation (\ref{EQ:18_5}) vaut :
+\be
+	\mathrm{d}\sigma = 2\pi\mathrm{d}\rho \label{EQ:18_6}
+\ee
+qui peut aussi s'\'ecrire :
+\be
+	\mathrm{d}\sigma = 2\pi\rho(\xi)\lvert \dfrac{\partial\rho(\xi)}{\partial\xi} \rvert \mathrm{d}\xi \label{EQ:18_7}
+\ee
+Comme la plupart du temps $\frac{\partial\rho(\xi)}{\partial\xi}$ est n\'egative et que la section efficace est une surface, il est n\'ecessaire d'utiliser la valeur absolue. \'Ecrivons d\'esormais la section efficace en fonction de l'angle solide. Ce dernier vaut pour un anneau $\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi$, voir la relation (\ref{EQ:16_7}), ce qui permet d'\'ecrire :
+\be
+	\mathrm{d}\sigma = 2\pi\rho(\xi)\lvert \dfrac{\partial\rho(\xi)}{\partial\xi} \rvert \dfrac{\mathrm{d}\omega}{2\pi\sin\xi} = \dfrac{\rho(\xi)}{\sin\xi}\lvert \dfrac{\partial\rho(\xi)}{\partial\xi} \rvert \mathrm{d}\omega \label{EQ:18_8}
+\ee
+Revenons au cas d'un faisceau de particules diffus\'ees par d'autres particules initialement au repos. Dans la relation (\ref{EQ:18_7}), la section efficace $\mathrm{d}\sigma$ est d\'efinie dans le cadre d'un champ de force positionn\'e au centre d'inertie des particules. $\mathrm{d}\sigma$ est donc bien la section efficace dans le r\'ef\'erentiel <<~c~>> et exprim\'ee en fonction de l'angle de d\'eviation $\xi$. Pour l'exprimer dans le cadre du r\'ef\'erentiel du laboratoire <<~l~>>, nous revenons aux relations (\ref{EQ:17_4}). En fonction de $\theta_{1}$, l'angle de d\'eviation dans <<~l~>> pour les particules du faisceau incident, nous avons :
+\bea
+	\tan\theta_{1} = \dfrac{m_{2}\sin\xi}{m_{1} + m_{2}\cos\xi} & \Leftrightarrow & \dfrac{\sin^{2}\theta_{1}}{\cos^{2}\theta_{1}} = \dfrac{m_{2}^{2}\sin^{2}\xi}{(m_{1} + m_{2}\cos\xi)^{2}} \nonumber \\
+	\sin^{2}\theta_{1}(m_{1}^{2} + m_{2}^{2}\cos^{2}\xi + 2m_{1}m_{2}\cos\xi) & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{2}^{2}\cos^{2}\theta_{1}\cos^{2}\xi \nonumber \\
+	m_{1}^{2}\sin^{2}\theta_{1} + m_{2}^{2}\sin^{2}\theta_{1}\cos^{2}\xi + 2m_{1}m_{2}\sin^{2}\theta_{1}\cos\xi & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{2}^{2}\cos^{2}\theta_{1}\cos^{2}\xi \nonumber \\
+	(\sin^{2}\theta_{1} + \cos^{2}\theta_{1})m_{2}^{2}\cos^{2}\xi + 2m_{1}m_{2}\sin^{2}\theta_{1}\cos\xi & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{1}^{2}\sin^{2}\theta_{1} \nonumber \\
+	\cos^{2}\xi + 2\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1}\cos\xi + \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1} - \cos^{2}\theta_{1} & = & 0
+\eea
+une \'equation du second degr\'e en $\cos\xi$ dont les solutions sont :
+\bea
+	\cos\xi & = & \dfrac{-2\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1} \pm \sqrt{\dfrac{4m_{1}^{2}}{m_{2}^{2}}\sin^{4}\theta_{1} - 4\left(\dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1} - \cos^{2}\theta_{1}\right)}}{2} \nonumber \\
+	& = & -\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1} \pm \sqrt{\dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}(\sin^{2}\theta_{1} - 1) + \cos^{2}\theta_{1}} \nonumber \\
+	& = & -\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1} \pm \cos\theta_{1}\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}
+\eea
+Et en fonction de $\theta_{2}$ l'angle de d\'eviation dans <<~l~>> pour les particules initialement au repos :
+\be
+	\theta_{2} = \dfrac{\pi - \xi}{2} \Leftrightarrow \xi = \pi - 2\theta_{2}
+\ee
