@@ -12,9 +12,8 @@ Pour un syst\`eme ferm\'e \`a $s$ degr\'es de libert\'e, nous avons :
 \ee
 L'uniformit\'e du temps donne $\dfrac{\partial L}{\partial \mathrm{t}} = 0$ et en utilisant l'\'equation (\ref{EQ:2_6}), nous avons :
 \bea
-	\dfrac{\mathrm{d}L}{\mathrm{dt}} & = & \sum_{i=1}^{s}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) + \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\ddot{q}_{i} \nonumber \\
-	& = & \sum_{i=1}^{s}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) \nonumber \\
-	0 & = & \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i} - L\right)
+	\dfrac{\mathrm{d}L}{\mathrm{dt}} & = & \sum_{i=1}^{s}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) + \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\ddot{q}_{i} = \sum_{i=1}^{s}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) \nonumber \\
+	\Leftrightarrow 0 & = & \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i} - L\right)
 \eea
 Par cons\'equent, la quantit\'e :
 \be
@@ -54,8 +53,7 @@ Apr\`es l'unformit\'e du temps, nous allons \'etudier les cons\'equences de l'ho
 donc $\delta L = 0$ est \'equivalent \`a :
 \bea
 	\forall \vec{\epsilon}\text{, }\sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}}\vec{\epsilon} & = & 0 \nonumber \\
-	\forall \vec{\epsilon}\text{, }\vec{\epsilon}\cdot\sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}} & = & 0 \nonumber \\
-	\Leftrightarrow \sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}} & = & 0 \label{EQ:7_1}
+	\forall \vec{\epsilon}\text{, }\vec{\epsilon}\cdot\sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}} & = & 0 \Leftrightarrow \sum_{a}\dfrac{\partial L}{\partial\vec{r}_{a}} = 0 \label{EQ:7_1}
 \eea
 Or les \'equations de Lagrange (\ref{EQ:5_2}) donnent :
 \bea
@@ -73,8 +71,7 @@ Ainsi, dans un syst\`eme ferm\'e, la quantit\'e vectorielle :
 est inchang\'ee pendant le mouvement. Le vecteur $\vec{P}$ est l'\emph{impulsion}\footnote{Anciennement appel\'ee \emph{quantit\'e de mouvement}} du syt\`eme. En utilisant l'\'equation (\ref{EQ:5_1}), nous obtenons :
 \bea
 	L & = & \sum_{a}\dfrac{m_{a}\vec{v}_{a}^{\,2}}{2} - U(\begin{Bmatrix}\vec{r}_{a}\end{Bmatrix}_{1}^{s}) \nonumber \\
-	\Rightarrow \dfrac{\partial L}{\partial \vec{v}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{2\partial\vec{v}_{a}}{\partial\vec{v}_{a}} - \dfrac{\partial U}{\partial\vec{v}_{a}} \nonumber \\
-	& = & m_{a}\vec{v}_{a}
+	\Rightarrow \dfrac{\partial L}{\partial \vec{v}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{2\partial\vec{v}_{a}}{\partial\vec{v}_{a}} - \dfrac{\partial U}{\partial\vec{v}_{a}} = m_{a}\vec{v}_{a}
 \eea
 Ainsi :
 \be
@@ -231,8 +228,7 @@ Au final, nous avons donc sept int\'egrales premi\`eres additives : l'\'energie 
 
 Comme les rayons vecteurs des points mat\'eriels interviennent dans la d\'efinition du moment cin\'etique, sa valeur d\'epend du choix de l'origine des coordonn\'ees. Prenons l'exemple de deux r\'f\'erentiels tels $\vec{r}_{a} = \vec{r'}_{a} + \vec{a}$, soit $\vec{v}_{a} = \vec{v'}_{a} \Leftrightarrow \vec{p}_{a} = \vec{p'}_{a}$, alors le moment cin\'etique s'\'ecrit :
 \bea
-	\vec{M} & = & \sum_{a}\vec{r}_{a}\wedge\vec{p}_{a} \nonumber \\
-	& = & \sum_{a}\vec{r'}_{a}\wedge\vec{p}_{a} + \sum_{a}\vec{a}\wedge\vec{p}_{a} \nonumber \\
+	\vec{M} & = & \sum_{a}\vec{r}_{a}\wedge\vec{p}_{a} = \sum_{a}\vec{r'}_{a}\wedge\vec{p}_{a} + \sum_{a}\vec{a}\wedge\vec{p}_{a} \nonumber \\
 	& = & \sum_{a}\vec{r'}_{a}\wedge\vec{p'}_{a} + \vec{a}\wedge\sum_{a}\vec{p}_{a} \nonumber \\
 	\vec{M} & = & \vec{M'} + \vec{a}\wedge\vec{P} \label{EQ:9_4}
 \eea
@@ -240,8 +236,7 @@ avec $\vec{M'} = \sum_{a}\vec{r'}_{a}\wedge\vec{p'}_{a}$. Par voie de cons\'eque
 
 Consid\'erons d\'esormais deux r\'f\'erentiels $(K)$ et $(K')$ tels $\vec{v}_{a} = \vec{v'}_{a} + \vec{V}$ et \`a l'instant donn\'e, $\vec{r}_{a} = \vec{r'}_{a}$ alors :
 \bea
-	\vec{M} & = & \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v}_{a} \nonumber \\
-	& = & \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v'}_{a} + \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{V} \nonumber \\
+	\vec{M} & = & \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v}_{a} = \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v'}_{a} + \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{V} \nonumber \\
 	& = & \sum_{a}m_{a}\vec{r'}_{a}\wedge\vec{v'}_{a} + \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{V} \nonumber \\
 	\vec{M} & = & \vec{M'} + \mu\vec{R}\wedge\vec{V} \label{EQ:9_5}
 \eea
@@ -260,10 +255,8 @@ Quelques cas particuliers où un champ ext\'erieur est pr\'esent :
 	\ee
 	et donc\footnote{$\vec{u}\wedge\vec{v} = (u_{y}v_{z}-u_{z}v_{y}\,;\,u_{z}v_{x}-u_{x}v_{z}\,;\,u_{y}v_{z}-u_{z}v_{y})$} :
 	\bea
-		M_{z} & = & \sum_{a}{M_{a}}_{z} \nonumber \\
-		& = & \sum_{a}\left(r_{a}\cos\varphi_{a}m_{a}r_{a}\cos\varphi_{a}\dot{\varphi_{a}} + r_{a}\sin\varphi_{a}m_{a}r_{a}\sin\varphi_{a}\right) \nonumber \\
-		& = & \sum_{a}\left(r_{a}^{2}m_{a}\dot{\varphi_{a}}(\cos^{2}\varphi_{a} + \sin^{2}\varphi_{a})\right) \nonumber \\
-		& = & \sum_{a}r_{a}^{2}m_{a}\dot{\varphi_{a}} \label{EQ:9_8}
+		M_{z} & = & \sum_{a}{M_{a}}_{z} = \sum_{a}\left(r_{a}\cos\varphi_{a}m_{a}r_{a}\cos\varphi_{a}\dot{\varphi_{a}} + r_{a}\sin\varphi_{a}m_{a}r_{a}\sin\varphi_{a}\right) \nonumber \\
+		& = & \sum_{a}\left(r_{a}^{2}m_{a}\dot{\varphi_{a}}(\cos^{2}\varphi_{a} + \sin^{2}\varphi_{a})\right) = \sum_{a}r_{a}^{2}m_{a}\dot{\varphi_{a}} \label{EQ:9_8}
 	\eea
 	La relation (\ref{EQ:4_5}) donne en coordonn\'ees cylindriques la fonction de Lagrange :
 	\be
@@ -297,9 +290,7 @@ En posant la condition suivante :
 \ee
 la fonction de Lagrange se transforme ainsi :
 \bea
-	L = \sum_{a}T_{a} - U & \mapsto & \left(\dfrac{\alpha}{\beta}\right)^{2}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
-	& = & \dfrac{\alpha^{2}}{\alpha^{2-k}}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
-	& = & \alpha^{k}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
+	L = \sum_{a}T_{a} - U & \mapsto & \left(\dfrac{\alpha}{\beta}\right)^{2}\sum_{a}T_{a} - \alpha^{k}U = \dfrac{\alpha^{2}}{\alpha^{2-k}}\sum_{a}T_{a} - \alpha^{k}U = \alpha^{k}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
 	L & \mapsto & \alpha^{k}L
 \eea
 et comme $\alpha^{k}$ est une constante alors les \'equations de Lagrange (\ref{EQ:2_6}) restent inchang\'ees et pleinement valables. En conclusion, si l'\'energie potentielle d'un syst\`eme est une fonction homog\`ene de degr\'e $k$ des coordonn\'ees alors les \'equations du mouvement admettent des trajectoires g\'eom\'etriques semblables et nous pouvons en d\'eduire certaines caract\'eristiques de proportionnalit\'e.
@@ -322,10 +313,9 @@ Regardons quelques cas particuliers :
 			\dfrac{\mathrm{t}'}{\mathrm{t}} = \left(\dfrac{l'}{l}\right)^{\frac{1}{2}}
 		\ee
 	\item celui de l'attraction newtonienne, gravitationnelle de deux masses, ou coulombienne entre deux charges, l'\'energie potentielle est une fonction inverse de la distance entre les deux points mat\'eriels, i.e. $k=-1$. Nous obtenons donc :
-		\bea
-			\dfrac{\mathrm{t}'}{\mathrm{t}} & = & \left(\dfrac{l'}{l}\right)^{\frac{3}{2}} \nonumber \\
-			\Leftrightarrow \left(\dfrac{\mathrm{t}'}{\mathrm{t}}\right)^{2} = \left(\dfrac{l'}{l}\right)^{3} \label{EQ:10_KEPLER}
-		\eea
+		\be
+			\dfrac{\mathrm{t}'}{\mathrm{t}} = \left(\dfrac{l'}{l}\right)^{\frac{3}{2}} \Leftrightarrow \left(\dfrac{\mathrm{t}'}{\mathrm{t}}\right)^{2} = \left(\dfrac{l'}{l}\right)^{3} \label{EQ:10_KEPLER}
+		\ee
 		C'est exactement la \emph{troisi\`eme loi de Kepler}.
 \end{itemize}
 
@@ -367,10 +357,9 @@ ce qui donne finalement :
 	2\overline{T} = \sum_{a}\vec{r}_{a}\dfrac{\partial \overline{U}}{\partial\vec{r}_{a}} \label{EQ:10_5}
 \ee
 Le th\'eor\`eme d'Euler appliqu\'e \`a l'\'energie potentielle, fonction homogn\`ene de degr\'e $k$, donne :
-\bea
-	\sum_{a}\vec{r}_{a}\dfrac{\partial U}{\partial\vec{r}_{a}} & = & kU \nonumber \\
-	\sum_{a}\vec{r}_{a}\dfrac{\partial \overline{U}}{\partial\vec{r}_{a}} & = & k\overline{U}
-\eea
+\be
+	\sum_{a}\vec{r}_{a}\dfrac{\partial U}{\partial\vec{r}_{a}} = kU \Rightarrow \sum_{a}\vec{r}_{a}\dfrac{\partial \overline{U}}{\partial\vec{r}_{a}} = k\overline{U}
+\ee
 et donc \emph{le th\'eor\`eme du Viriel} :
 \be
 	2\overline{T} = k\overline{U} \label{EQ:10_6}

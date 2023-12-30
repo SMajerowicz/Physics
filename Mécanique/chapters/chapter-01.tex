@@ -155,21 +155,17 @@ en supprimant les ordres sup\'erieurs à 2 en $\vec{\epsilon}$ dans le d\'evelop
 	L(\vec{v}^{\,2} + 2\vec{v}\cdot\vec{\epsilon} + \vec{\epsilon}^{\,2}) \approx L(\vec{v}^{\,2} + \dfrac{\partial L}{\partial \vec{v}^{\,2}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2}) + \dfrac{\partial L}{2\partial \vec{v}^{\,4}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2})^{2} + \ldots
 \ee
 En reprenant la fonction de Lagrange qui peut se d\'efinir comme (\ref{EQ:2_8}), nous pouvons pos\'e :
-\bea
-	\dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}\cdot\vec{\epsilon} & = & \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}} \nonumber \\
-	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}\cdot\vec{\epsilon} & = & \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}} \nonumber \\
-	\Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{\mathrm{d}(\vec{r}\cdot\vec{\epsilon})}{\mathrm{dt}} & = & \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}}
-\eea
+\be
+	\dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}\cdot\vec{\epsilon} = \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}} \Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}\cdot\vec{\epsilon} = \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}} \Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{\mathrm{d}(\vec{r}\cdot\vec{\epsilon})}{\mathrm{dt}} = \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}}
+\ee
 n'est vraie que si et seulement si $\dfrac{\partial L}{\partial \vec{v}^{\,2}} = \alpha$, avec $\alpha$ une constante. Or nous avons \ref{EQ:3_1}, qui implique :
 \be
 	L = L(\vec{v}^{\,2}) = \alpha\vec{v}^{\,2}
 \ee
 Dans le cadre où le r\'ef\'erentiel $(K)$ se meut à une vitesse $\vec{V}$ par rapport à $(K')$, la fonction de Lagrange devient :
 \bea
-L' = \alpha\vec{v'}^{\,2} & = & \alpha.(\vec{v} + \vec{V})^{2} \nonumber \\
-& = & \alpha\vec{v}^{\,2} + 2\alpha\vec{v}\cdot\vec{V} + \alpha\vec{V}^{\,2} \nonumber \\
-& = & L + 2\alpha\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}\cdot\vec{V} + \alpha\dfrac{\mathrm{dt}}{\mathrm{dt}}\vec{V}^{\,2} \nonumber \\
-& = & L + \dfrac{\mathrm{d}}{\mathrm{dt}}\left(2\alpha\vec{r}\cdot\vec{V} + \alpha\vec{V}^{\,2}\mathrm{t}\right)
+L' = \alpha\vec{v'}^{\,2} & = & \alpha.(\vec{v} + \vec{V})^{2} = \alpha\vec{v}^{\,2} + 2\alpha\vec{v}\cdot\vec{V} + \alpha\vec{V}^{\,2} \nonumber \\
+& = & L + 2\alpha\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}\cdot\vec{V} + \alpha\dfrac{\mathrm{dt}}{\mathrm{dt}}\vec{V}^{\,2} =	 L + \dfrac{\mathrm{d}}{\mathrm{dt}}\left(2\alpha\vec{r}\cdot\vec{V} + \alpha\vec{V}^{\,2}\mathrm{t}\right)
 \eea
 dont le second terme est une d\'eriv\'ee totale par rapport au temps d'une fonction qui ne d\'epend que de la position et du temps. Ce second terme peut donc être omis, voir (\ref{EQ:2_8}) et la fonction de Lagrange devient, en posant $\alpha=m/2$ :
 \be
@@ -228,10 +224,8 @@ En introduisant la fonction de Lagrange de (\ref{EQ:5_1}) :
 \ee
 car l'\'energie potentielle ne d\'epend que des coordonn\'ees donc $\dfrac{\partial U}{\partial\vec{v}_{a}} = 0$. Et :
 \bea
-	\dfrac{\partial L}{\partial\vec{r}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{\partial\vec{v}_{a}^{\,2}}{\partial\vec{r}_{a}} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
-	& = & \dfrac{m_{a}}{2}\dfrac{\partial}{\partial\vec{r}_{a}}\left(\dfrac{\mathrm{d}\vec{r}_{a}}{\mathrm{dt}}\right)^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
-	& = & \dfrac{m_{a}}{2}\left[\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial\vec{r}_{a}}{\partial\vec{r}_{a}}\right)\right]^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
-	& = & - \dfrac{\partial U}{\partial\vec{r}_{a}}
+	\dfrac{\partial L}{\partial\vec{r}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{\partial\vec{v}_{a}^{\,2}}{\partial\vec{r}_{a}} - \dfrac{\partial U}{\partial\vec{r}_{a}} = \dfrac{m_{a}}{2}\dfrac{\partial}{\partial\vec{r}_{a}}\left(\dfrac{\mathrm{d}\vec{r}_{a}}{\mathrm{dt}}\right)^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} \nonumber \\
+	& = & \dfrac{m_{a}}{2}\left[\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial\vec{r}_{a}}{\partial\vec{r}_{a}}\right)\right]^{2} - \dfrac{\partial U}{\partial\vec{r}_{a}} = - \dfrac{\partial U}{\partial\vec{r}_{a}}
 \eea
 car $\dfrac{\partial\vec{r}_{a}}{\partial\vec{r}_{a}} = 1$ ! Nous obtenons ainsi :
 \be
@@ -288,7 +282,6 @@ et l'\'equation de Newton (\ref{EQ:5_3}) devient :
 \ee
 Dans le cadre d'un champ uniforme ($U$ ne d\'epend plus du temps), la force d\'efinie en (\ref{EQ:5_4}) devient :
 \bea
-	\vec{F} & = & -\dfrac{\mathrm{d} U(\vec{r})}{\mathrm{d}\vec{r}} \nonumber \\
-	\vec{F}.d\vec{r} & = & - \mathrm{d} U(\vec{r}) \nonumber \\
+	\vec{F} & = & -\dfrac{\mathrm{d} U(\vec{r})}{\mathrm{d}\vec{r}} \Leftrightarrow \vec{F}.d\vec{r} = - \mathrm{d} U(\vec{r}) \nonumber \\
 	\vec{F}.\vec{r} & = & - U(\vec{r}) \label{EQ:5_8}
 \eea
