@@ -179,6 +179,59 @@ De mani\`ere \'equivalente \`a l'\'equation (\ref{EQ:16_6}), pour $m_{1} > m_{2}
 
 \subsection{Diffusion par une bille solide}
 
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(300,200)(0,0)
+			%circle
+			\linethickness{0.05mm}
+			\put(50,50){\circle{100}}
+			%dashed lines
+			\linethickness{0.05mm}
+			\multiput(50,50)(10,0){25}{\line(1,0){8}}
+			\put(65,75){$a$}
+			\multiput(50,50)(10,10){10}{\line(1,1){8}}
+			%angles
+			\qbezier(60,50)(60,55)(55,55)
+			\put(60,57){$\varphi_{0}$}
+			%vectors
+			\put(150,73){\vector(0,1){12}}
+			\put(150,63){\vector(0,-1){13}}
+			\put(147,66){$\rho$}
+			%trajectories
+			\linethickness{0.5mm}
+			\put(85,85){\line(1,0){220}}
+			\put(85,85){\line(2,5){40}}
+		\end{picture}
+		\caption{Diffusion par une bille solide de rayon $a$}\label{FIG:4_18_EX1}
+	\end{center}
+\end{figure}
+
+L'objectif est de calculer la section efficace pour la diffusion de particules par une bille de rayon $a$ parfatiement solide, i.e. $U(r>a) = 0$ et $U(r<a) = \infty$. La figure (\ref{FIG:4_18_EX1}) illustre la trajectoire, \`a savoir que les particules incidentes se meuvent librement avant et apr\`es le choc, qui se compose de deux droites. D'apr\`es la m\^eme figure, nous pouvons \'etablir que :
+\bea
+	\rho & = & a\sin\varphi_{0} = a\sin\left(\dfrac{\pi - \xi}{2}\right) = a\left(\cos\dfrac{\pi}{2}\sin\dfrac{-\xi}{2} + \sin\dfrac{\pi}{2}\cos\dfrac{-\xi}{2}\right) \nonumber \\
+	& = & a\cos\dfrac{\xi}{2}
+\eea
+En reportant dans l'\'equation (\ref{EQ:18_7}), cela donne :
+\be
+	\mathrm{d}\sigma = 2\pi a\cos\dfrac{\xi}{2}\lvert -\dfrac{a}{2}\sin\dfrac{\xi}{2} \rvert \mathrm{d}\xi = \pi a^{2}\cos\dfrac{\xi}{2}\sin\dfrac{\xi}{2}\mathrm{d}\xi
+\ee
+or $\sin\xi = \sin(\frac{\xi}{2} + \frac{\xi}{2}) = 2\cos\frac{\xi}{2}\sin\frac{\xi}{2}$, donc :
+\be
+	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{2}\sin\xi\mathrm{d}\xi
+\ee
+et puisque l'angle solide se d\'efinit pour un anneau comme $\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi$, donc :
+\be
+	\mathrm{d}\sigma = \dfrac{a^{2}}{4}\mathrm{d}\omega
+\ee
+Dans le r\'ef\'erentiel <<~c~>>, la distribution est donc isotrope, i.e. ne d\'epend pas de l'angle de d\'eviation, puisque :
+\be
+	\sigma = \int_{0}^{4\pi}\dfrac{a^{2}}{4}\mathrm{d}\omega = \pi a^{2}
+\ee
+et la section efficace est \'egale \`a la section de la bille et assez logiquement, une particule pour \^etre diffus\'ee doit avoir une distance de vis\'ee inf\'erieure au rayon\footnote{Les particules incdents sont consid\'er\'ees comme ponctuelles.} de la bille $a$. Pour d\'eterminer la section efficace $\mathrm{d}\sigma$ dans le r\'ef\'erentiel <<~l~>>, nous pouvons repartir des \'equations (\ref{EQ:17_4}) o\`u $m_{1}$ est la masse de la particule incidente et $m_{2}$ celle de la bille. Nous avons vu plus haut que :
+\be
+	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{2}\sin\xi\mathrm{d}\xi = -\dfrac{\pi a^{2}}{2}\mathrm{d}(\cos\xi)
+\ee
+
 \subsection{\'Energie perdue}
 
 \subsection{Cas d'un champ $\propto r^{-n}$}
