@@ -177,7 +177,7 @@ De mani\`ere \'equivalente \`a l'\'equation (\ref{EQ:16_6}), pour $m_{1} > m_{2}
 
 \section{Diffusion des particules}
 
-\subsection{Diffusion par une bille solide}
+\subsection{Diffusion par une bille solide}\label{PAR:18EX}
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -292,7 +292,36 @@ or comme $\mathrm{d}\omega_{2} = 2\pi\sin\theta_{2}\mathrm{d}\theta_{2}$ et $\ma
 
 \subsection{\'Energie perdue}
 
-Il s'agit de calculer la section efficace de diffusion en fonction de l'\'energie perdue $\epsilon$ par les particules diffus\'ees de masse $m_{1}$. La loi de conservation de l'\'energie du syst\`eme ferm\'e implique que $\epsilon$ vaut exactement l'\'energie gagn\'ee par $m_{2}$.
+Il s'agit de calculer la section efficace de diffusion en fonction de l'\'energie perdue $\epsilon$ par les particules diffus\'ees de masse $m_{1}$ dans le m\^eme cas que dans le paragraphe (\ref{PAR:18EX}). La loi de conservation de l'\'energie du syst\`eme ferm\'e implique que $\epsilon$ vaut exactement l'\'energie gagn\'ee par $m_{2}$. Cette derni\`ere est l'\'energie cin\'etique gagn\'ee par $m_{2}$ apr\`es le choc car dans le cas pr\'esent, avant le choc, $v_{2} = 0$. L'utilisation de l'\'equation (\ref{EQ:17_5B}) permet d'\'ecrire :
+\be
+	v'_{2} = \dfrac{2m_{1}v}{m_{1} + m_{2}}\sin\left(\dfrac{\xi}{2}\right) = \dfrac{2m_{1}v_{\infty}}{m_{1} + m_{2}}\sin\left(\dfrac{\xi}{2}\right)
+\ee
+car $v = v_{1} = v_{\infty}$ puisque $v_{1}$ est la vitesse avant le choc de la particule de masse $m_{1}$. Donc l'\'energie de la particule de masse $m_{2}$ apr\`es le choc vaut :
+\bea
+	E'_{2} & = & \dfrac{m_{2}}{2}{v'}_{2}^{2} = \dfrac{m_{2}}{2}\dfrac{m_{1}^{2}v_{\infty}^{2}}{(m_{1} + m_{2})^{2}}\sin^{2}\left(\dfrac{\xi}{2}\right) \nonumber \\
+	\Leftrightarrow \epsilon & = & \dfrac{2m_{1}^{2}m_{2}}{(m_{1} + m_{2})^{2}}v_{\infty}^{2}\sin^{2}\left(\dfrac{\xi}{2}\right)
+\eea
+Par d\'efinition, $\sin^{2}(\frac{\xi}{2}) \leq 1$, nous pouvons donc en d\'eduire que l'\'energie perdue maximale $\epsilon_{max}$ vaut pr\'ecis\`ement :
+\be
+	\epsilon_{max} = \dfrac{2m_{1}^{2}m_{2}}{(m_{1} + m_{2})^{2}}v_{\infty}^{2}
+\ee
+telle que :
+\be
+	\epsilon = \epsilon_{max}\sin^{2}\left(\dfrac{\xi}{2}\right)
+\ee
+En d\'erivant, nous obtenons :
+\be
+	\mathrm{d}\epsilon = \epsilon_{max}\sin\left(\dfrac{\xi}{2}\right)\cos\left(\dfrac{\xi}{2}\right)\mathrm{d}\xi = \dfrac{1}{2}\epsilon_{max}\sin\xi\mathrm{d}\xi
+\ee
+car $\sin\xi = 2\sin(\frac{\xi}{2})\cos(\frac{\xi}{2})$. Nous savons que :
+\be
+	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{2}\sin\xi\mathrm{d}\xi
+\ee
+donc, finalement :
+\be
+	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{\epsilon_{max}}\mathrm{d}\epsilon
+\ee
+et la distribution des particules diffus\'ees est homog\`ene par rapport \`a $\epsilon$ qui est l'\'energie perdue par celles-ci.
 
 \subsection{Cas d'un champ $\propto r^{-n}$}
 
