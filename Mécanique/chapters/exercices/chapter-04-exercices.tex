@@ -231,8 +231,68 @@ et la section efficace est \'egale \`a la section de la bille et assez logiqueme
 \be
 	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{2}\sin\xi\mathrm{d}\xi = -\dfrac{\pi a^{2}}{2}\mathrm{d}(\cos\xi)
 \ee
+La quantit\'e $\cos\xi$ est reprise de l'\'equation (\ref{EQ:18_9}) et il y a trois cas diiff\'erents.
+
+\subsubsection{$m_{1} < m_{2}$}
+
+Dans ce cas, $\cos\xi$ s'\'ecrit :
+\be
+	\cos\xi = -\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1} + \cos\theta_{1}\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}
+\ee
+aussi :
+\bea
+	\mathrm{d}(\cos\xi) & = & -2\dfrac{m_{1}}{m_{2}}\cos\theta_{1}\sin\theta_{1}\mathrm{d}\theta_{1} - \sin\theta_{1}\mathrm{d}\theta_{1}\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}} + \dfrac{1}{2}\cos\theta_{1}\dfrac{-2\dfrac{m_{1}^{2}}{m_{2}^{2}}\cos\theta_{1}\sin\theta_{1}\mathrm{d}\theta_{1}}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}} \nonumber \\
+	& = & -\sin\theta_{1}\mathrm{d}\theta_{1}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}} + \dfrac{\dfrac{m_{1}^{2}}{m_{2}^{2}}\cos^{2}\theta_{1}}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\right) \nonumber \\
+	& = & -\sin\theta_{1}\mathrm{d}\theta_{1}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\left(1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1} + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos^{2}\theta_{1}\right)\right) \nonumber \\
+	& = & -\sin\theta_{1}\mathrm{d}\theta_{1}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\left(1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}(\cos^{2}\theta_{1} - \sin^{2}\theta_{1})\right)\right) \nonumber \\
+	& = & -\sin\theta_{1}\mathrm{d}\theta_{1}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\left(1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})\right)\right)
+\eea
+donc :
+\be
+	\mathrm{d}\sigma_{1} = \dfrac{\pi a^{2}}{2}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\right)\sin\theta_{1}\mathrm{d}\theta_{1}
+\ee
+et puisque $\mathrm{d}\omega_{1} = 2\pi\sin\theta_{1}\mathrm{d}\theta_{1}$, nous avons finalement :
+\be
+	\mathrm{d}\sigma_{1+} = \dfrac{a^{2}}{4}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\right)\mathrm{d}\omega_{1}
+\ee
+
+\subsubsection{$m_{1} > m_{2}$}
+
+Dans ce cas, il nous faut prendre les deux solutions de l'\'equation (\ref{EQ:18_9}). Nous pouvons reprendre celle avec le signe $+$ de la pr\'ec\'edente section et calculons la section efficace pour la seconde solution de $\cos\xi$, celle qui s'\'ecrit ainsi :
+\be
+	\cos\xi = -\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1} - \cos\theta_{1}\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}
+\ee
+En appliquant les m\^emes calculs, nous arrivons \`a :
+\be
+	\mathrm{d}\sigma_{1-} = \dfrac{a^{2}}{4}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} - \dfrac{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\right)\mathrm{d}\omega_{1}
+\ee
+En d\'efinitive, nous obtenons :
+\be
+	\mathrm{d}\sigma_{1} = \mathrm{d}\sigma_{1+} - \mathrm{d}\sigma_{1-} = \dfrac{a^{2}}{2}\dfrac{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\mathrm{d}\omega_{1}
+\ee
+
+\subsubsection{$m_{1} = m_{2}$}
+
+Dans ce cas pr\'ecis, nous en d\'eduisons :
+\bea
+	\mathrm{d}\sigma_{1} & = & \dfrac{a^{2}}{2}\dfrac{1 + \cos(2\theta_{1})}{\sqrt{1 - \sin^{2}\theta_{1}}}\mathrm{d}\omega_{1} = \dfrac{a^{2}}{2}\dfrac{1 + \cos^{2}\theta_{1} - \sin^{2}\theta_{1}}{\lvert \cos\theta_{1} \rvert}\mathrm{d}\omega_{1} = \dfrac{a^{2}}{2}\dfrac{1 + \cos^{2}\theta_{1} - 1 + \cos^{2}\theta_{1}}{\lvert \cos\theta_{1} \rvert}\mathrm{d}\omega_{1} \nonumber \\
+	& = & a^{2}\lvert \cos\theta_{1} \rvert\mathrm{d}\omega_{1}
+\eea
+$\cos\theta_{1}$ n'est pas forc\`ement positif, aussi il nous faut utiliser sa valeur absolue car la section efficace reste une surface et donc a une valeur positive.
+
+Enfin, dans le cas o\`u initialement, i.e. avant le choc, la bille de masse $m_{2}$ est immobile, comme $\xi = \pi - 2\theta_{2}$, alors :
+\bea
+	\mathrm{d}\sigma_{2} & = & \dfrac{\pi a^{2}}{2}\sin(\pi - 2\theta_{2})\mathrm{d}(\pi - 2\theta_{2}) = \dfrac{\pi a^{2}}{2}\sin(2\theta_{2})\cdot -2\mathrm{d}(\theta_{2}) = -\pi a^{2}\sin(2\theta_{2})\mathrm{d}(\theta_{2}) \nonumber \\
+	& = & -2\pi a^{2}\cos\theta_{2}\sin\theta_{2}\mathrm{d}\theta_{2}
+\eea
+or comme $\mathrm{d}\omega_{2} = 2\pi\sin\theta_{2}\mathrm{d}\theta_{2}$ et $\mathrm{d}\sigma_{2} > 0$, nous avons finalement :
+\be
+	\mathrm{d}\sigma_{2} = a^{2}\lvert \cos\theta_{2} \rvert\mathrm{d}\omega_{2}
+\ee
 
 \subsection{\'Energie perdue}
+
+Il s'agit de calculer la section efficace de diffusion en fonction de l'\'energie perdue $\epsilon$ par les particules diffus\'ees de masse $m_{1}$. La loi de conservation de l'\'energie du syst\`eme ferm\'e implique que $\epsilon$ vaut exactement l'\'energie gagn\'ee par $m_{2}$.
 
 \subsection{Cas d'un champ $\propto r^{-n}$}
 
