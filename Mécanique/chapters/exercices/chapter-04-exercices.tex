@@ -325,9 +325,68 @@ et la distribution des particules diffus\'ees est homog\`ene par rapport \`a $\e
 
 \subsection{Cas d'un champ $\propto r^{-n}$}
 
+Nous allons d\'eterminer la relation entre la section efficace et $v_{\infty}$ dans le cadre o\`u l'\'energie potentielle est proportionnelle \`a $r^{-n}$. Dans le cadre d'une \'energie potentielle homog\`ene d'ordre $k = -n$, les relations (\ref{EQ:10_3}) donnent en particulier :
+\be
+	\dfrac{v'}{v} = \left(\dfrac{l'}{l}\right)^{-\dfrac{n}{2}}
+\ee
+qui exprime la relation entre la vitesse et la longueur pour deux trajectoires diff\'erentes. Nous pouvons ainsi \'ecrire que $\rho\propto v^{-\frac{2}{n}}$ pour des trajectoires semblables. Ceci peut \^etre exprimer telle que $\rho = v_{\infty}^{-\frac{2}{n}}f(\xi)$ car pour chaque trajectoire semblable, l'angle de d\'eviation est identique. En substituant dans l'\'equation (\ref{EQ:18_6}), nous avons :
+\be
+	\mathrm{d}\sigma = 2\pi\rho\mathrm{d}\rho = 2\pi v_{\infty}^{-\frac{2}{n}}f(\xi)\cdot v_{\infty}^{-\frac{2}{n}}f'(\xi)\mathrm{d}\xi = 2\pi v_{\infty}^{-\frac{4}{n}}f(\xi)f'(\xi)\mathrm{d}\xi
+\ee
+or :
+\be
+	\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi \Rightarrow \mathrm{d}\xi = \dfrac{\mathrm{d}\omega}{2\pi\sin\xi}
+\ee
+soit :
+\be
+	\mathrm{d}\sigma = 2\pi v_{\infty}^{-\frac{4}{n}}\dfrac{f(\xi)f'(\xi)}{2\pi\sin\xi}\mathrm{d}\omega = v_{\infty}^{-\frac{4}{n}}\dfrac{f(\xi)f'(\xi)}{\sin\xi}\mathrm{d}\omega \propto v_{\infty}^{-\frac{4}{n}}\mathrm{d}\omega
+\ee
+
 \subsection{Cas d'un champ $U = -\alpha / r^{2}$}
 
+Pour d\'eterminer la section efficace pour une <<~chute~>> de particules au centre d'un champ tel que $U = -\alpha / r^{2}$, nous pouvons reprendre la d\'emonstration r\'ealis\'ee à l'\'equation {\ref{EQ:14_11}) et puisque $n = 2$, les particules incidentes de masse $m$ <<~tombent~>> si et seulement si $\alpha > \frac{M^{2}}{2m}$. En utilisant la d\'efinition (\ref{EQ:18_3}) du moment cin\'etique telle $M = m\rho v_{\infty}$, nous avons :
+\be
+	\alpha > \dfrac{M^{2}}{2m} \Leftrightarrow \alpha > \dfrac{m^{2}\rho^{2}v_{\infty}^{2}}{2m} \Leftrightarrow \rho^{2} < \dfrac{2\alpha}{mv_{\infty}^{2}}
+\ee
+Comme cela implique que la distance de vis\'ee maximale vaut exactement $\rho_{max} = \sqrt{\frac{2\alpha}{mv_{\infty}^{2}}}$ et cela donne de facto la section efficace de chute :
+\be
+	\sigma = \pi\rho_{max}^{2} = \dfrac{2\pi\alpha}{mv_{\infty}^{2}}
+\ee
+
 \subsection{Cas d'un champ $U = -\alpha / r^{n}$}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_04_paragraph_18_exercice_5}
+		\caption{\'Energie potentielle efficace pour $m\rho^{2}v_{\infty}^{2} = 6$ et $\alpha = 1$.}\label{FIG:4_18_5}
+	\end{center}
+\end{figure}
+
+Ici, nous consid\'erons que $n > 2$ et $\alpha > 0$. En reprenant l'\'equation (\ref{EQ:14_8}) et puisque nous \'etudions un champ central, l'\'energie potentielle efficace s'\'ecrit :
+\be
+	U_{eff}(r) = U(r) + \dfrac{M^{2}}{2mr^{2}} = \dfrac{m\rho^{2}v_{\infty}^{2}}{2r^{2}} - \dfrac{\alpha}{r^{n}}
+\ee
+et dont une illustration est pr\'esente sur la figure (\ref{FIG:4_18_5}). Dans ce cas, les particules incidentes <<~tombent~>> au centre si et seulement si leur \'energie $E$ est sup\'erieure \`a $U_{0}$ qui correspond à la valeur maximale de l'\'energie potentielle efficace $U_{eff}(r)$. La figure (\ref{FIG:4_18_5}) montre que trouver un extremum \`a $U_{eff}(r)$ revient \`a trouver son maximum, soit r\'esoudre l'\'equation :
+\bea
+	\dfrac{\mathrm{d}U_{eff}(r)}{\mathrm{d}r} & = & 0 \Leftrightarrow -\dfrac{m\rho^{2}v_{\infty}^{2}}{r^{3}} + \dfrac{\alpha n}{r^{n + 1}} = 0 \Leftrightarrow m\rho^{2}v_{\infty}^{2} = \dfrac{\alpha n}{r_{0}^{n - 2}} \nonumber \\
+	r_{0} & = & \left(\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right)^{\dfrac{1}{n - 2}}
+\eea
+ce qui permet de calculer la valeur maximale de l'\'energie potentielle efficace :
+\bea
+	U_{eff\, max} & = & U(r_{0}) = \dfrac{m\rho^{2}v_{\infty}^{2}}{2\left(\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right)^{\frac{2}{n - 2}}} - \dfrac{\alpha}{\left(\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right)^{\frac{n}{n - 2}}} \nonumber \\
+	& = & \dfrac{m\rho^{2}v_{\infty}^{2}}{2}\left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{2}{n - 2}} - \alpha\left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}} \nonumber \\
+	& = & \left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}}\left(-\alpha + \dfrac{m\rho^{2}v_{\infty}^{2}}{2}\left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{2 - n}{n - 2}}\right) \nonumber \\
+	& = & \left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}}\left(-\alpha + \dfrac{m\rho^{2}v_{\infty}^{2}}{2}\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right) = \dfrac{n - 2}{2}\alpha\left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}} \nonumber \\
+\eea
+La distance de vis\'ee maximale $\rho_{max}$ se d\'efinit comme la distance de vis\'ee au-del\`a de laquelle l'\'energie de la particule incidente est sup\'erieure \`a $U_{eff\, max}$. Par d\'efinition, les particules incidentes ont pour \'energie $E = \frac{m}{2}v_{\infty}^{2}$. En posant $E = U_{eff\, max}$, nous obtenons :
+\bea
+	mv_{\infty}^{2} & = & (n - 2)\alpha\left(\dfrac{m\rho_{max}^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}} \Leftrightarrow \rho_{max}^{2} = \left(\dfrac{mv_{\infty}^{2}}{(n - 2)\alpha}\right)^{\frac{n - 2}{n}}\dfrac{n\alpha}{mv_{\infty}^{2}} \nonumber \\
+	\Leftrightarrow \rho_{max}^{2} & = & n(n - 2)^{\frac{2 - n}{n}}\left(\dfrac{mv_{\infty}^{2}}{\alpha}\right)^{\frac{n - 2}{n} - 1} = n(n - 2)^{\dfrac{2 - n}{n}}\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{\frac{n}{2}}
+\eea
+et la section efficace de chute s'\'ecrit :
+\be
+	\sigma = \pi\rho_{max}^{2} = \pi n(n - 2)^{\frac{2 - n}{n}}\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{\frac{n}{2}}
+\ee
 
 \subsection{Cas d'un champ suivant la loi de Newton}
 
