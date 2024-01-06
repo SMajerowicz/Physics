@@ -255,15 +255,13 @@ Soit :
 L'\'energie cin\'etique est donc :
 \bea
 	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
-	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} \nonumber \\
-	& + & l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2}) \nonumber \\
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2}) \nonumber \\
 	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2})
 \eea
 Sachant que l'\'energie potentielle s'\'ecrit $U = -mgl\cos(\varphi)$, la fonction de Lagrange est :
-\bea
-	L & = & T - U \nonumber \\
-	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} - mla\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + mgl\cos(\varphi)
-\eea
+\be
+	L = T - U = \dfrac{ml^{2}}{2}\dot{\varphi}^{2} - mla\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + mgl\cos(\varphi)
+\ee
 car la fonction $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique n'est qu'une fonction unique du temps et peut donc \^etre omise, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $mla\alpha^{2}\cos(\alpha\mathrm{t})\sin(\varphi)$ que je n'arrive pas à obtenir ici}.
 
 \subsection{Cas des oscillations verticales}
@@ -311,15 +309,13 @@ Et sa vitesse :
 L'\'energie cin\'etique s'\'ecrit alors :
 \bea
 	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
-	& = & \dfrac{m}{2}(l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2} + a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2} \nonumber \\
-	& + & 2al\alpha\sin(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi}) \nonumber \\
+	& = & \dfrac{m}{2}(l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2} + a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2} + 2al\alpha\sin(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi}) \nonumber \\
 	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + 2al\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2})
 \eea
 Sachant que l'\'energie potentielle s'\'ecrit $U = -mg(a\cos(\alpha\mathrm{t}) + l\cos(\varphi))$, la fonction de Lagrange est :
-\bea
-	L & = & T - U \nonumber \\
-	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + mgl\cos(\varphi)
-\eea
+\be
+	L = T - U = \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + mgl\cos(\varphi)
+\ee
 car les fonctions $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique et $-mg(a\cos(\alpha\mathrm{t})$ issue de l'\'energie potentielle ne sont que des fonctions uniques du temps et peuvent donc \^etre omises, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $mla\alpha^{2}\cos(\alpha\mathrm{t})\cos(\varphi)$ que je n'arrive pas à obtenir ici}.
 
 \section{Probl\`eme du pendule rotatif à trois masses}
@@ -373,9 +369,7 @@ Or $r_{1} = r_{2} = a$ donc $\mathrm{d}r_{1} = \mathrm{d}r_{2} = 0$, ce qui perm
 \ee
 La fonction de Lagrange du syst\`eme m\'ecanique est alors :
 \bea
-	L & = & T_{1} + T_{2} + T_{3} - U_{1} - U_{2} - U_{3} \nonumber \\
-	& = & 2T_{1} + T_{3} - 2U_{1} - U_{3} \nonumber \\
-	& = & m_{1}a^{2}(\dot{\theta}^{2} + \sin^{2}(\theta)\dot{\omega}^{2}) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} \nonumber \\
-	& + & 2m_{1}ga\cos(\theta) + 2m_{2}ga\cos(\theta) \nonumber \\
+	L & = & T_{1} + T_{2} + T_{3} - U_{1} - U_{2} - U_{3} = 2T_{1} + T_{3} - 2U_{1} - U_{3} \nonumber \\
+	& = & m_{1}a^{2}(\dot{\theta}^{2} + \sin^{2}(\theta)\dot{\omega}^{2}) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} + 2m_{1}ga\cos(\theta) + 2m_{2}ga\cos(\theta) \nonumber \\
 	& = & m_{1}a^{2}(\dot{\theta}^{2} + \Omega^{2}\sin^{2}(\theta)) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} + 2(m_{1}+m_{2})ga\cos(\theta)
 \eea
