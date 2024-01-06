@@ -390,6 +390,39 @@ et la section efficace de chute s'\'ecrit :
 
 \subsection{Cas d'un champ suivant la loi de Newton}
 
+Nous allons d\'eterminer la section efficace de particules de masse $m_{1}$ qui <<~chutent~>> sur la surface d'une corps sph\'erique de rayon $R$ et de masse $m_{2} \gg m_{1}$ vers lequel les premi\`eres sont attir\'ees suivant la loi de Newton, voir le paragraphe (\ref{PAR:15}). Le fait que $m_{2} \gg m_{1}$ permet de supposer que les r\'ef\'erentiels <<~l~>> et <<~c~>> se confondent. Les particules tombent sur la surface du corps central si et seulement si la distance $r_{min}$, i.e. le p\'erih\'elie, de leur trajectoire est inf\'erieure au rayon $R$ de la sph\`ere. Le p\'erih\'elie est d\'efini suivant la relation (\ref{EQ:14_9}) telle que l'\'energie de la particule incident $E$ est \'egale à son \'energie potentielle effective $U_{eff}$. Alors la distance de vis\'ee maximale est telle que $\rho_{max}$ est d\'efinie par $r_{min} = R$ ou encore $U_{eff}(R) = E$, soit :
+\bea
+	\dfrac{M^{2}}{2m1R^{2}} - \dfrac{Gm_{1}m_{2}}{R} & = & \dfrac{m_{1}}{2}v_{\infty}^{2} \Leftrightarrow \dfrac{m_{1}^{2}v_{\infty}^{2}\rho_{max}^{2}}{2m_{1}R_{2}} - \dfrac{Gm_{1}m_{2}}{R} = \dfrac{m_{1}}{2}v_{\infty}^{2} \nonumber \\
+	\Leftrightarrow \dfrac{v_{\infty}^{2}\rho_{max}^{2}}{2R_{2}} & = & v_{\infty}^{2} + \dfrac{2Gm_{2}}{R} \Leftrightarrow \rho_{max}^{2} = R^{2}\left(1 + \dfrac{2Gm_{2}}{Rv_{\infty}^{2}}\right)
+\eea
+La section efficace $\sigma = \pi\rho_{max}^{2}$ vaut donc :
+\be
+	\sigma = \pi R^{2}\left(1 + \dfrac{2Gm_{2}}{Rv_{\infty}^{2}}\right)
+\ee
+et naturellement, nous remarquons que :
+\begin{itemize}
+	\item plus $m_{2}$ est grande plus la section efficace est importante ;
+	\item plus la vitesse d'approche de la particule incidente $v_{\infty}$ est importante et plus la section efficace est faible et s'approche de la section de la sph\`ere centrale, occultant la force gravitationnelle.
+\end{itemize}
+
 \subsection{M\'ethode d'inversion de Firsov}
 
-Oleg Firsov, 1953 cit\'e dans un article de 1971\footnote{Uniqueness of the Firsov Inversion Method and Focusing Potentials, Yu.N. Demkov, V.N. Ostrovskii, et N.B. Berezina}
+Dans ce paragraphe, nous allons r\'ealiser l'op\'eration inverse qui va consister en la mesure du champ d'\'energie potentielle \`a partir de la section efficace et de l'angle de diffussion. L'\'energie $E$ est donn\'ee et nous supposons que $U(r)$ est une fonction montone et d\'ecroissante de $r$, i.e. u champ r\'epulsif avec $U(0) > E$ et $U(\infty) = 0$. Il s'agit de reproduire la d\'emonstration r\'ealis\'ee par Oleg Firsov en 1953 et cit\'e dans un article de 1971\footnote{Uniqueness of the Firsov Inversion Method and Focusing Potentials, Yu.N. Demkov, V.N. Ostrovskii, et N.B. Berezina}.
+
+L'\'equation (\ref{EQ:18_7}) nous donne :
+\bea
+	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi \Leftrightarrow \dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi \nonumber \\
+	\Leftrightarrow \int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi & = & 2\pi\int_{\xi}^{\pi}\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi
+\eea
+or nous avons $\frac{\mathrm{d}\rho}{\mathrm{d}\xi} < 0$ car plus la distance de vis\'ee $\rho$ augmente, plus l'angle de d\'eviation $\xi$ diminue donc :
+\be
+	\int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = \pi\int_{\pi}^{\xi}2\rho(\xi)\dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi}\mathrm{d}\xi = \pi\left[\rho^{2}(\xi)\right]_{\pi}^{\xi} = \pi(\rho^{2}(\xi) - \rho^{2}(\pi))
+\ee
+Dans un champ r\'epulsif comme suppos\'e ici avec $U(0) > E$, obtenir un angle de d\'eviation $\xi = \pi$ n'est possible que pour une distance de vis\'ee $\rho$ nulle, donc $\rho(\pi) = 0$ et a fortiori :
+\be
+	\int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = \pi\rho^{2}(\xi) \label{EQ:18_EX7_1}
+\ee
+Par la suite, d\'efinissons les variables suivantes :
+\be
+	s = \dfrac{1}{r}\text{, }x = \dfrac{1}{\rho^{2}}\text{ et }w = \sqrt{1 - \dfrac{U}{E}} \label{EQ:18_EX7_2}
+\ee
