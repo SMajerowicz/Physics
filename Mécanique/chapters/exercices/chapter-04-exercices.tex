@@ -439,3 +439,75 @@ Or $s = 1/r$ donc $\mathrm{d}s = -\mathrm{d}r/r^{2}$. Pour les bornes de l'int\'
 \be
 	\dfrac{\pi - \xi}{2} = - \int_{s_{0}}^{0}{\dfrac{\mathrm{d}s}{\sqrt{xw^{2} - s^{2}}}} = \int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{\sqrt{xw^{2} - s^{2}}}} \label{EQ:18_EX7_3}
 \ee
+Pour continuer, nous allons utiliser la m\^eme technique que celle employ\'ee pour arriver \`a la relation (\ref{EQ:12_1}), soit :
+\bea
+	\dfrac{\pi - \xi(x)}{2}\dfrac{\mathrm{d}x}{\sqrt{\alpha - x}} & = & \int_{0}^{s_{0}}{\dfrac{\mathrm{d}s\mathrm{d}x}{\sqrt{(xw^{2} - s^{2})(\alpha - x)}}} \nonumber \\
+	\Leftrightarrow \int_{0}^{\alpha}{\dfrac{(\pi - \xi(x))\mathrm{d}x}{2\sqrt{\alpha - x}}} & = & \int_{0}^{\alpha}\int_{0}^{s_{0}}{\dfrac{\mathrm{d}s\mathrm{d}x}{\sqrt{(xw^{2} - s^{2})(\alpha - x)}}} = \int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}\int_{0}^{\alpha}{\dfrac{\mathrm{d}x}{\sqrt{(x - s^{2}/w^{2})(\alpha - x)}}} \nonumber \\
+	\Leftrightarrow \int_{0}^{\alpha}{\dfrac{(\pi - \xi(x))\mathrm{d}x}{2\sqrt{\alpha - x}}} & = & \int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}\int_{s^{2}/w^{2}}^{\alpha}{\dfrac{\mathrm{d}x}{\sqrt{(\alpha - x)(x - s^{2}/w^{2})}}}
+\eea
+car dans l'intervalle $x \in [0;s^{2}/w^{2}[$, $x - s^{2}/w^{2}$ est une quantit\'e n\'egative et l'int\'egrale y est donc ind\'efinie. Comme :
+\be
+	\int_{s^{2}/w^{2}}^{\alpha}{\dfrac{\mathrm{d}x}{\sqrt{(\alpha - x)(x - s^{2}/w^{2})}}} = \pi
+\ee
+alors :
+\be
+	\int_{0}^{\alpha}{\dfrac{(\pi - \xi(x))\mathrm{d}x}{2\sqrt{\alpha - x}}} = \pi\int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}
+\ee
+Une intégration par partie du membre de gauche am\`ene \`a :
+\bea
+	\int_{0}^{\alpha}{\dfrac{(\pi - \xi(x))\mathrm{d}x}{2\sqrt{\alpha - x}}} & = & \left[-\sqrt{\alpha - x}(\pi - \xi(x))\right]_{0}^{\alpha} + \int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}(\pi - \xi(x))}{\mathrm{d}x}\mathrm{d}x \nonumber \\
+	& = & \sqrt{\alpha}(\pi - \xi(0)) - \int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x
+\eea
+or $\xi(x = 0) = \xi(\rho^{2} \rightarrow \infty) = 0$ car $U(\infty) = 0$ et donc l'angle de d\'eviation est nul. Donc :
+\be
+	\pi\sqrt{\alpha} - \int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x = \pi\int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}
+\ee
+\`A partir de cette derni\`ere \'equation, nous pouvons prendre le diff\'erentiel par rapport à $\alpha$ tel que :
+\bea
+	\pi\mathrm{d}\left(\int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}\right) & = & \pi\mathrm{d}(\sqrt{\alpha}) - \mathrm{d}\left(\int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x\right) \nonumber \\
+	\Leftrightarrow \pi\dfrac{\mathrm{d}s}{w} & = & \pi\mathrm{d}(\sqrt{\alpha}) - \left(\int_{0}^{\alpha}\dfrac{\mathrm{d}\left(\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x\right)}{\mathrm{d}\alpha}\right)\mathrm{d}\alpha \nonumber = \pi\mathrm{d}(\sqrt{\alpha}) - \mathrm{d}\alpha\int_{0}^{\alpha}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\alpha - x}}}
+\eea
+Puisque la relation pr\'ec\'edente est valable quelque que soit la valeur de $\alpha$, nous prenons $\alpha = s^{2}/w^{2}$ pour arriver \`a :
+\bea
+	\pi\dfrac{\mathrm{d}s}{w} & = & \pi\mathrm{d}\left(\dfrac{s}{w}\right) - \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} \nonumber \\
+	\Leftrightarrow \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & \pi\left(\dfrac{s}{w} - \dfrac{\mathrm{d}s}{w}\right) = \pi\left(\dfrac{\mathrm{d}s}{w} + s\mathrm{d}\left(\dfrac{1}{w}\right) - \dfrac{\mathrm{d}s}{w}\right) = \pi s\mathrm{d}\left(\dfrac{1}{w}\right) \nonumber \\
+	\Leftrightarrow \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & -\pi s\dfrac{\mathrm{d}w}{w^{2}} = -\pi\dfrac{s}{w}\dfrac{\mathrm{d}w}{w} = -\pi\dfrac{s}{w}\mathrm{d}(\ln(w)) \nonumber \\
+	\Leftrightarrow \dfrac{1}{2}\dfrac{w}{s}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & -\pi\mathrm{d}(\ln(w))
+\eea
+De plus, la partie :
+\be
+	\dfrac{w}{s}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right) = \dfrac{w}{s}\left(\dfrac{2s\mathrm{d}w}{w^{2}} - 2s^{2}\dfrac{\mathrm{d}w}{w^{3}}\right) = \dfrac{2\mathrm{d}w}{w} - 2s\dfrac{\mathrm{d}w}{w^{2}} = 2\mathrm{d}\left(\dfrac{s}{w}\right)
+\ee
+donc :
+\be
+	-\pi\mathrm{d}(\ln(w)) = \mathrm{d}\left(\dfrac{s}{w}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}}
+\ee
+Par int\'egration de cette relation et en tenant en compte que $w = 1 \Rightarrow U = 0 \Rightarrow r \rightarrow \infty$ et $s = 0 \Leftrightarrow s/w = 0$, nous obtenons :
+\bea
+	-\pi\int_{0}^{\ln w}\mathrm{d}\ln w & = & \int_{0}^{s/w}\mathrm{d}\left(\dfrac{s}{w}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} = \int_{0}^{\frac{1}{rw}}\mathrm{d}\left(\dfrac{1}{rw}\right)\int_{0}^{\frac{1}{r^{2}w^{2}}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{1}{r^{2}w^{2}} - x}}} \nonumber \\
+	& = & \int_{0}^{\frac{1}{r^{2}w^{2}}}\xi'(x)\mathrm{d}x\int_{0}^{\frac{1}{rw}}\dfrac{\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{x}\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\frac{1}{rw}}\dfrac{\rho\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}}
+\eea
+car :
+\be
+	\xi'(x) = \dfrac{\mathrm{d}\xi}{\mathrm{d}x} = \dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\dfrac{\mathrm{d}\rho}{\mathrm{d}x}
+\ee
+et $x = 0 \Rightarrow \rho \rightarrow \infty$ et $x = \frac{1}{r^{2}w^{2}} \Rightarrow \rho = rw$. Puisque :
+\be
+	\mathrm{d}\left(\dfrac{\rho}{rw}\right) = \rho\mathrm{d}\left(\dfrac{1}{rw}\right) + \dfrac{1}{rw}\mathrm{d}\rho \Leftrightarrow \rho\mathrm{d}\left(\dfrac{1}{rw}\right) = \mathrm{d}\left(\dfrac{\rho}{rw}\right) - \dfrac{1}{rw}\mathrm{d}\rho
+\ee
+alors :
+\be
+	-\pi\int_{0}^{\ln w}\mathrm{d}\ln w = -\pi\ln w = \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\left[\int_{0}^{\frac{\rho}{rw}}\dfrac{\mathrm{d}\left(\dfrac{\rho}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} - \int_{0}^{\rho}\dfrac{\mathrm{d}\rho}{rw\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}}\right]
+\ee
+Ces deux int\'egrales, compl\'ementaires, se calculent ainsi :
+\bea
+	-\pi\ln w & = & \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\frac{\rho}{rw}}\dfrac{\mathrm{d}\left(\dfrac{\rho}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = \int_{\infty}^{rw}\arccosh\left(\dfrac{\rho}{rw}\right)\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho \nonumber \\
+	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{\infty}^{rw}\arccosh\left(\dfrac{\rho}{rw}\right)\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho
+\eea
+et :
+\bea
+	-\pi\ln w & = & - \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\rho}\dfrac{\mathrm{d}\rho}{rw\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = - \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\rho}\dfrac{\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber \\
+	& = & \int_{rw}^{\infty}\int_{0}^{\rho}\dfrac{\mathrm{d}\rho\mathrm{d}\xi}{\sqrt{\rho^{2} - r^{2}w^{2}}} = \int_{rw}^{\infty}\dfrac{\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}}\int_{\xi(\infty)}^{\xi(\rho)}\mathrm{d}\xi = \int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber \\
+	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}}
+\eea
+car $\xi(\rho \rightarrow \infty) = 0$, i.e. l'angle de d\'eviation devient nulle pour une distance de vis\'ee infinie. Nous avons ainsi obtenu \`a obtenir la fonction $w(r)$, \'equivalente \`a $U(r)$ pour $r > r_{min}$ et en fonction de l'angle de d\'eviation $\xi$.
