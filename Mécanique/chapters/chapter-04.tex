@@ -465,7 +465,7 @@ Dans le cadre d'un mouvement infini, il est commode d'\'ecrire l'\'energie $E$ e
 \ee
 L'\'equation (\ref{EQ:18_2}) devient alors dans ce contexte :
 \be
-	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{m\rho v_{\infty}}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(\dfrac{mv_{\infty}^{2}}{2} - U(r)\right) - \dfrac{m^{2}\rho^{2}v_{\infty}^{2}}{r^{2}}}}} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}} \label{EQ:18_4}
+	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{m\rho v_{\infty}}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(\dfrac{mv_{\infty}^{2}}{2} - U(r)\right) - \dfrac{m^{2}\rho^{2}v_{\infty}^{2}}{r^{2}}}}} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}} \label{EQ:18_4}
 \ee
 Avec l'\'equation (\ref{EQ:18_1}), nous avons donc une relation entre $\xi$ et $\rho$.
 
@@ -548,3 +548,60 @@ Et en fonction de $\theta_{2}$ l'angle de d\'eviation dans <<~l~>> pour les part
 \ee
 
 \section{Formule de Rutherford}
+
+Int\'eressons-nous d\'esormais à la diffusion de particules charg\'ees dans un champ Coulombien, i.e. tel que $U(r) = \alpha / r$ pour $\alpha > 0$. En appliquant la relation (\ref{18_4}) pour une particule de masse $m$, nous avons pour $\varphi_{0}$, qui est ,pour rappel, l'angle de d\'eviation au plus pr\`es du centre du champ, i.e. pour $r = r_{min}$ :
+\be
+	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r}}}}
+\ee
+En posant :
+\be
+	\begin{cases}
+		x = \dfrac{\rho}{r} - \dfrac{\alpha}{mv_{\infty}^{2}\rho} \Leftrightarrow \dfrac{1}{r} = \dfrac{x}{\rho} - \dfrac{\alpha}{mv_{\infty}^{2}\rho^{2}}\\
+		\\
+		\mathrm{d}x = -\dfrac{\rho\mathrm{d}r}{r^{2}}
+	\end{cases}
+\ee
+nous avons pour $r = r_{min}$, $x = x_{min}$ et pour $r \rightarrow \infty$, $x = \frac{\alpha}{mv_{\infty}^{2}\rho}$ et :
+\bea
+	\varphi_{0} & = & \int_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 - \rho^{2}\left(\dfrac{x}{\rho} - \dfrac{\alpha}{mv_{\infty}^{2}\rho^{2}}\right)^{2} - \dfrac{2\alpha}{mv_{\infty}^{2}}\left(\dfrac{x}{\rho} - \dfrac{\alpha^{2}}{mv_{\infty}^{2}\rho^{2}}\right)}} \nonumber \\
+	& = & \int_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 - \rho^{2}\dfrac{x^{2}}{\rho^{2}} - \dfrac{\rho^{2}\alpha^{2}}{m^{2}v_{\infty}^{2}\rho^{4}} + 2\rho^{2}\dfrac{\alpha x}{mv_{\infty}^{2}\rho^{3}} - \dfrac{2\alpha x}{mv_{\infty}^{2}\rho} + \dfrac{2\alpha^{2}}{m^{2}v_{\infty}^{4}\rho^{2}}}} \nonumber \\
+	& = & \int_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 + \dfrac{\alpha^{2}}{m^{2}v_{\infty}^{2}\rho^{2}} - x^{2}}}
+\eea
+D\'esormais, posons :
+\be
+	\begin{cases}
+		y = \dfrac{x}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}} \Leftrightarrow x^{2} = \left(1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}\right)y^{2} \\
+		\\
+		\mathrm{d}x = \sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\mathrm{d}y
+	\end{cases}
+\ee
+et pour $x = x_{min}$, $y = y_{min}$ et pour $x = \frac{\alpha}{mv_{\infty}^{2}\rho}$, $y = Y = \dfrac{\dfrac{\alpha}{mv_{\infty}^{2}\rho}}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}}$, cela donne :
+\be
+	\varphi_{0} = \int_{y_{min}}^{Y}\dfrac{-\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\mathrm{d}y}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\sqrt{1 - y^{2}}} = \int_{y_{min}}^{Y}\dfrac{-\mathrm{d}y}{\sqrt{1 - y^{2}}}
+\ee
+En choisissant la valeur de $y_{min}$ telle que $\varphi_{0}(y_{min}) = 0$, nous arrivons \`a :
+\be
+	\varphi_{0} = \arccos\left(\dfrac{\dfrac{\alpha}{mv_{\infty}^{2}\rho}}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}}\right)
+\ee
+dont plusieurs repr\'esentations sont visibles sur la figure (\ref{FIG:4_19}).
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_04_paragraph_19}
+		\caption{Variation de $\varphi_{0}$ en fonction de la distance de vis\'ee $\rho$ pour plusieurs valeurs de $\alpha$ et pour $mv_{\infty}^{2} = 1$}\label{FIG:4_19}
+	\end{center}
+\end{figure}
+Poursuivons le raisonnement :
+\bea
+	\cos\varphi_{0}\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}} & = & \dfrac{\alpha}{mv_{\infty}^{2}\rho} \Leftrightarrow \cos^{2}\varphi_{0} = \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}(1 - \cos^{2}\varphi_{0}) \nonumber \\
+	\cos\varphi_{0}\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}} & = & \dfrac{\alpha}{mv_{\infty}^{2}\rho} \Leftrightarrow \cos^{2}\varphi_{0} = \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}(1 - \cos^{2}\varphi_{0}) \nonumber \\
+	\Leftrightarrow \tan^{2}\varphi_{0} & = & \left(\dfrac{mv_{\infty}^{2}\rho}{\alpha}\right)^{2} \Leftrightarrow \rho^{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\tan^{2}\varphi_{0}
+\eea
+et en utilisant l'\'equation (\ref{EQ:18_1}) : $\xi = \lvert \pi - 2\varphi_{0} \rvert \Leftrightarrow \varphi_{0} = (\pi - \xi)/2$ et parce que :
+\be
+	\tan\left(\frac{\pi - \xi}{2}\right) = \dfrac{\sin\left(\frac{\pi - \xi}{2}\right)}{\cos\left(\frac{\pi - \xi}{2}\right)} = \dfrac{\cos\left(\frac{\xi}{2}\right)}{\sin\left(\frac{\xi}{2}\right)} = \dfrac{1}{\tan\left(\frac{\xi}{2}\right)}
+\ee
+nous avons :
+\be
+	\rho^{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{1}{\tan\left(\frac{\xi}{2}\right)} \label{EQ:19_1}
+\ee
