@@ -605,3 +605,57 @@ nous avons :
 \be
 	\rho^{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{1}{\tan\left(\frac{\xi}{2}\right)} \label{EQ:19_1}
 \ee
+En partant de l'\'equation (\ref{EQ:18_7}), et parce que :
+\bea
+	\left(\dfrac{1}{\tan\theta}\right)^{'} & = & -\dfrac{\tan'\theta}{\tan^{2}\theta} = -\dfrac{1}{\cos^{2}\theta}\dfrac{\cos^{2}\theta}{\sin^{2}\theta} = -\dfrac{1}{\sin^{2}\theta} \nonumber \\
+	\Leftrightarrow \left(\dfrac{1}{\tan(\theta/2)}\right)^{'} & = & -\dfrac{1}{2\sin^{2}(\theta/2)}
+\eea
+nous pouvons calculer :
+\bea
+	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\lvert \dfrac{\partial\rho(\xi)}{\partial\xi} \rvert \mathrm{d}\xi = 2\pi\dfrac{\alpha}{mv_{\infty}^{2}}\dfrac{\cos^{2}(\xi/2)}{\sin^{2}(\xi/2)}\lvert -\dfrac{1}{2\sin^{2}(\theta/2)} \rvert\dfrac{\alpha}{mv_{\infty}^{2}}\mathrm{d}\xi \nonumber \\
+	& = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos(\xi/2)}{\sin^{3}(\xi/2)} \rvert \mathrm{d}\xi \label{EQ:19_2}
+\eea
+En remarquant que :
+\be
+	\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi = 2\pi\cdot 2\cos(\xi/2)\sin(\xi/2)\mathrm{d}\xi \Leftrightarrow \pi\cos(\xi/2)\mathrm{d}\xi = \dfrac{\mathrm{d}\omega}{4\sin(\xi/2)}
+\ee
+alors l'\'equation (\ref{EQ:19_2}) devient :
+\be
+	\mathrm{d}\sigma = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega}{4\sin^{4}(\xi/2)} \label{EQ:19_3}
+\ee
+qui est la \emph{formule de Rutherford} dont nous pouvons remarquer qu'elle ne d\'epend pas du signe de $\alpha$ et que cette formule est donc identique pour un champ coulombien attractif ou r\'epulsif. Elle est ici donn\'ee dans le r\'ef\'erentiel du centre d'inertie au repos puisque nous avons utilis\'e l'\'equation (\ref{EQ:18_2}) pour le calcul de $\varphi_{0}$. Pour passer au r\'ef\'erentiel du laboratoire, il nous faut utiliser les relations (\ref{EQ:17_4}). Dans <<~l~>>, $m$ est la masse r\'eduite et pour les particules initialement au repos, $\xi = \pi - 2\theta_{2} \Leftrightarrow \mathrm{d}\xi = -2\mathrm{\theta_{2}}$. Ainsi, l'\'equation (\ref{EQ:19_2}) devient dans <<~l~>> :
+\be
+	\mathrm{d}\sigma_{2} = \lvert -2\pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\cos(\pi/2 - \theta_{2})}{\sin^{3}(\pi/2 - \theta_{2})} \rvert \mathrm{d}\theta_{2} = 2\pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\sin\theta_{2}}{\cos^{3}\theta_{2}}\mathrm{d}\theta_{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega_{2}}{\cos^{3}\theta_{2}} \label{EQ:19_4}
+\ee
+avec l'angle solide $\mathrm{d}\omega_{2} = 2\pi\sin\theta_{2}\mathrm{d}\theta_{2}$.
+
+Dans le cas g\'en\'eral, pour les particules incidentes, il faut repartir de :
+\be
+	\tan\theta_{1} = \dfrac{m_{2}\sin\xi}{m_{1} + m_{2}\cos\xi}
+\ee
+qui ne permet pas de trouver une relation entre $\xi$ et $\theta_{1}$ facilement. Nous nous concentrerons sur deux cas particuliers dans les paragraphes (\ref{PAR:19_1}) et (\ref{PAR:19_2}). D\'esormais, prenons le pendant de l'\'energie perdue \`a la suite du choc par les particules diffus\'ees, de masse $m_{1}$ qui, par conservation de l'\'energie du syst\`eme, est \'egale \`a l'\'energie gagn\'ee par la particule diffusante, qui \'etait au repos initialement.
+
+TOODODODODODOOTOTOTOTOODODODODODO
+
+\subsection{Section efficace dans <<~l~>> pour $m_{2} \gg m_{1}$}\label{PAR:19_1}
+
+L'hypoth\`ese de d\'epart permet de faire l'approximation $m \approx m_{2}$ et $\theta_{1} \approx \xi$. La relation (\ref{EQ:19_3}) devient alors :
+\be
+	\mathrm{d}\sigma_{1} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega_{1}}{\sin^{4}(\theta_{1}/2)} = \left(\dfrac{\alpha}{4E_{1}}\right)^{2}\dfrac{\mathrm{d}\omega_{1}}{\sin^{4}(\theta_{1}/2)} \label{EQ:19_5}
+\ee
+car l'\'energie des particules incidents est $E_{1} = \frac{m_{1}}{2}v_{\infty}^{2}$
+
+\subsection{Section efficace dans <<~l~>> pour $m_{2} = m_{1}$}\label{PAR:19_2}
+
+Dans ce cas, la masse r\'eduite $m$ vaut $m_{1}/2$. L'\'equation (\ref{EQ:17_9}) donne $\xi = 2\theta_{1}$ et $\mathrm{d}\xi = 2\mathrm{d}\theta_{1}$, donc l'\'equation (\ref{EQ:19_2}) devient :
+\bea
+	\mathrm{d}\sigma_{1} & = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos\theta_{1}}{\sin^{3}\theta_{1}} \rvert \cdot 2\mathrm{d}\theta_{1} = 2\pi\left(\dfrac{2\alpha}{m_{1}v_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos\theta_{1}}{\sin^{3}\theta_{1}} \rvert \mathrm{d}\theta_{1} \nonumber \\
+	& = & 2\pi\left(\dfrac{\alpha}{E_{1}}\right)^{2}\lvert \dfrac{\cos\theta_{1}}{\sin^{3}\theta_{1}} \rvert \mathrm{d}\theta_{1} = \left(\dfrac{\alpha}{E_{1}}\right)^{2}\dfrac{\cos\theta_{1}}{\sin^{4}\theta_{1}} \rvert \mathrm{d}\omega_{1} \label{EQ:19_6}
+\eea
+avec toujours $E_{1} = \frac{m_{1}}{2}v_{\infty}^{2}$ et $\mathrm{d}\omega_{1} = 2\pi\sin\theta_{1}\mathrm{d}\theta_{1}$.
+
+Si en plus de leur masse, les particules initialement au repos et incidentes sont identiques alors il n'est plus n'\'ecessaire de distinguer apr\`es la diffusion les particules. Avec $\theta = \theta_{1} = \theta_{2}$ et en utilisant les relations (\ref{EQ:19_4}) et (\ref{EQ:19_6}), nous pouvons calculer la surface efficace telle que :
+\bea
+	\mathrm{d}\sigma & = & \mathrm{d}\sigma_{1} + \mathrm{d}\sigma_{2} = \left(\dfrac{\alpha}{E_{1}}\right)^{2}\dfrac{\cos\theta_{1}}{\sin^{4}\theta_{1}} \mathrm{d}\omega_{1} + \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega_{2}}{\cos^{3}\theta_{2}} \nonumber \\
+	& = & \left(\dfrac{\alpha}{E_{1}}\right)^{2}\dfrac{\cos\theta}{\sin^{4}\theta} \mathrm{d}\omega + \left(\dfrac{2\alpha}{m_{1}v_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega}{\cos^{3}\theta} = \left(\dfrac{1}{\sin^{4}\theta} + \dfrac{1}{\cos^{4}\theta}\right)\left(\dfrac{\alpha}{E_{1}}\right)^{2}\cos\theta\mathrm{d}\omega \label{EQ:19_7}
+\eea
