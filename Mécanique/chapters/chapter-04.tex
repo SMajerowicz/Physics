@@ -633,9 +633,25 @@ Dans le cas g\'en\'eral, pour les particules incidentes, il faut repartir de :
 \be
 	\tan\theta_{1} = \dfrac{m_{2}\sin\xi}{m_{1} + m_{2}\cos\xi}
 \ee
-qui ne permet pas de trouver une relation entre $\xi$ et $\theta_{1}$ facilement. Nous nous concentrerons sur deux cas particuliers dans les paragraphes (\ref{PAR:19_1}) et (\ref{PAR:19_2}). D\'esormais, prenons le pendant de l'\'energie perdue \`a la suite du choc par les particules diffus\'ees, de masse $m_{1}$ qui, par conservation de l'\'energie du syst\`eme, est \'egale \`a l'\'energie gagn\'ee par la particule diffusante, qui \'etait au repos initialement.
-
-TOODODODODODOOTOTOTOTOODODODODODO
+qui ne permet pas de trouver une relation entre $\xi$ et $\theta_{1}$ facilement. Nous nous concentrerons sur deux cas particuliers dans les paragraphes (\ref{PAR:19_1}) et (\ref{PAR:19_2}). D\'esormais, prenons le pendant de l'\'energie perdue \`a la suite du choc par les particules diffus\'ees, de masse $m_{1}$ qui, par conservation de l'\'energie du syst\`eme, est \'egale \`a l'\'energie gagn\'ee par la particule diffusante, qui \'etait au repos initialement. La relation (\ref{EQ:17_5B}) nous donne dans <<~c~>> la vitesse apr\`es le choc $v'_{2}$ de la particule de masse $m_{2}$ initialement au repos :
+\be
+	v'_{2} = \dfrac{2m_{1}v_{\infty}}{m_{1} + m_{2}}\sin(\xi/2)
+\ee
+L'\'energie acquise par cette particule vaut $\frac{m_{2}}{2}{v'}_{2}^{2}$ qui est l'\'energie perdue $\epsilon$ par $m_{1}$, aussi :
+\be
+	\epsilon = \dfrac{m_{2}}{2}\dfrac{4m_{1}^{2}v_{\infty}^{2}}{(m_{1} + m_{2})^{2}}\sin^{2}(\xi/2) = 2\dfrac{m^{2}}{m_{2}}v_{\infty}^{2}\sin^{2}(\xi/2)
+\ee
+o\`u nous pouvons identifier l'\'energie perdue maximale $\epsilon_{max}$ vallant $2\frac{m^{2}}{m_{2}}v_{\infty}^{2}$. En d\'erivant :
+\be
+	\mathrm{d}\epsilon = 2\dfrac{m^{2}}{m_{2}}v_{\infty}^{2}\cdot 2\cdot\dfrac{1}{2}\sin(\xi/2)\cos(\xi/2)\mathrm{d}\xi = 2\dfrac{m^{2}}{m_{2}}v_{\infty}^{2}\sin(\xi/2)\cos(\xi/2)\mathrm{d}\xi
+\ee
+La section efficace peut alors se d\'eduire de la d\'efinition (\ref{EQ:19_2}) telle que :
+\bea
+	\mathrm{d}\sigma & = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos(\xi/2)}{\sin^{3}(\xi/2)} \rvert \mathrm{d}\xi = \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos(\xi/2)\sin(\xi/2)}{\sin^{4}(\xi/2)} \rvert \mathrm{d}\xi \nonumber \\
+	& = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\dfrac{m_{2}}{2m^{2}v_{\infty}^{2}}\mathrm{d}\epsilon}{\dfrac{m_{2}^{2}}{4m^{4}v_{\infty}^{4}}\epsilon^{2}} = \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{2m^{2}v_{\infty}^{2}}{m_{2}}\dfrac{\mathrm{d}\epsilon}{\epsilon^{2}} \nonumber \\
+	\Leftrightarrow \mathrm{d}\sigma & = & 2\pi\dfrac{\alpha^{2}}{m_{2}v_{\infty}^{2}}\dfrac{\mathrm{d}\epsilon}{\epsilon^{2}} \label{EQ:19_8}
+\eea
+Il est alors remarquable que la section efficace ne d\'epende alors pas de la masse des particules diffus\'ees quand elle est fonction de l'\'energie perdue par ces derni\`eres.
 
 \subsection{Section efficace dans <<~l~>> pour $m_{2} \gg m_{1}$}\label{PAR:19_1}
 
