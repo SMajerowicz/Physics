@@ -503,11 +503,11 @@ Soit $\mathrm{d}N$ le nombre de particules diffus\'ees par unit\'e de temps dans
 \ee
 o\`u $n$ est le nombre de particules traversant l'unit\'e de surface d'une section droite du faisceau incident par unit\'e de temps\footnote{Restons dans l'hypoth\`ese d'un faisceau homog\`ene sur toute sa section.}. Alors la quantit\'e $\mathrm{d}\sigma$ a la dimension d'une surface et est appel\'ee la \emph{section efficace du faisceau}. Ce param\`etre est la caract\'eristique la plus importante du processus de diffusion.
 
-Consid\'erons par hypoth\`ese que $\xi$ et $\rho$ sont r\'eciproquement univoque. D\'emontrons que c'est vrai lorsque $\xi$ est une fonction monotone et d\'ecroissante de $\rho$, i.e. $\forall\rho$, $\frac{\partial\xi}{\partial\rho} < 0$ et $\forall\xi$, $\frac{\partial\rho}{\partial\xi} < 0$, donc au premier ordre, le d\'eveloppement de Taylor donne :
+Consid\'erons par hypoth\`ese que $\xi$ et $\rho$ sont r\'eciproquement univoque. D\'emontrons que c'est vrai lorsque $\xi$ est une fonction monotone et d\'ecroissante de $\rho$, i.e. $\forall\rho$, $\frac{\mathrm{d}\xi}{\mathrm{d}\rho} < 0$ et $\forall\xi$, $\frac{\mathrm{d}\rho}{\mathrm{d}\xi} < 0$, donc au premier ordre, le d\'eveloppement de Taylor donne :
 \be
 	\begin{cases}
-		\xi(\rho + \delta\rho) = \xi(\rho) + \frac{\partial\xi}{\partial\rho}\delta\rho \Rightarrow \xi(\rho + \delta\rho) < \xi(\rho) \\
-		\rho(\xi + \delta\xi) = \rho(\xi) + \frac{\partial\rho}{\partial\xi}\delta\xi \Rightarrow \rho(\xi + \delta\xi) < \rho(\xi)
+		\xi(\rho + \delta\rho) = \xi(\rho) + \frac{\mathrm{d}\xi}{\mathrm{d}\rho}\delta\rho \Rightarrow \xi(\rho + \delta\rho) < \xi(\rho) \\
+		\rho(\xi + \delta\xi) = \rho(\xi) + \frac{\mathrm{d}\rho}{\mathrm{d}\xi}\delta\xi \Rightarrow \rho(\xi + \delta\xi) < \rho(\xi)
 	\end{cases}
 \ee
 et nous avons donc bien \'etabli cette relation univoque.
@@ -522,11 +522,11 @@ car au premier ordre, nous avons toujours $\rho(\xi + \mathrm{d}\xi) = \rho(\xi)
 \ee
 qui peut aussi s'\'ecrire :
 \be
-	\mathrm{d}\sigma = 2\pi\rho(\xi)\lvert \dfrac{\partial\rho(\xi)}{\partial\xi} \rvert \mathrm{d}\xi \label{EQ:18_7}
+	\mathrm{d}\sigma = 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi \label{EQ:18_7}
 \ee
-Comme la plupart du temps $\frac{\partial\rho(\xi)}{\partial\xi}$ est n\'egative et que la section efficace est une surface, il est n\'ecessaire d'utiliser la valeur absolue. \'Ecrivons d\'esormais la section efficace en fonction de l'angle solide. Ce dernier vaut pour un anneau $\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi$, voir la relation (\ref{EQ:16_7}), ce qui permet d'\'ecrire :
+Comme la plupart du temps la valeur de $\frac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi}$ est n\'egative et que la section efficace est une surface, il est n\'ecessaire d'utiliser la valeur absolue. \'Ecrivons d\'esormais la section efficace en fonction de l'angle solide. Ce dernier vaut pour un anneau $\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi$, voir la relation (\ref{EQ:16_7}), ce qui permet d'\'ecrire :
 \be
-	\mathrm{d}\sigma = 2\pi\rho(\xi)\lvert \dfrac{\partial\rho(\xi)}{\partial\xi} \rvert \dfrac{\mathrm{d}\omega}{2\pi\sin\xi} = \dfrac{\rho(\xi)}{\sin\xi}\lvert \dfrac{\partial\rho(\xi)}{\partial\xi} \rvert \mathrm{d}\omega \label{EQ:18_8}
+	\mathrm{d}\sigma = 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \dfrac{\mathrm{d}\omega}{2\pi\sin\xi} = \dfrac{\rho(\xi)}{\sin\xi}\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\omega \label{EQ:18_8}
 \ee
 Revenons au cas d'un faisceau de particules diffus\'ees par d'autres particules initialement au repos. Dans la relation (\ref{EQ:18_7}), la section efficace $\mathrm{d}\sigma$ est d\'efinie dans le cadre d'un champ de force positionn\'e au centre d'inertie des particules. $\mathrm{d}\sigma$ est donc bien la section efficace dans le r\'ef\'erentiel <<~c~>> et exprim\'ee en fonction de l'angle de d\'eviation $\xi$. Pour l'exprimer dans le cadre du r\'ef\'erentiel du laboratoire <<~l~>>, nous revenons aux relations (\ref{EQ:17_4}). En fonction de $\theta_{1}$, l'angle de d\'eviation dans <<~l~>> pour les particules du faisceau incident, nous avons :
 \bea
@@ -549,7 +549,7 @@ Et en fonction de $\theta_{2}$ l'angle de d\'eviation dans <<~l~>> pour les part
 
 \section{Formule de Rutherford}
 
-Int\'eressons-nous d\'esormais à la diffusion de particules charg\'ees dans un champ Coulombien, i.e. tel que $U(r) = \alpha / r$ pour $\alpha > 0$. En appliquant la relation (\ref{18_4}) pour une particule de masse $m$, nous avons pour $\varphi_{0}$, qui est ,pour rappel, l'angle de d\'eviation au plus pr\`es du centre du champ, i.e. pour $r = r_{min}$ :
+Int\'eressons-nous d\'esormais à la diffusion de particules charg\'ees dans un champ Coulombien, i.e. tel que $U(r) = \alpha / r$ pour $\alpha > 0$. En appliquant la relation (\ref{EQ:18_4}) pour une particule de masse $m$, nous avons pour $\varphi_{0}$, qui est ,pour rappel, l'angle de d\'eviation au plus pr\`es du centre du champ, i.e. pour $r = r_{min}$ :
 \be
 	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r}}}}
 \ee
@@ -612,7 +612,7 @@ En partant de l'\'equation (\ref{EQ:18_7}), et parce que :
 \eea
 nous pouvons calculer :
 \bea
-	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\lvert \dfrac{\partial\rho(\xi)}{\partial\xi} \rvert \mathrm{d}\xi = 2\pi\dfrac{\alpha}{mv_{\infty}^{2}}\dfrac{\cos^{2}(\xi/2)}{\sin^{2}(\xi/2)}\lvert -\dfrac{1}{2\sin^{2}(\theta/2)} \rvert\dfrac{\alpha}{mv_{\infty}^{2}}\mathrm{d}\xi \nonumber \\
+	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi = 2\pi\dfrac{\alpha}{mv_{\infty}^{2}}\dfrac{\cos^{2}(\xi/2)}{\sin^{2}(\xi/2)}\lvert -\dfrac{1}{2\sin^{2}(\theta/2)} \rvert\dfrac{\alpha}{mv_{\infty}^{2}}\mathrm{d}\xi \nonumber \\
 	& = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos(\xi/2)}{\sin^{3}(\xi/2)} \rvert \mathrm{d}\xi \label{EQ:19_2}
 \eea
 En remarquant que :

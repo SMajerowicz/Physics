@@ -511,3 +511,93 @@ et :
 	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}}
 \eea
 car $\xi(\rho \rightarrow \infty) = 0$, i.e. l'angle de d\'eviation devient nulle pour une distance de vis\'ee infinie. Nous avons ainsi obtenu \`a obtenir la fonction $w(r)$, \'equivalente \`a $U(r)$ pour $r > r_{min}$ et en fonction de l'angle de d\'eviation $\xi$.
+
+\section{Sections efficaces}
+
+\subsection{Cas d'un champ \'egal \`a $\alpha/r^{2}$}
+
+Pour d\'eterminer la section efficacde de diffusion dans ce cas, i.e. $\alpha > 0$, partons de l'\'equation (\ref{EQ:18_4}) :
+\be
+	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r^{2}}}}} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}\left(1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}\right)}}}
+\ee
+Maintenant, posons :
+\be
+	\begin{cases}
+		y = \dfrac{\rho}{r}\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}} \\
+		\\
+		\mathrm{d}y = -\dfrac{\rho}{r^{2}}\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\mathrm{d}r
+	\end{cases}
+\ee
+Nous savons que $r_{min}$ est racine du d\'enominateur tel que :
+\be
+	1 - \frac{\rho^{2}}{r_{min}^{2}}\left(1 + \frac{2\alpha}{mv_{\infty}^{2}\rho^{2}}\right) = 0 \Leftrightarrow r_{min} = \rho\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}
+\ee
+et en $r = r_{min}$, nous avons $y = 1$ donc nous arrivons \`a :
+\be
+	\varphi_{0} = \int_{1}^{0}\dfrac{-\mathrm{d}y}{\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\sqrt{1 - y^{2}}}
+\ee
+Avec $z = y^{2}$, soit $\mathrm{d}z = 2y\mathrm{d}y = 2\sqrt{z}\mathrm{d}y$ puisque $y \ge 0$, $\varphi_{0}$ s'\'ecrit, en faisant r\'ef\'erence \`a la d\'efinition de la fonction $\Gamma$ (\ref{EQ:INT_EULER_GAMMA}) :
+\be
+	\varphi_{0} = \int_{0}^{1}\dfrac{z^{\frac{-1}{2}}(1 - z)^{\frac{-1}{2}}\mathrm{d}z}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}} = \dfrac{\Gamma(1/2)\Gamma(1/2)}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\Gamma(1)} = \dfrac{\pi}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}}
+\ee
+Et comme $\xi = \pi - 2\varphi_{0}$, l'angle de d\'eviation vaut :
+\be
+	\xi = \pi\left(1 - \dfrac{1}{\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}}\right)
+\ee
+Pour d\'eterminer la section efficace, nous devons trouver la fonction qui relie l'angle de d\'eviation $\xi$ et la distance de vis\'ee $\rho$ en partant de la relation pr\'ec\'edente :
+\bea
+	\pi - \xi & = & \dfrac{\pi}{\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}} \Leftrightarrow \left(\dfrac{\pi}{\pi - \xi}\right)^{2} - 1 = \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}} \nonumber \\
+	\Leftrightarrow \rho^{2} & = & \dfrac{2\alpha}{mv_{\infty}^{2}}\dfrac{1}{\dfrac{\pi^{2}}{(\pi - \xi)^{2}} - 1} = \dfrac{2\alpha}{mv_{\infty}^{2}}\dfrac{(\pi - \xi)^{2}}{2\pi\xi - \xi^{2}} \Leftrightarrow \rho = \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\dfrac{\pi - \xi}{\sqrt{\xi(2\pi - \xi)}}
+\eea
+et sa d\'eriv\'ee vaut :
+\bea
+	\dfrac{\mathrm{d}\rho}{\mathrm{d}\xi} & = & \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\left[\dfrac{-1}{\sqrt{\xi(2\pi - \xi)}} - \dfrac{(\pi - \xi)(2\pi - 2\xi)}{2(\xi(2\pi - \xi))^{3/2}}\right] = \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\left[\dfrac{-1}{\sqrt{\xi(2\pi - \xi)}} - \dfrac{(\pi - \xi)(\pi - \xi)}{(\xi(2\pi - \xi))^{3/2}}\right] \nonumber \\
+	& = & \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\left[\dfrac{-2\pi\xi + \xi^{2} - \pi^{2} - \xi^{2} + 2\pi\xi}{(\xi(2\pi - \xi))^{3/2}}\right] = -\sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\dfrac{\pi^{2}}{(\xi(2\pi - \xi))^{3/2}}
+\eea
+L'\'equation (\ref{EQ:18_8}) permet alors d'arriver \`a :
+\be
+	\mathrm{d}\sigma = \dfrac{\rho(\xi)}{\sin\xi}\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\omega = \dfrac{2\alpha}{mv_{\infty}^{2}}\pi^{2}\dfrac{\pi - \xi}{\xi^{2}(2\pi - \xi)^{2}}\dfrac{\mathrm{d}\omega}{\sin\xi}
+\ee
+
+\subsection{La cuvette de potentiel}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(400,200)(0,0)
+			%circle
+			\linethickness{0.05mm}
+			\put(150,100){\circle{200}}
+			%dashed lines
+			\linethickness{0.05mm}
+			\multiput(150,100)(10,0){25}{\line(1,0){8}}
+			\multiput(150,100)(10,10){10}{\line(1,1){8}}
+			\multiput(150,100)(-10,2){15}{\line(-5,1){8}}
+			\multiput(150,100)(-2,7){7}{\line(-2,7){1}}
+			%trajectories
+			\linethickness{0.5mm}
+			\put(400,172){\line(-1,0){178}}
+			\put(222,172){\line(-13,-4){170}}
+			\put(53,120){\line(-1,-1){50}}
+			%angles
+			\linethickness{0.05mm}
+			\qbezier(160,100)(155,113)(146,110)
+			\put(165,106){$\varphi_{0}$}
+			\qbezier(235,172)(235,182)(231,182)
+			\put(237,175){$\alpha$}
+			\qbezier(212,168)(212,165)(215,165)
+			\put(198,155){$\beta$}
+			\qbezier(43,122)(43,115)(48,115)
+			\put(35,112){$\alpha$}
+			\qbezier(68,117)(68,125)(65,125)
+			\put(75,117){$\beta$}
+			%vectors
+			\linethickness{0.05mm}
+			\put(350,145){\vector(0,1){27}}
+			\put(350,130){\vector(0,-1){30}}
+			\put(347,137){$\rho$}
+			\put(150,100){\vector(1,-1){70}}
+			\put(180,55){$a$}
+		\end{picture}
+		\caption{Diffusion par une cuvette de potentiel}\label{FIG:4_19_EX2}
+	\end{center}
+\end{figure}
