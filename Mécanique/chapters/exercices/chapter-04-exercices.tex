@@ -601,3 +601,14 @@ L'\'equation (\ref{EQ:18_8}) permet alors d'arriver \`a :
 		\caption{Diffusion par une cuvette de potentiel}\label{FIG:4_19_EX2}
 	\end{center}
 \end{figure}
+
+Exprimons la section efficace de diffusion dans le cas de la <<~cuvette de potentiel~>> d\'efinie telle que repr\'esent\'ee sur la figure (\ref{FIG:4_19_EX2}) et dont la profondeur vaut $U_{0}$, i.e. $U = -U_{0}$ pour $r < a$ et $U = 0$ pour $r > a$. Nous pouvons d'ors et d\'ej\`a reprendre la conclusion de l'exercice (\ref{EQ:7_EX1_1}) qui permet de lier les angles d'incidence $\alpha$ et de r\'efraction $\beta$ tels que, avec $m$ la masse de la particule incidente :
+\be
+	\dfrac{\sin\alpha}{\sin\beta} = \sqrt{1 + \dfrac{2U_{0}}{mv_{\infty}^{2}}} = n
+\ee
+o\`u $n$ repr\'esente un indice de r\'efraction, en faisant une similitude avec l'optique. La figure (\ref{FIG:4_19_EX2}) nous permet d'exprimer l'angle de d\'eviation $\xi$ comme $2(\alpha - \beta)$. Aussi, l'\'equation pr\'ec\'dente se d\'eveloppe en :
+\bea
+	\dfrac{1}{n} & = & \dfrac{\sin\beta}{\sin\alpha} = \dfrac{\sin(\alpha - \xi/2)}{\sin\alpha} = \dfrac{\sin\alpha\cos(-\xi/2) + \cos\alpha\sin(-\xi/2)}{\sin\alpha} = \cos(\xi/2) - \dfrac{\sin(\xi/2)}{\tan\alpha} \nonumber \\
+	\Leftrightarrow \cos(\xi/2) - \dfrac{1}{n} & = & \dfrac{\sin(\xi/2)}{\tan\alpha} \Leftrightarrow \tan\alpha = \dfrac{n\sin(\xi/2)}{n\cos(\xi/2) - 1} \nonumber \\
+	\Leftrightarrow \dfrac{\sin^{2}\alpha}{1 - \sin^{2}\alpha} & = & \dfrac{n^{2}\sin^{2}(\xi/2)}{n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2)}
+\eea
