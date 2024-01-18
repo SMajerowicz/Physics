@@ -608,7 +608,45 @@ Exprimons la section efficace de diffusion dans le cas de la <<~cuvette de poten
 \ee
 o\`u $n$ repr\'esente un indice de r\'efraction, en faisant une similitude avec l'optique. La figure (\ref{FIG:4_19_EX2}) nous permet d'exprimer l'angle de d\'eviation $\xi$ comme $2(\alpha - \beta)$. Aussi, l'\'equation pr\'ec\'dente se d\'eveloppe en :
 \bea
-	\dfrac{1}{n} & = & \dfrac{\sin\beta}{\sin\alpha} = \dfrac{\sin(\alpha - \xi/2)}{\sin\alpha} = \dfrac{\sin\alpha\cos(-\xi/2) + \cos\alpha\sin(-\xi/2)}{\sin\alpha} = \cos(\xi/2) - \dfrac{\sin(\xi/2)}{\tan\alpha} \nonumber \\
-	\Leftrightarrow \cos(\xi/2) - \dfrac{1}{n} & = & \dfrac{\sin(\xi/2)}{\tan\alpha} \Leftrightarrow \tan\alpha = \dfrac{n\sin(\xi/2)}{n\cos(\xi/2) - 1} \nonumber \\
-	\Leftrightarrow \dfrac{\sin^{2}\alpha}{1 - \sin^{2}\alpha} & = & \dfrac{n^{2}\sin^{2}(\xi/2)}{n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2)}
+	&  & \dfrac{1}{n} = \dfrac{\sin\beta}{\sin\alpha} = \dfrac{\sin(\alpha - \xi/2)}{\sin\alpha} = \dfrac{\sin\alpha\cos(-\xi/2) + \cos\alpha\sin(-\xi/2)}{\sin\alpha} \nonumber \\
+	& \Leftrightarrow &\dfrac{1}{n} = \cos(\xi/2) - \dfrac{\sin(\xi/2)}{\tan\alpha} \Leftrightarrow \cos(\xi/2) - \dfrac{1}{n} = \dfrac{\sin(\xi/2)}{\tan\alpha} \nonumber \\
+	& \Leftrightarrow & \tan\alpha = \dfrac{n\sin(\xi/2)}{n\cos(\xi/2) - 1} \Leftrightarrow \dfrac{\sin^{2}\alpha}{1 - \sin^{2}\alpha} = \dfrac{n^{2}\sin^{2}(\xi/2)}{1 + n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2)} \nonumber \\
+	& \Leftrightarrow & \dfrac{n^{2}\sin^{2}(\xi/2)}{1 + n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2)} = \sin^{2}\alpha\left(1 + \dfrac{n^{2}\sin^{2}(\xi/2)}{1 + n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2)}\right) \nonumber \\
+	& \Leftrightarrow & n^{2}\sin^{2}(\xi/2) = \sin^{2}\alpha\left(1 + n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2) + n^{2}\sin^{2}(\xi/2)\right) \nonumber \\
+	& \Leftrightarrow & \sin^{2}(\alpha) = \dfrac{n^{2}\sin^{2}(\xi/2)}{n^{2} + 1 - 2n\cos(\xi/2)}
 \eea
+et comme par construction, la distance de vis\'ee vaut $a\sin\alpha$ donc :
+\be
+	\rho^{2} = a^{2}\dfrac{n^{2}\sin^{2}(\xi/2)}{n^{2} + 1 - 2n\cos(\xi/2)} \Leftrightarrow \rho = an\dfrac{\sin(\xi/2)}{\sqrt{n^{2} + 1 - 2n\cos(\xi/2)}} \label{EQ:19_EX1}
+\ee
+En cons\'equence :
+\bea
+	\dfrac{\mathrm{d}\rho}{\mathrm{d}\xi} & = & an\left[\dfrac{\frac{1}{2}\cos(\xi/2)}{\sqrt{n^{2} + 1 - 2n\cos(\xi/2)}} + \dfrac{-\frac{1}{2}\cdot -2n\cdot\frac{1}{2}\cdot -\sin(\xi/2)\sin(\xi/2)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{-3/2}}\right] \nonumber \\
+	& = & \dfrac{an}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{-3/2}}\left(\dfrac{n^{2}}{2}\cos(\xi/2) + \dfrac{1}{2}\cos(\xi/2) - n\cos^{2}(\xi/2) - \frac{n}{2}\sin^{2}(\xi/2)\right) \nonumber \\
+	& = & \dfrac{an}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{-3/2}}\left(\dfrac{n^{2}}{2}\cos(\xi/2) + \dfrac{1}{2}\cos(\xi/2) - n\cos^{2}(\xi/2) - \frac{n}{2} + \frac{n}{2}\cos^{2}(\xi/2)\right) \nonumber \\
+	& = & \dfrac{an}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{-3/2}}\left(- \frac{n}{2} + \dfrac{1}{2}\cos(\xi/2) + \dfrac{n^{2}}{2}\cos(\xi/2) - \frac{n}{2}\cos^{2}(\xi/2)\right)
+\eea
+or, nous avons :
+\be
+	\begin{cases}
+		\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right) = n^{2}\cos(\xi/2) - n\cos^{2}(\xi/2) - n + \cos(\xi/2) \\
+		\sin\xi = 2\cos(\xi/2)\sin(\xi/2)
+	\end{cases}
+\ee
+ce qui permet d'en d\'eduire selon l'\'equation (\ref{EQ:18_8}) :
+\bea
+	\mathrm{d}\sigma & = & \rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert\dfrac{\mathrm{d}\omega}{\sin\xi} = \dfrac{a^{2}n^{2}\sin(\xi/2)}{2}\dfrac{\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{2}}\dfrac{\mathrm{d}\omega}{\sin\xi} \nonumber \\
+	& = & \dfrac{a^{2}n^{2}}{4\cos(\xi/2)}\dfrac{\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{2}}\mathrm{d}\omega
+\eea
+Quelques remarques :
+\begin{itemize}
+	\item $\rho = 0 \Rightarrow \sin(\xi/2) = 0 \Rightarrow \xi_{min} = 0$, i.e. pour une distance de vis\'ee nulle, la particule n'est pas d\'evi\'ee
+	\item $\rho$ est maximale quand le d\'enominateur de l'\'equation (\ref{EQ:19_EX1}) est maximal, soit quand la quantit\'e $2n\cos(\xi/2)$ est maximale. Nous avons donc :
+		\be
+			\cos(\xi_{max}/2) = \dfrac{1}{n}
+		\ee
+	\item par construction :
+		\be
+			\sigma = \int_{0}^{\xi_{max}} \dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = \pi a^{2}
+		\ee
+\end{itemize}
