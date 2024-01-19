@@ -677,3 +677,56 @@ Si en plus de leur masse, les particules initialement au repos et incidentes son
 \eea
 
 \section{Diffusion sous de petits angles}
+
+Positionnons-nous dans l'hypoth\`ese de simplication du calcul de la section efficace de diffusion, i.e. dans le cas o\`u la distance de vis\'ee $\rho$ est grande, suffisamment pour que l'\'energie potentielle $U$ soit faible comme l'angle de d\'eviation $\xi$. Dans ce contexte, les r\'ef\'erentiels du laboratoire <<~l~>> et du centre d'inertie <<~c~>> se confondent. En effet, en application des relations (\ref{EQ:17_5A}) et (\ref{EQ:17_5B}) pour $\xi \rightarrow 0$, nous avons les vitesses apr\`es le choc approximativement \'egales \`a celles avant le choc, le centre d'inertie du syst\`eme varie peu.
+D\'efinissons :
+\begin{itemize}
+	\item l'axe $(x)$ comme orient\'e dans la direction de l'impulsion initiale des particules incidentes de masse $m_{1}$
+	\item le plan $(xy)$ comme le plan dans lequel se r\'ealise la diffusion
+\end{itemize}
+Par construction, nous avons $\sin\theta_{1} = \frac{p'_{1y}}{p'_{1}}$ avec $p'_{1}$ l'impulsion de la particule incidente apr\`es la diffusion et $p'_{1y}$, la projection de cette derni\`ere sur l'axe $(y)$. Puisque $\theta_{1}$ est petit, l'impulsion apr\`es la diffusion est similaire \`a sa valeur initiale, la relation devient :
+\be
+	\theta_{1} = \frac{p'_{1y}}{m_{1}v_{\infty}} \label{EQ:20_1}
+\ee
+En repartant de l'\'equation (\ref{EQ:7_7}) qui d\'efinit les \'equations de Lagrange, nous avons :
+\be
+	\dot{p}_{i} = F_{i} \Leftrightarrow \dot{p}_{1y} = F_{y}
+\ee
+o\`u $F$ d\'esigne la force appliqu\'ee sur la particule incidente de masse $m_{1}$. L'accroissement de l'impulsion suivant l'axe $(y)$ vaut alors :
+\be
+	p'_{1y} = \int_{-\infty}^{\infty}\dfrac{\mathrm{d}p'_{1y}}{\mathrm{d}t}\mathrm{d}t = \int_{-\infty}^{\infty}\dot{p}'_{1y}\mathrm{d}t = \int_{-\infty}^{\infty}F_{y}\mathrm{d}t \label{EQ:20_2}
+\ee
+En appliquant la formule (\ref{EQ:5_4}) dans notre cas et en notant que :
+\be
+	\mathrm{d}r = \sqrt{\mathrm{d}x^{2} + \mathrm{d}y^{2} + \mathrm{d}z^{2}} \Rightarrow \dfrac{\mathrm{d}r}{\partial y} = \dfrac{1}{2}\dfrac{2y\mathrm{d}y}{\sqrt{\mathrm{d}x^{2} + \mathrm{d}y^{2} + \mathrm{d}z^{2}}\partial y} = \dfrac{y}{r}
+\ee
+puisque $\frac{\mathrm{d}y}{\partial y} = 1$ ! Nous avons :
+\be
+	F_{y} = -\dfrac{\partial U}{\partial y} = -\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{\mathrm{d}r}{\partial y} = -\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{y}{r}
+\ee
+car l'\'energie potentielle n'est fonction que de $r$ dans le cas d'un champ central comme \'etudi\'e ici.
+
+Les hypoth\`eses de d\'epart permettent de d\'eduire que la trajectoire finale ne s'\'ecarte pas de la trajectoire initialie et reste donc rectiligne, $y = \rho$ et uniforme $v_{1} = v_{\infty}$, \`a chaque instant. Cela permet d'\'ecrire :
+\be
+	F_{y} = -\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{\rho}{r}\text{ et }\mathrm{d}t = \dfrac{\mathrm{d}x}{v_{\infty}}
+\ee
+Avec ces deux relations, la formule (\ref{EQ:20_2}) devient :
+\be
+	p'_{1y} = \int_{-\infty}^{\infty}-\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{\rho}{r}\dfrac{\mathrm{d}x}{v_{\infty}} = -\dfrac{\rho}{v_{\infty}}\int_{-\infty}^{\infty}\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{\mathrm{d}x}{r}
+\ee
+Dans le cas de la trajectoire rectiligne parall\`ele \`a l'axe $(x)$ comme d\'efini en hypoth\`ese de travail, $r^{2} = x^{2} + \rho^{2} \Leftrightarrow x = \pm\sqrt{r^{2} - \rho^{2}}$, soit :
+\be
+	\mathrm{d}x = \pm\dfrac{1}{2}\dfrac{2r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} = \pm\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}}
+\ee
+Aussi, la quantit\'e $p'_{1y}$ devient :
+\be
+	p'_{1y} = -2\dfrac{\rho}{v_{\infty}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}}
+\ee
+par addition des deux solutions pour $\mathrm{d}x$. Enfin, gr\^ace \`a l'\'equation (\ref{EQ:20_1}), nous obtenons la relation entre $\theta_{1}$ et $\rho$, soit :
+\be
+	\theta_{1} = -2\dfrac{\rho}{m_{1}v_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}}
+\ee
+La formule (\ref{EQ:18_8}) permet de d\'efinir la section efficace dans le r\'ef\'erentiel du laboratoire si nous rempla\c{c}ons l'angle de d\'eviation $\xi$ par l'angle $\theta_{1}$ et c'est ce que permet d'\'ecrire la relation (\ref{EQ:17_5A}) pour $\xi \rightarrow 0$. Et comme $\xi \rightarrow 0 \Leftrightarrow \theta_{1} \rightarrow 0 \Leftrightarrow \sin\theta_{1} \approx \theta_{1}$, alors :
+\be
+	\mathrm{d}\sigma = \dfrac{\rho(\theta_{1})}{\theta_{1}}\lvert \dfrac{\mathrm{d}\rho(\theta_{1})}{\mathrm{d}\theta_{1}} \rvert \mathrm{d}\omega \label{EQ:20_4}
+\ee
