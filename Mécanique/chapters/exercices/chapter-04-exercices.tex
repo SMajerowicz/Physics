@@ -650,3 +650,94 @@ Quelques remarques :
 			\sigma = \int_{0}^{\xi_{max}} \dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = \pi a^{2}
 		\ee
 \end{itemize}
+
+\section{Diffusion sous de petits angles}
+
+\subsection{D\'emonstration alternative pour l\'equation (\ref{EQ:20_3})}
+
+L'objectif ici est de d\'emontrer l'\'equation (\ref{EQ:20_3}) \`a partir de la relation (\ref{EQ:18_4}), \`a savoir :
+\be
+	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}}
+\ee
+dans le cas particulier des petites d\'eviations. Tout d'abord, remarquons que :
+\be
+	\dfrac{\partial\left(\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}\right)}{\partial \rho} = \dfrac{1}{2}\dfrac{-2\dfrac{\rho}{r^{2}}}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}} = \dfrac{-\dfrac{\rho}{r^{2}}}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}
+\ee
+donc la relation (\ref{EQ:18_4}) peut aussi s'\'ecrire comme :
+\be
+	\varphi_{0} = -\dfrac{\partial}{\partial \rho}\left(\int_{r_{min}}^{\infty}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}\mathrm{d}r\right)
+\ee
+Puisque nous sommes dans le cadre des petites d\'eviations, i.e. $U \rightarrow 0$ et $r_{min} \approx \rho$, le d\'eveloppement de Taylor\footnote{S\'erie de Taylor : $f(x) = \sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x - a)^{n}$} au premier ordre de $\varphi_{0}$ par rapport \`a $U$ donne :
+\be
+	\varphi_{0}(U(r)) = \varphi_{0}(U(\infty)) + \dfrac{\varphi_{0}(U(r))}{\partial U(r)}(U(r))\cdot(U(r) - U(\infty))  = \varphi_{0}(0) + \dfrac{\varphi_{0}(U(r))}{\partial U(r)}(U(r))\cdot U(r)
+\ee
+Pour le premier terme, nous nous appuyons sur l'\'equation (\ref{EQ:18_4}) alors que pour le second, nous prenons l'expression de $\varphi_{0}$ sous forme d\'eriv\'ee, soit :
+\bea
+	\varphi_{0}(U(r)) & = & \int_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{\partial}{\partial\rho}\int_{\rho}^{\infty}\left(\dfrac{\mathrm{\partial}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}{\partial U}\right)_{U(r)}\cdot U(r)\mathrm{d}r \nonumber \\
+	& = & \int_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{-2}{2}\dfrac{1}{mv_{\infty}^{2}\dfrac{\partial}{\partial\rho}}\int_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = I + \dfrac{1}{mv_{\infty}^{2}}\dfrac{\partial}{\partial\rho}J
+\eea
+Pour le calcul de $I$, posons $u = \rho/r \Rightarrow \mathrm{d}u = -\rho\mathrm{d}r/r^{2}$ qui implique $r = \rho \Rightarrow u = 1$ et $r \rightarrow \infty \Rightarrow u = 0$ et \'ecrivons :
+\be
+	I = - \int_{1}^{0}\dfrac{\mathrm{d}u}{1 - u^{2}} = - [-\arccos u]_{1}^{0} = \arccos(0) - \arccos(1) = \dfrac{\pi}{2}
+\ee
+Pour l'int\'egrale J, r\'ealisons son int\'egration par partie :
+\bea
+	J & = & \int_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = \int_{\rho}^{\infty}\dfrac{U(r)r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} \nonumber \\
+	& = & [U(r)\sqrt{r^{2} - \rho^{2}}]_{\rho}^{\infty} - \int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r = - \int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r
+\eea
+car :
+\be
+	\dfrac{\mathrm{d}\sqrt{r^{2} - \rho^{2}}}{\mathrm{d}r} = \dfrac{1}{2}\dfrac{2r}{\sqrt{r^{2} - \rho^{2}}} = \dfrac{r}{\sqrt{r^{2} - \rho^{2}}}
+\ee
+Nous en concluons donc que :
+\be
+	\varphi_{0} = \dfrac{\pi}{2} - \dfrac{\partial}{\partial\rho}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r
+\ee
+Et comme finalement, $\xi = \pi - 2\varphi_{0}$, et que dans notre cas de petites d\'eviations, $\theta_{1} \approx \xi$ alors :
+\bea
+	\theta_{1} & = & \pi - \pi + 2\dfrac{\partial}{\partial\rho}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r \nonumber \\
+	& = & \dfrac{-2\rho}{mv_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}}
+\eea
+correspondant \`a l'\'equation (\ref{EQ:20_3}).
+
+\subsection{Cas du champ $U = \alpha/r^{n}$ et $n > 0$}
+
+De facto, nous avons :
+\be
+	\dfrac{\mathrm{d}U}{\mathrm{d}r} = -\dfrac{\alpha n}{r^{n + 1}}
+\ee
+qui permet d'exprimer $\theta_{1}$ de la formule (\ref{EQ:20_3}), pour une particule diffus\'ee de masse $m_{1}$ ainsi :
+\be
+	\theta_{1} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 1}\sqrt{r^{2} - \rho^{2}}} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}}
+\ee
+En posant :
+\be
+	\begin{cases}
+		u = \dfrac{\rho^{2}}{r^{2}} \Rightarrow \mathrm{d}u = \dfrac{-2\rho}{r^{3}}\mathrm{d}r = -2u \dfrac{\mathrm{d}r}{r} \\
+		\\
+		r = \rho \Rightarrow u = 1\text{ et }r \rightarrow \infty \Rightarrow u \rightarrow 0
+	\end{cases}
+\ee
+nous pouvons d\'evelopper $\theta_{1}$ ainsi :
+\bea
+	\theta_{1} & = & \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 1}r\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\int_{1}^{0}\dfrac{\frac{-\mathrm{d}u}{2u}}{\dfrac{\rho^{n + 1}}{u^{\dfrac{n + 1}{2}}}\sqrt{1 - u}} \nonumber \\
+	& = & \dfrac{\alpha n}{m_{1}v_{\infty}^{2}\rho^{n}}\int_{0}^{1}u^{\frac{n}{2} - \frac{1}{2}}(1 - u)^{\frac{-1}{2}}\mathrm{d}u = \dfrac{\alpha n}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})\Gamma(\frac{1}{2})}{\Gamma(\frac{n}{2} + 1)} = \dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}
+\eea
+ce qui est une conclusion autre que celle propos\'ee par le livre qui est :
+\be
+	\theta_{1} = \dfrac{2\alpha\sqrt{\pi}}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2})}
+\ee
+En reprenant la formule (\ref{EQ:20_4}) avec la proposition de $\theta_{1}$, nous pouvons \'ecrire :
+\be
+	\begin{cases}
+		\rho = \left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}\theta_{1}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{1}{n}} \\
+		\\
+		\dfrac{\mathrm{d}\rho}{\mathrm{d}\theta_{1}} = -\dfrac{1}{n}\left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{1}{n}}\dfrac{1}{\theta_{1}^{\frac{1}{n} + 1}}
+	\end{cases}
+\ee
+et finalement :
+\bea
+	\mathrm{d}\sigma & = & \dfrac{\rho(\theta_{1})}{\theta_{1}}\lvert \dfrac{\mathrm{d}\rho(\theta_{1})}{\mathrm{d}\theta_{1}} \rvert \mathrm{d}\omega_{1} = \dfrac{1}{n}\left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{1}{n}}\dfrac{1}{\theta_{1}^{\frac{1}{n} + 1}}\left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}\theta_{1}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{1}{n}}\dfrac{\mathrm{d}\omega_{1}}{\theta_{1}} \nonumber \\
+	& = & \dfrac{1}{n}\left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{2}{n}}\dfrac{\mathrm{d}\omega_{1}}{\theta_{1}^{2(\frac{1}{n} + 1)}}
+\eea
+qui est encore une fois une conclusion diff\'erente que celle pr\'esent\'ee dans le livre mais uniquement dans la constante multiplicatrice, la relation entre $\rho$ et $\theta_{1}$ est similaire.
