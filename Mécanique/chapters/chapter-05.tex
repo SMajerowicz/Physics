@@ -1,3 +1,20 @@
 \chapter{Petites oscillations}
 
 \section{Oscillations lin\'eaires libres}
+
+Les \emph{petites oscillations} sont celles faites par un syst\`eme au voisinage de sa position d'\'equilibre stable et nous étudions ici le cas le plus simple, celui où il n'y a qu'un seul degr\'e de libert\'e. Un \'equilibre stable intervient quand l'\'energie potentielle $U(q)$ est minimale. D\'efinissons que $U$ soit minimale en $q = q_{0}$. L'\'equation (\ref{EQ:5_4}) montre qu'un \'ecart par rapport \`a la position $q_{0}$ engendre une force \'egale \`a $-\frac{\mathrm{d}U}{\mathrm{d}q}$ qui ram\`ene le syst\`eme \`a sa position d'\'equilibre stable. R\'ealisons un d\'eveloppement de Taylor de $U(q)$ jusqu'au second ordre :
+\be
+	U(q) = U(q_{0}) + U'(q_{0})(q - q_{0}) + \dfrac{U''(q_{0})}{2}(q - q_{0})^{2} \Rightarrow U(q) - U(q_{0}) = \dfrac{k}{2}(q - q_{0})^{2}
+\ee
+car $U'(q_{0}) = 0$ puisque $q_{0}$ est la position d'\'equilibre et nous avons pos\'e $k = U''(q_{0})$. En d\'efinissant :
+\be
+	x = q - q_{0} \label{EQ:21_1}
+\ee
+qui repr\'esente l'\'ecart par rapport \`a la position d'\'equilibre, nous avons, en posant $U(q_{0}) = 0$ :
+\be
+	U(x) = \dfrac{kx^{2}}{2} \label{EQ:21_2}
+\ee
+Au regard des relations (\ref{EQ:4_1}) et (\ref{EQ:5_5}), l'\'energie cin\'etique pour une particule et dans le cas d'un unique degr\'e de libert\'e, s'\'ecrit $T = \frac{1}{2}a(q)\dot{q}^{2}$. Or dans le cadre des petites oscillations, $x \approx q$. De la m\^eme mani\`ere, $a(q) \approx q(a_{0})$, quantit\'e qui peut s'identifier \`a la masse de la particule si $x$ est une coordonn\'ee cart\'esienne. L'\'energie cin\'etique peut donc se formuler comme $T = \frac{1}{2}m\dot{x}^{2}$. Par cons\'equent, la fonction de Lagrange pour un syst\`eme r\'ealisant de petites oscillations, d\'enomm\'e aussi \emph{oscillateur lin\'eaire} est :
+\be
+	L = \dfrac{m\dot{x}^{2}}{2} - \dfrac{kx^{2}}{2} \label{EQ:21_3}
+\ee
