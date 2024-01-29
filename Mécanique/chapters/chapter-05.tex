@@ -18,3 +18,32 @@ Au regard des relations (\ref{EQ:4_1}) et (\ref{EQ:5_5}), l'\'energie cin\'etiqu
 \be
 	L = \dfrac{m\dot{x}^{2}}{2} - \dfrac{kx^{2}}{2} \label{EQ:21_3}
 \ee
+Dans notre cas \'epur\'e, l'\'equation du mouvement s'obtient \`a partir de la relation (\ref{EQ:5_2}) :
+\be
+	\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial L}{\partial \dot{x}}\right) = \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}m\dot{x}}{\mathrm{d}t} = -kx \Leftrightarrow m\ddot{x} + kx = 0 \label{EQ:21_4}
+\ee
+\'Equation qui peut \'egalement s'\'ecrire :
+\be
+	\ddot{x} + \omega^{2}x = 0 \label{EQ:21_5}
+\ee
+en posant la quantit\'e :
+\be
+	\omega = \sqrt{\dfrac{k}{m}} \label{EQ:21_6}
+\ee
+qui est appel\'ee \emph{fr\'equence angulaire}. La quantit\'e $\omega$ ne d\'epend pas des conditions initiales du mouvement mais uniquement des propri\'et\'es m\'ecaniques du syst\`eme, c'est une constante fondamentale des oscillations. Ceci n'est valable que dans le cas qui nous concerne, celui des petites oscillations, ou encore quand $U \propto x^{2}$. Pour les cas g\'en\'eraux, nous pouvons nous reporter \`a l'\'equation (\ref{EQ:11_EX2A_1}) qui d\'efinit la p\'eriode d'oscillations $T$ pour $U = A\lvert x^{n} \rvert$, sachant que $\omega = 2\pi/T$.
+
+L'\'equation (\ref{EQ:21_5} admet deux solutions ind\'ependantes en $\cos(\omega t)$ et en $\sin(\omega t)$. Donc la solution g\'en\'erale s'\'ecrit :
+\be
+	x = c_{1}\cos(\omega t) + c_{2}\sin(\omega t) \label{EQ:21_7}
+\ee
+ou encore :
+\be
+	x = a\cos(\omega t + \alpha) \label{EQ:21_8}
+\ee
+o\`u $a$ est l'\emph{amplitude} et $\alpha$ la valeur initiale de la \emph{phase}, qui d\'epend de l'origine prise pour $t$.Comme $\cos(\omega t + \alpha) = \cos(\omega t)\cos\alpha - \sin(\omega t)\sin\alpha$, alors nous pouvons en d\'eduire, \`a partir de la relation (\ref{EQ:21_7}), $c_{1} = a\cos\alpha$ et $c_{2} = -a\sin\alpha$. De plus :
+\be
+	\begin{cases}
+		c_{1}^{2} + c_{2}^{2} = a^{2}(\cos^{2}\alpha + \sin^{2}\alpha) \Rightarrow a = \sqrt{c_{1}^{2} + c_{2}^{2}} \\
+		\dfrac{\sin\alpha}{\cos\alpha} = \tan\alpha = -\dfrac{c_{2}}{c_{1}} \label{EQ:21_9}
+	\end{cases}
+\ee
