@@ -3,3 +3,46 @@
 \section{Oscillations lin\'eaires libres}
 
 \subsection{Amplitude et phase initiale}
+
+En ayant $x(t=0) = x_{0}$ et $v(t=0) = v_{0}$ et en prenant la formule (\ref{EQ:21_8}), cela permet d'\'ecrire :
+\be
+	\begin{cases}
+		x_{0} = a\cos\alpha \\
+		v_{0} = -a\omega\sin\alpha
+	\end{cases}
+\ee
+donc :
+\be
+	\begin{cases}
+		\tan\alpha = \dfrac{-v_{0}}{\omega x_{0}} \\
+		\\
+		v_{0}^{2} + \omega^{2}x_{0}^{2} = a^{2}\omega^{2}\text{ donc } a =  \sqrt{x_{0}^{2} + \dfrac{v_{0}^{2}}{\omega^{2}}}
+	\end{cases}
+\ee
+
+\subsection{Mol\'ecules diatomiques}
+
+L'isotope d'un atome est ce m\^eme atome mais avec un nombre de neutrons diff\'erents. En cons\'equence, l'\'energie potentielle d'interactions n'est pas modifi\'ee. La formule (\ref{EQ:21_5}) appliqu\'ee aux deux composantes de la mol\'ecule diatomique devient :
+\be
+	\begin{cases}
+		\ddot{x}_{1} + \frac{k}{m_{1}}x_{1}^{2} = 0 \\
+		\ddot{x}_{2} + \frac{k}{m_{2}}x_{2}^{2} = 0 \\
+	\end{cases}
+\ee
+En d\'efinissant $X = x_{1} + x_{2}$, nous avons :
+\be
+	\ddot{X} + k\left(\dfrac{1}{m_{1}} + \dfrac{1}{m_{2}}\right)X^{2} = 0
+\ee
+Et en appliquant le m\^eme raisonnement \`a la seconde mol\'ecule, nous avons :
+\be
+	\ddot{X'} + k\left(\dfrac{1}{m_{1}} + \dfrac{1}{m_{2}}\right){X'}^{2} = 0
+\ee
+ce qui permet finalement d'\'ecrire le rapport des fr\'equences entre les deux mol\'ecules diatomiques :
+\be
+	\dfrac{\omega'}{\omega} = \sqrt{\dfrac{k'}{k}\dfrac{m_{1}m_{2}(m'_{1} + m'_{2})}{m'_{1}m'_{2}(m_{1} + m_{2})}}
+\ee
+et comme il s'agit d'isotopes et que l'int\'eraction est donc la m\^eme alors $k = k'$.
+
+\subsection{Fr\'equence d'oscillations pour un point sur une droite}
+
+\subsection{Fr\'equence d'oscillations pour un point sur un cercle}
