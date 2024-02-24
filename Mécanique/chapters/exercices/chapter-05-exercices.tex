@@ -45,4 +45,86 @@ et comme il s'agit d'isotopes et que l'int\'eraction est donc la m\^eme alors $k
 
 \subsection{Fr\'equence d'oscillations pour un point sur une droite}
 
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(100,150)(0,0)
+			%axis
+			\linethickness{0.05mm}
+			\multiput(0,0)(10,0){10}{\line(1,0){8}}\put(102,-2){$x$}
+			\multiput(50,0)(0,10){10}{\line(0,1){8}}\put(55,47){$l$}
+			%mass
+			\put(40,100){\line(1,0){20}}\put(47,102){$A$}
+			\put(25,0){\color{black}\circle*{10}}\put(20,-12){$m$}
+			%spring
+			\linethickness{0.05mm}
+			\multiput(25,0)(3,12){8}{\line(1,4){2}}
+			\multiput(27,10)(3,12){8}{\color{black}\circle*{1}}
+		\end{picture}
+		\caption{Oscillations contraintes par le d\'eplacement sur une droite}\label{FIG:21_EX3_1}
+	\end{center}
+\end{figure}
+
+Quand le ressort est de longueur $l$, soit $x = 0$, alors il est tendu avec une force $F$. Puisque nous sommes dans l'hypoth\`ese de petites oscillations, soit de petits d\'eplacements de la masse $x$, alors la relation (\ref{EQ:5_8}) s'applique et permet d'\'ecrire : $U = F\delta l$ avec $\delta l$ l'allongement du ressort. En appliquant Pythagore :
+\be
+	(l + \delta l)^{2} = l^{2} + x^{2} \Leftrightarrow l^{2} + \delta l^{2} + 2l\delta l = l^{2} + x^{2} \Rightarrow \delta l = \dfrac{x^{2}}{2l}
+\ee
+en n\'egligeant $\delta l^{2}$ en premi\`ere approximation. L'\'energie totale de la masse $m$ vaut :
+\be
+	E = T + U = \dfrac{m}{2}\dot{x}^{2} + \dfrac{F}{2l}x^{2} = \dfrac{m}{2}\left(\dot{x}^{2} + \dfrac{F}{ml}x^{2}\right)
+\ee
+ce qui permet d'en conclure directement :
+\be
+	\omega^{2} = \dfrac{F}{ml}
+\ee
+
 \subsection{Fr\'equence d'oscillations pour un point sur un cercle}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(100,150)(0,0)
+			%lengths
+			\linethickness{0.05mm}
+			\put(50,90){\vector(0,-1){35}}
+			\put(49,92){$l$}
+			\put(50,102){\vector(0,1){48}}
+			\put(50,23){\vector(0,-1){23}}
+			\put(49,25){$r$}
+			\put(50,33){\vector(0,1){22}}
+			%circle
+			\put(50,0){\line(-1,2){25}}
+			\qbezier(50,55)(-5,50)(-5,0)
+			\qbezier(50,55)(105,55)(105,0)
+			%angle
+			\qbezier(50,10)(47,10)(45,8)
+			\put(43,15){$\varphi$}
+			%mass
+			\put(40,150){\line(1,0){20}}\put(47,152){$A$}
+			\put(25,50){\color{black}\circle*{10}}\put(18,38){$m$}
+			%spring
+			\linethickness{0.05mm}
+			\multiput(25,50)(3,12){8}{\line(1,4){2}}
+			\multiput(27,60)(3,12){8}{\color{black}\circle*{1}}
+		\end{picture}
+		\caption{Oscillations contraintes par le d\'eplacement sur une portion de cercle}\label{FIG:21_EX3_2}
+	\end{center}
+\end{figure}
+
+Nous utilisons les m\^emes hypoth\`eses et la m\^eme m\'ethode que pour l'exercice pr\'ec\'edent, \`a l'exception du fait que la situation g\'eom\'etrique oblige \`a utiliser la g\'en\'eralisation du th\'eor\`eme de Pythagore, \`a savoir la formule d'Al-Kashi :
+\bea
+	(l + \delta l)^{2} & = & (r + l)^{2} + r^{2} - 2(r + l)r\cos\varphi \nonumber \\
+	l^{2} + \delta l^{2} + 2l\delta l & = & r^{2} + l^{2} + 2rl + r^{2} - 2(r + l)r\cos\varphi \Leftrightarrow 2l\delta l = 2r^{2} + 2lr - 2(r + l)r\cos\varphi \nonumber \\
+	\delta l & = & \dfrac{r(r + l)(1 - \cos\varphi)}{l} = \dfrac{r(r + l)}{2l}\varphi^{2}
+\eea
+en utilisant l'hypoth\`ese de petits d\'eplacements qui permet de n\'egliger la quantité $\delta l^{2}$ et d'utiliser le d\'eveloppement en s\'erie de Taylor au premier ordre pour $(1 - \cos\varphi)$ tel que :
+\be
+	\cos\varphi = \cos(0) - \sin(0)\varphi - \dfrac{1}{2}\cos(0)\varphi^{2} \Leftrightarrow \cos\varphi = 1 - \dfrac{1}{2}\varphi^{2}
+\ee
+L'\'energie totale s'\'ecrit :
+\bea
+	E & = & T + U = \dfrac{mr{2}\dot{\varphi}^{2}}{2} + \dfrac{r(r + l)F}{2l}\varphi^{2} \nonumber \\
+	& = & \dfrac{m}{2}\left(r^{2}\dot{\varphi}^{2} + \dfrac{r(r + l)F}{ml}\varphi^{2}\right) = \dfrac{m}{2}\left((r\dot{\varphi})^{2} + \dfrac{(r + l)F}{mlr}(r\varphi)^{2}\right)
+\eea
+donc, la fr\'equence d'oscillations s'\'ecrit :
+\be
+	\omega^{2} = \dfrac{(r + l)F}{mlr}
+\ee
