@@ -64,7 +64,11 @@ dont le module est l'amplitude ordinaire et l'argument la phase initiale.
 
 \section{Oscillations forc\'ees}
 
-Les \emph{oscillations forc\'ees} sont les oscillations d'un syst\`eme soumis \`a un champ ext\'erieur variable. En restant dans l'hypoth\`ese des petites oscillations, cela implique que le champ ext\'erieur est suffisamment faible pour provoquer des d\'eplacements faibles \'egalement. De plus, ici, nous restons dans le cadre d'un unique degr\'e de libert\'e. L'\'energie potentielle totale du syst\`eme s'\'ecrit avec deux termes, \`a savoir l'\'energie potentielle propre en $\frac{1}{2}kx^{2}$ et celle due \`a l'action ext\'erieur $U_{e}(x,t)$. Au premire ordre, cette derni\`ere s'\'ecrit :
+Les \emph{oscillations forc\'ees} sont les oscillations d'un syst\`eme soumis \`a un champ ext\'erieur variable. En restant dans l'hypoth\`ese des petites oscillations, cela implique que le champ ext\'erieur est suffisamment faible pour provoquer des d\'eplacements faibles \'egalement. De plus, ici, nous restons dans le cadre d'un unique degr\'e de libert\'e.
+
+\subsection{Cas g\'en\'eral}
+
+L'\'energie potentielle totale du syst\`eme s'\'ecrit avec deux termes, \`a savoir l'\'energie potentielle propre en $\frac{1}{2}kx^{2}$ et celle due \`a l'action ext\'erieur $U_{e}(x,t)$. Au premire ordre, cette derni\`ere s'\'ecrit :
 \be
 	U_{e}(x,t) = U_{e}(0,t) + x\left(\dfrac{\partial U_{e}}{\partial x}\right)(0,t)
 \ee
@@ -77,4 +81,50 @@ L'\'equation du mouvement provenant de la formule (\ref{EQ:5_2}) permet d'en d\'
 	\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial L}{\partial \dot{x}}\right) & = & \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}m\dot{x}}{\mathrm{d}t} = -kx + F(t) + x\dfrac{\partial F(t)}{\partial x} \nonumber \\
 	& \Leftrightarrow & m\ddot{x} + kx = F(t) \Leftrightarrow \ddot{x} + \omega^{2}x = \dfrac{F(t)}{m} \label{EQ:22_2}
 \eea
-avec $\omega = \sqrt{\frac{k}{m}}$ la fr\'equence des oscillations.
+avec $\omega = \sqrt{\frac{k}{m}}$ la fr\'equence des oscillations. L'\'equation (\ref{EQ:22_2}) est une \'equation diff\'erentielle du second ordre avec des c{\oe}fficients constants et un second membre. La solution g\'en\'erale est de la forme $x = x_{0} + x_{1}$ telle que :
+\begin{itemize}
+	\item $x_{0}$ est la solution g\'en\'erale de l'\'equation sans second membre qui repr\'esente les oscillations libres d\'etermin\'ee aux \'equations (\ref{EQ:21_7}) et (\ref{EQ:21_8})
+	\item $x_{1}$ est une int\'egrale particuli\`ere de l'\'equation avec le second membre
+\end{itemize}
+
+\subsection{Cas particulier d'une force ext\'erieure p\'eriodique}
+
+Consid\'erons que la force ext\'erieure s'exprime telle que :
+\be
+	F(t) = f\cos(\gamma t + \beta) \label{EQ:22_3}
+\ee
+Pour cette hypoth\`ese, l'int\'egrale particuli\`ere de l'\'equation (\ref{EQ:22_2}) peut \^etre $x_{1} = b\cos(\gamma t + \beta)$, ce qui nous donne :
+\bea
+	& & -b\gamma^{2}\cos(\gamma t + \beta) + \omega^{2}b\cos(\gamma t + \beta) = \dfrac{f}{m}\cos(\gamma t + \beta) \Leftrightarrow b(\omega^{2} - \gamma^{2}) = \dfrac{f}{m} \nonumber \\
+	& \Leftrightarrow & b = \dfrac{f}{m(\omega^{2} - \gamma^{2})}
+\eea
+Le mouvement se compose donc en ajoutant la solution g\'en\'erale (\ref{EQ:21_8}) :
+\be
+	x = a\cos(\omega t + \alpha) + \frac{f}{m(\omega^{2} - \gamma^{2})}\cos(\gamma t + \beta) \label{EQ:22_4}
+\ee
+o\`u les quantit\'es $a$ et $\alpha$ sont d\'eduites des conditions initiales. Le mouvement est ainsi compos\'e de la somme de deux oscillations, la premi\`ere avec la fr\'equence propre du syst\`eme et la seconde avec la fr\'equence de la force ext\'erieure. La formule (\ref{EQ:22_4}) est ind\'etermin\'ee dans le cas o\`u $\omega = \gamma$, il y a alors \emph{r\'esonnance}.
+
+\subsection{Solution r\'eelle lors de la r\'esonnance avec une force ext\'erieure}
+
+Partons de la formule (\ref{EQ:22_4}) pour la reformuler ainsi :
+\be
+	x = a\cos(\omega t + \alpha) + \frac{f}{m(\omega^{2} - \gamma^{2})}(\cos(\gamma t + \beta) - \cos(\omega t + \beta))
+\ee
+Ainsi lorsque $\gamma \rightarrow \omega$, alors nous avons une ind\'etermination de type $0/0$ pour le second terme. Appliquons alors la r\`egle de L'Hospital\footnote{Si $f$ et $g$ sont deux fonctions d\'efinies sur $[a;b[$, d\'erivables en $a$ et telles que $f(a) = g(a) = 0$ et $g'(a) \neq 0$ alors $\lim_{x \rightarrow a^{+}}\dfrac{f(x)}{g(x)} = \dfrac{f'(a)}{g'(a)}$} avec :
+\be
+	\begin{cases}
+		f : \omega \mapsto \cos(\gamma t + \beta) - \cos(\omega t + \beta) \\
+		g : \omega \mapsto w^{2} - \gamma^{2}
+	\end{cases}
+\ee
+Cela nous donne :
+\be
+	\lim_{\gamma \rightarrow \omega}\dfrac{f(\gamma)}{g(\gamma)} = \dfrac{f'(\gamma = \omega)}{g'(\gamma = \omega)} = \dfrac{-t\sin(\omega t + \beta)}{-2\omega}
+\ee
+et nous permet d'\'ecrire :
+\be
+	x = a\cos(\omega t + \alpha) + \frac{f}{2m\omega}t\sin(\omega t + \beta) \label{EQ:22_5}
+\ee
+Dans le cas de la r\'esonnance, l'amplitude augmente lin\'eairement avec le temps tant que nous restons dans le cadre des petites oscillations.
+
+\subsection{Solution complexe lors de la r\'esonnance avec une force ext\'erieure}
