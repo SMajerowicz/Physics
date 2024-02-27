@@ -63,3 +63,18 @@ avec l'\emph{amplitude complexe} s'exprimant comme :
 dont le module est l'amplitude ordinaire et l'argument la phase initiale.
 
 \section{Oscillations forc\'ees}
+
+Les \emph{oscillations forc\'ees} sont les oscillations d'un syst\`eme soumis \`a un champ ext\'erieur variable. En restant dans l'hypoth\`ese des petites oscillations, cela implique que le champ ext\'erieur est suffisamment faible pour provoquer des d\'eplacements faibles \'egalement. De plus, ici, nous restons dans le cadre d'un unique degr\'e de libert\'e. L'\'energie potentielle totale du syst\`eme s'\'ecrit avec deux termes, \`a savoir l'\'energie potentielle propre en $\frac{1}{2}kx^{2}$ et celle due \`a l'action ext\'erieur $U_{e}(x,t)$. Au premire ordre, cette derni\`ere s'\'ecrit :
+\be
+	U_{e}(x,t) = U_{e}(0,t) + x\left(\dfrac{\partial U_{e}}{\partial x}\right)(0,t)
+\ee
+o\`u $U_{e}(0,t)$ est une fonction ne d\'ependant que du temps et de facto, elle est le r\'esultat d'une d\'eriv\'ee totale par rapport au temps. Dans cette partie est n\'eglig\'ee dans l'\'equation de Lagrange, voir (\ref{EQ:2_8}). De plus, la formule (\ref{EQ:5_8}) permet de d\'eduire que $-\frac{\partial U_{e}}{\partial x}$ est la force ext\'erieure qui s'exerce sur le syst\`eme. Elle est fonction du temps et nous la d\'esignons $F(t)$. Par cons\'equent, $U_{e}(x,t) = -xF(t)$ et la fonction de Lagrange peut se formuler ainsi :
+\be
+	L = \dfrac{m}{2}\dot{x}^{2} - \left(\frac{k}{2}x^{2} - xF(t)\right) \label{EQ:22.1}
+\ee
+L'\'equation du mouvement provenant de la formule (\ref{EQ:5_2}) permet d'en d\'eduite :
+\bea
+	\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial L}{\partial \dot{x}}\right) & = & \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}m\dot{x}}{\mathrm{d}t} = -kx + F(t) + x\dfrac{\partial F(t)}{\partial x} \nonumber \\
+	& \Leftrightarrow & m\ddot{x} + kx = F(t) \Leftrightarrow \ddot{x} + \omega^{2}x = \dfrac{F(t)}{m} \label{EQ:22_2}
+\eea
+avec $\omega = \sqrt{\frac{k}{m}}$ la fr\'equence des oscillations.
