@@ -128,3 +128,31 @@ et nous permet d'\'ecrire :
 Dans le cas de la r\'esonnance, l'amplitude augmente lin\'eairement avec le temps tant que nous restons dans le cadre des petites oscillations.
 
 \subsection{Solution complexe lors de la r\'esonnance avec une force ext\'erieure}
+
+Au voisinage de la r\'esonnance, d\'efinissons la fr\'equence $\gamma = \omega + \epsilon$ avec $\epsilon$ petit devant $\omega$. Dans le domaine complexe, il est possible de g\'en\'eraliser l'expression (\ref{EQ:22_4}) telle que :
+\be
+	x = Ae^{i\omega t} + Be^{i(\omega + \epsilon)t} = \left(A + Be^{i\epsilon t}\right)e^{i\omega t} \label{EQ:22_6}
+\ee
+Comme $\epsilon \ll \omega$, l'expression $A + Be^{i\epsilon t}$ varie peu lors d'une p\'eriode $2pi/\omega$. Au voisinage de la r\'esonnance, le mouvement se constitue de petites oscillations \`a amplitude variable. L'amplitude reste une grandeure r\'eelle aussi nous d\'efinissons $C = \lvert A + Be^{i\epsilon t} \lvert$. La relation (\ref{EQ:21_12}) permet d'\'ecrire $A = ae^{i\alpha}$ et $B = be^{i\beta}$, et ainsi l'amplitude $C$ devient :
+\bea
+	C & = & \lvert ae^{i\alpha} + be^{i(\epsilon t + \beta)} \rvert \nonumber \\
+	\Leftrightarrow C^{2} & = & \lvert ae^{i\alpha} \rvert^{2} + \lvert be^{i(\epsilon t + \beta)} \rvert^{2} + 2\lvert ae^{i\alpha} \rvert \cdot \lvert be^{i(\epsilon t + \beta)} \rvert \cos(\epsilon t + \beta - \alpha) \nonumber \\
+	C^{2} & = & a^{2} + b^{2} + 2ab\cos(\epsilon t + \beta - \alpha) \label{EQ:22_7}
+\eea
+Les valeurs extremum de $C$ sont :
+\begin{itemize}
+	\item $C_{max}^{2} = a^{2} + b^{2} + 2ab \Rightarrow C_{max} = a + b$
+	\item $C_{min}^{2} = a^{2} + b^{2} - 2ab \Rightarrow C_{min} = \lvert a - b \rvert$
+\end{itemize}
+Par cons\'equent, l'amplitude $C$ oscille p\'eriodiquement entre les deux valeurs pr\'ec\'edentes avec une fr\'equence $\epsilon$, ph\'enom\`ene appel\'e \emph{battements}.
+
+Ensuite, nous pouvons remarquer que l'\'equation (\ref{EQ:22_2}) peut s\'ecrire :
+\bea
+	\ddot{x} + i\omega\dot{x} - i\omega\dot{x} - i\omega\cdot i\omega x & = & \dfrac{F(t)}{m} \Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{d}t}(\dot{x} + i\omega x) - i\omega(\dot{x} + i\omega x) = \dfrac{F(t)}{m} \nonumber \\
+	\Rightarrow \dfrac{\mathrm{d}\xi}{\mathrm{d}t} - i\omega\xi = \dfrac{F(t)}{m} \label{EQ:22_8}
+\eea
+en d\'efinissant la quantit\'e $\xi$ telle que :
+\be
+	\xi = \dot{x} + i\omega x \label{EQ:22_9}
+\ee
+L'\'equation (\ref{EQ:22_8}) n'est plus du second ordre.
