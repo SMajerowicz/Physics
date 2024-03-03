@@ -158,8 +158,26 @@ en d\'efinissant la quantit\'e $\xi$ telle que :
 L'\'equation (\ref{EQ:22_8}) n'est plus du second ordre. Sa solution g\'en\'erale sans second membre peut d'\'ecrire comme $\xi_{0}e^{i\omega t}$ avec $\xi_{0}$ une constante d\'ependant des conditions initialies et \'egale \`a $\xi(t=0)$. Cherchons d\'esormais un int\'egrale particuli\`ere de la forme $A(t)e^{i\omega t}$ pour l'\'equation avec second membre. En ins\'erant cette solution particuli\`ere dans l'\'equation (\ref{EQ:22_8}) :
 \bea
 	\dot{A}(t)e^{i\omega t} + i\omega A(t)e^{i\omega t} - i\omega e^{i\omega t} & = & \dfrac{F(t)}{m} \Leftrightarrow \dot{A}(t) = \dfrac{1}{m}F(t)e^{-i\omega t} \nonumber \\
-	\Rightarrow \xi(t) & = & e^{i\omega t}\left(\xi_{0} + \dfrac{1}{m}\int{F(t)e^{-i\omega t}}\right) \label{EQ:22_10}
+	\Rightarrow \xi(t) & = & e^{i\omega t}\left(\xi_{0} + \dfrac{1}{m}\int{F(t)e^{-i\omega t}\mathrm{d}t}\right) \label{EQ:22_10}
 \eea
 Ainsi la quantit\'e $x(t)$ est donn\'ee par la partie imaginaire de $\xi(t)$ donn\'ee par la relation (\ref{EQ:22_10}), divis\'ee par $\omega$.
 
 Dans le cas d'oscillations forc\'ees, l'\'energie totale du syst\`eme ne se conservent \'evidemmment pas. L'\'energie totale transmise au syst\`eme par la force ext\'erieure sachant que cette \'energie est nulle initialement, peut se calculer \`a partir de la relation (\ref{EQ:22_10}) :
+\be
+	E = T + U = \dfrac{m}{2}\dot{x}^{2} + kx^{2} = \dfrac{m}{2}(\dot{x}^{2} + \omega^{2}x^{2}) = \dfrac{m}{2}(\dot{x} + i\omega x)(\dot{x} - i\omega x) = \dfrac{m}{2}\lvert \xi \rvert^{2} \label{EQ:22_11}
+\ee
+sachant que les quantit\'es $x$ et $\xi$ incluent d\'ej\`a les cons\'equences de la force ext\'erieure $F$ dans leur expression respective. En supposant $\xi(-\infty) = 0$ et parce que $\lvert e^{i\omega t} \rvert = 1$ par d\'efinition, l'\'energie transmise totale vaut en reprenant les relations (\ref{EQ:22_10}) et (\ref{EQ:22_11}) :
+\be
+	E_{transmise}(\infty) = \dfrac{m}{2}\dfrac{1}{m^{2}} \Big\lvert \int_{-\infty}^{\infty}{F(t)e^{-i\omega t}\mathrm{d}t} \Big\rvert^{2} = \dfrac{1}{2m} \Big\lvert \int_{-\infty}^{\infty}{F(t)e^{-i\omega t}\mathrm{d}t} \Big\rvert^{2} \label{EQ:22_12}
+\ee
+Nous pouvons remarquer que l'expression de l'\'energie transmise correspond \`a l'amplitude variable du mouvement de la relation (\ref{EQ:22_10}). De plus, le c{\oe}fficient de Fourier s'\'ecrit pour une fonction quelconque $f$, pour une p\'eriode $T$, comme :
+\be
+	\forall n \le 0\text{, }c_{n}(f) = \dfrac{1}{T}\int_{T}f(t)e^{-i\frac{2n\pi}{T}t}\mathrm{d}t
+\ee
+aussi l'\'energie transmise est le carr\'e du module du c{\oe}fficient de Fourier de la force $F(t)$ avec un fr\'equence \'egale \`a la fonction propre du syst\`eme physique.
+
+Sur un intervalle de temps petit par rapport \`a $\frac{1}{\omega}$, nous avons $e^{-i\omega t} \approx 1$ et l'\'energie transmise :
+\be
+	E = \dfrac{1}{2m} \left(\int_{-\infty}^{\infty}{F(t)\mathrm{d}t}\right)^{2}
+\ee
+Par cons\'equent, une force qui ne s'exprime que sur une faible dur\'ee communique au syst\`eme une impulsion $\int F\mathrm{d}t$ qui ne permet pas de provoquer de d\'eplacement notable, ce qui revient \`a notre hypoth\`ese de base des petites oscillations.
