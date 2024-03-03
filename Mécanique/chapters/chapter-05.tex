@@ -155,4 +155,11 @@ en d\'efinissant la quantit\'e $\xi$ telle que :
 \be
 	\xi = \dot{x} + i\omega x \label{EQ:22_9}
 \ee
-L'\'equation (\ref{EQ:22_8}) n'est plus du second ordre.
+L'\'equation (\ref{EQ:22_8}) n'est plus du second ordre. Sa solution g\'en\'erale sans second membre peut d'\'ecrire comme $\xi_{0}e^{i\omega t}$ avec $\xi_{0}$ une constante d\'ependant des conditions initialies et \'egale \`a $\xi(t=0)$. Cherchons d\'esormais un int\'egrale particuli\`ere de la forme $A(t)e^{i\omega t}$ pour l'\'equation avec second membre. En ins\'erant cette solution particuli\`ere dans l'\'equation (\ref{EQ:22_8}) :
+\bea
+	\dot{A}(t)e^{i\omega t} + i\omega A(t)e^{i\omega t} - i\omega e^{i\omega t} & = & \dfrac{F(t)}{m} \Leftrightarrow \dot{A}(t) = \dfrac{1}{m}F(t)e^{-i\omega t} \nonumber \\
+	\Rightarrow \xi(t) & = & e^{i\omega t}\left(\xi_{0} + \dfrac{1}{m}\int{F(t)e^{-i\omega t}}\right) \label{EQ:22_10}
+\eea
+Ainsi la quantit\'e $x(t)$ est donn\'ee par la partie imaginaire de $\xi(t)$ donn\'ee par la relation (\ref{EQ:22_10}), divis\'ee par $\omega$.
+
+Dans le cas d'oscillations forc\'ees, l'\'energie totale du syst\`eme ne se conservent \'evidemmment pas. L'\'energie totale transmise au syst\`eme par la force ext\'erieure sachant que cette \'energie est nulle initialement, peut se calculer \`a partir de la relation (\ref{EQ:22_10}) :
