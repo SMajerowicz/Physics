@@ -182,6 +182,40 @@ De plus, sachant que pour un angle $\alpha$, $\sin\alpha = \sqrt{1 - \cos^{2}\al
 	\end{center}
 \end{figure}
 
+\section{Oscillations for\'ees}
+
+Dans les excercices suivants, le syt\`eme se trouve \`a l'\'equilibre et au repos \`a l'instant $t = 0$, i.e. $x(t = 0) = 0$ et $\dot{x}(t = 0) = 0$.
+
+\subsection{Mouvement dans le cas d'une force ext\'erieure non born\'ee dans le temps}
+
+Il s'agit de d\'eterminer les oscillations forc\'ees, $x(t)$, d'un syst\`eme dues \`a une force $F(t)$ dans diff\'erents cas pr\'ecis.
+
+\subsubsection{$F = F_{0}$}
+
+Dans ce cas, l'\'equation (\ref{EQ:22_2}) s'\'ecrit :
+\be
+	\ddot{x} + \omega^{2}x = \dfrac{F_{0}}{m}
+\ee
+dont la solution g\'en\'erale sans second membre peut s'\'ecrire : $a\cos(\omega t + \alpha)$ et une int\'egrale particulière constante, dont la d\'eriv\'ee seconde par rapport au temps est \'evidemment nulle, telle que $\omega^{2}x = \frac{F_{0}}{m} \Leftrightarrow x = \frac{F_{0}}{m\omega^{2}}$. Les conditions initiales permettent de d\'eduire :
+\be
+	\begin{cases}
+		\dot(x)(0) = 0 \Leftrightarrow -\frac{F_{0}}{m\omega^{2}}\omega\sin\alpha = 0 \Leftrightarrow \sin\alpha = 0 \Leftrightarrow \alpha = 0 \\
+		x(0) = 0 \Leftrightarrow a + \frac{F_{0}}{m\omega^{2}} = 0
+	\end{cases}
+\ee
+ce qui donne comme solution :
+\be
+	x = \frac{F_{0}}{m\omega^{2}}(1 - \cos(\omega t))
+\ee
+
+\subsubsection{$F = at$}
+
+\subsubsection{$F = F_{0}e^{-\alpha t}$}
+
+\subsubsection{$F = F_{0}e^{-\alpha t}\cos\beta t$}
+
+\subsection{Mouvement dans le cas d'une force ext\'erieure born\'ee dans le temps}
+
 \section{Oscillations des syst\`emes \`a plusieurs degr\'es de libert\'e}
 
 \subsection{Oscillations d'un syst\`eme \`a deux degr\'es de libert\'e}
