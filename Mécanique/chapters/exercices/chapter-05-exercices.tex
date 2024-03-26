@@ -210,6 +210,23 @@ ce qui donne comme solution :
 
 \subsubsection{$F = at$}
 
+La solution de l'\'equation (\ref{EQ:22_2}) est consiste en :
+\begin{itemize}
+	\item la solution g\'en\'erale sans second membre : $x_{0} = a\cos(\omega t + \alpha)$
+	\item l'int\'egrale particuli\`ere : $x_{1} = bt$ qui permet d'arriver \`a : $0 + \omega^{2}bt = \frac{F_{0}}{m}t \Leftrightarrow b = \frac{F_{0}}{m\omega^{2}}$
+\end{itemize}
+Les condtions initialies permettent les d\'eductions suivantes :
+\be
+	\begin{cases}
+		x(0) = 0 \Leftrightarrow \Leftrightarrow a\cos\alpha = 0 \Leftrightarrow \alpha = \pm\frac{\pi}{2} \\
+		\dot{x}(0) = 0 \Leftrightarrow -a\omega\sin\alpha + \frac{F_{0}}{m\omega^{2}} = 0 \Leftrightarrow a = \pm\frac{F_{0}}{m\omega^{3}}
+	\end{cases}
+\ee
+donc :
+\be
+	x(t) = \dfrac{F_{0}}{m\omega^{3}}(\omega t + \cos(\omega t \pm \pi/2)) \Leftrightarrow x(t) = \dfrac{F_{0}}{m\omega^{3}}(\omega t \pm \sin(\omega t))
+\ee
+
 \subsubsection{$F = F_{0}e^{-\alpha t}$}
 
 \subsubsection{$F = F_{0}e^{-\alpha t}\cos\beta t$}
