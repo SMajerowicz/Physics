@@ -229,7 +229,41 @@ donc :
 
 \subsubsection{$F = F_{0}e^{-\alpha t}$}
 
+Dans ce cas, l'int\'egrale particuli`ere est de la forme $be^{-\alpha t}$. En l'injectant dans l'\'equation (\ref{EQ:22_2}) :
+\be
+	\alpha^{2}be^{-\alpha t} + \omega^{2}be^{-\alpha t} = \dfrac{F_{0}}{m}e^{-\alpha t} \Leftrightarrow b = \dfrac{F_{0}}{m(\omega^{2} + \alpha^{2})}
+\ee
+ce qui permet d'\'ecrire le mouvement ainsi :
+\be
+	x(t) = a_{1}\cos(\omega t) + a_{2}\sin(\omega t) + \dfrac{F_{0}}{m(\omega^{2} + \alpha^{2})}e^{-\alpha t}
+\ee
+Les conditions initiales :
+\be
+	\begin{cases}
+	x(t = 0) = 0 \Leftrightarrow a_{1} + \dfrac{F_{0}}{m(\omega^{2} + \alpha^{2})} = 0 \Leftrightarrow a_{1} = -\dfrac{F_{0}}{m(\omega^{2} + \alpha^{2})} \\
+	\dot{x}(t = 0) = 0 \Leftrightarrow a_{2}\omega - \dfrac{F_{0}\alpha}{m(\omega^{2} + \alpha^{2})} = 0 \Leftrightarrow a_{2} = \dfrac{F_{0}\omega}{m\omega(\omega^{2} + \alpha^{2})}
+	\end{cases}
+\ee
+permettent de conclure :
+\be
+	x(t) = \dfrac{F_{0}}{m(\omega^{2} + \alpha^{2})}\left(e^{-\alpha t} - \cos(\omega t) + \dfrac{\alpha}{\omega}\sin(\omega t)\right)
+\ee
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_05_paragraph_22_exercice_1c}
+		\caption{Oscillations pour $F = F_{0}e^{-\alpha t}$ et $\alpha$ de 0.1 à 5 par pas de 0.5.}\label{FIG:22_1_c}
+	\end{center}
+\end{figure}
+
 \subsubsection{$F = F_{0}e^{-\alpha t}\cos\beta t$}
+
+Dans ce cas pr\'ecis, en remarquant que $F = \Re{(\overline{F})} = \Re{(F_{0}e^{-\alpha t}e^{i\beta t})} = \Re{(F_{0}e^{(i\beta - \alpha)t})}$, nous utiliserons les formes complexes, alors :
+\begin{itemize}
+	\item la solution g\'n\'erale sans second membre est $\overline{x_{0}} = ae^{i\omega t + \varphi}$
+	\item l'int\'egrale particuli\`ere est $\overline{x_{1}} = be^{(i\beta - \alpha)t}$
+\end{itemize}
+avec $\{a;b\} \in \mathbb{C}$.
 
 \subsection{Mouvement dans le cas d'une force ext\'erieure born\'ee dans le temps}
 
