@@ -260,10 +260,27 @@ permettent de conclure :
 
 Dans ce cas pr\'ecis, en remarquant que $F = \Re{(\overline{F})} = \Re{(F_{0}e^{-\alpha t}e^{i\beta t})} = \Re{(F_{0}e^{(i\beta - \alpha)t})}$, nous utiliserons les formes complexes, alors :
 \begin{itemize}
-	\item la solution g\'n\'erale sans second membre est $\overline{x_{0}} = ae^{i\omega t + \varphi}$
-	\item l'int\'egrale particuli\`ere est $\overline{x_{1}} = be^{(i\beta - \alpha)t}$
+	\item la solution g\'n\'erale sans second membre est $\overline{x_{0}} = \overline{a}e^{i\omega t + \varphi}$
+	\item l'int\'egrale particuli\`ere est $\overline{x_{1}} = \overline{b}e^{(i\beta - \alpha)t}$
 \end{itemize}
-avec $\{a;b\} \in \mathbb{C}$.
+avec $\{a;b\} \in \mathbb{C}$. La relation (\ref{EQ:22_2}) permet d'\'ecrire :
+\bea
+	\dfrac{F_{0}}{m}e^{i(\beta - \alpha)t} & = & \overline{b}(i\beta - \alpha)^{2}e^{i(\beta - \alpha)t} + \omega^{2}\overline{b}e^{i(\beta - \alpha)t} \Leftrightarrow \overline{b} = \dfrac{F_{0}}{m(\omega^{2} + (i\beta - \alpha)^{2})} \nonumber \\
+	\overline{b} & = & \dfrac{F_{0}}{m(\omega^{2} - \beta^{2} + \alpha^{2} - 2i\alpha\beta)} = \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2} + 2i\alpha\beta)}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}
+\eea
+La solution pour les oscillations forcées dans le domaine complexe s'\'ecrit alors en posant $a = a_{1} + ia_{2}$ avec $\{a_{2};a_{2}\} \in \mathbb{R}$ :
+\be
+	\overline{x} = \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2} + 2i\alpha\beta)}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}e^{(i\beta - \alpha)t} + (a_{1} + ia_{2})\cos(\omega t) + (-a_{2} + ia_{1})\sin(\omega t)
+\ee
+En effet, dans la solution g\'en\'erale sans second membre, l'expression exponentielle se d\'eveloppe ainsi :
+\bea
+	e^{i\omega t + \varphi} & = & \cos(\omega t + \varphi) + i\sin(\omega t + \varphi) = \cos(\omega t)\cos\varphi - \sin(\omega t)\sin\varphi + i(\cos(\omega t)\sin\varphi + \sin(\omega t)\cos\varphi) \nonumber \\
+	& = & (\cos\varphi + i\sin\varphi)\cos(\omega t) + (-\sin\varphi + i\cos\varphi)\sin(\omega t)
+\eea
+ainsi les facteurs $a_{1}$ et $a_{2}$ permettent de d\'efinir la phase. Ainsi :
+\bea
+	\overline{x} & = & a_{1}\cos(\omega t) - a_{2}\sin(\omega t)
+\eea
 
 \subsection{Mouvement dans le cas d'une force ext\'erieure born\'ee dans le temps}
 
