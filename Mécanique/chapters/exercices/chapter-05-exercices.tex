@@ -269,17 +269,41 @@ avec $\{a;b\} \in \mathbb{C}$. La relation (\ref{EQ:22_2}) permet d'\'ecrire :
 	\overline{b} & = & \dfrac{F_{0}}{m(\omega^{2} - \beta^{2} + \alpha^{2} - 2i\alpha\beta)} = \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2} + 2i\alpha\beta)}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}
 \eea
 La solution pour les oscillations forcées dans le domaine complexe s'\'ecrit alors en posant $a = a_{1} + ia_{2}$ avec $\{a_{2};a_{2}\} \in \mathbb{R}$ :
-\be
-	\overline{x} = \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2} + 2i\alpha\beta)}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}e^{(i\beta - \alpha)t} + (a_{1} + ia_{2})\cos(\omega t) + (-a_{2} + ia_{1})\sin(\omega t)
-\ee
+\bea
+	\overline{x} & = & \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2} + 2i\alpha\beta)}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}e^{(i\beta - \alpha)t}(\cos(\beta t) + i\sin(\beta t)) \nonumber \\
+	& & + (a_{1} + ia_{2})\cos(\omega t) + (-a_{2} + ia_{1})\sin(\omega t)
+\eea
 En effet, dans la solution g\'en\'erale sans second membre, l'expression exponentielle se d\'eveloppe ainsi :
 \bea
-	e^{i\omega t + \varphi} & = & \cos(\omega t + \varphi) + i\sin(\omega t + \varphi) = \cos(\omega t)\cos\varphi - \sin(\omega t)\sin\varphi + i(\cos(\omega t)\sin\varphi + \sin(\omega t)\cos\varphi) \nonumber \\
+	e^{i\omega t + \varphi} & = & \cos(\omega t + \varphi) + i\sin(\omega t + \varphi) = \cos(\omega t)\cos\varphi - \sin(\omega t)\sin\varphi \nonumber \\
+	& &	+ i(\cos(\omega t)\sin\varphi + \sin(\omega t)\cos\varphi) \nonumber \\
 	& = & (\cos\varphi + i\sin\varphi)\cos(\omega t) + (-\sin\varphi + i\cos\varphi)\sin(\omega t)
 \eea
-ainsi les facteurs $a_{1}$ et $a_{2}$ permettent de d\'efinir la phase. Ainsi :
+et les facteurs $a_{1}$ et $a_{2}$ permettent de d\'efinir la phase. Ainsi :
 \bea
-	\overline{x} & = & a_{1}\cos(\omega t) - a_{2}\sin(\omega t)
+	\overline{x} & = & a_{1}\cos(\omega t) - a_{2}\sin(\omega t) + \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2})}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} \nonumber + 4\alpha^{2}\beta^{2}\right)}e^{-\alpha t}\cos(\beta t) \nonumber \\
+	& & - \dfrac{2F_{0}\alpha\beta}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}e^{-\alpha t}\sin(\beta t) \nonumber \\
+	& & + i\left(a_{2}\cos(\omega t) + a_{1}\sin(\omega t) + \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2})}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}e^{-\alpha t}\sin(\beta t) \right. \nonumber \\
+	& & + \left. \dfrac{2F_{0}\alpha\beta}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}e^{-\alpha t}\cos(\beta t)\right)
+\eea
+Cette expression se r\'eduit car le mouvement oscillatoire est r\'ealis\'e dans le domaine r\'eel, aussi $x = \Re{(\overline{x})}$. Les conditions initiales permettent de d\'eduire les c{\oe}fficients tels que :
+\be
+	x(t = 0) = 0 \Leftrightarrow a_{1} + \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2})}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)} = 0
+\ee
+et :
+\bea
+	\dot{x} & = & -a_{1}\omega\sin(\omega t) - a_{2}\omega\cos(\omega t) + \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2})}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}\left(-\alpha e^{-\alpha t}\cos(\beta t) - \beta e^{-\alpha t}\sin(\beta t)\right)\nonumber \\
+	& & - \dfrac{2F_{0}\alpha\beta}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}\left(-\alpha e^{-\alpha t}\sin(\beta t) + \beta e^{-\alpha t}\cos(\beta t)\right)
+\eea
+Donc :
+\bea
+	0 & = & -a_{2}\omega - \dfrac{\alpha F_{0}(\omega^{2} - \beta^{2} + \alpha^{2})}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)} - \dfrac{2F_{0}\alpha\beta^{2}}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)} \nonumber \\
+	\Leftrightarrow a_{2} & = & -\dfrac{\alpha F_{0}(\omega^{2} + \alpha^{2} + \beta^{2})}{m\omega\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)}
+\eea
+Ainsi le mouvement est d\'ecrit par :
+\bea
+	x(t) & = & \dfrac{F_{0}(\omega^{2} + \alpha^{2} + \beta^{2})}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)} \left(-(\omega^{2} - \beta^{2} + \alpha^{2})\cos(\omega t) + \dfrac{\alpha}{\omega}(\omega^{2} + \alpha^{2} + \beta^{2})\sin(\omega t) \right. \nonumber \\
+	& & + \left. (\omega^{2} - \beta^{2} + \alpha^{2})\cos(\beta t) -2\alpha\beta\sin(\beta t)e^{-\alpha t}\right) \\
 \eea
 
 \subsection{Mouvement dans le cas d'une force ext\'erieure born\'ee dans le temps}
