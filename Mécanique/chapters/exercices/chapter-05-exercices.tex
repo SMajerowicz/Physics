@@ -190,7 +190,7 @@ Dans les excercices suivants, le syt\`eme se trouve \`a l'\'equilibre et au repo
 
 Il s'agit de d\'eterminer les oscillations forc\'ees, $x(t)$, d'un syst\`eme dues \`a une force $F(t)$ dans diff\'erents cas pr\'ecis.
 
-\subsubsection{$F = F_{0}$}
+\subsubsection{$F = F_{0}$}\label{PAR:23_EX2a}
 
 Dans ce cas, l'\'equation (\ref{EQ:22_2}) s'\'ecrit :
 \be
@@ -205,10 +205,10 @@ dont la solution g\'en\'erale sans second membre peut s'\'ecrire : $a\cos(\omega
 \ee
 ce qui donne comme solution :
 \be
-	x = \frac{F_{0}}{m\omega^{2}}(1 - \cos(\omega t))
+	x(t) = \dfrac{F_{0}}{m\omega^{2}}(1 - \cos(\omega t))
 \ee
 
-\subsubsection{$F = at$}
+\subsubsection{$F = at$}\label{PAR:23_EX2b}
 
 La solution de l'\'equation (\ref{EQ:22_2}) est consiste en :
 \begin{itemize}
@@ -313,12 +313,11 @@ Ainsi le mouvement est d\'ecrit par :
 	\end{center}
 \end{figure}
 
-
 \subsection{Mouvement dans le cas d'une force ext\'erieure born\'ee dans le temps}
 
-Dans cette suite d'exercices, l'objectif est de calculer l'amplitude finale des oscillations d'un système apr\`es l'action d'une force ext\'erieure telle que $F = 0$ pour $t < 0$ et qu'\`a $t = 0$, le syt\`eme est au repos et \`a l'\'equilibre.
+Dans cette suite d'exercices, l'objectif est de calculer l'amplitude finale des oscillations d'un système apr\`es l'action d'une force ext\'erieure telle que $F = 0$ pour $t < 0$ et qu'\`a $t = 0$, le syt\`eme est au repos et \`a l'\'equilibre, i.e. $x(t = 0) = 0$ et $\dot{x}(t = 0) = 0$.
 
-\section{Oscillations des syst\`emes \`a plusieurs degr\'es de libert\'e}
+\subsubsection{Premier exemple}
 
 Dans ce premier cas, la force ext\'erieure s'exprime telle que :
 \begin{itemize}
@@ -326,7 +325,34 @@ Dans ce premier cas, la force ext\'erieure s'exprime telle que :
 	\item $F = F_{0}$ pour $t > T$
 \end{itemize}
 
-\subsection{Oscillations d'un syst\`eme \`a deux degr\'es de libert\'e}
+Pour $0 < t < T$, nous pouvons repartir de la solution du probl\`eme (\ref{PAR:23_EX2b}) avec ici $a = F_{0}/T$. Aussi, nous avons dans cet intervalle de temps :
+\be
+	x(t) = \dfrac{F_{0}}{m\omega^{3}T}(\omega t - \sin(\omega t))
+\ee
+Pour $t \ge T$, c'est la solution du probl\`eme (\ref{PAR:23_EX2a}) qui peut \^etre utilis\'ee, \`a savoir $x(t) = a\cos(\omega t + \alpha) + \frac{F_{0}}{m\omega^{2}}$. Il reste \`a remplir les conditions de continuit\'e pour $t = T$, soit :
+\be
+	\begin{cases}
+		\dfrac{F_{0}}{m\omega^{3}T}(\omega T - \sin(\omega T)) = a\cos(\omega T + \alpha) + \dfrac{F_{0}}{m\omega^{2}} \Leftrightarrow a\cos(\omega T + \alpha) = -\dfrac{F_{0}}{m\omega^{3}T}\sin(\omega T) \\
+		\\
+		\dfrac{F_{0}}{m\omega^{3}T}(\omega - \omega\cos(\omega T)) = -a\omega\sin(\omega T + \alpha) \Leftrightarrow a\sin(\omega T + \alpha) = \dfrac{F_{0}}{m\omega^{3}T}(1 - \cos(\omega T))
+	\end{cases}
+\ee
+En appliquant l'identit\'e $\cos^{2} + \sin^{2} = 1$, cela permet d'en d\'eduire l'amplitude des oscillations :
+\bea
+	a^{2} & = & \left(-\dfrac{F_{0}}{m\omega^{3}T}\sin(\omega T)\right)^{2} + \left(\dfrac{F_{0}}{m\omega^{3}T}(1 - \cos(\omega T))\right)^{2} \nonumber \\
+	& = & \left(\dfrac{F_{0}}{m\omega^{3}T}\right)^{2}\left(\sin^{2}(\omega T) + 1 + \cos^{2}(\omega T) - 2\cos(\omega T)\right) \nonumber \\
+	& = & 2\left(\dfrac{F_{0}}{m\omega^{3}T}\right)^{2}(1 - \cos(\omega T)) = 4\left(\dfrac{F_{0}}{m\omega^{3}}\right)^{2}\sin^{2}\left(\dfrac{\omega T}{2}\right) \nonumber \\
+	\Leftrightarrow a & = & 2\left(\dfrac{F_{0}}{m\omega^{3}T}\right)\lvert\sin\left(\dfrac{\omega T}{2}\right)\rvert
+\eea
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_05_paragraph_22_exercice_2}
+		\caption{\'Evolution de l'amplitude en fonction de la période pour $\omega$ de $\pi/4$ à $3\pi$}\label{FIG:22_2}
+	\end{center}
+\end{figure}
+
+\subsubsection{Deuxi\`eme exemple}
 
 Dans ce deuxi\`eme cas, la force ext\'erieure s'exprime telle que :
 \begin{itemize}
@@ -334,13 +360,61 @@ Dans ce deuxi\`eme cas, la force ext\'erieure s'exprime telle que :
 	\item $F = 0$ pour $t > T$
 \end{itemize}
 
-\subsection{Petites oscillations d'un pendule double oscillant dans un plan}
+La force ext\'erieure n'op\`ere plus pour $t > T$ aussi l'amplitude des oscillations au-del\`a de $T$ est exactement la valeur de l'oscillation \`a $t = T$. En reprenant la solution du probl\`eme (\ref{PAR:23_EX2a}) pour $t < T$ et appliqu\'ee en $t = T$, nous obtenons ais\'ement :
+\be
+	a = x(T) = \dfrac{F_{0}}{m\omega^{2}}(1 - \cos(\omega T)) = 2\dfrac{F_{0}}{m\omega^{2}}\sin^{2}\left(\dfrac{\omega T}{2}\right)
+\ee
+Ce r\'esultat est diff\'erent de celui pr\'esent\'e dans le livre en $\propto \sin$ au lieu de $\propto \sin^{2}$ ici obtenu.
+
+\subsubsection{Troisi\`eme exemple}
 
 Dans ce troisi\`eme cas, la force ext\'erieure s'exprime telle que :
 \begin{itemize}
 	\item $F = F_{0}t/T$ pour $t \in [0;T]$
 	\item $F = 0$ pour $t > T$
 \end{itemize}
+
+Pour cet exemple, nous allons raisonner avec la variable d\'efinie en (\ref{EQ:22_9}), \`a savoir $\xi = \dot{x} + i\omega x$. Sans force ext\'erieure, i.e. pour la partie telle que $t > T$, la relation (\ref{EQ:22_10}) permet de d\'eduire l'\'energie du syst\`eme comme $\frac{1}{2}m\omega^{2}a^{2}$ alors qu'avec l'application d'une force ext\'erieure, nous avons vu par l'\'equation (\ref{EQ:22_11}) que l'\'energie du syst\`eme s'\'ecrit $\frac{1}{2}m\lvert\xi\rvert^{2}$ et en particulier $\frac{1}{2}m\lvert\xi(T)\rvert^{2}$. Comme l'\'energie du syst\`eme se conserve, nous pouvons en conclure que :
+\be
+	\lvert\xi(T)\rvert^{2} = \omega^{2}a^{2}
+\ee
+Pour $0 < t < T$, la solution du probl\`eme est celle du paragraphe (\ref{PAR:23_EX2b}) qui permet d'\'ecrire $x(t) = \frac{F_{0}}{m\omega^{3}T}(\omega t - \sin(\omega t))$. Nous avons alors :
+\bea
+	\xi & = & \dot{x} + i\omega x = \dfrac{F_{0}}{m\omega^{3}T}(\omega - \omega\cos(\omega t)) + i\omega\dfrac{F_{0}}{m\omega^{3}T}(\omega t - \sin(\omega t)) \nonumber \\
+	& = & \dfrac{F_{0}}{m\omega^{2}T}(1 - \cos(\omega t)) + i\dfrac{F_{0}}{m\omega^{2}T}(\omega t - \sin(\omega t)) = \dfrac{F_{0}}{m\omega^{2}T}(1 - \cos(\omega t) + i(\omega t - \sin(\omega t)) \nonumber \\
+	\Leftrightarrow \lvert\xi(T)\rvert^{2} & = & \dfrac{F_{0}^{2}}{m^{2}\omega^{4}T^{2}}\left((1 - \cos(\omega T)^{2} + (\omega T - \sin(\omega T))^{2}\right) \nonumber \\
+	& = & \dfrac{F_{0}^{2}}{m^{2}\omega^{4}T^{2}}\left(1 + \cos^{2}(\omega T) - 2\cos(\omega T) + \omega^{2}T^{2} + \sin^{2}(\omega t) - 2\omega T\sin(\omega T)\right) \nonumber \\
+	& = & \dfrac{F_{0}^{2}}{m^{2}\omega^{4}T^{2}}\left(\omega^{2}T^{2} - 2\omega T\sin(\omega T) + 2(1 - \cos(\omega T))\right)
+\eea
+En reprenant l'\'egalit\'e $\lvert\xi(T)\rvert^{2} = \omega^{2}a^{2}$, nous arrivons alors :
+\be
+	a = \dfrac{F_{0}}{m\omega^{3}T}\sqrt{\omega^{2}T^{2} - 2\omega T\sin(\omega T) + 2(1 - \cos(\omega T))}
+\ee
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_05_paragraph_22_exercice_4}
+		\caption{\'Evolution de l'amplitude en fonction de la période pour $\omega$ de $\pi/4$ à $3\pi$}\label{FIG:22_4}
+	\end{center}
+\end{figure}
+
+\subsubsection{Quatri\`eme exemple}
+
+Dans ce dernier cas, la force ext\'erieure s'exprime telle que :
+\begin{itemize}
+	\item $F = F_{0}\sin(\omega t)$ pour $t \in [0;T]$
+	\item $F = 0$ pour $t > T = 2\pi/\omega$
+\end{itemize}
+ainsi l'exercice de la force ext\'erieure ainsi que la dur\'ee d\'ependent d'ors et d\'ej\`a de la fr\'equence propre du syst\`eme. Par d\'efinition, $\sin(\omega t) = (e^{i\omega t} - e^{-i\omega t})/2i$ donc nous pouvons \'ecrire la force ext\'erieure comme $F(t) = \frac{F_{0}}{2i}(e^{i\omega t} - e^{-i\omega t})$ pour $t < T$. Les conditions initiales retenues impliquent que $\xi(t = 0) = 0$ aussi la relation (\ref{EQ:22_10}) donne :
+\bea
+	\xi(T) & = & \dfrac{F_{0}}{2mi}e^{i\omega T}\int_{0}^{T}\left(e^{i\omega t} - e^{-i\omega t}\right)e^{-i\omega t}\mathrm{d}t = \dfrac{F_{0}}{2mi}e^{i\omega T}\int_{0}^{T}\left(1 - e^{-2i\omega t}\right)\mathrm{d}t \nonumber \\
+	& = & \dfrac{F_{0}}{2mi}e^{i\omega T}\left(T + \dfrac{1}{2i\omega}\left(e^{-2i\omega T} - 1\right)\right) = -\dfrac{F_{0}}{2m}ie^{i\omega T}\left(T - \dfrac{i}{2\omega}\left(e^{-2i\omega T} - 1\right)\right)
+\eea
+or $T = 2\pi/\omega$ et $\forall n \in \mathbb{Z}\text{, }e^{2in\pi} = 1$ donc :
+\bea
+	\xi(T) & = & -\dfrac{F_{0}}{2m}ie^{2\pi i}\left(\dfrac{2\pi}{\omega} - \dfrac{i}{2\omega}\left(e^{-4\pi i} - 1\right)\right) = -\dfrac{F_{0}\pi}{m\omega}i \nonumber \\
+	\Leftrightarrow \lvert\xi(T)\rvert^{2} & = & \dfrac{F_{0}^{2}\pi^{2}}{m^{2}\omega^{2}} = a^{2}\omega^{2} \Leftrightarrow a & = & \dfrac{\pi F_{0}}{m\omega^{2}}
+\eea
 
 \section{Syst\`emes \`a plusieurs degr\'es de libert\'e}
 
