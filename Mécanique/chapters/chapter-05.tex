@@ -1,6 +1,6 @@
 \chapter{Petites oscillations}
 
-\section{Oscillations lin\'eaires libres}
+\section{Oscillations lin\'eaires libres}\label{PAR:21}
 
 Les \emph{petites oscillations} sont celles faites par un syst\`eme au voisinage de sa position d'\'equilibre stable et nous étudions ici le cas le plus simple, celui où il n'y a qu'un seul degr\'e de libert\'e. Un \'equilibre stable intervient quand l'\'energie potentielle $U(q)$ est minimale. D\'efinissons que $U$ soit minimale en $q = q_{0}$. L'\'equation (\ref{EQ:5_4}) montre qu'un \'ecart par rapport \`a la position $q_{0}$ engendre une force \'egale \`a $-\frac{\mathrm{d}U}{\mathrm{d}q}$ qui ram\`ene le syst\`eme \`a sa position d'\'equilibre stable. R\'ealisons un d\'eveloppement de Taylor de $U(q)$ jusqu'au second ordre :
 \be
@@ -181,3 +181,33 @@ Sur un intervalle de temps petit par rapport \`a $\frac{1}{\omega}$, nous avons 
 	E = \dfrac{1}{2m} \left(\int_{-\infty}^{\infty}{F(t)\mathrm{d}t}\right)^{2}
 \ee
 Par cons\'equent, une force qui ne s'exprime que sur une faible dur\'ee communique au syst\`eme une impulsion $\int F\mathrm{d}t$ qui ne permet pas de provoquer de d\'eplacement notable, ce qui revient \`a notre hypoth\`ese de base des petites oscillations.
+
+\section{Oscillations des syst\`emes \`a plusieurs degr\'es de libert\'e}
+
+\subsection{Cas g\'en\'eral des oscillations libres}
+
+Il s'agit d'une g\'en\'eralisation de l'\'etude men\'ee au paragraphe (\ref{PAR:21}), une m\'ethode similaire est applicable dans le cas qui nous occupe ici avec plusieurs degr\'es de libert\'es. L'\'energie potentielle est une fonction des coordonn\'ees g\'en\'eralis\'ees $\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1}$ et il est d\'efini qu'elle soit minimale pour $\forall i \in (1, 2, \ldots, s)\text{, }q_{i} = q_{i0}$. Cela permet de d\'efinir les petits d\'eplacements tels que :
+\be
+	\forall i \in (1, 2, \ldots, s)\text{, }x_{i} = q_{i} - q_{i0} \label{EQ:23_1}
+\ee
+Le d\'eveloppement de Taylor au second degr\'e de l'\'energie potentielle donne :
+\be
+	U(\begin{Bmatrix}q_{i}\end{Bmatrix}) = U(\begin{Bmatrix}q_{i_{0}}\end{Bmatrix}) + \sum_{i}\left(\dfrac{\partial U}{\partial q_{i}}\right)_{q_{i}=q_{i0}}(q_{i} - q_{i0}) + \dfrac{1}{2}\sum_{i,j}\left(\dfrac{\partial^{2}U}{\partial q_{i}\partial q_{j}}\right)_{q_{i}=q_{i0},q_{j}=q_{j0}}(q_{i} - q_{i0})(q_{j} - q_{j0})
+\ee
+Le syst\`eme est d\'efini comme \'etant \`a l'\'equilibre initialement, aussi :
+\be
+	\left(\dfrac{\partial U}{\partial q_{i}}\right)_{q_{i}=q_{i0}} = 0
+\ee
+donc :
+\be
+	U(\begin{Bmatrix}q_{i}\end{Bmatrix}) - U(\begin{Bmatrix}q_{i_{0}}\end{Bmatrix}) = \dfrac{1}{2}\sum_{i,j}\left(\dfrac{\partial^{2}U}{\partial q_{i}\partial q_{j}}\right)_{q_{i}=q_{i0},q_{j}=q_{j0}}(q_{i} - q_{i0})(q_{j} - q_{j0})
+\ee
+En comptant l'\'energie potentielle par rapport \`a sa valeur minimale et parce que $\partial x_{i} = \partial (q_{i} - q_{i0}) = \partial q_{i}$, alors :
+\be
+	U(\begin{Bmatrix}q_{i}\end{Bmatrix}) = \dfrac{1}{2}\sum_{i,j}k_{ij}x_{i}x_{j}\text{ avec }k_{ij} = \left(\dfrac{\partial^{2}U}{\partial x_{i}\partial x_{j}}\right)_{x_{i}=0,x_{j}=0} \label{EQ:23_2}
+\ee
+Sachant que $\partial x_{i}x_{j} = \partial x_{j}x_{i}$ alors $k_{ij} = k_{ji}$, les c{\oe}fficients sont sym\'etriques.
+
+\subsection{Cas tridimensionnel}
+
+\subsection{Oscillations forc\'ees}
