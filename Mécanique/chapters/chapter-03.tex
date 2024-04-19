@@ -15,7 +15,7 @@ En \'ecrivant l'\'energie totale :
 	E = T + U & = & \frac{1}{2}m\dot{x}^{2} + U(x) \nonumber \\
 	\dot{x}^{2} & = & \frac{2}{m}(E-U(x)) \nonumber \\
 	\dfrac{\mathrm{d}x}{\mathrm{dt}} & = & \sqrt{\frac{2}{m}(E-U(x))} \nonumber \\
-	t & = & \sqrt{\frac{m}{2}}\int{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}} + cste \label{EQ:11_3}
+	t & = & \sqrt{\frac{m}{2}}\bigintsss{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}} + cste \label{EQ:11_3}
 \eea
 o\`u $E$ et $cste$ sont des constantes du mouvement, la premi\`ere par la loi de conservation de l'\'energie et la seconde par int\'egration.
 
@@ -54,8 +54,8 @@ sont les \emph{points d'arr\^et}. En effet, dans ce cas, l'\'energie cin\'etique
 
 Dans la relation (\ref{EQ:5_1}), nous avons vu que le temps n'est pas qu'uniforme, il est aussi isotrope. Ainsi la transformation $\mathrm{t}\mapsto -\mathrm{t}$ laisse inchang\'ee la fonction de Lagrange et les \'equations du mouvement. Ainsi $\Delta\mathrm{t}(x_{1}\rightarrow x_{2}) = \Delta\mathrm{t}(x_{2}\rightarrow x_{1})$ et la période d'oscillation $\mathrm{T}(E)=\Delta\mathrm{t}(x_{1}\rightarrow x_{2}\rightarrow x_{1})$ vaut $2\Delta\mathrm{t}(x_{1}\rightarrow x_{2})$. L'\'equation (\ref{EQ:11_3}) s'\'ecrit alors :
 \bea
-	\mathrm{T}(E) & = & 2\sqrt{\frac{m}{2}}\int_{x_{1}(E)}^{x_{2}(E)}{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}} \nonumber \\
-	\mathrm{T}(E) & = & \sqrt{2m}\int_{x_{1}(E)}^{x_{2}(E)}{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}}\label{EQ:11_5}
+	\mathrm{T}(E) & = & 2\sqrt{\frac{m}{2}}\bigintsss_{x_{1}(E)}^{x_{2}(E)}{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}} \nonumber \\
+	\mathrm{T}(E) & = & \sqrt{2m}\bigintsss_{x_{1}(E)}^{x_{2}(E)}{\dfrac{\mathrm{d}x}{\sqrt{E-U(x)}}}\label{EQ:11_5}
 \eea
 qui d\'etermine la p\'eriode d'oscillation de la particule mat\'erielle en fonction de son \'energie totale.
 
@@ -88,20 +88,20 @@ L'objectif de ce paragraphe est de trouver la fonction d\'efinissant l'\'energie
 
 Transformons l'int\'egrale (\ref{EQ:11_5}) avec $x$ fonction de $U$ telle que pour une valeur de l'\'energie potentielle $U$ il existe deux valeurs de $x$ diff\'erentes. Elle devient alors la somme de deux int\'egrales sur deux r\'egions diff\'erentes :
 \bea
-	\mathrm{T}(E) & = & \sqrt{2m}\int_{x_{1}(E)}^{x_{2}(E)}\dfrac{\mathrm{d}x}{\sqrt{E - U(x)}} \nonumber \\
-	& = & -\sqrt{2m}\int_{0}^{E}\dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\dfrac{\mathrm{d}U}{\sqrt{E - U}} + \sqrt{2m}\int_{0}^{E}\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U}\dfrac{\mathrm{d}U}{\sqrt{E - U}} \nonumber \\
-	& = & \sqrt{2m}\int_{0}^{E}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\dfrac{\mathrm{d}U}{\sqrt{E - U}}
+	\mathrm{T}(E) & = & \sqrt{2m}\bigintsss_{x_{1}(E)}^{x_{2}(E)}\dfrac{\mathrm{d}x}{\sqrt{E - U(x)}} \nonumber \\
+	& = & -\sqrt{2m}\bigintsss_{0}^{E}\dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\dfrac{\mathrm{d}U}{\sqrt{E - U}} + \sqrt{2m}\bigintsss_{0}^{E}\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U}\dfrac{\mathrm{d}U}{\sqrt{E - U}} \nonumber \\
+	& = & \sqrt{2m}\bigintsss_{0}^{E}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\dfrac{\mathrm{d}U}{\sqrt{E - U}}
 \eea
 Elle peut \^etre \'etendue \`a :
 \bea
-	\int_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} & = & \sqrt{2m}\int_{0}^{\alpha}\int_{0}^{E}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\dfrac{\mathrm{d}U\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} \nonumber \\
-	& =& \sqrt{2m}\int_{0}^{\alpha}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\mathrm{d}U\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}}
+	\bigintsss_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} & = & \sqrt{2m}\bigintsss_{0}^{\alpha}\bigintsss_{0}^{E}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\dfrac{\mathrm{d}U\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} \nonumber \\
+	& =& \sqrt{2m}\bigintsss_{0}^{\alpha}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\mathrm{d}U\bigintsss_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}}
 \eea
 La seconde implication dans sa deuxi\`eme int\'egrale est en $\int_{U}^{\alpha}$ car en dehors de cet intervalle, $\int_{0}^{U}$ et $\int_{\alpha}^{E}$ sont ind\'efinie car $(E-U)$ et $(\alpha-E)$ sont respectivement n\'egatives.
 
 Faisons d\'esormais le calcul de la seconde int\'egrale, soit :
 \be
-	\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}}
+	\bigintsss_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}}
 \ee
 en posant :
 \be
@@ -123,32 +123,32 @@ et :
 \ee
 Ainsi :
 \bea
-	\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} & = & \int_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\sqrt{\frac{(2\alpha - (\alpha - U)y + U + \alpha)}{2}\frac{((\alpha - U)y + U + \alpha - 2U)}{2}}} \nonumber \\
-	& = & \int_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\sqrt{\frac{(\alpha - U - (\alpha - U)y)}{2}\frac{(\alpha - U + (\alpha - U)y)}{2}}} \nonumber \\
-	& = & \int_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\frac{\alpha - U}{2}\sqrt{(1 - y)(1 + y)}} = \int_{-1}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{2}}}
+	\bigintsss_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} & = & \bigintsss_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\sqrt{\frac{(2\alpha - (\alpha - U)y + U + \alpha)}{2}\frac{((\alpha - U)y + U + \alpha - 2U)}{2}}} \nonumber \\
+	& = & \bigintsss_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\sqrt{\frac{(\alpha - U - (\alpha - U)y)}{2}\frac{(\alpha - U + (\alpha - U)y)}{2}}} \nonumber \\
+	& = & \bigintsss_{-1}^{1}\dfrac{(\alpha - U)\mathrm{d}y}{2\frac{\alpha - U}{2}\sqrt{(1 - y)(1 + y)}} = \bigintsss_{-1}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{2}}}
 \eea
 En posant $u = y^{2}$ soit $y = u^{1/2}$ et $\mathrm{d}u = 2y\mathrm{d}y = 2u^{1/2}\mathrm{d}y \Leftrightarrow \mathrm{d}y = \frac{1}{2}u^{-1/2}\mathrm{d}u$, l'int\'egrale pr\'ec\'edente s'\'ecrit :
 \bea
-	\int_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} & = & \int_{-1}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{2}}} = 2 \int_{0}^{1}\dfrac{1}{2}\dfrac{u^{-1/2}\mathrm{d}u}{(1-u)^{1/2}} \nonumber \\
+	\bigintsss_{U}^{\alpha}\dfrac{\mathrm{d}E}{\sqrt{(\alpha - E)(E - U)}} & = & \bigintsss_{-1}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{2}}} = 2 \bigintsss_{0}^{1}\dfrac{1}{2}\dfrac{u^{-1/2}\mathrm{d}u}{(1-u)^{1/2}} \nonumber \\
 	& = & \int_{0}^{1}u^{-1/2}(1-u)^{-1/2}\mathrm{d}u \nonumber \\
-	& = & \mathrm{B}\left(\frac{1}{2},\frac{1}{2}\right) = \dfrac{\Gamma(\frac{1}{2})\Gamma(\frac{1}{2})}{\Gamma(1)} = \pi
+	& = & \mathrm{B}\left(\dfrac{1}{2},\dfrac{1}{2}\right) = \dfrac{\Gamma(\dfrac{1}{2})\Gamma(\dfrac{1}{2})}{\Gamma(1)} = \pi
 \eea
 De fait :
 \bea
-	\int_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} & = & \sqrt{2m}\pi\int_{0}^{\alpha}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\mathrm{d}U \nonumber \\
+	\bigintsss_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} & = & \sqrt{2m}\pi\bigintsss_{0}^{\alpha}\left[\dfrac{\mathrm{d}x_{2}}{\mathrm{d}U} - \dfrac{\mathrm{d}x_{1}}{\mathrm{d}U}\right]\mathrm{d}U \nonumber \\
 	& = & \sqrt{2m}\pi\left[x_{2}(\alpha) - x_{2}(0) - x_{1}(\alpha) + x_{1}(0)\right]
 \eea
 Or par hypoth\`ese, $x_{2}(0) = x_{1}(0) = 0$, donc :
 \be
-	\int_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} = \sqrt{2m}\pi\left[x_{2}(\alpha) - x_{1}(\alpha)\right]
+	\bigintsss_{0}^{\alpha}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{\alpha - E}} = \sqrt{2m}\pi\left[x_{2}(\alpha) - x_{1}(\alpha)\right]
 \ee
 Dans le cas o\`u nous posons $\alpha = U$, nous pouvons en d\'eduire :
 \be
-	x_{2}(U) - x_{1}(U) = \dfrac{1}{\sqrt{2m}\pi}\int_{0}^{U}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{U - E}} \label{EQ:12_1}
+	x_{2}(U) - x_{1}(U) = \dfrac{1}{\sqrt{2m}\pi}\bigintsss_{0}^{U}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{U - E}} \label{EQ:12_1}
 \ee
 De plus, si le champ d'\'energie potentielle est paire tel que $U(x) = U(-x)$ ou encore $x_{1}(U) = -x_{2}(U) = x(U)$, alors l'\'equation (\ref{EQ:12_1}) devient, puisque $x_{2}(U) - x_{1}(U) = 2x(U)$ :
 \be
-	x(U) = \dfrac{1}{2\pi\sqrt{2m}}\int_{0}^{U}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{U - E}} \label{EQ:12_2}
+	x(U) = \dfrac{1}{2\pi\sqrt{2m}}\bigintsss_{0}^{U}\dfrac{\mathrm{T}(E)\mathrm{d}E}{\sqrt{U - E}} \label{EQ:12_2}
 \ee
 
 \section{Masse r\'eduite}
@@ -281,7 +281,7 @@ En renversant, nous obtenons :
 \ee
 qui permet d'obtenir par intégration :
 \be
-	t = \int{\dfrac{\mathrm{d}r}{\sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}}}} + cste \label{EQ:14_6}
+	t = \bigintsss{\dfrac{\mathrm{d}r}{\sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}}}} + cste \label{EQ:14_6}
 \ee
 En reprenant l'\'equation (\ref{EQ:14_2}) sous la forme :
 \bea
@@ -293,7 +293,7 @@ et en l'injection dans la relation (\ref{EQ:14_5}), nous avons :
 	\dfrac{\mathrm{d}r}{\mathrm{dt}} = \dfrac{M\mathrm{d}r}{mr^{2}\mathrm{d}\varphi} & = & \sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}} \nonumber \\
 	\Leftrightarrow \mathrm{d}\varphi & = & \dfrac{M\mathrm{d}r}{mr^{2}\sqrt{\frac{2}{m}(E - U(r)) - \frac{M^{2}}{m^{2}r^{2}}}} \nonumber \\
 	& = & \dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}} \nonumber \\
-	\Leftrightarrow \varphi & = & \int{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} + cste \label{EQ:14_7}
+	\Leftrightarrow \varphi & = & \bigintsss{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} + cste \label{EQ:14_7}
 \eea
 
 Les formules (\ref{EQ:14_6}) et (\ref{EQ:14_7}) forment la solution g\'en\'erale. La premi\`ere donne implicitement la distance au centre $r$ en fonction du temps alors que la seconde \'etablit la relation entre $r$ et $\varphi$, soit l'\'equation du mouvement.
@@ -326,7 +326,7 @@ Les valeurs de la distance telle que l'\'energie cin\'etique radiale s'annule ou
 \end{itemize}
 Dans le second cas, la variation angulaire $\Delta\varphi$ de la trajectoire de la particule pendant qu'elle fait le trajet $r_{max} \rightarrow r_{min} \rightarrow r_{max}$\footnote{Ou l'\'equivalent sym\'etrique $r_{min} \rightarrow r_{max} \rightarrow r_{min}$.} vaut d'apr\`es l'\'equation (\ref{EQ:14_7}) :
 \be
-	\Delta\varphi = 2\int_{r_{min}}^{r_{max}}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:14_10}
+	\Delta\varphi = 2\bigintsss_{r_{min}}^{r_{max}}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:14_10}
 \ee
 La trajectoire de la particule est finie, i.e. elle se referme, si et seulement si $\Delta\varphi = \frac{m}{n}\times 2\pi$ avec ${m;n}\in\mathbb{N}$. Ainsi, quand le rayon vecteur parcourt $n$ p\'eriodes, il fait \'egalement $m$ tours complets et la trajectoire se referme. Toutefois, cela reste un cas particulier. En g\'en\'eral $U(r)$ ne permet par d'obtenir $\Delta\varphi$ comme une fraction rationnelle de $2\pi$ et la trajectoire ne se referme pas et finit par remplir tout l'espace de l'anneau compris entre $r_{min}$ et $r_{max}$. Finalement, la trajectoire est ferm\'ee pour les \'energies potentielles en $\frac{1}{r}$, voir le paragraphe \ref{PAR:15} et en $r^{2}$, voir l'exercice \ref{PAR:23_EX3}.
 
@@ -387,7 +387,7 @@ et par cons\'equence, nous avons :
 
 D'apr\`es la courbe de la figure (\ref{FIG:3_10}), il est \'evident que pour $E > 0$, la trajectoire est infinie alors que pour $E < 0$, elle est finie. La forme g\'en\'erale de la trajectoire se d\'eduit de l'\'equation (\ref{EQ:14_7}) en y posant $U(r) = -\alpha / r$. Nous \'ecrivons alors :
 \be
-	\varphi = \int{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{r^{2}}}}}
+	\varphi = \bigintsss{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{r^{2}}}}}
 \ee
 L'objectif est ici de faire un changement de variable permettant de faire ressortir la fonction $\arccos$\footnote{En effet, $\arccos'(u(x)) = \dfrac{\mathrm{d}\arccos(u(x))}{\mathrm{d}u(x)}\dfrac{\mathrm{d}u(x)}{\mathrm{d}x}$. Soit avec $u(x) = 1/x$, $\arccos'(u(x)) = \dfrac{-1}{\sqrt{1 - \frac{1}{x^{2}}}}$.}. Pour cela, nous posons le changement de variable $u = \frac{M}{r} - \frac{m\alpha}{M}$. Ce qui implique :
 \be
@@ -399,10 +399,10 @@ L'objectif est ici de faire un changement de variable permettant de faire ressor
 
 La variation de l'angle $\varphi$ dans le plan de la trajectoire devient donc :
 \bea
-	\varphi & = & \int{\dfrac{-\mathrm{d}u}{\sqrt{2m\left(E + \dfrac{\alpha u}{M} + \dfrac{m\alpha^{2}}{M^{2}}\right) - \left(u + \dfrac{m\alpha}{M}\right)^{2}}}} \nonumber \\
-	& = & \int{\dfrac{-\mathrm{d}u}{\sqrt{2mE + 2m\dfrac{\alpha u}{M} + 2\dfrac{m^{2}\alpha^{2}}{M^{2}} - u^{2} - \dfrac{m^{2}\alpha^{2}}{M^{2}} - 2u\dfrac{\alpha m}{M}}}} \nonumber \\
-	& = & \int{\dfrac{-\mathrm{d}u}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}} - u^{2}}}} \nonumber \\
-	& = & \dfrac{1}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}}\int{\dfrac{-\mathrm{d}u}{\sqrt{1 - \dfrac{u^{2}}{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}}}}
+	\varphi & = & \bigintsss{\dfrac{-\mathrm{d}u}{\sqrt{2m\left(E + \dfrac{\alpha u}{M} + \dfrac{m\alpha^{2}}{M^{2}}\right) - \left(u + \dfrac{m\alpha}{M}\right)^{2}}}} \nonumber \\
+	& = & \bigintsss{\dfrac{-\mathrm{d}u}{\sqrt{2mE + 2m\dfrac{\alpha u}{M} + 2\dfrac{m^{2}\alpha^{2}}{M^{2}} - u^{2} - \dfrac{m^{2}\alpha^{2}}{M^{2}} - 2u\dfrac{\alpha m}{M}}}} \nonumber \\
+	& = & \bigintsss{\dfrac{-\mathrm{d}u}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}} - u^{2}}}} \nonumber \\
+	& = & \dfrac{1}{\sqrt{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}}\bigintsss{\dfrac{-\mathrm{d}u}{\sqrt{1 - \dfrac{u^{2}}{2mE + \dfrac{m^{2}\alpha^{2}}{M^{2}}}}}}
 \eea
 En posant enfin :
 \be
@@ -413,7 +413,7 @@ En posant enfin :
 \ee
 Nous obtenons :
 \bea
-	\varphi & = & \int{\dfrac{-\mathrm{d}v}{\sqrt{1 - v^{2}}}} \nonumber \\
+	\varphi & = & \bigintsss{\dfrac{-\mathrm{d}v}{\sqrt{1 - v^{2}}}} \nonumber \\
 	& = & \arccos v + cste \nonumber \\
 \eea
 Soit finalement :
@@ -551,8 +551,8 @@ Dans le cas particulier o\`u $E = 0$, l'excentricit\'e $e$ vaut 1 et la particul
 
 Cherchons d\'esormais la relation entre les coordonn\'ees et le temps \`a partir de l'\'equation (\ref{EQ:14_6}) sous une forme param\'etrique dans le cadre d'une orbite elliptique, i.e. $E < 0\Leftrightarrow \lvert E \rvert = -E$. La relation (\ref{EQ:14_6}) est :
 \bea
-	\mathrm{t} & = & \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U(r)\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} = \sqrt{\dfrac{m}{2\lvert E \rvert}}\int{\dfrac{\mathrm{d}r}{\sqrt{-1 + \dfrac{\alpha}{r\lvert E \rvert} - \dfrac{M^{2}}{2m\lvert E \rvert r^{2}}}}} \nonumber \\
-	& = & \sqrt{\dfrac{m}{2\lvert E \rvert}}\int{\dfrac{r\mathrm{d}r}{\sqrt{-r^{2} + \dfrac{\alpha r}{\lvert E \rvert} - \dfrac{M^{2}}{2m\lvert E \rvert}}}}
+	\mathrm{t} & = & \bigintsss{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U(r)\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} = \sqrt{\dfrac{m}{2\lvert E \rvert}}\bigintsss{\dfrac{\mathrm{d}r}{\sqrt{-1 + \dfrac{\alpha}{r\lvert E \rvert} - \dfrac{M^{2}}{2m\lvert E \rvert r^{2}}}}} \nonumber \\
+	& = & \sqrt{\dfrac{m}{2\lvert E \rvert}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{-r^{2} + \dfrac{\alpha r}{\lvert E \rvert} - \dfrac{M^{2}}{2m\lvert E \rvert}}}}
 \eea
 Or, nous remarquons que :
 \bea
@@ -561,7 +561,7 @@ Or, nous remarquons que :
 \eea
 car $-E = \lvert E \rvert$. Et comme $\sqrt{\dfrac{m}{2\lvert E \rvert}} = \sqrt{\dfrac{m\alpha}{2\alpha\lvert E \rvert}} = \sqrt{\dfrac{ma}{\alpha}}$ alors :
 \be
-	\mathrm{t} = \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{a^{2}e^{2} - (r - a)^{2}}}}
+	\mathrm{t} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{a^{2}e^{2} - (r - a)^{2}}}}
 \ee
 En posant :
 \be
@@ -572,7 +572,7 @@ En posant :
 \ee
 nous pouvons \'ecrire :
 \bea
-	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a^{2}(1 - e\cos\xi)e\sin\xi\mathrm{d}\xi}{a^{2}e^{2} - a^{2}e^{2}\cos^{2}\xi}} = \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a^{2}(1 - e\cos\xi)e\sin\xi\mathrm{d}\xi}{a^{2}e^{2}(1 - \cos^{2}\xi)}} \nonumber \\
+	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a^{2}(1 - e\cos\xi)e\sin\xi\mathrm{d}\xi}{a^{2}e^{2} - a^{2}e^{2}\cos^{2}\xi}} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a^{2}(1 - e\cos\xi)e\sin\xi\mathrm{d}\xi}{a^{2}e^{2}(1 - \cos^{2}\xi)}} \nonumber \\
 	& = & \sqrt{\dfrac{ma}{\alpha}}\dfrac{a^{2}e}{ae}\int{(1 - e\cos\xi)\mathrm{d}\xi} = \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(1 - e\cos\xi)\mathrm{d}\xi} \nonumber \\
 	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}(\xi - e\sin\xi) + cste
 \eea
@@ -616,8 +616,8 @@ et nous pouvons observer que le parcours de $\xi$ de $0$ \`a $2\pi$ permet de d\
 
 Cherchons de la m\^eme mani\`ere \`a d\'eterminer la repr\'esentation param\'etrique de la trajectoire dans le cas de la solution hyperbolique, \`a savoir $E > 0$. La relation (\ref{EQ:14_6}) reste :
 \bea
-	\mathrm{t} & = & \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} \nonumber \\
-	& = & \sqrt{\dfrac{m}{2E}}\int{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} + \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}}}}
+	\mathrm{t} & = & \bigintsss{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} \nonumber \\
+	& = & \sqrt{\dfrac{m}{2E}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} + \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}}}}
 \eea
 Maintenant, en posant :
 \be
@@ -633,9 +633,9 @@ nous pouvons remarquer que :
 \eea
 Aussi, nous pouvons poursuivre avec $\mathrm{t}$ avec \'egalement\footnote{En ajoutant aussi que $\cosh^{2}\xi - \sinh^{2}\xi = 1$} $\sqrt{\dfrac{m}{2E}} = \sqrt{\dfrac{m\alpha}{2\alpha E}} = \sqrt{\dfrac{ma}{\alpha}}$  :
 \bea
-	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{-\left(r^{2} + \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}\right)}}} = \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{(r + a)^{2} - a^{2}e^{2}}}} \nonumber \\
-	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{\left(a(e\cosh\xi - 1) + a\right)^{2} - a^{2}e^{2}}}} = \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{a^{2}e^{2}\cosh^{2}\xi - a^{2}e^{2}}}} \nonumber \\
-	& = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{ae\sqrt{\cosh^{2}\xi - 1}}} = \sqrt{\dfrac{ma}{\alpha}}\dfrac{a^{2}e}{ae}\int{(e\cosh\xi - 1)\mathrm{d}\xi} \nonumber \\
+	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{-\left(r^{2} + \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}\right)}}} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{(r + a)^{2} - a^{2}e^{2}}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{\left(a(e\cosh\xi - 1) + a\right)^{2} - a^{2}e^{2}}}} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{a^{2}e^{2}\cosh^{2}\xi - a^{2}e^{2}}}} \nonumber \\
+	& = & \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{ae\sqrt{\cosh^{2}\xi - 1}}} = \sqrt{\dfrac{ma}{\alpha}}\dfrac{a^{2}e}{ae}\int{(e\cosh\xi - 1)\mathrm{d}\xi} \nonumber \\
 	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(e\cosh\xi - 1)\mathrm{d}\xi} \nonumber \\
 	\mathrm{t} & = & \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi - \xi) \nonumber \\
 \eea
@@ -705,7 +705,7 @@ avec $\alpha > 0$. Alors par analogie, l'\'equation (\ref{EQ:14_8}) peut s'\'ecr
 
 L'\'energie de la particule en jeu est de facto strictement positive \`a la vue de la courbe obtenue pour l'\'energie potentielle, sachant que l'\'energie cin\'etique est toujours positive. En reprenant l'\'equation (\ref{EQ:14_7}), soit :
 \be
-	\varphi = \int{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \frac{M^{2}}{r^{2}}}}}
+	\varphi = \bigintsss{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \frac{M^{2}}{r^{2}}}}}
 \ee
 et en substituant la quantit\'e $\alpha$ par $-\alpha$, nous obtenons :
 \be
@@ -723,7 +723,7 @@ dont une repr\'esentation est sur la figure (\ref{FIG:3_13}). Nous pouvons aussi
 car $a = \frac{\alpha}{2E}$.
 L'\'equation (\ref{EQ:14_6}) se d\'eveloppe :
 \be
-	\mathrm{t} = \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} = \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}}}}
+	\mathrm{t} = \bigintsss{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}}}}
 \ee
 En remarquant que :
 \bea
@@ -733,7 +733,7 @@ En remarquant que :
 \eea
 nous pouvons reprendre tel que :
 \be
-	\mathrm{t} = \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{r\mathrm{d}r}{\sqrt{(r - a)^{2} - a^{2}e^{e}}}}
+	\mathrm{t} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{(r - a)^{2} - a^{2}e^{e}}}}
 \ee
 En posant :
 \be
@@ -744,7 +744,7 @@ En posant :
 \ee
 nous prolongeons en :
 \bea
-	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi + 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{a^{2}e^{2}\cosh^{2}\xi - a^{2}e^{2}}}} = \sqrt{\dfrac{ma}{\alpha}}\int{\dfrac{a(e\cosh\xi + 1)ae\sin\xi\mathrm{d}\xi}{ae\sqrt{\cosh^{2}\xi - 1}}} \nonumber \\
+	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi + 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{a^{2}e^{2}\cosh^{2}\xi - a^{2}e^{2}}}} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi + 1)ae\sin\xi\mathrm{d}\xi}{ae\sqrt{\cosh^{2}\xi - 1}}} \nonumber \\
 	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(e\cosh\xi + 1)\mathrm{d}\xi} \nonumber \\
 	\mathrm{t} & = & \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi + \xi) \nonumber \\
 \eea

@@ -457,7 +457,7 @@ Le point de rebroussement d\'efini par $\dot{r} = 0$ entre les \'equations (\ref
 \ee
 et par application de l'\'equation (\ref{EQ:14_7}) :
 \be
-	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:18_2}
+	\varphi_{0} = \bigintsss{r_{min}}^{+\infty}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:18_2}
 \ee
 Dans le cadre d'un mouvement infini, il est commode d'\'ecrire l'\'energie $E$ et le moment cin\'etique $M$ en fonction de $v_{\infty}$, la vitesse de la particule incidente pour $r\leftarrow\infty$, et $\rho$, la \emph{distance de vis\'ee}, i.e., la distance minimale par rapport au centre de force s'il n'y avait pas de champ de force. Par conservation de l'\'energie, et parce que $U(\infty) = 0$, et du moment cin\'etique et en accord avec les d\'efinitinos pr\'ec\'edentes, la particule incidente poss\`ede les caract\'eristiques du mouvement suivantes :
 \be
@@ -465,7 +465,7 @@ Dans le cadre d'un mouvement infini, il est commode d'\'ecrire l'\'energie $E$ e
 \ee
 L'\'equation (\ref{EQ:18_2}) devient alors dans ce contexte :
 \be
-	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{m\rho v_{\infty}}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(\dfrac{mv_{\infty}^{2}}{2} - U(r)\right) - \dfrac{m^{2}\rho^{2}v_{\infty}^{2}}{r^{2}}}}} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}} \label{EQ:18_4}
+	\varphi_{0} = \bigintsss_{r_{min}}^{+\infty}{\dfrac{\frac{m\rho v_{\infty}}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(\dfrac{mv_{\infty}^{2}}{2} - U(r)\right) - \dfrac{m^{2}\rho^{2}v_{\infty}^{2}}{r^{2}}}}} = \bigintsss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}} \label{EQ:18_4}
 \ee
 Avec l'\'equation (\ref{EQ:18_1}), nous avons donc une relation entre $\xi$ et $\rho$.
 
@@ -522,7 +522,7 @@ car au premier ordre, nous avons toujours $\rho(\xi + \mathrm{d}\xi) = \rho(\xi)
 \ee
 qui peut aussi s'\'ecrire :
 \be
-	\mathrm{d}\sigma = 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi \label{EQ:18_7}
+	\mathrm{d}\sigma = 2\pi\rho(\xi)\Bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \Bigg\rvert \mathrm{d}\xi \label{EQ:18_7}
 \ee
 Comme la plupart du temps la valeur de $\frac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi}$ est n\'egative et que la section efficace est une surface, il est n\'ecessaire d'utiliser la valeur absolue. \'Ecrivons d\'esormais la section efficace en fonction de l'angle solide. Ce dernier vaut pour un anneau $\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi$, voir la relation (\ref{EQ:16_7}), ce qui permet d'\'ecrire :
 \be
