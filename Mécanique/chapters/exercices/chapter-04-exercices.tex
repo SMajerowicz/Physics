@@ -213,7 +213,7 @@ L'objectif est de calculer la section efficace pour la diffusion de particules p
 \eea
 En reportant dans l'\'equation (\ref{EQ:18_7}), cela donne :
 \be
-	\mathrm{d}\sigma = 2\pi a\cos\dfrac{\xi}{2}\lvert -\dfrac{a}{2}\sin\dfrac{\xi}{2} \rvert \mathrm{d}\xi = \pi a^{2}\cos\dfrac{\xi}{2}\sin\dfrac{\xi}{2}\mathrm{d}\xi
+	\mathrm{d}\sigma = 2\pi a\cos\dfrac{\xi}{2}\bigg\lvert -\dfrac{a}{2}\sin\dfrac{\xi}{2} \bigg\rvert \mathrm{d}\xi = \pi a^{2}\cos\dfrac{\xi}{2}\sin\dfrac{\xi}{2}\mathrm{d}\xi
 \ee
 or $\sin\xi = \sin(\frac{\xi}{2} + \frac{\xi}{2}) = 2\cos\frac{\xi}{2}\sin\frac{\xi}{2}$, donc :
 \be
@@ -411,8 +411,8 @@ Dans ce paragraphe, nous allons r\'ealiser l'op\'eration inverse qui va consiste
 
 L'\'equation (\ref{EQ:18_7}) nous donne :
 \bea
-	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi \Leftrightarrow \dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi \nonumber \\
-	\Leftrightarrow \int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi & = & 2\pi\int_{\xi}^{\pi}\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi
+	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \bigg\rvert \mathrm{d}\xi \Leftrightarrow \dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = 2\pi\rho(\xi)\bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \bigg\rvert \mathrm{d}\xi \nonumber \\
+	\Leftrightarrow \int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi & = & 2\pi\int_{\xi}^{\pi}\rho(\xi)\bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \bigg\rvert \mathrm{d}\xi
 \eea
 or nous avons $\frac{\mathrm{d}\rho}{\mathrm{d}\xi} < 0$ car plus la distance de vis\'ee $\rho$ augmente, plus l'angle de d\'eviation $\xi$ diminue donc :
 \be
@@ -465,14 +465,14 @@ or $\xi(x = 0) = \xi(\rho^{2} \rightarrow \infty) = 0$ car $U(\infty) = 0$ et do
 \`A partir de cette derni\`ere \'equation, nous pouvons prendre le diff\'erentiel par rapport à $\alpha$ tel que :
 \bea
 	\pi\mathrm{d}\left(\int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}\right) & = & \pi\mathrm{d}(\sqrt{\alpha}) - \mathrm{d}\left(\int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x\right) \nonumber \\
-	\Leftrightarrow \pi\dfrac{\mathrm{d}s}{w} & = & \pi\mathrm{d}(\sqrt{\alpha}) - \left(\int_{0}^{\alpha}\dfrac{\mathrm{d}\left(\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x\right)}{\mathrm{d}\alpha}\right)\mathrm{d}\alpha \nonumber = \pi\mathrm{d}(\sqrt{\alpha}) - \mathrm{d}\alpha\int_{0}^{\alpha}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\alpha - x}}}
+	\Leftrightarrow \pi\dfrac{\mathrm{d}s}{w} & = & \pi\mathrm{d}(\sqrt{\alpha}) - \left(\bigintss_{0}^{\alpha}\dfrac{\mathrm{d}\left(\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x\right)}{\mathrm{d}\alpha}\right)\mathrm{d}\alpha \nonumber = \pi\mathrm{d}(\sqrt{\alpha}) - \mathrm{d}\alpha\int_{0}^{\alpha}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\alpha - x}}}
 \eea
 Puisque la relation pr\'ec\'edente est valable quelque que soit la valeur de $\alpha$, nous prenons $\alpha = s^{2}/w^{2}$ pour arriver \`a :
 \bea
-	\pi\dfrac{\mathrm{d}s}{w} & = & \pi\mathrm{d}\left(\dfrac{s}{w}\right) - \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} \nonumber \\
-	\Leftrightarrow \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & \pi\left(\dfrac{s}{w} - \dfrac{\mathrm{d}s}{w}\right) = \pi\left(\dfrac{\mathrm{d}s}{w} + s\mathrm{d}\left(\dfrac{1}{w}\right) - \dfrac{\mathrm{d}s}{w}\right) = \pi s\mathrm{d}\left(\dfrac{1}{w}\right) \nonumber \\
-	\Leftrightarrow \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & -\pi s\dfrac{\mathrm{d}w}{w^{2}} = -\pi\dfrac{s}{w}\dfrac{\mathrm{d}w}{w} = -\pi\dfrac{s}{w}\mathrm{d}(\ln(w)) \nonumber \\
-	\Leftrightarrow \dfrac{1}{2}\dfrac{w}{s}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & -\pi\mathrm{d}(\ln(w))
+	\pi\dfrac{\mathrm{d}s}{w} & = & \pi\mathrm{d}\left(\dfrac{s}{w}\right) - \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} \nonumber \\
+	\Leftrightarrow \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & \pi\left(\dfrac{s}{w} - \dfrac{\mathrm{d}s}{w}\right) = \pi\left(\dfrac{\mathrm{d}s}{w} + s\mathrm{d}\left(\dfrac{1}{w}\right) - \dfrac{\mathrm{d}s}{w}\right) = \pi s\mathrm{d}\left(\dfrac{1}{w}\right) \nonumber \\
+	\Leftrightarrow \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & -\pi s\dfrac{\mathrm{d}w}{w^{2}} = -\pi\dfrac{s}{w}\dfrac{\mathrm{d}w}{w} = -\pi\dfrac{s}{w}\mathrm{d}(\ln(w)) \nonumber \\
+	\Leftrightarrow \dfrac{1}{2}\dfrac{w}{s}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & -\pi\mathrm{d}(\ln(w))
 \eea
 De plus, la partie :
 \be
@@ -480,12 +480,12 @@ De plus, la partie :
 \ee
 donc :
 \be
-	-\pi\mathrm{d}(\ln(w)) = \mathrm{d}\left(\dfrac{s}{w}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}}
+	-\pi\mathrm{d}(\ln(w)) = \mathrm{d}\left(\dfrac{s}{w}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}}
 \ee
 Par int\'egration de cette relation et en tenant en compte que $w = 1 \Rightarrow U = 0 \Rightarrow r \rightarrow \infty$ et $s = 0 \Leftrightarrow s/w = 0$, nous obtenons :
 \bea
-	-\pi\int_{0}^{\ln w}\mathrm{d}\ln w & = & \int_{0}^{s/w}\mathrm{d}\left(\dfrac{s}{w}\right)\int_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} = \int_{0}^{\frac{1}{rw}}\mathrm{d}\left(\dfrac{1}{rw}\right)\int_{0}^{\frac{1}{r^{2}w^{2}}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{1}{r^{2}w^{2}} - x}}} \nonumber \\
-	& = & \int_{0}^{\frac{1}{r^{2}w^{2}}}\xi'(x)\mathrm{d}x\int_{0}^{\frac{1}{rw}}\dfrac{\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{x}\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\frac{1}{rw}}\dfrac{\rho\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}}
+	-\pi\int_{0}^{\ln w}\mathrm{d}\ln w & = & \int_{0}^{s/w}\mathrm{d}\left(\dfrac{s}{w}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} = \int_{0}^{\frac{1}{rw}}\mathrm{d}\left(\dfrac{1}{rw}\right)\bigintss_{0}^{\frac{1}{r^{2}w^{2}}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{1}{r^{2}w^{2}} - x}}} \nonumber \\
+	& = & \int_{0}^{\frac{1}{r^{2}w^{2}}}\xi'(x)\mathrm{d}x\bigintss_{0}^{\frac{1}{rw}}\dfrac{\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{x}\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\bigintss_{0}^{\frac{1}{rw}}\dfrac{\rho\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}}
 \eea
 car :
 \be
@@ -497,16 +497,16 @@ et $x = 0 \Rightarrow \rho \rightarrow \infty$ et $x = \frac{1}{r^{2}w^{2}} \Rig
 \ee
 alors :
 \be
-	-\pi\int_{0}^{\ln w}\mathrm{d}\ln w = -\pi\ln w = \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\left[\int_{0}^{\frac{\rho}{rw}}\dfrac{\mathrm{d}\left(\dfrac{\rho}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} - \int_{0}^{\rho}\dfrac{\mathrm{d}\rho}{rw\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}}\right]
+	-\pi\int_{0}^{\ln w}\mathrm{d}\ln w = -\pi\ln w = \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\left[\bigintss_{0}^{\frac{\rho}{rw}}\dfrac{\mathrm{d}\left(\dfrac{\rho}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} - \bigintss_{0}^{\rho}\dfrac{\mathrm{d}\rho}{rw\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}}\right]
 \ee
 Ces deux int\'egrales, compl\'ementaires, se calculent ainsi :
 \bea
-	-\pi\ln w & = & \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\frac{\rho}{rw}}\dfrac{\mathrm{d}\left(\dfrac{\rho}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = \int_{\infty}^{rw}\arccosh\left(\dfrac{\rho}{rw}\right)\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho \nonumber \\
+	-\pi\ln w & = & \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\bigintss_{0}^{\frac{\rho}{rw}}\dfrac{\mathrm{d}\left(\dfrac{\rho}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = \int_{\infty}^{rw}\arccosh\left(\dfrac{\rho}{rw}\right)\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho \nonumber \\
 	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{\infty}^{rw}\arccosh\left(\dfrac{\rho}{rw}\right)\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho
 \eea
 et :
 \bea
-	-\pi\ln w & = & - \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\rho}\dfrac{\mathrm{d}\rho}{rw\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = - \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\rho}\dfrac{\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber \\
+	-\pi\ln w & = & - \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\bigintss_{0}^{\rho}\dfrac{\mathrm{d}\rho}{rw\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = - \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\rho}\dfrac{\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber \\
 	& = & \int_{rw}^{\infty}\int_{0}^{\rho}\dfrac{\mathrm{d}\rho\mathrm{d}\xi}{\sqrt{\rho^{2} - r^{2}w^{2}}} = \int_{rw}^{\infty}\dfrac{\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}}\int_{\xi(\infty)}^{\xi(\rho)}\mathrm{d}\xi = \int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber \\
 	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}}
 \eea
@@ -518,7 +518,7 @@ car $\xi(\rho \rightarrow \infty) = 0$, i.e. l'angle de d\'eviation devient null
 
 Pour d\'eterminer la section efficacde de diffusion dans ce cas, i.e. $\alpha > 0$, partons de l'\'equation (\ref{EQ:18_4}) :
 \be
-	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r^{2}}}}} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}\left(1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}\right)}}}
+	\varphi_{0} = \bigintss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r^{2}}}}} = \bigintss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}\left(1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}\right)}}}
 \ee
 Maintenant, posons :
 \be
@@ -534,11 +534,11 @@ Nous savons que $r_{min}$ est racine du d\'enominateur tel que :
 \ee
 et en $r = r_{min}$, nous avons $y = 1$ donc nous arrivons \`a :
 \be
-	\varphi_{0} = \int_{1}^{0}\dfrac{-\mathrm{d}y}{\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\sqrt{1 - y^{2}}}
+	\varphi_{0} = \bigintss_{1}^{0}\dfrac{-\mathrm{d}y}{\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\sqrt{1 - y^{2}}}
 \ee
 Avec $z = y^{2}$, soit $\mathrm{d}z = 2y\mathrm{d}y = 2\sqrt{z}\mathrm{d}y$ puisque $y \ge 0$, $\varphi_{0}$ s'\'ecrit, en faisant r\'ef\'erence \`a la d\'efinition de la fonction $\Gamma$ (\ref{EQ:INT_EULER_GAMMA}) :
 \be
-	\varphi_{0} = \int_{0}^{1}\dfrac{z^{\frac{-1}{2}}(1 - z)^{\frac{-1}{2}}\mathrm{d}z}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}} = \dfrac{\Gamma(1/2)\Gamma(1/2)}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\Gamma(1)} = \dfrac{\pi}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}}
+	\varphi_{0} = \bigintss_{0}^{1}\dfrac{z^{\frac{-1}{2}}(1 - z)^{\frac{-1}{2}}\mathrm{d}z}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}} = \dfrac{\Gamma(1/2)\Gamma(1/2)}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\Gamma(1)} = \dfrac{\pi}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}}
 \ee
 Et comme $\xi = \pi - 2\varphi_{0}$, l'angle de d\'eviation vaut :
 \be
@@ -556,7 +556,7 @@ et sa d\'eriv\'ee vaut :
 \eea
 L'\'equation (\ref{EQ:18_8}) permet alors d'arriver \`a :
 \be
-	\mathrm{d}\sigma = \dfrac{\rho(\xi)}{\sin\xi}\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\omega = \dfrac{2\alpha}{mv_{\infty}^{2}}\pi^{2}\dfrac{\pi - \xi}{\xi^{2}(2\pi - \xi)^{2}}\dfrac{\mathrm{d}\omega}{\sin\xi}
+	\mathrm{d}\sigma = \dfrac{\rho(\xi)}{\sin\xi}\Bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \Bigg\rvert \mathrm{d}\omega = \dfrac{2\alpha}{mv_{\infty}^{2}}\pi^{2}\dfrac{\pi - \xi}{\xi^{2}(2\pi - \xi)^{2}}\dfrac{\mathrm{d}\omega}{\sin\xi}
 \ee
 
 \subsection{La cuvette de potentiel}
@@ -635,7 +635,7 @@ or, nous avons :
 \ee
 ce qui permet d'en d\'eduire selon l'\'equation (\ref{EQ:18_8}) :
 \bea
-	\mathrm{d}\sigma & = & \rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert\dfrac{\mathrm{d}\omega}{\sin\xi} = \dfrac{a^{2}n^{2}\sin(\xi/2)}{2}\dfrac{\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{2}}\dfrac{\mathrm{d}\omega}{\sin\xi} \nonumber \\
+	\mathrm{d}\sigma & = & \rho(\xi)\Bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \Bigg\rvert\dfrac{\mathrm{d}\omega}{\sin\xi} = \dfrac{a^{2}n^{2}\sin(\xi/2)}{2}\dfrac{\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{2}}\dfrac{\mathrm{d}\omega}{\sin\xi} \nonumber \\
 	& = & \dfrac{a^{2}n^{2}}{4\cos(\xi/2)}\dfrac{\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{2}}\mathrm{d}\omega
 \eea
 Quelques remarques :
@@ -657,7 +657,7 @@ Quelques remarques :
 
 L'objectif ici est de d\'emontrer l'\'equation (\ref{EQ:20_3}) \`a partir de la relation (\ref{EQ:18_4}), \`a savoir :
 \be
-	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}}
+	\varphi_{0} = \bigintss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}}
 \ee
 dans le cas particulier des petites d\'eviations. Tout d'abord, remarquons que :
 \be
@@ -665,7 +665,7 @@ dans le cas particulier des petites d\'eviations. Tout d'abord, remarquons que :
 \ee
 donc la relation (\ref{EQ:18_4}) peut aussi s'\'ecrire comme :
 \be
-	\varphi_{0} = -\dfrac{\partial}{\partial \rho}\left(\int_{r_{min}}^{\infty}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}\mathrm{d}r\right)
+	\varphi_{0} = -\dfrac{\partial}{\partial \rho}\left(\bigintsss_{r_{min}}^{\infty}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}\mathrm{d}r\right)
 \ee
 Puisque nous sommes dans le cadre des petites d\'eviations, i.e. $U \rightarrow 0$ et $r_{min} \approx \rho$, le d\'eveloppement de Taylor\footnote{S\'erie de Taylor : $f(x) = \sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x - a)^{n}$} au premier ordre de $\varphi_{0}$ par rapport \`a $U$ donne :
 \be
@@ -673,8 +673,8 @@ Puisque nous sommes dans le cadre des petites d\'eviations, i.e. $U \rightarrow 
 \ee
 Pour le premier terme, nous nous appuyons sur l'\'equation (\ref{EQ:18_4}) alors que pour le second, nous prenons l'expression de $\varphi_{0}$ sous forme d\'eriv\'ee, soit :
 \bea
-	\varphi_{0}(U(r)) & = & \int_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{\partial}{\partial\rho}\int_{\rho}^{\infty}\left(\dfrac{\mathrm{\partial}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}{\partial U}\right)_{U(r)}\cdot U(r)\mathrm{d}r \nonumber \\
-	& = & \int_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{-2}{2}\dfrac{1}{mv_{\infty}^{2}\dfrac{\partial}{\partial\rho}}\int_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = I + \dfrac{1}{mv_{\infty}^{2}}\dfrac{\partial}{\partial\rho}J
+	\varphi_{0}(U(r)) & = & \bigintss_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{\partial}{\partial\rho}\bigints_{\rho}^{\infty}\left(\dfrac{\mathrm{\partial}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}{\partial U}\right)_{U(r)}\cdot U(r)\mathrm{d}r \nonumber \\
+	& = & \bigintss_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{-2}{2}\dfrac{1}{mv_{\infty}^{2}\dfrac{\partial}{\partial\rho}}\bigintss_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = I + \dfrac{1}{mv_{\infty}^{2}}\dfrac{\partial}{\partial\rho}J
 \eea
 Pour le calcul de $I$, posons $u = \rho/r \Rightarrow \mathrm{d}u = -\rho\mathrm{d}r/r^{2}$ qui implique $r = \rho \Rightarrow u = 1$ et $r \rightarrow \infty \Rightarrow u = 0$ et \'ecrivons :
 \be
@@ -682,8 +682,8 @@ Pour le calcul de $I$, posons $u = \rho/r \Rightarrow \mathrm{d}u = -\rho\mathrm
 \ee
 Pour l'int\'egrale J, r\'ealisons son int\'egration par partie :
 \bea
-	J & = & \int_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = \int_{\rho}^{\infty}\dfrac{U(r)r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} \nonumber \\
-	& = & [U(r)\sqrt{r^{2} - \rho^{2}}]_{\rho}^{\infty} - \int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r = - \int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r
+	J & = & \bigintss_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = \bigintsss_{\rho}^{\infty}\dfrac{U(r)r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} \nonumber \\
+	& = & [U(r)\sqrt{r^{2} - \rho^{2}}]_{\rho}^{\infty} - \bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r = - \bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r
 \eea
 car :
 \be
@@ -691,12 +691,12 @@ car :
 \ee
 Nous en concluons donc que :
 \be
-	\varphi_{0} = \dfrac{\pi}{2} - \dfrac{\partial}{\partial\rho}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r
+	\varphi_{0} = \dfrac{\pi}{2} - \dfrac{\partial}{\partial\rho}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r
 \ee
 Et comme finalement, $\xi = \pi - 2\varphi_{0}$, et que dans notre cas de petites d\'eviations, $\theta_{1} \approx \xi$ alors :
 \bea
-	\theta_{1} & = & \pi - \pi + 2\dfrac{\partial}{\partial\rho}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r \nonumber \\
-	& = & \dfrac{-2\rho}{mv_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}}
+	\theta_{1} & = & \pi - \pi + 2\dfrac{\partial}{\partial\rho}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r \nonumber \\
+	& = & \dfrac{-2\rho}{mv_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}}
 \eea
 correspondant \`a l'\'equation (\ref{EQ:20_3}).
 
@@ -708,7 +708,7 @@ De facto, nous avons :
 \ee
 qui permet d'exprimer $\theta_{1}$ de la formule (\ref{EQ:20_3}), pour une particule diffus\'ee de masse $m_{1}$ ainsi :
 \be
-	\theta_{1} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 1}\sqrt{r^{2} - \rho^{2}}} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}}
+	\theta_{1} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 1}\sqrt{r^{2} - \rho^{2}}} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}}
 \ee
 En posant :
 \be
@@ -720,7 +720,7 @@ En posant :
 \ee
 nous pouvons d\'evelopper $\theta_{1}$ ainsi :
 \bea
-	\theta_{1} & = & \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 1}r\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\int_{1}^{0}\dfrac{\frac{-\mathrm{d}u}{2u}}{\dfrac{\rho^{n + 1}}{u^{\dfrac{n + 1}{2}}}\sqrt{1 - u}} \nonumber \\
+	\theta_{1} & = & \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 1}r\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{1}^{0}\dfrac{\frac{-\mathrm{d}u}{2u}}{\dfrac{\rho^{n + 1}}{u^{\dfrac{n + 1}{2}}}\sqrt{1 - u}} \nonumber \\
 	& = & \dfrac{\alpha n}{m_{1}v_{\infty}^{2}\rho^{n}}\int_{0}^{1}u^{\frac{n}{2} - \frac{1}{2}}(1 - u)^{\frac{-1}{2}}\mathrm{d}u = \dfrac{\alpha n}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})\Gamma(\frac{1}{2})}{\Gamma(\frac{n}{2} + 1)} = \dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}
 \eea
 ce qui est une conclusion autre que celle propos\'ee par le livre qui est :

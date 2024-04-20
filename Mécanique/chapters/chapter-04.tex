@@ -526,7 +526,7 @@ qui peut aussi s'\'ecrire :
 \ee
 Comme la plupart du temps la valeur de $\frac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi}$ est n\'egative et que la section efficace est une surface, il est n\'ecessaire d'utiliser la valeur absolue. \'Ecrivons d\'esormais la section efficace en fonction de l'angle solide. Ce dernier vaut pour un anneau $\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi$, voir la relation (\ref{EQ:16_7}), ce qui permet d'\'ecrire :
 \be
-	\mathrm{d}\sigma = 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \dfrac{\mathrm{d}\omega}{2\pi\sin\xi} = \dfrac{\rho(\xi)}{\sin\xi}\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\omega \label{EQ:18_8}
+	\mathrm{d}\sigma = 2\pi\rho(\xi)\Bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \Bigg\rvert \dfrac{\mathrm{d}\omega}{2\pi\sin\xi} = \dfrac{\rho(\xi)}{\sin\xi}\Bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \Bigg\rvert \mathrm{d}\omega \label{EQ:18_8}
 \ee
 Revenons au cas d'un faisceau de particules diffus\'ees par d'autres particules initialement au repos. Dans la relation (\ref{EQ:18_7}), la section efficace $\mathrm{d}\sigma$ est d\'efinie dans le cadre d'un champ de force positionn\'e au centre d'inertie des particules. $\mathrm{d}\sigma$ est donc bien la section efficace dans le r\'ef\'erentiel <<~c~>> et exprim\'ee en fonction de l'angle de d\'eviation $\xi$. Pour l'exprimer dans le cadre du r\'ef\'erentiel du laboratoire <<~l~>>, nous revenons aux relations (\ref{EQ:17_4}). En fonction de $\theta_{1}$, l'angle de d\'eviation dans <<~l~>> pour les particules du faisceau incident, nous avons :
 \bea
@@ -551,7 +551,7 @@ Et en fonction de $\theta_{2}$ l'angle de d\'eviation dans <<~l~>> pour les part
 
 Int\'eressons-nous d\'esormais à la diffusion de particules charg\'ees dans un champ Coulombien, i.e. tel que $U(r) = \alpha / r$ pour $\alpha > 0$. En appliquant la relation (\ref{EQ:18_4}) pour une particule de masse $m$, nous avons pour $\varphi_{0}$, qui est ,pour rappel, l'angle de d\'eviation au plus pr\`es du centre du champ, i.e. pour $r = r_{min}$ :
 \be
-	\varphi_{0} = \int_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r}}}}
+	\varphi_{0} = \bigintsss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r}}}}
 \ee
 En posant :
 \be
@@ -563,9 +563,9 @@ En posant :
 \ee
 nous avons pour $r = r_{min}$, $x = x_{min}$ et pour $r \rightarrow \infty$, $x = \frac{\alpha}{mv_{\infty}^{2}\rho}$ et :
 \bea
-	\varphi_{0} & = & \int_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 - \rho^{2}\left(\dfrac{x}{\rho} - \dfrac{\alpha}{mv_{\infty}^{2}\rho^{2}}\right)^{2} - \dfrac{2\alpha}{mv_{\infty}^{2}}\left(\dfrac{x}{\rho} - \dfrac{\alpha^{2}}{mv_{\infty}^{2}\rho^{2}}\right)}} \nonumber \\
-	& = & \int_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 - \rho^{2}\dfrac{x^{2}}{\rho^{2}} - \dfrac{\rho^{2}\alpha^{2}}{m^{2}v_{\infty}^{2}\rho^{4}} + 2\rho^{2}\dfrac{\alpha x}{mv_{\infty}^{2}\rho^{3}} - \dfrac{2\alpha x}{mv_{\infty}^{2}\rho} + \dfrac{2\alpha^{2}}{m^{2}v_{\infty}^{4}\rho^{2}}}} \nonumber \\
-	& = & \int_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 + \dfrac{\alpha^{2}}{m^{2}v_{\infty}^{2}\rho^{2}} - x^{2}}}
+	\varphi_{0} & = & \bigintss_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 - \rho^{2}\left(\dfrac{x}{\rho} - \dfrac{\alpha}{mv_{\infty}^{2}\rho^{2}}\right)^{2} - \dfrac{2\alpha}{mv_{\infty}^{2}}\left(\dfrac{x}{\rho} - \dfrac{\alpha^{2}}{mv_{\infty}^{2}\rho^{2}}\right)}} \nonumber \\
+	& = & \bigintss_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 - \rho^{2}\dfrac{x^{2}}{\rho^{2}} - \dfrac{\rho^{2}\alpha^{2}}{m^{2}v_{\infty}^{2}\rho^{4}} + 2\rho^{2}\dfrac{\alpha x}{mv_{\infty}^{2}\rho^{3}} - \dfrac{2\alpha x}{mv_{\infty}^{2}\rho} + \dfrac{2\alpha^{2}}{m^{2}v_{\infty}^{4}\rho^{2}}}} \nonumber \\
+	& = & \bigintss_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 + \dfrac{\alpha^{2}}{m^{2}v_{\infty}^{2}\rho^{2}} - x^{2}}}
 \eea
 D\'esormais, posons :
 \be
@@ -577,7 +577,7 @@ D\'esormais, posons :
 \ee
 et pour $x = x_{min}$, $y = y_{min}$ et pour $x = \frac{\alpha}{mv_{\infty}^{2}\rho}$, $y = Y = \dfrac{\dfrac{\alpha}{mv_{\infty}^{2}\rho}}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}}$, cela donne :
 \be
-	\varphi_{0} = \int_{y_{min}}^{Y}\dfrac{-\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\mathrm{d}y}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\sqrt{1 - y^{2}}} = \int_{y_{min}}^{Y}\dfrac{-\mathrm{d}y}{\sqrt{1 - y^{2}}}
+	\varphi_{0} = \bigintss_{y_{min}}^{Y}\dfrac{-\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\mathrm{d}y}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\sqrt{1 - y^{2}}} = \bigintsss_{y_{min}}^{Y}\dfrac{-\mathrm{d}y}{\sqrt{1 - y^{2}}}
 \ee
 En choisissant la valeur de $y_{min}$ telle que $\varphi_{0}(y_{min}) = 0$, nous arrivons \`a :
 \be
@@ -612,8 +612,8 @@ En partant de l'\'equation (\ref{EQ:18_7}), et parce que :
 \eea
 nous pouvons calculer :
 \bea
-	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \rvert \mathrm{d}\xi = 2\pi\dfrac{\alpha}{mv_{\infty}^{2}}\dfrac{\cos^{2}(\xi/2)}{\sin^{2}(\xi/2)}\lvert -\dfrac{1}{2\sin^{2}(\theta/2)} \rvert\dfrac{\alpha}{mv_{\infty}^{2}}\mathrm{d}\xi \nonumber \\
-	& = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos(\xi/2)}{\sin^{3}(\xi/2)} \rvert \mathrm{d}\xi \label{EQ:19_2}
+	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\Bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \Bigg\rvert \mathrm{d}\xi = 2\pi\dfrac{\alpha}{mv_{\infty}^{2}}\dfrac{\cos^{2}(\xi/2)}{\sin^{2}(\xi/2)}\Bigg\lvert -\dfrac{1}{2\sin^{2}(\theta/2)} \Bigg\rvert\dfrac{\alpha}{mv_{\infty}^{2}}\mathrm{d}\xi \nonumber \\
+	& = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\Bigg\lvert \dfrac{\cos(\xi/2)}{\sin^{3}(\xi/2)} \Bigg\rvert \mathrm{d}\xi \label{EQ:19_2}
 \eea
 En remarquant que :
 \be
@@ -625,7 +625,7 @@ alors l'\'equation (\ref{EQ:19_2}) devient :
 \ee
 qui est la \emph{formule de Rutherford} dont nous pouvons remarquer qu'elle ne d\'epend pas du signe de $\alpha$ et que cette formule est donc identique pour un champ coulombien attractif ou r\'epulsif. Elle est ici donn\'ee dans le r\'ef\'erentiel du centre d'inertie au repos puisque nous avons utilis\'e l'\'equation (\ref{EQ:18_2}) pour le calcul de $\varphi_{0}$. Pour passer au r\'ef\'erentiel du laboratoire, il nous faut utiliser les relations (\ref{EQ:17_4}). Dans <<~l~>>, $m$ est la masse r\'eduite et pour les particules initialement au repos, $\xi = \pi - 2\theta_{2} \Leftrightarrow \mathrm{d}\xi = -2\mathrm{\theta_{2}}$. Ainsi, l'\'equation (\ref{EQ:19_2}) devient dans <<~l~>> :
 \be
-	\mathrm{d}\sigma_{2} = \lvert -2\pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\cos(\pi/2 - \theta_{2})}{\sin^{3}(\pi/2 - \theta_{2})} \rvert \mathrm{d}\theta_{2} = 2\pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\sin\theta_{2}}{\cos^{3}\theta_{2}}\mathrm{d}\theta_{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega_{2}}{\cos^{3}\theta_{2}} \label{EQ:19_4}
+	\mathrm{d}\sigma_{2} = \Bigg\lvert -2\pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\cos(\pi/2 - \theta_{2})}{\sin^{3}(\pi/2 - \theta_{2})} \Bigg\rvert \mathrm{d}\theta_{2} = 2\pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\sin\theta_{2}}{\cos^{3}\theta_{2}}\mathrm{d}\theta_{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega_{2}}{\cos^{3}\theta_{2}} \label{EQ:19_4}
 \ee
 avec l'angle solide $\mathrm{d}\omega_{2} = 2\pi\sin\theta_{2}\mathrm{d}\theta_{2}$.
 
@@ -647,7 +647,7 @@ o\`u nous pouvons identifier l'\'energie perdue maximale $\epsilon_{max}$ vallan
 \ee
 La section efficace peut alors se d\'eduire de la d\'efinition (\ref{EQ:19_2}) telle que :
 \bea
-	\mathrm{d}\sigma & = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos(\xi/2)}{\sin^{3}(\xi/2)} \rvert \mathrm{d}\xi = \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos(\xi/2)\sin(\xi/2)}{\sin^{4}(\xi/2)} \rvert \mathrm{d}\xi \nonumber \\
+	\mathrm{d}\sigma & = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\Bigg\lvert \dfrac{\cos(\xi/2)}{\sin^{3}(\xi/2)} \Bigg\rvert \mathrm{d}\xi = \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\Bigg\lvert \dfrac{\cos(\xi/2)\sin(\xi/2)}{\sin^{4}(\xi/2)} \Bigg\rvert \mathrm{d}\xi \nonumber \\
 	& = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\dfrac{m_{2}}{2m^{2}v_{\infty}^{2}}\mathrm{d}\epsilon}{\dfrac{m_{2}^{2}}{4m^{4}v_{\infty}^{4}}\epsilon^{2}} = \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{2m^{2}v_{\infty}^{2}}{m_{2}}\dfrac{\mathrm{d}\epsilon}{\epsilon^{2}} \nonumber \\
 	\Leftrightarrow \mathrm{d}\sigma & = & 2\pi\dfrac{\alpha^{2}}{m_{2}v_{\infty}^{2}}\dfrac{\mathrm{d}\epsilon}{\epsilon^{2}} \label{EQ:19_8}
 \eea
@@ -665,8 +665,8 @@ car l'\'energie des particules incidents est $E_{1} = \frac{m_{1}}{2}v_{\infty}^
 
 Dans ce cas, la masse r\'eduite $m$ vaut $m_{1}/2$. L'\'equation (\ref{EQ:17_9}) donne $\xi = 2\theta_{1}$ et $\mathrm{d}\xi = 2\mathrm{d}\theta_{1}$, donc l'\'equation (\ref{EQ:19_2}) devient :
 \bea
-	\mathrm{d}\sigma_{1} & = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos\theta_{1}}{\sin^{3}\theta_{1}} \rvert \cdot 2\mathrm{d}\theta_{1} = 2\pi\left(\dfrac{2\alpha}{m_{1}v_{\infty}^{2}}\right)^{2}\lvert \dfrac{\cos\theta_{1}}{\sin^{3}\theta_{1}} \rvert \mathrm{d}\theta_{1} \nonumber \\
-	& = & 2\pi\left(\dfrac{\alpha}{E_{1}}\right)^{2}\lvert \dfrac{\cos\theta_{1}}{\sin^{3}\theta_{1}} \rvert \mathrm{d}\theta_{1} = \left(\dfrac{\alpha}{E_{1}}\right)^{2}\dfrac{\cos\theta_{1}}{\sin^{4}\theta_{1}} \rvert \mathrm{d}\omega_{1} \label{EQ:19_6}
+	\mathrm{d}\sigma_{1} & = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\Bigg\lvert \dfrac{\cos\theta_{1}}{\sin^{3}\theta_{1}} \Bigg\rvert \cdot 2\mathrm{d}\theta_{1} = 2\pi\left(\dfrac{2\alpha}{m_{1}v_{\infty}^{2}}\right)^{2}\Bigg\lvert \dfrac{\cos\theta_{1}}{\sin^{3}\theta_{1}} \Bigg\rvert \mathrm{d}\theta_{1} \nonumber \\
+	& = & 2\pi\left(\dfrac{\alpha}{E_{1}}\right)^{2}\Bigg\lvert \dfrac{\cos\theta_{1}}{\sin^{3}\theta_{1}} \Bigg\rvert \mathrm{d}\theta_{1} = \left(\dfrac{\alpha}{E_{1}}\right)^{2}\Bigg\lvert\dfrac{\cos\theta_{1}}{\sin^{4}\theta_{1}} \Bigg\rvert \mathrm{d}\omega_{1} \label{EQ:19_6}
 \eea
 avec toujours $E_{1} = \frac{m_{1}}{2}v_{\infty}^{2}$ et $\mathrm{d}\omega_{1} = 2\pi\sin\theta_{1}\mathrm{d}\theta_{1}$.
 
@@ -728,5 +728,5 @@ par addition des deux solutions pour $\mathrm{d}x$. Enfin, gr\^ace \`a l'\'equat
 \ee
 La formule (\ref{EQ:18_8}) permet de d\'efinir la section efficace dans le r\'ef\'erentiel du laboratoire si nous rempla\c{c}ons l'angle de d\'eviation $\xi$ par l'angle $\theta_{1}$ et c'est ce que permet d'\'ecrire la relation (\ref{EQ:17_5A}) pour $\xi \rightarrow 0$. Et comme $\xi \rightarrow 0 \Leftrightarrow \theta_{1} \rightarrow 0 \Leftrightarrow \sin\theta_{1} \approx \theta_{1}$, alors :
 \be
-	\mathrm{d}\sigma = \dfrac{\rho(\theta_{1})}{\theta_{1}}\lvert \dfrac{\mathrm{d}\rho(\theta_{1})}{\mathrm{d}\theta_{1}} \rvert \mathrm{d}\omega_{1} \label{EQ:20_4}
+	\mathrm{d}\sigma = \dfrac{\rho(\theta_{1})}{\theta_{1}}\Bigg\lvert \dfrac{\mathrm{d}\rho(\theta_{1})}{\mathrm{d}\theta_{1}} \Bigg\rvert \mathrm{d}\omega_{1} \label{EQ:20_4}
 \ee
