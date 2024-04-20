@@ -20,7 +20,7 @@ Au regard des relations (\ref{EQ:4_1}) et (\ref{EQ:5_5}), l'\'energie cin\'etiqu
 \ee
 Dans notre cas \'epur\'e, l'\'equation du mouvement s'obtient \`a partir de la relation (\ref{EQ:5_2}) :
 \be
-	\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial L}{\partial \dot{x}}\right) = \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}m\dot{x}}{\mathrm{d}t} = -kx \Leftrightarrow m\ddot{x} + kx = 0 \label{EQ:21_4}
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{x}}\right) = \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}m\dot{x}}{\mathrm{dt}} = -kx \Leftrightarrow m\ddot{x} + kx = 0 \label{EQ:21_4}
 \ee
 \'Equation qui peut \'egalement s'\'ecrire :
 \be
@@ -78,7 +78,7 @@ o\`u $U_{e}(0,t)$ est une fonction ne d\'ependant que du temps et de facto, elle
 \ee
 L'\'equation du mouvement provenant de la formule (\ref{EQ:5_2}) permet d'en d\'eduite :
 \bea
-	\dfrac{\mathrm{d}}{\mathrm{d}t}\left(\dfrac{\partial L}{\partial \dot{x}}\right) & = & \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}m\dot{x}}{\mathrm{d}t} = -kx + F(t) + x\dfrac{\partial F(t)}{\partial x} \nonumber \\
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{x}}\right) & = & \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}m\dot{x}}{\mathrm{dt}} = -kx + F(t) + x\dfrac{\partial F(t)}{\partial x} \nonumber \\
 	& \Leftrightarrow & m\ddot{x} + kx = F(t) \Leftrightarrow \ddot{x} + \omega^{2}x = \dfrac{F(t)}{m} \label{EQ:22_2}
 \eea
 avec $\omega = \sqrt{\frac{k}{m}}$ la fr\'equence des oscillations. L'\'equation (\ref{EQ:22_2}) est une \'equation diff\'erentielle du second ordre avec des c{\oe}fficients constants et un second membre. La solution g\'en\'erale est de la forme $x = x_{0} + x_{1}$ telle que :
@@ -148,8 +148,8 @@ Par cons\'equent, l'amplitude $C$ oscille p\'eriodiquement entre les deux valeur
 
 Ensuite, nous pouvons remarquer que l'\'equation (\ref{EQ:22_2}) peut s\'ecrire :
 \bea
-	\ddot{x} + i\omega\dot{x} - i\omega\dot{x} - i\omega\cdot i\omega x & = & \dfrac{F(t)}{m} \Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{d}t}(\dot{x} + i\omega x) - i\omega(\dot{x} + i\omega x) = \dfrac{F(t)}{m} \nonumber \\
-	\Rightarrow \dfrac{\mathrm{d}\xi}{\mathrm{d}t} - i\omega\xi = \dfrac{F(t)}{m} \label{EQ:22_8}
+	\ddot{x} + i\omega\dot{x} - i\omega\dot{x} - i\omega\cdot i\omega x & = & \dfrac{F(t)}{m} \Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{dt}}(\dot{x} + i\omega x) - i\omega(\dot{x} + i\omega x) = \dfrac{F(t)}{m} \nonumber \\
+	\Rightarrow \dfrac{\mathrm{d}\xi}{\mathrm{dt}} - i\omega\xi = \dfrac{F(t)}{m} \label{EQ:22_8}
 \eea
 en d\'efinissant la quantit\'e $\xi$ telle que :
 \be
@@ -158,7 +158,7 @@ en d\'efinissant la quantit\'e $\xi$ telle que :
 L'\'equation (\ref{EQ:22_8}) n'est plus du second ordre. Sa solution g\'en\'erale sans second membre peut d'\'ecrire comme $\xi_{0}e^{i\omega t}$ avec $\xi_{0}$ une constante d\'ependant des conditions initialies et \'egale \`a $\xi(t=0)$. Cherchons d\'esormais un int\'egrale particuli\`ere de la forme $A(t)e^{i\omega t}$ pour l'\'equation avec second membre. En ins\'erant cette solution particuli\`ere dans l'\'equation (\ref{EQ:22_8}) :
 \bea
 	\dot{A}(t)e^{i\omega t} + i\omega A(t)e^{i\omega t} - i\omega e^{i\omega t} & = & \dfrac{F(t)}{m} \Leftrightarrow \dot{A}(t) = \dfrac{1}{m}F(t)e^{-i\omega t} \nonumber \\
-	\Rightarrow \xi(t) & = & e^{i\omega t}\left(\xi_{0} + \dfrac{1}{m}\int{F(t)e^{-i\omega t}\mathrm{d}t}\right) \label{EQ:22_10}
+	\Rightarrow \xi(t) & = & e^{i\omega t}\left(\xi_{0} + \dfrac{1}{m}\int{F(t)e^{-i\omega t}\mathrm{dt}}\right) \label{EQ:22_10}
 \eea
 Ainsi la quantit\'e $x(t)$ est donn\'ee par la partie imaginaire de $\xi(t)$ donn\'ee par la relation (\ref{EQ:22_10}), divis\'ee par $\omega$.
 
@@ -168,19 +168,19 @@ Dans le cas d'oscillations forc\'ees, l'\'energie totale du syst\`eme ne se cons
 \ee
 sachant que les quantit\'es $x$ et $\xi$ incluent d\'ej\`a les cons\'equences de la force ext\'erieure $F$ dans leur expression respective. En supposant $\xi(-\infty) = 0$ et parce que $\lvert e^{i\omega t} \rvert = 1$ par d\'efinition, l'\'energie transmise totale vaut en reprenant les relations (\ref{EQ:22_10}) et (\ref{EQ:22_11}) :
 \be
-	E_{transmise}(\infty) = \dfrac{m}{2}\dfrac{1}{m^{2}} \Big\lvert \int_{-\infty}^{\infty}{F(t)e^{-i\omega t}\mathrm{d}t} \Big\rvert^{2} = \dfrac{1}{2m} \Big\lvert \int_{-\infty}^{\infty}{F(t)e^{-i\omega t}\mathrm{d}t} \Big\rvert^{2} \label{EQ:22_12}
+	E_{transmise}(\infty) = \dfrac{m}{2}\dfrac{1}{m^{2}} \Big\lvert \int_{-\infty}^{\infty}{F(t)e^{-i\omega t}\mathrm{dt}} \Big\rvert^{2} = \dfrac{1}{2m} \Big\lvert \int_{-\infty}^{\infty}{F(t)e^{-i\omega t}\mathrm{dt}} \Big\rvert^{2} \label{EQ:22_12}
 \ee
 Nous pouvons remarquer que l'expression de l'\'energie transmise correspond \`a l'amplitude variable du mouvement de la relation (\ref{EQ:22_10}). De plus, le c{\oe}fficient de Fourier s'\'ecrit pour une fonction quelconque $f$, pour une p\'eriode $T$, comme :
 \be
-	\forall n \le 0\text{, }c_{n}(f) = \dfrac{1}{T}\int_{T}f(t)e^{-i\frac{2n\pi}{T}t}\mathrm{d}t
+	\forall n \le 0\text{, }c_{n}(f) = \dfrac{1}{T}\int_{T}f(t)e^{-i\frac{2n\pi}{T}t}\mathrm{dt}
 \ee
 aussi l'\'energie transmise est le carr\'e du module du c{\oe}fficient de Fourier de la force $F(t)$ avec un fr\'equence \'egale \`a la fonction propre du syst\`eme physique.
 
 Sur un intervalle de temps petit par rapport \`a $\frac{1}{\omega}$, nous avons $e^{-i\omega t} \approx 1$ et l'\'energie transmise :
 \be
-	E = \dfrac{1}{2m} \left(\int_{-\infty}^{\infty}{F(t)\mathrm{d}t}\right)^{2}
+	E = \dfrac{1}{2m} \left(\int_{-\infty}^{\infty}{F(t)\mathrm{dt}}\right)^{2}
 \ee
-Par cons\'equent, une force qui ne s'exprime que sur une faible dur\'ee communique au syst\`eme une impulsion $\int F\mathrm{d}t$ qui ne permet pas de provoquer de d\'eplacement notable, ce qui revient \`a notre hypoth\`ese de base des petites oscillations.
+Par cons\'equent, une force qui ne s'exprime que sur une faible dur\'ee communique au syst\`eme une impulsion $\int F\mathrm{dt}$ qui ne permet pas de provoquer de d\'eplacement notable, ce qui revient \`a notre hypoth\`ese de base des petites oscillations.
 
 \section{Oscillations des syst\`emes \`a plusieurs degr\'es de libert\'e}
 
@@ -207,6 +207,52 @@ En comptant l'\'energie potentielle par rapport \`a sa valeur minimale et parce 
 	U(\begin{Bmatrix}q_{i}\end{Bmatrix}) = \dfrac{1}{2}\sum_{i,j}k_{ij}x_{i}x_{j}\text{ avec }k_{ij} = \left(\dfrac{\partial^{2}U}{\partial x_{i}\partial x_{j}}\right)_{x_{i}=0,x_{j}=0} \label{EQ:23_2}
 \ee
 Sachant que $\partial x_{i}x_{j} = \partial x_{j}x_{i}$ alors $k_{ij} = k_{ji}$, les c{\oe}fficients sont sym\'etriques.
+
+L'\'equation (\ref{EQ:5_5}) montre que l'\'energie cin\'etique s'\'ecrit sous la forme $\frac{1}{2}\sum_{i,j}a_{ij}{q}\dot{q}_{i}\dot{q}_{j}$. En faisant l'approximation suivante : $a_{ij}(q) = a_{ij}(q_{0}) = m_{ij} = m_{ji}$ avec $q_{0} = \begin{Bmatrix}q_{i_{0}}\end{Bmatrix}$ et $\forall i\text{, }\dot{q}_{i} = \dot{x}_{i}$, alors l'\'energie cin\'etique est la format quadratique d\'efinie positive\footnote{Soit, $\forall x\text{, }T(x) \ge 0$ et $T(x) = 0 \Rightarrow x = 0$.} :
+\be
+	T = \dfrac{1}{2}\sum_{i,j}m_{ij}\dot{x}_{i}\dot{x}_{j} \label{EQ:23_3}
+\ee
+La fonction de Lagrange peut donc \^etre d\'eduite des relations (\ref{EQ:23_2}) et (\ref{EQ:23_3}) :
+\be
+	L = T - U = \dfrac{1}{2}\sum_{i,j}(m_{ij}\dot{x}_{i}\dot{x}_{j} - k_{ij}x_{i}x_{j}) \label{EQ:23_4}
+\ee
+Les \'equations du mouvement sont donn\'ees par (\ref{EQ:2_6}) :
+\bea
+	\forall i \in {1,\ldots,s}\text{, } \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{q}_{i}}\right) - \dfrac{\partial L}{\partial q_{i}} & = & 0 \Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{x}_{i}}\right) - \dfrac{\partial L}{\partial x_{i}} = 0 \nonumber \\
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{1}{2}\sum_{j}m_{ij}\dot{x}_{j}\right) + \dfrac{1}{2}\sum_{j}k_{ij}x_{j} & = & 0 \Leftrightarrow  \sum_{j}m_{ij}\ddot{x}_{j} + \sum_{j}k_{ij}x_{j} = 0 \nonumber \\
+	\sum_{j}(m_{ij}\ddot{x}_{j} + k_{ij}x_{j}) & = & 0 \label{EQ:23_5}
+\eea
+qui forment, pour chaque particule $i$, le syst\`eme de $s$ \'equations diff\'erentielles lin\'eaires sans second membre et \`a c{\oe}fficients constants. En partant de la solution complexe construite par les relations (\ref{EQ:21_11}) et (\ref{EQ:21_12}), nous devons chercher les $s$ fonctions inconnues $x_{j}(t)$ telles que :
+\be
+	\forall j \in {1,\ldots,s}\text{, } x_{j}(t) = A_{j}e^{i\omega t} \label{EQ:23_6}
+\ee
+En utilisant la relation (\ref{EQ:23_5}), nous obtenons un syst\`eme de $s$ \'equations lin\'eaires et homog\`enes :
+\be
+	\sum_{j}(-\omega^{2}m_{ij} + k_{ij})A_{j}e^{i\omega t} = 0 \Leftrightarrow \sum_{j}(k_{ij} - \omega^{2}m_{ij})A_{j} = 0 \label{EQ:23_7}
+\ee
+qui s'\'ecrit sous forme matricielle ainsi :
+\be
+	\begin{pmatrix}
+		k_{11} - \omega^{2}m_{11} & \ldots & k_{1j} - \omega^{2}m_{1j} & \ldots & k_{1s} - \omega^{2}m_{1s} \\
+		\vdots & \ddots & \vdots & \ddots & \vdots \\
+		k_{i1} - \omega^{2}m_{i1} & \ldots & k_{ij} - \omega^{2}m_{ij} & \ldots & k_{is} - \omega^{2}m_{is} \\
+		\vdots & \ddots & \vdots & \ddots & \vdots \\
+		k_{i1} - \omega^{2}m_{s1} & \ldots & k_{sj} - \omega^{2}m_{sj} & \ldots & k_{ss} - \omega^{2}m_{ss} \\
+	\end{pmatrix}
+	\cdot
+	\begin{pmatrix}
+		A_{1} \\
+		\vdots \\
+		A_{j} \\
+		\vdots \\
+		A_{s}
+	\end{pmatrix}
+	= \vec{0}
+\ee
+\`A l'exception de la solution \'evidente, i.e. $\forall j\text{, }A_{j} = 0$, le syst\`eme admet des solutions si et seulement si :
+\be
+	\det{(k_{ij} - \omega^{2}m_{ij})} = 0
+\ee
 
 \subsection{Cas tridimensionnel}
 
