@@ -74,7 +74,7 @@ L'\'energie potentielle totale du syst\`eme s'\'ecrit avec deux termes, \`a savo
 \ee
 o\`u $U_{e}(0,t)$ est une fonction ne d\'ependant que du temps et de facto, elle est le r\'esultat d'une d\'eriv\'ee totale par rapport au temps. Dans cette partie est n\'eglig\'ee dans l'\'equation de Lagrange, voir (\ref{EQ:2_8}). De plus, la formule (\ref{EQ:5_8}) permet de d\'eduire que $-\frac{\partial U_{e}}{\partial x}$ est la force ext\'erieure qui s'exerce sur le syst\`eme. Elle est fonction du temps et nous la d\'esignons $F(t)$. Par cons\'equent, $U_{e}(x,t) = -xF(t)$ et la fonction de Lagrange peut se formuler ainsi :
 \be
-	L = \dfrac{m}{2}\dot{x}^{2} - \left(\frac{k}{2}x^{2} - xF(t)\right) \label{EQ:22.1}
+	L = \dfrac{m}{2}\dot{x}^{2} - \left(\frac{k}{2}x^{2} - xF(t)\right) \label{EQ:22_1}
 \ee
 L'\'equation du mouvement provenant de la formule (\ref{EQ:5_2}) permet d'en d\'eduite :
 \bea
@@ -305,7 +305,7 @@ Math\'ematiquement, la transformation (\ref{EQ:23_9}) permet aux \'energies cin\
 \ee
 la fonction de Lagrange s'\'ecrit alors :
 \be
-	L = \sum_{\alpha}\dfrac{m_{\alpha}}{2}\left(\dot{\Theta_{\alpha}}^{2} - \omega_{\alpha}^{2}\Theta_{\alpha}^{2}\right) = \sum_{\alpha}\dfrac{m_{\alpha}}{2}\left(\dfrac{\dot{Q_{\alpha}}^{2}}{m_{\alpha}} - \omega_{\alpha}^{2}\dfrac{Q_{\alpha}^{2}}{m_{\alpha}}\right) = \sum_{\alpha}\left(\dot{Q_{\alpha}}^{2} - \omega_{\alpha}^{2}Q_{\alpha}^{2}\right) \label{EQ:23_14}
+	L = \sum_{\alpha}\dfrac{m_{\alpha}}{2}\left(\dot{\Theta_{\alpha}}^{2} - \omega_{\alpha}^{2}\Theta_{\alpha}^{2}\right) = \sum_{\alpha}\dfrac{m_{\alpha}}{2}\left(\dfrac{\dot{Q_{\alpha}}^{2}}{m_{\alpha}} - \omega_{\alpha}^{2}\dfrac{Q_{\alpha}^{2}}{m_{\alpha}}\right) = \dfrac{1}{2}\sum_{\alpha}\left(\dot{Q_{\alpha}}^{2} - \omega_{\alpha}^{2}Q_{\alpha}^{2}\right)
 \ee
 
 \subsection{Cas tridimensionnel}
@@ -316,7 +316,7 @@ Dans le cas d'oscillations tridimensionnelles d'un point mat\'eriel de masse $m$
 \ee
 En pla\c{c}ant l'origine des coordonn\'ees au minimum de l'\'energie potentielle $U(x,y,z)$, une rotation des axes permet de rendre diagonal l'\'energie potentielle, i.e. $\frac{\partial U}{\partial x} = f(x)$, $\frac{\partial U}{\partial y} = g(y)$ et $\frac{\partial U}{\partial z} = h(z)$. En reprenant la formulation de l'\'energie potentielle d\'ecrite dans la relation (\ref{EQ:21_2}), la fonction de Lagrange devient :
 \be
-	L = \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) - \dfrac{1}{2}(k_{x}x^{2} + k_{y}y^{2} + k_{z}z^{2}) \label{EQ:23_15}
+	L = \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) - \dfrac{1}{2}(k_{x}x^{2} + k_{y}y^{2} + k_{z}z^{2}) \label{EQ:23_14}
 \ee
 avec le long des axes, des oscillations de fr\'equences : $\omega_{x} = \sqrt{k_{x}/m}$, $\omega_{y} = \sqrt{k_{y}/m}$ et $\omega_{z} = \sqrt{k_{z}/m}$. En g\'en\'eralisant l'\'ecriture, nous avons :
 \be
@@ -328,6 +328,20 @@ Les coordonn\'ees normales sont alors dans ce cas pr\'ecis $Q_{\alpha} = \sqrt{m
 
 La g\'en\'eralisation de la fonction de Lagrange formul\'ee dans l'\'equation (\ref{EQ:22_1}) \`a plusieurs degr\'e de libert\'e est :
 \be
-	L = L_{0} + \sum_{i}F_{i}(t)x_{i} \label{EQ:23_16}
+	L = L_{0} + \sum_{i}F_{i}(t)x_{i} \label{EQ:23_15}
 \ee
-avec $L_{0}$ la fonction de Lagrange des oscillations libres, voir la relation (\ref{EQ:23_14}), et $F_{k}$, la force ext\'erieure appliqu\'ee sur la coordonn\'ees $x_{k}$.
+avec $L_{0}$ la fonction de Lagrange des oscillations libres, voir la relation (\ref{EQ:23_14}), et $F_{k}$, la force ext\'erieure appliqu\'ee sur la coordonn\'ees $x_{k}$. La formule (\ref{EQ:23_9}) nous donne :
+\be
+	x_{j} = \sum_{\alpha=1}^{s}\Delta_{j\alpha}\Theta_{\alpha} = \sum_{\alpha=1}^{s}\dfrac{\Delta_{j\alpha}}{\sqrt{m_{\alpha}}}Q_{\alpha}
+\ee
+aussi la fonction de Lagrange se d\'eveloppe ainsi :
+\bea
+	L & = & \dfrac{1}{2}\sum_{\alpha}\left(\dot{Q_{\alpha}}^{2} - \omega_{\alpha}^{2}Q_{\alpha}^{2}\right) + \sum_{i}F_{i}(t)\sum_{\alpha}\dfrac{\Delta_{i\alpha}}{\sqrt{m_{\alpha}}}Q_{\alpha} \nonumber \\
+	& = & \dfrac{1}{2}\sum_{\alpha}\left(\dot{Q_{\alpha}}^{2} - \omega_{\alpha}^{2}Q_{\alpha}^{2}\right) + \sum_{\alpha}\left(\sum_{i}\dfrac{F_{i}(t)\Delta_{i\alpha}}{\sqrt{m_{\alpha}}}\right)Q_{\alpha} \nonumber \\
+	& = & \dfrac{1}{2}\sum_{\alpha}\left(\dot{Q_{\alpha}}^{2} - \omega_{\alpha}^{2}Q_{\alpha}^{2}\right) + \sum_{\alpha}f_{\alpha}(t)Q_{\alpha} \label{EQ:23_16}
+\eea
+avec $f_{\alpha}(t) = \sum_{i}\frac{F_{i}(t)\Delta_{i\alpha}}{\sqrt{m_{\alpha}}}$. Les \'equations du mouvement obtenues par l'\'equation (\ref{EQ:5_2}) sont alors :
+\be
+	\forall \alpha \in {1,\ldots,s}\text{, }\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{Q}_{\alpha}}\right) - \dfrac{\partial L}{\partial Q_{\alpha}} = 0 \Leftrightarrow \ddot{Q}_{\alpha} + \omega_{\alpha}^{2}Q_{\alpha} = f_{\alpha}(t) \label{EQ:23_17}
+\ee
+dont la seule inconnue est la fonction $Q_{\alpha}(t)$.
