@@ -253,7 +253,7 @@ qui s'\'ecrit sous forme matricielle ainsi :
 \be
 	\det{(k_{ij} - \omega^{2}m_{ij})} = 0
 \ee
-qui est une \emph{\'equation caract\'eristique} de degr\'e $s$ par rapport \`a $\omega^{2}$. En g\'en\'eral, il y a $s$ racines r\'eelles et positives distinctes $\omega_{\alpha}$ avec $\alpha \in {1, \cdots , s}$. Les valeurs de $\omega_{\alpha}$ sont les \emph{fr\'equences propres} du syst\`eme.
+qui est une \emph{\'equation caract\'eristique} de degr\'e $s$ par rapport \`a $\omega^{2}$. En g\'en\'eral, il y a $s$ racines r\'eelles et positives distinctes $\omega_{\alpha}$ avec $\alpha \in \{1, \cdots , s\}$. Les valeurs de $\omega_{\alpha}$ sont les \emph{fr\'equences propres} du syst\`eme.
 
 Dans un syst\`eme physique, si $\omega_{\alpha}$ poss\`ede une partie imaginaire, $\omega_{\alpha}^{2} < 0$ ou $\omega_{\alpha} \in \mathbb{C}$ et peut donc s\'ecrire ainsi $\omega_{\alpha} = a + ib$ alors dans la relation (\ref{EQ:23_6}), $x_{j}(t) = A_{j}e^{-bt}e^{iat}$. Le terme $e^{-bt}$ est une terme exponentiel croissant ou d\'ecroissant suivant la valeur de $b$. L'\'energie totale du sys\`eme \'evolue alors avec le temps, ce qui est en contradiction avec la loi de conservation de l'\'energie.
 
@@ -281,6 +281,53 @@ en d\'efinissant :
 \ee
 qui repr\'esente une oscillation p\'eriodique simple avec une amplitude et une phase arbitraires mais avec une fr\'equence $\omega_{\alpha}$ bien d\'etermin\'ee, voir (\ref{EQ:21_11}).
 
+Les relations (\ref{EQ:23_9}) peuvent \^etre interpr\^et\'ees comme un syst\`eme de $s$ \'equations \`a $s$ inconnues $\Theta_{\alpha}$, solutions qui peuvent \^etre exprim\'ees en fonction des coordonn\'ees $x_{j}$. Les solutions $\Theta_{\alpha}$ peuvent ainsi \^etre consid\'er\'ees comme de nouvelles coordonn\'ees g\'en\'eralis\'ees. Elles sont dites \emph{normales} et les oscillations p\'eriodiques simples associ\'ees sont dites \emph{oscillations simples} du syst\`eme.
+
+En supposant que le param\`etre $C_{\alpha}$ s'écrive $a_{\alpha} + ib_{\alpha}$ alors :
+\bea
+	\Theta_{\alpha} & = & \Re{\left((a_{\alpha} + ib_{\alpha})e^{i\omega_{\alpha}t}\right)} = \Re{\left((a_{\alpha} + ib_{\alpha})(\cos(\omega{\alpha}t) + i\sin(\omega_{\alpha}t))\right)} \nonumber \\
+	& = & \Re{\left(a_{\alpha}\cos(\omega{\alpha}t) - b_{\alpha}\sin(\omega{\alpha}t) + i(a_{\alpha}\sin(\omega{\alpha}t) + b_{\alpha}\cos(\omega{\alpha}t))\right)} = a_{\alpha}\cos(\omega{\alpha}t) - b_{\alpha}\sin(\omega{\alpha}t) \nonumber \\
+	\Rightarrow \ddot{\Theta}_{\alpha} & = & -a_{\alpha}\omega_{\alpha}^{2}\cos(\omega{\alpha}t) + b_{\alpha}\omega_{\alpha}^{2}\sin(\omega{\alpha}t)
+\eea
+Ceci permet d'\'ecrire en d\'efinitive que :
+\be
+	\ddot{\Theta}_{\alpha} + \omega_{\alpha}^{2}\Theta_{\alpha} = 0 \label{EQ:23_11}
+\ee
+Ainsi, pour les coordonn\'ees normales, nous avons $s$ \'equations ind\'ependantes et de facto, ces coordonn\'ees normales sont ind\'ependantes les unes des autres. Et la fonction de Lagrange du syst\`eme est :
+\be
+	L = \sum_{\alpha}\dfrac{m_{\alpha}}{2}\left(\dot{\Theta_{\alpha}}^{2} - \omega_{\alpha}^{2}\Theta_{\alpha}^{2}\right) \label{EQ:23_12}
+\ee
+avec $\forall \alpha \in \{1, \cdots , s\}\text{, }m_{\alpha} \ge 0$.
+
+Math\'ematiquement, la transformation (\ref{EQ:23_9}) permet aux \'energies cin\'etique et potentielle d'avoir une forme diagonale. Habituellement, les coordonn\'ees normales sont choisies telles que les c{\oe}fficients des carr\'es des vitesses dans la fonction de Lagrange soient \'egaux \`a $\frac{1}{2}$. En posant les coordonn\'ees normales :
+\be
+	Q_{\alpha} = \sqrt{m_{\alpha}}\Theta_{\alpha} \label{EQ:23_13}
+\ee
+la fonction de Lagrange s'\'ecrit alors :
+\be
+	L = \sum_{\alpha}\dfrac{m_{\alpha}}{2}\left(\dot{\Theta_{\alpha}}^{2} - \omega_{\alpha}^{2}\Theta_{\alpha}^{2}\right) = \sum_{\alpha}\dfrac{m_{\alpha}}{2}\left(\dfrac{\dot{Q_{\alpha}}^{2}}{m_{\alpha}} - \omega_{\alpha}^{2}\dfrac{Q_{\alpha}^{2}}{m_{\alpha}}\right) = \sum_{\alpha}\left(\dot{Q_{\alpha}}^{2} - \omega_{\alpha}^{2}Q_{\alpha}^{2}\right) \label{EQ:23_14}
+\ee
+
 \subsection{Cas tridimensionnel}
 
+Dans le cas d'oscillations tridimensionnelles d'un point mat\'eriel de masse $m$ dans un champ ext\'erieur constant dans le temps, l'\'energie cin\'etique ne d\'epend pas du choix de la direction des axes des coordonn\'ees et :
+\be
+	T = \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2})
+\ee
+En pla\c{c}ant l'origine des coordonn\'ees au minimum de l'\'energie potentielle $U(x,y,z)$, une rotation des axes permet de rendre diagonal l'\'energie potentielle, i.e. $\frac{\partial U}{\partial x} = f(x)$, $\frac{\partial U}{\partial y} = g(y)$ et $\frac{\partial U}{\partial z} = h(z)$. En reprenant la formulation de l'\'energie potentielle d\'ecrite dans la relation (\ref{EQ:21_2}), la fonction de Lagrange devient :
+\be
+	L = \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) - \dfrac{1}{2}(k_{x}x^{2} + k_{y}y^{2} + k_{z}z^{2}) \label{EQ:23_15}
+\ee
+avec le long des axes, des oscillations de fr\'equences : $\omega_{x} = \sqrt{k_{x}/m}$, $\omega_{y} = \sqrt{k_{y}/m}$ et $\omega_{z} = \sqrt{k_{z}/m}$. En g\'en\'eralisant l'\'ecriture, nous avons :
+\be
+	L = \dfrac{1}{2}\sum_{\alpha = x,y,z}\left((\sqrt{m}\dot{x}_{\alpha})^{2} - (\omega_{\alpha}x_{\alpha})^{2}\right)
+\ee
+Les coordonn\'ees normales sont alors dans ce cas pr\'ecis $Q_{\alpha} = \sqrt{m}x_{\alpha}$. Dans le cas sp\'ecifique d'un champ central, alors $k_{x} = k_{y} = k_{z} = k$ et $Q = \sqrt{m}r$.
+
 \subsection{Oscillations forc\'ees}
+
+La g\'en\'eralisation de la fonction de Lagrange formul\'ee dans l'\'equation (\ref{EQ:22_1}) \`a plusieurs degr\'e de libert\'e est :
+\be
+	L = L_{0} + \sum_{i}F_{i}(t)x_{i} \label{EQ:23_16}
+\ee
+avec $L_{0}$ la fonction de Lagrange des oscillations libres, voir la relation (\ref{EQ:23_14}), et $F_{k}$, la force ext\'erieure appliqu\'ee sur la coordonn\'ees $x_{k}$.
