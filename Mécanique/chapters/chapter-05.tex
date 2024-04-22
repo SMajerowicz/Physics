@@ -202,7 +202,7 @@ donc :
 \be
 	U(\begin{Bmatrix}q_{i}\end{Bmatrix}) - U(\begin{Bmatrix}q_{i_{0}}\end{Bmatrix}) = \dfrac{1}{2}\sum_{i,j}\left(\dfrac{\partial^{2}U}{\partial q_{i}\partial q_{j}}\right)_{q_{i}=q_{i0},q_{j}=q_{j0}}(q_{i} - q_{i0})(q_{j} - q_{j0})
 \ee
-En comptant l'\'energie potentielle par rapport \`a sa valeur minimale et parce que $\partial x_{i} = \partial (q_{i} - q_{i0}) = \partial q_{i}$, alors :
+En comptant l'\'energie potentielle par rapport \`a sa valeur minimale et parce que $\partial x_{i} = \partial (q_{i} - q_{i0}) = \partial q_{i}$, alors l'\'energie potentielle est une forme d\'efinie positive :
 \be
 	U(\begin{Bmatrix}q_{i}\end{Bmatrix}) = \dfrac{1}{2}\sum_{i,j}k_{ij}x_{i}x_{j}\text{ avec }k_{ij} = \left(\dfrac{\partial^{2}U}{\partial x_{i}\partial x_{j}}\right)_{x_{i}=0,x_{j}=0} \label{EQ:23_2}
 \ee
@@ -253,6 +253,33 @@ qui s'\'ecrit sous forme matricielle ainsi :
 \be
 	\det{(k_{ij} - \omega^{2}m_{ij})} = 0
 \ee
+qui est une \emph{\'equation caract\'eristique} de degr\'e $s$ par rapport \`a $\omega^{2}$. En g\'en\'eral, il y a $s$ racines r\'eelles et positives distinctes $\omega_{\alpha}$ avec $\alpha \in {1, \cdots , s}$. Les valeurs de $\omega_{\alpha}$ sont les \emph{fr\'equences propres} du syst\`eme.
+
+Dans un syst\`eme physique, si $\omega_{\alpha}$ poss\`ede une partie imaginaire, $\omega_{\alpha}^{2} < 0$ ou $\omega_{\alpha} \in \mathbb{C}$ et peut donc s\'ecrire ainsi $\omega_{\alpha} = a + ib$ alors dans la relation (\ref{EQ:23_6}), $x_{j}(t) = A_{j}e^{-bt}e^{iat}$. Le terme $e^{-bt}$ est une terme exponentiel croissant ou d\'ecroissant suivant la valeur de $b$. L'\'energie totale du sys\`eme \'evolue alors avec le temps, ce qui est en contradiction avec la loi de conservation de l'\'energie.
+
+D'un point de vue mathématique, l'\'equation (\ref{EQ:23_7}) permet d'\'ecrire :
+\be
+	\sum_{j}(k_{ij} - \omega^{2}m_{ij})A_{j} = 0 \Leftrightarrow \sum_{i,j}(k_{ij} - \omega^{2}m_{ij})A_{i}^{*}A_{j} = 0
+\ee
+avec $A_{i}^{*}$ la quantité conjugu\'ee de $A_{i}$. Nous obtenons alors :
+\be
+	\omega^{2} = \dfrac{\sum_{i,j}k_{ij}A_{i}^{*}A_{j}}{\sum_{i,j}m_{ij}A_{i}^{*}A_{j}}
+\ee
+o\`u les quantit\'es $k_{ij}$ et $m_{ij}$ sont r\'elles et sym\'etriques. Donc :
+\be
+	\left(\sum_{ij}k_{ij}A_{i}^{*}A_{j}\right)^{*} = \sum_{ij}k_{ij}A_{i}A_{j}^{*} = \sum_{ij}k_{ij}A_{j}A_{i}^{*}
+\ee
+Ceci est aussi vrai pour le d\'enominateur de l'expression donnant $\omega^{2}$. En accord avec les d\'finitions (\ref{EQ:23_2}) et (\ref{EQ:23_3}), $\omega^{2}$ a alors des formes d\'efinies positives au num\'erateur et au d\'enominateur. C'est donc pouquoi les valeurs de $\omega_{\alpha}^{2}$ ne peuvent \^etre que réelles et positives.
+
+Les fr\'equences $\omega_{\alpha}$ \'etant connues, les \'equations (\ref{EQ:23_7}) permettent d'obtenir les valeurs $A_{j}$. Si les valeurs $\omega_{\alpha}$ sont toutes distinctes alors les c{\oe}fficients $A_{j}$ sont proportionneles aux mineurs\footnote{Le mineur est le d\'eterminant qu'une sous-matrice carr\'ee.} de $k_{ij} - \omega^{2}m_{ij}$ en posant $\omega = \begin{Bmatrix}\omega_{\alpha}\end{Bmatrix}^{s}_{1}$. Soit $\Delta_{j\alpha}$ le mineur permettant le calcul de la quantit\'e $A_{j}$ avec pour fr\'equence $\omega_{\alpha}$, l'expression (\ref{EQ:23_5}) peut alors s'\'ecrire : $x_{j} = \Delta_{j\alpha}C_{\alpha}e^{i\omega_{\alpha}t}$ avec $C_{\alpha} \in \mathbb{C}$ et $\Delta_{j\alpha} \in \mathbb{R}$. Il s'agit alors d'une solution particuli\`ere puisque calcul\'ee pour une fr\'equence $\omega_{\alpha}$ donn\'ee. La solutino g\'en\'erale est la sommes des solutions particuli\`eres qui vaut dans $\mathbb{R}$ :
+\be
+	x_{j} = \Re{\left(\sum_{\alpha=1}^{s}\Delta_{j\alpha}C_{\alpha}e^{i\omega_{\alpha}t}\right)} = \sum_{\alpha=1}^{s}\Delta_{j\alpha}\Re{\left(C_{\alpha}e^{i\omega_{\alpha}t}\right)} = \sum_{\alpha=1}^{s}\Delta_{j\alpha}\Theta_{\alpha} \label{EQ:23_9}
+\ee
+en d\'efinissant :
+\be
+	\Theta_{\alpha} = \Re{\left(C_{\alpha}e^{i\omega_{\alpha}t}\right)} \label{EQ:23_10}
+\ee
+qui repr\'esente une oscillation p\'eriodique simple avec une amplitude et une phase arbitraires mais avec une fr\'equence $\omega_{\alpha}$ bien d\'etermin\'ee, voir (\ref{EQ:21_11}).
 
 \subsection{Cas tridimensionnel}
 
