@@ -420,7 +420,39 @@ or $T = 2\pi/\omega$ et $\forall n \in \mathbb{Z}\text{, }e^{2in\pi} = 1$ donc :
 
 \subsection{Cas d'une fonction de Lagrange donn\'ee et pour deux degr\'es de libert\'e}
 
+L'objectif de ce probl\`eme est de d\'eterminer les oscillations du syst\`eme dont la fonction de Lagrange est :
+\be
+	L = \dfrac{1}{2}(\dot{x}^{2} + \dot{y}^{2}) - \dfrac{\omega_{0}^{2}}{2}(x^{2} + y^{2}) +\alpha xy
+\ee
+correspondant à deux syst\`emes lin\'eaires identiques de fr\'equence propre $\omega_{0}$ coupl\'es par une interaction d\'efinie par $-\alpha xy$. Les \'equations du mouvement d\'efinies par les relations (\ref{EQ:2_6}) sont :
+\be
+	\begin{cases}
+		\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{x}}\right) = \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}\dot{x}}{\mathrm{dt}} = -\omega_{0}^{2}x + \alpha y \Leftrightarrow \ddot{x} + \omega_{0}^{2}x = \alpha y \\
+		\\
+		\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{y}}\right) = \dfrac{\partial L}{\partial y} \Leftrightarrow \dfrac{\mathrm{d}\dot{y}}{\mathrm{dt}} = -\omega_{0}^{2}y + \alpha x \Leftrightarrow \ddot{y} + \omega_{0}^{2}y = \alpha x
+	\end{cases}
+\ee
+En posant $x = A_{x}e^{i\omega t}$ et $y = A_{y}e^{i\omega t}$, le syst\`eme d'\'equations devient :
+\be
+	\begin{cases}
+		-\omega^{2}A_{x} + \omega_{0}^{2}A_{x} = \alpha A_{y} \Leftrightarrow A_{x}(\omega_{0}^{2} - \omega^{2}) = \alpha A_{y} \\
+		-\omega^{2}A_{y} + \omega_{0}^{2}A_{y} = \alpha A_{x} \Leftrightarrow A_{y}(\omega_{0}^{2} - \omega^{2}) = \alpha A_{x}
+	\end{cases}
+\ee
+L'\'equation caract\'eristique est le d\'eterminant \'egal \`a 0 de la matrice correspondant au syst\`eme d'\'equations ci-dessus, soit :
+\be
+	(\omega_{0}^{2} - \omega^{2})^{2} - \alpha^{2} = 0 \Leftrightarrow \omega_{1}^{2} = \omega_{0}^{2} + \alpha\text{ et }\omega_{2}^{2} = \omega_{0}^{2} - \alpha
+\ee
+En prenant, $\omega^{2} = \omega_{1}^{2}$ nous obtenons $A_{x} = A_{y}$ alors que pour $\omega^{2} = \omega_{2}^{2}$, nous avons $A_{x} = -A_{y}$. Cela permet d'introduire les coordonn\'ees normales $Q_{1}$ et $Q_{2}$ telles que :
+\be
+	\begin{cases}
+		x = \dfrac{1}{\sqrt{2}}(Q_{1} + Q_{2}) \\
+		x = \dfrac{1}{\sqrt{2}}(Q_{1} - Q_{2})
+	\end{cases}
+\ee
+Les c{\oe}fficients $1/\sqrt{2}$ permettent d'obtenir les c{\oe}fficient $1/2$ devant les carr\'es des vitesses dans la fonction de Lagrange du syst\`eme.
 
+Dans le cas particulier o\`u $\alpha \ll \omega^{2}$ alors $\omega^{2} = \omega_{0}^{2} \pm \alpha = \omega_{0}^{2}(1 \pm \alpha/\omega_{0}^{2}) \approx \omega_{0}^{2}(1 \pm \alpha/(2\omega_{0}))$. Les degr\'es de libert\'e $x$ et $y$ sont l'addition de deux oscillations de fr\'equence voisine, avec un battement de $\omega_{2} - \omega_{1} = \alpha/\omega_{0}$.
 
 \subsection{Oscillations d'un pendule double oscillant dans un plan}
 
