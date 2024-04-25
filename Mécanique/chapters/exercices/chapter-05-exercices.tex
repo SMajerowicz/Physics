@@ -464,6 +464,48 @@ Dans le cadre des petites oscillations qui nous occupe, i.e. $\varphi_{1} \ll 1$
 \be
 	L = \dfrac{m_{1}+m_{2}}{2}l_{1}^{2}\dot{\varphi_{1}}^{2} + \dfrac{m_{2}}{2}l_{2}^{2}\dot{\varphi_{2}}^{2} - \dfrac{(m_{1} + m_{2})}{2}gl_{1}\varphi_{1}^{2} - m_{2}gl_{2}\varphi_{2}^{2}
 \ee
-car $\cos\varphi \approx \cos(0) - (\varphi - 0)\sin(0) - \frac{1}{2}(\varphi - 0)^{2}\cos(0) \approx \frac{1}{2}\varphi^{2}$
+car $\cos\varphi \approx \cos(0) - (\varphi - 0)\sin(0) - \frac{1}{2}(\varphi - 0)^{2}\cos(0) \approx \frac{1}{2}\varphi^{2}$. En application des \'equations du mouvement (\ref{EQ:2_6}), nous obtenons :
+\bea
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{\varphi_{1}}}\right) = \dfrac{\partial L}{\partial \varphi_{1}} \Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{dt}}\left((m_{1} + m_{2})l_{1}^{2}\dot{\varphi}_{1} + m_{2}l_{1}l_{2}\dot{\varphi}_{2}\right) & = & -(m_{1} + m_{2})gl_{1}\varphi_{1} \nonumber \\
+	\Leftrightarrow (m_{1} + m_{2})l_{1}^{2}\ddot{\varphi}_{1} + m_{2}l_{1}l_{2}\ddot{\varphi}_{2} + (m_{1} + m_{2})gl_{1}\varphi_{1} & = & 0 \nonumber \\
+	\Leftrightarrow (m_{1} + m_{2})l_{1}\ddot{\varphi}_{1} + m_{2}l_{2}\ddot{\varphi}_{2} + (m_{1} + m_{2})g\varphi_{1} & = & 0 \\
+\eea
+et :
+\bea
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{\varphi_{2}}}\right) = \dfrac{\partial L}{\partial \varphi_{2}} \Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{dt}}\left(m_{2}l_{2}^{2}\dot{\varphi}_{2} + m_{2}l_{1}l_{2}\dot{\varphi}_{1}\right) & = &  -m_{2}gl_{2}\varphi_{2} \nonumber \\
+	\Leftrightarrow m_{2}l_{2}^{2}\ddot{\varphi}_{2} + m_{2}l_{1}l_{2}\ddot{\varphi}_{1} + m_{2}gl_{2}\varphi_{2} & = & 0 \nonumber \\
+	\Leftrightarrow m_{2}l_{2}\ddot{\varphi}_{2} + m_{2}l_{1}\ddot{\varphi}_{1} + m_{2}g\varphi_{2} & = & 0
+\eea
+En posant $\varphi_{1} = A_{1}e^{i\omega t}$ et $\varphi_{2} = A_{2}e^{i\omega t}$, nous obtenons :
+\be
+	\begin{cases}
+		-(m_{1} + m_{2})l_{1}A_{1}\omega^{2} - m_{2}l_{2}\omega^{2}A_{2} + (m_{1} + m_{2})gA_{1} = 0 \\
+		-l_{2}\omega^{2}A_{2} - l_{1}\omega^{2}A_{1} + gA_{2} = 0
+	\end{cases}
+	\\
+	\Leftrightarrow
+	\begin{cases}
+		(g - l_{1}\omega^{2})(m_{1} + m_{2})A_{1} - m_{2}l_{2}\omega^{2}A_{2} = 0 \\
+		-l_{1}\omega^{2}A_{1} + (g - l_{2}\omega^{2})A_{2} = 0
+	\end{cases}
+\ee
+L'\'equation caract\'eristique du syst\`eme est alors :
+\bea
+	(g - l_{1}\omega^{2})(g - l_{2}\omega^{2})(m_{1} + m_{2}) - m_{2}l_{1}l_{2}\omega^{4} & = & 0 \nonumber \\
+	(m_{1} + m_{2})(g^{2} - (l_{1} + l_{2})g\omega^{2} + l_{1}l_{2}\omega^{4}) - m_{2}l_{1}l_{2}\omega^{4} & = & 0 \nonumber \\
+	m_{1}l_{1}l_{2}\omega^{4} - (m_{1} + m_{2})(l_{1} + l_{2})g\omega^{2} + (m_{1} + m_{2})g^{2} & = & 0
+\eea
+et ses deux solutions sont :
+\bea
+	\omega^{2} & = & \dfrac{(m_{1} + m_{2})(l_{1} + l_{2})g \pm \sqrt{(m_{1} + m_{2})^{2}(l_{1} + l_{2})^{2}g^{2} - 4m_{1}(m_{1} + m_{2})l_{1}l_{2}g^{2}}}{2m_{1}l_{1}l_{2}} \nonumber \\
+	& = & \dfrac{g}{2m_{1}l_{1}l_{2}}\left[(m_{1} + m_{2})(l_{1} + l_{2}) \pm \sqrt{(m_{1} + m_{2})\left[(m_{1} + m_{2})(l_{1} + l_{2})^{2} - 4m_{1}l_{1}l_{2}\right]} \right]
+\eea
+
+\begin{figure}[htb!]
+	\begin{center}
+		\includegraphics[width=10cm]{chapter_05_paragraph_23_exercice_2}
+		\caption{Exemple de variation de la solution $\omega^{2}$ << + >> en supposant $l_{2} = 2l_{1}$ et pour un rapport $m_{2}/m_{1}$ allant de $0.1$ à $10$.}\label{FIG:23_2}
+	\end{center}
+\end{figure}
 
 \subsection{Trajectoire dans un champ central $\propto r^{2}$}\label{PAR:23_EX3}
