@@ -509,3 +509,33 @@ et ses deux solutions sont :
 \end{figure}
 
 \subsection{Trajectoire dans un champ central $\propto r^{2}$}\label{PAR:23_EX3}
+
+La trajectoire d'une particule dans un champ telle que l'\'energie potentielle $U$ soit \'egale \`a $\frac{kr^{2}}{2} = \frac{k(x^{2} + y^{2}}{2}$ s'effectue dans un plan. La relation (\ref{EQ:23_15}) donne pour la fonction de Lagrange de la particule :
+\be
+	L = \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) - \dfrac{k}{2}(x^{2} + y^{2})
+\ee
+ce qui donne pour les \'equations du mouvement, voir (\ref{EQ:2_6}) :
+\be
+	\begin{cases}
+		\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{x}}\right) = \dfrac{\partial L}{\partial x} \Leftrightarrow m\ddot{x} + kx = 0 \\
+		\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{y}}\right) = \dfrac{\partial L}{\partial y} \Leftrightarrow m\ddot{y} + ky = 0
+	\end{cases}
+\ee
+En posant $x = A_{x}e^{i\omega t}$ et $y = A_{y}e^{i\omega t}$, le syst\`eme d'\'equations devient :
+\be
+	\begin{cases}
+		-m\omega^{2}A_{x} + kA_{x} = 0 \\
+		-m\omega^{2}A_{y} + kA_{y} = 0
+	\end{cases}
+\ee
+ce qui nous donne directement $\omega^{2} = \sqrt{k/m}$. En posant $x = a\cos(\omega t)$ et $y = b\cos(\omega t + \alpha) = b\cos(\omega t)\cos\alpha - b\sin(\omega t)\sin\alpha$, sachant que $y$ peut \^etre d\'ephas\'e par rapport \`a $x$, alors :
+\be
+	\cos(\omega t) = \dfrac{x}{a}\text{ et }\sin(\omega t) = \dfrac{b\cos(\omega t)\cos\alpha - y}{b\sin\alpha} = \dfrac{bx\cos\alpha - ay}{ab\sin\alpha}
+\ee
+Enfin, en s'appuyant sur l'\'egalit\'e $\cos^{2}(\omega t) + \sin^{2}(\omega t) = 1$, nous pouvons \'ecrire :
+\bea
+	\dfrac{x^{2}}{a^{2}} + \dfrac{b^{2}x^{2}\cos^{2}\alpha + a^{2}y^{2} - 2abxy\cos\alpha}{a^{2}b^{2}\sin^{2}\alpha} & = & 1 \nonumber \\
+	b^{2}x^{2}\sin^{2}\alpha + b^{2}x^{2}\cos^{2}\alpha + a^{2}y^{2} - 2abxy\cos\alpha & = & a^{2}b^{2}\sin^{2}\alpha \nonumber \\
+	b^{2}x^{2} + a^{2}y^{2} - 2abxy\cos\alpha = a^{2}b^{2}\sin^{2}\alpha \Leftrightarrow \dfrac{x^{2}}{a^{2}} + \dfrac{y^{2}}{a^{2}} - \dfrac{2xy}{ab}\cos\alpha & = & \sin^{2}\alpha
+\eea
+qui correspond \`a une ellipse dont le centre est positionn\'e \`a l'origine des coordonn\'ees.
