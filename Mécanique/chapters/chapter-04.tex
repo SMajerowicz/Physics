@@ -7,22 +7,22 @@ Les lois de conservations ne d\'ependent absolument pas de l'esp\`ece d'interact
 Pour commencer, choisissons la d\'esint\'egration spontan\'ee, i.e. non provoqu\'ee par des forces ext\'erieures, d'une particule en deux autres particules se d\'epla\c{c}ant apr\`es la d\'esint\'egration ind\'ependamment l'une de l'autre. Sa forme la plus simple est quand il est consid\'er\'e dans un syst\`eme de r\'ef\'erence o\`u la particule initiale est au repos. La conservation d' l'impulsions implique :
 \bea
 	\vec{p}_{1} + \vec{p}_{2} & = & \vec{0} \nonumber \\
-	\vec{p}_{1} & = & -\vec{p}_{2}
+	\vec{p}_{1} & = & -\vec{p}_{2} \nonumber
 \eea
 ainsi les particules r\'esultantes de la d\'esint\'egration s'\'eloignent l'une de l'autre avec des impulsions \'egales, ,$\lVert \vec{p}_{1} \rVert = \lVert \vec{p}_{2} \rVert = p_{0}$ et dirig\'ees en sens inverse.
 
 En utilisant la loi de conservation de l'\'energie et en particulier l'\'equation (\ref{EQ:8_4}) et parce que l'\'energie cin\'etique de la particule initiale est nulle, nous pouvons \'ecrire :
-\be
+\benn
 	E_{int} = E_{1int} + \dfrac{p_{0}^{2}}{2m_{1}} + E_{2int} + \dfrac{p_{0}^{2}}{2m_{2}}
-\ee
+\eenn
 avec $E_{int}$ l'\'energie interne de la particule initiale, $E_{1int}$ et $E_{2int}$ l'\'energie interne des deux particules cr\'e\'ees. En d\'efinissant l'\'energie de d\'esint\'egration $\epsilon$ telle que :
 \be
 	\epsilon = E_{int} - (E_{1int} + E_{2int}) \label{EQ:16_1}
 \ee
 sa valeur est de facto positive. Or :
-\be
+\benn
 	E_{int} - (E_{1int} + E_{2int}) = p_{0}^{2}\left(\dfrac{1}{2m_{1}} + \dfrac{1}{2m_{2}}\right)
-\ee
+\eenn
 Donc :
 \be
 	\epsilon = p_{0}^{2}\left(\dfrac{1}{2m_{1}} + \dfrac{1}{2m_{2}}\right) = \dfrac{p_{0}^{2}}{2m} \label{EQ:16_2}
@@ -80,7 +80,7 @@ avec $m = \dfrac{m_{1} + m_{2}}{m_{1}m_{2}}$ qui est la masse r\'eduite du syst\
 Pour une des particules r\'esultantes de la d\'esint\'egration, d\'efinissions $\vec{v}$ sa vitesse dans le syst\`eme <<~l~>> et $\vec{v}_{0}$, sa vitesse dans le syst\`eme <<~c~>>. Par construction, nous avons $\vec{v} = \vec{V} + \vec{v}_{0} \Leftrightarrow \vec{v}_{0} = \vec{v} + \vec{V}$. De plus, la formule d'Al-Kashi donne directement :
 \bea
 	v_{0}{2} & = & v^{2} + V^{2} + 2vV\cos(\langle \vec{v},\vec{V}\rangle) \nonumber \\
-	& = & v^{2} + V^{2} + 2vV\cos(\theta)
+	& = & v^{2} + V^{2} + 2vV\cos(\theta) \nonumber
 \eea
 en se basant sur la figure (\ref{FIG:4_14})et o\`u l'angle $\theta$ est l'angle de d\'eviation dans <<~l~>>. La repr\'esentation g\'eom\'etrique (\ref{FIG:4_14}) montre deux cas distincts :
 \begin{itemize}
@@ -98,12 +98,12 @@ $\theta_{0}$ est l'angle de d\'eviation dans le r\'ef\'erentiel <<~c~>>, la repr
 En d\'eveloppant et en recherchant une \'equation en $\cos\theta_{0}$, nous \'ecrivons :
 \bea
 	\dfrac{\sin^{2}\theta}{\cos^{2}\theta} & = & \dfrac{v_{0}^{2}(1 - \cos^{2}\theta_{0}}{(V + v_{0}\cos\theta_{0})^{2}} \nonumber \\
-	\Leftrightarrow \sin^{2}\theta(V^{2} + v_{0}^{2}\cos^{2}\theta_{0} + 2Vv_{0}\cos\theta_{0}) & = & v_{0}^{2}\cos^{2}\theta - v_{0}^{2}\cos^{2}\theta\cos^{2}\theta_{0} \nonumber \\
+	\Leftrightarrow \sin^{2}\theta(V^{2} + v_{0}^{2}\cos^{2}\theta_{0} + 2Vv_{0}\cos\theta_{0}) & = & v_{0}^{2}\cos^{2}\theta - v_{0}^{2}\cos^{2}\theta\cos^{2}\theta_{0} \nonumber
 \eea
 ou encore en recherchant l'\'equation du second degr\'e :
 \bea
 	v_{0}^{2}(\sin^{2}\theta + cos^{2}\theta)\cos^{2}\theta_{0} + 2Vv_{0}\sin^{2}\theta\cos\theta_{0} + 2V^{2}\sin^{2}\theta - v_{0}^{2}\cos^{2}\theta & = & 0 \nonumber \\
-	\Leftrightarrow \cos^{2}\theta_{0} + \dfrac{2V}{v_{0}}\sin^{2}\theta\cos\theta_{0} + \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta - \cos^{2}\theta & = & 0 \nonumber \\
+	\Leftrightarrow \cos^{2}\theta_{0} + \dfrac{2V}{v_{0}}\sin^{2}\theta\cos\theta_{0} + \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta - \cos^{2}\theta & = & 0 \nonumber
 \eea
 qui a pour solutions :
 \bea
@@ -136,12 +136,12 @@ Pour obtenir la r\'epartition dans le r\'ef\'erentiel <<~l~>>, partons du calcul
 \bea
 	\vec{v} & = & \vec{V} + \vec{v}_{0} \nonumber \\
 	\Leftrightarrow v^{2} & = & v_{0}^{2} + V^{2} + 2v_{0}V\cos\theta_{0} \nonumber \\
-	\Leftrightarrow \cos\theta_{0} & = & \dfrac{v^{2} - v_{0}^{2} - V^{2}}{2v_{0}V}
+	\Leftrightarrow \cos\theta_{0} & = & \dfrac{v^{2} - v_{0}^{2} - V^{2}}{2v_{0}V} \nonumber
 \eea
 Or par rapport \`a $\theta_{0}$, les quantit\'es $\lVert\vec{v}_{0}\rVert$ et $\lVert\vec{V}\rVert$ sont constantes au contraire de $\lVert\vec{v}\rVert$ aussi, nous pouvons en conclure que :
-\be
+\benn
 	\mathrm{d}\cos\theta_{0} = -\sin\theta_{0}\mathrm{d}\theta_{0} = \dfrac{\mathrm{d}(v^{2})}{2v_{0}V}
-\ee
+\eenn
 Or l'\'energie cin\'etique d'une particule r\'esultante de masse $m$ s\'ecrit $T = \frac{1}{2}mv^{2} \Leftrightarrow \mathrm{d}T = \frac{1}{2}m\mathrm{d}(v^{2})$. Donc en reprenant l'\'equation (\ref{EQ:16_7}) :
 \bea
 	\dfrac{\mathrm{d}\omega_{0}}{4\pi} & = & \dfrac{1}{2}\pi\sin\theta_{0}\mathrm{d}\theta_{0} = -\dfrac{\mathrm{d}(v^{2})}{4v_{0}V} \nonumber \\
@@ -155,17 +155,17 @@ En reprenant $v^{2} = v_{0}^{2} + V^{2} + 2v_{0}V\cos\theta_{0}$, nous en d\'edu
 et dans cet intervalle, l'\'energie cin\'etique se distribue suivant la relation (\ref{EQ:16_8}).
 
 Si la d\'esint\'egration donne plus de deux composantes, cela complexifie l'\'etude et en particulier, l'\'energie des composantes est loin d'\^etre unique dans le r\'ef\'erentiel <<~c~>>. Toutefois il existe une valeur maximale de l'\'energie cin\'etique pour chaque particule r\'esultante. Parmi l'ensemble des particules r\'esultants, consid\'erons-en une de masse $m_{1}$ et en posant $E_{int}'$, l'\'energie <<~interne~>> de l'ensemble des particules restantes moins $m_{1}$. Puisque cette situation permet de revenir \`a un probl\`eme \`a deux corps, la formule (\ref{EQ:16_1}) permet d'\'ecrire :
-\be
+\benn
 	E_{int} = E_{int}' + T' + T_{10} + E_{1int}
-\ee
+\eenn
 avec $T'$ l'\'energie cin\'etique de l'ensemble des particules restantes moins $m_{1}$, $T_{10}$ l'\'energie cin\'etique de $m_{1}$ et $E_{1int}$ son \'energie interne. Les \'energies cin\'etiques peuvent s'\'ecrire avec $M$ la masse de la particule initiale :
-\be
+\benn
 	T' = \dfrac{p_{0}^{2}}{2(M - m_{1})}\text{ et }T_{10} = \dfrac{p_{0}^{2}}{2m_{1}}
-\ee
+\eenn
 donc :
 \bea
 	E_{int} - E_{int}' - E_{1int} & = & \dfrac{M}{M - m_{1}}\dfrac{p_{0}^{2}}{2m_{1}} \nonumber \\
-	\Leftrightarrow T_{10} & = & \dfrac{M - m_{1}}{M}(E_{int} - E_{int}' - E_{1int})
+	\Leftrightarrow T_{10} & = & \dfrac{M - m_{1}}{M}(E_{int} - E_{int}' - E_{1int}) \nonumber
 \eea
 Aussi $T_{10}$ est maximale si et seulement si $E_{int}'$ est minimale. Ceci intervient lorsque toutes les particules r\'esultantes, sauf $m_{1}$, ont la m\^eme vitesse, i.e. une agitation du syst\`eme minimale et $E_{int}'$ devient simplement la somme des \'energies internes de cet ensemble de particules. Dans ce cas pr\'ecis, la quantit\'e $E_{int} - E_{int}' - E_{1int}$ repr\'esente $\epsilon$, l'\'energie de d\'esint\'egration d\'efinie dans l'\'equation (\ref{EQ:16_2}). Nous en concluons :
 \be
@@ -175,27 +175,27 @@ Aussi $T_{10}$ est maximale si et seulement si $E_{int}'$ est minimale. Ceci int
 \section{Chocs \'elastiques des particules}
 
 Le choc entre deux particules est dit \'elastique lorsqu'il n'y a pas de modifications de leur \'etat interne. Lors de l'application de la loi de conservation de l'\'energie, il n'est donc pas n\'ecessaire de prendre en compte les \'energies internes respectives. Dans le r\'ef\'erentiel du centre d'inertie <<~c~>>, ce dernier est de facto au repos. Avant le choc, par application de la conservation de l'impulsion, nous avons dans <<~c~>> : $m_{1}\vec{v}_{10} + m_{2}\vec{v}_{20} = \vec{0}$. Dans <<~l~>>, la position du centre d'inertie s'\'ecrit :
-\be
+\benn
 	\vec{R} = \dfrac{m_{1}\vec{r}_{1} + m_{2}\vec{r}_{2}}{m_{1} + m_{2}}
-\ee
+\eenn
 et la loi de composition des vitesses am\`ene \`a \'ecrire :
-\be
+\benn
 	\begin{cases}
 		\vec{v}_{1} = \vec{v}_{10} + \frac{\mathrm{d}\vec{R}}{\mathrm{dt}} \\
 		\vec{v}_{2} = \vec{v}_{20} + \frac{\mathrm{d}\vec{R}}{\mathrm{dt}}
 	\end{cases}
-\ee
+\eenn
 donc en soustrayant les deux relations et en d\'efinissant\footnote{Voir une \'equivalence avec les relations (\ref{EQ:13_2})} $\vec{v} = \vec{v}_{1} - \vec{v}_{2}$ :
-\be
+\benn
 	\vec{v} = \vec{v}_{10} - \vec{v}_{20}
-\ee
+\eenn
 En reprenant la conservation de l'impulsion dans <<~c~>>, nous avons alors :
-\be
+\benn
 	\begin{cases}
 		\vec{v} = \vec{v}_{10} + \frac{m_{1}}{m_{2}}\vec{v}_{10} \Leftrightarrow \vec{v}_{10} = \frac{m_{2}}{m_{1} + m_{2}}\vec{v} \\
 		\vec{v} = -\vec{v}_{20} - \frac{m_{2}}{m_{1}}\vec{v}_{20} \Leftrightarrow \vec{v}_{20} = -\frac{m_{1}}{m_{1} + m_{2}}\vec{v}
 	\end{cases}
-\ee
+\eenn
 
 Comme le choc est \'elastique, dans <<~c~>>, la conservation de l'impulsion après le choc donne $m_{1}\vec{v'}_{10} + m_{2}\vec{v'}_{20} = \vec{0}$ et comme avant le choc, nous avons $m_{1}\vec{v}_{10} + m_{2}\vec{v}_{20} = \vec{0}$, nous pouvons en conclure que c'est vrai si $m_{1}(\vec{v'}_{10} + \vec{v}_{10}) + m_{2}(\vec{v'}_{20} + \vec{v}_{20}) = \vec{0}$, soit $\vec{v'}_{10} = -\vec{v}_{10}$ et $\vec{v'}_{20} = -\vec{v}_{20}$. De m\^eme, la conservation de l'\'energie avant et apr\`es le choc, et qui ne concerne que les \'energies cin\'etiques, implique que l'\'energie de chacune des deux particules est conserv\'ees car $v'_{10} = v_{10}$ et $v'_{20} = v_{20}$.
 Par cons\'equent, dans <<~c~>>, l'unique diff\'erence entre avant et apr\`es le choc se situe dans l'inversion de la direction de la vitesse de chacune des deux particules.
@@ -208,16 +208,16 @@ D\'efinissons le vecteur unitaire $\vec{n}_{0}$ dans la direction de la vitesse 
 	\end{cases}
 \ee
 Le passage de <<~c~>> \`a <<~l~>> via la loi de composition des vitesses et l'expression de la vitesse du centre d'inertie dans <<~l~>> permet d'\'ecrire :
-\be
+\benn
 	\begin{cases}
 		\vec{v'}_{1} = \vec{v'}_{10} + \frac{\mathrm{d}\vec{R'}}{\mathrm{dt}} \\
 		\vec{v'}_{2} = \vec{v'}_{20} + \frac{\mathrm{d}\vec{R'}}{\mathrm{dt}}
 	\end{cases}
-\ee
+\eenn
 avec :
-\be
+\benn
 	\dfrac{\mathrm{d}\vec{R'}}{\mathrm{dt}} = \dfrac{m_{1}\vec{v'}_{1} + m_{2}\vec{v'}_{2}}{m_{1} + m_{2}} = \dfrac{m_{1}\vec{v}_{1} + m_{2}\vec{v}_{2}}{m_{1} + m_{2}}
-\ee
+\eenn
 par l'additivit\'e des int\'egrales du mouvement, voir le paragraphe (\ref{PAR:6}) qui implique que les lois de conservation ne d\'ependent pas des interactions en jeu, en particulier pour celle de l'impulsion ici. Par cons\'equent, en reportant les \'equations (\ref{EQ:17_1}) :
 \be
 	\begin{cases}
@@ -258,12 +258,12 @@ avec $m$ la masse r\'eduite du syt\`eme d\'efinie telle que $m = \frac{m_{1}m_{2
 \end{figure}
 
 Sur la figure (\ref{FIG:4_15}) est trac\'e le cercle de rayon $mv$. Les vecteurs $\vec{AC}$ et $\vec{CB}$ donnent respectivement $\vec{p'}_{1}$ et $\vec{p'}_{2}$ en accord avec les relations (\ref{EQ:17_3}). Les impulsions initiales $\vec{p}_{1}$ et $\vec{p}_{2}$ impliquent que les points $A$ et $B$ ne changent pas de position, aussi seul le point $C$ peut avoir une position quelconque sur le cercle de rayon $mv$. Par construction g\'eom\'etrique, les relations (\ref{EQ:17_3}) donnent :
-\be
+\benn
 	\begin{cases}
 		\vec{AO} = \frac{m_{1}}{m_{1} + m_{2}}(\vec{p}_{1} + \vec{p}_{2}) \\
 		\vec{OB} = \frac{m_{2}}{m_{1} + m_{2}}(\vec{p}_{1} + \vec{p}_{2})
 	\end{cases}
-\ee
+\eenn
 
 \subsection{Cas de la particule $m_{2}$ au repos avant le choc}
 
@@ -317,19 +317,19 @@ Sur la figure (\ref{FIG:4_15}) est trac\'e le cercle de rayon $mv$. Les vecteurs
 \end{figure}
 
 Si la particule de masse $m_{2}$ est au repos avant le choc, cela se traduit par $v_{2} = \vec{0} = p_{2}$. Nous avons aussi :
-\be
+\benn
 	\vec{OB} = \dfrac{m_{2}}{m_{1} + m_{2}}(\vec{p}_{1} + \vec{p}_{2}) = \frac{m_{1}m_{2}}{m_{1} + m_{2}}\vec{v}_{1} = m\vec{v}_{1} = m\vec{v}
-\ee
+\eenn
 car par d\'efinition, $\vec{v} = \vec{v}_{1} - \vec{v}_{2}$ et donc \'egal \`a $\vec{v}_{1}$ dans le cas qui nous occupe. Donc le point $B$ se trouve positionner sur le cercle de rayon $mv$. De plus :
-\be
+\benn
 	\vec{AB} = \vec{AO} + \vec{OB} = \frac{m_{1}}{m_{1} + m_{2}}\vec{p}_{1} + \dfrac{m_{2}}{m_{1} + m_{2}}\vec{p}_{1} = \vec{p}_{1}
-\ee
+\eenn
 Le vecteur $\vec{AB}$ repr\'esente donc l'impulsion de d\'epart de la particule de masse $m_{1}$.
 
 Les points $A$, $O$ et $B$ se situant sur la m\^eme droite, nous pouvons en d\'eduire :
-\be
+\benn
 	AO = AB - OB = m_{1}v_{1} - \dfrac{m_{1}m_{2}}{m_{1} + m_{2}}v_{1} = \dfrac{m_{1}^{2}}{m_{1} + m_{2}}v_{1} = \dfrac{m_{1}}{m_{2}}OB
-\ee
+\eenn
 Par cons\'equent :
 \begin{itemize}
 	\item si $m_{1} < m_{2}$ alors le point $A$ se situe \`a l'int\'erieur du cercle
@@ -346,13 +346,13 @@ Ces cas sont repr\'esent\'es sur la figure (\ref{FIG:4_16}). Sur celle-ci, les a
 \ee
 
 D\'eterminons ensuite la valeur de la vitesse apr\`es le choc pour les deux particules dans <<~l~>>. Nous avons d\'ej\`a vu que $\vec{v'}_{1} = \vec{v'}_{10} + \vec{\dot{R'}}$ sachant que $\vec{\dot{R'}} = \vec{\dot{R}}$, aussi :
-\be
+\benn
 	{v'}_{1}^{\,2} = {v'}_{10}^{\,2} + {\lVert \vec{\dot{R}} \rVert}^{2} + 2v'_{10}\lVert \vec{\dot{R}} \rVert\cos\theta_{10}
-\ee
+\eenn
 or $\theta_{10} = \xi$ par d\'efinition, donc :
-\be
+\benn
 	{v'}_{1}^{\,2} = \dfrac{m_{2}^{2}}{(m_{1} + m_{2})^{2}}v^{2} + \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v_{1}^{2} + 2\dfrac{m_{1}m_{2}}{(m_{1} + m_{2})^{2}}vv_{1}\cos\xi
-\ee
+\eenn
 et comme $v_{1} = v$, nous avons :
 \be
 	v'_{1} = \dfrac{\sqrt{m_{1}^{2} + m_{2}^{2} + 2m_{1}m_{2}\cos\xi}}{m_{1} + m_{2}}v \label{EQ:17_5A}
@@ -360,18 +360,18 @@ et comme $v_{1} = v$, nous avons :
 De mani\`ere similaire pour $v'_{2}$, nous avons $\vec{v'}_{1} = \vec{v'}_{10} + \vec{\dot{R}}$, soit :
 \bea
 	{v'}_{2}^{\,2} & = & {v'}_{20}^{\,2} + {\lVert \vec{\dot{R}} \rVert}^{2} + 2v'_{20}\lVert \vec{\dot{R}} \rVert\cos(\langle \vec{v'}_{20},\vec{\dot{R}} \rangle) \nonumber \\
-	& = & \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2} + \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v_{1}^{2} + 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}vv_{1}\cos\theta_{20}
+	& = & \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2} + \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v_{1}^{2} + 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}vv_{1}\cos\theta_{20} \nonumber
 \eea
 et comme $v_{1} = v$ et $\theta_{20} = \pi - \xi$ :
 \bea
 	{v'}_{2}^{\,2} & = &  2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2} - 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2}\cos\xi \nonumber \\
 	& = & 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2}(1 - \cos\xi) = 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2}\left(1 - 1 + 2\sin^{2}\left(\dfrac{\xi}{2}\right)\right) \nonumber \\
-	& = & 4\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2}\sin^{2}\left(\dfrac{\xi}{2}\right)
+	& = & 4\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2}\sin^{2}\left(\dfrac{\xi}{2}\right) \nonumber
 \eea
 car :
-\be
+\benn
 	\cos\xi = \cos\left(\dfrac{\xi}{2} + \dfrac{\xi}{2}\right) = \cos^{2}\left(\dfrac{\xi}{2}\right) - \sin^{2}\left(\dfrac{\xi}{2}\right) = 1 - 2\sin^{2}\left(\dfrac{\xi}{2}\right)
-\ee
+\eenn
 Nous arrivons donc \`a :
 \be
 	v'_{2} = \dfrac{m_{1}}{m_{1} + m_{2}}v\sin\left(\dfrac{\xi}{2}\right) \label{EQ:17_5B}
@@ -397,13 +397,13 @@ En utilisant les relations (\ref{EQ:17_5A}) et (\ref{EQ:17_5B}) avec $\xi = \pi$
 	v'_{2} & = & \dfrac{m_{1}}{m_{1} + m_{2}}v \label{EQ:17_6}
 \eea
 En calculant $v'_{2} - v'_{1}$ :
-\be
+\benn
 	v'_{2} - v'_{1} = \dfrac{2m_{1} - (m_{1} - m_{2})}{m_{1} + m_{2}}v = \dfrac{m_{1} + m_{2}}{m_{1} + m_{2}}v = v > 0
-\ee
+\eenn
 nous pouvons en d\'eduire que $v'_{2} > v'_{1}$ donc l'\'energie maximale de la particule initialement au repos, et de masse $m_{2}$ est, apr\`es le choc :
-\be
+\benn
 	E'_{2max} = \dfrac{m_{2}}{2}{v'}_{2}^{2} = 2\dfrac{m_{1}^{2}m_{2}}{(m_{1} + m_{2})^{2}}v^{2} = 2\dfrac{m_{2}m_{1}^{2}v_{1}^{2}}{(m_{1} + m_{2})^{2}} = 4\dfrac{m_{1}m_{2}}{(m_{1} + m_{2})^{2}}E_{1} \label{EQ:17_7}
-\ee
+\eenn
 avec $E_{1} = \dfrac{1}{2}m_{1}v_{1}^{2}$ qui est l'\'energie initiale de la particule incident, de masse $m_{1}$.
 
 \subsection{Cas d'un choc entre deux particules de même masse dont l'une au repos avant le choc}
@@ -504,18 +504,18 @@ Soit $\mathrm{d}N$ le nombre de particules diffus\'ees par unit\'e de temps dans
 o\`u $n$ est le nombre de particules traversant l'unit\'e de surface d'une section droite du faisceau incident par unit\'e de temps\footnote{Restons dans l'hypoth\`ese d'un faisceau homog\`ene sur toute sa section.}. Alors la quantit\'e $\mathrm{d}\sigma$ a la dimension d'une surface et est appel\'ee la \emph{section efficace du faisceau}. Ce param\`etre est la caract\'eristique la plus importante du processus de diffusion.
 
 Consid\'erons par hypoth\`ese que $\xi$ et $\rho$ sont r\'eciproquement univoque. D\'emontrons que c'est vrai lorsque $\xi$ est une fonction monotone et d\'ecroissante de $\rho$, i.e. $\forall\rho$, $\frac{\mathrm{d}\xi}{\mathrm{d}\rho} < 0$ et $\forall\xi$, $\frac{\mathrm{d}\rho}{\mathrm{d}\xi} < 0$, donc au premier ordre, le d\'eveloppement de Taylor donne :
-\be
+\benn
 	\begin{cases}
 		\xi(\rho + \delta\rho) = \xi(\rho) + \frac{\mathrm{d}\xi}{\mathrm{d}\rho}\delta\rho \Rightarrow \xi(\rho + \delta\rho) < \xi(\rho) \\
 		\rho(\xi + \delta\xi) = \rho(\xi) + \frac{\mathrm{d}\rho}{\mathrm{d}\xi}\delta\xi \Rightarrow \rho(\xi + \delta\xi) < \rho(\xi)
 	\end{cases}
-\ee
+\eenn
 et nous avons donc bien \'etabli cette relation univoque.
 
 Le nombre de particules diffus\'ees entre $\xi$ et $\xi + \mathrm{d}\xi$ par unit\'e de temps est \'egal au nombre de particules issu du cercle de surface $2\pi\rho(\xi + \mathrm{d}\xi)$ diminu\'e par le nombre de particules issu du cercle de surface $2\pi\rho(\xi)$, soit :
-\be
+\benn
 	\mathrm{d}N = 2\pi(\rho(\xi + \mathrm{d}\xi) - \rho(\xi))n = 2\pi\mathrm{d}\rho n
-\ee
+\eenn
 car au premier ordre, nous avons toujours $\rho(\xi + \mathrm{d}\xi) = \rho(\xi) + \mathrm{d}\rho(\xi)$ et la section efficace d\'efinie \`a l'\'equation (\ref{EQ:18_5}) vaut :
 \be
 	\mathrm{d}\sigma = 2\pi\mathrm{d}\rho \label{EQ:18_6}
@@ -534,7 +534,7 @@ Revenons au cas d'un faisceau de particules diffus\'ees par d'autres particules 
 	\sin^{2}\theta_{1}(m_{1}^{2} + m_{2}^{2}\cos^{2}\xi + 2m_{1}m_{2}\cos\xi) & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{2}^{2}\cos^{2}\theta_{1}\cos^{2}\xi \nonumber \\
 	m_{1}^{2}\sin^{2}\theta_{1} + m_{2}^{2}\sin^{2}\theta_{1}\cos^{2}\xi + 2m_{1}m_{2}\sin^{2}\theta_{1}\cos\xi & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{2}^{2}\cos^{2}\theta_{1}\cos^{2}\xi \nonumber \\
 	(\sin^{2}\theta_{1} + \cos^{2}\theta_{1})m_{2}^{2}\cos^{2}\xi + 2m_{1}m_{2}\sin^{2}\theta_{1}\cos\xi & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{1}^{2}\sin^{2}\theta_{1} \nonumber \\
-	\cos^{2}\xi + 2\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1}\cos\xi + \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1} - \cos^{2}\theta_{1} & = & 0
+	\cos^{2}\xi + 2\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1}\cos\xi + \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1} - \cos^{2}\theta_{1} & = & 0 \nonumber
 \eea
 une \'equation du second degr\'e en $\cos\xi$ dont les solutions sont :
 \bea
@@ -550,39 +550,39 @@ Et en fonction de $\theta_{2}$ l'angle de d\'eviation dans <<~l~>> pour les part
 \section{Formule de Rutherford}
 
 Int\'eressons-nous d\'esormais à la diffusion de particules charg\'ees dans un champ Coulombien, i.e. tel que $U(r) = \alpha / r$ pour $\alpha > 0$. En appliquant la relation (\ref{EQ:18_4}) pour une particule de masse $m$, nous avons pour $\varphi_{0}$, qui est ,pour rappel, l'angle de d\'eviation au plus pr\`es du centre du champ, i.e. pour $r = r_{min}$ :
-\be
+\benn
 	\varphi_{0} = \bigintsss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r}}}}
-\ee
+\eenn
 En posant :
-\be
+\benn
 	\begin{cases}
 		x = \dfrac{\rho}{r} - \dfrac{\alpha}{mv_{\infty}^{2}\rho} \Leftrightarrow \dfrac{1}{r} = \dfrac{x}{\rho} - \dfrac{\alpha}{mv_{\infty}^{2}\rho^{2}}\\
 		\\
 		\mathrm{d}x = -\dfrac{\rho\mathrm{d}r}{r^{2}}
 	\end{cases}
-\ee
+\eenn
 nous avons pour $r = r_{min}$, $x = x_{min}$ et pour $r \rightarrow \infty$, $x = \frac{\alpha}{mv_{\infty}^{2}\rho}$ et :
 \bea
 	\varphi_{0} & = & \bigintss_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 - \rho^{2}\left(\dfrac{x}{\rho} - \dfrac{\alpha}{mv_{\infty}^{2}\rho^{2}}\right)^{2} - \dfrac{2\alpha}{mv_{\infty}^{2}}\left(\dfrac{x}{\rho} - \dfrac{\alpha^{2}}{mv_{\infty}^{2}\rho^{2}}\right)}} \nonumber \\
 	& = & \bigintss_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 - \rho^{2}\dfrac{x^{2}}{\rho^{2}} - \dfrac{\rho^{2}\alpha^{2}}{m^{2}v_{\infty}^{2}\rho^{4}} + 2\rho^{2}\dfrac{\alpha x}{mv_{\infty}^{2}\rho^{3}} - \dfrac{2\alpha x}{mv_{\infty}^{2}\rho} + \dfrac{2\alpha^{2}}{m^{2}v_{\infty}^{4}\rho^{2}}}} \nonumber \\
-	& = & \bigintss_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 + \dfrac{\alpha^{2}}{m^{2}v_{\infty}^{2}\rho^{2}} - x^{2}}}
+	& = & \bigintss_{x_{min}}^{\frac{\alpha}{mv_{\infty}^{2}\rho}}\dfrac{-\mathrm{d}x}{\sqrt{1 + \dfrac{\alpha^{2}}{m^{2}v_{\infty}^{2}\rho^{2}} - x^{2}}} \nonumber
 \eea
 D\'esormais, posons :
-\be
+\benn
 	\begin{cases}
 		y = \dfrac{x}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}} \Leftrightarrow x^{2} = \left(1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}\right)y^{2} \\
 		\\
 		\mathrm{d}x = \sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\mathrm{d}y
 	\end{cases}
-\ee
+\eenn
 et pour $x = x_{min}$, $y = y_{min}$ et pour $x = \frac{\alpha}{mv_{\infty}^{2}\rho}$, $y = Y = \dfrac{\dfrac{\alpha}{mv_{\infty}^{2}\rho}}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}}$, cela donne :
-\be
+\benn
 	\varphi_{0} = \bigintss_{y_{min}}^{Y}\dfrac{-\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\mathrm{d}y}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}\sqrt{1 - y^{2}}} = \bigintsss_{y_{min}}^{Y}\dfrac{-\mathrm{d}y}{\sqrt{1 - y^{2}}}
-\ee
+\eenn
 En choisissant la valeur de $y_{min}$ telle que $\varphi_{0}(y_{min}) = 0$, nous arrivons \`a :
-\be
+\benn
 	\varphi_{0} = \arccos\left(\dfrac{\dfrac{\alpha}{mv_{\infty}^{2}\rho}}{\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}}}\right)
-\ee
+\eenn
 dont plusieurs repr\'esentations sont visibles sur la figure (\ref{FIG:4_19}).
 
 \begin{figure}[htb!]
@@ -595,12 +595,12 @@ Poursuivons le raisonnement :
 \bea
 	\cos\varphi_{0}\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}} & = & \dfrac{\alpha}{mv_{\infty}^{2}\rho} \Leftrightarrow \cos^{2}\varphi_{0} = \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}(1 - \cos^{2}\varphi_{0}) \nonumber \\
 	\cos\varphi_{0}\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}} & = & \dfrac{\alpha}{mv_{\infty}^{2}\rho} \Leftrightarrow \cos^{2}\varphi_{0} = \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}(1 - \cos^{2}\varphi_{0}) \nonumber \\
-	\Leftrightarrow \tan^{2}\varphi_{0} & = & \left(\dfrac{mv_{\infty}^{2}\rho}{\alpha}\right)^{2} \Leftrightarrow \rho^{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\tan^{2}\varphi_{0}
+	\Leftrightarrow \tan^{2}\varphi_{0} & = & \left(\dfrac{mv_{\infty}^{2}\rho}{\alpha}\right)^{2} \Leftrightarrow \rho^{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\tan^{2}\varphi_{0} \nonumber
 \eea
 et en utilisant l'\'equation (\ref{EQ:18_1}) : $\xi = \lvert \pi - 2\varphi_{0} \rvert \Leftrightarrow \varphi_{0} = (\pi - \xi)/2$ et parce que :
-\be
+\benn
 	\tan\left(\frac{\pi - \xi}{2}\right) = \dfrac{\sin\left(\frac{\pi - \xi}{2}\right)}{\cos\left(\frac{\pi - \xi}{2}\right)} = \dfrac{\cos\left(\frac{\xi}{2}\right)}{\sin\left(\frac{\xi}{2}\right)} = \dfrac{1}{\tan\left(\frac{\xi}{2}\right)}
-\ee
+\eenn
 nous avons :
 \be
 	\rho^{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{1}{\tan\left(\frac{\xi}{2}\right)} \label{EQ:19_1}
@@ -608,7 +608,7 @@ nous avons :
 En partant de l'\'equation (\ref{EQ:18_7}), et parce que :
 \bea
 	\left(\dfrac{1}{\tan\theta}\right)^{'} & = & -\dfrac{\tan'\theta}{\tan^{2}\theta} = -\dfrac{1}{\cos^{2}\theta}\dfrac{\cos^{2}\theta}{\sin^{2}\theta} = -\dfrac{1}{\sin^{2}\theta} \nonumber \\
-	\Leftrightarrow \left(\dfrac{1}{\tan(\theta/2)}\right)^{'} & = & -\dfrac{1}{2\sin^{2}(\theta/2)}
+	\Leftrightarrow \left(\dfrac{1}{\tan(\theta/2)}\right)^{'} & = & -\dfrac{1}{2\sin^{2}(\theta/2)} \nonumber
 \eea
 nous pouvons calculer :
 \bea
@@ -630,21 +630,21 @@ qui est la \emph{formule de Rutherford} dont nous pouvons remarquer qu'elle ne d
 avec l'angle solide $\mathrm{d}\omega_{2} = 2\pi\sin\theta_{2}\mathrm{d}\theta_{2}$.
 
 Dans le cas g\'en\'eral, pour les particules incidentes, il faut repartir de :
-\be
+\benn
 	\tan\theta_{1} = \dfrac{m_{2}\sin\xi}{m_{1} + m_{2}\cos\xi}
-\ee
+\eenn
 qui ne permet pas de trouver une relation entre $\xi$ et $\theta_{1}$ facilement. Nous nous concentrerons sur deux cas particuliers dans les paragraphes (\ref{PAR:19_1}) et (\ref{PAR:19_2}). D\'esormais, prenons le pendant de l'\'energie perdue \`a la suite du choc par les particules diffus\'ees, de masse $m_{1}$ qui, par conservation de l'\'energie du syst\`eme, est \'egale \`a l'\'energie gagn\'ee par la particule diffusante, qui \'etait au repos initialement. La relation (\ref{EQ:17_5B}) nous donne dans <<~c~>> la vitesse apr\`es le choc $v'_{2}$ de la particule de masse $m_{2}$ initialement au repos :
-\be
+\benn
 	v'_{2} = \dfrac{2m_{1}v_{\infty}}{m_{1} + m_{2}}\sin(\xi/2)
-\ee
+\eenn
 L'\'energie acquise par cette particule vaut $\frac{m_{2}}{2}{v'}_{2}^{2}$ qui est l'\'energie perdue $\epsilon$ par $m_{1}$, aussi :
 \be
 	\epsilon = \dfrac{m_{2}}{2}\dfrac{4m_{1}^{2}v_{\infty}^{2}}{(m_{1} + m_{2})^{2}}\sin^{2}(\xi/2) = 2\dfrac{m^{2}}{m_{2}}v_{\infty}^{2}\sin^{2}(\xi/2)
 \ee
 o\`u nous pouvons identifier l'\'energie perdue maximale $\epsilon_{max}$ vallant $2\frac{m^{2}}{m_{2}}v_{\infty}^{2}$. En d\'erivant :
-\be
+\benn
 	\mathrm{d}\epsilon = 2\dfrac{m^{2}}{m_{2}}v_{\infty}^{2}\cdot 2\cdot\dfrac{1}{2}\sin(\xi/2)\cos(\xi/2)\mathrm{d}\xi = 2\dfrac{m^{2}}{m_{2}}v_{\infty}^{2}\sin(\xi/2)\cos(\xi/2)\mathrm{d}\xi
-\ee
+\eenn
 La section efficace peut alors se d\'eduire de la d\'efinition (\ref{EQ:19_2}) telle que :
 \bea
 	\mathrm{d}\sigma & = & \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\Bigg\lvert \dfrac{\cos(\xi/2)}{\sin^{3}(\xi/2)} \Bigg\rvert \mathrm{d}\xi = \pi\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\Bigg\lvert \dfrac{\cos(\xi/2)\sin(\xi/2)}{\sin^{4}(\xi/2)} \Bigg\rvert \mathrm{d}\xi \nonumber \\
@@ -689,39 +689,39 @@ Par construction, nous avons $\sin\theta_{1} = \frac{p'_{1y}}{p'_{1}}$ avec $p'_
 	\theta_{1} = \frac{p'_{1y}}{m_{1}v_{\infty}} \label{EQ:20_1}
 \ee
 En repartant de l'\'equation (\ref{EQ:7_7}) qui d\'efinit les \'equations de Lagrange, nous avons :
-\be
+\benn
 	\dot{p}_{i} = F_{i} \Leftrightarrow \dot{p}_{1y} = F_{y}
-\ee
+\eenn
 o\`u $F$ d\'esigne la force appliqu\'ee sur la particule incidente de masse $m_{1}$. L'accroissement de l'impulsion suivant l'axe $(y)$ vaut alors :
 \be
 	p'_{1y} = \int_{-\infty}^{\infty}\dfrac{\mathrm{d}p'_{1y}}{\mathrm{d}t}\mathrm{d}t = \int_{-\infty}^{\infty}\dot{p}'_{1y}\mathrm{d}t = \int_{-\infty}^{\infty}F_{y}\mathrm{d}t \label{EQ:20_2}
 \ee
 En appliquant la formule (\ref{EQ:5_4}) dans notre cas et en notant que :
-\be
+\benn
 	\mathrm{d}r = \sqrt{\mathrm{d}x^{2} + \mathrm{d}y^{2} + \mathrm{d}z^{2}} \Rightarrow \dfrac{\mathrm{d}r}{\partial y} = \dfrac{1}{2}\dfrac{2y\mathrm{d}y}{\sqrt{\mathrm{d}x^{2} + \mathrm{d}y^{2} + \mathrm{d}z^{2}}\partial y} = \dfrac{y}{r}
-\ee
+\eenn
 puisque $\frac{\mathrm{d}y}{\partial y} = 1$ ! Nous avons :
-\be
+\benn
 	F_{y} = -\dfrac{\partial U}{\partial y} = -\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{\mathrm{d}r}{\partial y} = -\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{y}{r}
-\ee
+\eenn
 car l'\'energie potentielle n'est fonction que de $r$ dans le cas d'un champ central comme \'etudi\'e ici.
 
 Les hypoth\`eses de d\'epart permettent de d\'eduire que la trajectoire finale ne s'\'ecarte pas de la trajectoire initialie et reste donc rectiligne, $y = \rho$ et uniforme $v_{1} = v_{\infty}$, \`a chaque instant. Cela permet d'\'ecrire :
-\be
+\benn
 	F_{y} = -\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{\rho}{r}\text{ et }\mathrm{d}t = \dfrac{\mathrm{d}x}{v_{\infty}}
-\ee
+\eenn
 Avec ces deux relations, la formule (\ref{EQ:20_2}) devient :
-\be
+\benn
 	p'_{1y} = \int_{-\infty}^{\infty}-\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{\rho}{r}\dfrac{\mathrm{d}x}{v_{\infty}} = -\dfrac{\rho}{v_{\infty}}\int_{-\infty}^{\infty}\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{\mathrm{d}x}{r}
-\ee
+\eenn
 Dans le cas de la trajectoire rectiligne parall\`ele \`a l'axe $(x)$ comme d\'efini en hypoth\`ese de travail, $r^{2} = x^{2} + \rho^{2} \Leftrightarrow x = \pm\sqrt{r^{2} - \rho^{2}}$, soit :
-\be
+\benn
 	\mathrm{d}x = \pm\dfrac{1}{2}\dfrac{2r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} = \pm\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}}
-\ee
+\eenn
 Aussi, la quantit\'e $p'_{1y}$ devient :
-\be
+\benn
 	p'_{1y} = -2\dfrac{\rho}{v_{\infty}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}}
-\ee
+\eenn
 par addition des deux solutions pour $\mathrm{d}x$. Enfin, gr\^ace \`a l'\'equation (\ref{EQ:20_1}), nous obtenons la relation entre $\theta_{1}$ et $\rho$, soit :
 \be
 	\theta_{1} = -2\dfrac{\rho}{m_{1}v_{\infty}^{2}}\int_{\rho}^{\infty}\dfrac{\mathrm{d}U}{\mathrm{d}r}\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} \label{EQ:20_3}
