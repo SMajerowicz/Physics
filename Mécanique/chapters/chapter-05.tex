@@ -345,3 +345,40 @@ avec $f_{\alpha}(t) = \sum_{i}\frac{F_{i}(t)\Delta_{i\alpha}}{\sqrt{m_{\alpha}}}
 	\forall \alpha \in {1,\ldots,s}\text{, }\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{Q}_{\alpha}}\right) - \dfrac{\partial L}{\partial Q_{\alpha}} = 0 \Leftrightarrow \ddot{Q}_{\alpha} + \omega_{\alpha}^{2}Q_{\alpha} = f_{\alpha}(t) \label{EQ:23_17}
 \ee
 dont la seule inconnue est la fonction $Q_{\alpha}(t)$.
+
+\section{Oscillations des mol\'ecules}
+
+Dans le cas d'un syst\`eme de $n$ particules interagissant les unes sur les autres sans champ ext\'erieur, tous les degr\'es de libert\'e ne sont pas issus de ph\'enom\`enes vibratoires. Comme une mol\'ecule peut avoir des mouvements de translation et de rotation, le mouvement vibratoire occupe $3n - 6$ degr\'es de libert\'e. Si la mol\'ecule est form\'ee d'atomes align\'es, la rotation autour de l'axe n'a pas de sens et alors la mol\'ecule poss\`ede $3n - 5$ degr\'es de libert\'es vibratoires.
+
+Pour r\'esoudre le probl\`eme m\'ecanique des oscillations d'une mol\'ecule, il est utile d'exclure les degr\'es de libert\'e issus des mouvements de translation et de rotation.
+
+\subsection{\'Elimination de la translation}
+
+Pour se faire, il est n\'ecessaire de se placer dans le r\'ef\'erentiel du centre d'intertie dans lequel l'impulsion totale du syst\`eme est nulle, voir le paragraphe (\ref{PAR:8}). Cela s'\'ecrit en reprenant la relation (\ref{EQ:8_3}) et en posant $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ o\`u $\vec{r}_{a0}$ est la position d'\'equilibre immobile et $\vec{u}_{a}$ l'\'ecart par rapport \`a la position d'\'equilibre :
+\be
+	\dfrac{\mathrm{d}\vec{R}}{\mathrm{dt}} = \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\sum_{a}m_{a}\vec{r}_{a}}{\sum_{a}m_{a}}\right) = \vec{0} \Leftrightarrow \sum_{a}m_{a}\vec{\dot{r}}_{a} = \vec{0}
+\ee
+En posant $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ avec $\vec{r}_{a0}$ la position immobile, donc constant dans le temps, de l'atome $a$ \`a l'\'equilibre et $\vec{u}_{a}$, l'\'ecart par rapport \`a l'\'equilibre, nous obtenons :
+\be
+	\sum_{a}m_{a}\vec{\dot{u}}_{a} = \vec{0} \Leftrightarrow \sum_{a}m_{a}\vec{u}_{a} = \vec{cste} = \vec{0} \label{EQ:24_1}
+\ee
+par choix de la condition initiale.
+
+\subsection{\'Elimination de la rotation}
+
+De la m\^eme mani\`ere, il est n\'ecessaire de trouver un r\'ef\'erentiel ou une transformation pour laquelle le moment cin\'etique s'annule. En gardant la d\'efinition $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ alors le moment cin\'etique du syst\`eme :
+\be
+	\vec{M} = \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v}_{a} = \sum_{a}m_{a}(\vec{r}_{a0} + \vec{u}_{a}\wedge\vec{\dot{r}}_{a} \approx \sum_{a}m_{a}\vec{r}_{a0}\wedge\dfrac{\mathrm{d}\vec{\dot{u}_{a}}}{\mathrm{dt}}
+\ee
+pour rester dans le cadre des petits d\'eplacements ou oscillations. Cela nous donne alors :
+\be
+	\vec{M} \approx \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{a}m_{a}\vec{r}_{a0}\wedge\vec{u}_{a}\right) \Rightarrow \sum_{a}m_{a}\vec{r}_{a0}\wedge\vec{u}_{a} = \vec{0} \label{EQ:24_2}
+\ee
+
+\subsection{Mol\'ecule dans un plan}
+
+Si les $n$ atomes d'une mol\'ecule sont dans un plan, nous pouvons distinguer les oscillations normales qui laissent les atomes dans le plan de celles qui les fait sortir. Dans un mouvement plan, il y a $2n$ degr\'es de libert\'e dont 2 de translations, le long des deux axes d\'efinissant le plan, et 1 de rotation, par rapport \`a un axe perpendiculaire au plan en question. Le nombre des oscillations normales laissant les atomes dans le plan est donc \'egal \`a $2n - 3$. Le nombre de degr\'es vibratoires faisant sortir les atomes du plan est donc de $(3n - 6) - (2n - 3) = n - 3$.
+
+\subsection{Mol\'ecule lin\'eaire}
+
+Il existe deux types d'oscillations : celles qui sont longitudinales et celles qui \'ecartent les atomes de la forme rectiligne de la mol\'ecule. Sur une droite, il y a $n$ degr\'es de libert\'e dont 1 de translation. Le nombre d'oscillations longitudinales est de $n - 1$. Nous avons vu pr\'ec\'edemment que le nombre de degr\'es vibratoires total pour une mol\'ecule lin\'eaire est de $3n - 5$. Il reste donc $(3n - 5) - (n - 1) = 2n - 4$ degr\'es de libert\'e vibratoires faisant sortir les atomes de la forme rectiligne de la mol\'ecule. Ces $2n - 4 = 2(n - 2)$ oscillations correspondant \`a $n - 2$ fr\'equences distinctes dans deux plans orthogonaux entre eux, correspondant \`a des oscillations normales.
