@@ -7,13 +7,13 @@ Les \emph{int\'egrales premi\`eres} ou \emph{int\'egrales du mouvement}, sont le
 Commen\c{c}ons par l'int\'egrale premi\`ere qui d\'ecoule de l'\emph{uniformi\'e du temps}.
 
 Pour un syst\`eme ferm\'e \`a $s$ degr\'es de libert\'e, nous avons :
-\be
+\benn
 	\dfrac{\mathrm{d}L}{\mathrm{dt}} = \sum_{i=1}^{s}\dfrac{\partial L}{\partial q_{i}}\dfrac{\mathrm{d} q_{i}}{\mathrm{dt}} + \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dfrac{\mathrm{d}\dot{q}_{i}}{\mathrm{dt}} + \dfrac{\partial L}{\partial \mathrm{t}}
-\ee
+\eenn
 L'uniformit\'e du temps donne $\dfrac{\partial L}{\partial \mathrm{t}} = 0$ et en utilisant l'\'equation (\ref{EQ:2_6}), nous avons :
 \bea
 	\dfrac{\mathrm{d}L}{\mathrm{dt}} & = & \sum_{i=1}^{s}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) + \sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\ddot{q}_{i} = \sum_{i=1}^{s}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i}\right) \nonumber \\
-	\Leftrightarrow 0 & = & \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i} - L\right)
+	\Leftrightarrow 0 & = & \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i=1}^{s}\dfrac{\partial L}{\partial \dot{q}_{i}}\dot{q}_{i} - L\right) \nonumber
 \eea
 Par cons\'equent, la quantit\'e :
 \be
@@ -22,14 +22,14 @@ Par cons\'equent, la quantit\'e :
 est constante dans le temps pour un syst\`eme ferm\'e. $E$ est l'\emph{\'energie} du syst\`eme. Et puisque la fonction de Lagrange est additive, l'\'energie l'est aussi. Les syst\`emes m\'ecaniques dont l'\'energie se conserve sont appel\'es \emph{syst\`emes conservatifs}. Enfin, si le syst\`eme est plac\'e dans un champ ext\'erieur constant par rapport au temps alors la loi de conservation de l'\'energie reste valable car la fonction de Lagrange est implicitement ind\'ependant du temps.
 
 \`A partir de l'\'equation (\ref{EQ:5_1}, nous pouvons \'ecrire :
-\be
+\benn
 	\sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i} = \sum_{i=1}^{s}\dfrac{\partial (T-U)}{\partial\dot{q}_{i}}\dot{q}_{i} = \sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i}
-\ee
+\eenn
 car l'\'energie potentielle $U$ ne d\'epend que des coordonn\'ees (voire du temps).
 Nous savons que l'\'energie cin\'etique $T = f(\dot{q}^{2})$. Or pour une fonction homog\`ene de degr\'e $\alpha$, telle $f(t.x) = t^{\alpha}f(x)$, alors le th\'eor\`eme d'Euler donne pour cette fonction :
-\be
+\benn
 	\sum_{i} x_{i}\dfrac{\partial f(x)}{\partial x_{i}} = \alpha f(x)
-\ee
+\eenn
 Appliqu\'ee \`a l'\'energie cin\'etique, cela donne :
 \be
 	\sum_{i=1}^{s}\dfrac{\partial T}{\partial\dot{q}_{i}}\dot{q}_{i} = 2T = \sum_{i=1}^{s}\dfrac{\partial L}{\partial\dot{q}_{i}}\dot{q}_{i} \label{EQ:6_1_1}
@@ -61,9 +61,9 @@ Or les \'equations de Lagrange (\ref{EQ:5_2}) donnent :
 	\Leftrightarrow \sum_{a}\left(\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right)\right) & = & \sum_{a}\left(\dfrac{\partial L}{\partial \vec{r}_{a}}\right) \nonumber
 \eea
 En appliquant l'\'equation (\ref{EQ:7_1}), nous avons :
-\be
+\benn
 	\sum_{a}\left(\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right)\right) = \dfrac{\mathrm{d}}{\mathrm{dt}}\sum_{a}\left(\dfrac{\partial L}{\partial \vec{v}_{a}}\right) = \vec{0}
-\ee
+\eenn
 Ainsi, dans un syst\`eme ferm\'e, la quantit\'e vectorielle :
 \be
 	\vec{P} = \sum_{a}\dfrac{\partial L}{\partial \vec{v}_{a}} \label{EQ:7_2}
@@ -71,7 +71,7 @@ Ainsi, dans un syst\`eme ferm\'e, la quantit\'e vectorielle :
 est inchang\'ee pendant le mouvement. Le vecteur $\vec{P}$ est l'\emph{impulsion}\footnote{Anciennement appel\'ee \emph{quantit\'e de mouvement}} du syt\`eme. En utilisant l'\'equation (\ref{EQ:5_1}), nous obtenons :
 \bea
 	L & = & \sum_{a}\dfrac{m_{a}\vec{v}_{a}^{\,2}}{2} - U(\begin{Bmatrix}\vec{r}_{a}\end{Bmatrix}_{1}^{s}) \nonumber \\
-	\Rightarrow \dfrac{\partial L}{\partial \vec{v}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{2\partial\vec{v}_{a}}{\partial\vec{v}_{a}} - \dfrac{\partial U}{\partial\vec{v}_{a}} = m_{a}\vec{v}_{a}
+	\Rightarrow \dfrac{\partial L}{\partial \vec{v}_{a}} & = & \dfrac{m_{a}}{2}\dfrac{2\partial\vec{v}_{a}}{\partial\vec{v}_{a}} - \dfrac{\partial U}{\partial\vec{v}_{a}} = m_{a}\vec{v}_{a} \nonumber
 \eea
 Ainsi :
 \be
@@ -137,7 +137,7 @@ En effet, dans le r\'ef\'erentiel $(K)$ :
 \bea
 	E & = & \dfrac{1}{2}\sum_{a}m_{a}\vec{v}_{a}^{\,2} + U = \dfrac{1}{2}\sum_{a}m_{a}(\vec{v'}_{a} + \vec{V})^{\,2} + U \nonumber \\
 	& = & \dfrac{1}{2}\sum_{a}m_{a}\vec{v'}_{a}^{\,2} + \dfrac{1}{2}\sum_{a}m_{a}\vec{V}^{\,2} + \sum_{a}m_{a}\vec{v'}_{a}\vec{V} + U \nonumber \\
-	& = & \dfrac{\mu}{2}\vec{V} + \vec{V}\sum_{a}m_{a}\vec{v'}_{a} + \dfrac{1}{2}\sum_{a}m_{a}\vec{v'}_{a}^{\,2} + U \\
+	& = & \dfrac{\mu}{2}\vec{V} + \vec{V}\sum_{a}m_{a}\vec{v'}_{a} + \dfrac{1}{2}\sum_{a}m_{a}\vec{v'}_{a}^{\,2} + U \nonumber
 \eea
 Puisque :
 \bea
@@ -193,31 +193,31 @@ Par d\'efinition :
 car la rotation est ici ind\'ependante du temps.
 
 La fonction de Lagrange est une fonction des coordonn\'ees et des vitesses des points mat\'eriels du syst\`eme aussi :
-\be
+\benn
 	L = \sum_{a=1}^{s}L_{a}(\vec{r}_{a},\vec{v}_{a})
-\ee
+\eenn
 et sa variation s'\'ecrit :
-\be
+\benn
 	\delta L = \sum_{a=1}^{s}\left(\dfrac{\partial L}{\partial\vec{r}_{a}}\delta\vec{r}_{a} + \dfrac{\partial L}{\partial\vec{v}_{a}}\delta\vec{v}_{a}\right)
-\ee
+\eenn
 et nous pouvons \'ecrire que cette variation est nulle car nous avons suppos\'e plus haut que la fonction de Lagrange est invariante dans le cadre d'une rotation. Les \'equations de Lagrange (\ref{EQ:2_6}) associ\'ees à l'\'egalit\'e (\ref{EQ:7_2}) implique :
 \bea
 	\delta L & = & \sum_{a}(\vec{\dot{p}}_{a}\cdot\delta\vec{r}_{a} + \vec{p}_{a}\cdot\delta\vec{v}_{a}) \nonumber \\
-	& = & \sum_{a}\left(\vec{\dot{p}}_{a}\cdot(\delta\vec{\varphi}\wedge\vec{r}_{a}) + \vec{p}_{a}\cdot(\delta\vec{\varphi}\wedge\vec{v}_{a})\right)
+	& = & \sum_{a}\left(\vec{\dot{p}}_{a}\cdot(\delta\vec{\varphi}\wedge\vec{r}_{a}) + \vec{p}_{a}\cdot(\delta\vec{\varphi}\wedge\vec{v}_{a})\right) \nonumber
 \eea
 en y incluant les \'equations (\ref{EQ:9_1}) et (\ref{EQ:9_2}). Cela donne gr\^ace \`a l'invariance par permutation circulaire du produit mixte\footnote{$(\vec{u}\wedge\vec{v})\cdot\vec{w} = (\vec{v}\wedge\vec{w})\cdot\vec{u} = (\vec{w}\wedge\vec{u})\cdot\vec{v} $} :
-\be
+\benn
 	\delta L = \delta\vec{\varphi}\cdot\sum_{a}(\vec{r}_{a}\wedge\vec{\dot{p}}_{a} + \vec{v}_{a}\wedge\vec{p}_{a})
-\ee
+\eenn
 or :
 \bea
 	\dfrac{\mathrm{d}\vec{r}_{a}\wedge\vec{p}_{a}}{\mathrm{dt}} & = & \dfrac{\mathrm{d}\vec{r}_{a}}{\mathrm{dt}}\wedge\vec{p}_{a} + \vec{r}_{a}\wedge\dfrac{\mathrm{d}\vec{p}_{a}}{\mathrm{dt}} \nonumber \\
-	& = & \vec{v}_{a}\wedge\vec{p}_{a} + \vec{r}_{a}\wedge\vec{\dot{p}}_{a}
+	& = & \vec{v}_{a}\wedge\vec{p}_{a} + \vec{r}_{a}\wedge\vec{\dot{p}}_{a} \nonumber
 \eea
 Donc par l'invariance de la fonction de Lagrange du syst\`eme et par le fait nous raisonnons avec $\delta\vec{\varphi}$ arbitrairement choisi, nous arrivons \`a :
-\be
+\benn
 	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{a}\vec{r}_{a}\wedge\vec{p}_{a}\right) = 0
-\ee
+\eenn
 permettant de conclure que lors du mouvement d'un sys\`eme ferm\'e, la quantit\'e d\'efinie comme le \emph{moment cin\'etique} :
 \be
 	\vec{M} = \sum_{a}\vec{r}_{a}\wedge\vec{p}_{a} \label{EQ:9_3}
@@ -250,22 +250,22 @@ Quelques cas particuliers où un champ ext\'erieur est pr\'esent :
 	\item le champ est sym\'etrique par rapport \`a un axe. $\delta L = 0$ reste vrai si la rotation du syst\`eme est d\'efinie autour de l'axe de sym\'etrie du champ ext\'erieur. En cons\'equence, la projection du moment cin\'etique sur cet axe se conserve ;
 	\item le champ est \`a sym\'etrie centrale. L'invariance de la fonction de Lagrange est vraie dans le cas o\`u la rotation s'effectue autour d'un axe quelconque passant par le centre de sym\'etrie du champ et donc la projection du moment cin\'etique sur cet axe dont l'origine est le centre de sym\'etrie du champ se conserve ;
 	\item le champ est uniforme le long d'un axe, disons $z$. En coordonn\'ees cylindriques, nous avons :
-	\be
+	\benn
 		\vec{r}_{a} = \begin{pmatrix} r_{a}\cos\varphi_{a} \\ r_{a}\sin\varphi_{a} \\ z_{a} \end{pmatrix}
-	\ee
+	\eenn
 	et donc\footnote{$\vec{u}\wedge\vec{v} = (u_{y}v_{z}-u_{z}v_{y}\,;\,u_{z}v_{x}-u_{x}v_{z}\,;\,u_{y}v_{z}-u_{z}v_{y})$} :
 	\bea
 		M_{z} & = & \sum_{a}{M_{a}}_{z} = \sum_{a}\left(r_{a}\cos\varphi_{a}m_{a}r_{a}\cos\varphi_{a}\dot{\varphi_{a}} + r_{a}\sin\varphi_{a}m_{a}r_{a}\sin\varphi_{a}\right) \nonumber \\
 		& = & \sum_{a}\left(r_{a}^{2}m_{a}\dot{\varphi_{a}}(\cos^{2}\varphi_{a} + \sin^{2}\varphi_{a})\right) = \sum_{a}r_{a}^{2}m_{a}\dot{\varphi_{a}} \label{EQ:9_8}
 	\eea
 	La relation (\ref{EQ:4_5}) donne en coordonn\'ees cylindriques la fonction de Lagrange :
-	\be
+	\benn
 		L = \sum_{a}\dfrac{m_{a}}{2}(\dot{r_{a}}^{2} + r_{a}^{2}\dot{\varphi_{a}}^{2} + \dot{z_{a}}^{2}) - U
-	\ee
+	\eenn
 	donc :
-	\be
+	\benn
 		\sum_{a}\dfrac{\partial L}{\partial \dot{\varphi_{a}}} = \sum_{a}\dfrac{m_{a}}{2}2r_{a}^{2}\dot{\varphi_{a}}
-	\ee
+	\eenn
 	car $\dfrac{\partial U}{\partial \dot{\varphi_{a}}} = 0$, ce qui permet de conclure \`a :
 	\be
 		M_{z} = \sum_{a}\dfrac{\partial L}{\partial \dot{\varphi_{a}}} \label{EQ:9_7}
@@ -285,13 +285,13 @@ Effectuons la transformation suivante, si $\vec{r}_{a} \mapsto \vec{r'}_{a} = \a
 	U & \mapsto & \alpha^{k}U \nonumber
 \eea
 En posant la condition suivante :
-\be
+\benn
 	\left(\dfrac{\alpha}{\beta}\right)^{2} = \alpha^{k} \Leftrightarrow \beta = \alpha^{1 - \dfrac{k}{2}}
-\ee
+\eenn
 la fonction de Lagrange se transforme ainsi :
 \bea
 	L = \sum_{a}T_{a} - U & \mapsto & \left(\dfrac{\alpha}{\beta}\right)^{2}\sum_{a}T_{a} - \alpha^{k}U = \dfrac{\alpha^{2}}{\alpha^{2-k}}\sum_{a}T_{a} - \alpha^{k}U = \alpha^{k}\sum_{a}T_{a} - \alpha^{k}U \nonumber \\
-	L & \mapsto & \alpha^{k}L
+	L & \mapsto & \alpha^{k}L \nonumber
 \eea
 et comme $\alpha^{k}$ est une constante alors les \'equations de Lagrange (\ref{EQ:2_6}) restent inchang\'ees et pleinement valables. En conclusion, si l'\'energie potentielle d'un syst\`eme est une fonction homog\`ene de degr\'e $k$ des coordonn\'ees alors les \'equations du mouvement admettent des trajectoires g\'eom\'etriques semblables et nous pouvons en d\'eduire certaines caract\'eristiques de proportionnalit\'e.
 
@@ -309,9 +309,9 @@ Regardons quelques cas particuliers :
 \begin{itemize}
 	\item celui des petites oscillations pour lesquelles $k=2$ alors l'\'equation (\ref{EQ:10_2}) dont $\mathrm{t}' = \mathrm{t}$ impliquant que la période d'oscillation ne d\'epend pas de l'amplitude du mouvement ;
 	\item celui d'un champ de force homog\`ene, l'\'equation (\ref{EQ:5_8}) a pour conlusion que l'\'energie potentielle est fonction lin\'eaire des coordonn\'ees, soit $k=1$ et l'\'equation (\ref{EQ:10_2}) donne :
-		\be
+		\benn
 			\dfrac{\mathrm{t}'}{\mathrm{t}} = \left(\dfrac{l'}{l}\right)^{\frac{1}{2}}
-		\ee
+		\eenn
 	\item celui de l'attraction newtonienne, gravitationnelle de deux masses, ou coulombienne entre deux charges, l'\'energie potentielle est une fonction inverse de la distance entre les deux points mat\'eriels, i.e. $k=-1$. Nous obtenons donc :
 		\be
 			\dfrac{\mathrm{t}'}{\mathrm{t}} = \left(\dfrac{l'}{l}\right)^{\frac{3}{2}} \Leftrightarrow \left(\dfrac{\mathrm{t}'}{\mathrm{t}}\right)^{2} = \left(\dfrac{l'}{l}\right)^{3} \label{EQ:10_KEPLER}
@@ -320,46 +320,46 @@ Regardons quelques cas particuliers :
 \end{itemize}
 
 D\'esormais, nous allons supposer que le mouvement du syst\`eme s'effectue dans une r\'egion limit\'ee de l'espace pour en d\'eduire une relation entre la moyenne des \'energies cin\'etique et potentielle, connue comme le \emph{th\'eor\`eme du Viriel}. Puisque l'\'energie cin\'etique $T$ est une fonction quadratique des vitesses, le th\'eor\`eme d'Euler donne, voir l'\'equation (\ref{EQ:6_1_1}) :
-\be
+\benn
 	\sum_{a}\dfrac{\partial T}{\partial\vec{v}_{a}} = 2T
-\ee
+\eenn
 or en utilisant l'\'equation (\ref{EQ:7_2}) :
-\be
+\benn
 	\dfrac{\partial T}{\partial\vec{v}_{a}} = \vec{p}_{a}
-\ee
+\eenn
 et le fait que :
-\be
+\benn
 	\dfrac{\mathrm{d}}{\mathrm{dt}}(\sum_{a}\vec{p}_{a}\vec{r}_{a}) = \sum_{a}\vec{\dot{p}}_{a}\vec{r}_{a} + \sum_{a}\vec{p}_{a}\vec{v}_{a}
-\ee
+\eenn
 nous pouvons \'ecrire :
 \be
 	2T = \sum_{a}\vec{p}_{a}\vec{v}_{a} = \dfrac{\mathrm{d}}{\mathrm{dt}}(\sum_{a}\vec{p}_{a}\vec{r}_{a}) - \sum_{a}\vec{\dot{p}}_{a}\vec{r}_{a} \label{EQ:10_4}
 \ee
 
 La d\'efinition de la moyenne d'une fonction quelconque du temps $f(\mathrm{t})$ est :
-\be
+\benn
 	\overline{f} = \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} f(\mathrm{t})\mathrm{dt}
-\ee
+\eenn
 Dans le cas où $f(\mathrm{t})=\dfrac{\mathrm{d}F(\mathrm{t})}{\mathrm{dt}}$ avec $F(\mathrm{t})$ une fonction born\'ee, i.e. sans valeurs infinies alors :
-\be
+\benn
 	\overline{f} = \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} \dfrac{\mathrm{d}F(\mathrm{t})}{\mathrm{dt}}\mathrm{dt} = \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} \mathrm{d}F(\mathrm{t}) = \lim_{\tau\to\infty}\dfrac{F(\tau) - F(0)}{\tau} = 0
-\ee
+\eenn
 car $F(\tau) - F(0)$ est une quantit\'e finie.
 
 Prenons l'exemple d'un syst\`eme m\'ecanique en mouvement dans une r\'egion finie de l'espace avec des vitesses finies. Par cons\'equent, la quantit\'e $\sum_{a}\vec{p}_{a}\vec{r}_{a}$ est born\'ee et dans le calcul de la valeur moyenne de l'\'energie cin\'etique, le premier terme de l'\'equation (\ref{EQ:10_4}) s'annule.
 
 Les \'equations de Newton (\ref{EQ:5_4}) et (\ref{EQ:7_7}) donne :
-\be
+\benn
 	\vec{F}_{a} = -\dfrac{\partial U}{\partial\vec{r}_{a}} = \vec{\dot{p}}_{a}
-\ee
+\eenn
 ce qui donne finalement :
 \be
 	2\overline{T} = \sum_{a}\vec{r}_{a}\dfrac{\partial \overline{U}}{\partial\vec{r}_{a}} \label{EQ:10_5}
 \ee
 Le th\'eor\`eme d'Euler appliqu\'e \`a l'\'energie potentielle, fonction homogn\`ene de degr\'e $k$, donne :
-\be
+\benn
 	\sum_{a}\vec{r}_{a}\dfrac{\partial U}{\partial\vec{r}_{a}} = kU \Rightarrow \sum_{a}\vec{r}_{a}\dfrac{\partial \overline{U}}{\partial\vec{r}_{a}} = k\overline{U}
-\ee
+\eenn
 et donc \emph{le th\'eor\`eme du Viriel} :
 \be
 	2\overline{T} = k\overline{U} \label{EQ:10_6}
@@ -369,12 +369,12 @@ Parce que la loi de conservation de l'\'energie s'applique, nous avons $\overlin
 	E & = & T + U \nonumber \\
 	\overline{E} & = & \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} T+U\mathrm{dt} \nonumber \\
 	\overline{E} & = & \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} T\mathrm{dt} + \lim_{\tau\to\infty}\dfrac{1}{\tau}\int_{0}^{\tau} U\mathrm{dt}\nonumber \\
-	\overline{E} & = & \overline{T} + \overline{U}
+	\overline{E} & = & \overline{T} + \overline{U} \nonumber
 \eea
 et en appliquant le th\'eor\`eme du Viriel (\ref{EQ:10_6}), on obtient :
-\be
+\benn
 	E = (\frac{k}{2} +1)\overline{U} = (1 + \frac{2}{k})\overline{T}
-\ee
+\eenn
 soit finalement :
 \be
 	\begin{cases}
