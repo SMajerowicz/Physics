@@ -34,30 +34,30 @@ L'objectif est de trouver la fonction de Lagrange dans les cas suivants plac\'es
 \end{figure}
 
 La fonction de Lagrange du syst\`eme $L = L_{1} + L_{2}$. Calculons d'abord $L_{1} = T_{1} - U_{1}$ avec :
-\be
+\benn
 	\begin{cases}
 		T_{1} = \dfrac{m_{1}}{2}\left(l_{1}\dot{\varphi_{1}}\right)^{2} \\
 		U_{1} = -m_{1}gl_{1}\cos(\varphi_{1})
 	\end{cases}
-\ee
+\eenn
 Pour $L_{2}$, partons des coordonn\'ees cart\'esiennes de $m_{2}$, soit :
-\be
+\benn
 	\begin{cases}
 		x_{2} = l_{1}\sin(\varphi_{1}) + l_{2}\sin(\varphi_{2}) \\
-		y_{2} = l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2}) \\
+		y_{2} = l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2})
 	\end{cases}
-\ee
+\eenn
 or il est clair que :
-\be
-\dfrac{\mathrm{d}f(u(\mathrm{t}))}{\mathrm{dt}} = \dfrac{\mathrm{d}f(u(\mathrm{t}))}{\mathrm{d}u(\mathrm{t})}\dfrac{\mathrm{d}u(\mathrm{t})}{\mathrm{dt}}
-\ee
+\benn
+	\dfrac{\mathrm{d}f(u(\mathrm{t}))}{\mathrm{dt}} = \dfrac{\mathrm{d}f(u(\mathrm{t}))}{\mathrm{d}u(\mathrm{t})}\dfrac{\mathrm{d}u(\mathrm{t})}{\mathrm{dt}}
+\eenn
 Cela implique donc :
-\be
+\benn
 	\begin{cases}
 		\dot{x_{2}} = \dfrac{\mathrm{d}x}{\mathrm{dt}} = l_{1}\cos(\varphi_{1})\dot{\varphi_{1}} + l_{2}\cos(\varphi_{2})\dot{\varphi_{2}} \\[0.25cm]
-		\dot{y_{2}} = \dfrac{\mathrm{d}y}{\mathrm{dt}} = -l_{2}\sin(\varphi_{1})\dot{\varphi_{1}} - l_{2}\sin(\varphi_{2})\dot{\varphi_{2}} \\
+		\dot{y_{2}} = \dfrac{\mathrm{d}y}{\mathrm{dt}} = -l_{2}\sin(\varphi_{1})\dot{\varphi_{1}} - l_{2}\sin(\varphi_{2})\dot{\varphi_{2}}
 	\end{cases}
-\ee
+\eenn
 L'\'energie cin\'etique $T_{2}$ s'\'ecrit alors :
 \bea
 	T_{2} & = & \dfrac{m_{2}}{2}(\dot{x_{2}}^{2} + \dot{y_{2}}^{2}) \nonumber \\
@@ -65,27 +65,27 @@ L'\'energie cin\'etique $T_{2}$ s'\'ecrit alors :
 	& + & l_{1}^{2}\sin^{2}(\varphi_{1})\dot{\varphi_{1}}^{2} + 2l_{1}l_{2}\sin(\varphi_{1})\sin(\varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}} + l_{2}^{2}\sin^{2}(\varphi_{2})\dot{\varphi_{2}}^{2}) \nonumber
 \eea
 or, nous savons que :
-\be
+\benn
 	\begin{cases}
 		\cos^2(\alpha) + \sin^{2}(\alpha) = 1 \\
 		\cos(\alpha - \beta) = \cos(\alpha)\cos(\beta) + \sin(\alpha)\sin(\beta)
 	\end{cases}
-\ee
+\eenn
 ce qui conclut pour l'\'energie cin\'etique \`a :
-\be
+\benn
 	T_{2} = \dfrac{m_{2}}{2}(l_{1}^{2}\dot{\varphi_{1}}^{2} + l_{2}^{2}\dot{\varphi_{2}}^{2} + 2l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}})
-\ee
+\eenn
 De mani\`ere \'evidente, l'\'energie potentielle est :
-\be
+\benn
 	U_{2} = -m_{2}g(l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2}))
-\ee
+\eenn
 En rassemblant, la fonction de Lagrange du syst\`eme m\'ecanique total :
 \bea
 	L & = & T_{1} + T_{2} - U_{1} - U{_2} \nonumber \\
 	& = & \dfrac{m_{1}}{2}\left(l_{1}\dot{\varphi_{1}}\right)^{2} + \dfrac{m_{2}}{2}(l_{1}^{2}\dot{\varphi_{1}}^{2} + l_{2}^{2}\dot{\varphi_{2}}^{2} + 2l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}}) \nonumber \\
 	& + & m_{1}gl_{1}\cos(\varphi_{1}) + m_{2}g(l_{1}\cos(\varphi_{1}) + l_{2}\cos(\varphi_{2})) \nonumber \\
 	& = & \dfrac{m_{1}+m_{2}}{2}l_{1}^{2}\dot{\varphi_{1}}^{2} + \dfrac{m_{2}}{2}l_{2}^{2}\dot{\varphi_{2}}^{2} + m_{2}l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}} \nonumber \\
-	& + & (m_{1}+m_{2})gl_{1}\cos(\varphi_{1}) + m_{2}gl_{2}\cos(\varphi_{2})
+	& + & (m_{1}+m_{2})gl_{1}\cos(\varphi_{1}) + m_{2}gl_{2}\cos(\varphi_{2}) \nonumber
 \eea
 
 \section{Probl\`eme du pendule plan}
@@ -114,31 +114,31 @@ En rassemblant, la fonction de Lagrange du syst\`eme m\'ecanique total :
 \end{figure}
 
 En suivant la m\^eme m\'ethodologie que dans l'exercice pr\'ec\'edent, nous avons avec $x$ l'abscisse de $m_{1}$ :
-\be
+\benn
 	\begin{cases}
 		T_{1} = \dfrac{m_{1}}{2}\dot{x}^{2} \\
 		U_{1} = 0
 	\end{cases}
-\ee
+\eenn
 et :
-\be
+\benn
 	\begin{cases}
 		T_{2} = \dfrac{m_{2}}{2}(\dot{x}^{2} + \dot{y}^{2}) \\
 		U_{2} = -lm_{2}g\cos(\varphi)
 	\end{cases}
-\ee
+\eenn
 En développant $T_{2}$ :
 \bea
 	T_{2} & = & \dfrac{m_{2}}{2}\left(\left(\dfrac{\mathrm{d}(x + l\sin(\varphi))}{\mathrm{dt}}\right)^{2} + \left(\dfrac{\mathrm{d}l\cos(\varphi)}{\mathrm{dt}}\right)^{2}\right) \nonumber \\
 	& = & \dfrac{m_{2}}{2}\left((\dot{x} + l\cos(\varphi)\dot{\varphi})^{2} + (-l\sin(\varphi)\dot{\varphi})^{2}\right) \nonumber \\
 	& = & \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2} + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2}\right) \nonumber \\
-	& = & \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\dot{\varphi}^{2}\right)
+	& = & \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\dot{\varphi}^{2}\right) \nonumber
 \eea
 La fonction de Lagrange du syst\`eme s'\'ecrit ainsi :
 \bea
 	L & = & T_{1} + T_{2} - U_{1} - U{_2} \nonumber \\
 	& = & \dfrac{m_{1}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(\dot{x}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi} + l^{2}\dot{\varphi}^{2}\right) - 0 + lm_{2}g\cos(\varphi) \nonumber \\
-	& = & \dfrac{m_{1} + m_{2}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(l^{2}\dot{\varphi}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi}\right) + m_{2}gl\cos(\varphi)
+	& = & \dfrac{m_{1} + m_{2}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(l^{2}\dot{\varphi}^{2} + 2l\cos(\varphi)\dot{x}\dot{\varphi}\right) + m_{2}gl\cos(\varphi) \nonumber
 \eea
 
 \section{Probl\`eme du pendule plan sur un cercle}
@@ -172,19 +172,19 @@ La fonction de Lagrange du syst\`eme s'\'ecrit ainsi :
 \subsection{Cas pulsation constante}
 
 Dans ce syst\`eme, \'etablissons les coordonn\'ees cart\'esiennes du point mat\'eriel $m$ :
-\be
+\benn
 	\begin{cases}
 		x = a\cos(\alpha\mathrm{t}) + l\sin(\varphi) \\
 		y = a\sin(2\pi - \alpha\mathrm{t}) + l\cos(\varphi) = -a\sin(\alpha\mathrm{t}) + l\cos(\varphi)
 	\end{cases}
-\ee
+\eenn
 Soit :
-\be
+\benn
 	\begin{cases}
 		\dot{x} = -a\alpha\sin(\alpha\mathrm{t}) + l\cos(\varphi)\dot{\varphi} \\
 		\dot{y} = -a\alpha\cos(\alpha\mathrm{t}) - l\sin(\varphi)\dot{\varphi}
 	\end{cases}
-\ee
+\eenn
 L'\'energie cin\'etique s'\'ecrit :
 \bea
 	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
@@ -192,21 +192,21 @@ L'\'energie cin\'etique s'\'ecrit :
 	& + & a^{2}\alpha^{2}\cos^{2}(\alpha\mathrm{t}) + 2la\alpha\cos(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + l^{2}\sin^{2}(\alpha\mathrm{t})\dot{\varphi}^{2}) \nonumber
 \eea
 or :
-\be
+\benn
 	\sin(\varphi - \alpha\mathrm{t}) = \cos(\alpha\mathrm{t})\sin(\varphi) - \sin(\alpha\mathrm{t})\cos(\varphi)
-\ee
+\eenn
 donc finalement :
-\be
+\benn
 	T = \dfrac{m}{2}\left[a^{2}\alpha^{2} + l^{2}\dot{\varphi}^{2} + 2al\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi}\right]
-\ee
+\eenn
 \emph{Dans l'\'edition du livre en ma possession, l'\'energie cin\'etique est en $2al\alpha^{2}\sin(\varphi - \alpha\mathrm{t})$, r\'esultat que je n'arrive pas à obtenir ici}. En continuant avec l'\'energie potentielle :
-\be
+\benn
 	U = -mg(l\cos(\varphi)-a\sin(\alpha\mathrm{t}))
-\ee
+\eenn
 où le second terme est une d\'eriv\'ee totale d'une fonction par rapport au temps uniquement et d'apr\`es l'\'equation (\ref{EQ:2_8}) peut être omis du résultat de la fonction de Lagrange, comme le terme strictement constant $a^{2}\alpha^{2}$ provenant de l'\'energie cin\'etique. La fonction de Lagrange du point mat\'eriel s'\'ecrit finalement :
 \bea
 	L & = & T - U \nonumber \\
-	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi)
+	& = & \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\varphi - \alpha\mathrm{t})\dot{\varphi} + mgl\cos(\varphi) \nonumber
 \eea
 
 \subsection{Cas des oscillations horizontales}
@@ -239,29 +239,29 @@ où le second terme est une d\'eriv\'ee totale d'une fonction par rapport au tem
 \end{figure}
 
 Dans ce cas pr\'ecis, les oscillations sont de la forme $a\cos(\alpha\mathrm{t})$ sur l'axe des abscisses comme d\'ecrit sur la figure (\ref{FIG:1_4}). Dans ce syst\`eme, les coordonn\'ees cart\'esiennes du point mat\'eriel $m$ sont :
-\be
+\benn
 	\begin{cases}
 		x = a\cos(\alpha\mathrm{t}) + l\sin(\varphi) \\
 		y = l\cos(\varphi)
 	\end{cases}
-\ee
+\eenn
 Soit :
-\be
+\benn
 	\begin{cases}
 		\dot{x} = -a\alpha\sin(\alpha\mathrm{t}) + l\cos(\varphi)\dot{\varphi} \\
 		\dot{y} = -l\sin(\varphi)\dot{\varphi}
 	\end{cases}
-\ee
+\eenn
 L'\'energie cin\'etique est donc :
 \bea
 	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
 	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\cos(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi} + l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2}) \nonumber \\
-	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2})
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) - 2al\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2}) \nonumber
 \eea
 Sachant que l'\'energie potentielle s'\'ecrit $U = -mgl\cos(\varphi)$, la fonction de Lagrange est :
-\be
+\benn
 	L = T - U = \dfrac{ml^{2}}{2}\dot{\varphi}^{2} - mla\alpha\sin(\alpha\mathrm{t})\cos(\varphi)\dot{\varphi} + mgl\cos(\varphi)
-\ee
+\eenn
 car la fonction $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique n'est qu'une fonction unique du temps et peut donc \^etre omise, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $mla\alpha^{2}\cos(\alpha\mathrm{t})\sin(\varphi)$ que je n'arrive pas à obtenir ici}.
 
 \subsection{Cas des oscillations verticales}
@@ -293,29 +293,29 @@ car la fonction $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie
 \end{figure}
 
 Dans ce cas, les oscillations sont de la forme $a\cos(\alpha\mathrm{t})$ sur l'axe des ordonn\'ees, voir la figure (\ref{FIG:1_5}). Les coordonn\'ees cart\'esiennes du point mat\'eriel $m$ sont :
-\be
+\benn
 	\begin{cases}
 		x = l\sin(\varphi) \\
 		y = a\cos(\alpha\mathrm{t}) + l\cos(\varphi)
 	\end{cases}
-\ee
+\eenn
 Et sa vitesse :
-\be
+\benn
 	\begin{cases}
 		\dot{x} = l\cos(\varphi)\dot{\varphi} \\
 		\dot{y} = -a\alpha\sin(\alpha\mathrm{t}) - l\sin(\varphi)\dot{\varphi}
 	\end{cases}
-\ee
+\eenn
 L'\'energie cin\'etique s'\'ecrit alors :
 \bea
 	T & = & \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) \nonumber \\
 	& = & \dfrac{m}{2}(l^{2}\cos^{2}(\varphi)\dot{\varphi}^{2} + a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + l^{2}\sin^{2}(\varphi)\dot{\varphi}^{2} + 2al\alpha\sin(\varphi)\sin(\alpha\mathrm{t})\dot{\varphi}) \nonumber \\
-	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + 2al\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2})
+	& = & \dfrac{m}{2}(a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t}) + 2al\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + l^{2}\dot{\varphi}^{2}) \nonumber
 \eea
 Sachant que l'\'energie potentielle s'\'ecrit $U = -mg(a\cos(\alpha\mathrm{t}) + l\cos(\varphi))$, la fonction de Lagrange est :
-\be
+\benn
 	L = T - U = \dfrac{ml^{2}}{2}\dot{\varphi}^{2} + mla\alpha\sin(\alpha\mathrm{t})\sin(\varphi)\dot{\varphi} + mgl\cos(\varphi)
-\ee
+\eenn
 car les fonctions $a^{2}\alpha^{2}\sin^{2}(\alpha\mathrm{t})$ issue de l'\'energie cin\'etique et $-mg(a\cos(\alpha\mathrm{t})$ issue de l'\'energie potentielle ne sont que des fonctions uniques du temps et peuvent donc \^etre omises, voir l'\'equation (\ref{EQ:2_8}). \emph{Dans l'\'edition du livre en ma possession, la fonction de Lagrange est propos\'ee avec un terme en $mla\alpha^{2}\cos(\alpha\mathrm{t})\cos(\varphi)$ que je n'arrive pas à obtenir ici}.
 
 \section{Probl\`eme du pendule rotatif à trois masses}
@@ -352,24 +352,24 @@ Dans le cas trait\'e ici, l'ensemble du syst\`eme tourne avec une vitesse angula
 	\end{center}
 \end{figure}
 En coordonn\'ees sph\'eriques, nous avons de facto :
-\be
+\benn
 	\begin{cases}
 		\mathrm{d}l_{1}^{2} = \mathrm{d}l_{2}^{2} = \mathrm{d}r_{1}^{2} + r_{1}^{2}\mathrm{d}\theta^{2} + r_{1}^{2}\sin^{2}(\theta)\mathrm{d}\omega^{2} \\
 		\mathrm{d}l_{3} = -2a\sin(\theta)\mathrm{d}\theta
 	\end{cases}
-\ee
+\eenn
 Or $r_{1} = r_{2} = a$ donc $\mathrm{d}r_{1} = \mathrm{d}r_{2} = 0$, ce qui permet d'\'ecrire :
-\be
+\benn
 	\begin{cases}
 		T_{1} = T_{2} = \dfrac{m_{1}a^{2}}{2}(\dot{\theta}^{2} + \sin^{2}(\theta)\dot{\omega}^{2}) \\
 		T_{3} = \dfrac{4m_{2}a^{2}}{2}\sin^{2}(\theta)\dot{\theta}^{2} \\
 		U_{1} = U_{2} = -m_{1}ga\cos(\theta) \\
 		U_{3} = -2m_{2}ga\cos(\theta)
 	\end{cases}
-\ee
+\eenn
 La fonction de Lagrange du syst\`eme m\'ecanique est alors :
 \bea
 	L & = & T_{1} + T_{2} + T_{3} - U_{1} - U_{2} - U_{3} = 2T_{1} + T_{3} - 2U_{1} - U_{3} \nonumber \\
 	& = & m_{1}a^{2}(\dot{\theta}^{2} + \sin^{2}(\theta)\dot{\omega}^{2}) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} + 2m_{1}ga\cos(\theta) + 2m_{2}ga\cos(\theta) \nonumber \\
-	& = & m_{1}a^{2}(\dot{\theta}^{2} + \Omega^{2}\sin^{2}(\theta)) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} + 2(m_{1}+m_{2})ga\cos(\theta)
+	& = & m_{1}a^{2}(\dot{\theta}^{2} + \Omega^{2}\sin^{2}(\theta)) + 2m_{2}a^{2}\sin^{2}(\theta)\dot{\theta}^{2} + 2(m_{1}+m_{2})ga\cos(\theta) \nonumber
 \eea
