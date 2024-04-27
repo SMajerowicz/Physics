@@ -3,9 +3,9 @@
 \section{Oscillations lin\'eaires libres}\label{PAR:21}
 
 Les \emph{petites oscillations} sont celles faites par un syst\`eme au voisinage de sa position d'\'equilibre stable et nous étudions ici le cas le plus simple, celui où il n'y a qu'un seul degr\'e de libert\'e. Un \'equilibre stable intervient quand l'\'energie potentielle $U(q)$ est minimale. D\'efinissons que $U$ soit minimale en $q = q_{0}$. L'\'equation (\ref{EQ:5_4}) montre qu'un \'ecart par rapport \`a la position $q_{0}$ engendre une force \'egale \`a $-\frac{\mathrm{d}U}{\mathrm{d}q}$ qui ram\`ene le syst\`eme \`a sa position d'\'equilibre stable. R\'ealisons un d\'eveloppement de Taylor de $U(q)$ jusqu'au second ordre :
-\be
+\benn
 	U(q) = U(q_{0}) + U'(q_{0})(q - q_{0}) + \dfrac{U''(q_{0})}{2}(q - q_{0})^{2} \Rightarrow U(q) - U(q_{0}) = \dfrac{k}{2}(q - q_{0})^{2}
-\ee
+\eenn
 car $U'(q_{0}) = 0$ puisque $q_{0}$ est la position d'\'equilibre et nous avons pos\'e $k = U''(q_{0})$. En d\'efinissant :
 \be
 	x = q - q_{0} \label{EQ:21_1}
@@ -69,9 +69,9 @@ Les \emph{oscillations forc\'ees} sont les oscillations d'un syst\`eme soumis \`
 \subsection{Cas g\'en\'eral}
 
 L'\'energie potentielle totale du syst\`eme s'\'ecrit avec deux termes, \`a savoir l'\'energie potentielle propre en $\frac{1}{2}kx^{2}$ et celle due \`a l'action ext\'erieur $U_{e}(x,t)$. Au premire ordre, cette derni\`ere s'\'ecrit :
-\be
+\benn
 	U_{e}(x,t) = U_{e}(0,t) + x\left(\dfrac{\partial U_{e}}{\partial x}\right)(0,t)
-\ee
+\eenn
 o\`u $U_{e}(0,t)$ est une fonction ne d\'ependant que du temps et de facto, elle est le r\'esultat d'une d\'eriv\'ee totale par rapport au temps. Dans cette partie est n\'eglig\'ee dans l'\'equation de Lagrange, voir (\ref{EQ:2_8}). De plus, la formule (\ref{EQ:5_8}) permet de d\'eduire que $-\frac{\partial U_{e}}{\partial x}$ est la force ext\'erieure qui s'exerce sur le syst\`eme. Elle est fonction du temps et nous la d\'esignons $F(t)$. Par cons\'equent, $U_{e}(x,t) = -xF(t)$ et la fonction de Lagrange peut se formuler ainsi :
 \be
 	L = \dfrac{m}{2}\dot{x}^{2} - \left(\frac{k}{2}x^{2} - xF(t)\right) \label{EQ:22_1}
@@ -96,7 +96,7 @@ Consid\'erons que la force ext\'erieure s'exprime telle que :
 Pour cette hypoth\`ese, l'int\'egrale particuli\`ere de l'\'equation (\ref{EQ:22_2}) peut \^etre $x_{1} = b\cos(\gamma t + \beta)$, ce qui nous donne :
 \bea
 	& & -b\gamma^{2}\cos(\gamma t + \beta) + \omega^{2}b\cos(\gamma t + \beta) = \dfrac{f}{m}\cos(\gamma t + \beta) \Leftrightarrow b(\omega^{2} - \gamma^{2}) = \dfrac{f}{m} \nonumber \\
-	& \Leftrightarrow & b = \dfrac{f}{m(\omega^{2} - \gamma^{2})}
+	& \Leftrightarrow & b = \dfrac{f}{m(\omega^{2} - \gamma^{2})} \nonumber
 \eea
 Le mouvement se compose donc en ajoutant la solution g\'en\'erale (\ref{EQ:21_8}) :
 \be
@@ -107,20 +107,20 @@ o\`u les quantit\'es $a$ et $\alpha$ sont d\'eduites des conditions initiales. L
 \subsection{Solution r\'eelle lors de la r\'esonnance avec une force ext\'erieure}
 
 Partons de la formule (\ref{EQ:22_4}) pour la reformuler ainsi :
-\be
+\benn
 	x = a\cos(\omega t + \alpha) + \frac{f}{m(\omega^{2} - \gamma^{2})}(\cos(\gamma t + \beta) - \cos(\omega t + \beta))
-\ee
+\eenn
 Ainsi lorsque $\gamma \rightarrow \omega$, alors nous avons une ind\'etermination de type $0/0$ pour le second terme. Appliquons alors la r\`egle de L'Hospital\footnote{Si $f$ et $g$ sont deux fonctions d\'efinies sur $[a;b[$, d\'erivables en $a$ et telles que $f(a) = g(a) = 0$ et $g'(a) \neq 0$ alors $\lim_{x \rightarrow a^{+}}\dfrac{f(x)}{g(x)} = \dfrac{f'(a)}{g'(a)}$} avec :
-\be
+\benn
 	\begin{cases}
 		f : \omega \mapsto \cos(\gamma t + \beta) - \cos(\omega t + \beta) \\
 		g : \omega \mapsto w^{2} - \gamma^{2}
 	\end{cases}
-\ee
+\eenn
 Cela nous donne :
-\be
+\benn
 	\lim_{\gamma \rightarrow \omega}\dfrac{f(\gamma)}{g(\gamma)} = \dfrac{f'(\gamma = \omega)}{g'(\gamma = \omega)} = \dfrac{-t\sin(\omega t + \beta)}{-2\omega}
-\ee
+\eenn
 et nous permet d'\'ecrire :
 \be
 	x = a\cos(\omega t + \alpha) + \frac{f}{2m\omega}t\sin(\omega t + \beta) \label{EQ:22_5}
@@ -171,15 +171,15 @@ sachant que les quantit\'es $x$ et $\xi$ incluent d\'ej\`a les cons\'equences de
 	E_{transmise}(\infty) = \dfrac{m}{2}\dfrac{1}{m^{2}} \Big\lvert \int_{-\infty}^{\infty}{F(t)e^{-i\omega t}\mathrm{dt}} \Big\rvert^{2} = \dfrac{1}{2m} \Big\lvert \int_{-\infty}^{\infty}{F(t)e^{-i\omega t}\mathrm{dt}} \Big\rvert^{2} \label{EQ:22_12}
 \ee
 Nous pouvons remarquer que l'expression de l'\'energie transmise correspond \`a l'amplitude variable du mouvement de la relation (\ref{EQ:22_10}). De plus, le c{\oe}fficient de Fourier s'\'ecrit pour une fonction quelconque $f$, pour une p\'eriode $T$, comme :
-\be
+\benn
 	\forall n \le 0\text{, }c_{n}(f) = \dfrac{1}{T}\int_{T}f(t)e^{-i\frac{2n\pi}{T}t}\mathrm{dt}
-\ee
+\eenn
 aussi l'\'energie transmise est le carr\'e du module du c{\oe}fficient de Fourier de la force $F(t)$ avec un fr\'equence \'egale \`a la fonction propre du syst\`eme physique.
 
 Sur un intervalle de temps petit par rapport \`a $\frac{1}{\omega}$, nous avons $e^{-i\omega t} \approx 1$ et l'\'energie transmise :
-\be
+\benn
 	E = \dfrac{1}{2m} \left(\int_{-\infty}^{\infty}{F(t)\mathrm{dt}}\right)^{2}
-\ee
+\eenn
 Par cons\'equent, une force qui ne s'exprime que sur une faible dur\'ee communique au syst\`eme une impulsion $\int F\mathrm{dt}$ qui ne permet pas de provoquer de d\'eplacement notable, ce qui revient \`a notre hypoth\`ese de base des petites oscillations.
 
 \section{Oscillations des syst\`emes \`a plusieurs degr\'es de libert\'e}
@@ -191,17 +191,17 @@ Il s'agit d'une g\'en\'eralisation de l'\'etude men\'ee au paragraphe (\ref{PAR:
 	\forall i \in (1, 2, \ldots, s)\text{, }x_{i} = q_{i} - q_{i0} \label{EQ:23_1}
 \ee
 Le d\'eveloppement de Taylor au second degr\'e de l'\'energie potentielle donne :
-\be
+\benn
 	U(\begin{Bmatrix}q_{i}\end{Bmatrix}) = U(\begin{Bmatrix}q_{i_{0}}\end{Bmatrix}) + \sum_{i}\left(\dfrac{\partial U}{\partial q_{i}}\right)_{q_{i}=q_{i0}}(q_{i} - q_{i0}) + \dfrac{1}{2}\sum_{i,j}\left(\dfrac{\partial^{2}U}{\partial q_{i}\partial q_{j}}\right)_{q_{i}=q_{i0},q_{j}=q_{j0}}(q_{i} - q_{i0})(q_{j} - q_{j0})
-\ee
+\eenn
 Le syst\`eme est d\'efini comme \'etant \`a l'\'equilibre initialement, aussi :
-\be
+\benn
 	\left(\dfrac{\partial U}{\partial q_{i}}\right)_{q_{i}=q_{i0}} = 0
-\ee
+\eenn
 donc :
-\be
+\benn
 	U(\begin{Bmatrix}q_{i}\end{Bmatrix}) - U(\begin{Bmatrix}q_{i_{0}}\end{Bmatrix}) = \dfrac{1}{2}\sum_{i,j}\left(\dfrac{\partial^{2}U}{\partial q_{i}\partial q_{j}}\right)_{q_{i}=q_{i0},q_{j}=q_{j0}}(q_{i} - q_{i0})(q_{j} - q_{j0})
-\ee
+\eenn
 En comptant l'\'energie potentielle par rapport \`a sa valeur minimale et parce que $\partial x_{i} = \partial (q_{i} - q_{i0}) = \partial q_{i}$, alors l'\'energie potentielle est une forme d\'efinie positive :
 \be
 	U(\begin{Bmatrix}q_{i}\end{Bmatrix}) = \dfrac{1}{2}\sum_{i,j}k_{ij}x_{i}x_{j}\text{ avec }k_{ij} = \left(\dfrac{\partial^{2}U}{\partial x_{i}\partial x_{j}}\right)_{x_{i}=0,x_{j}=0} \label{EQ:23_2}
@@ -231,7 +231,7 @@ En utilisant la relation (\ref{EQ:23_5}), nous obtenons un syst\`eme de $s$ \'eq
 	\sum_{j}(-\omega^{2}m_{ij} + k_{ij})A_{j}e^{i\omega t} = 0 \Leftrightarrow \sum_{j}(k_{ij} - \omega^{2}m_{ij})A_{j} = 0 \label{EQ:23_7}
 \ee
 qui s'\'ecrit sous forme matricielle ainsi :
-\be
+\benn
 	\begin{pmatrix}
 		k_{11} - \omega^{2}m_{11} & \ldots & k_{1j} - \omega^{2}m_{1j} & \ldots & k_{1s} - \omega^{2}m_{1s} \\
 		\vdots & \ddots & \vdots & \ddots & \vdots \\
@@ -248,27 +248,27 @@ qui s'\'ecrit sous forme matricielle ainsi :
 		A_{s}
 	\end{pmatrix}
 	= \vec{0}
-\ee
+\eenn
 \`A l'exception de la solution \'evidente, i.e. $\forall j\text{, }A_{j} = 0$, le syst\`eme admet des solutions si et seulement si :
-\be
+\benn
 	\det{(k_{ij} - \omega^{2}m_{ij})} = 0
-\ee
+\eenn
 qui est une \emph{\'equation caract\'eristique} de degr\'e $s$ par rapport \`a $\omega^{2}$. En g\'en\'eral, il y a $s$ racines r\'eelles et positives distinctes $\omega_{\alpha}$ avec $\alpha \in \{1, \cdots , s\}$. Les valeurs de $\omega_{\alpha}$ sont les \emph{fr\'equences propres} du syst\`eme.
 
 Dans un syst\`eme physique, si $\omega_{\alpha}$ poss\`ede une partie imaginaire, $\omega_{\alpha}^{2} < 0$ ou $\omega_{\alpha} \in \mathbb{C}$ et peut donc s\'ecrire ainsi $\omega_{\alpha} = a + ib$ alors dans la relation (\ref{EQ:23_6}), $x_{j}(t) = A_{j}e^{-bt}e^{iat}$. Le terme $e^{-bt}$ est une terme exponentiel croissant ou d\'ecroissant suivant la valeur de $b$. L'\'energie totale du sys\`eme \'evolue alors avec le temps, ce qui est en contradiction avec la loi de conservation de l'\'energie.
 
 D'un point de vue mathématique, l'\'equation (\ref{EQ:23_7}) permet d'\'ecrire :
-\be
+\benn
 	\sum_{j}(k_{ij} - \omega^{2}m_{ij})A_{j} = 0 \Leftrightarrow \sum_{i,j}(k_{ij} - \omega^{2}m_{ij})A_{i}^{*}A_{j} = 0
-\ee
+\eenn
 avec $A_{i}^{*}$ la quantité conjugu\'ee de $A_{i}$. Nous obtenons alors :
-\be
+\benn
 	\omega^{2} = \dfrac{\sum_{i,j}k_{ij}A_{i}^{*}A_{j}}{\sum_{i,j}m_{ij}A_{i}^{*}A_{j}}
-\ee
+\eenn
 o\`u les quantit\'es $k_{ij}$ et $m_{ij}$ sont r\'elles et sym\'etriques. Donc :
-\be
+\benn
 	\left(\sum_{ij}k_{ij}A_{i}^{*}A_{j}\right)^{*} = \sum_{ij}k_{ij}A_{i}A_{j}^{*} = \sum_{ij}k_{ij}A_{j}A_{i}^{*}
-\ee
+\eenn
 Ceci est aussi vrai pour le d\'enominateur de l'expression donnant $\omega^{2}$. En accord avec les d\'finitions (\ref{EQ:23_2}) et (\ref{EQ:23_3}), $\omega^{2}$ a alors des formes d\'efinies positives au num\'erateur et au d\'enominateur. C'est donc pouquoi les valeurs de $\omega_{\alpha}^{2}$ ne peuvent \^etre que réelles et positives.
 
 Les fr\'equences $\omega_{\alpha}$ \'etant connues, les \'equations (\ref{EQ:23_7}) permettent d'obtenir les valeurs $A_{j}$. Si les valeurs $\omega_{\alpha}$ sont toutes distinctes alors les c{\oe}fficients $A_{j}$ sont proportionneles aux mineurs\footnote{Le mineur est le d\'eterminant qu'une sous-matrice carr\'ee.} de $k_{ij} - \omega^{2}m_{ij}$ en posant $\omega = \begin{Bmatrix}\omega_{\alpha}\end{Bmatrix}^{s}_{1}$. Soit $\Delta_{j\alpha}$ le mineur permettant le calcul de la quantit\'e $A_{j}$ avec pour fr\'equence $\omega_{\alpha}$, l'expression (\ref{EQ:23_5}) peut alors s'\'ecrire : $x_{j} = \Delta_{j\alpha}C_{\alpha}e^{i\omega_{\alpha}t}$ avec $C_{\alpha} \in \mathbb{C}$ et $\Delta_{j\alpha} \in \mathbb{R}$. Il s'agit alors d'une solution particuli\`ere puisque calcul\'ee pour une fr\'equence $\omega_{\alpha}$ donn\'ee. La solutino g\'en\'erale est la sommes des solutions particuli\`eres qui vaut dans $\mathbb{R}$ :
@@ -287,7 +287,7 @@ En supposant que le param\`etre $C_{\alpha}$ s'écrive $a_{\alpha} + ib_{\alpha}
 \bea
 	\Theta_{\alpha} & = & \Re{\left((a_{\alpha} + ib_{\alpha})e^{i\omega_{\alpha}t}\right)} = \Re{\left((a_{\alpha} + ib_{\alpha})(\cos(\omega{\alpha}t) + i\sin(\omega_{\alpha}t))\right)} \nonumber \\
 	& = & \Re{\left(a_{\alpha}\cos(\omega{\alpha}t) - b_{\alpha}\sin(\omega{\alpha}t) + i(a_{\alpha}\sin(\omega{\alpha}t) + b_{\alpha}\cos(\omega{\alpha}t))\right)} = a_{\alpha}\cos(\omega{\alpha}t) - b_{\alpha}\sin(\omega{\alpha}t) \nonumber \\
-	\Rightarrow \ddot{\Theta}_{\alpha} & = & -a_{\alpha}\omega_{\alpha}^{2}\cos(\omega{\alpha}t) + b_{\alpha}\omega_{\alpha}^{2}\sin(\omega{\alpha}t)
+	\Rightarrow \ddot{\Theta}_{\alpha} & = & -a_{\alpha}\omega_{\alpha}^{2}\cos(\omega{\alpha}t) + b_{\alpha}\omega_{\alpha}^{2}\sin(\omega{\alpha}t) \nonumber
 \eea
 Ceci permet d'\'ecrire en d\'efinitive que :
 \be
@@ -304,24 +304,24 @@ Math\'ematiquement, la transformation (\ref{EQ:23_9}) permet aux \'energies cin\
 	Q_{\alpha} = \sqrt{m_{\alpha}}\Theta_{\alpha} \label{EQ:23_13}
 \ee
 la fonction de Lagrange s'\'ecrit alors :
-\be
+\benn
 	L = \sum_{\alpha}\dfrac{m_{\alpha}}{2}\left(\dot{\Theta_{\alpha}}^{2} - \omega_{\alpha}^{2}\Theta_{\alpha}^{2}\right) = \sum_{\alpha}\dfrac{m_{\alpha}}{2}\left(\dfrac{\dot{Q_{\alpha}}^{2}}{m_{\alpha}} - \omega_{\alpha}^{2}\dfrac{Q_{\alpha}^{2}}{m_{\alpha}}\right) = \dfrac{1}{2}\sum_{\alpha}\left(\dot{Q_{\alpha}}^{2} - \omega_{\alpha}^{2}Q_{\alpha}^{2}\right)
-\ee
+\eenn
 
 \subsection{Cas tridimensionnel}
 
 Dans le cas d'oscillations tridimensionnelles d'un point mat\'eriel de masse $m$ dans un champ ext\'erieur constant dans le temps, l'\'energie cin\'etique ne d\'epend pas du choix de la direction des axes des coordonn\'ees et :
-\be
+\benn
 	T = \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2})
-\ee
+\eenn
 En pla\c{c}ant l'origine des coordonn\'ees au minimum de l'\'energie potentielle $U(x,y,z)$, une rotation des axes permet de rendre diagonal l'\'energie potentielle, i.e. $\frac{\partial U}{\partial x} = f(x)$, $\frac{\partial U}{\partial y} = g(y)$ et $\frac{\partial U}{\partial z} = h(z)$. En reprenant la formulation de l'\'energie potentielle d\'ecrite dans la relation (\ref{EQ:21_2}), la fonction de Lagrange devient :
 \be
 	L = \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) - \dfrac{1}{2}(k_{x}x^{2} + k_{y}y^{2} + k_{z}z^{2}) \label{EQ:23_14}
 \ee
 avec le long des axes, des oscillations de fr\'equences : $\omega_{x} = \sqrt{k_{x}/m}$, $\omega_{y} = \sqrt{k_{y}/m}$ et $\omega_{z} = \sqrt{k_{z}/m}$. En g\'en\'eralisant l'\'ecriture, nous avons :
-\be
+\benn
 	L = \dfrac{1}{2}\sum_{\alpha = x,y,z}\left((\sqrt{m}\dot{x}_{\alpha})^{2} - (\omega_{\alpha}x_{\alpha})^{2}\right)
-\ee
+\eenn
 Les coordonn\'ees normales sont alors dans ce cas pr\'ecis $Q_{\alpha} = \sqrt{m}x_{\alpha}$. Dans le cas sp\'ecifique d'un champ central, alors $k_{x} = k_{y} = k_{z} = k$ et $Q = \sqrt{m}r$.
 
 \subsection{Oscillations forc\'ees}
@@ -331,9 +331,9 @@ La g\'en\'eralisation de la fonction de Lagrange formul\'ee dans l'\'equation (\
 	L = L_{0} + \sum_{i}F_{i}(t)x_{i} \label{EQ:23_15}
 \ee
 avec $L_{0}$ la fonction de Lagrange des oscillations libres, voir la relation (\ref{EQ:23_14}), et $F_{k}$, la force ext\'erieure appliqu\'ee sur la coordonn\'ees $x_{k}$. La formule (\ref{EQ:23_9}) nous donne :
-\be
+\benn
 	x_{j} = \sum_{\alpha=1}^{s}\Delta_{j\alpha}\Theta_{\alpha} = \sum_{\alpha=1}^{s}\dfrac{\Delta_{j\alpha}}{\sqrt{m_{\alpha}}}Q_{\alpha}
-\ee
+\eenn
 aussi la fonction de Lagrange se d\'eveloppe ainsi :
 \bea
 	L & = & \dfrac{1}{2}\sum_{\alpha}\left(\dot{Q_{\alpha}}^{2} - \omega_{\alpha}^{2}Q_{\alpha}^{2}\right) + \sum_{i}F_{i}(t)\sum_{\alpha}\dfrac{\Delta_{i\alpha}}{\sqrt{m_{\alpha}}}Q_{\alpha} \nonumber \\
@@ -355,9 +355,9 @@ Pour r\'esoudre le probl\`eme m\'ecanique des oscillations d'une mol\'ecule, il 
 \subsection{\'Elimination de la translation}
 
 Pour se faire, il est n\'ecessaire de se placer dans le r\'ef\'erentiel du centre d'intertie dans lequel l'impulsion totale du syst\`eme est nulle, voir le paragraphe (\ref{PAR:8}). Cela s'\'ecrit en reprenant la relation (\ref{EQ:8_3}) et en posant $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ o\`u $\vec{r}_{a0}$ est la position d'\'equilibre immobile et $\vec{u}_{a}$ l'\'ecart par rapport \`a la position d'\'equilibre :
-\be
+\benn
 	\dfrac{\mathrm{d}\vec{R}}{\mathrm{dt}} = \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\sum_{a}m_{a}\vec{r}_{a}}{\sum_{a}m_{a}}\right) = \vec{0} \Leftrightarrow \sum_{a}m_{a}\vec{\dot{r}}_{a} = \vec{0}
-\ee
+\eenn
 En posant $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ avec $\vec{r}_{a0}$ la position immobile, donc constant dans le temps, de l'atome $a$ \`a l'\'equilibre et $\vec{u}_{a}$, l'\'ecart par rapport \`a l'\'equilibre, nous obtenons :
 \be
 	\sum_{a}m_{a}\vec{\dot{u}}_{a} = \vec{0} \Leftrightarrow \sum_{a}m_{a}\vec{u}_{a} = \vec{cste} = \vec{0} \label{EQ:24_1}
@@ -367,9 +367,9 @@ par choix de la condition initiale.
 \subsection{\'Elimination de la rotation}
 
 De la m\^eme mani\`ere, il est n\'ecessaire de trouver un r\'ef\'erentiel ou une transformation pour laquelle le moment cin\'etique s'annule. En gardant la d\'efinition $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ alors le moment cin\'etique du syst\`eme :
-\be
+\benn
 	\vec{M} = \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v}_{a} = \sum_{a}m_{a}(\vec{r}_{a0} + \vec{u}_{a}\wedge\vec{\dot{r}}_{a} \approx \sum_{a}m_{a}\vec{r}_{a0}\wedge\dfrac{\mathrm{d}\vec{\dot{u}_{a}}}{\mathrm{dt}}
-\ee
+\eenn
 pour rester dans le cadre des petits d\'eplacements ou oscillations. Cela nous donne alors :
 \be
 	\vec{M} \approx \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{a}m_{a}\vec{r}_{a0}\wedge\vec{u}_{a}\right) \Rightarrow \sum_{a}m_{a}\vec{r}_{a0}\wedge\vec{u}_{a} = \vec{0} \label{EQ:24_2}
