@@ -28,60 +28,60 @@
 \end{figure}
 
 Il s'agit de trouver la p\'eriode d'oscillation du pendule en fonction de l'amplitude du mouvement. En supposant $\varphi_{0}$ l'angle maximal par rapport \`a la verticale, o\`u la vitesse du pendule est nulle, l'\'energie totale du pendule est :
-\be
+\benn
 	E = \frac{m}{2}\left[\dfrac{\mathrm{d}(l\varphi)}{\mathrm{dt}}\right]^{2} - mgl\cos\varphi = \frac{m}{2}l^{2}\dot{\varphi}^{2} - mgl\cos\varphi
-\ee
+\eenn
 et par conservation de l'\'energie totale :
-\be
+\benn
 	E = E(\varphi_{0}) = -mgl\cos\varphi_{0}
-\ee
+\eenn
 Par sym\'etrie du mouvement, la p\'eriode est \'egale au temps de parcours entre $\varphi=0$ et $\varphi=\varphi_{0}$. Sachant que la quantit\'e, $E-U$ vaut $-mgl\cos\varphi_{0} + mgl\cos\varphi$, l'\'equation (\ref{EQ:11_3}) peut s'\'ecrire :
-\be
+\benn
 	\mathrm{T} = 4\sqrt{\frac{m}{2}}\bigintsss_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}(l\varphi)}{\sqrt{mgl(\cos\varphi - \cos\varphi_{0})}}} = 4\sqrt{\frac{l}{2g}}\bigintsss_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{\cos\varphi - \cos\varphi_{0}}}}
-\ee
+\eenn
 Notons que :
 \bea
 	\sin^{2}\frac{\alpha}{2} & = & \left(\dfrac{e^{i\frac{\alpha}{2}} - e^{-i\frac{\alpha}{2}}}{2i}\right)^{2} = -\frac{1}{4}\left(e^{i\alpha} + e^{-i\alpha} - 2e^{i\frac{\alpha}{2}-i\frac{\alpha}{2}}\right) \nonumber \\
 	& = & -\frac{1}{4}\left(e^{i\alpha} + e^{-i\alpha} - 2\right) = \frac{1}{2}\left(1-\cos\alpha\right) \nonumber \\
-	\Leftrightarrow \cos\alpha & = & 1 - 2\sin^{2}\frac{\alpha}{2}
+	\Leftrightarrow \cos\alpha & = & 1 - 2\sin^{2}\frac{\alpha}{2} \nonumber
 \eea
 Cela permet de d\'evelopper la p\'eriode telle que :
 \bea
 	\mathrm{T} & = & 4\sqrt{\frac{l}{2g}}\bigintsss_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{1-2\sin\frac{\varphi}{2} - 1 + \sin\frac{\varphi_{0}}{2}}}} \nonumber \\
-	& = & 4\sqrt{\frac{l}{2g}}\bigintsss_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{2\left(\sin\frac{\varphi_{0}}{2} - \sin\frac{\varphi}{2}\right)}}} = 2\sqrt{\frac{l}{g}}\int_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{\sin\frac{\varphi_{0}}{2} - \sin\frac{\varphi}{2}}}}
+	& = & 4\sqrt{\frac{l}{2g}}\bigintsss_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{2\left(\sin\frac{\varphi_{0}}{2} - \sin\frac{\varphi}{2}\right)}}} = 2\sqrt{\frac{l}{g}}\int_{0}^{\varphi_{0}}{\dfrac{\mathrm{d}\varphi}{\sqrt{\sin\frac{\varphi_{0}}{2} - \sin\frac{\varphi}{2}}}} \nonumber
 \eea
 En posant $\sin\xi = \dfrac{\sin(\varphi/2)}{\sin(\varphi_{0}/2)}$, nous avons pour $\varphi = 0$, $\sin\xi = 0$ soit $\xi = 0$ et pour $\varphi = \varphi_{0}$, $\sin\xi = 1$ soit $\xi = \frac{\pi}{2}$. En d\'eveloppant la d\'efinition de $\sin\xi$ pour l'inverser, nous trouvons :
 \bea
 	\sin^{2}\xi\sin^{2}\left(\frac{\varphi_{0}}{2}\right) & = & \sin^{2}\left(\frac{\varphi}{2}\right) = 1 - \cos^{2}\left(\frac{\varphi}{2}\right) \nonumber \\
-	\Leftrightarrow \cos\left(\frac{\varphi}{2}\right) & = & \sqrt{1 - \sin^{2}\left(\frac{\varphi_{0}}{2}\right)\sin^{2}\xi}
+	\Leftrightarrow \cos\left(\frac{\varphi}{2}\right) & = & \sqrt{1 - \sin^{2}\left(\frac{\varphi_{0}}{2}\right)\sin^{2}\xi} \nonumber
 \eea
 et pour conna\^itre la correspondance entre $\mathrm{d}\varphi$ et $\mathrm{d}\xi$ :
 \bea
 	\sin\xi & = & \dfrac{\sin\left(\frac{\varphi}{2}\right)}{\sin\left(\frac{\varphi_{0}}{2}\right)} \Leftrightarrow \cos\xi\mathrm{d}\xi = \dfrac{\cos\left(\frac{\varphi}{2}\right)}{2\sin\left(\frac{\varphi_{0}}{2}\right)}\mathrm{d}\varphi \nonumber \\
 	\Leftrightarrow \mathrm{d}\varphi & = & \dfrac{2\sin\left(\frac{\varphi_{0}}{2}\right)\cos\xi}{\cos\left(\frac{\varphi}{2}\right)}\mathrm{d}\xi = \dfrac{2\sin\left(\frac{\varphi_{0}}{2}\right)\sqrt{1 - \sin^{2}\xi}}{\cos\left(\frac{\varphi}{2}\right)}\mathrm{d}\xi \nonumber \\
 	& = & \dfrac{2\sin\left(\frac{\varphi_{0}}{2}\right)\sqrt{1 - \dfrac{\sin^{2}\left(\frac{\varphi}{2}\right)}{\sin^{2}\left(\frac{\varphi_{0}}{2}\right)}}}{\cos\left(\frac{\varphi}{2}\right)}\mathrm{d}\xi = \dfrac{2\sqrt{\sin^{2}\left(\frac{\varphi_{0}}{2}\right) - \sin^{2}\left(\frac{\varphi}{2}\right)}}{\cos\left(\frac{\varphi}{2}\right)}\mathrm{d}\xi \nonumber \\
-	\Leftrightarrow \dfrac{\mathrm{d}\varphi}{\sqrt{\sin^{2}\left(\frac{\varphi_{0}}{2}\right) - \sin^{2}\left(\frac{\varphi}{2}\right)}} & = & \dfrac{2\mathrm{d}\xi}{\sqrt{1 - \sin^{2}\left(\frac{\varphi_{0}}{2}\right)\sin^{2}\xi}}
+	\Leftrightarrow \dfrac{\mathrm{d}\varphi}{\sqrt{\sin^{2}\left(\frac{\varphi_{0}}{2}\right) - \sin^{2}\left(\frac{\varphi}{2}\right)}} & = & \dfrac{2\mathrm{d}\xi}{\sqrt{1 - \sin^{2}\left(\frac{\varphi_{0}}{2}\right)\sin^{2}\xi}} \nonumber
 \eea
 En cons\'equence, en posant :
-\be
+\benn
 	K(k) = \bigintsss_{0}^{\frac{\pi}{2}}\dfrac{\mathrm{d}\xi}{\sqrt{1 - k^{2}\sin^{2}\xi}}
-\ee
+\eenn
 la p\'eriode $\mathrm{T}$ se r\'e\'ecrit ainsi\footnote{Dans le livre, il est indiqu\'e que l'argument de la fonction $K$ est $\frac{\sin\left(\varphi_{0}\right)}{2}$, je pense qu'il ne s'agit que d'une coquille.} :
-\be
+\benn
 	\mathrm{T} = 4\sqrt{\dfrac{l}{g}}K\left(\sin(\varphi_{0}/2)\right)
-\ee
+\eenn
 La fonction $K$ est l'int\'egrale elliptique compl\`ete de premi\`ere esp\`ece. Elle admet comme d\'eveloppement en s\'erie enti\`ere :
-\be
+\benn
 	K(k) = \dfrac{\pi}{2}\sum_{n=0}^{+\infty}\left[\dfrac{(2n)!}{2^{2n}(n!)^{2}}\right]^{2}k^{2n} = \dfrac{\pi}{2}\left(1 + \left(\dfrac{2}{4 \times 1}\right)^{2}k^{2} + \cdots\right)
-\ee
+\eenn
 donc pour de petites oscillations telles que $\sin(\varphi_{0}/2)\simeq\varphi_{0}/2\ll 1$ :
-\be
+\benn
 	K(\sin\varphi_{0}/2) = \dfrac{\pi}{2}\left(1 + \dfrac{1}{16}\varphi_{0}^{2} + \cdots\right)
-\ee
+\eenn
 soit :
-\be
+\benn
 	\mathrm{T} = 2\pi\sqrt{\dfrac{l}{g}}\left(1 + \dfrac{1}{16}\varphi_{0}^{2} + \cdots\right)
-\ee
+\eenn
 et en premi\`ere approximation, la p\'eriode du mouvement n'est d\'ependante ni de la masse de la particule ni de l'amplitude initiale.
 
 \subsection{Cas d'\'energies potentielles particuli\`eres}
@@ -100,26 +100,26 @@ Il s'agit de d\'eterminer la p\'eriode d'oscillations en fonction de l'\'energie
 Dans ce cas pr\'ecis, commen\c{c}ons par d\'efinir les points d'arr\^et tels que $E=U$, soit $x = \pm\left(\dfrac{E}{A}\right)^{\frac{1}{n}}$. Cela permet d'\'ecrire l'\'equation (\ref{EQ:11_5}) telle que :
 \bea
 	\mathrm{T}(E) & = & \sqrt{2m}\bigintsss_{-\left(\frac{E}{A}\right)^{\frac{1}{n}}}^{+\left(\frac{E}{A}\right)^{\frac{1}{n}}}\dfrac{\mathrm{d}x}{\sqrt{E - A\lvert x \rvert^{n}}} = 2\sqrt{2m}\bigintsss_{0}^{+\left(\frac{E}{A}\right)^{\frac{1}{n}}}\dfrac{\mathrm{d}x}{\sqrt{E - Ax^{n}}} \nonumber \\
-	& = & 2\sqrt{\dfrac{2m}{E}}\bigintsss_{0}^{+\left(\frac{E}{A}\right)^{\frac{1}{n}}}\dfrac{\mathrm{d}x}{\sqrt{1 - \dfrac{Ax^{n}}{E}}}
+	& = & 2\sqrt{\dfrac{2m}{E}}\bigintsss_{0}^{+\left(\frac{E}{A}\right)^{\frac{1}{n}}}\dfrac{\mathrm{d}x}{\sqrt{1 - \dfrac{Ax^{n}}{E}}} \nonumber
 \eea
 car la fonction $U$ est paire, i.e. $U(x) = U(-x)$. En posant :
-\be
+\benn
 	y = \left(\dfrac{A}{E}\right)^{\frac{1}{n}}x
-\ee
+\eenn
 qui permet d'\'ecrire :
-\be
+\benn
 	\begin{cases}
 		y^{n} = \dfrac{A}{E}x^{n} \\
 		\mathrm{d}y = \left(\dfrac{A}{E}\right)^{\frac{1}{n}}\mathrm{d}x
 	\end{cases}
-\ee
+\eenn
 et :
-\be
+\benn
 	\begin{cases}
 		x = 0 \Rightarrow y = 0 \\
 		x = \left(\dfrac{E}{A}\right)^{\frac{1}{n}} \Rightarrow y = \left(\dfrac{A}{E}\right)^{\frac{1}{n}}\left(\dfrac{E}{A}\right)^{\frac{1}{n}} = 1
 	\end{cases}
-\ee
+\eenn
 La p\'eriode $\mathrm{T}$ devient :
 \be
 	\mathrm{T} = 2\sqrt{\dfrac{2m}{E}}\bigintsss_{0}^{1}\left(\dfrac{E}{A}\right)^{\frac{1}{n}}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{n}}} = 2\dfrac{\sqrt{2mE^{\frac{1}{n}-\frac{1}{2}}}}{A^{\frac{1}{n}}}\bigintsss_{0}^{1}\dfrac{\mathrm{d}y}{\sqrt{1 - y^{n}}}
@@ -132,12 +132,12 @@ De la m\^eme mani\`ere, en posant $u=y^{n}$, nous avons :
 	\end{cases}
 \ee
 ainsi que :
-\be
+\benn
 	\begin{cases}
 		y = u^{\frac{1}{n}} \Rightarrow y^{n-1} = u^{\frac{n-1}{n}} = u^{1 - \frac{1}{n}} \\
 		ny^{n-1}\mathrm{d}y = \mathrm{d}u \Leftrightarrow \mathrm{d}y = \dfrac{u^{\frac{1}{n} - 1}}{n}\mathrm{d}u
 	\end{cases}
-\ee
+\eenn
 Nous arrivons \`a :
 \be
 	\mathrm{T} = 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{A^{\frac{1}{n}}}\bigintsss_{0}^{1}\dfrac{u^{\frac{1}{n} - 1}\mathrm{d}u}{n(1-u)^{\frac{1}{2}}} = 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{nA^{\frac{1}{n}}}\bigintsss_{0}^{1}u^{\frac{1}{n} - 1}(1-u)^{\frac{-1}{2}}\mathrm{d}u \label{EQ:APP3_2_a}
@@ -151,9 +151,9 @@ et celles de seconde esp\`ece, \emph{fonction Gamma} :
 	\Gamma(z) = \int_{0}^{+\infty}\mathrm{t}^{z-1}e^{-\mathrm{t}}\mathrm{dt} \label{EQ:INT_EULER_GAMMA}
 \ee
 L'\'equation (\ref{EQ:APP3_2_a}) s'\'ecrit alors :
-\be
-	\mathrm{T} = 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{nA^{\frac{1}{n}}}\mathrm{B}\left(\frac{1}{n},\frac{1}{2}\right) = 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{nA^{\frac{1}{n}}}\dfrac{\Gamma\left(\frac{1}{n}\right)\Gamma\left(\frac{1}{2}\right)}{\Gamma\left(\frac{1}{n}+\frac{1}{2}\right)} \nonumber
-\ee
+\benn
+	\mathrm{T} = 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{nA^{\frac{1}{n}}}\mathrm{B}\left(\frac{1}{n},\frac{1}{2}\right) = 2\dfrac{\sqrt{2m}E^{\frac{1}{n}-\frac{1}{2}}}{nA^{\frac{1}{n}}}\dfrac{\Gamma\left(\frac{1}{n}\right)\Gamma\left(\frac{1}{2}\right)}{\Gamma\left(\frac{1}{n}+\frac{1}{2}\right)}
+\eenn
 Or $\Gamma(1/2) = \sqrt{\pi}$, nous avons donc finalement :
 \be
 	\mathrm{T} = 2\dfrac{\sqrt{2\pi m}\Gamma\left(\frac{1}{n}\right)}{nA^{\frac{1}{n}}\Gamma\left(\frac{1}{n}+\frac{1}{2}\right)}E^{\frac{1}{n}-\frac{1}{2}} \label{EQ:11_EX2A_1}
@@ -176,34 +176,34 @@ Or $\Gamma(1/2) = \sqrt{\pi}$, nous avons donc finalement :
 \end{figure}
 
 Les point d'arr\^et sont toujours d\'efinis tels que $U=E$, i.e. :
-\be
+\benn
 	\cosh^{2}(\alpha x) = -\dfrac{U_{0}}{E} \Leftrightarrow \alpha x = \pm \arccosh\left(\sqrt{\dfrac{-U_{0}}{E}}\right)
-\ee
+\eenn
 Ceci est possible car $-U_{0} < E < 0$ et donc $-U_{0}/E > 0$. Les points d'arr\^et sont donc :
-\be
+\benn
 	x = \pm \dfrac{1}{\alpha}\arccosh\left(\sqrt{\dfrac{-U_{0}}{E}}\right)
-\ee
+\eenn
 
 L'\'equation (\ref{EQ:11_5}) peut donc s'\'ecrire :
 \bea
 	\mathrm{T}(E) & = & \sqrt{2m}\bigints_{-\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}^{\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}\dfrac{\mathrm{d}x}{\sqrt{E + \dfrac{U_{0}}{\cosh^{2}(\alpha x)}}} \nonumber \\
-	& = & \sqrt{\dfrac{2m}{\lvert E \rvert}}\bigints_{-\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}^{\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}\dfrac{\mathrm{d}x}{\sqrt{1 + \dfrac{U_{0}}{E\cosh^{2}(\alpha x)}}}
+	& = & \sqrt{\dfrac{2m}{\lvert E \rvert}}\bigints_{-\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}^{\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right)}\dfrac{\mathrm{d}x}{\sqrt{1 + \dfrac{U_{0}}{E\cosh^{2}(\alpha x)}}} \nonumber
 \eea
 car $E < 0$. En choisissant :
-\be
+\benn
 	y = \sqrt{\frac{-U_{0}}{E}}\dfrac{1}{\cosh(\alpha x)}
-\ee
+\eenn
 nous obtenons pour les bornes de l'int\'egrale :
-\be
+\benn
 	\begin{cases}
 		x = -\frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right) \Rightarrow y = -1 \\
 		x = \frac{1}{\alpha}\arccosh\left(\sqrt{\frac{-U_{0}}{E}}\right) \Rightarrow y = 1 \\
 	\end{cases}
-\ee
+\eenn
 et :
 \bea
 	y^{2} & = & \frac{-U_{0}}{E}\dfrac{1}{\cosh^{2}(\alpha x)} \mathrm{d}y = \sqrt{\frac{-U_{0}}{E}}\dfrac{-\alpha}{\cosh^{2}(\alpha x)}\mathrm{d}x \nonumber \\
-	\Leftrightarrow & = & -\alpha\sqrt{\frac{-U_{0}}{E}}\dfrac{E}{-U_{0}}y^{2}\mathrm{d}x \Leftrightarrow \mathrm{d}x = -\sqrt{\frac{-U_{0}}{E}}\dfrac{\mathrm{d}y}{\alpha y^{2}}
+	\Leftrightarrow & = & -\alpha\sqrt{\frac{-U_{0}}{E}}\dfrac{E}{-U_{0}}y^{2}\mathrm{d}x \Leftrightarrow \mathrm{d}x = -\sqrt{\frac{-U_{0}}{E}}\dfrac{\mathrm{d}y}{\alpha y^{2}} \nonumber
 \eea
 La p\'eriode s'\'ecrit alors :
 \be
@@ -213,7 +213,7 @@ La p\'eriode s'\'ecrit alors :
 En posant $u = y^{2}$, soit $y = u^{1/2}$ et $\mathrm{d}u = 2y\mathrm{d}y = 2u^{1/2}\mathrm{d}y \Leftrightarrow \mathrm{d}y = \frac{1}{2}u^{-1/2}\mathrm{d}u$, alors la p\'eriode devient :
 \bea
 	\mathrm{T}(E) & = & -\dfrac{2}{\alpha}\sqrt{\dfrac{-U_{0}}{E}}\sqrt{\dfrac{2m}{\lvert E \rvert}}\int_{0}^{1}\frac{1}{2}\dfrac{u^{-3/2}\mathrm{d}u}{(1-u)^{1/2}} = -\dfrac{1}{\alpha}\sqrt{\dfrac{-U_{0}}{E}}\sqrt{\dfrac{2m}{\lvert E \rvert}} \mathrm{B}\left(-\frac{1}{2},\frac{1}{2}\right) \nonumber \\
-	& = & \dfrac{2\pi}{\alpha}\sqrt{\dfrac{-U_{0}}{E}}\sqrt{\dfrac{2m}{\lvert E \rvert}}
+	& = & \dfrac{2\pi}{\alpha}\sqrt{\dfrac{-U_{0}}{E}}\sqrt{\dfrac{2m}{\lvert E \rvert}} \nonumber
 \eea
 car $\Gamma(0) = 1$, $\Gamma(\frac{1}{2}) = \sqrt{\pi}$ et $\Gamma(-\frac{1}{2}) = -2\sqrt{\pi}$. Ici, je trouve une solution diff\'erente de celle propos\'ee par le livre qui est : $\mathrm{T}(E) = \dfrac{\pi}{\alpha}\sqrt{\dfrac{2m}{\lvert E \rvert}}$ et j'avoue ne pas savoir en quoi la p\'eriode ne pourrait pas d\'ependre de la profondeur du puits d'\'energie potentielle $U_{0}$.
 
@@ -222,7 +222,7 @@ car $\Gamma(0) = 1$, $\Gamma(\frac{1}{2}) = \sqrt{\pi}$ et $\Gamma(-\frac{1}{2})
 Tout d'abord quelques rappels sur la fonction \emph{tangente} :
 \bea
 	\tan\alpha & = & \dfrac{\sin\alpha}{\cos\alpha} = \dfrac{e^{i\alpha} - e^{-i\alpha}}{i(e^{i\alpha} + e^{-i\alpha})} \nonumber \\
-	\tan'\alpha & = & \dfrac{1}{\cos^{2}\alpha} = 1 + \tan^{2}\alpha
+	\tan'\alpha & = & \dfrac{1}{\cos^{2}\alpha} = 1 + \tan^{2}\alpha \nonumber
 \eea
 
 \begin{figure}[htb!]
@@ -233,38 +233,38 @@ Tout d'abord quelques rappels sur la fonction \emph{tangente} :
 \end{figure}
 
 Les points d'arr\^et du mobile sont d\'efinis tels que $U = E = U_{0}\tan^{2}(\alpha x)$, soit $\tan(\alpha x) = \pm\sqrt(E/U_{0})$ :
-\be
+\benn
 	\begin{cases}
 		x_{1} = -\frac{1}{\alpha}\arctan\left(\sqrt{\dfrac{E}{U_{0}}}\right) \\
 		x_{2} = +\frac{1}{\alpha}\arctan\left(\sqrt{\dfrac{E}{U_{0}}}\right)
 	\end{cases}
-\ee
+\eenn
 car la fonction $\arctan$ est impaire. Par cons\'equence, la p\'eriode $\mathrm{T}$ s'\'ecrit \`a partir de l'\'equation (\ref{EQ:11_5}) :
 \bea
 	\mathrm{T}(E) & = & \sqrt{2m}\bigintsss_{-\frac{1}{\alpha}\arctan\left(\sqrt{\frac{E}{U_{0}}}\right)}^{\frac{1}{\alpha}\arctan\left(\sqrt{\frac{E}{U_{0}}}\right)}\dfrac{\mathrm{d}x}{\sqrt{E - U_{0}\tan^{2}(\alpha x)}} \nonumber \\
-	& = & 2\sqrt{\dfrac{2m}{E}}\bigintsss_{0}^{\frac{1}{\alpha}\arctan\left(\sqrt{\frac{E}{U_{0}}}\right)}\dfrac{\mathrm{d}x}{\sqrt{1 - \frac{U_{0}}{E}\tan^{2}(\alpha x)}}
+	& = & 2\sqrt{\dfrac{2m}{E}}\bigintsss_{0}^{\frac{1}{\alpha}\arctan\left(\sqrt{\frac{E}{U_{0}}}\right)}\dfrac{\mathrm{d}x}{\sqrt{1 - \frac{U_{0}}{E}\tan^{2}(\alpha x)}} \nonumber
 \eea
 car la fonction $\tan^{2}$ est paire.
 
 Toutefois, \`a partir de ce moment l\`a de la d\'emonstration, en posant :
-\be
+\benn
 	y = \sqrt{\dfrac{U_{0}}{E}}\tan(\alpha x)
-\ee
+\eenn
 je n'arrive pas \`a aller jusqu'au bout et trouver le r\'esultat annonc\'e par le livre, \`a savoir :
-\be
+\benn
 	\mathrm{T}(E) = \dfrac{\pi\sqrt{2m}}{\alpha\sqrt{(E + U_{0})}}
-\ee
+\eenn
 
 \section{Contraction de la fonction de Lagrange pour un syst\`eme de n + 1 particules}
 
 Consid\'erons un syst\`eme ferm\'e compos\'e de $n$ particules de masse $m$ dont chancune a pour rayon vecteur $\vec{R}_{a}$ et d'une particule de masse $M$ qui a pour rayon vecteur $\vec{R}$. Le fonction de Lagrange du syst\`eme s'\'ecrit alors :
-\be
+\benn
 	L = \dfrac{M}{2}\vec{\dot{R}}^{\,2} + \sum_{a=1}^{n}\dfrac{m}{2}\vec{\dot{R}}_{a}^{\,2} - U(\vec{R},\begin{Bmatrix}\vec{R}_{a}\end{Bmatrix}_{1}^{n})
-\ee
+\eenn
 En d\'efinissant $\vec{r}_{a} = \vec{R}_{a} - \vec{R}$ et en appliquant le centre de masse en tant qu'origine du syst\`eme de coordonn\'ees alors $M\vec{R} + \sum_{a}m\vec{R}_{a} = \vec{0}$, cela permet d'avancer :
 \bea
 	M\vec{R} + m\sum_{a}\vec{R}_{a} & = & \vec{0} \Leftrightarrow M\vec{R} + m\sum_{a}(\vec{r}_{a} - \vec{R}) = \vec{0} \nonumber \\
-	m\sum_{a}\vec{r}_{a} & = & -(M + nm)\vec{R} \Leftrightarrow \vec{R} = \dfrac{-m}{M + nm}\sum_{a}\vec{r}_{a}
+	m\sum_{a}\vec{r}_{a} & = & -(M + nm)\vec{R} \Leftrightarrow \vec{R} = \dfrac{-m}{M + nm}\sum_{a}\vec{r}_{a} \nonumber
 \eea
 La fonction de Lagrange \'ecrite plus haut peut alors se d\'evelopper en :
 \bea
@@ -274,9 +274,9 @@ La fonction de Lagrange \'ecrite plus haut peut alors se d\'evelopper en :
 	& = & \dfrac{m^{2}(M + nm)}{2(M + nm)^{2}}\left(\sum_{a}\vec{r}_{a}\right)^{2} + \dfrac{m}{2}\vec{\dot{r}}_{a}^{\,2} - \dfrac{m^{2}}{(M + nm)}\left(\sum_{a}\vec{r}_{a}\right)^{2} \nonumber
 \eea
 soit :
-\be
+\benn
 	L = \dfrac{m}{2}\vec{\dot{r}}_{a}^{\,2} - \dfrac{m^{2}}{2(M + nm)}\left(\sum_{a}\vec{r}_{a}\right)^{2} - U
-\ee
+\eenn
 Comme $U$ ne d\'epend que de la distance entre toutes les particules, elle peut s'\'ecrire comme une fonction de $\vec{r}_{a}$, la fonction de Lagrange d\'eduite se r\'esoud \`a celle de n particules.
 
 \section{Mouvement dans un champ central}
@@ -319,48 +319,48 @@ L'objectif des exercices ci-dessous est de trouver la solution g\'en\'erale par 
 \end{figure}
 
 La fonction de Lagrange en coordonn\'ees sph\'eriques s'\'ecrit, voir l'\'equation (\ref{EQ:4_6}), dans notre cas pr\'esent :
-\be
+\benn
 	L = \dfrac{m}{2}(\dot{l}^{2} + l^{2}\dot{\theta}^{2} + l^{2}\sin^{2}\theta\dot{\varphi}^{2}) + mgl\cos\theta
-\ee
+\eenn
 or la distance $l$ est constante dans le mouvement, donc nous pouvons smplifier :
-\be
+\benn
 	L = \dfrac{ml^{2}}{2}(\dot{\theta}^{2} + \sin^{2}\theta\dot{\varphi}^{2}) + mgl\cos\theta
-\ee
+\eenn
 La coordonn\'ee $\varphi$ n'appara\^it pas dans l'espression de la fonction de Lagrange, elle est donc une coordonn\'ee cyclique. Et il y a conservation de l'impulsion g\'en\'eralis\'ee telle que d\'ej\`a vu avec l'\'equation (\ref{EQ:14_2}), soit :
-\be
+\benn
 	p_{\varphi} = M_{z} = m(l\sin\theta)^{2}\dot{\varphi} = cste
-\ee
+\eenn
 L'\'energie de la particule peut donc s'\'ecrire :
 \bea
 	E &= & T + U = \dfrac{ml^{2}}{2}(\dot{\theta}^{2} + \sin^{2}\theta\dot{\varphi}^{2}) - mgl\cos\theta \nonumber \\
-	& = & \dfrac{ml^{2}}{2}\dot{\theta}^{2} + \dfrac{ml^{2}}{2}\dfrac{\sin^{2}\theta M_{z}^{2}}{m^{2}l^{4}\sin^{4}\theta} - mgl\cos\theta = \dfrac{ml^{2}}{2}\dot{\theta}^{2} + \dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta
+	& = & \dfrac{ml^{2}}{2}\dot{\theta}^{2} + \dfrac{ml^{2}}{2}\dfrac{\sin^{2}\theta M_{z}^{2}}{m^{2}l^{4}\sin^{4}\theta} - mgl\cos\theta = \dfrac{ml^{2}}{2}\dot{\theta}^{2} + \dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta \nonumber
 \eea
 et nous pouvons continuer tel que :
 \bea
 	\dot{\theta} = \dfrac{\mathrm{d}\theta}{\mathrm{dt}} & = & \sqrt{\dfrac{2}{ml^{2}}\left(E - \left(\dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta\right)\right)} \nonumber \\
 	\Leftrightarrow \mathrm{dt} & = & \dfrac{\mathrm{d}\theta}{\sqrt{\dfrac{2}{ml^{2}}\left(E - U_{eff}(\theta)\right)}} \nonumber \\
-	\mathrm{t} & = & \int{\dfrac{\mathrm{d}\theta}{\sqrt{\dfrac{2}{ml^{2}}\left(E - U_{eff}(\theta)\right)}}}
+	\mathrm{t} & = & \int{\dfrac{\mathrm{d}\theta}{\sqrt{\dfrac{2}{ml^{2}}\left(E - U_{eff}(\theta)\right)}}} \nonumber
 \eea
 Nous avons donc la relation entre $\mathrm{r}$ et $\theta$ qui se trouve \^etre une int\'egrale elliptique de premi\`ere esp\`ece d\'efinie ici avec :
-\be
+\benn
 	U_{eff}(\theta) = \dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta
-\ee
+\eenn
 
 Ensuite, nous avons $M_{z} = m(l\sin\theta)^{2}\dot{\varphi}$ qui permet d'arriver \`a :
-\be
+\benn
 	\mathrm{dt} = \dfrac{ml^{2}}{M_{z}}\sin^{2}\theta\mathrm{d}\varphi
-\ee
+\eenn
 Connaissant $\mathrm{dt}$ en fonction de $\theta$, nous pouvons exprimer $\varphi$ telle que :
 \bea
 	\mathrm{d}\varphi & = & \dfrac{M_{z}\mathrm{d}\theta}{ml^{2}\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}} = \dfrac{M_{z}}{l\sqrt{2m}}\dfrac{\mathrm{d}\theta}{\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}} \nonumber \\
-	\varphi & = & \dfrac{M_{z}}{l\sqrt{2m}}\bigintss{\dfrac{\mathrm{d}\theta}{\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}}}
+	\varphi & = & \dfrac{M_{z}}{l\sqrt{2m}}\bigintss{\dfrac{\mathrm{d}\theta}{\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}}} \nonumber
 \eea
 Nous avons ici la relation entre $\varphi$ et $\theta$ qui est une int\'egrale elliptique de troisi\`eme esp\`ece. $\theta$ varie telle que $E - U_{eff}(\theta) > 0$ et ses valeurs limites se d\'efinissent telles que $E = U_{eff}(\theta)$, soit :
 \bea
 	E & = & \dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta \nonumber \\
 	\Leftrightarrow lE(1-\cos^{2}\theta) & = & \dfrac{M_{z}^{2}}{2ml} - mgl^{2}(1-\cos^{2}\theta)\cos\theta \nonumber \\
 	\Leftrightarrow lE - lE\cos^{2}\theta & = & \dfrac{M_{z}^{2}}{2ml} - mgl^{2}\cos\theta + mgl^{2}\cos^{3}\theta \nonumber \\
-	\Leftrightarrow mgl^{2}\cos^{3}\theta + lE\cos^{2}\theta - mgl^{2}\cos\theta + \dfrac{M_{z}^{2}}{2ml} - lE & = & 0
+	\Leftrightarrow mgl^{2}\cos^{3}\theta + lE\cos^{2}\theta - mgl^{2}\cos\theta + \dfrac{M_{z}^{2}}{2ml} - lE & = & 0 \nonumber
 \eea
 est une \'equation du troisi\`eme degr\'e en $\cos\theta$ qui a implicitement deux racines dans l'intervalle $\left]-1;1\right[$. Il existe donc deux angles $\theta_{min}$ et $\theta_{max}$ qui d\'efinissent deux cercles respectifs entre lesqueles toute la trajectoire de la particule est comprise.
 
@@ -395,62 +395,62 @@ est une \'equation du troisi\`eme degr\'e en $\cos\theta$ qui a implicitement de
 \end{figure}
 
 Dans le r\'ef\'erentiel dont l'origine est plac\'e \`a la pointe du c\^one et dont l'axe polaire est point\'e vers le haut et co\"incide avec l'axe du c\^one, la fonction de Lagrange s'\'ecrit naturellement :
-\be
+\benn
 	L = \dfrac{m}{2}(\dot{r}^{2} + r^{2}\sin^{2}\alpha\dot{\varphi}^{2}) - mgr\cos\alpha
-\ee
+\eenn
 La coordonn\'ee $\varphi$ est cyclique et permet d'\'ecrire, comme dans l'exercice pr\'ec\'edent, que :
-\be
+\benn
 	p_{\varphi} = M_{z} = mr^{2}\sin^{2}\alpha\dot{\varphi}
-\ee
+\eenn
 L'\'energie de la particule vaut :
 \bea
 	E & = & \dfrac{m}{2}(\dot{r}^{2} + r^{2}\sin^{2}\alpha\dot{\varphi}^{2}) + mgr\cos\alpha = \dfrac{m}{2}\dot{r}^{2} + \dfrac{m}{2}r^{2}\sin^{2}\alpha\dfrac{M_{z}^{2}}{m^{2}r^{4}\sin^{4}\alpha} + mgr\cos\alpha \nonumber \\
-	& = & \dfrac{m}{2}\dot{r}^{2} + \dfrac{M_{z}^{2}}{2mr^{2}\sin^{2}\alpha} + mgr\cos\alpha
+	& = & \dfrac{m}{2}\dot{r}^{2} + \dfrac{M_{z}^{2}}{2mr^{2}\sin^{2}\alpha} + mgr\cos\alpha \nonumber
 \eea
 Et par cons\'equent :
 \bea
 	\dot{r} = \dfrac{\mathrm{d}r}{\mathrm{dt}} & = & \sqrt{\dfrac{2}{m}\left(E - \left(\dfrac{M_{z}^{2}}{2mr^{2}\sin^{2}\alpha} + mgr\cos\alpha\right)\right)} \nonumber \\
-	\Leftrightarrow \mathrm{dt} & = & \dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}} \Leftrightarrow \mathrm{t} = \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}}}
+	\Leftrightarrow \mathrm{dt} & = & \dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}} \Leftrightarrow \mathrm{t} = \int{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}}} \nonumber
 \eea
 avec :
-\be
+\benn
 	U_{eff}(r) = \dfrac{M_{z}^{2}}{2mr^{2}\sin^{2}\alpha} + mgr\cos\alpha
-\ee
+\eenn
 De plus, comme $M_{z} = mr^{2}\sin^{2}\alpha\dot{\varphi}$, alors :
-\be
+\benn
 	\mathrm{dt} = \dfrac{mr^{2}sin^{2}\alpha}{M_{z}}\mathrm{d}\varphi
-\ee
+\eenn
 Soit :
 \bea
 	\dfrac{mr^{2}sin^{2}\alpha}{M_{z}}\mathrm{d}\varphi & = & \dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}} \nonumber \\
 	\Leftrightarrow \mathrm{d}\varphi & = & \dfrac{M_{z}}{mr^{2}sin^{2}\alpha}\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}} \nonumber \\
 	\mathrm{d}\varphi & = & \dfrac{M_{z}}{\sqrt{2m}\sin^{2}\alpha}\dfrac{\mathrm{d}r}{r^{2}\sqrt{E - U_{eff}(r)}} \nonumber \\
-	\varphi & = & \dfrac{M_{z}}{\sqrt{2m}\sin^{2}\alpha}\bigintsss{\dfrac{\mathrm{d}r}{r^{2}\sqrt{E - U_{eff}(r)}}}
+	\varphi & = & \dfrac{M_{z}}{\sqrt{2m}\sin^{2}\alpha}\bigintsss{\dfrac{\mathrm{d}r}{r^{2}\sqrt{E - U_{eff}(r)}}} \nonumber
 \eea
 
 Les limites de $r$ sont d\'efinies telles que $E = U_{eff}(r)$, i.e. :
 \bea
 	E & = & \dfrac{M_{z}^{2}}{2mr^{2}\sin^{2}\alpha} + mgr\cos\alpha \nonumber \\
 	\Leftrightarrow  Er^{2} & = & \dfrac{M_{z}^{2}}{2m\sin^{2}\alpha} + mgr^{3}\cos\alpha \nonumber \\
-	\Leftrightarrow r^{2}(mgr\cos\alpha  - E) & = & -\dfrac{M_{z}^{2}}{2m\sin^{2}\alpha} < 0
+	\Leftrightarrow r^{2}(mgr\cos\alpha  - E) & = & -\dfrac{M_{z}^{2}}{2m\sin^{2}\alpha} < 0 \nonumber
 \eea
 car $\alpha \in ]0;\frac{\pi}{2}[$. Et comme $r^{2} > 0$, alors c'est la quantit\'e $mgr\cos\alpha  - E$ qui doit \^etre n\'egative, soit $r < \frac{E}{mg\cos\alpha}$. La derni\`ere \'equation est aussi une \'equation du troisi\`eme degr\'e en $r$ qui a au moins deux racines positives. Elles d\'eterminent les deux cercles horizontaux entre lesquels la particule se meut.
 
 \subsection{Cas du pendule plan avec le point de suspension mobile}
 
 Ici, nous reprenons le cas pr\'esent\'e sur la figure (\ref{FIG:1_2}) o\`u la fonction de Lagrange a d\'ej\`a \'et\'e calcul\'ee :
-\be
+\benn
 	L = \dfrac{m_{1} + m_{2}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(l^{2}\dot{\varphi}^{2} + 2l\cos\varphi\dot{x}\dot{\varphi}\right) + m_{2}gl\cos\varphi
-\ee
+\eenn
 La coordonn\'ee $x$ n'appara\^it pas dans la fonction de Lagrange et est donc une coordonn\'ee cyclique qui permet de conclure la constance dans le mouvement de l'impulsion g\'en\'eralis\'ee $p_{x}$ qui se d\'efinit ainsi\footnote{Dans ce cas, il n'y a pas de rotation donc l\'energie cin\'etique est \'evidemment nulle.} :
-\be
+\benn
 	p_{x} = \dfrac{\partial L}{\partial\dot{x}} = (m_{1} + m_{2})\dot{x} + 2l\dfrac{m_{2}}{2}\dot{\varphi}\cos\varphi = (m_{1} + m_{2})\dot{x} + m_{2}l\dot{\varphi}\cos\varphi = cste
-\ee
+\eenn
 
 Pour le mouvement du centre d'inertie du syst\`eme suivant l'horizontale, il y a $p_{x} = 0$ puisqu'il est immobile, au repos et permet d'\'ecrire :
-\be
+\benn
 	\dot{x} = \dfrac{-m_{2}l\dot{\varphi}\cos\varphi}{(m_{1} + m_{2})}
-\ee
+\eenn
 L'\'energie du syst\`eme est :
 \bea
 	E & = & \dfrac{(m_{1} + m_{2})}{2}\dfrac{m_{2}^{2}l^{2}\dot{\varphi}^{2}\cos^{2}\varphi}{(m_{1} + m_{2})^{2}} + \dfrac{m_{2}}{2}\left(l^{2}\dot{\varphi}^{2} - \dfrac{2m_{2}l^{2}\cos^{2}\varphi\dot{\varphi}^{2}}{(m_{1} + m_{2})}\right) - m_{2}gl\cos\varphi \nonumber \\
@@ -461,19 +461,19 @@ et permet de d\'eterminer une solution g\'en\'erale :
 \bea
 	\Leftrightarrow \dot{\varphi} = \dfrac{\mathrm{d}\varphi}{\mathrm{dt}} & = & \sqrt{\dfrac{2}{m_{2}l^{2}}\dfrac{E + m_{2}gl\cos\varphi}{\left(1 - \dfrac{m_{2}\cos^{2}\varphi}{(m_{1} + m_{2})}\right)}} \nonumber \\
 	\Leftrightarrow \mathrm{dt} & = & l\sqrt{\dfrac{m_{2}}{2}}\dfrac{\mathrm{d}\varphi}{\sqrt{\dfrac{(m_{1} + m_{2})(E + m_{2}gl\cos\varphi)}{m_{1} + m_{2} - m_{2} + m_{2}\cos^{2}\varphi}}} = l\sqrt{\dfrac{m_{2}}{m_{1} + m_{2}}}\dfrac{m_{1} + m_{2}\cos^{2}\varphi}{\sqrt{E + m_{2}gl\cos\varphi}}\mathrm{d}\varphi \nonumber \\
-	\Leftrightarrow \mathrm{t} & = & l\sqrt{\dfrac{m_{2}}{m_{1} + m_{2}}}\bigintsss{\dfrac{m_{1} + m_{2}\cos^{2}\varphi}{\sqrt{E + m_{2}gl\cos\varphi}}\mathrm{d}\varphi}
+	\Leftrightarrow \mathrm{t} & = & l\sqrt{\dfrac{m_{2}}{m_{1} + m_{2}}}\bigintsss{\dfrac{m_{1} + m_{2}\cos^{2}\varphi}{\sqrt{E + m_{2}gl\cos\varphi}}\mathrm{d}\varphi} \nonumber
 \eea
 Remarquons enfin, en int\'egrant $p_{x} = 0 \Rightarrow (m_{1} + m_{2})x + m_{2}l\sin\varphi = K$ avec K une constante par rapport au temps. Or :
-\be
+\benn
 	\begin{cases}
 		x_{2} = x + l\sin\varphi \\
 		y_{2} = l\cos\varphi
 	\end{cases}
-\ee
+\eenn
 soit :
 \bea
 	\Leftrightarrow	x_{2} & = & \dfrac{K-m_{2}l\sin\varphi}{(m_{1} + m_{2})} + l\sin\varphi = \dfrac{K}{(m_{1} + m_{2})} + l\left(1 - \dfrac{m_{2}}{(m_{1} + m_{2})}\right)\sin\varphi \nonumber \\
-	& = & \dfrac{K}{(m_{1} + m_{2})} + \dfrac{m_{1}l}{(m_{1} + m_{2})}\sin\varphi
+	& = & \dfrac{K}{(m_{1} + m_{2})} + \dfrac{m_{1}l}{(m_{1} + m_{2})}\sin\varphi \nonumber
 \eea
 L'ensemble des positions issues de $x_{2}$ et $y_{2}$ d\'efinissent une portion d'ellipse de demi-axe horizontal $\frac{m_{1}l}{(m_{1} + m_{2})}$ et de demi-axe verticale $l$.
 
@@ -482,25 +482,25 @@ L'ensemble des positions issues de $x_{2}$ et $y_{2}$ d\'efinissent une portion 
 \subsection{Repr\'esentation param\'trique pour $U = -\alpha/r$ et $E = 0$}
 
 Nous sommes dans le cas parabolique o\`u $e = 1$ et $p = \dfrac{M^{2}}{m\alpha}$. La relation (\ref{EQ:14_6}) donne dans notre cas pr\'ecis :
-\be
+\benn
 	\mathrm{t} = \bigintss{\dfrac{r\mathrm{d}r}{\sqrt{\dfrac{2\alpha}{m}r - \dfrac{M^{2}}{m}}}}
-\ee
+\eenn
 En posant :
-\be
+\benn
 	\begin{cases}
 		r = \dfrac{M^{2}}{2m\alpha}(1 + \eta^{2}) \\
 		\mathrm{d}r = \dfrac{M^{2}}{m\alpha}\eta\mathrm{d}\eta
 	\end{cases}
-\ee
+\eenn
 nous pouvons \'ecrire :
 \bea
 	\mathrm{t} & = & \bigintss{\dfrac{\dfrac{M^{2}}{2m\alpha}(1 + \eta^{2})\dfrac{M^{2}}{m\alpha}\eta\mathrm{d}\eta}{\sqrt{\dfrac{2\alpha}{m}\dfrac{M^{2}}{2m\alpha}(1 + \eta^{2}) - \dfrac{M^{2}}{m^{2}}}}} = \bigintss{\dfrac{\dfrac{M^{4}}{2m^{2}\alpha^{2}}(1 + \eta^{2})\eta\mathrm{d}\eta}{\sqrt{\dfrac{M^{2}}{m^{2}}(1 + \eta^{2}) - \dfrac{M^{2}}{m^{2}}}}} \nonumber \\
-	& = & \bigintss{\dfrac{\dfrac{M^{4}}{2m^{2}\alpha^{2}}(1 + \eta^{2})\eta\mathrm{d}\eta}{\dfrac{M}{m}\eta}} = \dfrac{M^{3}}{2m\alpha^{2}}\int{(1 + \eta^{2})\mathrm{d}\eta}
+	& = & \bigintss{\dfrac{\dfrac{M^{4}}{2m^{2}\alpha^{2}}(1 + \eta^{2})\eta\mathrm{d}\eta}{\dfrac{M}{m}\eta}} = \dfrac{M^{3}}{2m\alpha^{2}}\int{(1 + \eta^{2})\mathrm{d}\eta} \nonumber
 \eea
 or :
 \bea
 	p & = & \dfrac{M^{2}}{m\alpha} \Leftrightarrow p^{3} =  \dfrac{M^{6}}{m^{3}\alpha^{3}} \Leftrightarrow \dfrac{mp^{3}}{\alpha} = \dfrac{M^{6}}{m^{2}\alpha^{2}} \nonumber \\
-	\Leftrightarrow \sqrt{\dfrac{mp^{3}}{\alpha}} & = &  \dfrac{M^{3}}{m\alpha}
+	\Leftrightarrow \sqrt{\dfrac{mp^{3}}{\alpha}} & = &  \dfrac{M^{3}}{m\alpha} \nonumber
 \eea
 
 \begin{figure}[htb!]
@@ -513,17 +513,17 @@ or :
 Nous arrivons donc \`a exprimer :
 \bea
 	\mathrm{t} & = & \dfrac{1}{2}\sqrt{\dfrac{mp^{3}}{\alpha}}\int{(1 + \eta^{2})\mathrm{d}\eta} \Leftrightarrow \mathrm{t} = \dfrac{1}{2}\sqrt{\dfrac{mp^{3}}{\alpha}}\left(\eta + \dfrac{\eta^{3}}{3}\right) \nonumber \\
-	\Leftrightarrow \mathrm{t} & = & \sqrt{\dfrac{mp^{3}}{\alpha}}\dfrac{\eta}{2}\left(1 + \dfrac{\eta^{2}}{3}\right)
+	\Leftrightarrow \mathrm{t} & = & \sqrt{\dfrac{mp^{3}}{\alpha}}\dfrac{\eta}{2}\left(1 + \dfrac{\eta^{2}}{3}\right) \nonumber
 \eea
 Nous posons $x = r\cos\varphi$ et sachant (\ref{EQ:15_5}), nous avons :
 \bea
 	p + r & = & ex \Leftrightarrow x = p - \dfrac{p}{2}(1 + \eta^{2}) \nonumber \\
-	\Leftrightarrow x & = & \dfrac{p}{2}(1 + \eta^{2})
+	\Leftrightarrow x & = & \dfrac{p}{2}(1 + \eta^{2}) \nonumber
 \eea
 et avec $y^{2} = r^{2} - x^{2}$ :
 \bea
 	y^{2} & = & \dfrac{p^{2}}{4}(1 + \eta^{4} + 2\eta^{2}) - \dfrac{p^{2}}{4}(1 + \eta^{4} - 2\eta^{2}) = 4\eta^{2}\dfrac{p^{2}}{4} \nonumber \\
-	\Leftrightarrow y & = & p\eta
+	\Leftrightarrow y & = & p\eta \nonumber
 \eea
 avec $\eta \in ]-\infty ; +\infty[$. Sur la figure (\ref{FIG:3_15_EX1}), des exemples de trajectoire sont pr\'esent\'ees.
 
@@ -532,15 +532,15 @@ avec $\eta \in ]-\infty ; +\infty[$. Sur la figure (\ref{FIG:3_15_EX1}), des exe
 La relation (\ref{EQ:14_6}) donne dans ce cas pr\'ecis :
 \bea
 	\mathrm{t} & = & \bigintss{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r^{2}}\right) - \dfrac{M^{2}}{mr^{2}}}}} = \bigintss{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2E}{m} + \left(\dfrac{2\alpha}{m} - \dfrac{M^{2}}{m^{2}}\right)\dfrac{1}{r^{2}}}}} = \bigintss{\dfrac{r\mathrm{d}r}{\sqrt{\dfrac{2E}{m}r^{2} + \left(\dfrac{2\alpha}{m} - \dfrac{M^{2}}{m^{2}}\right)}}} \nonumber \\
-	& = & \dfrac{m}{2E}\bigintss{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} + \dfrac{\alpha}{E} - \dfrac{M^{2}}{2mE}}}}
+	& = & \dfrac{m}{2E}\bigintss{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} + \dfrac{\alpha}{E} - \dfrac{M^{2}}{2mE}}}} \nonumber
 \eea
 En posant :
-\be
+\benn
 	\begin{cases}
 		u = r^{2} + \dfrac{\alpha}{E} - \dfrac{M^{2}}{2mE} \\
 		\mathrm{d}u = 2r\mathrm{d}r
 	\end{cases}
-\ee
+\eenn
 nous pouvons \'ecrire :
 \bea
 	\mathrm{t} & = & \dfrac{m}{2E}\int{\dfrac{\mathrm{d}u}{2\sqrt{u}}} = \dfrac{m}{2E}\sqrt{u} = \dfrac{m}{2E}\sqrt{r^{2} + \dfrac{\alpha}{E} - \dfrac{M^{2}}{2mE}} \nonumber \\
@@ -558,16 +558,16 @@ Pour passer \`a la suite, il faut envisager trois cas diff\'erents.
 \subsubsection{Cas $E > 0$ et $M^{2} > 2m\alpha$}
 
 Le fait que l'\'energie $E$ soit positive permet d'\'ecrire la quantit\'e $\sqrt{E}$, ains l'\'equation (\ref{EQ:15_EX2_1}) se d\'eveloppe en :
-\be
+\benn
 	\varphi = \dfrac{M}{\sqrt{2mE}}\bigintss{\dfrac{\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{M^{2} - 2m\alpha}{2mEr^{2}}}}}
-\ee
+\eenn
 De plus, parce que nous avons suppos\'e $M^{2} > 2m\alpha$, nous pouvons faire la substitution suivante :
-\be
+\benn
 	\begin{cases}
 		u = \sqrt{\dfrac{M^{2} - 2m\alpha}{2mE}}\dfrac{1}{r} \\
 		\mathrm{d}u = -\sqrt{\dfrac{M^{2} - 2m\alpha}{2mE}}\dfrac{1}{r^{2}}\mathrm{d}r
 	\end{cases}
-\ee
+\eenn
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -578,27 +578,27 @@ De plus, parce que nous avons suppos\'e $M^{2} > 2m\alpha$, nous pouvons faire l
 La variable $\varphi$ devient, avec l'apparition d'un signe n\'egatif car $u$ est inversement proportionnel \`a $r$ donc nous avons \`a inverser les bornes de l'int\'egrale :
 \bea
 	\varphi & = & -\dfrac{M}{\sqrt{2mE}}\bigintsss{\dfrac{-\sqrt{2mE}\mathrm{d}u}{\sqrt{M^{2} - 2m\alpha}\sqrt{1 - u^{2}}}} = -\dfrac{M}{\sqrt{M^{2} - 2m\alpha}}\bigintsss{\dfrac{-\mathrm{d}u}{\sqrt{1 - u^{2}}}} \nonumber \\
-	& = & \dfrac{1}{\sqrt{1 - \dfrac{2m\alpha}{M^{2}}}}\arccosh\left(-\sqrt{\dfrac{M^{2} - 2m\alpha}{2mE}}\dfrac{1}{r}\right)
+	& = & \dfrac{1}{\sqrt{1 - \dfrac{2m\alpha}{M^{2}}}}\arccosh\left(-\sqrt{\dfrac{M^{2} - 2m\alpha}{2mE}}\dfrac{1}{r}\right) \nonumber
 \eea
 ou encore :
-\be
+\benn
 	\dfrac{1}{r} = \dfrac{2mE}{M^{2} - 2m\alpha}\cos\left(-\varphi\sqrt{1 - \dfrac{2m\alpha}{M^{2}}}\right) \Leftrightarrow \dfrac{1}{r} = \dfrac{2mE}{M^{2} - 2m\alpha}\cos\left(\varphi\sqrt{1 - \dfrac{2m\alpha}{M^{2}}}\right)
-\ee
+\eenn
 car la fonction $\cos$ est paire. Certaines solutions sont repr\'esent\'ees sur la figure (\ref{FIG:3_15_EX2A}).
 
 \subsubsection{Cas $E > 0$ et $M^{2} < 2m\alpha$}
 
 Dans le cas o\`u $M^{2} < 2m\alpha \Leftrightarrow 2m\alpha - M^{2} > 0$ permet d'\'ecrire la relation (\ref{EQ:15_EX2_1}) ainsi :
-\be
+\benn
 	\varphi = \dfrac{M}{\sqrt{2mE}}\bigintss{\dfrac{\mathrm{d}r}{r^{2}\sqrt{1 + \dfrac{2m\alpha - M^{2}}{2mEr^{2}}}}}
-\ee
+\eenn
 En posant :
-\be
+\benn
 	\begin{cases}
 		u = \sqrt{\dfrac{2m\alpha - M^{2}}{2mE}}\dfrac{1}{r} \\
 		\mathrm{d}u = -\sqrt{\dfrac{2m\alpha - M^{2}}{2mE}}\dfrac{1}{r^{2}}\mathrm{d}r
 	\end{cases}
-\ee
+\eenn
 La variable $\varphi$ devient avec l'apparition d'un signe n\'egatif car $u$ est inversement proportionnel \`a $r$ donc nous inversons les bornes de l'int\'egrale :
 \be
 	\varphi = -\dfrac{M}{\sqrt{2mE}}\bigintss{-\dfrac{\sqrt{\dfrac{2m\alpha - M^{2}}{2mE}}\mathrm{d}u}{\sqrt{1 + u^{2}}}} = \sqrt{\dfrac{M^{2}}{2m\alpha - M^{2}}}\bigintsss{\dfrac{\mathrm{d}u}{\sqrt{1 + u^{2}}}}
@@ -623,23 +623,23 @@ Des repr\'esentations de trajectoires param\'etriques pour cette solution sont r
 Dans le cas o\`u $M^{2} > 2m\alpha \Leftrightarrow M^{2} - 2m\alpha > 0$ permet d'\'ecrire la relation (\ref{EQ:14_7}) ainsi :
 \bea
 	\varphi & = & \bigintss{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r^{2}}\right) - \dfrac{M^{2}}{r^{2}}}}} = \bigintss{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{-\dfrac{2}{m}\lvert E \rvert + (2m\alpha - M^{2})\dfrac{1}{r^{2}}}}} \nonumber \\
-	& = & \dfrac{M}{2m\lvert E \rvert}\bigintss{\dfrac{\mathrm{d}r}{\dfrac{1}{r^{2}}\left(\dfrac{2m\alpha - M^{2}}{2m\lvert E \rvert}\right) - 1}}
+	& = & \dfrac{M}{2m\lvert E \rvert}\bigintss{\dfrac{\mathrm{d}r}{\dfrac{1}{r^{2}}\left(\dfrac{2m\alpha - M^{2}}{2m\lvert E \rvert}\right) - 1}} \nonumber
 \eea
 et parce que l'\'energie est n\'egative obligeant \`a \'ecrire $E = -\lvert E \rvert$. En posant :
-\be
+\benn
 	\begin{cases}
 		u = \sqrt{\dfrac{2m\alpha - M^{2}}{2m\lvert E \rvert}}\dfrac{1}{r} \\
 		\mathrm{d}u = -\sqrt{\dfrac{2m\alpha - M^{2}}{2m\lvert E \rvert}}\dfrac{1}{r^{2}}\mathrm{d}r
 	\end{cases}
-\ee
+\eenn
 La variable $\varphi$ devient avec l'apparition d'un signe n\'egatif car $u$ est inversement proportionnel \`a $r$ donc nous inversons les bornes de l'int\'egrale :
-\be
+\benn
 	\varphi = -\dfrac{M}{\sqrt{2mE}}\bigintss{-\dfrac{\sqrt{\dfrac{2m\alpha - M^{2}}{2m\lvert E \rvert}}\mathrm{d}u}{\sqrt{u^{2} - 1}}} = \sqrt{\dfrac{M^{2}}{2m\alpha - M^{2}}}\bigintsss{\dfrac{\mathrm{d}u}{\sqrt{u^{2} - 1}}}
-\ee
+\eenn
 or $\arccosh'u = \dfrac{1}{\sqrt{u^{2} - 1}}$ donc :
 \bea
 	\sqrt{\dfrac{2m\alpha}{M^{2}} - 1}\varphi & = & \arccosh\left(\sqrt{\dfrac{2m\alpha - M^{2}}{2m\lvert E\rvert }}\dfrac{1}{r}\right) \nonumber \\
-	\Leftrightarrow \dfrac{1}{r} & = & \dfrac{2m\lvert E \rvert}{2m\alpha - M^{2}}\cosh\left(\varphi\sqrt{\dfrac{2m\alpha}{M^{2}} - 1}\right)
+	\Leftrightarrow \dfrac{1}{r} & = & \dfrac{2m\lvert E \rvert}{2m\alpha - M^{2}}\cosh\left(\varphi\sqrt{\dfrac{2m\alpha}{M^{2}} - 1}\right) \nonumber
 \eea
 
 \begin{figure}[htb!]
@@ -651,9 +651,9 @@ or $\arccosh'u = \dfrac{1}{\sqrt{u^{2} - 1}}$ donc :
 Des repr\'esentations de trajectoires param\'etriques pour cette solution sont repr\'esent\'ees sur la figure (\ref{FIG:3_15_EX2C}).
 
 Dans les deux derniers \'etudi\'es, il est int\'eressant de notre que quand $\varphi \rightarrow +\infty$ alors $\frac{1}{r} \rightarrow +\infty$ et donc $r \rightarrow 0$. En s'appuyant sur l'\'equation (\ref{EQ:15_EX2_2}), le temps mis par la particule pour chuter de $r$ \`a 0 vaut :
-\be
+\benn
 	\Delta\mathrm{t} = \mathrm{t}(r) - \mathrm{t}(0) = \dfrac{m}{2}\dfrac{1}{E}\left(\sqrt{Er^{2} + \alpha - \dfrac{M^{2}}{2m}} - \sqrt{\alpha - \dfrac{M^{2}}{2m}}\right)
-\ee
+\eenn
 il s'agit d'une valeur finie.
 
 \subsection{Perturbation dans l'\'energie potentielle}
@@ -661,42 +661,42 @@ il s'agit d'une valeur finie.
 En perturbant l'\'energie potentielle $\frac{-\alpha}{r}$ avec une petite quantit\'e $\delta U$, d\'eterminons le d\'ecalage angulaire du p\'erih\'elie de la trajectoire \`a chaque r\'evolution, soit $\delta\varphi$. Cette quantit\'e est d\'efinie quand la particule va de $r_{min}$ \`a $r_{maw}$ pour finalement revenir \`a $r_{min}$.
 
 L'\'equation (\ref{EQ:14_10}) est :
-\be
+\benn
 	\Delta\varphi = 2\bigintsss_{r_{min}}^{r_{max}}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}}
-\ee
+\eenn
 En remarquant que :
-\be
+\benn
 	\dfrac{\partial}{\partial M}\left(\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}\mathrm{d}r\right) = \dfrac{\dfrac{-2M}{2r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}
-\ee
+\eenn
 alors :
 \bea
 	\Delta\varphi & = & -2\dfrac{\partial}{\partial M}\left(\bigintsss_{r_{min}}^{r_{max}}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}\right) \nonumber \\
-	& = & -2\dfrac{\partial}{\partial M}\left(\bigintsss_{r_{min}}^{r_{max}}{\sqrt{2m(E + \dfrac{\alpha}{r} - \delta U) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}\right)
+	& = & -2\dfrac{\partial}{\partial M}\left(\bigintsss_{r_{min}}^{r_{max}}{\sqrt{2m(E + \dfrac{\alpha}{r} - \delta U) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}\right) \nonumber
 \eea
 R\'ealisons le d\'eveloppement limit\'e de $\Delta\varphi$ \`a l'ordre 0 :
-\be
+\benn
 	\Delta\varphi_{0} = -2\dfrac{\partial}{\partial M}\left(\bigintsss_{r_{min}}^{r_{max}}{\sqrt{2m(E + \dfrac{\alpha}{r}) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}\right)
-\ee
+\eenn
 Nous sommes dans le cas d'une trajectoire finie comme pr\'esent\'ee sur la figure (\ref{FIG:3_9}). L'ordre 0 correspond ainsi \`a la composante elliptique avec, comme pour l'\'equation (\ref{EQ:15_5}), \`a savoir $p/r = 1 + e\cos\varphi$. Les relations (\ref{EQ:15_7}) permettent d'obtenir :
 \bea
 	r_{min} & = & \dfrac{p}{1 + e} \Leftrightarrow 1 + e = 1 + e\cos\varphi_{min} \nonumber \\
 	\Leftrightarrow \cos\varphi_{min} & = & 1 \Rightarrow \varphi_{min} = 0 \nonumber \\
 	r_{max} & = & \dfrac{p}{1 - e} \Leftrightarrow 1 - e = 1 + e\cos\varphi_{max} \nonumber \\
-	\Leftrightarrow \cos\varphi_{max} & = & -1 \Rightarrow \varphi_{max} = \pi
+	\Leftrightarrow \cos\varphi_{max} & = & -1 \Rightarrow \varphi_{max} = \pi \nonumber
 \eea
 Nous pouvons en conclure que $\Delta\varphi_{0} = -2\pi$. Le terme d'ordre 1 peut s'identifier \`a $\delta\varphi = \Delta\varphi_{1}$. Il se calcule ainsi :
 \bea
 	\Delta\varphi_{1} & = & -2\dfrac{\partial}{\partial M}\left(\bigintss_{r_{min}}^{r_{max}}{\dfrac{-\dfrac{1}{2}2m\delta U\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \frac{M^{2}}{r^{2}}}}}\right) \nonumber \\
-	& = & \dfrac{\partial}{\partial M}\left(\bigintss_{r_{min}}^{r_{max}}{\dfrac{2m\delta U\mathrm{d}r}{\sqrt{2m(E + \dfrac{\alpha}{r}) - \frac{M^{2}}{r^{2}}}}}\right)
+	& = & \dfrac{\partial}{\partial M}\left(\bigintss_{r_{min}}^{r_{max}}{\dfrac{2m\delta U\mathrm{d}r}{\sqrt{2m(E + \dfrac{\alpha}{r}) - \frac{M^{2}}{r^{2}}}}}\right) \nonumber
 \eea
 Or dans le cadre d'une trajectoire non perturb\'ee, l'\'equation (\ref{EQ:14_7}) est :
-\be
+\benn
 	\mathrm{d}\varphi = \dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m\left(E + \dfrac{\alpha}{r}\right) - \frac{M^{2}}{r^{2}}}}
-\ee
+\eenn
 donc, nous pouvons reprendre avec $r = r_{min} \Leftrightarrow \varphi = 0$ et $r = r_{max} \Leftrightarrow \varphi = \pi$ et \'ecrire :
 \bea
 	\delta\varphi & = & \dfrac{\partial}{\partial M}\left(\int_{0}^{\pi}{\delta U\dfrac{2mr^{2}}{M}\mathrm{d}\varphi}\right) = \dfrac{\partial}{\partial M}\left(\dfrac{2mr^{2}}{M}\int_{0}^{\pi}{r^{2}\delta U\mathrm{d}\varphi}\right) = \dfrac{\partial}{\partial M}\left(\dfrac{2mr^{2}}{M}r^{2}\delta U\pi\right) \nonumber \\
-	& = & -\dfrac{2mr^{2}\delta U\pi}{M^{2}}
+	& = & -\dfrac{2mr^{2}\delta U\pi}{M^{2}} \nonumber
 \eea
 
 Dans le cas o\`u $\delta U = \dfrac{\beta}{r^{2}}$ alors $\delta\varphi = -\dfrac{2\pi\beta m}{M^{2}} = -\dfrac{2\pi\beta}{\alpha p}$ avec $p = \dfrac{M^{2}}{m\alpha}$ via l'utilisation de la relation (\ref{EQ:15_4}).
@@ -705,5 +705,5 @@ Dans le cas o\`u $\delta U = \dfrac{\gamma}{r^{3}} \Leftrightarrow r^{2}\delta U
 \bea
 	\delta\varphi & = & \dfrac{\partial}{\partial M}\left(\dfrac{2m}{M}\int_{0}^{\pi}{\dfrac{\gamma}{r}\mathrm{d}\varphi}\right) = \dfrac{\partial}{\partial M}\left(\dfrac{2m}{M}\int_{0}^{\pi}{\dfrac{\gamma}{p}(1 + e\cos\varphi)\mathrm{d}\varphi}\right) \nonumber \\
 	& = & \dfrac{\partial}{\partial M}\left(\dfrac{2m}{M}\dfrac{\gamma\pi}{p}\right) = \dfrac{\partial}{\partial M}\left(\dfrac{2m^{2}\gamma\alpha\pi}{M^{3}}\right) = -\dfrac{6m^{2}\gamma\alpha\pi}{M^{4}} = -\dfrac{6m^{2}\gamma\alpha\pi}{m^{2}\alpha^{2}p^{2}} \nonumber \\
-	& = & -\dfrac{6\gamma\pi}{\alpha p^{2}}
+	& = & -\dfrac{6\gamma\pi}{\alpha p^{2}} \nonumber
 \eea
