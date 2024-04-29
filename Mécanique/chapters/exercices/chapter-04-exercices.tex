@@ -5,87 +5,87 @@
 \subsection{Relation entre $\theta_{1}$ et $\theta_{2}$ dans <<~l~>>}
 
 L'objectif ici est d'obtenir la relation entre $\theta_{1}$ et $\theta_{2}$ dans le r\'ef\'erentiel <<~l~>> dans le cadre de la d\'esint\'egration d'une particule de vitesse initiale $\vec{V}$ en deux particules r\'esultantes de masse respective $m_{1}$ et $m_{2}$. Dans le r\'ef\'erentiel <<~c~>>, le centre d'inertie est immobile, aussi :
-\be
+\benn
 	\vec{R} = \dfrac{m_{1}\vec{r}_{10} + m_{2}\vec{r}_{20}}{m_{1} + m_{2}}
-\ee
+\eenn
 donne :
 \bea
 	\dfrac{\mathrm{d}\vec{R}}{\mathrm{dt}} & = & \vec{0} \nonumber \\
-	m_{1}\vec{v}_{10} + m_{2}\vec{v}_{20} & = & \vec{0}
+	m_{1}\vec{v}_{10} + m_{2}\vec{v}_{20} & = & \vec{0} \nonumber
 \eea
 qui permet d'\'ecrire :
 \bea
 	m_{1}\lVert \vec{v}_{10} \rVert & = & m_{2}\lVert \vec{v}_{20} \rVert \nonumber \\
-	\dfrac{m_{1}}{m_{2}} & = & \dfrac{v_{20}}{v_{10}}
+	\dfrac{m_{1}}{m_{2}} & = & \dfrac{v_{20}}{v_{10}} \nonumber
 \eea
 mais \'egalement en utilisant le r\'esultat pr\'ec\'edent :
 \bea
 	m_{1}^{2}v_{10}^{2} + m_{2}^{2}v_{20}^{2} + 2 m_{1}m_{2}v_{10}v_{20}\cos(\theta_{10} + \theta_{20}) & = & 0 \nonumber \\
 	m_{1}^{2}v_{10}^{2} + m_{1}^{2}v_{10}^{2} + 2 m_{1}^{2}v_{10}^{2}\cos(\theta_{10} + \theta_{20}) & = & 0 \nonumber \\
 	\cos(\theta_{10} + \theta_{20}) & = & -1 \nonumber \\
-	\theta_{10} + \theta_{20} & = & \pi
+	\theta_{10} + \theta_{20} & = & \pi \nonumber
 \eea
 
 Les particules r\'esultantes n'interagissant pas l'une sur l'autre, la relation (\ref{EQ:16_5}) est applicable \`a l'une et l'autre telle que :
 \bea
 	\tan\theta_{1} = \dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}} & \text{ et } & \tan\theta_{2} = \dfrac{v_{20}\sin\theta_{20}}{V + v_{20}\cos\theta_{20}} \nonumber \\
 	v_{10}\cos\theta_{10} + V = \dfrac{v_{10}\sin\theta_{10}}{\tan\theta_{1}} & \text{ et } & v_{20}\cos\theta_{20} + V = \dfrac{v_{20}\sin\theta_{20}}{\tan\theta_{2}} \nonumber \\
-	V + v_{10}\cos\theta_{10} = \dfrac{v_{10}\sin\theta_{10}}{\tan\theta_{1}} & \text{ et } & V - v_{20}\cos\theta_{10} = \dfrac{v_{20}\sin\theta_{10}}{\tan\theta_{2}}
+	V + v_{10}\cos\theta_{10} = \dfrac{v_{10}\sin\theta_{10}}{\tan\theta_{1}} & \text{ et } & V - v_{20}\cos\theta_{10} = \dfrac{v_{20}\sin\theta_{10}}{\tan\theta_{2}} \nonumber
 \eea
 La premi\`ere relation permet d'\'ecrire :
-\be
+\benn
 	\cos\theta_{10} = \dfrac{\sin\theta_{10}}{\tan\theta_{1}} - \dfrac{V}{v_{10}}
-\ee
+\eenn
 qui, inject\'ee dans la seconde :
 \bea
 	V - \dfrac{v_{20}\sin\theta_{10}}{\tan\theta_{1}} + \dfrac{v_{20}V}{v_{10}} & = & \dfrac{v_{20}\sin\theta_{10}}{\tan\theta_{2}} \nonumber \\
 	\left(1 + \dfrac{v_{20}}{v_{10}}\right)V & = & \left(\dfrac{1}{\tan\theta_{1}} + \dfrac{1}{\tan\theta_{2}}\right)v_{20}\sin\theta_{10} \nonumber \\
-	\sin\theta_{10} & = & V\dfrac{\frac{1}{v_{10}} + \frac{1}{v_{20}}}{\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)}
+	\sin\theta_{10} & = & V\dfrac{\frac{1}{v_{10}} + \frac{1}{v_{20}}}{\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)} \nonumber
 \eea
 et par voie de cons\'equence :
-\be
+\benn
 	\cos\theta_{10} = V\dfrac{\frac{1}{v_{10}} + \frac{1}{v_{20}}}{\left(1 + \frac{\tan\theta_{1}}{\tan\theta_{2}}\right)} - \dfrac{V}{v_{10}}
-\ee
+\eenn
 En utilisant la relation bien connue : $\cos^{2} + \sin^{2} = 1$, nous pouvons continuer avec $\theta_{10}$ telle que :
-\be
+\benn
 	V^{2}\dfrac{\left(\frac{1}{v_{10}} + \frac{1}{v_{20}}\right)^{2}}{\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)^{2}} + V^{2}\dfrac{\left(\frac{1}{v_{10}} + \frac{1}{v_{20}}\right)^{2}}{\left(1 + \frac{\tan\theta_{1}}{\tan\theta_{2}}\right)^{2}} + \dfrac{V^{2}}{v_{10}^{2}} - 2\dfrac{V^{2}}{v_{10}}\dfrac{\frac{1}{v_{10}} + \frac{1}{v_{20}}}{\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)} = 1
-\ee
+\eenn
 Sachant que :
-\be
+\benn
 	\dfrac{1}{v_{10}} + \dfrac{1}{v_{20}} = \frac{1}{v_{10}}\left( 1 + \frac{v_{10}}{v_{20}}\right) =  \frac{1}{v_{10}}\left( 1 + \frac{m_{2}}{m_{1}}\right)
-\ee
+\eenn
 l'\'equation devient :
 \bea
 	\dfrac{V^{2}}{v_{10}^{2}}\dfrac{\left(1 + \frac{m_{2}}{m_{1}}\right)^{2}}{\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)^{2}} + \dfrac{V^{2}}{v_{10}^{2}}\dfrac{\left(1 + \frac{m_{2}}{m_{1}}\right)^{2}}{\left(1 + \frac{\tan\theta_{1}}{\tan\theta_{2}}\right)^{2}} + \dfrac{V^{2}}{v_{10}^{2}} - 2\dfrac{V^{2}}{v_{10}^{2}}\dfrac{1 + \frac{m_{2}}{m_{1}}}{\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)} & = & 1 \nonumber \\
 	\dfrac{(m_{1} + m_{2})^{2}}{m_{1}^{2}\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)^{2}} + \dfrac{(m_{1} + m_{2})^{2}}{m_{1}^{2}\left(1 + \frac{\tan\theta_{1}}{\tan\theta_{2}}\right)^{2}} - 2\dfrac{(m_{1} + m_{2})}{m_{1}\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)} & = & \dfrac{v_{10}^{2}}{V^{2}} - 1 \nonumber \\
-	\dfrac{m_{1} + m_{2}}{m_{1}\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)^{2}} + \dfrac{m_{1} + m_{2}}{m_{1}\left(1 + \frac{\tan\theta_{1}}{\tan\theta_{2}}\right)^{2}} - \dfrac{2}{\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)} & = & \dfrac{(v_{10}^{2} - V^{2})m_{1}}{(m_{1} + m_{2})V^{2}} \nonumber \\
+	\dfrac{m_{1} + m_{2}}{m_{1}\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)^{2}} + \dfrac{m_{1} + m_{2}}{m_{1}\left(1 + \frac{\tan\theta_{1}}{\tan\theta_{2}}\right)^{2}} - \dfrac{2}{\left(\frac{1}{\tan\theta_{1}} + \frac{1}{\tan\theta_{2}}\right)} & = & \dfrac{(v_{10}^{2} - V^{2})m_{1}}{(m_{1} + m_{2})V^{2}} \nonumber
 \eea
 Or il convient de d\'evelopper :
-\be
+\benn
 	\dfrac{1}{\tan\theta_{1}} + \dfrac{1}{\tan\theta_{2}} = \dfrac{\cos\theta_{1}}{\sin\theta_{1}} + \dfrac{\cos\theta_{2}}{\sin\theta_{2}} = \dfrac{\cos\theta_{1}\sin\theta_{2} + \sin\theta_{1}\cos\theta_{2}}{\sin\theta_{1}\sin\theta_{2}} = \dfrac{\sin(\theta_{1} + \theta_{2})}{\sin\theta_{1}\sin\theta_{2}}
-\ee
+\eenn
 et
 \bea
 	1 + \dfrac{\tan\theta_{1}}{\tan\theta_{2}} & = & \dfrac{\tan\theta_{1} + \tan\theta_{2}}{\tan\theta_{2}} = \left(\dfrac{\cos\theta_{1}}{\sin\theta_{1}} + \dfrac{\cos\theta_{2}}{\sin\theta_{2}}\right)\dfrac{\cos\theta_{2}}{\sin\theta_{2}} \nonumber \\
-	& = & \dfrac{(\cos\theta_{1}\sin\theta_{2} + \sin\theta_{1}\cos\theta_{2})\cos\theta_{2}}{\cos\theta_{1}\cos\theta_{2}\sin\theta_{2}} = \dfrac{\sin(\theta_{1} + \theta_{2})}{\cos\theta_{1}\sin\theta_{2}}
+	& = & \dfrac{(\cos\theta_{1}\sin\theta_{2} + \sin\theta_{1}\cos\theta_{2})\cos\theta_{2}}{\cos\theta_{1}\cos\theta_{2}\sin\theta_{2}} = \dfrac{\sin(\theta_{1} + \theta_{2})}{\cos\theta_{1}\sin\theta_{2}} \nonumber
 \eea
 L'\'equation principale devient alors :
-\be
+\benn
 	\dfrac{(v_{10}^{2} - V^{2})m_{1}}{(m_{1} + m_{2})V^{2}}\sin^{2}(\theta_{1} + \theta_{2}) = \dfrac{m_{1} + m_{2}}{m_{1}}\sin^{2}\theta_{2} - 2\cos\theta_{1}\sin\theta_{2}\sin(\theta_{1} + \theta_{2})
-\ee
+\eenn
 Toutefois :
 \bea
 	\cos\theta_{1}\sin\theta_{2}\sin(\theta_{1} + \theta_{2}) & = & \cos\theta_{1}\sin\theta_{2}(\cos\theta_{1}\sin\theta_{2} + \sin\theta_{1}\cos\theta_{2}) \nonumber \\
 	& = & \cos^{2}\theta_{1}\sin^{2}\theta_{2} + \cos\theta_{1}\sin\theta_{1}\cos\theta_{2}\sin\theta_{2} \nonumber \\
 	& = & \sin^{2}\theta_{2} - \sin^{2}\theta_{1}\sin^{2}\theta_{2} + \cos\theta_{1}\sin\theta_{1}\cos\theta_{2}\sin\theta_{2} \nonumber \\
 	& = & \sin^{2}\theta_{2} - \sin\theta_{1}\sin\theta_{2}(\sin\theta_{1}\sin\theta_{2} - \cos\theta_{1}\cos\theta_{2}) \nonumber \\
-	& = & \sin^{2}\theta_{2} + \sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2})
+	& = & \sin^{2}\theta_{2} + \sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2}) \nonumber
 \eea
 ce qui permet d'avancer ainsi :
 \bea
 	\dfrac{(v_{10}^{2} - V^{2})m_{1}}{(m_{1} + m_{2})V^{2}}\sin^{2}(\theta_{1} + \theta_{2}) & = & \dfrac{m_{1} + m_{2}}{m_{1}}\sin^{2}\theta_{2} - 2\sin^{2}\theta_{2} - 2\sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2})\nonumber \\
 	& = & \dfrac{m_{2}}{m_{1}}\sin^{2}\theta_{2} + \sin^{2}\theta_{2} - 2\sin^{2}\theta_{2} - 2\sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2})\nonumber \\
-	& = & \dfrac{m_{2}}{m_{1}}\sin^{2}\theta_{2} - \sin^{2}\theta_{2} - 2\sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2})
+	& = & \dfrac{m_{2}}{m_{1}}\sin^{2}\theta_{2} - \sin^{2}\theta_{2} - 2\sin\theta_{1}\sin\theta_{2}\cos(\theta_{1} + \theta_{2}) \nonumber
 \eea
 
 \subsection{Distribution des directions dans <<~l~>>}
@@ -95,9 +95,9 @@ Pour \'etablie la distribution des directions des particules r\'esultantes dans 
 \subsubsection{$v_{0} > V$}
 
 Dans ce cas, $\theta \in [0;\pi]$ \`a la vue de la figure (\ref{FIG:4_14}) et l'\'equation (\ref{EQ:16_6}) s'\'ecrit :
-\be
+\benn
 	\cos\theta_{0} = -\dfrac{V}{v_{0}}\sin^{2}\theta + \cos\theta\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}
-\ee
+\eenn
 La distribution $\dfrac{\mathrm{d}\omega_{0}}{4\pi}$ vaut $\dfrac{1}{2}\sin\theta_{0}\mathrm{d}\theta_{0} = -\dfrac{\mathrm{d}(\cos\theta_{0})}{2}$ selon l'\'equation (\ref{EQ:16_7}). Cela permet donc d'\'ecrire avec la relation pr\'ec\'edente :
 \bea
 	\begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{1} & = & \dfrac{V}{v_{0}}\sin\theta\cos\theta\mathrm{d}\theta + \dfrac{\sin\theta}{2}\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}\mathrm{d}\theta - \dfrac{\cos\theta}{4}\dfrac{-2\dfrac{V^{2}}{v_{0}^{2}}\sin\theta\cos\theta\mathrm{d}\theta}{\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}} \nonumber \\
@@ -116,9 +116,9 @@ La distribution $\dfrac{\mathrm{d}\omega_{0}}{4\pi}$ vaut $\dfrac{1}{2}\sin\thet
 \subsubsection{$v_{0} < V$}
 
 Dans ce cas, la m\^eme s\'equence calculatoire am\`ene \`a \'ecrire pour $\theta \in [0;\theta_{max}]$ :
-\be
+\benn
 	\begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{2} = \dfrac{1}{2}\sin\theta\left[2\dfrac{V}{v_{0}}\cos\theta - \dfrac{1 + \dfrac{V^{2}}{v_{0}^{2}}\cos(2\theta)}{\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}}\right]\mathrm{d}\theta
-\ee
+\eenn
 sachant qu'il faut prendre cette fois-ci dans l'\'equation (\ref{EQ:16_6}) les deux solutions, celles avec le signe - et celle avec le signe +, d\'eduite pr\'ec\`edemment. Ainsi la distribution totale pour $v_{0} < V$ s'obtient en faisant :
 \be
 	\begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{1} - \begin{Bmatrix}\dfrac{\mathrm{d}\omega_{0}}{4\pi}\end{Bmatrix}_{2} = \dfrac{1 + \dfrac{V^{2}}{v_{0}^{2}}\cos(2\theta)}{\sqrt{1 - \dfrac{V^{2}}{v_{0}^{2}}\sin^{2}\theta}}\sin\theta\mathrm{d}\theta\label{EQ:16_EX2B}
@@ -136,14 +136,14 @@ sachant qu'il faut prendre cette fois-ci dans l'\'equation (\ref{EQ:16_6}) les d
 Dans le r\'ef\'erentiel <<~l~>>, d\'eterminons l'angle $\theta$ d\'efini comme la somme $\theta_{1} + \theta_{2}$ :
 \bea
 	\tan\theta & = & \tan(\theta_{1} + \theta_{2}) = \dfrac{\tan\theta_{1} + \tan\theta_{2}}{1 - \tan\theta_{1}\tan\theta_{2}} \nonumber \\
-	& = & \dfrac{\dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}} + \dfrac{v_{20}\sin\theta_{20}}{V + v_{20}\cos\theta_{20}}}{1 - \dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}}\dfrac{v_{20}\sin\theta_{20}}{V + v_{20}\cos\theta_{20}}} \nonumber \\
+	& = & \dfrac{\dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}} + \dfrac{v_{20}\sin\theta_{20}}{V + v_{20}\cos\theta_{20}}}{1 - \dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}}\dfrac{v_{20}\sin\theta_{20}}{V + v_{20}\cos\theta_{20}}} \nonumber
 \eea
 or $\theta_{20} = \pi - \theta_{10}$, donc :
 \bea
 	\tan\theta & = & \dfrac{\dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}} + \dfrac{v_{20}\sin\theta_{10}}{V - v_{20}\cos\theta_{10}}}{1 - \dfrac{v_{10}\sin\theta_{10}}{V + v_{10}\cos\theta_{10}}\dfrac{v_{20}\sin\theta_{10}}{V - v_{20}\cos\theta_{10}}} \nonumber \\
 	& = & \dfrac{v_{10}\sin\theta_{10}(V - v_{20}\cos\theta_{10}) + v_{20}\sin\theta_{10}(v_{10}\cos\theta_{10} + V)}{(V + v_{10}\cos\theta_{10})(V - v_{20}\cos\theta_{10}) - v_{10}v_{20}\sin^{2}\theta_{10}} \nonumber \\
 	& = & \dfrac{v_{10}V\sin\theta_{10} - v_{10}v_{20}\cos\theta_{10}\sin\theta_{10} + v_{10}v_{20}\cos\theta_{10}\sin\theta_{10} + v_{20}V\sin\theta_{10}}{v_{10}V\cos\theta_{10} - v_{10}v_{20}\cos^{2}\theta_{10} + V^{2} - v_{20}V\cos\theta_{10} - v_{10}v_{20}\sin^{2}\theta_{10}} \nonumber \\
-	& = & \dfrac{(v_{10} + v_{20})V\sin\theta_{10}}{V^{2} - v_{10}v_{20} + (v_{10} - v_{20})V\cos\theta_{10}}
+	& = & \dfrac{(v_{10} + v_{20})V\sin\theta_{10}}{V^{2} - v_{10}v_{20} + (v_{10} - v_{20})V\cos\theta_{10}} \nonumber
 \eea
 
 \section{Chocs \'elastiques de deux particules}
@@ -151,9 +151,9 @@ or $\theta_{20} = \pi - \theta_{10}$, donc :
 Dans le r\'ef\'erentiel <<~l~>>, exprimons les vitesses apr\`es le choc $v'_{1}$ et $v'_{2}$ en fonction de l'angle de d\'eviation sous lequel elles s'\'ecartent, sachant qu'avant le choc $v_{2} = 0$ et donc $v_{1} = v$.
 
 Puisque la grandeur $2OB$ est un diam\`etre du cercle de rayon $mv$, nous avons $p'_{2} = 2OB\cos\theta_{2}$, donc :
-\be
+\benn
 	v'_{2} = \dfrac{2OB}{m_{2}}\cos\theta_{2} = \dfrac{2mv}{m_{2}}\cos\theta_{2}
-\ee
+\eenn
 avec $m$ la masse r\'eduite du syst\`eme compos\'e des deux particules.
 
 Ensuite, nous utilisons la formule d'Al-Kashi dans le triangle form\'e des points $A$, $O$ et $C$, voir la figure (\ref{FIG:4_16}) pour faire intervenir l'angle $\theta_{1}$ tel que :
@@ -163,7 +163,7 @@ Ensuite, nous utilisons la formule d'Al-Kashi dans le triangle form\'e des point
 	\left(1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\right)m^{2}v^{2} & = & m_{1}^{2}{v'}_{1}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}mvv'_{1}\cos\theta_{1} \nonumber \\
 	\dfrac{(m_{2} + m_{1})(m_{2} - m_{1})}{m_{2}^{2}}m^{2} & = & m_{1}^{2}\dfrac{v'_{1}}{v}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}m\dfrac{v'_{1}}{v}\cos\theta_{1} \nonumber \\
 	\dfrac{(m_{2} + m_{1})(m_{2} - m_{1})m_{1}^{2}m_{2}^{2}}{m_{2}^{2}(m_{1} + m_{2})} & = & m_{1}^{2}\dfrac{v'_{1}}{v}^{2} - 2\dfrac{m_{1}^{2}}{m_{2}}m\dfrac{v'_{1}}{v}\cos\theta_{1} \nonumber \\
-	0 & = & \left(\dfrac{v'_{1}}{v}\right)^{2} - 2\dfrac{m}{m_{2}}\dfrac{v'_{1}}{v}\cos\theta_{1} + \dfrac{m_{1} - m_{2}}{m_{1} + m_{2}}
+	0 & = & \left(\dfrac{v'_{1}}{v}\right)^{2} - 2\dfrac{m}{m_{2}}\dfrac{v'_{1}}{v}\cos\theta_{1} + \dfrac{m_{1} - m_{2}}{m_{1} + m_{2}} \nonumber
 \eea
 
 Il s'agit d'une \'equation du second degr\'e en $v'_{1}/v$ dont les solutions sont :
@@ -171,7 +171,7 @@ Il s'agit d'une \'equation du second degr\'e en $v'_{1}/v$ dont les solutions so
 	\dfrac{v'_{1}}{v} & = & \dfrac{1}{2}\left(\dfrac{2m_{1}m_{2}}{m_{2}(m_{1} + m_{2})}\cos\theta_{1} \pm \sqrt{\dfrac{4m_{1}^{2}m_{2}^{2}}{m_{2}^{2}(m_{1} + m_{2})^{2}}\cos^{2}\theta_{1} - \dfrac{4(m_{1} - m_{2})}{m_{2}(m_{1} + m_{2})}}\right) \nonumber \\
 	& = & \dfrac{m_{1}}{m_{1} + m_{2}}\cos\theta_{1} \pm \sqrt{\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}\cos^{2}\theta_{1} - \dfrac{m_{1}^{2} - m_{2}^{2}}{(m_{1} + m_{2})^{2}}} \nonumber \\
 	& = & \dfrac{m_{1}}{m_{1} + m_{2}}\cos\theta_{1} \pm \dfrac{1}{m_{1} + m_{2}}\sqrt{m_{2}^{2} + (\cos^{2}\theta_{1} - 1)m_{1}^{2}} \nonumber \\
-	& = & \dfrac{m_{1}}{m_{1} + m_{2}}\cos\theta_{1} \pm \dfrac{m_{2}}{m_{1} + m_{2}}\sqrt{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}
+	& = & \dfrac{m_{1}}{m_{1} + m_{2}}\cos\theta_{1} \pm \dfrac{m_{2}}{m_{1} + m_{2}}\sqrt{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}} \nonumber
 \eea
 De mani\`ere \'equivalente \`a l'\'equation (\ref{EQ:16_6}), pour $m_{1} > m_{2}$, la solution est univoque avec le signe $+$ alors que pour $m_{1} < m_{2}$, les deux solutions sont admises. La repr\'esentation de ces solutions est \'egalement similaire \`a ce qui est repr\'esent\'e sur les figures (\ref{FIG:4_14A}) et (\ref{FIG:4_14B}).
 
@@ -209,149 +209,149 @@ De mani\`ere \'equivalente \`a l'\'equation (\ref{EQ:16_6}), pour $m_{1} > m_{2}
 L'objectif est de calculer la section efficace pour la diffusion de particules par une bille de rayon $a$ parfatiement solide, i.e. $U(r>a) = 0$ et $U(r<a) = \infty$. La figure (\ref{FIG:4_18_EX1}) illustre la trajectoire, \`a savoir que les particules incidentes se meuvent librement avant et apr\`es le choc, qui se compose de deux droites. D'apr\`es la m\^eme figure, nous pouvons \'etablir que :
 \bea
 	\rho & = & a\sin\varphi_{0} = a\sin\left(\dfrac{\pi - \xi}{2}\right) = a\left(\cos\dfrac{\pi}{2}\sin\dfrac{-\xi}{2} + \sin\dfrac{\pi}{2}\cos\dfrac{-\xi}{2}\right) \nonumber \\
-	& = & a\cos\dfrac{\xi}{2}
+	& = & a\cos\dfrac{\xi}{2} \nonumber
 \eea
 En reportant dans l'\'equation (\ref{EQ:18_7}), cela donne :
-\be
+\benn
 	\mathrm{d}\sigma = 2\pi a\cos\dfrac{\xi}{2}\bigg\lvert -\dfrac{a}{2}\sin\dfrac{\xi}{2} \bigg\rvert \mathrm{d}\xi = \pi a^{2}\cos\dfrac{\xi}{2}\sin\dfrac{\xi}{2}\mathrm{d}\xi
-\ee
+\eenn
 or $\sin\xi = \sin(\frac{\xi}{2} + \frac{\xi}{2}) = 2\cos\frac{\xi}{2}\sin\frac{\xi}{2}$, donc :
-\be
+\benn
 	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{2}\sin\xi\mathrm{d}\xi
-\ee
+\eenn
 et puisque l'angle solide se d\'efinit pour un anneau comme $\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi$, donc :
-\be
+\benn
 	\mathrm{d}\sigma = \dfrac{a^{2}}{4}\mathrm{d}\omega
-\ee
+\eenn
 Dans le r\'ef\'erentiel <<~c~>>, la distribution est donc isotrope, i.e. ne d\'epend pas de l'angle de d\'eviation, puisque :
-\be
+\benn
 	\sigma = \int_{0}^{4\pi}\dfrac{a^{2}}{4}\mathrm{d}\omega = \pi a^{2}
-\ee
+\eenn
 et la section efficace est \'egale \`a la section de la bille et assez logiquement, une particule pour \^etre diffus\'ee doit avoir une distance de vis\'ee inf\'erieure au rayon\footnote{Les particules incdents sont consid\'er\'ees comme ponctuelles.} de la bille $a$. Pour d\'eterminer la section efficace $\mathrm{d}\sigma$ dans le r\'ef\'erentiel <<~l~>>, nous pouvons repartir des \'equations (\ref{EQ:17_4}) o\`u $m_{1}$ est la masse de la particule incidente et $m_{2}$ celle de la bille. Nous avons vu plus haut que :
-\be
+\benn
 	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{2}\sin\xi\mathrm{d}\xi = -\dfrac{\pi a^{2}}{2}\mathrm{d}(\cos\xi)
-\ee
+\eenn
 La quantit\'e $\cos\xi$ est reprise de l'\'equation (\ref{EQ:18_9}) et il y a trois cas diiff\'erents.
 
 \subsubsection{$m_{1} < m_{2}$}
 
 Dans ce cas, $\cos\xi$ s'\'ecrit :
-\be
+\benn
 	\cos\xi = -\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1} + \cos\theta_{1}\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}
-\ee
+\eenn
 aussi :
 \bea
 	\mathrm{d}(\cos\xi) & = & -2\dfrac{m_{1}}{m_{2}}\cos\theta_{1}\sin\theta_{1}\mathrm{d}\theta_{1} - \sin\theta_{1}\mathrm{d}\theta_{1}\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}} + \dfrac{1}{2}\cos\theta_{1}\dfrac{-2\dfrac{m_{1}^{2}}{m_{2}^{2}}\cos\theta_{1}\sin\theta_{1}\mathrm{d}\theta_{1}}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}} \nonumber \\
 	& = & -\sin\theta_{1}\mathrm{d}\theta_{1}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}} + \dfrac{\dfrac{m_{1}^{2}}{m_{2}^{2}}\cos^{2}\theta_{1}}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\right) \nonumber \\
 	& = & -\sin\theta_{1}\mathrm{d}\theta_{1}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\left(1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1} + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos^{2}\theta_{1}\right)\right) \nonumber \\
 	& = & -\sin\theta_{1}\mathrm{d}\theta_{1}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\left(1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}(\cos^{2}\theta_{1} - \sin^{2}\theta_{1})\right)\right) \nonumber \\
-	& = & -\sin\theta_{1}\mathrm{d}\theta_{1}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\left(1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})\right)\right)
+	& = & -\sin\theta_{1}\mathrm{d}\theta_{1}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\left(1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})\right)\right) \nonumber
 \eea
 donc :
-\be
+\benn
 	\mathrm{d}\sigma_{1} = \dfrac{\pi a^{2}}{2}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\right)\sin\theta_{1}\mathrm{d}\theta_{1}
-\ee
+\eenn
 et puisque $\mathrm{d}\omega_{1} = 2\pi\sin\theta_{1}\mathrm{d}\theta_{1}$, nous avons finalement :
-\be
+\benn
 	\mathrm{d}\sigma_{1+} = \dfrac{a^{2}}{4}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} + \dfrac{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\right)\mathrm{d}\omega_{1}
-\ee
+\eenn
 
 \subsubsection{$m_{1} > m_{2}$}
 
 Dans ce cas, il nous faut prendre les deux solutions de l'\'equation (\ref{EQ:18_9}). Nous pouvons reprendre celle avec le signe $+$ de la pr\'ec\'edente section et calculons la section efficace pour la seconde solution de $\cos\xi$, celle qui s'\'ecrit ainsi :
-\be
+\benn
 	\cos\xi = -\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1} - \cos\theta_{1}\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}
-\ee
+\eenn
 En appliquant les m\^emes calculs, nous arrivons \`a :
-\be
+\benn
 	\mathrm{d}\sigma_{1-} = \dfrac{a^{2}}{4}\left(2\dfrac{m_{1}}{m_{2}}\cos\theta_{1} - \dfrac{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\right)\mathrm{d}\omega_{1}
-\ee
+\eenn
 En d\'efinitive, nous obtenons :
-\be
+\benn
 	\mathrm{d}\sigma_{1} = \mathrm{d}\sigma_{1+} - \mathrm{d}\sigma_{1-} = \dfrac{a^{2}}{2}\dfrac{1 + \dfrac{m_{1}^{2}}{m_{2}^{2}}\cos(2\theta_{1})}{\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}}\mathrm{d}\omega_{1}
-\ee
+\eenn
 
 \subsubsection{$m_{1} = m_{2}$}
 
 Dans ce cas pr\'ecis, nous en d\'eduisons :
 \bea
 	\mathrm{d}\sigma_{1} & = & \dfrac{a^{2}}{2}\dfrac{1 + \cos(2\theta_{1})}{\sqrt{1 - \sin^{2}\theta_{1}}}\mathrm{d}\omega_{1} = \dfrac{a^{2}}{2}\dfrac{1 + \cos^{2}\theta_{1} - \sin^{2}\theta_{1}}{\lvert \cos\theta_{1} \rvert}\mathrm{d}\omega_{1} = \dfrac{a^{2}}{2}\dfrac{1 + \cos^{2}\theta_{1} - 1 + \cos^{2}\theta_{1}}{\lvert \cos\theta_{1} \rvert}\mathrm{d}\omega_{1} \nonumber \\
-	& = & a^{2}\lvert \cos\theta_{1} \rvert\mathrm{d}\omega_{1}
+	& = & a^{2}\lvert \cos\theta_{1} \rvert\mathrm{d}\omega_{1} \nonumber
 \eea
 $\cos\theta_{1}$ n'est pas forc\`ement positif, aussi il nous faut utiliser sa valeur absolue car la section efficace reste une surface et donc a une valeur positive.
 
 Enfin, dans le cas o\`u initialement, i.e. avant le choc, la bille de masse $m_{2}$ est immobile, comme $\xi = \pi - 2\theta_{2}$, alors :
 \bea
 	\mathrm{d}\sigma_{2} & = & \dfrac{\pi a^{2}}{2}\sin(\pi - 2\theta_{2})\mathrm{d}(\pi - 2\theta_{2}) = \dfrac{\pi a^{2}}{2}\sin(2\theta_{2})\cdot -2\mathrm{d}(\theta_{2}) = -\pi a^{2}\sin(2\theta_{2})\mathrm{d}(\theta_{2}) \nonumber \\
-	& = & -2\pi a^{2}\cos\theta_{2}\sin\theta_{2}\mathrm{d}\theta_{2}
+	& = & -2\pi a^{2}\cos\theta_{2}\sin\theta_{2}\mathrm{d}\theta_{2} \nonumber
 \eea
 or comme $\mathrm{d}\omega_{2} = 2\pi\sin\theta_{2}\mathrm{d}\theta_{2}$ et $\mathrm{d}\sigma_{2} > 0$, nous avons finalement :
-\be
+\benn
 	\mathrm{d}\sigma_{2} = a^{2}\lvert \cos\theta_{2} \rvert\mathrm{d}\omega_{2}
-\ee
+\eenn
 
 \subsection{\'Energie perdue}
 
 Il s'agit de calculer la section efficace de diffusion en fonction de l'\'energie perdue $\epsilon$ par les particules diffus\'ees de masse $m_{1}$ dans le m\^eme cas que dans le paragraphe (\ref{PAR:18EX}). La loi de conservation de l'\'energie du syst\`eme ferm\'e implique que $\epsilon$ vaut exactement l'\'energie gagn\'ee par $m_{2}$. Cette derni\`ere est l'\'energie cin\'etique gagn\'ee par $m_{2}$ apr\`es le choc car dans le cas pr\'esent, avant le choc, $v_{2} = 0$. L'utilisation de l'\'equation (\ref{EQ:17_5B}) permet d'\'ecrire :
-\be
+\benn
 	v'_{2} = \dfrac{2m_{1}v}{m_{1} + m_{2}}\sin\left(\dfrac{\xi}{2}\right) = \dfrac{2m_{1}v_{\infty}}{m_{1} + m_{2}}\sin\left(\dfrac{\xi}{2}\right)
-\ee
+\eenn
 car $v = v_{1} = v_{\infty}$ puisque $v_{1}$ est la vitesse avant le choc de la particule de masse $m_{1}$. Donc l'\'energie de la particule de masse $m_{2}$ apr\`es le choc vaut :
 \bea
 	E'_{2} & = & \dfrac{m_{2}}{2}{v'}_{2}^{2} = \dfrac{m_{2}}{2}\dfrac{m_{1}^{2}v_{\infty}^{2}}{(m_{1} + m_{2})^{2}}\sin^{2}\left(\dfrac{\xi}{2}\right) \nonumber \\
-	\Leftrightarrow \epsilon & = & \dfrac{2m_{1}^{2}m_{2}}{(m_{1} + m_{2})^{2}}v_{\infty}^{2}\sin^{2}\left(\dfrac{\xi}{2}\right)
+	\Leftrightarrow \epsilon & = & \dfrac{2m_{1}^{2}m_{2}}{(m_{1} + m_{2})^{2}}v_{\infty}^{2}\sin^{2}\left(\dfrac{\xi}{2}\right) \nonumber
 \eea
 Par d\'efinition, $\sin^{2}(\frac{\xi}{2}) \leq 1$, nous pouvons donc en d\'eduire que l'\'energie perdue maximale $\epsilon_{max}$ vaut pr\'ecis\`ement :
-\be
+\benn
 	\epsilon_{max} = \dfrac{2m_{1}^{2}m_{2}}{(m_{1} + m_{2})^{2}}v_{\infty}^{2}
-\ee
+\eenn
 telle que :
-\be
+\benn
 	\epsilon = \epsilon_{max}\sin^{2}\left(\dfrac{\xi}{2}\right)
-\ee
+\eenn
 En d\'erivant, nous obtenons :
-\be
+\benn
 	\mathrm{d}\epsilon = \epsilon_{max}\sin\left(\dfrac{\xi}{2}\right)\cos\left(\dfrac{\xi}{2}\right)\mathrm{d}\xi = \dfrac{1}{2}\epsilon_{max}\sin\xi\mathrm{d}\xi
-\ee
+\eenn
 car $\sin\xi = 2\sin(\frac{\xi}{2})\cos(\frac{\xi}{2})$. Nous savons que :
-\be
+\benn
 	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{2}\sin\xi\mathrm{d}\xi
-\ee
+\eenn
 donc, finalement :
-\be
+\benn
 	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{\epsilon_{max}}\mathrm{d}\epsilon
-\ee
+\eenn
 et la distribution des particules diffus\'ees est homog\`ene par rapport \`a $\epsilon$ qui est l'\'energie perdue par celles-ci.
 
 \subsection{Cas d'un champ $\propto r^{-n}$}
 
 Nous allons d\'eterminer la relation entre la section efficace et $v_{\infty}$ dans le cadre o\`u l'\'energie potentielle est proportionnelle \`a $r^{-n}$. Dans le cadre d'une \'energie potentielle homog\`ene d'ordre $k = -n$, les relations (\ref{EQ:10_3}) donnent en particulier :
-\be
+\benn
 	\dfrac{v'}{v} = \left(\dfrac{l'}{l}\right)^{-\dfrac{n}{2}}
-\ee
+\eenn
 qui exprime la relation entre la vitesse et la longueur pour deux trajectoires diff\'erentes. Nous pouvons ainsi \'ecrire que $\rho\propto v^{-\frac{2}{n}}$ pour des trajectoires semblables. Ceci peut \^etre exprimer telle que $\rho = v_{\infty}^{-\frac{2}{n}}f(\xi)$ car pour chaque trajectoire semblable, l'angle de d\'eviation est identique. En substituant dans l'\'equation (\ref{EQ:18_6}), nous avons :
-\be
+\benn
 	\mathrm{d}\sigma = 2\pi\rho\mathrm{d}\rho = 2\pi v_{\infty}^{-\frac{2}{n}}f(\xi)\cdot v_{\infty}^{-\frac{2}{n}}f'(\xi)\mathrm{d}\xi = 2\pi v_{\infty}^{-\frac{4}{n}}f(\xi)f'(\xi)\mathrm{d}\xi
-\ee
+\eenn
 or :
-\be
+\benn
 	\mathrm{d}\omega = 2\pi\sin\xi\mathrm{d}\xi \Rightarrow \mathrm{d}\xi = \dfrac{\mathrm{d}\omega}{2\pi\sin\xi}
-\ee
+\eenn
 soit :
-\be
+\benn
 	\mathrm{d}\sigma = 2\pi v_{\infty}^{-\frac{4}{n}}\dfrac{f(\xi)f'(\xi)}{2\pi\sin\xi}\mathrm{d}\omega = v_{\infty}^{-\frac{4}{n}}\dfrac{f(\xi)f'(\xi)}{\sin\xi}\mathrm{d}\omega \propto v_{\infty}^{-\frac{4}{n}}\mathrm{d}\omega
-\ee
+\eenn
 
 \subsection{Cas d'un champ $U = -\alpha / r^{2}$}
 
 Pour d\'eterminer la section efficace pour une <<~chute~>> de particules au centre d'un champ tel que $U = -\alpha / r^{2}$, nous pouvons reprendre la d\'emonstration r\'ealis\'ee à l'\'equation (\ref{EQ:14_11}) et puisque $n = 2$, les particules incidentes de masse $m$ <<~tombent~>> si et seulement si $\alpha > \frac{M^{2}}{2m}$. En utilisant la d\'efinition (\ref{EQ:18_3}) du moment cin\'etique telle $M = m\rho v_{\infty}$, nous avons :
-\be
+\benn
 	\alpha > \dfrac{M^{2}}{2m} \Leftrightarrow \alpha > \dfrac{m^{2}\rho^{2}v_{\infty}^{2}}{2m} \Leftrightarrow \rho^{2} < \dfrac{2\alpha}{mv_{\infty}^{2}}
-\ee
+\eenn
 Comme cela implique que la distance de vis\'ee maximale vaut exactement $\rho_{max} = \sqrt{\frac{2\alpha}{mv_{\infty}^{2}}}$ et cela donne de facto la section efficace de chute :
-\be
+\benn
 	\sigma = \pi\rho_{max}^{2} = \dfrac{2\pi\alpha}{mv_{\infty}^{2}}
-\ee
+\eenn
 
 \subsection{Cas d'un champ $U = -\alpha / r^{n}$}
 
@@ -363,42 +363,42 @@ Comme cela implique que la distance de vis\'ee maximale vaut exactement $\rho_{m
 \end{figure}
 
 Ici, nous consid\'erons que $n > 2$ et $\alpha > 0$. En reprenant l'\'equation (\ref{EQ:14_8}) et puisque nous \'etudions un champ central, l'\'energie potentielle efficace s'\'ecrit :
-\be
+\benn
 	U_{eff}(r) = U(r) + \dfrac{M^{2}}{2mr^{2}} = \dfrac{m\rho^{2}v_{\infty}^{2}}{2r^{2}} - \dfrac{\alpha}{r^{n}}
-\ee
+\eenn
 et dont une illustration est pr\'esente sur la figure (\ref{FIG:4_18_5}). Dans ce cas, les particules incidentes <<~tombent~>> au centre si et seulement si leur \'energie $E$ est sup\'erieure \`a $U_{0}$ qui correspond à la valeur maximale de l'\'energie potentielle efficace $U_{eff}(r)$. La figure (\ref{FIG:4_18_5}) montre que trouver un extremum \`a $U_{eff}(r)$ revient \`a trouver son maximum, soit r\'esoudre l'\'equation :
 \bea
 	\dfrac{\mathrm{d}U_{eff}(r)}{\mathrm{d}r} & = & 0 \Leftrightarrow -\dfrac{m\rho^{2}v_{\infty}^{2}}{r^{3}} + \dfrac{\alpha n}{r^{n + 1}} = 0 \Leftrightarrow m\rho^{2}v_{\infty}^{2} = \dfrac{\alpha n}{r_{0}^{n - 2}} \nonumber \\
-	r_{0} & = & \left(\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right)^{\dfrac{1}{n - 2}}
+	r_{0} & = & \left(\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right)^{\dfrac{1}{n - 2}} \nonumber
 \eea
 ce qui permet de calculer la valeur maximale de l'\'energie potentielle efficace :
 \bea
 	U_{eff\, max} & = & U(r_{0}) = \dfrac{m\rho^{2}v_{\infty}^{2}}{2\left(\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right)^{\frac{2}{n - 2}}} - \dfrac{\alpha}{\left(\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right)^{\frac{n}{n - 2}}} \nonumber \\
 	& = & \dfrac{m\rho^{2}v_{\infty}^{2}}{2}\left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{2}{n - 2}} - \alpha\left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}} \nonumber \\
 	& = & \left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}}\left(-\alpha + \dfrac{m\rho^{2}v_{\infty}^{2}}{2}\left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{2 - n}{n - 2}}\right) \nonumber \\
-	& = & \left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}}\left(-\alpha + \dfrac{m\rho^{2}v_{\infty}^{2}}{2}\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right) = \dfrac{n - 2}{2}\alpha\left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}} \nonumber \\
+	& = & \left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}}\left(-\alpha + \dfrac{m\rho^{2}v_{\infty}^{2}}{2}\dfrac{n\alpha}{m\rho^{2}v_{\infty}^{2}}\right) = \dfrac{n - 2}{2}\alpha\left(\dfrac{m\rho^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}} \nonumber
 \eea
 La distance de vis\'ee maximale $\rho_{max}$ se d\'efinit comme la distance de vis\'ee au-del\`a de laquelle l'\'energie de la particule incidente est sup\'erieure \`a $U_{eff\, max}$. Par d\'efinition, les particules incidentes ont pour \'energie $E = \frac{m}{2}v_{\infty}^{2}$. En posant $E = U_{eff\, max}$, nous obtenons :
 \bea
 	mv_{\infty}^{2} & = & (n - 2)\alpha\left(\dfrac{m\rho_{max}^{2}v_{\infty}^{2}}{n\alpha}\right)^{\frac{n}{n - 2}} \Leftrightarrow \rho_{max}^{2} = \left(\dfrac{mv_{\infty}^{2}}{(n - 2)\alpha}\right)^{\frac{n - 2}{n}}\dfrac{n\alpha}{mv_{\infty}^{2}} \nonumber \\
-	\Leftrightarrow \rho_{max}^{2} & = & n(n - 2)^{\frac{2 - n}{n}}\left(\dfrac{mv_{\infty}^{2}}{\alpha}\right)^{\frac{n - 2}{n} - 1} = n(n - 2)^{\dfrac{2 - n}{n}}\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{\frac{n}{2}}
+	\Leftrightarrow \rho_{max}^{2} & = & n(n - 2)^{\frac{2 - n}{n}}\left(\dfrac{mv_{\infty}^{2}}{\alpha}\right)^{\frac{n - 2}{n} - 1} = n(n - 2)^{\dfrac{2 - n}{n}}\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{\frac{n}{2}} \nonumber
 \eea
 et la section efficace de chute s'\'ecrit :
-\be
+\benn
 	\sigma = \pi\rho_{max}^{2} = \pi n(n - 2)^{\frac{2 - n}{n}}\left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{\frac{n}{2}}
-\ee
+\eenn
 
 \subsection{Cas d'un champ suivant la loi de Newton}
 
 Nous allons d\'eterminer la section efficace de particules de masse $m_{1}$ qui <<~chutent~>> sur la surface d'une corps sph\'erique de rayon $R$ et de masse $m_{2} \gg m_{1}$ vers lequel les premi\`eres sont attir\'ees suivant la loi de Newton, voir le paragraphe (\ref{PAR:15}). Le fait que $m_{2} \gg m_{1}$ permet de supposer que les r\'ef\'erentiels <<~l~>> et <<~c~>> se confondent. Les particules tombent sur la surface du corps central si et seulement si la distance $r_{min}$, i.e. le p\'erih\'elie, de leur trajectoire est inf\'erieure au rayon $R$ de la sph\`ere. Le p\'erih\'elie est d\'efini suivant la relation (\ref{EQ:14_8}) telle que l'\'energie de la particule incident $E$ est \'egale à son \'energie potentielle effective $U_{eff}$. Alors la distance de vis\'ee maximale est telle que $\rho_{max}$ est d\'efinie par $r_{min} = R$ ou encore $U_{eff}(R) = E$, soit :
 \bea
 	\dfrac{M^{2}}{2m1R^{2}} - \dfrac{Gm_{1}m_{2}}{R} & = & \dfrac{m_{1}}{2}v_{\infty}^{2} \Leftrightarrow \dfrac{m_{1}^{2}v_{\infty}^{2}\rho_{max}^{2}}{2m_{1}R_{2}} - \dfrac{Gm_{1}m_{2}}{R} = \dfrac{m_{1}}{2}v_{\infty}^{2} \nonumber \\
-	\Leftrightarrow \dfrac{v_{\infty}^{2}\rho_{max}^{2}}{2R_{2}} & = & v_{\infty}^{2} + \dfrac{2Gm_{2}}{R} \Leftrightarrow \rho_{max}^{2} = R^{2}\left(1 + \dfrac{2Gm_{2}}{Rv_{\infty}^{2}}\right)
+	\Leftrightarrow \dfrac{v_{\infty}^{2}\rho_{max}^{2}}{2R_{2}} & = & v_{\infty}^{2} + \dfrac{2Gm_{2}}{R} \Leftrightarrow \rho_{max}^{2} = R^{2}\left(1 + \dfrac{2Gm_{2}}{Rv_{\infty}^{2}}\right) \nonumber
 \eea
 La section efficace $\sigma = \pi\rho_{max}^{2}$ vaut donc :
-\be
+\benn
 	\sigma = \pi R^{2}\left(1 + \dfrac{2Gm_{2}}{Rv_{\infty}^{2}}\right)
-\ee
+\eenn
 et naturellement, nous remarquons que :
 \begin{itemize}
 	\item plus $m_{2}$ est grande plus la section efficace est importante ;
@@ -412,12 +412,12 @@ Dans ce paragraphe, nous allons r\'ealiser l'op\'eration inverse qui va consiste
 L'\'equation (\ref{EQ:18_7}) nous donne :
 \bea
 	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \bigg\rvert \mathrm{d}\xi \Leftrightarrow \dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = 2\pi\rho(\xi)\bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \bigg\rvert \mathrm{d}\xi \nonumber \\
-	\Leftrightarrow \int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi & = & 2\pi\int_{\xi}^{\pi}\rho(\xi)\bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \bigg\rvert \mathrm{d}\xi
+	\Leftrightarrow \int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi & = & 2\pi\int_{\xi}^{\pi}\rho(\xi)\bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \bigg\rvert \mathrm{d}\xi \nonumber
 \eea
 or nous avons $\frac{\mathrm{d}\rho}{\mathrm{d}\xi} < 0$ car plus la distance de vis\'ee $\rho$ augmente, plus l'angle de d\'eviation $\xi$ diminue donc :
-\be
+\benn
 	\int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = \pi\int_{\pi}^{\xi}2\rho(\xi)\dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi}\mathrm{d}\xi = \pi\left[\rho^{2}(\xi)\right]_{\pi}^{\xi} = \pi(\rho^{2}(\xi) - \rho^{2}(\pi))
-\ee
+\eenn
 Dans un champ r\'epulsif comme suppos\'e ici avec $U(0) > E$, obtenir un angle de d\'eviation $\xi = \pi$ n'est possible que pour une distance de vis\'ee $\rho$ nulle, donc $\rho(\pi) = 0$ et a fortiori :
 \be
 	\int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = \pi\rho^{2}(\xi) \label{EQ:18_EX7_1}
@@ -427,13 +427,13 @@ Par la suite, d\'efinissons les variables suivantes :
 	s = \dfrac{1}{r}\text{, }x = \dfrac{1}{\rho^{2}}\text{ et }w = \sqrt{1 - \dfrac{U}{E}} \label{EQ:18_EX7_2}
 \ee
 L'utilisation des formules (\ref{EQ:18_1}) et (\ref{EQ:18_2}) permettent d'\'ecrire :
-\be
+\benn
 	\dfrac{\pi - \xi}{2} = \int_{r_{min}}^{\infty}{\dfrac{\dfrac{M}{r^{2}}{\mathrm{d}r}}{\sqrt{2m(E - U(r)) - \dfrac{M^{2}}{r^{2}}}}} = \int_{r_{min}}^{\infty}{\dfrac{m\rho v_{\infty}\dfrac{\mathrm{d}r}{r^{2}}}{\sqrt{2mE\left(1 - \dfrac{U(r)}{E}\right) - \dfrac{m^{2}\rho^{2} v_{\infty}^{2}}{r^{2}}}}}
-\ee
+\eenn
 car $M = m\rho v_{\infty}$ et comme $E = \frac{m}{2}v_{\infty}^{2}$ alors :
 \bea
 	\dfrac{\pi - \xi}{2} & = & \int_{r_{min}}^{\infty}{\dfrac{m\rho v_{\infty}\dfrac{\mathrm{d}r}{r^{2}}}{m v_{\infty}\sqrt{1 - \dfrac{U(r)}{E} - \dfrac{\rho^{2}}{r^{2}}}}} = \int_{r_{min}}^{\infty}{\rho\dfrac{\mathrm{d}r}{r^{2}}{\sqrt{1 - \dfrac{U(r)}{E} - \dfrac{\rho^{2}}{r^{2}}}}} \nonumber \\
-	& = & \int_{r_{min}}^{\infty}{\dfrac{\dfrac{\mathrm{d}r}{r^{2}}}{\sqrt{\dfrac{1}{\rho^{2}}\left(1 - \dfrac{U(r)}{E}\right) - \dfrac{1}{r^{2}}}}}
+	& = & \int_{r_{min}}^{\infty}{\dfrac{\dfrac{\mathrm{d}r}{r^{2}}}{\sqrt{\dfrac{1}{\rho^{2}}\left(1 - \dfrac{U(r)}{E}\right) - \dfrac{1}{r^{2}}}}} \nonumber
 \eea
 Or $s = 1/r$ donc $\mathrm{d}s = -\mathrm{d}r/r^{2}$. Pour les bornes de l'int\'egrale, quand $r \rightarrow \infty \Rightarrow s \rightarrow 0$ et comme $r_{min}$ est racine de $1 - \frac{U(r)}{E} - \frac{\rho^{2}}{r^{2}}$, nous d\'efinissons $s_{0}$, racine du d\'enominateur. Tout ceci permet de conclure \`a :
 \be
@@ -443,72 +443,72 @@ Pour continuer, nous allons utiliser la m\^eme technique que celle employ\'ee po
 \bea
 	\dfrac{\pi - \xi(x)}{2}\dfrac{\mathrm{d}x}{\sqrt{\alpha - x}} & = & \int_{0}^{s_{0}}{\dfrac{\mathrm{d}s\mathrm{d}x}{\sqrt{(xw^{2} - s^{2})(\alpha - x)}}} \nonumber \\
 	\Leftrightarrow \int_{0}^{\alpha}{\dfrac{(\pi - \xi(x))\mathrm{d}x}{2\sqrt{\alpha - x}}} & = & \int_{0}^{\alpha}\int_{0}^{s_{0}}{\dfrac{\mathrm{d}s\mathrm{d}x}{\sqrt{(xw^{2} - s^{2})(\alpha - x)}}} = \int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}\int_{0}^{\alpha}{\dfrac{\mathrm{d}x}{\sqrt{(x - s^{2}/w^{2})(\alpha - x)}}} \nonumber \\
-	\Leftrightarrow \int_{0}^{\alpha}{\dfrac{(\pi - \xi(x))\mathrm{d}x}{2\sqrt{\alpha - x}}} & = & \int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}\int_{s^{2}/w^{2}}^{\alpha}{\dfrac{\mathrm{d}x}{\sqrt{(\alpha - x)(x - s^{2}/w^{2})}}}
+	\Leftrightarrow \int_{0}^{\alpha}{\dfrac{(\pi - \xi(x))\mathrm{d}x}{2\sqrt{\alpha - x}}} & = & \int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}\int_{s^{2}/w^{2}}^{\alpha}{\dfrac{\mathrm{d}x}{\sqrt{(\alpha - x)(x - s^{2}/w^{2})}}} \nonumber
 \eea
 car dans l'intervalle $x \in [0;s^{2}/w^{2}[$, $x - s^{2}/w^{2}$ est une quantit\'e n\'egative et l'int\'egrale y est donc ind\'efinie. Comme :
-\be
+\benn
 	\int_{s^{2}/w^{2}}^{\alpha}{\dfrac{\mathrm{d}x}{\sqrt{(\alpha - x)(x - s^{2}/w^{2})}}} = \pi
-\ee
+\eenn
 alors :
-\be
+\benn
 	\int_{0}^{\alpha}{\dfrac{(\pi - \xi(x))\mathrm{d}x}{2\sqrt{\alpha - x}}} = \pi\int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}
-\ee
+\eenn
 Une intégration par partie du membre de gauche am\`ene \`a :
 \bea
 	\int_{0}^{\alpha}{\dfrac{(\pi - \xi(x))\mathrm{d}x}{2\sqrt{\alpha - x}}} & = & \left[-\sqrt{\alpha - x}(\pi - \xi(x))\right]_{0}^{\alpha} + \int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}(\pi - \xi(x))}{\mathrm{d}x}\mathrm{d}x \nonumber \\
-	& = & \sqrt{\alpha}(\pi - \xi(0)) - \int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x
+	& = & \sqrt{\alpha}(\pi - \xi(0)) - \int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x \nonumber
 \eea
 or $\xi(x = 0) = \xi(\rho^{2} \rightarrow \infty) = 0$ car $U(\infty) = 0$ et donc l'angle de d\'eviation est nul. Donc :
-\be
+\benn
 	\pi\sqrt{\alpha} - \int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x = \pi\int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}
-\ee
+\eenn
 \`A partir de cette derni\`ere \'equation, nous pouvons prendre le diff\'erentiel par rapport à $\alpha$ tel que :
 \bea
 	\pi\mathrm{d}\left(\int_{0}^{s_{0}}{\dfrac{\mathrm{d}s}{w}}\right) & = & \pi\mathrm{d}(\sqrt{\alpha}) - \mathrm{d}\left(\int_{0}^{\alpha}\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x\right) \nonumber \\
-	\Leftrightarrow \pi\dfrac{\mathrm{d}s}{w} & = & \pi\mathrm{d}(\sqrt{\alpha}) - \left(\bigintss_{0}^{\alpha}\dfrac{\mathrm{d}\left(\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x\right)}{\mathrm{d}\alpha}\right)\mathrm{d}\alpha \nonumber = \pi\mathrm{d}(\sqrt{\alpha}) - \mathrm{d}\alpha\int_{0}^{\alpha}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\alpha - x}}}
+	\Leftrightarrow \pi\dfrac{\mathrm{d}s}{w} & = & \pi\mathrm{d}(\sqrt{\alpha}) - \left(\bigintss_{0}^{\alpha}\dfrac{\mathrm{d}\left(\sqrt{\alpha - x}\dfrac{\mathrm{d}\xi(x)}{\mathrm{d}x}\mathrm{d}x\right)}{\mathrm{d}\alpha}\right)\mathrm{d}\alpha \nonumber = \pi\mathrm{d}(\sqrt{\alpha}) - \mathrm{d}\alpha\int_{0}^{\alpha}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\alpha - x}}} \nonumber
 \eea
 Puisque la relation pr\'ec\'edente est valable quelque que soit la valeur de $\alpha$, nous prenons $\alpha = s^{2}/w^{2}$ pour arriver \`a :
 \bea
 	\pi\dfrac{\mathrm{d}s}{w} & = & \pi\mathrm{d}\left(\dfrac{s}{w}\right) - \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} \nonumber \\
 	\Leftrightarrow \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & \pi\left(\dfrac{s}{w} - \dfrac{\mathrm{d}s}{w}\right) = \pi\left(\dfrac{\mathrm{d}s}{w} + s\mathrm{d}\left(\dfrac{1}{w}\right) - \dfrac{\mathrm{d}s}{w}\right) = \pi s\mathrm{d}\left(\dfrac{1}{w}\right) \nonumber \\
 	\Leftrightarrow \dfrac{1}{2}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & -\pi s\dfrac{\mathrm{d}w}{w^{2}} = -\pi\dfrac{s}{w}\dfrac{\mathrm{d}w}{w} = -\pi\dfrac{s}{w}\mathrm{d}(\ln(w)) \nonumber \\
-	\Leftrightarrow \dfrac{1}{2}\dfrac{w}{s}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & -\pi\mathrm{d}(\ln(w))
+	\Leftrightarrow \dfrac{1}{2}\dfrac{w}{s}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} & = & -\pi\mathrm{d}(\ln(w)) \nonumber
 \eea
 De plus, la partie :
-\be
+\benn
 	\dfrac{w}{s}\mathrm{d}\left(\dfrac{s^{2}}{w^{2}}\right) = \dfrac{w}{s}\left(\dfrac{2s\mathrm{d}w}{w^{2}} - 2s^{2}\dfrac{\mathrm{d}w}{w^{3}}\right) = \dfrac{2\mathrm{d}w}{w} - 2s\dfrac{\mathrm{d}w}{w^{2}} = 2\mathrm{d}\left(\dfrac{s}{w}\right)
-\ee
+\eenn
 donc :
-\be
+\benn
 	-\pi\mathrm{d}(\ln(w)) = \mathrm{d}\left(\dfrac{s}{w}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}}
-\ee
+\eenn
 Par int\'egration de cette relation et en tenant en compte que $w = 1 \Rightarrow U = 0 \Rightarrow r \rightarrow \infty$ et $s = 0 \Leftrightarrow s/w = 0$, nous obtenons :
 \bea
 	-\pi\int_{0}^{\ln w}\mathrm{d}\ln w & = & \int_{0}^{s/w}\mathrm{d}\left(\dfrac{s}{w}\right)\bigintss_{0}^{s^{2}/w^{2}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{s^{2}}{w^{2}} - x}}} = \int_{0}^{\frac{1}{rw}}\mathrm{d}\left(\dfrac{1}{rw}\right)\bigintss_{0}^{\frac{1}{r^{2}w^{2}}}{\dfrac{\xi'(x)\mathrm{d}x}{2\sqrt{\dfrac{1}{r^{2}w^{2}} - x}}} \nonumber \\
-	& = & \int_{0}^{\frac{1}{r^{2}w^{2}}}\xi'(x)\mathrm{d}x\bigintss_{0}^{\frac{1}{rw}}\dfrac{\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{x}\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\bigintss_{0}^{\frac{1}{rw}}\dfrac{\rho\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}}
+	& = & \int_{0}^{\frac{1}{r^{2}w^{2}}}\xi'(x)\mathrm{d}x\bigintss_{0}^{\frac{1}{rw}}\dfrac{\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{x}\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\bigintss_{0}^{\frac{1}{rw}}\dfrac{\rho\mathrm{d}\left(\dfrac{1}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} \nonumber
 \eea
 car :
-\be
+\benn
 	\xi'(x) = \dfrac{\mathrm{d}\xi}{\mathrm{d}x} = \dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\dfrac{\mathrm{d}\rho}{\mathrm{d}x}
-\ee
+\eenn
 et $x = 0 \Rightarrow \rho \rightarrow \infty$ et $x = \frac{1}{r^{2}w^{2}} \Rightarrow \rho = rw$. Puisque :
-\be
+\benn
 	\mathrm{d}\left(\dfrac{\rho}{rw}\right) = \rho\mathrm{d}\left(\dfrac{1}{rw}\right) + \dfrac{1}{rw}\mathrm{d}\rho \Leftrightarrow \rho\mathrm{d}\left(\dfrac{1}{rw}\right) = \mathrm{d}\left(\dfrac{\rho}{rw}\right) - \dfrac{1}{rw}\mathrm{d}\rho
-\ee
+\eenn
 alors :
-\be
+\benn
 	-\pi\int_{0}^{\ln w}\mathrm{d}\ln w = -\pi\ln w = \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\left[\bigintss_{0}^{\frac{\rho}{rw}}\dfrac{\mathrm{d}\left(\dfrac{\rho}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} - \bigintss_{0}^{\rho}\dfrac{\mathrm{d}\rho}{rw\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}}\right]
-\ee
+\eenn
 Ces deux int\'egrales, compl\'ementaires, se calculent ainsi :
 \bea
 	-\pi\ln w & = & \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\bigintss_{0}^{\frac{\rho}{rw}}\dfrac{\mathrm{d}\left(\dfrac{\rho}{rw}\right)}{\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = \int_{\infty}^{rw}\arccosh\left(\dfrac{\rho}{rw}\right)\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho \nonumber \\
-	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{\infty}^{rw}\arccosh\left(\dfrac{\rho}{rw}\right)\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho
+	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{\infty}^{rw}\arccosh\left(\dfrac{\rho}{rw}\right)\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho \nonumber
 \eea
 et :
 \bea
 	-\pi\ln w & = & - \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\bigintss_{0}^{\rho}\dfrac{\mathrm{d}\rho}{rw\sqrt{\dfrac{\rho^{2}}{r^{2}w^{2}} - 1}} = - \int_{\infty}^{rw}\dfrac{\mathrm{d}\xi}{\mathrm{d}\rho}\mathrm{d}\rho\int_{0}^{\rho}\dfrac{\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber \\
 	& = & \int_{rw}^{\infty}\int_{0}^{\rho}\dfrac{\mathrm{d}\rho\mathrm{d}\xi}{\sqrt{\rho^{2} - r^{2}w^{2}}} = \int_{rw}^{\infty}\dfrac{\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}}\int_{\xi(\infty)}^{\xi(\rho)}\mathrm{d}\xi = \int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber \\
-	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}}
+	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber
 \eea
 car $\xi(\rho \rightarrow \infty) = 0$, i.e. l'angle de d\'eviation devient nulle pour une distance de vis\'ee infinie. Nous avons ainsi obtenu \`a obtenir la fonction $w(r)$, \'equivalente \`a $U(r)$ pour $r > r_{min}$ et en fonction de l'angle de d\'eviation $\xi$.
 
@@ -517,47 +517,47 @@ car $\xi(\rho \rightarrow \infty) = 0$, i.e. l'angle de d\'eviation devient null
 \subsection{Cas d'un champ \'egal \`a $\alpha/r^{2}$}
 
 Pour d\'eterminer la section efficacde de diffusion dans ce cas, i.e. $\alpha > 0$, partons de l'\'equation (\ref{EQ:18_4}) :
-\be
+\benn
 	\varphi_{0} = \bigintss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r^{2}}}}} = \bigintss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}\left(1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}\right)}}}
-\ee
+\eenn
 Maintenant, posons :
-\be
+\benn
 	\begin{cases}
 		y = \dfrac{\rho}{r}\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}} \\
 		\\
 		\mathrm{d}y = -\dfrac{\rho}{r^{2}}\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\mathrm{d}r
 	\end{cases}
-\ee
+\eenn
 Nous savons que $r_{min}$ est racine du d\'enominateur tel que :
-\be
+\benn
 	1 - \frac{\rho^{2}}{r_{min}^{2}}\left(1 + \frac{2\alpha}{mv_{\infty}^{2}\rho^{2}}\right) = 0 \Leftrightarrow r_{min} = \rho\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}
-\ee
+\eenn
 et en $r = r_{min}$, nous avons $y = 1$ donc nous arrivons \`a :
-\be
+\benn
 	\varphi_{0} = \bigintss_{1}^{0}\dfrac{-\mathrm{d}y}{\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\sqrt{1 - y^{2}}}
-\ee
+\eenn
 Avec $z = y^{2}$, soit $\mathrm{d}z = 2y\mathrm{d}y = 2\sqrt{z}\mathrm{d}y$ puisque $y \ge 0$, $\varphi_{0}$ s'\'ecrit, en faisant r\'ef\'erence \`a la d\'efinition de la fonction $\Gamma$ (\ref{EQ:INT_EULER_GAMMA}) :
-\be
+\benn
 	\varphi_{0} = \bigintss_{0}^{1}\dfrac{z^{\frac{-1}{2}}(1 - z)^{\frac{-1}{2}}\mathrm{d}z}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}} = \dfrac{\Gamma(1/2)\Gamma(1/2)}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}\Gamma(1)} = \dfrac{\pi}{2\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}}
-\ee
+\eenn
 Et comme $\xi = \pi - 2\varphi_{0}$, l'angle de d\'eviation vaut :
-\be
+\benn
 	\xi = \pi\left(1 - \dfrac{1}{\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}}\right)
-\ee
+\eenn
 Pour d\'eterminer la section efficace, nous devons trouver la fonction qui relie l'angle de d\'eviation $\xi$ et la distance de vis\'ee $\rho$ en partant de la relation pr\'ec\'edente :
 \bea
 	\pi - \xi & = & \dfrac{\pi}{\sqrt{1 + \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}}}} \Leftrightarrow \left(\dfrac{\pi}{\pi - \xi}\right)^{2} - 1 = \dfrac{2\alpha}{mv_{\infty}^{2}\rho^{2}} \nonumber \\
-	\Leftrightarrow \rho^{2} & = & \dfrac{2\alpha}{mv_{\infty}^{2}}\dfrac{1}{\dfrac{\pi^{2}}{(\pi - \xi)^{2}} - 1} = \dfrac{2\alpha}{mv_{\infty}^{2}}\dfrac{(\pi - \xi)^{2}}{2\pi\xi - \xi^{2}} \Leftrightarrow \rho = \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\dfrac{\pi - \xi}{\sqrt{\xi(2\pi - \xi)}}
+	\Leftrightarrow \rho^{2} & = & \dfrac{2\alpha}{mv_{\infty}^{2}}\dfrac{1}{\dfrac{\pi^{2}}{(\pi - \xi)^{2}} - 1} = \dfrac{2\alpha}{mv_{\infty}^{2}}\dfrac{(\pi - \xi)^{2}}{2\pi\xi - \xi^{2}} \Leftrightarrow \rho = \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\dfrac{\pi - \xi}{\sqrt{\xi(2\pi - \xi)}} \nonumber
 \eea
 et sa d\'eriv\'ee vaut :
 \bea
 	\dfrac{\mathrm{d}\rho}{\mathrm{d}\xi} & = & \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\left[\dfrac{-1}{\sqrt{\xi(2\pi - \xi)}} - \dfrac{(\pi - \xi)(2\pi - 2\xi)}{2(\xi(2\pi - \xi))^{3/2}}\right] = \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\left[\dfrac{-1}{\sqrt{\xi(2\pi - \xi)}} - \dfrac{(\pi - \xi)(\pi - \xi)}{(\xi(2\pi - \xi))^{3/2}}\right] \nonumber \\
-	& = & \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\left[\dfrac{-2\pi\xi + \xi^{2} - \pi^{2} - \xi^{2} + 2\pi\xi}{(\xi(2\pi - \xi))^{3/2}}\right] = -\sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\dfrac{\pi^{2}}{(\xi(2\pi - \xi))^{3/2}}
+	& = & \sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\left[\dfrac{-2\pi\xi + \xi^{2} - \pi^{2} - \xi^{2} + 2\pi\xi}{(\xi(2\pi - \xi))^{3/2}}\right] = -\sqrt{\dfrac{2\alpha}{mv_{\infty}^{2}}}\dfrac{\pi^{2}}{(\xi(2\pi - \xi))^{3/2}} \nonumber
 \eea
 L'\'equation (\ref{EQ:18_8}) permet alors d'arriver \`a :
-\be
+\benn
 	\mathrm{d}\sigma = \dfrac{\rho(\xi)}{\sin\xi}\Bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \Bigg\rvert \mathrm{d}\omega = \dfrac{2\alpha}{mv_{\infty}^{2}}\pi^{2}\dfrac{\pi - \xi}{\xi^{2}(2\pi - \xi)^{2}}\dfrac{\mathrm{d}\omega}{\sin\xi}
-\ee
+\eenn
 
 \subsection{La cuvette de potentiel}
 
@@ -603,9 +603,9 @@ L'\'equation (\ref{EQ:18_8}) permet alors d'arriver \`a :
 \end{figure}
 
 Exprimons la section efficace de diffusion dans le cas de la <<~cuvette de potentiel~>> d\'efinie telle que repr\'esent\'ee sur la figure (\ref{FIG:4_19_EX2}) et dont la profondeur vaut $U_{0}$, i.e. $U = -U_{0}$ pour $r < a$ et $U = 0$ pour $r > a$. Nous pouvons d'ors et d\'ej\`a reprendre la conclusion de l'exercice (\ref{EQ:7_EX1_1}) qui permet de lier les angles d'incidence $\alpha$ et de r\'efraction $\beta$ tels que, avec $m$ la masse de la particule incidente :
-\be
+\benn
 	\dfrac{\sin\alpha}{\sin\beta} = \sqrt{1 + \dfrac{2U_{0}}{mv_{\infty}^{2}}} = n
-\ee
+\eenn
 o\`u $n$ repr\'esente un indice de r\'efraction, en faisant une similitude avec l'optique. La figure (\ref{FIG:4_19_EX2}) nous permet d'exprimer l'angle de d\'eviation $\xi$ comme $2(\alpha - \beta)$. Aussi, l'\'equation pr\'ec\'dente se d\'eveloppe en :
 \bea
 	&  & \dfrac{1}{n} = \dfrac{\sin\beta}{\sin\alpha} = \dfrac{\sin(\alpha - \xi/2)}{\sin\alpha} = \dfrac{\sin\alpha\cos(-\xi/2) + \cos\alpha\sin(-\xi/2)}{\sin\alpha} \nonumber \\
@@ -613,42 +613,42 @@ o\`u $n$ repr\'esente un indice de r\'efraction, en faisant une similitude avec 
 	& \Leftrightarrow & \tan\alpha = \dfrac{n\sin(\xi/2)}{n\cos(\xi/2) - 1} \Leftrightarrow \dfrac{\sin^{2}\alpha}{1 - \sin^{2}\alpha} = \dfrac{n^{2}\sin^{2}(\xi/2)}{1 + n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2)} \nonumber \\
 	& \Leftrightarrow & \dfrac{n^{2}\sin^{2}(\xi/2)}{1 + n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2)} = \sin^{2}\alpha\left(1 + \dfrac{n^{2}\sin^{2}(\xi/2)}{1 + n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2)}\right) \nonumber \\
 	& \Leftrightarrow & n^{2}\sin^{2}(\xi/2) = \sin^{2}\alpha\left(1 + n^{2}\cos^{2}(\xi/2) - 2n\cos(\xi/2) + n^{2}\sin^{2}(\xi/2)\right) \nonumber \\
-	& \Leftrightarrow & \sin^{2}(\alpha) = \dfrac{n^{2}\sin^{2}(\xi/2)}{n^{2} + 1 - 2n\cos(\xi/2)}
+	& \Leftrightarrow & \sin^{2}(\alpha) = \dfrac{n^{2}\sin^{2}(\xi/2)}{n^{2} + 1 - 2n\cos(\xi/2)} \nonumber
 \eea
 et comme par construction, la distance de vis\'ee vaut $a\sin\alpha$ donc :
-\be
+\benn
 	\rho^{2} = a^{2}\dfrac{n^{2}\sin^{2}(\xi/2)}{n^{2} + 1 - 2n\cos(\xi/2)} \Leftrightarrow \rho = an\dfrac{\sin(\xi/2)}{\sqrt{n^{2} + 1 - 2n\cos(\xi/2)}} \label{EQ:19_EX1}
-\ee
+\eenn
 En cons\'equence :
 \bea
 	\dfrac{\mathrm{d}\rho}{\mathrm{d}\xi} & = & an\left[\dfrac{\frac{1}{2}\cos(\xi/2)}{\sqrt{n^{2} + 1 - 2n\cos(\xi/2)}} + \dfrac{-\frac{1}{2}\cdot -2n\cdot\frac{1}{2}\cdot -\sin(\xi/2)\sin(\xi/2)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{-3/2}}\right] \nonumber \\
 	& = & \dfrac{an}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{-3/2}}\left(\dfrac{n^{2}}{2}\cos(\xi/2) + \dfrac{1}{2}\cos(\xi/2) - n\cos^{2}(\xi/2) - \frac{n}{2}\sin^{2}(\xi/2)\right) \nonumber \\
 	& = & \dfrac{an}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{-3/2}}\left(\dfrac{n^{2}}{2}\cos(\xi/2) + \dfrac{1}{2}\cos(\xi/2) - n\cos^{2}(\xi/2) - \frac{n}{2} + \frac{n}{2}\cos^{2}(\xi/2)\right) \nonumber \\
-	& = & \dfrac{an}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{-3/2}}\left(- \frac{n}{2} + \dfrac{1}{2}\cos(\xi/2) + \dfrac{n^{2}}{2}\cos(\xi/2) - \frac{n}{2}\cos^{2}(\xi/2)\right)
+	& = & \dfrac{an}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{-3/2}}\left(- \frac{n}{2} + \dfrac{1}{2}\cos(\xi/2) + \dfrac{n^{2}}{2}\cos(\xi/2) - \frac{n}{2}\cos^{2}(\xi/2)\right) \nonumber
 \eea
 or, nous avons :
-\be
+\benn
 	\begin{cases}
 		\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right) = n^{2}\cos(\xi/2) - n\cos^{2}(\xi/2) - n + \cos(\xi/2) \\
 		\sin\xi = 2\cos(\xi/2)\sin(\xi/2)
 	\end{cases}
-\ee
+\eenn
 ce qui permet d'en d\'eduire selon l'\'equation (\ref{EQ:18_8}) :
 \bea
 	\mathrm{d}\sigma & = & \rho(\xi)\Bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \Bigg\rvert\dfrac{\mathrm{d}\omega}{\sin\xi} = \dfrac{a^{2}n^{2}\sin(\xi/2)}{2}\dfrac{\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{2}}\dfrac{\mathrm{d}\omega}{\sin\xi} \nonumber \\
-	& = & \dfrac{a^{2}n^{2}}{4\cos(\xi/2)}\dfrac{\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{2}}\mathrm{d}\omega
+	& = & \dfrac{a^{2}n^{2}}{4\cos(\xi/2)}\dfrac{\left(n\cos(\xi/2) - 1\right)\left(n - \cos(\xi/2)\right)}{\left(n^{2} + 1 - 2n\cos(\xi/2)\right)^{2}}\mathrm{d}\omega \nonumber
 \eea
 Quelques remarques :
 \begin{itemize}
 	\item $\rho = 0 \Rightarrow \sin(\xi/2) = 0 \Rightarrow \xi_{min} = 0$, i.e. pour une distance de vis\'ee nulle, la particule n'est pas d\'evi\'ee
 	\item $\rho$ est maximale quand le d\'enominateur de l'\'equation (\ref{EQ:19_EX1}) est maximal, soit quand la quantit\'e $2n\cos(\xi/2)$ est maximale. Nous avons donc :
-		\be
+		\benn
 			\cos(\xi_{max}/2) = \dfrac{1}{n}
-		\ee
+		\eenn
 	\item par construction :
-		\be
+		\benn
 			\sigma = \int_{0}^{\xi_{max}} \dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = \pi a^{2}
-		\ee
+		\eenn
 \end{itemize}
 
 \section{Diffusion sous de petits angles}
@@ -656,88 +656,88 @@ Quelques remarques :
 \subsection{D\'emonstration alternative pour l\'equation (\ref{EQ:20_3})}
 
 L'objectif ici est de d\'emontrer l'\'equation (\ref{EQ:20_3}) \`a partir de la relation (\ref{EQ:18_4}), \`a savoir :
-\be
+\benn
 	\varphi_{0} = \bigintss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}}
-\ee
+\eenn
 dans le cas particulier des petites d\'eviations. Tout d'abord, remarquons que :
-\be
+\benn
 	\dfrac{\partial\left(\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}\right)}{\partial \rho} = \dfrac{1}{2}\dfrac{-2\dfrac{\rho}{r^{2}}}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}} = \dfrac{-\dfrac{\rho}{r^{2}}}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}
-\ee
+\eenn
 donc la relation (\ref{EQ:18_4}) peut aussi s'\'ecrire comme :
-\be
+\benn
 	\varphi_{0} = -\dfrac{\partial}{\partial \rho}\left(\bigintsss_{r_{min}}^{\infty}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}\mathrm{d}r\right)
-\ee
+\eenn
 Puisque nous sommes dans le cadre des petites d\'eviations, i.e. $U \rightarrow 0$ et $r_{min} \approx \rho$, le d\'eveloppement de Taylor\footnote{S\'erie de Taylor : $f(x) = \sum_{n=0}^{\infty}\frac{f^{(n)}(a)}{n!}(x - a)^{n}$} au premier ordre de $\varphi_{0}$ par rapport \`a $U$ donne :
-\be
+\benn
 	\varphi_{0}(U(r)) = \varphi_{0}(U(\infty)) + \dfrac{\varphi_{0}(U(r))}{\partial U(r)}(U(r))\cdot(U(r) - U(\infty))  = \varphi_{0}(0) + \dfrac{\varphi_{0}(U(r))}{\partial U(r)}(U(r))\cdot U(r)
-\ee
+\eenn
 Pour le premier terme, nous nous appuyons sur l'\'equation (\ref{EQ:18_4}) alors que pour le second, nous prenons l'expression de $\varphi_{0}$ sous forme d\'eriv\'ee, soit :
 \bea
 	\varphi_{0}(U(r)) & = & \bigintss_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{\partial}{\partial\rho}\bigints_{\rho}^{\infty}\left(\dfrac{\mathrm{\partial}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}{\partial U}\right)_{U(r)}\cdot U(r)\mathrm{d}r \nonumber \\
-	& = & \bigintss_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{-2}{2}\dfrac{1}{mv_{\infty}^{2}\dfrac{\partial}{\partial\rho}}\bigintss_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = I + \dfrac{1}{mv_{\infty}^{2}}\dfrac{\partial}{\partial\rho}J
+	& = & \bigintss_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{-2}{2}\dfrac{1}{mv_{\infty}^{2}\dfrac{\partial}{\partial\rho}}\bigintss_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = I + \dfrac{1}{mv_{\infty}^{2}}\dfrac{\partial}{\partial\rho}J \nonumber
 \eea
 Pour le calcul de $I$, posons $u = \rho/r \Rightarrow \mathrm{d}u = -\rho\mathrm{d}r/r^{2}$ qui implique $r = \rho \Rightarrow u = 1$ et $r \rightarrow \infty \Rightarrow u = 0$ et \'ecrivons :
-\be
+\benn
 	I = - \int_{1}^{0}\dfrac{\mathrm{d}u}{1 - u^{2}} = - [-\arccos u]_{1}^{0} = \arccos(0) - \arccos(1) = \dfrac{\pi}{2}
-\ee
+\eenn
 Pour l'int\'egrale J, r\'ealisons son int\'egration par partie :
 \bea
 	J & = & \bigintss_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = \bigintsss_{\rho}^{\infty}\dfrac{U(r)r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} \nonumber \\
-	& = & [U(r)\sqrt{r^{2} - \rho^{2}}]_{\rho}^{\infty} - \bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r = - \bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r
+	& = & [U(r)\sqrt{r^{2} - \rho^{2}}]_{\rho}^{\infty} - \bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r = - \bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r \nonumber
 \eea
 car :
-\be
+\benn
 	\dfrac{\mathrm{d}\sqrt{r^{2} - \rho^{2}}}{\mathrm{d}r} = \dfrac{1}{2}\dfrac{2r}{\sqrt{r^{2} - \rho^{2}}} = \dfrac{r}{\sqrt{r^{2} - \rho^{2}}}
-\ee
+\eenn
 Nous en concluons donc que :
-\be
+\benn
 	\varphi_{0} = \dfrac{\pi}{2} - \dfrac{\partial}{\partial\rho}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r
-\ee
+\eenn
 Et comme finalement, $\xi = \pi - 2\varphi_{0}$, et que dans notre cas de petites d\'eviations, $\theta_{1} \approx \xi$ alors :
 \bea
 	\theta_{1} & = & \pi - \pi + 2\dfrac{\partial}{\partial\rho}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r \nonumber \\
-	& = & \dfrac{-2\rho}{mv_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}}
+	& = & \dfrac{-2\rho}{mv_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} \nonumber
 \eea
 correspondant \`a l'\'equation (\ref{EQ:20_3}).
 
 \subsection{Cas du champ $U = \alpha/r^{n}$ et $n > 0$}
 
 De facto, nous avons :
-\be
+\benn
 	\dfrac{\mathrm{d}U}{\mathrm{d}r} = -\dfrac{\alpha n}{r^{n + 1}}
-\ee
+\eenn
 qui permet d'exprimer $\theta_{1}$ de la formule (\ref{EQ:20_3}), pour une particule diffus\'ee de masse $m_{1}$ ainsi :
-\be
+\benn
 	\theta_{1} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 1}\sqrt{r^{2} - \rho^{2}}} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}}
-\ee
+\eenn
 En posant :
-\be
+\benn
 	\begin{cases}
 		u = \dfrac{\rho^{2}}{r^{2}} \Rightarrow \mathrm{d}u = \dfrac{-2\rho}{r^{3}}\mathrm{d}r = -2u \dfrac{\mathrm{d}r}{r} \\
 		\\
 		r = \rho \Rightarrow u = 1\text{ et }r \rightarrow \infty \Rightarrow u \rightarrow 0
 	\end{cases}
-\ee
+\eenn
 nous pouvons d\'evelopper $\theta_{1}$ ainsi :
 \bea
 	\theta_{1} & = & \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 1}r\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{1}^{0}\dfrac{\frac{-\mathrm{d}u}{2u}}{\dfrac{\rho^{n + 1}}{u^{\dfrac{n + 1}{2}}}\sqrt{1 - u}} \nonumber \\
-	& = & \dfrac{\alpha n}{m_{1}v_{\infty}^{2}\rho^{n}}\int_{0}^{1}u^{\frac{n}{2} - \frac{1}{2}}(1 - u)^{\frac{-1}{2}}\mathrm{d}u = \dfrac{\alpha n}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})\Gamma(\frac{1}{2})}{\Gamma(\frac{n}{2} + 1)} = \dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}
+	& = & \dfrac{\alpha n}{m_{1}v_{\infty}^{2}\rho^{n}}\int_{0}^{1}u^{\frac{n}{2} - \frac{1}{2}}(1 - u)^{\frac{-1}{2}}\mathrm{d}u = \dfrac{\alpha n}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})\Gamma(\frac{1}{2})}{\Gamma(\frac{n}{2} + 1)} = \dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)} \nonumber
 \eea
 ce qui est une conclusion autre que celle propos\'ee par le livre qui est :
-\be
+\benn
 	\theta_{1} = \dfrac{2\alpha\sqrt{\pi}}{m_{1}v_{\infty}^{2}\rho^{n}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2})}
-\ee
+\eenn
 En reprenant la formule (\ref{EQ:20_4}) avec la proposition de $\theta_{1}$, nous pouvons \'ecrire :
-\be
+\benn
 	\begin{cases}
 		\rho = \left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}\theta_{1}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{1}{n}} \\
 		\\
 		\dfrac{\mathrm{d}\rho}{\mathrm{d}\theta_{1}} = -\dfrac{1}{n}\left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{1}{n}}\dfrac{1}{\theta_{1}^{\frac{1}{n} + 1}}
 	\end{cases}
-\ee
+\eenn
 et finalement :
 \bea
 	\mathrm{d}\sigma & = & \dfrac{\rho(\theta_{1})}{\theta_{1}}\lvert \dfrac{\mathrm{d}\rho(\theta_{1})}{\mathrm{d}\theta_{1}} \rvert \mathrm{d}\omega_{1} = \dfrac{1}{n}\left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{1}{n}}\dfrac{1}{\theta_{1}^{\frac{1}{n} + 1}}\left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}\theta_{1}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{1}{n}}\dfrac{\mathrm{d}\omega_{1}}{\theta_{1}} \nonumber \\
-	& = & \dfrac{1}{n}\left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{2}{n}}\dfrac{\mathrm{d}\omega_{1}}{\theta_{1}^{2(\frac{1}{n} + 1)}}
+	& = & \dfrac{1}{n}\left(\dfrac{\alpha n\sqrt{\pi}}{m_{1}v_{\infty}^{2}}\dfrac{\Gamma(\frac{n + 1}{2})}{\Gamma(\frac{n}{2} + 1)}\right)^{\frac{2}{n}}\dfrac{\mathrm{d}\omega_{1}}{\theta_{1}^{2(\frac{1}{n} + 1)}} \nonumber
 \eea
 qui est encore une fois une conclusion diff\'erente que celle pr\'esent\'ee dans le livre mais uniquement dans la constante multiplicatrice, la relation entre $\rho$ et $\theta_{1}$ est similaire.
