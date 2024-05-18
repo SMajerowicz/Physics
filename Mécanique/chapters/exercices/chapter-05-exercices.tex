@@ -682,6 +682,21 @@ alors que la relation (\ref{EQ:24_2}) donne :
 	& & m_{A}\begin{pmatrix}-l \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}-l \\ y_{1} \\ 0\end{pmatrix} + m_{B}\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}0 \\ y_{2} \\ 0\end{pmatrix} + m_{A}\begin{pmatrix}l \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}l \\ y_{3} \\ 0\end{pmatrix} = 0 \nonumber \\
 	& \Leftrightarrow & -lm_{A}y_{1} + lm_{A}y_{3} = 0 \Leftrightarrow y_{1} = y_{3} \nonumber
 \eea
+L'angle $\delta$ d'\'ecartement total vaut $\delta_{1} + \delta_{3}$ avec $\delta_{1}$, respectivement $\delta_{3}$, l'\'ecartement de l'atome $1$, respectivement l'atome $3$, par rapport \`a l'axe longitudinal de la mol\'ecule. Sachant que nous restons dans de petites variations, nous pouvons d\'evelopper :
+\benn
+	\delta = \arctan\left(\dfrac{y_{1} - y_{2}}{l}\right) + \arctan\left(\dfrac{y_{3} - y_{2}}{l}\right) \approx \dfrac{1}{l}(y_{1} - y_{2} + y_{3} - y_{2}) = \dfrac{1}{l}(y_{1} + y_{3})
+\eenn
+et l'\'energie potentielle issue de la courbure de la mol\'ecule peut se d\'efinir comme $k_{t}(l\delta)^{2}/2$. Ainsi la fonction de Lagrange dans ce cas, s'\'ecrit :
+\benn
+	L = \dfrac{m_{A}}{2}\dot{y}_{1}^{2} + \dfrac{m_{B}}{2}\dot{y}_{2}^{2} + \dfrac{m_{A}}{2}\dot{y}_{3}^{2} - \dfrac{k_{t}}{2}l^{2}\delta^{2}
+\eenn
+Sachant que $y_{1} = y_{3}$, nous pouvons en d\'eduire que :
+\benn
+	\begin{cases}
+		\delta = \dfrac{2y_{1}}{l} \Leftrightarrow y_{1} = y_{3} = \dfrac{l\delta}{2} \\
+		y_{2} = -2\dfrac{m_{A}}{m_{B}}y_{1} \Leftrightarrow y_{2} = -\dfrac{m_{A}}{m_{B}}l\delta
+	\end{cases}
+\eenn
 
 \subsection{Cas d'une mol\'ecule triangulaire}
 
