@@ -614,14 +614,32 @@ La fonction de Lagrange se compose de :
 \eenn
 avec $k_{l}$ est le c{\oe}fficient longitudinal. En rempla\c{c}ant $x_{2}$, nous avons :
 \bea
-	L & = & \dfrac{1}{2}m_{A}(\dot{x}_{1}^{2} + \dot{x}_{3}^{2}) + \dfrac{1}{2}m_{B}\dfrac{m_{A}^{2}}{m_{B}^{2}}(\dot{x}_{1} + \dot{x}_{3})^{2} - \dfrac{k_{l}}{2}\left(x_{1} + \dfrac{m_{A}}{m_{B}}(x_{1} + x_{3})\right)^{2} - \dfrac{k_{l}}{2}\left(x_{3} - + \dfrac{m_{A}}{m_{B}}(x_{1} + x_{3})\right)^{2} \nonumber \\
+	L & = & \dfrac{1}{2}m_{A}(\dot{x}_{1}^{2} + \dot{x}_{3}^{2}) + \dfrac{1}{2}m_{B}\dfrac{m_{A}^{2}}{m_{B}^{2}}(\dot{x}_{1} + \dot{x}_{3})^{2} \nonumber \\
+	& &  -\dfrac{k_{l}}{2}\left(x_{1} + \dfrac{m_{A}}{m_{B}}(x_{1} + x_{3})\right)^{2} - \dfrac{k_{l}}{2}\left(x_{3} - + \dfrac{m_{A}}{m_{B}}(x_{1} + x_{3})\right)^{2} \nonumber \\
 	& = & \dfrac{1}{2}m_{A}(\dot{x}_{1}^{2} + \dot{x}_{3}^{2}) + \dfrac{1}{2}\dfrac{m_{A}^{2}}{m_{B}}(\dot{x}_{1} + \dot{x}_{3})^{2} \nonumber \\
-	& - & \dfrac{k_{l}}{2}\left(x_{1}^{2} + \dfrac{m_{A}^{2}}{m_{B}^{2}}(x_{1} + x_{3})^{2} + 2\dfrac{m_{A}}{m_{B}}x_{1}(x_{1} + x_{3}) + x_{3}^{2} + \dfrac{m_{A}^{2}}{m_{B}^{2}}(x_{1} + x_{3})^{2} + 2\dfrac{m_{A}}{m_{B}}x_{3}(x_{1} + x_{3})\right) \nonumber \\
+	& & -\dfrac{k_{l}}{2}\left(x_{1}^{2} + \dfrac{m_{A}^{2}}{m_{B}^{2}}(x_{1} + x_{3})^{2} + 2\dfrac{m_{A}}{m_{B}}x_{1}(x_{1} + x_{3}) + x_{3}^{2} + \dfrac{m_{A}^{2}}{m_{B}^{2}}(x_{1} + x_{3})^{2} + 2\dfrac{m_{A}}{m_{B}}x_{3}(x_{1} + x_{3})\right) \nonumber \\
 	& = & \dfrac{1}{2}m_{A}(\dot{x}_{1}^{2} + \dot{x}_{3}^{2}) + \dfrac{1}{2}\dfrac{m_{A}^{2}}{m_{B}}(\dot{x}_{1} + \dot{x}_{3})^{2} - \dfrac{k_{l}}{2}\left(x_{1}^{2} + x_{3}^{2} + 2\dfrac{m_{A}^{2}}{m_{B}^{2}}(x_{1} + x_{3})^{2} + 2\dfrac{m_{A}}{m_{B}}(x_{1} + x_{3})^{2}\right) \nonumber \\
 	& = & \dfrac{m_{A}}{2}\dot{x}_{1}^{2} + \dfrac{m_{A}}{2}\dot{x}_{3}^{2} + \dfrac{m_{A}^{2}}{2m_{B}}\dot{x}_{1}^{2} + \dfrac{m_{A}^{2}}{2m_{B}}\dot{x}_{3}^{2} + \dfrac{m_{A}^{2}}{m_{B}}\dot{x}_{1}\dot{x}_{3} \nonumber \\
-	& - & \dfrac{k_{l}}{2}x_{1}^{2} - \dfrac{k_{l}}{2}x_{3}^{2} - k_{l}\dfrac{m_{A}}{m_{B}^{2}}(m_{A} + m_{B})(x_{1}^{2} + x_{3}^{2} + 2x_{1}^{2}x_{3}^{2}) \nonumber \\
+	& & -\dfrac{k_{l}}{2}x_{1}^{2} - \dfrac{k_{l}}{2}x_{3}^{2} - k_{l}\dfrac{m_{A}}{m_{B}^{2}}(m_{A} + m_{B})(x_{1}^{2} + x_{3}^{2} + 2x_{1}^{2}x_{3}^{2}) \nonumber \\
 	& = & \dfrac{m_{A}}{2m_{B}}(m_{A} + m_{B})(\dot{x}_{1}^{2} + \dot{x}_{3}^{2}) + \dfrac{m_{A}^{2}}{m_{B}}\dot{x}_{1}\dot{x}_{3} - \dfrac{k_{l}}{2m_{B}^{2}}(m_{B}^{2} + 2m_{A}^{2} + 2m_{A}m_{B})(x_{1}^{2} + x_{3}^{2}) \nonumber \\
-	& - & \dfrac{k_{l}}{m_{B}^{2}}(2m_{A}^{2} + 2m_{A}m_{B})x_{1}x_{3} \nonumber \\
+	& & -\dfrac{k_{l}}{m_{B}^{2}}(2m_{A}^{2} + 2m_{A}m_{B})x_{1}x_{3} \nonumber \\
+	& = & \dfrac{m_{A}}{4m_{B}}(m_{B} + 2m_{A} + m_{B})(\dot{x}_{1}^{2} + \dot{x}_{3}^{2}) + \dfrac{m_{A}}{2m_{B}}(2m_{A} + m_{B} - m_{B})\dot{x}_{1}\dot{x}_{3} \nonumber \\
+	& & -\dfrac{k_{l}}{4m_{B}^{2}}(m_{B}^{2} + 4m_{A}^{2} + m_{B}^{2} + 4m_{A}m_{B})(x_{1}^{2} + x_{3}^{2}) - \dfrac{k_{l}}{2m_{B}^{2}}(4m_{A}^{2} + m_{B}^{2} + 2m_{A}m_{B} - m_{B}^{2})x_{1}x_{3} \nonumber
+\eea
+En posant la masse totale $\mu$ \'egale \`a $2m_{A} + m_{B}$, nous pouvons continuer telle que :
+\bea
+	L & = & \dfrac{m_{A}}{4}\left(1 + \dfrac{\mu}{m_{B}}\right)(\dot{x}_{1}^{2} + \dot{x}_{3}^{2}) + \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\dot{x}_{1}\dot{x}_{3} \nonumber \\
+	& & -\dfrac{k_{l}}{4}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right)(x_{1}^{2} + x_{3}^{2}) - \dfrac{k_{l}}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right)x_{1}x_{3} \nonumber \\
+	& = & \dfrac{m_{A}\mu}{4m_{B}}(\dot{x}_{1}^{2} + \dot{x}_{3}^{2} + 2\dot{x}_{1}\dot{x}_{3}) +  \dfrac{m_{A}}{4}(\dot{x}_{1}^{2} + \dot{x}_{3}^{2} - 2\dot{x}_{1}\dot{x}_{3}) \nonumber \\
+	& & -\dfrac{k_{l}\mu^{2}}{4m_{B}^{2}}(x_{1}^{2} + x_{3}^{2} + 2x_{1}x_{3}) - \dfrac{k_{l}}{4}(x_{1}^{2} + x_{3}^{2} - 2x_{1}x_{3})\nonumber \\
+	& = & \dfrac{m_{A}\mu}{4m_{B}}(\dot{x}_{1} + \dot{x}_{3})^{2} +  \dfrac{m_{A}}{4}(\dot{x}_{1} - \dot{x}_{3})^{2} - \dfrac{k_{l}\mu^{2}}{4m_{B}^{2}}(x_{1} + x_{3})^{2} - \dfrac{k_{l}\mu^{2}}{4}(x_{1} - x_{3})^{2}\nonumber
+\eea
+Les \'equations du mouvement sont :
+\bea
+	& & \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{x}_{1}}\right) = \dfrac{\partial L}{\partial x_{1}} \Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{m_{A}\mu}{2m_{B}}(\dot{x}_{1} + \dot{x}_{3}) + \dfrac{m_{A}}{2}(\dot{x}_{1} - \dot{x}_{3})\right) = -\dfrac{k\mu^{2}}{2m_{B}^{2}}(x_{1} + x_{3}) - \dfrac{k}{2}(x_{1} - x_{3}) \nonumber \\
+	& & \Leftrightarrow \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\ddot{x}_{1} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right)x_{1} + \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\ddot{x}_{3} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right)x_{3} = 0 \nonumber \\
+	& & \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{x}_{3}}\right) = \dfrac{\partial L}{\partial x_{3}} \Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{m_{A}\mu}{2m_{B}}(\dot{x}_{1} + \dot{x}_{3}) - \dfrac{m_{A}}{2}(\dot{x}_{1} - \dot{x}_{3})\right) = -\dfrac{k\mu^{2}}{2m_{B}^{2}}(x_{1} + x_{3}) + \dfrac{k}{2}(x_{1} - x_{3}) \nonumber \\
+	& & \Leftrightarrow \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\ddot{x}_{1} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right)x_{1} + \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\ddot{x}_{3} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right)x_{3} = 0 \nonumber
 \eea
 
 \subsubsection{Oscillations transversales}
