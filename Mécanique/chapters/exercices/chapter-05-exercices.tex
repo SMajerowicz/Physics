@@ -641,8 +641,47 @@ Les \'equations du mouvement sont :
 	& & \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{x}_{3}}\right) = \dfrac{\partial L}{\partial x_{3}} \Leftrightarrow \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{m_{A}\mu}{2m_{B}}(\dot{x}_{1} + \dot{x}_{3}) - \dfrac{m_{A}}{2}(\dot{x}_{1} - \dot{x}_{3})\right) = -\dfrac{k\mu^{2}}{2m_{B}^{2}}(x_{1} + x_{3}) + \dfrac{k}{2}(x_{1} - x_{3}) \nonumber \\
 	& & \Leftrightarrow \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\ddot{x}_{1} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right)x_{1} + \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\ddot{x}_{3} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right)x_{3} = 0 \nonumber
 \eea
+En posant $x_{1} = A_{1}e^{i\omega\mathrm{t}}$ et $x_{3} = A_{3}e^{i\omega\mathrm{t}}$, nous arrivons \`a :
+\bea
+	& & \begin{cases}
+		-\dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\omega^{2}A_{1} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right)A_{1} - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\omega^{2}A_{3} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right)A_{3} = 0 \\
+		\\
+		-\dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\omega^{2}A_{1} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right)A_{1} - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\omega^{2}A_{3} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right)A_{3} = 0 \\
+	\end{cases} \nonumber \\
+	& \Leftrightarrow &
+	\begin{cases}
+		\left[\dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right) - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\omega^{2}\right]A_{1} + \left[\dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right) - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\omega^{2}\right]A_{3} = 0 \\
+		\\
+		\left[\dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right) - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\omega^{2}\right]A_{1} + \left[\dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right) - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\omega^{2}\right]A_{3} = 0 \\
+	\end{cases} \nonumber
+\eea
+L'\'equation caract\'eristique, qui est le d\'eterminant de la matrice repr\'esentant le syst\`eme d'\'equations ci-dessus, est alors :
+\benn
+	\left[\dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right) - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\omega^{2}\right]^{2} - \left[\dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right) - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\omega^{2}\right]^{2} = 0
+\eenn
+or, par d\'efinition $x^{2} - y^{2} = (x + y)(x - y)$, nous pouvons donc r\'e\'ecrire l'\'equation caract\'eristique telle que :
+\bea
+	& & \left[\dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right) - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\omega^{2} - \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right) + \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\omega^{2}\right]\cdot \nonumber \\
+	& & \left[\dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} - 1\right) - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} - 1\right)\omega^{2} + \dfrac{k}{2}\left(\dfrac{\mu^{2}}{m_{B}^{2}} + 1\right) - \dfrac{m_{A}}{2}\left(\dfrac{\mu}{m_{B}} + 1\right)\omega^{2}\right] = 0 \nonumber \\
+	& \Leftrightarrow & \left[k - m_{A}\omega^{2}\right]\left[\dfrac{k\mu^{2}}{m_{B}^{2}} - \dfrac{m_{A}\mu}{m_{B}}\omega^{2}\right] = 0 \nonumber \\
+	& \Leftrightarrow & \begin{cases}
+	\omega = \sqrt{\dfrac{k}{m_{A}}} \\
+	\\
+	\omega = \sqrt{\dfrac{k\mu}{m_{A}m_{B}}}
+	\end{cases} \nonumber
+\eea
 
 \subsubsection{Oscillations transversales}
+
+Dans ce cas particulier, il y a un \'ecartement des atomes par rapport \`a l'axe longitudinal qui d\'efinit la mol\'ecule. La relation (\ref{EQ:24_1}) permet d'\'ecrire :
+\benn
+	m_{A}y_{1} + m_{B}y_{2} + m_{A}y_{3} = 0
+\eenn
+alors que la relation (\ref{EQ:24_2}) donne :
+\bea
+	& & m_{A}\begin{pmatrix}-l \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}-l \\ y_{1} \\ 0\end{pmatrix} + m_{B}\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}0 \\ y_{2} \\ 0\end{pmatrix} + m_{A}\begin{pmatrix}l \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}l \\ y_{3} \\ 0\end{pmatrix} = 0 \nonumber \\
+	& \Leftrightarrow & -lm_{A}y_{1} + lm_{A}y_{3} = 0 \Leftrightarrow y_{1} = y_{3} \nonumber
+\eea
 
 \subsection{Cas d'une mol\'ecule triangulaire}
 
