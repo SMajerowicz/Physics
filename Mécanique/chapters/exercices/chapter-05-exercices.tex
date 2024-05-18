@@ -596,7 +596,7 @@ Dans les trois probl\`emes suivants, il s'agit de trouver les fr\'equences des o
 			\put(100,0){\vector(0,1){15}}
 			\put(175,0){\vector(0,-1){15}}
 		\end{picture}
-		\caption{Cas d'oscillations lin\'eaires pour une mol\'ecule triatomique sym\'etrique}\label{FIG:28_EX24_1}
+		\caption{Cas d'oscillations lin\'eaires pour une mol\'ecule triatomique sym\'etrique}\label{FIG:EX24_1}
 	\end{center}
 \end{figure}
 
@@ -697,7 +697,42 @@ Sachant que $y_{1} = y_{3}$, nous pouvons en d\'eduire que :
 		y_{2} = -2\dfrac{m_{A}}{m_{B}}y_{1} \Leftrightarrow y_{2} = -\dfrac{m_{A}}{m_{B}}l\delta
 	\end{cases}
 \eenn
+Dans ce cas, la fonction de Lagrange devient :
+\bea
+	L & = & \dfrac{m_{A}l^{2}}{8}\dot{\delta}^{2} + \dfrac{m_{A}^{2}l^{2}}{2m_{B}}\dot{\delta}^{2} + \dfrac{m_{A}l^{2}}{8}\dot{\delta}^{2} - \dfrac{kl^{2}}{2}\delta^{2} \nonumber \\
+	& = & \dfrac{m_{A}l^{2}}{4}\left(1 + 2\dfrac{m_{A}}{m_{B}}\right)\dot{\delta}^{2} - \dfrac{kl^{2}}{2}\delta^{2} \nonumber
+\eea
+L'\'equation du mouvement est :
+\bea
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{\delta}}\right) = \dfrac{\partial L}{\partial\delta} & \Leftrightarrow & \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{m_{A}l^{2}}{2m_{B}}\dot{\delta}\right) = -kl^{2}\delta \nonumber \\
+	& \Leftrightarrow & \dfrac{m_{A}l^{2}}{m_{B}}\ddot{\delta} + kl^{2}\delta = 0 \nonumber
+\eea
+En posant $\delta = Ae^{i\omega\mathrm{t}}$, nous arrivons finalement \`a :
+\benn
+	-\dfrac{m_{A}l^{2}}{2m_{B}}\omega^{2}A + kl^{2}A = 0 \Leftrightarrow \omega^{2} = 2\dfrac{m_{B}k}{\mu m_{A}}
+\eenn
 
 \subsection{Cas d'une mol\'ecule triangulaire}
+
+\begin{figure}[htb!]
+	\begin{center}
+		\begin{picture}(300,150)(0,0)
+			\linethickness{0.05mm}
+			\put(23,150){\line(1,0){150}}
+			\put(22,154){$1$}
+			\put(25,150){\circle*{5}}
+			\put(20,138){$A$}
+			\put(62,152){$l$}
+			\put(97,154){$2$}
+			\put(100,150){\circle*{5}}
+			\put(95,138){$B$}
+			\put(137,152){$l$}
+			\put(172,154){$3$}
+			\put(175,150){\circle*{5}}
+			\put(170,138){$C$}
+		\end{picture}
+		\caption{Cas d'oscillations lin\'eaires pour une mol\'ecule triatomique de forme triangulaire}\label{FIG:EX24_2}
+	\end{center}
+\end{figure}
 
 \subsection{Cas d'une mol\'ecule lin\'eaire asym\'etrique}
