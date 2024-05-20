@@ -714,25 +714,62 @@ En posant $\delta = Ae^{i\omega\mathrm{t}}$, nous arrivons finalement \`a :
 
 \subsection{Cas d'une mol\'ecule triangulaire}
 
+Nous restons dans le cas sym\'etrique o\`u $m_{A} = m_{C}$. La relation (\ref{EQ:24_1}) permet d'\'ecrire :
+\benn
+	\begin{cases}
+		m_{A}x_{1} + m_{B}x_{2} + m_{A}x_{3} = 0 \\
+		m_{A}y_{1} + m_{B}y_{2} + m_{A}y_{3} = 0
+	\end{cases}
+	\Leftrightarrow
+	\begin{cases}
+		m_{A}(x_{1} + x_{3}) + m_{B}x_{2} = 0 \\
+		m_{A}(y_{1} + y_{3}) + m_{B}y_{2} = 0
+	\end{cases}
+\eenn
+
 \begin{figure}[htb!]
 	\begin{center}
 		\begin{picture}(300,150)(0,0)
 			\linethickness{0.05mm}
-			\put(23,150){\line(1,0){150}}
-			\put(22,154){$1$}
-			\put(25,150){\circle*{5}}
-			\put(20,138){$A$}
-			\put(62,152){$l$}
-			\put(97,154){$2$}
-			\put(100,150){\circle*{5}}
-			\put(95,138){$B$}
-			\put(137,152){$l$}
-			\put(172,154){$3$}
-			\put(175,150){\circle*{5}}
-			\put(170,138){$C$}
+			\multiput(50,0)(10,0){20}{\line(1,0){8}}\put(252,-3){$x$}
+			\multiput(150,0)(0,10){14}{\line(0,1){8}}\put(148,142){$y$}
+			\put(146,-12){$B$}
+			\put(152,10){$2$}
+			\put(150,0){\circle*{5}}
+			\put(150,0){\line(-1,1){100}}
+			\put(50,100){\circle*{5}}
+			\put(46,104){$A$}
+			\put(47,85){$3$}
+			\put(150,0){\line(1,1){100}}
+			\put(250,100){\circle*{5}}
+			\put(246,104){$C$}
+			\put(246,85){$1$}
+			\qbezier(125,27)(150,55)(175,27)
+			\put(152,57){$2\alpha$}
 		\end{picture}
 		\caption{Cas d'oscillations lin\'eaires pour une mol\'ecule triatomique de forme triangulaire}\label{FIG:EX24_2}
 	\end{center}
 \end{figure}
+
+Et la relation (\ref{EQ:24_2}) permet, elle d'en d\'eduire :
+\bea
+	& & m_{A}\begin{pmatrix}l\sin\alpha \\ l\cos\alpha \\ 0\end{pmatrix}\wedge\begin{pmatrix}x_{1} \\ y_{1} \\ 0\end{pmatrix} + m_{B}\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}x_{2} \\ y_{2} \\ 0\end{pmatrix} + m_{A}\begin{pmatrix}-l\sin\alpha \\ l\cos\alpha \\ 0\end{pmatrix}\wedge\begin{pmatrix}x_{3} \\ y_{3} \\ 0\end{pmatrix} = 0 \nonumber \\
+	& \Leftrightarrow & m_{A}ly_{1}\sin\alpha - m_{A}lx_{1}\cos\alpha - m_{A}ly_{3}\sin\alpha - m_{A}lx_{3}\cos\alpha = 0 \nonumber \\
+	& \Leftrightarrow & -(x_{1} + x_{3})\cos\alpha + (y_{1} - y_{3})\sin\alpha = 0 \nonumber
+\eea
+Dans ce cas pr\'ecis, il existe trois cas diff\'erents d'oscillations : suivant $[AB]$ ou $\delta l_{1}$, suivant $[BC]$ ou $\delta l_{2}$ et autour de la valeur de l'angle $\alpha$, soit $\delta$ :
+\begin{itemize}
+	\item projection du vecteur $\vec{u}_{3} - \vec{u}_{2}$ sur $[AB]$ :
+	\bea
+		\left[\begin{pmatrix}x_{3} \\ y_{3} \\ 0\end{pmatrix} - \begin{pmatrix}x_{2} \\ y_{2} \\ 0\end{pmatrix}\right]\cdot\begin{pmatrix}-\sin\alpha \\ \cos\alpha \\ 0\end{pmatrix} & = & \delta l_{2} \nonumber \\
+		-(x_{3} - x_{2})\sin\alpha + (y_{3} - y_{2})\cos\alpha & = & \delta l_{2}\nonumber
+	\eea
+	\item projection du vecteur $\vec{u}_{1} - \vec{u}_{2}$ sur $[BC]$ :
+	\bea
+		\left[\begin{pmatrix}x_{1} \\ y_{1} \\ 0\end{pmatrix} - \begin{pmatrix}x_{2} \\ y_{2} \\ 0\end{pmatrix}\right]\cdot\begin{pmatrix}\sin\alpha \\ \cos\alpha \\ 0\end{pmatrix} & = & \delta l_{1} \nonumber \\
+		(x_{1} - x_{2})\sin\alpha + (y_{1} - y_{2})\cos\alpha & = & \delta l_{1}\nonumber
+	\eea
+	\item variation de l'angle $\widehat{ABC}$
+\end{itemize}
 
 \subsection{Cas d'une mol\'ecule lin\'eaire asym\'etrique}
