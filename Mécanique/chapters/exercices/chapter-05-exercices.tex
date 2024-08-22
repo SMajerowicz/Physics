@@ -715,17 +715,17 @@ En posant $\delta = Ae^{i\omega\mathrm{t}}$, nous arrivons finalement \`a :
 \subsection{Cas d'une mol\'ecule triangulaire}
 
 Nous restons dans le cas sym\'etrique o\`u $m_{A} = m_{C}$. La relation (\ref{EQ:24_1}) permet d'\'ecrire :
-\benn
+\be
 	\begin{cases}
-		m_{A}x_{1} + m_{B}x_{2} + m_{A}x_{3} = 0 \\
-		m_{A}y_{1} + m_{B}y_{2} + m_{A}y_{3} = 0
+		m_{A}x_{1} + m_{B}x_{2} + m_{A}x_{3} = 0 \nonumber \\
+		m_{A}y_{1} + m_{B}y_{2} + m_{A}y_{3} = 0 \nonumber
 	\end{cases}
 	\Leftrightarrow
 	\begin{cases}
 		m_{A}(x_{1} + x_{3}) + m_{B}x_{2} = 0 \\
-		m_{A}(y_{1} + y_{3}) + m_{B}y_{2} = 0
+		m_{A}(y_{1} + y_{3}) + m_{B}y_{2} = 0 \label{EQ:24_EX2_1}
 	\end{cases}
-\eenn
+\ee
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -755,7 +755,7 @@ Et la relation (\ref{EQ:24_2}) permet, elle d'en d\'eduire :
 \bea
 	& & m_{A}\begin{pmatrix}l\sin\alpha \\ l\cos\alpha \\ 0\end{pmatrix}\wedge\begin{pmatrix}x_{1} \\ y_{1} \\ 0\end{pmatrix} + m_{B}\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}x_{2} \\ y_{2} \\ 0\end{pmatrix} + m_{A}\begin{pmatrix}-l\sin\alpha \\ l\cos\alpha \\ 0\end{pmatrix}\wedge\begin{pmatrix}x_{3} \\ y_{3} \\ 0\end{pmatrix} = 0 \nonumber \\
 	& \Leftrightarrow & m_{A}ly_{1}\sin\alpha - m_{A}lx_{1}\cos\alpha - m_{A}ly_{3}\sin\alpha - m_{A}lx_{3}\cos\alpha = 0 \nonumber \\
-	& \Leftrightarrow & -(x_{1} + x_{3})\cos\alpha + (y_{1} - y_{3})\sin\alpha = 0 \nonumber
+	& \Leftrightarrow & -(x_{1} + x_{3})\cos\alpha + (y_{1} - y_{3})\sin\alpha = 0 \label{EQ:24_EX2_2}
 \eea
 Dans ce cas pr\'ecis, il existe trois cas diff\'erents d'oscillations : suivant $[AB]$ ou $\delta l_{1}$, suivant $[BC]$ ou $\delta l_{2}$ et autour de la valeur de l'angle $\alpha$, soit $\delta$ :
 \begin{itemize}
@@ -769,7 +769,49 @@ Dans ce cas pr\'ecis, il existe trois cas diff\'erents d'oscillations : suivant 
 		\left[\begin{pmatrix}x_{1} \\ y_{1} \\ 0\end{pmatrix} - \begin{pmatrix}x_{2} \\ y_{2} \\ 0\end{pmatrix}\right]\cdot\begin{pmatrix}\sin\alpha \\ \cos\alpha \\ 0\end{pmatrix} & = & \delta l_{1} \nonumber \\
 		(x_{1} - x_{2})\sin\alpha + (y_{1} - y_{2})\cos\alpha & = & \delta l_{1}\nonumber
 	\eea
-	\item variation de l'angle $\widehat{ABC}$
+	\item variation de l'angle $\widehat{ABC}$ : soit $\delta = \delta_{1} + \delta_{2} = \arctan(p_{1}/l) + \arctan(p_{2}/l)$ avec $p_{1}$, respectivement $p_{2}$, la projection de $\vec{u_{1}} - \vec{u_{2}}$, respectivement $\vec{u_{3}} - \vec{u_{2}}$ sur la direction perpendiculaire \`a $[AB]$, respectivement \`a $[BC]$. Avec :
+	\benn
+		p_{1} = \left[\begin{pmatrix}x_{1} \\ y_{1} \\ 0\end{pmatrix} - \begin{pmatrix}x_{2} \\ y_{2} \\ 0\end{pmatrix}\right]\cdot\begin{pmatrix}\cos\alpha \\ -\sin\alpha \\ 0\end{pmatrix}
+		\text{ et }
+		p_{2} = \left[\begin{pmatrix}x_{3} \\ y_{3} \\ 0\end{pmatrix} - \begin{pmatrix}x_{2} \\ y_{2} \\ 0\end{pmatrix}\right]\cdot\begin{pmatrix}-\cos\alpha \\ -\sin\alpha \\ 0\end{pmatrix}
+	\eenn
+	nous avons alors :
+	\benn
+		\delta = \dfrac{1}{n}((x_{1} - x_{2})\cos\alpha - (y_{1} - y_{2})\sin\alpha) - \dfrac{1}{n}((x_{3} - x_{2})\cos\alpha + (y_{3} - y_{2})\sin\alpha)
+	\eenn
 \end{itemize}
+Et la fonction de Lagrange de la mol\'ecule se d\'ecompose ainsi :
+\bea
+	L & = & \dfrac{m_{A}}{2}\vec{\dot{u}}_{3}^{2} + \dfrac{m_{B}}{2}\vec{\dot{u}}_{2}^{2} + \dfrac{m_{A}}{2}\vec{\dot{u}}_{1}^{2} - \dfrac{k_{l}}{2}(\delta l_{1}^{2} + \delta l_{3}^{2}) - \dfrac{k_{r}}{2}l^{2}\delta^{2} \nonumber \\
+	& = & \dfrac{m_{A}}{2}(\dot{x}_{3}^{2} + \dot{y}_{3}^{2}) + \dfrac{m_{B}}{2}(\dot{x}_{2}^{2} + \dot{y}_{2}^{2}) + \dfrac{m_{A}}{2}(\dot{x}_{1}^{2} + \dot{y}_{1}^{2}) \nonumber \\
+	& & - \dfrac{k_{l}}{2}\left[\left[(x_{1} - x_{2})\sin\alpha + (y_{1} - y_{2})\cos\alpha\right]^{2} + \left[(x_{3} - x_{2})\cos\alpha + (y_{3} - y_{2})\sin\alpha\right]^{2}\right] \nonumber \\
+	& & - \dfrac{k_{r}}{2}l^{2}\left[(x_{1} - x_{2})\cos\alpha - (y_{1} - y_{2})\sin\alpha - (x_{3} - x_{2})\cos\alpha + (y_{3} - y_{2})\sin\alpha\right]^{2} \nonumber
+\eea
+Maintenant, introduisons les coordonn\'ees suivantes : $Q_{a} = x_{1} + x_{3}$, $q_{s1} = x_{1} - x_{3}$ et $q_{s2} = y_{1} + y_{3}$ et \'ecrivons :
+\benn
+	\begin{cases}
+		Q_{a} + q_{s1} = 2x_{1} \Leftrightarrow x_{1} = \dfrac{1}{2}(Q_{a} + q_{s1}) \\
+		Q_{a} - q_{s1} = 2x_{3} \Leftrightarrow x_{3} = \dfrac{1}{2}(Q_{a} - q_{s1})
+	\end{cases}
+\eenn
+L'utilisation de l'\'equation (\ref{EQ:24_EX2_1}) permet de conclure \`a :
+\benn
+	\begin{cases}
+		x_{2} = -\dfrac{m_{1}}{m_{2}}(x_{1} + x_{3}) = -\dfrac{m_{1}}{m_{2}}Q_{a} \\
+		y_{2} = -\dfrac{m_{1}}{m_{2}}(y_{1} + y_{3}) = -\dfrac{m_{1}}{m_{2}}q_{s2}
+	\end{cases}
+\eenn
+et l'\'equation (\ref{EQ:24_EX2_2}) \`a :
+\benn
+	\begin{cases}
+		-Q_{a}\cos\alpha + (q_{s2} - y_{3} - y_{3})\sin\alpha = 0 \Leftrightarrow y_{3} = \dfrac{1}{2}(q_{s2} - Q_{a}\cotan\alpha) \\
+		-Q_{a}\cos\alpha + (y_{1} - q_{s2} + y_{3})\sin\alpha = 0 \Leftrightarrow y_{1} = \dfrac{1}{2}(q_{s2} + Q_{a}\cotan\alpha)
+	\end{cases}
+\eenn
+On arrive alors \`a obtenir une fonction de Lagrange telle que celle obtenue \`a la relation (\ref{EQ:23_12}) pour la coordonn\'ee normale $Q_{a}$ d\'efinie avec :
+\benn
+	\omega_{0}^{2} = \dfrac{\dfrac{k_{l}}{4}\left(\dfrac{2m_{A}}{m_{B}} + \dfrac{1}{\sin^{2}\alpha}\right)\left(1 + \dfrac{2m_{A}}{m_{B}}\sin^{2}\alpha\right)}{\dfrac{m_{A}}{4}\left(\dfrac{2m_{A}}{m_{B}} + \dfrac{1}{\sin^{2}\alpha}\right)} = \dfrac{k_{l}}{m_{A}}\left(1 + \dfrac{2m_{A}}{m_{B}}\sin^{2}\alpha\right)
+\eenn
+correspondant \`a une oscillation antisymétrique par rapport \`a l'axe $(y)$, i.e. telle que $x_{1} = x_{3}$ et $y_{1} = y_{3}$. Cela correspond alors \`a $Q_{a} = 2x_{1}$ et $q_{s1} = q_{s2} = 0$. $q_{s1}$ et $q_{s2}$ correspondent aux coordonn\'ees normales d\'efinissant les deux oscillations sym\'etriques par rapport \`a l'axe $(y)$ telles que $x_{1} = -x_{3}$ et $y_{1} = y_{3}$.
 
 \subsection{Cas d'une mol\'ecule lin\'eaire asym\'etrique}
