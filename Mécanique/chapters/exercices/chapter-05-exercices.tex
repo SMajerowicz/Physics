@@ -820,6 +820,14 @@ Afin de calculer les \'equations du mouvement du syst\`eme, il est n\'ecessaire 
 	& & + \dfrac{m_{A}}{2}(\dot{Q}_{a}^{2} + \dot{q}_{s1}^{2} + 2\dot{Q}_{a}\dot{q}_{s1}) + \dfrac{m_{A}}{8}(\dot{q}_{s2}^{2} + \dot{Q}_{a}^{2}\cotan^{2}\alpha + 2\dot{q}_{s2}\dot{Q}_{a}\cotan\alpha) \nonumber \\
 	& & - \dfrac{k_{l}}{2}\left[\left(\frac{1}{2}(Q_{a} + q_{s1}) + \frac{m_{A}}{m_{B}}Q_{a}\right)\sin\alpha + \left(\frac{1}{2}(q_{s2} + Q_{a}\cotan\alpha) + \frac{m_{A}}{m_{B}}q_{s2}\right)\cos\alpha\right]^{2} \nonumber \\
 	& & - \dfrac{k_{l}}{2}\left[\left(\frac{1}{2}(q_{s2} - Q_{a}\cotan\alpha) + \frac{m_{A}}{m_{B}}q_{s2}\right)\cos\alpha - \left(\frac{1}{2}(Q_{a} - q_{s1}) + \frac{m_{A}}{m_{B}}Q_{a}\right)\sin\alpha\right]^{2} \nonumber \\
+	& & - \dfrac{k_{r}}{2}\Biggl[\left(\frac{1}{2}(Q_{a} + q_{s1}) + \frac{m_{A}}{m_{B}}Q_{a}\right)\cos\alpha - \left(\frac{1}{2}(q_{s2} + Q_{a}\cotan\alpha) + \frac{m_{A}}{m_{B}}q_{s2}\right)\sin\alpha \nonumber \\
+	& & - \left(\frac{1}{2}(Q_{a} - q_{s1}) + \frac{m_{A}}{m_{B}}Q_{a}\right)\cos\alpha - \left(\frac{1}{2}(q_{s2} - Q_{a}\cotan\alpha) + \frac{m_{A}}{m_{B}}q_{s2}\right)\sin\alpha\Biggr]^{2} \nonumber \\
+	& = & \dfrac{m_{A}}{4}(\dot{Q}_{a}^{2} + \dot{q}_{s1}^{2}) + \dfrac{m_{A}}{4}(\dot{q}_{s2}^{2} + \dot{Q}_{a}^{2}\cotan^{2}\alpha) + \dfrac{m_{A}^{2}}{2m_{B}}(\dot{Q}_{a}^{2} + \dot{q}_{s2}^{2}) \nonumber \\
+	& & - \dfrac{k_{l}}{2}\left[\left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)Q_{a}\sin\alpha + \frac{1}{2}q_{s1}\sin\alpha + \frac{1}{2}Q_{a}\frac{\cos^{2}\alpha}{\sin\alpha} + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right]^{2} \nonumber \\
+	& & - \dfrac{k_{l}}{2}\left[\left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha + \frac{1}{2}q_{s1}\sin\alpha - \frac{1}{2}Q_{a}\frac{\cos^{2}\alpha}{\sin\alpha} - \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)Q_{a}\sin\alpha\right]^{2} \nonumber \\
+	& & - \dfrac{k_{r}}{2}\Biggl[\left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)Q_{a}\cos\alpha + \frac{1}{2}q_{s1}\cos\alpha - \frac{1}{2}Q_{a}\cos\alpha - \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\sin\alpha \nonumber \\
+	& & - \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)Q_{a}\cos\alpha + \frac{1}{2}q_{s1}\cos\alpha + \frac{1}{2}Q_{a}\cos\alpha - \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\sin\alpha \Biggr]^{2} \nonumber \\
+	& = & \dfrac{m_{A}}{4}\left(1 + \cotan^{2}\alpha + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{2} + \dfrac{m_{A}}{4}\dot{q}_{s1}^{2} + \dfrac{m_{A}}{4}\left(1 + 2\frac{m_{A}}{m_{B}}\right)\dot{q}_{s2}^{2} \nonumber \\
 \eea
 
 \subsection{Cas d'une mol\'ecule lin\'eaire asym\'etrique}
