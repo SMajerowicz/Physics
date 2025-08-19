@@ -828,6 +828,43 @@ Afin de calculer les \'equations du mouvement du syst\`eme, il est n\'ecessaire 
 	& & - \dfrac{k_{r}}{2}\Biggl[\left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)Q_{a}\cos\alpha + \frac{1}{2}q_{s1}\cos\alpha - \frac{1}{2}Q_{a}\cos\alpha - \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\sin\alpha \nonumber \\
 	& & - \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)Q_{a}\cos\alpha + \frac{1}{2}q_{s1}\cos\alpha + \frac{1}{2}Q_{a}\cos\alpha - \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\sin\alpha \Biggr]^{2} \nonumber \\
 	& = & \dfrac{m_{A}}{4}\left(1 + \cotan^{2}\alpha + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{2} + \dfrac{m_{A}}{4}\dot{q}_{s1}^{2} + \dfrac{m_{A}}{4}\left(1 + 2\frac{m_{A}}{m_{B}}\right)\dot{q}_{s2}^{2} \nonumber \\
+	& & -\dfrac{k_{l}}{2}\Biggl[\left[\left(\frac{1}{2} + \frac{m_{A}}{m_{B}} + \frac{1}{2}\frac{\cos^{2}\alpha}{\sin^{2}\alpha}\right)Q_{a}\sin\alpha + \frac{1}{2}q_{s1}\sin\alpha + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right]^{2} \nonumber \\
+	& & + \left[-\left(\frac{1}{2} + \frac{m_{A}}{m_{B}} + \frac{1}{2}\frac{\cos^{2}\alpha}{\sin^{2}\alpha}\right)Q_{a}\sin\alpha + \frac{1}{2}q_{s1}\sin\alpha + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right]^{2}\Biggr] \nonumber \\
+	& & - \dfrac{k_{t}}{2}\Biggl[\left(\frac{\cos\alpha}{2} + \frac{m_{A}}{m_{B}}\cos\alpha - \frac{\cos\alpha}{2} - \frac{\cos\alpha}{2} - \frac{m_{A}}{m_{B}}\cos\alpha + \frac{\cos\alpha}{2}\right)Q_{a} + \left(\frac{\cos\alpha}{2} + \frac{\cos\alpha}{2}\right)q_{s1} \nonumber \\
+	& & - \left(\frac{\sin\alpha}{2} + \frac{m_{A}}{m_{B}}\sin\alpha + \frac{\sin\alpha}{2} + \frac{m_{A}}{m_{B}}\sin\alpha\right)q_{s2}\Biggr]^{2} \nonumber \\
+	& = & \frac{m_{A}}{4}\left(\frac{1}{\sin^{2}\alpha} + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{\,2} + + \dfrac{m_{A}}{4}\dot{q}_{s1}^{2} + \dfrac{m_{A}}{4}\left(1 + 2\frac{m_{A}}{m_{B}}\right)\dot{q}_{s2}^{2} \nonumber \\
+	& & -\dfrac{k_{l}}{2}\Biggl[\left[\left(\frac{1}{2}\sin^{2}\alpha + \frac{m_{A}}{m_{B}}\right)Q_{a}\sin\alpha + \frac{1}{2}q_{s1}\sin\alpha + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right]^{2} \nonumber \\
+	& & + \left[-\left(\frac{1}{2}\sin^{2}\alpha + \frac{m_{A}}{m_{B}}\right)Q_{a}\sin\alpha + \frac{1}{2}q_{s1}\sin\alpha + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right]^{2} \Biggr] \nonumber \\
+	& & - \dfrac{k_{t}}{2}\left[q_{s1}\cos\alpha - \left(\frac{1}{2} + 2\frac{m_{A}}{m_{B}}\right)q_{s2}\sin\alpha\right]^{2} \nonumber \\
+	& = & \frac{m_{A}}{4}\left(\frac{1}{\sin^{2}\alpha} + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{\,2} + + \dfrac{m_{A}}{4}\dot{q}_{s1}^{2} + \dfrac{m_{A}}{4}\left(1 + 2\frac{m_{A}}{m_{B}}\right)\dot{q}_{s2}^{2} \nonumber \\
+	& & -\dfrac{k_{l}}{2}\Biggl[\left(\frac{1}{2}\sin^{2}\alpha + \frac{m_{A}}{m_{B}}\right)^{2}Q_{a}^{2}\sin^{2}\alpha + \left(\frac{1}{2}q_{s1}\sin\alpha + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right)^{2} \nonumber \\
+	& &  + 2\left(\frac{1}{2}\sin^{2}\alpha + \frac{m_{A}}{m_{B}}\right)Q_{a}\sin\alpha\left(\frac{1}{2}q_{s1}\sin\alpha + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right) + \left(\frac{1}{2}\sin^{2}\alpha + \frac{m_{A}}{m_{B}}\right)^{2}Q_{a}^{2}\sin^{2}\alpha \nonumber \\
+	& & + \left(\frac{1}{2}q_{s1}\sin\alpha + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right)^{2} \nonumber \\
+	& & - 2\left(\frac{1}{2}\sin^{2}\alpha + \frac{m_{A}}{m_{B}}\right)Q_{a}\sin\alpha\left(\frac{1}{2}q_{s1}\sin\alpha + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right) \Biggr] \nonumber \\
+	& & - \dfrac{k_{t}}{2}\left[\cos^{2}\alpha q_{s1}^{2} + \left(\frac{1}{2} + 2\frac{m_{A}}{m_{B}}\right)^{2}q_{s2}^{2}\sin^{2}\alpha - 2\left(\frac{1}{2} + 2\frac{m_{A}}{m_{B}}\right)\cos\alpha\sin\alpha q_{s1}q_{s2}\right] \nonumber \\
+	& = & \frac{m_{A}}{4}\left(\frac{1}{\sin^{2}\alpha} + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{\,2} + + \dfrac{m_{A}}{4}\dot{q}_{s1}^{2} + \dfrac{m_{A}}{4}\left(1 + 2\frac{m_{A}}{m_{B}}\right)\dot{q}_{s2}^{2} \nonumber \\
+	& & -\dfrac{k_{l}}{2}\Biggl[2\left(\frac{1}{2}\sin^{2}\alpha + \frac{m_{A}}{m_{B}}\right)^{2}Q_{a}^{2}\sin^{2}\alpha + 2\left(\frac{1}{2}q_{s1}\sin\alpha + \left(\frac{1}{2} + \frac{m_{A}}{m_{B}}\right)q_{s2}\cos\alpha\right)^{2}\Biggr] \nonumber \\
+	& & - \dfrac{k_{t}}{2}\left[\cos^{2}\alpha q_{s1}^{2} + \left(\frac{1}{2} + 2\frac{m_{A}}{m_{B}}\right)^{2}q_{s2}^{2}\sin^{2}\alpha - 2\left(\frac{1}{2} + 2\frac{m_{A}}{m_{B}}\right)\cos\alpha\sin\alpha q_{s1}q_{s2}\right] \nonumber
+\eea
+Or en d\'{e}finissant la masse totale $\mu = 2m_{A} + m_{B}$, nous pouvons \'{e}crire les \'{e}galit\'{e}s suivantes : $1 + 2m_{A}/m_{B} = (2m_{A} + m_{B})/m_{B} = \mu/m_{B}$ et $1/2 + m_{A}/m_{B} = (m_{A} + 2m_{B})/2m_{B} = \mu_/2m_{B}$. La fonction de Lagrange s'\'{e}crit alors :
+\bea
+	L & = & \frac{m_{A}}{4}\left(\frac{1}{\sin^{2}\alpha} + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{\,2} + + \dfrac{m_{A}}{4}\dot{q}_{s1}^{2} + \dfrac{m_{A}\mu}{4m_{B}}\dot{q}_{s2}^{2} \nonumber \\
+	& & -\dfrac{k_{l}}{2}\Biggl[2\left(\frac{1}{4}\sin^{4}\alpha + \frac{m_{A}^{2}}{m_{B}^{2}} + \frac{m_{A}}{m_{B}\sin^{2}\alpha}\right)Q_{a}^{2}\sin^{2}\alpha \nonumber \\
+	& & + 2\left(\frac{1}{4}q_{s1}^{2}\sin^{2}\alpha + \frac{\mu^{2}}{4m_{B}^{2}}q_{s2}^{2}\cos^{2}\alpha + \frac{\mu}{2m_{B}}\cos\alpha\sin\alpha q_{s1}q_{s2}\right)\Biggr] \nonumber \\
+	& & - \dfrac{k_{t}}{2}\left[\cos^{2}\alpha q_{s1}^{2} + \frac{\mu^{2}}{m_{B}^{2}}q_{s2}^{2}\sin^{2}\alpha - 2\frac{\mu}{m_{B}}\cos\alpha\sin\alpha q_{s1}q_{s2}\right] \nonumber \\
+	& = & \frac{m_{A}}{4}\left(\frac{1}{\sin^{2}\alpha} + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{\,2} + + \dfrac{m_{A}}{4}\dot{q}_{s1}^{2} + \dfrac{m_{A}\mu}{4m_{B}}\dot{q}_{s2}^{2} \nonumber \\
+	& & -k_{l}\left(\frac{1}{4}\sin^{2}\alpha + \frac{m_{A}^{2}\sin^{2}\alpha}{m_{B}^{2}} + \frac{m_{A}}{m_{B}}\right)Q_{a}^{2} - \left(\frac{k_{l}}{4}\sin^{2}\alpha + \frac{k_{t}}{2}\cos^{2}\alpha\right)q_{s1}^{2} \nonumber \\
+	& & - \left(\frac{k_{l}\mu^{2}}{4m_{B}^{2}}\cos^{2}\alpha + \frac{k_{t}\mu^{2}}{2m_{B}^{2}}\sin^{2}\alpha\right)q_{s2}^{2} + q_{s1}q_{s2}\cos\alpha\sin\alpha\left(\frac{k_{t}\mu}{m_{B}} - \frac{k_{l}\mu}{2m_{B}}\right) \nonumber
+\eea
+En remarquant que :
+\bea
+	\left(\frac{2m_{A}}{m_{B}} + \frac{1}{\sin^{2}\alpha}\right)\left(1 + \frac{2m_{A}}{m_{B}}\sin^{2}\alpha\right) & = & \frac{2m_{A}}{m_{B}} + \frac{4m_{A}^{2}}{m_{B}^{2}}\sin^{2}\alpha + \frac{1}{\sin^{2}\alpha} + \frac{2m_{A}}{m_{B}} \nonumber \\
+	& = & 4\left(\frac{m_{A}}{m_{B}} + \frac{m_{A}^{2}}{m_{B}^{2}}\sin^{2}\alpha + \frac{1}{4\sin^{2}\alpha}\right) \nonumber
+\eea
+alors la fonction de Lagrance pr\'{e}c\'{e}dente s'\'{e}crit finalement :
+\bea
+	L & = & \frac{m_{A}}{4}\left(\frac{1}{\sin^{2}\alpha} + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{\,2} + \frac{m_{A}}{4}\dot{q}_{s1}^{2} + \frac{m_{A}\mu}{4m_{B}}\dot{q}_{s2}^{2} - \frac{k_{l}}{4}\left(\frac{2m_{A}}{m_{B}} + \frac{1}{\sin^{2}\alpha}\right)\left(1 + \frac{2m_{A}}{m_{B}}\sin^{2}\alpha\right)Q_{a}^{2} \nonumber \\
+	& & - \left(k_{l}\sin^{2}\alpha + 2k_{t}\cos^{2}\alpha\right)\frac{q_{s1}^{2}}{4} - \left(k_{l}\cos^{2}\alpha + 2k_{t}\sin^{2}\alpha\right)\frac{\mu^{2}}{4m_{B}^{2}}q_{s2}^{2} + \frac{\mu}{2m_{B}}\cos\alpha\sin\alpha\left(2k_{t} - k_{l}\right)q_{s1}q_{s2} \nonumber
 \eea
 
 \subsection{Cas d'une mol\'ecule lin\'eaire asym\'etrique}
@@ -853,10 +890,20 @@ Afin de calculer les \'equations du mouvement du syst\`eme, il est n\'ecessaire 
 	\end{center}
 \end{figure}
 
-L'\'{e}quation (\ref{EQ:24_1}) permet d'\'{e]crire :
+L'\'{e}quation (\ref{EQ:24_1}) permet d'\'{e}crire :
 \benn
 	\begin{cases}
 		m_{A}x_{1} + m_{B}x_{2} + m_{C}x_{3} = 0 \\
-		m_{A}y_{1} + y_{B}x_{2} + y_{C}x_{3} = 0
+		m_{A}y_{1} + y_{B}x_{2} + m_{C}y_{3} = 0
 	\end{cases}
 \eenn
+alors que la relation (\ref{EQ:24_2}) permet d'en d\'{e}duire :
+\bea
+	& & m_{A}\begin{pmatrix}-l_{1} \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}0 \\ y_{1} \\ 0\end{pmatrix} + m_{B}\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}0 \\ y_{2} \\ 0\end{pmatrix} + m_{C}\begin{pmatrix}l_{2} \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}0 \\ y_{3} \\ 0\end{pmatrix} = 0 \nonumber \\
+	& \Leftrightarrow & m_{A}l_{1}y_{1} + m_{C}l_{2}y_{3} = 0 \nonumber
+\eea
+La fonction de Lagrange du syst\`{e}me dans le cadre du mouvement longitudinal est alors :
+\benn
+	L = \frac{1}{2}m_{A}\dot{x}_{1}^{\,2} + \frac{1}{2}m_{B}\dot{x}_{2}^{\,2} + \frac{1}{2}m_{C}\dot{x}_{3}^{\,2} - \dfrac{k_{1}}{2}(x_{1} - x_{2})^{2} - \dfrac{k_{2}}{2}(x_{3} - x_{2})^{2}
+\eenn
+or $x_{2} = -\frac{m_{A}}{m_{B}}x_{1} - \frac{m_{C}}{m_{B}}x_{3}$
