@@ -866,6 +866,41 @@ alors la fonction de Lagrance pr\'{e}c\'{e}dente s'\'{e}crit finalement :
 	L & = & \frac{m_{A}}{4}\left(\frac{1}{\sin^{2}\alpha} + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{\,2} + \frac{m_{A}}{4}\dot{q}_{s1}^{2} + \frac{m_{A}\mu}{4m_{B}}\dot{q}_{s2}^{2} - \frac{k_{l}}{4}\left(\frac{2m_{A}}{m_{B}} + \frac{1}{\sin^{2}\alpha}\right)\left(1 + \frac{2m_{A}}{m_{B}}\sin^{2}\alpha\right)Q_{a}^{2} \nonumber \\
 	& & - \left(k_{l}\sin^{2}\alpha + 2k_{t}\cos^{2}\alpha\right)\frac{q_{s1}^{2}}{4} - \left(k_{l}\cos^{2}\alpha + 2k_{t}\sin^{2}\alpha\right)\frac{\mu^{2}}{4m_{B}^{2}}q_{s2}^{2} + \frac{\mu}{2m_{B}}\cos\alpha\sin\alpha\left(2k_{t} - k_{l}\right)q_{s1}q_{s2} \nonumber
 \eea
+Nous remarquons que pour la coordonn\'{e}e normale $Q_{a}$, la fonction de Lagrange est similaire à la relation (\ref{EQ:23_12}) avec :
+\benn
+	\omega_{a}^{2} = \dfrac{\frac{k_{l}}{4}\left(\frac{2m_{A}}{m_{B}} + \frac{1}{\sin^{2}\alpha}\right)\left(1 + \frac{2m_{A}}{m_{B}}\sin^{2}\alpha\right)}{\frac{m_{A}}{4}\left(\frac{1}{\sin^{2}\alpha} + 2\frac{m_{A}}{m_{B}}\right)} = \frac{k_{l}}{m_{A}}\left(1 + 2\frac{m_{A}}{m_{B}}\sin^{2}\alpha\right)
+\eenn
+correspondant \`{a} une oscillation antisym\'{e}trique par rapport à l'axe $(y)$, i.e. $x_{1} = x_{3}$ et $y_{1} = y_{3}$. Cela est \'{e}quivalent \`{a} $Q_{a} = 2x_{1}$, $q_{s1} = 0$ et $q_{s2} = 0$.
+
+D\'{e}sormais, d\'{e}terminons l'\'{e}quation caract\'{e}ristique du syst\`{e}me pour $q_{s1}$ et $q_{s2}$, cette fois-ci non nulles, correspondant \`{a} deux oscillations sym\'{e}triques par rapport \`{a} l'axe $(y)$, i.e. telles que $x_{1} = -x_{3}$ et $y_{1} = y_{3}$. Les \'{e}quations du mouvement sont alors :
+\benn
+	\begin{cases}
+		\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{s1}}\right) = \dfrac{\partial L}{\partial q_{s1}} \Leftrightarrow \dfrac{m_{A}}{2}\ddot{q}_{s1} = -\dfrac{1}{2}(k_{l}\sin^{2}\alpha + 2k_{t}\cos^{2}\alpha)q_{s1} + (2k_{l} - k_{t})\dfrac{\mu}{2m_{B}}\sin\alpha\cos\alpha q_{s2} \\
+		\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}_{s2}}\right) = \dfrac{\partial L}{\partial q_{s2}} \Leftrightarrow \dfrac{m_{A}\mu}{2m_{B}}\ddot{q}_{s2} = -\dfrac{\mu^{2}}{2m_{B}^{2}}(k_{l}\cos^{2}\alpha + 2k_{t}\sin^{2}\alpha)q_{s2} + (2k_{t} - k_{l})\dfrac{\mu}{2m_{B}}\sin\alpha\cos\alpha q_{s1} \\
+	\end{cases}
+\eenn
+En posant les oscillations telles que :
+\benn
+	\begin{cases}
+		q_{s1} = A_{1}e^{i\omega\mathrm{t}} \\
+		q_{s2} = A_{2}e^{i\omega\mathrm{t}}
+	\end{cases}
+\eenn
+le syst\`{e}me d'\'{e}quations pr\'{e}c\'{e}dent se transforme en :
+\benn
+	\begin{cases}
+		-\dfrac{m_{A}}{2}\omega^{2}A_{1} = -\dfrac{1}{2}(k_{l}\sin^{2}\alpha + 2k_{t}\cos^{2}\alpha)A_{1} + (2k_{l} - k_{t})\dfrac{\mu}{2m_{B}}\sin\alpha\cos\alpha A_{2} \\
+		-\dfrac{m_{A}\mu}{2m_{B}}\omega^{2}A_{2} = -\dfrac{\mu^{2}}{2m_{B}^{2}}(k_{l}\cos^{2}\alpha + 2k_{t}\sin^{2}\alpha)A_{2} + (2k_{t} - k_{l})\dfrac{\mu}{2m_{B}}\sin\alpha\cos\alpha A_{1}
+	\end{cases} \\
+	\Leftrightarrow\begin{cases}
+		(k_{l}\sin^{2}\alpha + 2k_{t}\cos^{2}\alpha - m_{A}\omega^{2})A_{1} - (2k_{l} - k_{t})\sin\alpha\cos\alpha A_{2} = 0 \\
+		-(2k_{t} - k_{l})\dfrac{\mu}{2m_{B}}\sin\alpha\cos\alpha A_{1} + \dfrac{\mu}{m_{B}}\left[\dfrac{\mu}{m_{B}}(k_{l}\cos^{2}\alpha + 2k_{t}\sin^{2}\alpha) - m_{A}\omega^{2}\right]A_{2} = 0
+	\end{cases}
+\eenn
+En posant \`{a} nul le d\'{e}terminant de la matrice du syst\`{e}me d'\'{e}quations pr\'{e}c\'{e}dent, nous arrivons \`{a} :
+\bea
+	\dfrac{\mu}{m_{B}}\left[\dfrac{\mu}{m_{B}}(k_{l}\cos^{2}\alpha + 2k_{t}\sin^{2}\alpha) - m_{A}\omega^{2}\right]\left[k_{l}\sin^{2}\alpha + 2k_{t}\cos^{2}\alpha - m_{A}\omega^{2}\right] - (2k_{l} - k_{t})^{2}\sin^{2}\alpha\cos^{2}\alpha & = & 0 \nonumber \\
+\eea
 
 \subsection{Cas d'une mol\'ecule lin\'eaire asym\'etrique}
 
