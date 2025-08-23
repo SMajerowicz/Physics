@@ -382,3 +382,54 @@ Si les $n$ atomes d'une mol\'ecule sont dans un plan, nous pouvons distinguer le
 \subsection{Mol\'ecule lin\'eaire}
 
 Il existe deux types d'oscillations : celles qui sont longitudinales et celles qui \'ecartent les atomes de la forme rectiligne de la mol\'ecule. Sur une droite, il y a $n$ degr\'es de libert\'e dont 1 de translation. Le nombre d'oscillations longitudinales est de $n - 1$. Nous avons vu pr\'ec\'edemment que le nombre de degr\'es vibratoires total pour une mol\'ecule lin\'eaire est de $3n - 5$. Il reste donc $(3n - 5) - (n - 1) = 2n - 4$ degr\'es de libert\'e vibratoires faisant sortir les atomes de la forme rectiligne de la mol\'ecule. Ces $2n - 4 = 2(n - 2)$ oscillations correspondant \`a $n - 2$ fr\'equences distinctes dans deux plans orthogonaux entre eux, correspondant \`a des oscillations normales.
+
+\section{Oscillations amorties}
+
+En r\'{e}alit\'{e}, tout corps se meut dans un milieu qui lui offre un r\'{e}sistance. L'\'{e}nergie dissip\'{e}e se transforme alors en chaleur et se dissipe. Le mouvement n'est plus dans ces conditions un processus purement m\'{e}canique et son \'{e}tude exige aussi celle du mouvement du milieu, celle de son \'{e}tat interne et de celle du corps. Il existe cependant une cat\'{e}gorie de cas o\`{u} le mouvement dans un milieu peut \^{e}tre d\'{e}crit approximativement \`{a} l'aide des \'{e}quations de la M\'{e}canique en introduisant des termes suppl\'{e}mentaires, comme une force de frottement d\'{e}pendant uniquement de la vitesse dans un milieu homog\`{e}ne. Avec $x$, une coordonn\'{e}e g\'{e}n\'{e}ralis\'{e}e, nous pouvons supposer la force de frottement dans le cas de petites oscillations lin\'{e}aires telle que :
+\benn
+	f(\dot{x}) = f(0) + \dfrac{\mathrm{d}f}{\mathrm{d}\dot{x}}\bigg|_{\dot{x}=0}(\dot{x} - 0) = \dfrac{\mathrm{d}f}{\mathrm{d}\dot{x}}\bigg|_{\dot{x}=0}\dot{x} = -\alpha\dot{x}
+\eenn
+avec $alpha > 0$ car la force de frottement agit contre le mouvement libre.
+
+Par extension de l'\'{e}quation (\ref{EQ:21_4}), nous obtenons :
+\be
+	m\ddot{x} = -kx  - \alpha\dot{x} \label{EQ:25_1}
+\ee
+En d\'{e}finissant $\omega_{0}$ comme la fr\'{e}quence des oscillations libres et $\lambda$ comme le \emph{c{\oe}fficient d'ammortissement}, telles que :
+\be
+	\begin{cases}
+		\omega_{0}^{2} = \dfrac{k}{m} \\
+		2\lambda = \dfrac{\alpha}{m}
+	\end{cases} \label{EQ:25_2}
+\ee
+alors l'\'{e}quation (\ref{EQ:25_1}) s'\'{e}crit :
+\be
+	\ddot{x} +2\lambda\dot{x} + \omega_{0}^{2}x = 0 \label{EQ:25_3}
+\ee
+En suivant les r\`{e}gles g\'{e}n\'{e}rales de r\'{e}solution des \'{e}quations lin\'{e}aires \`{a} c{\oe}fficients constants, nous posons $x = e^{r\mathrm{t}}$ qui, introduit dans l'{e}quation (\ref{EQ:25_3}) permet d'\'{e}crire l'\'{e}quation caract\'{e}ristique :
+\benn
+	r^{2} + 2\lambda r + \omega_{0}^{2} = 0
+\eenn
+qui a pour solutions :
+\benn
+	r_{1,2} = -\lambda \pm \sqrt{\lambda^{2} - \omega_{0}^{2}}
+\eenn
+La solution g\'{e}n\'{e}rale \`{a} l'\'{e}quation (\ref{EQ:25_3}) est donc :
+\benn
+	x = c_{1}e^{\left(-\lambda \pm \sqrt{\lambda^{2} - \omega_{0}^{2}}\right)\mathrm{t}} + c_{2}e^{\left(-\lambda \pm \sqrt{\lambda^{2} - \omega_{0}^{2}}\right)\mathrm{t}}
+\eenn
+Trois cas sont alors possibles et sont discut\'{e}s ici.
+
+\subsection{$\lambda < \omega_{0}$}
+
+Dans ce cas, les deux solutions $r_{1,2} \in \mathbb{C}$ et sont conjugu\'{e}es l'une de l'autre. Cela a pour cons\'{e}quence que $\Re{\{r_{1}\}} = \Re{\{r_{2}\}}$. La solution g\'{e}n\'{e}rale peut donc s'\'{e}crire :
+\benn
+	x = \Re{\left\{Ae^{\left(-\lambda + \sqrt{-(\omega_{0}^{2} - \lambda^{2})}\right)\mathrm{t}}\right\}} = \Re{\left\{Ae^{-\lambda\mathrm{r}}e^{i\sqrt{\omega_{0}^{2} - \lambda^{2}}\mathrm{t}}\right\}}
+\eenn
+avec $A \in \mathbb{C}$.
+
+\subsection{$\lambda > \omega_{0}$}
+
+\subsection{$\lambda = \omega_{0}$}
+
+\subsection{G\'{e}n\'{e}ralisation pour un syst\`{e}me \`{a} plusieurs degr\'{e}s de libert\'{e}}
