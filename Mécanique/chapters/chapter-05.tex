@@ -424,9 +424,18 @@ Trois cas sont alors possibles et sont discut\'{e}s ici.
 
 Dans ce cas, les deux solutions $r_{1,2} \in \mathbb{C}$ et sont conjugu\'{e}es l'une de l'autre. Cela a pour cons\'{e}quence que $\Re{\{r_{1}\}} = \Re{\{r_{2}\}}$. La solution g\'{e}n\'{e}rale peut donc s'\'{e}crire :
 \benn
-	x = \Re{\left\{Ae^{\left(-\lambda + \sqrt{-(\omega_{0}^{2} - \lambda^{2})}\right)\mathrm{t}}\right\}} = \Re{\left\{Ae^{-\lambda\mathrm{r}}e^{i\sqrt{\omega_{0}^{2} - \lambda^{2}}\mathrm{t}}\right\}}
+	x = \Re{\left\{Ae^{\left(-\lambda + \sqrt{-(\omega_{0}^{2} - \lambda^{2})}\right)\mathrm{t}}\right\}} = \Re{\left\{Ae^{-\lambda\mathrm{t}}e^{i\sqrt{\omega_{0}^{2} - \lambda^{2}}\mathrm{t}}\right\}}
 \eenn
-avec $A \in \mathbb{C}$.
+avec $A \in \mathbb{C}$. En \'{e}crivant $A = a+ib$, la solution $x$ devient :
+\bea
+	x & = & e^{-\lambda\mathrm{t}}\Re{\left\{(a + ib)\left(\cos\left(\sqrt{\omega_{0}^{2} - \lambda^{2}}\mathrm{t}\right) + i\sin\left(\sqrt{\omega_{0}^{2} - \lambda^{2}}\mathrm{t}\right)\right)\right\}} \nonumber \\
+	& = & e^{-\lambda\mathrm{t}}\left[a\cos\left(\sqrt{\omega_{0}^{2} - \lambda^{2}}\mathrm{t}\right) - b\sin\left(\sqrt{\omega_{0}^{2} - \lambda^{2}}\mathrm{t}\right)\right] \nonumber
+\eea
+La solution $x$ peut donc s'\'{e}crire comme :
+\be
+	x = ae^{-\lambda\mathrm{t}}\cos(\omega\mathrm{t} + \varphi) \label{EQ:25_4}
+\ee
+avec $\omega = \sqrt{\omega_{0}^{2} - \lambda^{2}}$ et $(a;\varphi) \in \mathbb{R}^{2}$. Il s'agit d'\emph{oscillations amorties} qui correspondent \`{a} une oscillation harmonique dont l'amplitude diminue exponentiellement et avec une fr\'{e}quence $\omega$ inf\'{e}rieure \`{a} $\omega_{0}$, la fr\'{e}quence des oscillations libres.
 
 \subsection{$\lambda > \omega_{0}$}
 
