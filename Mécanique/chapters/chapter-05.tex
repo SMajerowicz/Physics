@@ -404,7 +404,7 @@ En d\'{e}finissant $\omega_{0}$ comme la fr\'{e}quence des oscillations libres e
 \ee
 alors l'\'{e}quation (\ref{EQ:25_1}) s'\'{e}crit :
 \be
-	\ddot{x} +2\lambda\dot{x} + \omega_{0}^{2}x = 0 \label{EQ:25_3}
+	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x = 0 \label{EQ:25_3}
 \ee
 En suivant les r\`{e}gles g\'{e}n\'{e}rales de r\'{e}solution des \'{e}quations lin\'{e}aires \`{a} c{\oe}fficients constants, nous posons $x = e^{r\mathrm{t}}$ qui, introduit dans l'{e}quation (\ref{EQ:25_3}) permet d'\'{e}crire l'\'{e}quation caract\'{e}ristique :
 \benn
@@ -416,7 +416,7 @@ qui a pour solutions :
 \eenn
 La solution g\'{e}n\'{e}rale \`{a} l'\'{e}quation (\ref{EQ:25_3}) est donc :
 \benn
-	x = c_{1}e^{\left(-\lambda \pm \sqrt{\lambda^{2} - \omega_{0}^{2}}\right)\mathrm{t}} + c_{2}e^{\left(-\lambda \pm \sqrt{\lambda^{2} - \omega_{0}^{2}}\right)\mathrm{t}}
+	x = c_{1}e^{r_{1}\mathrm{t}} + c_{2}e^{r_{2}\mathrm{t}}
 \eenn
 Trois cas sont alors possibles et sont discut\'{e}s ici.
 
@@ -445,6 +445,32 @@ L'\'{e}nergie du moyenne du syst\`{e}me diminue depuis sa valeur initiale $E_{0}
 
 \subsection{$\lambda > \omega_{0}$}
 
+Alors, les deux valeurs pour $r_{1,2} \in \mathbb{R}$ et toutes les deux sont n\'{e}gatives car, de fait $\lambda > \sqrt{\lambda^{2} - \omega_{0}^{2}}$. La forme g\'{e}n\'{e}rale de la solution est :
+\be
+	x = c_{1}e^{\left(-\lambda \pm \sqrt{\lambda^{2} - \omega_{0}^{2}}\right)\mathrm{t}} + c_{2}e^{\left(-\lambda \pm \sqrt{\lambda^{2} - \omega_{0}^{2}}\right)\mathrm{t}} \label{EQ:25_6}
+\ee
+qui, parce que $r_{1,2} < 0$, repr\'{e}sente un mouvement d\'{e}croissant sans oscillation qui tend vers une position d'\'{e}quillibre quand $\mathrm{t} \rightarrow +\infty$. Il s'agit d'un \emph{amortissement ap\'{e}riodique}.
+
 \subsection{$\lambda = \omega_{0}$}
 
+Dans ce cas particulier, l'\'{e}quation caract\'{e}ristique n'a qu'une unique solution $r = -\lambda$ et la solution g\'{e}n\'{e}rale de l'\'{e}quation du mouvement devient :
+\be
+	x = (c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}} \label{EQ:25_7}
+\ee
+En effet :
+\benn
+	\begin{cases}
+		\dot{x} = c_{2}e^{-\lambda\mathrm{t}} - \lambda(c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}} \\
+		\ddot{x} = -\lambda c_{2}e^{-\lambda\mathrm{t}} - \lambda c_{2}e^{-\lambda\mathrm{t}} + \lambda^{2}(c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}}
+	\end{cases}
+\eenn
+et nous avons alors \`{a} partir du premier membre de l'\'{e}quation (\ref{EQ:25_3}) :
+\bea
+	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x & = & \ddot{x} +2\lambda\dot{x} + \lambda^{2}x \nonumber \\
+	& = & -\lambda c_{2}e^{-\lambda\mathrm{t}} - \lambda c_{2}e^{-\lambda\mathrm{t}} + \lambda^{2}(c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}} + 2\lambda c_{2}e^{-\lambda\mathrm{t}} - 2\lambda^{2}(c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}} \nonumber \\
+	& & + \lambda^{2}(c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}} = 0 \nonumber
+\eea
+La solution repr\'{e}sente \'{e}galement un amortissement ap\'{e}riodique, i.e. sans caract\`{e}re oscillatoire.
+
 \subsection{G\'{e}n\'{e}ralisation pour un syst\`{e}me \`{a} plusieurs degr\'{e}s de libert\'{e}}
+
