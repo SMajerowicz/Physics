@@ -474,3 +474,65 @@ La solution repr\'{e}sente \'{e}galement un amortissement ap\'{e}riodique, i.e. 
 
 \subsection{G\'{e}n\'{e}ralisation pour un syst\`{e}me \`{a} plusieurs degr\'{e}s de libert\'{e}}
 
+L'expression de la force de frottement vue pr\'{e}c\'{e}demment, \`{a} savoir $f = -\alpha\dot{x}$, peut \^{e}tre g\'{e}n\'{e}ralis\'{e}e telle que :
+\be
+	\forall i\text{, }f_{i} = -\sum_{j}\alpha_{ij}\dot{x}_{j} \label{EQ:25_8}
+\ee
+qui est la force de frottement agissant sur la coordonn\'{e}e g\'{e}n\'{e}ralis\'{e}e $x_{i}$. Les m\'{e}thodes de physique statistiques abord\'{e}es au paragraphe (\ref{PAR:123}) permettent de montrer que :
+\benn
+	\forall i,k\text{, }\alpha_{ik} = \alpha_{ki} \label{EQ:25_9}
+\eenn
+Les expressions (\ref{EQ:25_8}) peuvent \^{e}tre repr\'{e}sent\'{e}es comme les d\'{e}riv\'{e}es d\'{e}finies comme :
+\be
+	f_{i} = -\dfrac{\partial F}{\partial \dot{x}_{i}} \label{EQ:25_10}
+\ee
+de la forme quadratique suivante :
+\be
+	F = \frac{1}{2}\sum_{i,k}\alpha_{ik}\dot{x}_{i}\dot{x}_{j}  \label{EQ:25_11}
+\ee
+qui est appel\'{e}e la \emph{fonction de dissipation}. Le c{\oe}fficient $\frac{1}{2}$ permet de revenir \`{a} l'expression unidimensionnelle de la force de frottement en :
+\benn
+	-\dfrac{\partial}{\partial \dot{x}_{i}}\left(\frac{1}{2}\dot{x}^{\,2}\right) = -\alpha\dot{x}
+\eenn
+L'\'{e}quation de Lagrange pour la coordonn\'{e}e $x_{i}$ est alors en g\'{e}n\'{e}ralisant l'\'{e}quation (\ref{EQ:25_1}) est alors :
+\be
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{x}_{i}}\right) = \dfrac{\partial L}{\partial x_{i}} - \dfrac{\partial F}{\partial\dot{x}_{i}} \label{EQ:25_12}
+\ee
+L'\'{e}nergie du syt\`{e}me d\'{e}finie par \'{e}quation (\ref{EQ:6_1}) est $E = \sum_{i}\dot{x}_{i}\frac{\partial L}{\partial\dot{x}_{i}} - L$ et sa variation avec le temps s'\'{e}crit :
+\benn
+	\dfrac{\mathrm{d}E}{\mathrm{dt}} = \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i}\dot{x}_{i}\frac{\partial L}{\partial\dot{x}_{i}}\right) - \dfrac{\mathrm{d}L}{\mathrm{dt}} = \sum_{i}\ddot{x}_{i}\dfrac{\partial L}{\partial\dot{x}_{i}} + \sum_{i}\dot{x}_{i}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i}\frac{\partial L}{\partial\dot{x}_{i}}\right) - \dfrac{\mathrm{d}L}{\mathrm{dt}}
+\eenn
+et en appliquant la relation (\ref{EQ:25_12}), nous pouvons continuer \`{a} d\'{e}velopper :
+\bea
+	\dfrac{\mathrm{d}E}{\mathrm{dt}} & = & \sum_{i}\ddot{x}_{i}\dfrac{\partial L}{\partial\dot{x}_{i}} + \sum_{i}\dot{x}_{i}\left(\dfrac{\partial L}{\partial x_{i}} - \dfrac{\partial F}{\partial\dot{x}_{i}}\right) - \dfrac{\mathrm{d}L}{\mathrm{dt}} \nonumber \\
+	& = & \sum_{i}\ddot{x}_{i}\dfrac{\partial L}{\partial\dot{x}_{i}} + \sum_{i}\dot{x}_{i}\dfrac{\partial L}{\partial x_{i}} - \sum_{i}\dot{x}_{i}\dfrac{\partial F}{\partial\dot{x}_{i}} - \dfrac{\mathrm{d}L}{\mathrm{dt}} \nonumber
+\eea
+or nous avons \'{e}videmment :
+\benn
+	\mathrm{d}L = \sum_{i}\dfrac{\partial L}{\partial x_{i}}\mathrm{d}x_{i} + \sum_{i}\dfrac{\partial L}{\partial\dot{x}_{i}}\mathrm{d}\dot{x}_{i}
+\eenn
+donc :
+\benn
+	\dfrac{\mathrm{d}L}{\mathrm{dt}} = \sum_{i}\dfrac{\partial L}{\partial x_{i}}\dfrac{\mathrm{d}x_{i}}{\mathrm{dt}} + \sum_{i}\dfrac{\partial L}{\partial\dot{x}_{i}}\dfrac{\mathrm{d}\dot{x}_{i}}{\mathrm{dt}}
+\eenn
+ou encore :
+\benn
+	\dfrac{\mathrm{d}L}{\mathrm{dt}} = \sum_{i}\dfrac{\partial L}{\partial x_{i}}\dot{x}_{i} + \sum_{i}\dfrac{\partial L}{\partial\dot{x}_{i}}\ddot{x}_{i}
+\eenn
+La variation de l'\'{e}nergie s'\'{e}crit donc :
+\benn
+	\dfrac{\mathrm{d}E}{\mathrm{dt}} = -\sum_{i}\dot{x}_{i}\dfrac{\partial F}{\partial\dot{x}_{i}}
+\eenn
+Or la d\'{e}finition de $F$ en (\ref{EQ:25_11}) permet d'affirmer qu'elle est une fonction homog\`{e}ne du second degr\'{e} par rapport aux vitesses. En effet :
+\benn
+	F(\beta\dot{x}_{i},\beta\dot{x}_{j}) = \frac{1}{2}\alpha_{ik}\beta\dot{x}_{i}\beta\dot{x}_{j} = \frac{1}{2}\beta^{2}\alpha_{ik}\dot{x}_{i}\dot{x}_{j} = \beta^{2}F(\dot{x}_{i},\dot{x}_{j})
+\eenn
+Le th\'{e}or\`{e}me d'Euler sur les fonctions homog\`{e}nes, ici $F$, permet d'\'{e}crire :
+\benn
+	\sum_{i}\dot{x}_{i}\dfrac{\partial F}{\partial\dot{x}_{i}} = 2F
+\eenn
+et en conclusion :
+\be
+	\dfrac{\mathrm{d}E}{\mathrm{dt}} = -2F \label{EQ:25_13}
+\ee
+Ainsi la fonction de dissipation a une importance physique significative puisqu'elle d\'{e}termine l'intensit\'{e} de la dissipation d'\'{e}nergie dans le syst\`{e}me qui est deux fois la valeur de la fonction de dissipation. Le ph\'{e}nom\`{e}ne de dissipation entra\^{i}ne toujours une diminution de l'\'{e}nergie avec le temps. Par voie de cons\'{e}quence, nous avons toujours $F > 0$ et la forme quadratique (\ref{EQ:25_11} est donc essentiellement positive, i.e. pas chacun des termes mais au moins sa somme totale.
