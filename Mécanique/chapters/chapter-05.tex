@@ -62,7 +62,7 @@ avec l'\emph{amplitude complexe} s'exprimant comme :
 \ee
 dont le module est l'amplitude ordinaire et l'argument la phase initiale.
 
-\section{Oscillations forc\'ees}
+\section{Oscillations forc\'ees}\label{PAR:22}
 
 Les \emph{oscillations forc\'ees} sont les oscillations d'un syst\`eme soumis \`a un champ ext\'erieur variable. En restant dans l'hypoth\`ese des petites oscillations, cela implique que le champ ext\'erieur est suffisamment faible pour provoquer des d\'eplacements faibles \'egalement. De plus, ici, nous restons dans le cadre d'un unique degr\'e de libert\'e.
 
@@ -182,7 +182,7 @@ Sur un intervalle de temps petit par rapport \`a $\frac{1}{\omega}$, nous avons 
 \eenn
 Par cons\'equent, une force qui ne s'exprime que sur une faible dur\'ee communique au syst\`eme une impulsion $\int F\mathrm{dt}$ qui ne permet pas de provoquer de d\'eplacement notable, ce qui revient \`a notre hypoth\`ese de base des petites oscillations.
 
-\section{Oscillations des syst\`emes \`a plusieurs degr\'es de libert\'e}
+\section{Oscillations des syst\`emes \`a plusieurs degr\'es de libert\'e}\label{PAR:23}
 
 \subsection{Cas g\'en\'eral des oscillations libres}
 
@@ -251,7 +251,7 @@ qui s'\'ecrit sous forme matricielle ainsi :
 \eenn
 \`A l'exception de la solution \'evidente, i.e. $\forall j\text{, }A_{j} = 0$, le syst\`eme admet des solutions si et seulement si :
 \benn
-	\det{(k_{ij} - \omega^{2}m_{ij})} = 0
+	\det{(k_{ij} - \omega^{2}m_{ij})} = 0 \label{EQ:23_8}
 \eenn
 qui est une \emph{\'equation caract\'eristique} de degr\'e $s$ par rapport \`a $\omega^{2}$. En g\'en\'eral, il y a $s$ racines r\'eelles et positives distinctes $\omega_{\alpha}$ avec $\alpha \in \{1, \cdots , s\}$. Les valeurs de $\omega_{\alpha}$ sont les \emph{fr\'equences propres} du syst\`eme.
 
@@ -346,7 +346,7 @@ avec $f_{\alpha}(t) = \sum_{i}\frac{F_{i}(t)\Delta_{i\alpha}}{\sqrt{m_{\alpha}}}
 \ee
 dont la seule inconnue est la fonction $Q_{\alpha}(t)$.
 
-\section{Oscillations des mol\'ecules}
+\section{Oscillations des mol\'ecules}\label{PAR:24}
 
 Dans le cas d'un syst\`eme de $n$ particules interagissant les unes sur les autres sans champ ext\'erieur, tous les degr\'es de libert\'e ne sont pas issus de ph\'enom\`enes vibratoires. Comme une mol\'ecule peut avoir des mouvements de translation et de rotation, le mouvement vibratoire occupe $3n - 6$ degr\'es de libert\'e. Si la mol\'ecule est form\'ee d'atomes align\'es, la rotation autour de l'axe n'a pas de sens et alors la mol\'ecule poss\`ede $3n - 5$ degr\'es de libert\'es vibratoires.
 
@@ -383,7 +383,7 @@ Si les $n$ atomes d'une mol\'ecule sont dans un plan, nous pouvons distinguer le
 
 Il existe deux types d'oscillations : celles qui sont longitudinales et celles qui \'ecartent les atomes de la forme rectiligne de la mol\'ecule. Sur une droite, il y a $n$ degr\'es de libert\'e dont 1 de translation. Le nombre d'oscillations longitudinales est de $n - 1$. Nous avons vu pr\'ec\'edemment que le nombre de degr\'es vibratoires total pour une mol\'ecule lin\'eaire est de $3n - 5$. Il reste donc $(3n - 5) - (n - 1) = 2n - 4$ degr\'es de libert\'e vibratoires faisant sortir les atomes de la forme rectiligne de la mol\'ecule. Ces $2n - 4 = 2(n - 2)$ oscillations correspondant \`a $n - 2$ fr\'equences distinctes dans deux plans orthogonaux entre eux, correspondant \`a des oscillations normales.
 
-\section{Oscillations amorties}
+\section{Oscillations amorties}\label{PAR:25}
 
 En r\'{e}alit\'{e}, tout corps se meut dans un milieu qui lui offre un r\'{e}sistance. L'\'{e}nergie dissip\'{e}e se transforme alors en chaleur et se dissipe. Le mouvement n'est plus dans ces conditions un processus purement m\'{e}canique et son \'{e}tude exige aussi celle du mouvement du milieu, celle de son \'{e}tat interne et de celle du corps. Il existe cependant une cat\'{e}gorie de cas o\`{u} le mouvement dans un milieu peut \^{e}tre d\'{e}crit approximativement \`{a} l'aide des \'{e}quations de la M\'{e}canique en introduisant des termes suppl\'{e}mentaires, comme une force de frottement d\'{e}pendant uniquement de la vitesse dans un milieu homog\`{e}ne. Avec $x$, une coordonn\'{e}e g\'{e}n\'{e}ralis\'{e}e, nous pouvons supposer la force de frottement dans le cas de petites oscillations lin\'{e}aires telle que :
 \benn
@@ -536,3 +536,26 @@ et en conclusion :
 	\dfrac{\mathrm{d}E}{\mathrm{dt}} = -2F \label{EQ:25_13}
 \ee
 Ainsi la fonction de dissipation a une importance physique significative puisqu'elle d\'{e}termine l'intensit\'{e} de la dissipation d'\'{e}nergie dans le syst\`{e}me qui est deux fois la valeur de la fonction de dissipation. Le ph\'{e}nom\`{e}ne de dissipation entra\^{i}ne toujours une diminution de l'\'{e}nergie avec le temps. Par voie de cons\'{e}quence, nous avons toujours $F > 0$ et la forme quadratique (\ref{EQ:25_11} est donc essentiellement positive, i.e. pas chacun des termes mais au moins sa somme totale.
+
+En reprenant les \'{e}quations (\ref{EQ:23_5}) et en y ajoutant au second membre les forces ext\`{e}rieures d\'{e}finies dans la relation (\ref{EQ:25_8}), cela permet d'obtenir les \'{e}quations des petites oscillations en pr\'{e}sence de frottements :
+\be
+	\forall i\text{ }\sum_{j}m_{ij}\ddot{x}_{j} + \sum_{j}k_{ij}x_{j} = -\sum_{j}\alpha_{ij}\dot{x}_{j} \label{EQ:25_14}
+\ee
+En posant $x_{j} = A_{j}e^{r\mathrm{t}}$, l'\'{e}quation (\ref{EQ:25-14}) devient :
+\bea
+	& & \forall i\text{ }\sum_{j}m_{ij}A_{kj}r^{2}e^{r\mathrm{t}} + \sum_{j}k_{ij}A_{j}e^{r\mathrm{t}} = -\sum_{j}\alpha_{ij}A_{j}re^{r\mathrm{t}} \nonumber \\
+	& \Leftrightarrow & \forall i\text{ }\sum_{j}(m_{ij}r^{2} + \alpha_{ij}r + k_{ij})A_{j} = 0 \label{EQ:25_15}
+\eea
+De la m\^{e}me mani\`{e}re que lors du passage de l'\'{e}quation (\ref{EQ:23_7}) \`{a} (\ref{EQ:23_8}), nous arrivons \`{a} l'\'{e}quation caract\'{e}ristique :
+\be
+	\det{(m_{ij}r^{2} + \alpha_{ij}r + k_{ij})} = 0 \label{EQ:25_16}
+\ee
+qui est une \'{e}quation de degr\'{e} $2s$ par rapport \`{a} $r$. L'\'{e}quation (\ref{EQ:25_13}) indique que la force de dissipation entra\^{i}ne une diminuation de l'\'{e}nergie avec le temps. Cela implique que les solutions $r$ de l'\'{e}quation (\ref{EQ:25_16}) doivent \^{e}tre soit r\'{e}elles et n\'{e}gatives, soit complexes conjugu\'{e}es deux \`{a} deux et dont la partie r\'{e}elle est n\'{e}gative.
+
+\section{Oscillations forc\'{e}es avec frottement}\label{PAR:26}
+
+\subsection{Cas g\'{e}n\'{e}ral}
+
+\subsection{Au voisinage de la r\'{e}sonance}
+
+\subsection{\'{E}nergie}
