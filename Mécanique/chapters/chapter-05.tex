@@ -541,7 +541,7 @@ En reprenant les \'{e}quations (\ref{EQ:23_5}) et en y ajoutant au second membre
 \be
 	\forall i\text{ }\sum_{j}m_{ij}\ddot{x}_{j} + \sum_{j}k_{ij}x_{j} = -\sum_{j}\alpha_{ij}\dot{x}_{j} \label{EQ:25_14}
 \ee
-En posant $x_{j} = A_{j}e^{r\mathrm{t}}$, l'\'{e}quation (\ref{EQ:25-14}) devient :
+En posant $x_{j} = A_{j}e^{r\mathrm{t}}$, l'\'{e}quation (\ref{EQ:25_14}) devient :
 \bea
 	& & \forall i\text{ }\sum_{j}m_{ij}A_{kj}r^{2}e^{r\mathrm{t}} + \sum_{j}k_{ij}A_{j}e^{r\mathrm{t}} = -\sum_{j}\alpha_{ij}A_{j}re^{r\mathrm{t}} \nonumber \\
 	& \Leftrightarrow & \forall i\text{ }\sum_{j}(m_{ij}r^{2} + \alpha_{ij}r + k_{ij})A_{j} = 0 \label{EQ:25_15}
@@ -554,7 +554,38 @@ qui est une \'{e}quation de degr\'{e} $2s$ par rapport \`{a} $r$. L'\'{e}quation
 
 \section{Oscillations forc\'{e}es avec frottement}\label{PAR:26}
 
+Nous allons nous focaliser sur le cas cas la force ext\'{e}rieure qui provoque les oscillations est p\'{e}riodique.
+
 \subsection{Cas g\'{e}n\'{e}ral}
+
+En combinant les \'{e}quations (\ref{EQ:22_2}) et (\ref{EQ:25_3}) et en supposant que la force ext\`{e}rieure s'\'{e}crit telle que $f\cos(\gamma\mathrm{t})$, alors l'\'{e}quation du mouvement est :
+\be
+	\ddot{x} + 2\lambda\dot{x} +\omega_{0}^{2}x = \dfrac{f}{m}\cos(\gamma\mathrm{t}) \label{EQ:26_1}
+\ee
+En \'{e}crivant la force sous forme complexe, \`{a} savoir $\frac{f}{m}e^{i\gamma\mathrm{t}}$ et en supposant que la solution dans le domaine complexe est $x = Be^{i\gamma\mathrm{t}}$, alors la relation (\ref{EQ:26_1}) devient :
+\bea
+	& & -B\gamma^{2}e^{i\gamma\mathrm{t}} + 2B\lambda\gamma ie^{i\gamma\mathrm{t}} + B\omega_{0}^{2}e^{i\gamma\mathrm{t}} = \dfrac{f}{m}e^{i\gamma\mathrm{t}} \nonumber \\
+	& \Leftrightarrow & B = \dfrac{f}{m(\omega_{0}^{2} - \gamma^{2} + 2\lambda\gamma i)} \label{EQ:26_2}
+\eea
+qui peut se d\'{e}velopper sous la forme $a + ib$ :
+\benn
+	B = \dfrac{f}{m\left((\omega_{0}^{2} - \gamma^{2})^{2} + 4\lambda^{2}\gamma^{2} \right)}(\omega_{0}^{2} - \gamma^{2} - 2\lambda\gamma i) = \dfrac{f}{m\sqrt{\left((\omega_{0}^{2} - \gamma^{2})^{2} + 4\lambda^{2}\gamma^{2} \right)}}\left(\dfrac{\omega_{0}^{2} - \gamma^{2} - 2\lambda\gamma i}{\sqrt{\left((\omega_{0}^{2} - \gamma^{2})^{2} + 4\lambda^{2}\gamma^{2} \right)}}\right)
+\eenn
+qui permet en \'{e}crivant $B = be^{i\delta} = b(\cos\delta + i\sin\delta)$ d'avoir :
+\be
+	\begin{cases}
+		b = \dfrac{f}{m\sqrt{\left((\omega_{0}^{2} - \gamma^{2})^{2} + 4\lambda^{2}\gamma^{2} \right)}} \\
+		\tan\delta = \dfrac{-2\lambda\gamma}{\omega_{0}^{2} - \gamma^{2}}
+	\end{cases}\label{EQ:26_3}
+\ee
+De fait, la partie r\'{e}elle de la solution $x = Be^{i\gamma\mathrm{t}} = be^{i\gamma\mathrm{t} + \delta}$ est l'int\'{e}grale particuli\`{e}re de l'\'{e}quation (\ref{EQ:26_1}), i.e. $\cos(\gamma\mathrm{t} + \delta)$ alors que la solution de l'\'{e}quation sans second membre est celle obtenue en (\ref{EQ:25_4}), i.e. $ae^{-\lambda\mathrm{t}}\cos(\omega\mathrm{t} + \alpha)$ avec $\omega = \sqrt{\omega_{0}^{2} - \lambda^{2}}$dans le cas o\`{u} $\lambda < \omega_{0}$. Ainsi la solution est :
+\be
+	x = ae^{-\lambda\mathrm{t}}\cos(\omega\mathrm{t} + \alpha) + b\cos(\gamma\mathrm{t} + \delta) \label{EQ:26_4}
+\ee
+qui devient après un temps suffisamment long pour que le permier terme tende vers 0 :
+\be
+	x = b\cos(\gamma\mathrm{t} + \delta) \label{EQ:26_5}
+\ee
 
 \subsection{Au voisinage de la r\'{e}sonance}
 
