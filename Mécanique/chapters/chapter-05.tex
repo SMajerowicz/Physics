@@ -586,7 +586,23 @@ qui devient après un temps suffisamment long pour que le permier terme tende ve
 \be
 	x = b\cos(\gamma\mathrm{t} + \delta) \label{EQ:26_5}
 \ee
+Lorsque les valeurs de $\gamma$ et $\omega_{0}$ se rapprochent, l'amplitude des oscillations forc\'{e}es obtenues dans la relation (\ref{EQ:26_3}) augmente mais ne tend pas vers l'infini comme cela est le cas en l'absence de frottement, voir la relation (\ref{EQ:22_5}). Quelque soit la valeur de l'amplitude $f$ de la force ext\'{e}rieure, l'amplitude de l'oscillation $b$ est maximale si et seulement si la quantit\'{e} $(\omega_{0}^{2} - \gamma^{2})^{2} + 4\lambda^{2}\gamma^{2}$ est minimale, i.e. :
+\bea
+	\dfrac{\partial\left((\omega_{0}^{2} - \gamma^{2})^{2} + 4\lambda^{2}\gamma^{2}\right)}{\partial\gamma^{2}} & = & 0 \nonumber \\
+	\Leftrightarrow 2\gamma^{2} + 4\lambda^{2} - 2\omega_{0}^{2} & = & 0 \nonumber \\
+	\Leftrightarrow \gamma = \sqrt{\omega_{0}^{2} - 2\lambda^{2}} \nonumber
+\eea
+ce qui permet de remarquer que dans la cas o\`{u} $\lambda \ll \omega_{0}$ alors la valeur de $\gamma$ ne diff\`{e}re de celle de $\omega_{0}$ que par un infiniment petit du second ordre.
 
 \subsection{Au voisinage de la r\'{e}sonance}
+
+Posons dans ce cas $\gamma = \omega_{0} + \epsilon$ avec $\epsilon$ petit devant $\omega_{0}$ et en consid\'{e}rant $\lambda \ll \omega_{0}$ alors 
+\benn
+	\begin{cases}
+		\gamma^{2} - \omega_{0}^{2} = (\gamma - \omega_{0})(\gamma + \omega_{0}) = \epsilon(2\omega_{0} + \epsilon) = 2\omega_{0}\epsilon + \epsilon^{2} \approx 2\omega_{0}\epsilon \\
+		2\lambda\gamma i = 2\lambda(\omega_{0} + \epsilon)i \approx 2\lambda\omega_{0}i
+	\end{cases}
+\eenn
+de sorte que l'\'{e}quation (\ref{EQ:26_2})
 
 \subsection{\'{E}nergie}
