@@ -623,9 +623,23 @@ ainsi, quelque soit la valeur de $\gamma$, la d\'{e}riv\'{e}e pr\'{e}c\'{e}dente
 Loin de la r\'{e}sonance, i.e. en reprenant le r\'{e}sultat de (\ref{EQ:26_3}) et en continuant de supposer $\lambda \ll \omega_{0}$, nous avons :
 \benn
 	\begin{cases}
-		\gamma < \omega_{0}\text{, }\tan\delta < 0\text{et tend vers 0 quand }\gamma\rightarrow\infty \Rightarrow \delta \rightarrow 0\\
-		\gamma > \omega_{0}\text{, }\tan\delta > 0\text{et tend vers 0 quand }\gamma\rightarrow\infty \Rightarrow \delta \rightarrow -\pi \nonumber \\
+		\gamma < \omega_{0}\text{, }\tan\delta < 0\text{ et tend vers 0 quand }\gamma\rightarrow\infty \Rightarrow \delta \rightarrow 0\text{, i.e. cos > 0 et sin < 0} \\
+		\gamma > \omega_{0}\text{, }\tan\delta > 0\text{ et tend vers 0 quand }\gamma\rightarrow\infty \Rightarrow \delta \rightarrow -\pi\text{, i.e. cos < 0 et sin < 0} \nonumber \\
 	\end{cases}
 \eenn
+Alors qu'\`{a} la r\'{e}sonance, soit $\gamma = \omega_{0}$, nous avons $\delta = \frac{\pi}{2}$. De plus, la variation de la phase $\delta$ de l'oscillation forc\'{e}e entre $-\pi$ et $0$ s'op\`{e}re sur une largeur de fr\'{e}quence $\sim \lambda$ \'{e}troite puique nous avons toujours $\lambda \ll \omega_{0}$. En l'absence de frottement, $\lambda = 0$, le passage de $-\pi$ \`{a} $0$ pour la phase $\delta$ est un saut de valeur $\pi$ et indique que le frottement, finalement, \'{e}tale ce saut.
 
 \subsection{\'{E}nergie}
+
+Une fois le mouvement stabilis\'{e}, l'oscillation est r\'{e}gie par l'\'{e}quation (\ref{EQ:26_5}) et, de facto, l'\'{e}nergie du syst\`{e}me ne varie pas. Ainsi, l'\'{e}nergie absorb\'{e}e aux d\'{e}pens de la force ext\'{e}rieure est dissip\'{e}e par les frottements.
+
+Si $I(\gamma)$ est la quanti\'{e} d'\'{e}nergie dissip\'{e}e en moyenne par unit\'{e} de temps et en fonction de la fr\'{e}quence de la force ext\'{e}rieure, alors l'\'{e}quation (\ref{EQ:25_13}) s'applique et donne :
+\benn
+	\dfrac{\mathrm{d}E}{\mathrm{t}} = -2F \Rightarrow \dfrac{\Delta E}{\Delta\mathrm{r}} = 2\overline{F} = I(\Gamma)
+\eenn
+avec $\overline{F}$ la valeur moyenne sur la p\'{e}riode d'une oscillation de la fonction de dissipation, voir (\ref{EQ:25_11}). Pour un unique degr\'{e} de libert\'{e}, cetter derni\`{e}re relation donne $F = \frac{\alpha}{2}\dot{x}^{\,2}$. En comparant les \'{e}quations (\ref{EQ:26_1}) et (\ref{EQ:25_14}) avec $(i,j) = (1,1)$, nous posons la relation $m\ddot{x} + kx + \alpha\dot{x} = m\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x$ qui est vraie si et seulement si  $\alpha = 2\lambda m$, impliquant que $F = \lambda m\dot{x}^{\,2}$.
+
+Puisque le mouvement est stabilis\'{e}, l'\'{e}quation (\ref{EQ:26_5}) est exploitable et permet d'\'{e}crire :
+\benn
+	F = \lambda mb^{2}\gamma^{2}\sin^{2}(\gamma\mathrm{t} + \delta)
+\eenn
