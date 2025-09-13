@@ -651,3 +651,26 @@ Puisque le mouvement est stabilis\'{e}, l'\'{e}quation (\ref{EQ:26_5}) est explo
 \benn
 	F = \lambda mb^{2}\gamma^{2}\sin^{2}(\gamma\mathrm{t} + \delta)
 \eenn
+Or sur une p\'{e}riode d'oscillation, $\langle\sin^{2}\rangle = 1/2$ donc :
+\be
+	I(\gamma) = \lambda mb^{2}\gamma^{2} \label{EQ:26_8}
+\ee
+Au voisinage de la r\'{e}sonance, $b$ est donn\'{e} par la relation (\ref{EQ:26_7}) et alors, $I(\gamma)$ devient plut\^{o}t $I(\epsilon)$ tel que :
+\bea
+	I(\epsilon) & = & \dfrac{\lambda mf^{2}}{4m^{2}\omega_{0}^{2}(\epsilon^{2} + \lambda^{2})}(\omega_{0} + \epsilon)^{2} = \dfrac{\lambda f^{2}}{4m(\epsilon^{2} + \lambda^{2})}\left(1 + \dfrac{\epsilon}{\omega_{0}}\right)^{2} \nonumber \\
+	\Leftrightarrow I(\epsilon) & = & \dfrac{f^{2}\lambda}{4m(\epsilon^{2} + \lambda^{2})}\text{ car }\epsilon \ll \omega_{0} \label{EQ:26_9}
+\eea
+Cette forme de relation entre \'{e}nergie dissip\'{e}e, absorb\'{e}e, et la fr\'{e}quence $\epsilon$ est appel\'{e}e \emph{dispersive}. La valeur maximale de $I$ est atteinte quand $\epsilon$ vaut mieux et elle est de :
+\benn
+	I(0) = \dfrac{f^{2}}{4m\lambda}
+\eenn
+De m\^{e}me, la demi-largueur de la courbe, i.e. la largeur à demi-hauteur, se d\'{e}duit de l'\'{e}quation suivante :
+\benn
+	I(\epsilon) = \frac{I(0)}{2} \Leftrightarrow \dfrac{f^{2}\lambda}{4m(\epsilon^{2} + \lambda^{2})} = \dfrac{f^{2}}{8m\lambda} \Leftrightarrow 2\lambda^{2} = \epsilon^{2} + \lambda^{2} \Leftrightarrow \epsilon = \pm \lambda
+\eenn
+Ainsi, si le c{\oe}fficient d'ammortissement $\lambda$ diminue, alors la hauteur de la courbe de r\'{e}sonance devient plus importante mais sa demi-largeur diminue. D\'{e}montrons que la surface sous $I(\gamma)$ est invariable par rapport au c{\oe}fficient d'ammortissement $\lambda$.
+
+Comme $\gamma = \omega_{0} + \epsilon$, alors $\mathrm{d}\gamma = \mathrm{d}\epsilon$. Cela permet d'\'{e}crire :
+\benn
+	\int_{0}^{+\infty}I(\gamma)\mathrm{d}\gamma = \int_{-\omega_{0}}^{+\infty}I(\epsilon)\mathrm{d}\epsilon
+\eenn
