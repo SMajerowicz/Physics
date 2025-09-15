@@ -674,3 +674,15 @@ Comme $\gamma = \omega_{0} + \epsilon$, alors $\mathrm{d}\gamma = \mathrm{d}\eps
 \benn
 	\int_{0}^{+\infty}I(\gamma)\mathrm{d}\gamma = \int_{-\omega_{0}}^{+\infty}I(\epsilon)\mathrm{d}\epsilon
 \eenn
+Or $I(\epsilon) \propto \epsilon^{-2}$ donc $I(\epsilon)$ d\'{e}croit tr\`{e}s rapidement quant $\lvert\epsilon\rvert$ augmente. Par cons\'{e}quent :
+\bea
+	\int_{-\omega_{0}}^{+\infty}I(\epsilon)\mathrm{d}\epsilon & \approx & \int_{-\infty}^{+\infty}I(\epsilon)\mathrm{d}\epsilon = \dfrac{f^{2}\lambda}{4m}\int_{-\infty}^{+\infty}\dfrac{\mathrm{d}\epsilon}{\epsilon^{2} + \lambda^{2}} \nonumber \\
+	& = & \dfrac{f^{2}\lambda}{4m}\int_{-\infty}^{+\infty}\dfrac{\lambda\mathrm{d}\epsilon/\lambda}{\lambda^{2}((\epsilon/\lambda)^{2} + 1} = \dfrac{f^{2}}{4m}\int_{-\infty}^{+\infty}\dfrac{\mathrm{d}X}{(1 + X^{2})} = \dfrac{f^{2}}{4m}\left[\arctan\right]_{-\infty}^{+\infty} \nonumber
+\eea
+Et enfin, nous pouvons \'{e}crire :
+\be
+	\int_{-\infty}^{+\infty}I(\epsilon)\mathrm{d}\epsilon = \dfrac{f^{2}\pi}{4m} \label{EQ:26_10}
+\ee
+permettant de conclure que la surface sous $I(\epsilon)$ ne d\'{e}pend du c{\oe}fficient d'ammortissement du syst\`{e}me.
+
+\section{R\'{e}sonance param\'{e}trique}
