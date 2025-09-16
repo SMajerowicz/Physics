@@ -969,4 +969,23 @@ to be continued ...
 
 \section{Oscillation forc\'{e}es avec frottement}
 
-Nous allons ici d\'{e}terminer les oscillations d'un syst\`{e}me soumis à du frottement en pr\'{e}sence d'une force ext\'{e}rieure exprim\'{e}e ainsi : $f = f_{0}e^{\alpha\mathrm{t}}\cos\gamma\mathrm{t}$.
+Nous allons ici d\'{e}terminer les oscillations d'un syst\`{e}me soumis à du frottement en pr\'{e}sence d'une force ext\'{e}rieure exprim\'{e}e ainsi : $f = f_{0}e^{\alpha\mathrm{t}}\cos\gamma\mathrm{t}$. L'\'{e}quation (\ref{EQ:26_1}) devient dans ce cas :
+\benn
+	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x = \dfrac{f_{0}}{m}e^{\alpha\mathrm{t}}\cos\gamma\mathrm{t}
+\eenn
+et peut d'\^{e}tre prolong\'{e}e dans $\mathbb{C}$ ainsi :
+\benn
+	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x = \dfrac{f_{0}}{m}e^{\alpha\mathrm{t} + \gamma\mathrm{t}i}
+\eenn
+Supposons que l'int\'{e}grale particuli\`{e}re soit $x = Be^{(\alpha +i\gamma)\mathrm{t}}$, alors l'\'{e}quation du mouvement devient :
+\bea
+	&  & (\alpha + i\gamma)^{2}B + 2\lambda(\alpha + i\gamma)B + \omega_{0}^{2}B = \dfrac{f_{0}}{m} \Leftrightarrow B = \dfrac{f_{0}}{m\left(\alpha^{2} - \gamma^{2} + 2i\alpha\gamma + 2\lambda\alpha + 2i\alpha\gamma + \omega_{0}^{2}\right)} \nonumber \\
+	& \Leftrightarrow & B  = \dfrac{f_{0}}{m\left(\alpha^{2} - \gamma^{2} + 2\lambda\alpha + 2\gamma(\alpha  + \lambda)i + \omega_{0}^{2}\right)} = \dfrac{f_{0}\left(\alpha^{2} - \gamma^{2} + 2\lambda\alpha + \omega_{0}^{2} - 2\gamma(\alpha  + \lambda)i\right)}{m\left((\alpha^{2} - \gamma^{2} + 2\lambda\alpha + \omega_{0}^{2})^{2} + 4\gamma^{2}(\alpha  + \lambda)^{2}\right)} \nonumber
+\eea
+En posant $B = be^{i\delta} = b(\cos\delta + i\sin\delta)$, cela nous permet d'arriver \`{a} :
+\benn
+	\begin{cases}
+		b = \dfrac{f_{0}}{m\sqrt{\left((\alpha^{2} - \gamma^{2} + 2\lambda\alpha + \omega_{0}^{2})^{2} + 4\gamma^{2}(\alpha  + \lambda)^{2}\right)}} \\
+		\tan\delta = \dfrac{\sin\delta}{\cos\delta} = \dfrac{-2\gamma(\alpha + \lambda)}{\alpha^{2} - \gamma^{2} + 2\lambda\alpha + \omega_{0}^{2}}
+	\end{cases}
+\eenn
