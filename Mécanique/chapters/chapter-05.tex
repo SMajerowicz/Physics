@@ -692,6 +692,22 @@ Dans le cas d'un syst\`{e}me \`{a} une dimension et sans force ext\'{e}rieure, l
 	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{x}}\right) = \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}(m\dot{x})}{\mathrm{dt}} + kx = 0 \label{EQ:27_1}
 \ee
 
+Maintenant, introduisons la variable $\tau$ d\'{e}finie telle que $m\mathrm{d}\tau = \mathrm{t}$ avec $m$ une fonction du temps. Cela permet d'\'{e}crire :
+\bea
+	\dfrac{\mathrm{d}}{\mathrm{d}\mathrm{t}}(m\dot{x}) & = & \dfrac{\mathrm{d}m}{\mathrm{d}\mathrm{t}}\dot{x} + m\dfrac{\mathrm{d}\dot{x}}{\mathrm{d}\mathrm{t}} = \dfrac{\mathrm{d}m}{\mathrm{d}\mathrm{t}}\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{t}} + m\dfrac{\mathrm{d}}{\mathrm{d}\mathrm{t}}\left(\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{t}}\right) \nonumber \\
+	& = & \dfrac{\mathrm{d}m}{m\mathrm{d}\mathrm{\tau}}\dfrac{\mathrm{d}x}{m\mathrm{d}\mathrm{\tau}} + m\dfrac{\mathrm{d}}{m\mathrm{d}\mathrm{\tau}}\left(\dfrac{\mathrm{d}x}{m\mathrm{d}\mathrm{\tau}}\right) = \dfrac{1}{m^{2}}\dfrac{\mathrm{d}m}{\mathrm{d}\mathrm{\tau}}\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{\tau}} + \dfrac{\mathrm{d}}{\mathrm{d}\mathrm{\tau}}\left(\dfrac{1}{m}\right)\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{\tau}} + \dfrac{1}{m}\dfrac{\mathrm{d}^{2}x}{\mathrm{d}\mathrm{\tau}^{2}} \nonumber \\
+	& = & \dfrac{1}{m^{2}}\dfrac{\mathrm{d}m}{\mathrm{d}\mathrm{\tau}}\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{\tau}} - \dfrac{1}{m^{2}}\dfrac{\mathrm{d}m}{\mathrm{d}\mathrm{\tau}}\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{\tau}} + \dfrac{1}{m}\dfrac{\mathrm{d}^{2}x}{\mathrm{d}\mathrm{\tau}^{2}} = \dfrac{1}{m}\dfrac{\mathrm{d}^{2}x}{\mathrm{d}\mathrm{\tau}^{2}} \nonumber
+\eea
+Ainsi l'\'{e}quation pr\'{e}c\'{e}dente (\ref{EQ:27_1}) devient :
+\benn
+	\dfrac{\mathrm{d}^{2}x}{\mathrm{d}\tau^{2}} + mkx = 0
+\eenn
+o\`{u} la masse variable avec le temps $m$ n'est plus pr\'{e}sente dans la d\'{e}riv\'{e}e avec le temps. Par analogie avec (\ref{EQ:27_1}) et sans affaiblir le raisonnement, nous pouvons continuer en consid\'{e}rant l'\'{e}quation du mouvement telle que :
+\be
+	\dfrac{\mathrm{d}^{2}x}{\mathrm{dt}^{2}} + w^{2}(\mathrm{t})x = 0 \label{EQ:27_2}
+\ee
+mais cette fois-ci avec la masse $m$ constante avec le temps.
+
 \subsection{Cas g\'{e}n\'{e}ral}
 
 \subsection{Conclusions sur la r\'{e}sonance param\'{e}trique}
