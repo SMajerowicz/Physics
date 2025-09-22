@@ -687,6 +687,8 @@ permettant de conclure que la surface sous $I(\epsilon)$ ne d\'{e}pend du c{\oe}
 
 \section{R\'{e}sonance param\'{e}trique}
 
+\subsection{Cas g\'{e}n\'{e}ral}
+
 Dans le cas d'un syst\`{e}me \`{a} une dimension et sans force ext\'{e}rieure, l'\'{e}quation de Lagrange (\ref{EQ:21_3}) donne, dans le cas o\`{u} $m$ et $k$ d\'{e}pendent du temps, pour \'{e}quation du mouvement :
 \be
 	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{x}}\right) = \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}(m\dot{x})}{\mathrm{dt}} + kx = 0 \label{EQ:27_1}
@@ -708,7 +710,12 @@ o\`{u} la masse variable avec le temps $m$ n'est plus pr\'{e}sente dans la d\'{e
 \ee
 mais cette fois-ci avec la masse $m$ constante avec le temps.
 
-\subsection{Cas g\'{e}n\'{e}ral}
+Faisons l'hypoth\`{e}se que $\omega(\mathrm{t})$ soit une fonction de fr\'{e}quence $\omega$ et de p\'{e}riode $T = 2\pi/\omega$. Par d\'{e}finion, $\omega(\mathrm{t} + T) = \omega(t)$ et en cons\'{e}quence, l'\'{e}quation (\ref{EQ:27_2}) est invariante lors de la transformation $\mathrm{t} \rightarrow \mathrm{t} + T$. Donc si $x(\mathrm{t})$ est une solution de cette m\^{e}me \'{e}quation alors $x(\mathrm{t} + T)$ l'est tout autant. En d'autres termes, si $x_{1}(\mathrm{t})$ et $x_{2}(\mathrm{t})$ sont deux int\'{e}grales particuli\`{e}res de l'\'{e}quation (\ref{EQ:27_2}) alors elles se transforment lin\'{e}airement l'une dans l'autre en rempla\c{c}ant $\mathrm{t}$ par $\mathrm{t} + T$.
+
+Choisissons $x_{1}(\mathrm{t})$ et $x_{2}(\mathrm{t})$ de mani\`{e}re \`{a} ce qu'en rempla\c{c}ant $\mathrm{t}$ par $\mathrm{t} + T$ cela revient \`{a} la multiplication par un facteur constant, i.e. :
+\benn
+	x_{1}(\mathrm{t} + T) = \Pi_{1}x_{1}(\mathrm{t})\text{, }x_{2}(\mathrm{t} + T) = \Pi_{2}x_{2}(\mathrm{t})
+\eenn
 
 \subsection{Conclusions sur la r\'{e}sonance param\'{e}trique}
 
