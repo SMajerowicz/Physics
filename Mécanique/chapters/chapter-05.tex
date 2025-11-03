@@ -714,8 +714,33 @@ Faisons l'hypoth\`{e}se que $\omega(\mathrm{t})$ soit une fonction de fr\'{e}que
 
 Choisissons $x_{1}(\mathrm{t})$ et $x_{2}(\mathrm{t})$ de mani\`{e}re \`{a} ce qu'en rempla\c{c}ant $\mathrm{t}$ par $\mathrm{t} + T$ cela revient \`{a} la multiplication par un facteur constant, i.e. :
 \benn
-	x_{1}(\mathrm{t} + T) = \Pi_{1}x_{1}(\mathrm{t})\text{, }x_{2}(\mathrm{t} + T) = \Pi_{2}x_{2}(\mathrm{t})
+	x_{1}(\mathrm{t} + T) = \mu_{1}x_{1}(\mathrm{t})\text{, }x_{2}(\mathrm{t} + T) = \mu_{2}x_{2}(\mathrm{t})
 \eenn
+La forme la plus g\'{e}n\'{e}rale des fonctions poss\'{e}dant cette propri\'{e}t\'{e} est :
+\be
+	x_{1}(\mathrm{t}) = \mu_{1}^{\mathrm{t}/T}\Pi_{1}(\mathrm{t})\text{, }x_{2}(\mathrm{t}) = \mu_{2}^{\mathrm{t}/T}\Pi_{2}(\mathrm{t})\label{EQ:27_3}
+\ee
+o\`{u} les fonctions $\Pi_{i}(\mathrm{t})$ sont purement p\'{e}riodiques du temps et de de p\'{e}riode $T$. Les constantes $\mu_{i}$ doivent \^{e}tre li\'{e}es par une relation d\'{e}termin\'{e}e. Ainsi, pour $i = 2$, l'\'{e}quation (\ref{EQ:27_2}) donne :
+\benn
+	\begin{cases}
+		\ddot{x_{1}} + w^{2}(\mathrm{t})x_{1} = 0 \\
+		\ddot{x_{2}} + w^{2}(\mathrm{t})x_{2} = 0
+	\end{cases}
+	\Leftrightarrow
+	\begin{cases}
+		\ddot{x_{1}}x_{2} + w^{2}(\mathrm{t})x_{1}x_{2} = 0 \\
+		\ddot{x_{2}}x_{1} + w^{2}(\mathrm{t})x_{2}x_{1} = 0
+	\end{cases}
+\eenn
+implique en soustrayant la seconde\`{a} la premi\`{e}re :
+\bea
+	\ddot{x_{1}}x_{2} - \ddot{x_{2}}x_{1} = 0 & \Leftrightarrow & \ddot{x_{1}}x_{2} + \dot{x_{1}}\dot{x_{2}} - \ddot{x_{2}}x_{1} - \dot{x_{1}}\dot{x_{2}} = 0 \nonumber \\
+	& \Leftrightarrow & \dfrac{\mathrm{d}(\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}})}{\mathrm{dt}} = 0 \nonumber
+\eea
+ce qui permet de conclure \`{a} ce que :
+\be
+	\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}} = cste/\mathrm{t}\label{EQ:27_4}
+\ee
 
 \subsection{Conclusions sur la r\'{e}sonance param\'{e}trique}
 
