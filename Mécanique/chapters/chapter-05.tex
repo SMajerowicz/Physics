@@ -741,6 +741,19 @@ ce qui permet de conclure \`{a} ce que :
 \be
 	\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}} = cste/\mathrm{t}\label{EQ:27_4}
 \ee
+En g\'{e}n\'{e}ralisant les relations (\ref{EQ:27_3}), nous avons :
+\benn
+	\forall i\text{, }\begin{cases}
+		x_{i}(\mathrm{t} + T) = \mu_{i}x_{i}(\mathrm{t}) \\
+		\dot{x}_{i}(\mathrm{t}) = \frac{\ln(\mu_{i})}{T}\mu_{i}^{\mathrm{t}/T}\Pi_{i}(\mathrm{t}) + \mu_{i}^{\mathrm{t}/T}\dot{\Pi}(\mathrm{t}) \Rightarrow \dot{x}_{i}(\mathrm{t} + T) = \frac{\ln(\mu_{i})}{T}\mu_{i}\mu_{i}^{\mathrm{t}/T}\Pi_{i}(\mathrm{t}) + \mu_{i}\mu_{i}^{\mathrm{t}/T}\dot{\Pi}(\mathrm{t}) = \mu_{i}\dot{x}_{i}(\mathrm{t})
+	\end{cases}
+\eenn
+car par d\'{e}finition $\Pi_{i}(\mathrm{t} + T) = \Pi_{i}(\mathrm{t})$. Reprenons maintenant l'\'{e}quation (\ref{EQ:27_4}) qui permet d'\'{e}crire :
+\bea
+	(\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}})\big|_{\mathrm{t}} & = & (\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}})\big|_{\mathrm{t} + T} \nonumber \\
+	\Leftrightarrow \dot{x_{1}}x_{2} - x_{1}\dot{x_{2}} & = & \mu_{1}\mu_{2}\dot{x_{1}}x_{2} - \mu_{1}\mu_{2}x_{1}\dot{x_{2}} = \mu_{1}\mu_{2}(\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}}) \nonumber \\
+	\Leftrightarrow \mu_{1}\mu_{2} = 1 \label{EQ:27_5}
+\eea
 
 \subsection{Conclusions sur la r\'{e}sonance param\'{e}trique}
 
