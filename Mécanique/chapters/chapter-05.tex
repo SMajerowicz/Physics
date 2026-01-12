@@ -795,5 +795,33 @@ Si, \`{a} $\mathrm{t} = 0$, nous mesurons $\dot{x}(0) = 0$ et $x(0) = 0$, alors 
 \be
 	\omega^{2}(\mathrm{t}) = \omega_{0}^{2}(1 + h\cos(\gamma\mathrm{t})) \label{EQ:27_7}
 \ee
+avec $0 < h \ll 1$. Supposons $\gamma$ proche du double de $\omega_{0}$ telle que : $\gamma = 2\omega_{0} + \epsilon$ avec \'{e}videmment $\epsilon \ll \omega_{0}$. L'\'{e}quation (\ref{EQ:27_2}) devient alors :
+\be
+	\ddot{x} + \omega_{0}^{2}\left(1 + h\cos\left[(2\omega_{0} + \epsilon)\mathrm{t}\right]\right)x = 0\label{EQ:27_8}
+\ee
+pour laquelle nous chercherons la solution sous la forme :
+\be
+	x(\mathrm{t}) = a(\mathrm{t})\cos\left[\left(\omega_{0} + \frac{\epsilon}{2}\right)\mathrm{t}\right] + b(\mathrm{t})\sin\left[\left(\omega_{0} + \frac{\epsilon}{2}\right)\mathrm{t}\right]\label{EQ:27_9}
+\ee
+o\`{u} $a(\mathrm{t})$ et $b(\mathrm{t})$ sont des fonctions du temps variant avec des pulsations bien plus faibles que $\omega_{0}$. La solution exacte \`{a} l'\'{e}quation (\ref{EQ:27_8}) contient \'{e}rgalement des termes dont la fr\'{e}quence est multiple de la quantit\'{e} $2\omega_{0} + \epsilon$, ce qui en fait des infiniments petits d'ordre sup\'{e}rieur et n\'{e}gligeable en premi\`{e}re approximation (voir exercice (\ref{PAR:27_EX1})).
+
+Connaissant la relation (\ref{EQ:27_9}), et en d\'{e}veloppant d'abord :
+\bea
+	\dfrac{\mathrm{d}^{2}\left(a(\mathrm{t})\cos(\alpha\mathrm{t})\right)}{\mathrm{dt^{2}}} & = & \dfrac{\mathrm{d}\left(\dot{a}(\mathrm{t})\cos(\alpha\mathrm{t}) - \alpha a(\mathrm{t})\sin(\alpha\mathrm{t})\right)}{\mathrm{dt}} \nonumber \\
+	& = & \ddot{a}(\mathrm{t})\cos(\alpha\mathrm{t}) - 2\alpha\dot{a}(\mathrm{t})\sin(\alpha\mathrm{t}) - \alpha^{2}a(\mathrm{t})\cos(\alpha\mathrm{t}) \nonumber \\
+	\dfrac{\mathrm{d}^{2}\left(b(\mathrm{t})\sin(\alpha\mathrm{t})\right)}{\mathrm{dt^{2}}} & = & \dfrac{\mathrm{d}\left(\dot{b}(\mathrm{t})\sin(\alpha\mathrm{t}) + \alpha b(\mathrm{t})\cos(\alpha\mathrm{t})\right)}{\mathrm{dt}} \nonumber \\
+	& = & \ddot{b}(\mathrm{t})\sin(\alpha\mathrm{t}) + 2\alpha\dot{b}(\mathrm{t})\cos(\alpha\mathrm{t}) - \alpha^{2}b(\mathrm{t})\sin(\alpha\mathrm{t}) \nonumber
+\eea
+l'\'{e}quation (\ref{EQ:27_8}) devient en posant $\alpha = \omega_{0} + \frac{\epsilon}{2}$ :
+\bea
+	& & \ddot{a}(\mathrm{t})\cos(\alpha\mathrm{t}) - 2\alpha\dot{a}(\mathrm{t})\sin(\alpha\mathrm{t}) - \alpha^{2}a(\mathrm{t})\cos(\alpha\mathrm{t}) \nonumber \\
+	& + & \ddot{b}(\mathrm{t})\sin(\alpha\mathrm{t}) + 2\alpha\dot{b}(\mathrm{t})\cos(\alpha\mathrm{t}) - \alpha^{2}b(\mathrm{t})\sin(\alpha\mathrm{t}) \nonumber \\
+	& + & \omega^{2}a(\mathrm{t})\cos(\alpha\mathrm{t}) + \omega^{2}b(\mathrm{t})\sin(\alpha\mathrm{t}) \nonumber \\
+	& + & a(\mathrm{t})\omega^{2}h\cos(2\alpha\mathrm{t})\cos(\alpha\mathrm{t}) + b(\mathrm{t})\omega^{2}h\cos(2\alpha\mathrm{t})\sin(\alpha\mathrm{t}) = 0 \nonumber
+\eea
+En n\'{e}gligeant les termes en $\epsilon^{2}$, nous avons $\alpha^{2} \approx \omega_{0}^{2} + \omega_{0}\epsilon$ et nous pouvons porsuivre telle que :
+\bea
+	& & ...
+\eea
 
 \subsection{Cas \`{a} faible c{\oe}fficient de frottement}
