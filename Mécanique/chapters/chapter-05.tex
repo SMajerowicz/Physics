@@ -783,7 +783,7 @@ Le module de $\mu_{1}$ et $\mu_{2}$ doit donc \^{e}tre \'{e}gal \`{a} l'unit\'{e
 
 En allant plus loin et en supposons $(\mu_{1},\mu_{2})\in\mathbb{R}^{2}$ alors, comme $\mu_{1}\mu_{2} = 1$, nous pouvons \'{e}crire $\mu_{1} = 1/\mu_{2}$ et les relations (\ref{EQ:27_3}) peuvent se simplifier telles que :
 \benn
-	x_{1}(\mathrm{t}) = \mu^{\mathrm{t}/T}\Pi_{1}(\mathrm{t})\text{, }x_{2}(\mathrm{t}) = \Pi_{2}(\mathrm{t})/\mu^{\mathrm{t}/T} = \mu^{-\mathrm{t}/T}\Pi_{2}(\mathrm{t})
+	x_{1}(\mathrm{t}) = \mu^{\mathrm{t}/T}\Pi_{1}(\mathrm{t})\text{, }x_{2}(\mathrm{t}) = \Pi_{2}(\mathrm{t})/\mu^{\mathrm{t}/T} = \mu^{-\mathrm{t}/T}\Pi_{2}(\mathrm{t})\ref{EQ:27_6}
 \eenn
 avec $\mu > 0$ ou $\mu < 0$ mais diff\'{e}rent de l'unit\'{e} pour \'{e}viter le cas trivial. Dans tous les cas, nous avons des fonctions exponentielles du temps et ou $x_{1}$, ou $x_{2}$, va cro\^{i}tre exponentiellement avec le temps. L'\'{e}tat de repos du syst\`{e}me sera donc instable car le moindre petit \'{e}cart de la position d'\'{e}quilibre va engendrer un d\'{e}placement exponentiel de $x$. Il s'agit de la \emph{r\'{e}sonance param\'{e}trique}.
 
@@ -819,9 +819,77 @@ l'\'{e}quation (\ref{EQ:27_8}) devient en posant $\alpha = \omega_{0} + \frac{\e
 	& + & \omega^{2}a(\mathrm{t})\cos(\alpha\mathrm{t}) + \omega^{2}b(\mathrm{t})\sin(\alpha\mathrm{t}) \nonumber \\
 	& + & a(\mathrm{t})\omega^{2}h\cos(2\alpha\mathrm{t})\cos(\alpha\mathrm{t}) + b(\mathrm{t})\omega^{2}h\cos(2\alpha\mathrm{t})\sin(\alpha\mathrm{t}) = 0 \nonumber
 \eea
-En n\'{e}gligeant les termes en $\epsilon^{2}$, nous avons $\alpha^{2} \approx \omega_{0}^{2} + \omega_{0}\epsilon$ et nous pouvons porsuivre telle que :
+En n\'{e}gligeant les termes en $\epsilon^{2}$, nous avons $\alpha^{2} \approx \omega_{0}^{2} + \omega_{0}\epsilon$ et en utilisant les formules de Simpson telles que :
 \bea
-	& & ...
+	\cos(2\alpha\mathrm{t})\cos(\alpha\mathrm{t}) & = & \frac{1}{2}\left(\cos(3\alpha\mathrm{t}) + \cos(\alpha\mathrm{t})\right) \nonumber \\
+	\cos(2\alpha\mathrm{t})\sin(\alpha\mathrm{t}) & = & \frac{1}{2}\left(\sin(3\alpha\mathrm{t}) - \sin(\alpha\mathrm{t})\right) \nonumber
+\eea
+alors nous pouvons poursuivre le d\'{e}veloppement tel que :
+\bea
+	& & \ddot{a}(\mathrm{t})\cos(\alpha\mathrm{t}) - 2\alpha\dot{a}(\mathrm{t})\sin(\alpha\mathrm{t}) - (\omega_{0}^{2} + \omega_{0}\epsilon)a(\mathrm{t})\cos(\alpha\mathrm{t}) \nonumber \\
+	& + & \ddot{b}(\mathrm{t})\sin(\alpha\mathrm{t}) + 2\alpha\dot{b}(\mathrm{t})\cos(\alpha\mathrm{t}) - (\omega_{0}^{2} + \omega_{0}\epsilon)b(\mathrm{t})\sin(\alpha\mathrm{t}) \nonumber \\
+	& + & \omega_{0}^{2}a(\mathrm{t})\cos(\alpha\mathrm{t}) + \omega_{0}^{2}b(\mathrm{t})\sin(\alpha\mathrm{t}) \nonumber \\
+	& + & a(\mathrm{t})\frac{\omega_{0}^{2}h}{2}\left(\cos(3\alpha\mathrm{t}) + \cos(\alpha\mathrm{t})\right) + b(\mathrm{t})\frac{\omega_{0}^{2}h}{2}\left(\sin(3\alpha\mathrm{t}) - \sin(\alpha\mathrm{t})\right) = 0 \nonumber \\
+	\Leftrightarrow & & \ddot{a}(\mathrm{t})\cos(\alpha\mathrm{t}) - 2\alpha\dot{a}(\mathrm{t})\sin(\alpha\mathrm{t}) - \omega_{0}\epsilon a(\mathrm{t})\cos(\alpha\mathrm{t}) \nonumber \\
+	& + & \ddot{b}(\mathrm{t})\sin(\alpha\mathrm{t}) + 2\alpha\dot{b}(\mathrm{t})\cos(\alpha\mathrm{t}) - \omega_{0}\epsilon b(\mathrm{t})\sin(\alpha\mathrm{t}) \nonumber \\
+	& + & a(\mathrm{t})\frac{\omega_{0}^{2}h}{2}\cos(\alpha\mathrm{t}) - b(\mathrm{t})\frac{\omega_{0}^{2}h}{2}\sin(\alpha\mathrm{t}) = 0 \nonumber
+\eea
+qui permet d'arriver \`{a} :
+\benn
+	\left[\ddot{a}(\mathrm{t}) - \omega_{0}\epsilon a(\mathrm{t}) + 2\alpha\dot{b}(\mathrm{t}) + a(\mathrm{t})\frac{\omega_{0}^{2}h}{2}\right]\cos(\alpha\mathrm{t}) + \left[-2\alpha\dot{a}(\mathrm{t}) + \ddot{b}(\mathrm{t}) - \omega_{0}\epsilon b(\mathrm{t}) - b(\mathrm{t})\frac{\omega_{0}^{2}h}{2}\right]\sin(\alpha\mathrm{t}) = 0
+\eenn
+En prenant les hypoth\`{e}ses suivantes : $\dot{a}\approxeq\epsilon a$ et $\dot{b}\approxeq\epsilon b$ alors nous pouvons n\'{e}gliger les termes en $\ddot{a}$, $\ddot{b}$, $\epsilon\dot{a}$ et $\epsilon\dot{b}$ et nous obtenons :
+\benn
+	\left[2\dot{b}(\mathrm{t}) - \epsilon a(\mathrm{t}) + a(\mathrm{t})\frac{\omega_{0}h}{2}\right]\cos(\alpha\mathrm{t}) - \left[2\dot{a}(\mathrm{t}) + \epsilon b(\mathrm{t}) + b(\mathrm{t})\frac{\omega_{0}h}{2}\right]\sin(\alpha\mathrm{t}) = 0
+\eenn
+\'{E}videmment, l'\'{e}galit\'{e} pr\'{e}c\'{e}dente n'est valable que si les c{\oe}fficients de facteur $\cos$ et $\sin$ s'annulent simultan\'{e}ment, i.e. :
+\benn
+	\begin{cases}
+		2\dot{b}(\mathrm{t}) - \epsilon a(\mathrm{t}) + a(\mathrm{t})\frac{\omega_{0}h}{2} = 0 \\
+		2\dot{a}(\mathrm{t}) + \epsilon b(\mathrm{t}) + b(\mathrm{t})\frac{\omega_{0}h}{2} = 0
+	\end{cases}
+\eenn
+soient deux \'{e}quations diff\'{e}rentielles lin\'{e}aires. Recherchons une paire de solution telle que $a(\mathrm{t}) = ae^{s\mathrm{t}}$ et $b(\mathrm{t}) = be^{s\mathrm{t}}$. Les deux \'{e}quations pr\'{e}c\'{e}dentes deviennent alors, quelque soit $\mathrm{t}$ :
+\benn
+	\begin{cases}
+		2bs - \left(\epsilon - \frac{\omega_{0}h}{2}\right)a = 0 \\
+		2as + \left(\epsilon + \frac{\omega_{0}h}{2}\right)b = 0
+	\end{cases}
+	\Leftrightarrow
+	\begin{cases}
+		bs - \left(\epsilon - \frac{\omega_{0}h}{2}\right)\frac{a}{2} = 0 \\
+		\left(\epsilon + \frac{\omega_{0}h}{2}\right)\frac{b}{2} + as = 0
+	\end{cases}
+\eenn
+qui a une solution non triviale si et seulement si le d\'{e}terminant est nul, soit :
+\bea
+	s^{2} + \frac{1}{4}\left(\epsilon - \frac{\omega_{0}h}{2}\right)\left(\epsilon + \frac{\omega_{0}h}{2}\right) & = & 0 \nonumber \\
+	\Leftrightarrow s^{2} = \frac{1}{4}\left(\frac{\omega_{0}h}{2} - \epsilon\right)\left(\frac{\omega_{0}h}{2} + \epsilon\right) & \Leftrightarrow & s^{2} = \frac{1}{4}\left(\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2}\right) \label{EQ:27_10}
 \eea
 
+Le raisonnement d\'{e}rivant des relations (\ref{EQ:27_6}) am\`{e}ne \`{a} la r\'{e}sonance param\'{e}trique si le c{\oe}fficient $\mu \in \mathbb{R}$, soit dans le cas pr\'{e}sent, si $s^{2} \in \mathbb{r}$ et plus pr\'{e}cis\`{e}ment $s^{2} > 0$. Donc la r\'{e}sonance param\'{e}trique a lieu pour :
+\be
+	\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2} > 0 \Leftrightarrow -\frac{h\omega_{0}}{2} < \epsilon < +\frac{h\omega_{0}}{2} \label{EQ:27_11}
+\ee
+qui repr\'{e}sente l'intervalle de fr\'{e}quence autour de la pulsation $2\omega_{0}$ d\'{e}finie dans la relation (\ref{EQ:27_8}).
+
+Dans les \'{e}quations (\ref{EQ:27_7}) et (\ref{EQ:27_7}), $\gamma$ peut \^{e}tre choisi comme $2\omega_{0}/n$ avec $n\in\mathbb{N}$. Dans ce cas, la largeur des domaines de r\'{e}sonance param\'{e}trique diminue rapidement.
+
 \subsection{Cas \`{a} faible c{\oe}fficient de frottement}
+
+Le paragraphe (\ref{PAR:25}) et en particulier la solution (\ref{EQ:25_4}) montrent que le frottement induit un ammortissement exponentiel de l'amplitude des oscillations, en $e^{-\lambda\mathrm{t}}$. En reprenant le cheminement pour arriver à l'\'{e}quation (\ref{EQ:27_10}), l'amplitude des oscillations dans la r\'{e}sonnance param\'{e}trique suit une loi en $e^{(s-\lambda)\mathrm{t}}$ avec $s > 0$. La limite du domaine d'instabilit\'{e} est donn\'{e} par $s - \lambda = 0$. L'\'{e}quation (\ref{EQ:27_10}) devient dans ce cas pr\'{e}cis :
+\benn
+	(s - \lambda)^{2} = \frac{1}{4}\left(\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2}\right) \Leftrightarrow s^{2} - 2\lambda s + \lambda^{2} - \frac{1}{4}\left(\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2}\right) = 0
+\eenn
+qui a pour solutions :
+\benn
+	s = \frac{2\lambda \pm \sqrt{4\lambda^{2} - 4\left(\lambda^{2} - \frac{1}{4}\left(\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2}\right)\right)}}{2} = \lambda \pm \frac{1}{2}\sqrt{\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2}}
+\eenn
+avec \'{e}videmment $\epsilon < \frac{\omega_{0}h}{2}$ qui est donn\'{e} par les in\'{e}galit\'{e}s (\ref{EQ:27_11}). Nous avons donc le domaine de r\'{e}sonance param\'{e}trique suivant, i.e. $s > 0$ :
+\be
+	-\sqrt{\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{2}} < \epsilon < \sqrt{\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{2}} \label{EQ:27_12}
+\ee
+qui n'est possible que pour $\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{2} > 0$. Il y a done un seuil d'amplitude au-dessus duquel la r\'{e}sonance n'est pas possible. Cette valeur $h_{k}$ est :
+\benn
+	\left(\frac{\omega_{0}h_{k}}{2}\right)^{2} = 4\lambda^{2} \Leftrightarrow h_{k} = \frac{4\lambda}{\omega_{0}}
+\eenn
