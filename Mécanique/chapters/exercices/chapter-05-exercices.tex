@@ -1000,6 +1000,60 @@ Nous allons d\'{e}terminer les fronti\`{e}res de la r\'{e}sonance param\'{e}triq
 \eenn
 Comme nous nous bornons \`{a} d\'{e}terminer les bornes du domaine de r\'{e}sonance param\'{e}trique, nous pouvons consid\'{e}rer $a_{0}$, $b_{0}$, $a_{1}$ et $b_{1}$ constants par rapport au temps, voir la d\'{e}monstration des in\'{e}galit\'{e}s (\ref{EQ:27_11}).
 
+Nous avons donc en d\'{e}veloppant l'\'{e}quation (\ref{EQ:27_8}) :
+\bea
+	& & \ddot{x} + \omega_{0}^{2}\left(1 + h\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right)\right) = 0 \nonumber \\
+	\Leftrightarrow & & -a_{0}(\omega_{0} + \epsilon/2)^{2}\cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) - b_{0}(\omega_{0} + \epsilon/2)^{2}\sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) \nonumber \\
+	& - & 9a_{1}(\omega_{0} + \epsilon/2)^{2}\cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) - 9b_{1}(\omega_{0} + \epsilon/2)^{2}\sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) \nonumber \\
+	& + & a_{0}\omega_{0}^{2}\cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) + b_{0}\omega_{0}^{2}\sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) + a_{1}\omega_{0}^{2}\cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) + b_{1}\omega_{0}^{2}\sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) \nonumber \\
+	& + & a_{0}\omega_{0}^{2}h\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right)\cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) + b_{0}\omega_{0}^{2}\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right)\sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) \nonumber \\
+	& + & a_{1}\omega_{0}^{2}h\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right)\cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) + b_{1}\omega_{0}^{2}\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right)\sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) = 0 \nonumber \\
+	\Leftrightarrow & & \left( -a_{0}(\omega_{0} + \epsilon/2)^{2} + a_{0}\omega_{0}^{2}\right)\cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) + \left(-b_{0}(\omega_{0} + \epsilon/2)^{2} + b_{0}\omega_{0}^{2}\right)\sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) \nonumber \\
+	& + & \left( -9a_{1}(\omega_{0} + \epsilon/2)^{2} + a_{1}\omega_{0}^{2}\right)\cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) + \left(-9b_{1}(\omega_{0} + \epsilon/2)^{2} + b_{1}\omega_{0}^{2}\right)\sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) \nonumber \\
+	& + & \frac{a_{0}\omega_{0}^{2}h}{2}\left(\cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) + \cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\right) + \frac{b_{0}\omega_{0}^{2}h}{2}\left(\sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) - \sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\right) \nonumber \\
+	& + & \frac{a_{1}\omega_{0}^{2}h}{2}\left(\cos\left(5(\omega_{0} + \epsilon/2)\mathrm{t}\right) + \cos\left(-(\omega_{0} + \epsilon/2)\mathrm{t}\right)\right) + \frac{b_{1}\omega_{0}^{2}h}{2}\left(\sin\left(5(\omega_{0} + \epsilon/2)\mathrm{t}\right) - \sin\left(-(\omega_{0} + \epsilon/2)\mathrm{t}\right)\right) = 0 \nonumber
+\eea
+Le dernier d\'{e}veloppement se sert des formules de Simpson :
+\benn
+	\begin{cases}
+		\cos(a)\cos(b) = \frac{1}{2}\left(\cos(a + b) + \cos(a - b)\right) \\
+		\sin(a)\sin(b) = \frac{1}{2}\left(\cos(a - b) - \cos(a + b)\right) \\
+		\sin(a)\cos(b) = \frac{1}{2}\left(\sin(a + b) + \sin(a - b)\right) \\
+		\cos(a)\sin(b) = \frac{1}{2}\left(\sin(a + b) - \sin(a - b)\right)
+	\end{cases}
+\eenn
+En supprimant les ordres de fr\'{e}quence sup\'{e}rieurs \`{a} $3(\omega_{0} + \epsilon/2)$, nous arrivons, en regroupant les termes, \`{a} :
+\bea
+	& & \cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-a_{0}\omega_{0}^{2} - a_{0}\frac{\epsilon^{2}}{4} - 2a_{0}\omega_{0}\frac{\epsilon}{2} + a_{0}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2} + \frac{a_{1}\omega_{0}^{2}h}{2}\right) \nonumber \\
+	& + & \sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-b_{0}\omega_{0}^{2} - b_{0}\frac{\epsilon^{2}}{4} - 2b_{0}\omega_{0}\frac{\epsilon}{2} + b_{0}\omega_{0}^{2} - \frac{b_{0}\omega_{0}^{2}h}{2} + \frac{b_{1}\omega_{0}^{2}h}{2}\right) \nonumber \\
+	& + & \cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-9a_{1}\omega_{0}^{2} - 9a_{1}\frac{\epsilon^{2}}{4} - 18a_{1}\omega_{0}\frac{\epsilon}{2} + a_{1}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2}\right) \nonumber \\
+	& + & \sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-9b_{1}\omega_{0}^{2} - 9b_{1}\frac{\epsilon^{2}}{4} - 18b_{1}\omega_{0}\frac{\epsilon}{2} + b_{1}\omega_{0}^{2} + \frac{b_{0}\omega_{0}^{2}h}{2}\right) = 0 \nonumber \\
+	\Leftrightarrow & & \cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-a_{0}\frac{\epsilon^{2}}{4} + a_{0}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2} + \frac{a_{1}\omega_{0}^{2}h}{2}\right) \nonumber \\
+	& + & \sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-b_{0}\frac{\epsilon^{2}}{4} - b_{0}\omega_{0}\epsilon - \frac{b_{0}\omega_{0}^{2}h}{2} + \frac{b_{1}\omega_{0}^{2}h}{2}\right) \nonumber \\
+	& + & \cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-8a_{1}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2}\right) \nonumber \\
+	& + & \sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-8b_{1}\omega_{0}^{2} + \frac{b_{0}\omega_{0}^{2}h}{2}\right) = 0 \nonumber
+\eea
+en ne gardant que les amplitudes infiniments petites du premier et du second ordre pour les termes de fr\'{e}quences $\omega_{0} + \epsilon/2$ et celles du premier ordre pour les termes de fr\'{e}quence en $3(\omega_{0} + \epsilon/2)$. Ainsi pour r\'{e}soudre l'\'{e}quation, il est n\'{e}cessaire que tous les c{\oe}fficients s'annulent simultan\'{e}ment, i.e. $\forall\mathrm{t}$, soit :
+\benn
+	\begin{cases}
+		-a_{0}\frac{\epsilon^{2}}{4} + a_{0}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2} + \frac{a_{1}\omega_{0}^{2}h}{2} = 0 \\
+		-b_{0}\frac{\epsilon^{2}}{4} - b_{0}\omega_{0}\epsilon - \frac{b_{0}\omega_{0}^{2}h}{2} + \frac{b_{1}\omega_{0}^{2}h}{2} = 0 \\
+		-8a_{1}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2} = 0 \\
+		-8b_{1}\omega_{0}^{2} + \frac{b_{0}\omega_{0}^{2}h}{2} = 0 \\
+	\end{cases}
+\eenn
+Les troisi\`{e}me et quatri\`{e}me \'{e}galit\'{e}s donnent respectivement :
+\benn
+	a_{1} = \frac{h}{16}a_{0}\text{ et }b_{1} = \frac{h}{16}b_{0}
+\eenn
+qui, inject\'{e}es dans les premi\`{e}re et deuxi\`{e}me \'{e}galit\'{e}s, donne :
+\bea
+	-\omega_{0}\epsilon - \frac{\epsilon^{2}}{4} \pm \frac{h\omega_{0}^{2}}{2} + \frac{h^{2}\omega_{0}^{2}}{32} & = & 0 \nonumber \\
+	\Leftrightarrow \frac{\epsilon^{2}}{4} + \omega_{0}\epsilon + \frac{h^{2}\omega_{0}^{2}}{32} \pm \frac{h\omega_{0}^{2}}{2} & = & 0 \nonumber \\
+	\Rightarrow \epsilon = \pm \frac{h\omega_{0}}{2} - \frac{h^{2}\omega_{0}}{32}
+\eea
+en ne prenant pas en consid\'{e}ration le terme en $\epsilon^{2}$ car infiniment petit du second ordre.
+
 \subsection{Limites du domaine d'instabilit\'{e}}
 
 \subsection{Conditions de r\'{e}sonance param\'{e}trique}
