@@ -1011,7 +1011,8 @@ Nous avons donc en d\'{e}veloppant l'\'{e}quation (\ref{EQ:27_8}) :
 	\Leftrightarrow & & \left( -a_{0}(\omega_{0} + \epsilon/2)^{2} + a_{0}\omega_{0}^{2}\right)\cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) + \left(-b_{0}(\omega_{0} + \epsilon/2)^{2} + b_{0}\omega_{0}^{2}\right)\sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) \nonumber \\
 	& + & \left( -9a_{1}(\omega_{0} + \epsilon/2)^{2} + a_{1}\omega_{0}^{2}\right)\cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) + \left(-9b_{1}(\omega_{0} + \epsilon/2)^{2} + b_{1}\omega_{0}^{2}\right)\sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) \nonumber \\
 	& + & \frac{a_{0}\omega_{0}^{2}h}{2}\left(\cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) + \cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\right) + \frac{b_{0}\omega_{0}^{2}h}{2}\left(\sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) - \sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\right) \nonumber \\
-	& + & \frac{a_{1}\omega_{0}^{2}h}{2}\left(\cos\left(5(\omega_{0} + \epsilon/2)\mathrm{t}\right) + \cos\left(-(\omega_{0} + \epsilon/2)\mathrm{t}\right)\right) + \frac{b_{1}\omega_{0}^{2}h}{2}\left(\sin\left(5(\omega_{0} + \epsilon/2)\mathrm{t}\right) - \sin\left(-(\omega_{0} + \epsilon/2)\mathrm{t}\right)\right) = 0 \nonumber
+	& + & \frac{a_{1}\omega_{0}^{2}h}{2}\bigg(\cos\left(5(\omega_{0} + \epsilon/2)\mathrm{t}\right) + \cos\left(-(\omega_{0} + \epsilon/2)\mathrm{t}\right) + \frac{b_{1}\omega_{0}^{2}h}{2}\sin\left(5(\omega_{0} + \epsilon/2)\mathrm{t}\right) \nonumber \\
+	& - & \sin\left(-(\omega_{0} + \epsilon/2)\mathrm{t}\right)\bigg) = 0 \nonumber
 \eea
 Le dernier d\'{e}veloppement se sert des formules de Simpson :
 \benn
@@ -1030,8 +1031,7 @@ En supprimant les ordres de fr\'{e}quence sup\'{e}rieurs \`{a} $3(\omega_{0} + \
 	& + & \sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-9b_{1}\omega_{0}^{2} - 9b_{1}\frac{\epsilon^{2}}{4} - 18b_{1}\omega_{0}\frac{\epsilon}{2} + b_{1}\omega_{0}^{2} + \frac{b_{0}\omega_{0}^{2}h}{2}\right) = 0 \nonumber \\
 	\Leftrightarrow & & \cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-a_{0}\frac{\epsilon^{2}}{4} + a_{0}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2} + \frac{a_{1}\omega_{0}^{2}h}{2}\right) \nonumber \\
 	& + & \sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-b_{0}\frac{\epsilon^{2}}{4} - b_{0}\omega_{0}\epsilon - \frac{b_{0}\omega_{0}^{2}h}{2} + \frac{b_{1}\omega_{0}^{2}h}{2}\right) \nonumber \\
-	& + & \cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-8a_{1}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2}\right) \nonumber \\
-	& + & \sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-8b_{1}\omega_{0}^{2} + \frac{b_{0}\omega_{0}^{2}h}{2}\right) = 0 \nonumber
+	& + & \cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-8a_{1}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2}\right) + \sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-8b_{1}\omega_{0}^{2} + \frac{b_{0}\omega_{0}^{2}h}{2}\right) = 0 \nonumber
 \eea
 en ne gardant que les amplitudes infiniments petites du premier et du second ordre pour les termes de fr\'{e}quences $\omega_{0} + \epsilon/2$ et celles du premier ordre pour les termes de fr\'{e}quence en $3(\omega_{0} + \epsilon/2)$. Ainsi pour r\'{e}soudre l'\'{e}quation, il est n\'{e}cessaire que tous les c{\oe}fficients s'annulent simultan\'{e}ment, i.e. $\forall\mathrm{t}$, soit :
 \benn
@@ -1055,5 +1055,56 @@ qui, inject\'{e}es dans les premi\`{e}re et deuxi\`{e}me \'{e}galit\'{e}s, donne
 en ne prenant pas en consid\'{e}ration le terme en $\epsilon^{2}$ car infiniment petit du second ordre.
 
 \subsection{Limites du domaine d'instabilit\'{e}}
+
+Il s'agit ici de d\'{e}terminer le domaine d'instabilit\'{e} pour une r\'{e}sonnance autour de $\Gamma = \omega_{0}$, et non plus $\Gamma = 2\omega_{0}$ comme dans l'exercice pr\'{e}c\'{e}dent. Dans ce cas, l'\'{e}quation (\ref{EQ:27_8}) s'\'{e}crit :
+\benn
+	\ddot{x} + \omega_{0}^{2}\left(1 + h\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\right) = 0
+\eenn
+pour laquelle nous chercherons alors une solution telle que :
+\benn
+	x(\mathrm{t}) = a_{0}(\mathrm{t})\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right) + b_{0}(\mathrm{t})\sin\left((\omega_{0} + \epsilon)\mathrm{t}\right) + a_{1}(\mathrm{t})\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + b_{1}(\mathrm{t})\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + c_{1}
+\eenn
+Comme pour l'exercice pr\'{e}c\'{e}dent, nous consid\'{e}rons les c{\oe}fficients constants pour faciliter le calcul des bornes du domaine de r\'{e}sonnance param\'{e}trique. L'\'{e}quation du mouvement devient :
+\bea
+	& & -(\omega_{0} + \epsilon)^{2}a_{0}\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right) - (\omega_{0} + \epsilon)^{2}b_{0}\sin\left((\omega_{0} + \epsilon)\mathrm{t}\right) \nonumber \\
+	& & - 4(\omega_{0} + \epsilon)^{2}a_{1}\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) - 4(\omega_{0} + \epsilon)^{2}b_{1}\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) \nonumber \\
+	& & + a_{0}\omega_{0}^{2}\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right) + b_{0}\omega_{0}^{2}\sin\left((\omega_{0} + \epsilon)\mathrm{t}\right) + a_{1}\omega_{0}^{2}\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + b_{1}\omega_{0}^{2}\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + c_{1}\omega_{0}^{2} \nonumber \\
+	& & + a_{0}h\omega_{0}^{2}\cos^{2}\left((\omega_{0} + \epsilon)\mathrm{t}\right) + b_{0}h\omega_{0}^{2}\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\sin\left((\omega_{0} + \epsilon)\mathrm{t}\right) + a_{1}h\omega_{0}^{2}\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) \nonumber \\
+	& & + b_{1}h\omega_{0}^{2}\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + 2c_{1}h\omega_{0}^{2}\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right) = 0 \nonumber
+\eea
+Or, les \'{e}galit\'{e}s de Simpson permettent d'\'{e}crire :
+\bea
+	\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\sin\left((\omega_{0} + \epsilon)\mathrm{t}\right) & = & \frac{1}{2}\left(\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + \sin(0)\right) \nonumber = \frac{1}{2}\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) \nonumber \\
+	\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) & = & \frac{1}{2}\left(\cos\left(3(\omega_{0} + \epsilon)\mathrm{t}\right) + \cos\left(-(\omega_{0} + \epsilon)\mathrm{t}\right)\right) \nonumber \\
+	& = & \frac{1}{2}\left(\cos\left(3(\omega_{0} + \epsilon)\mathrm{t}\right) + \cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\right) \nonumber \\
+	\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) & = & \frac{1}{2}\left(\sin\left(3(\omega_{0} + \epsilon)\mathrm{t}\right) - \sin\left(-(\omega_{0} + \epsilon)\mathrm{t}\right)\right) \nonumber \\
+	& = & \frac{1}{2}\left(\sin\left(3(\omega_{0} + \epsilon)\mathrm{t}\right) + \sin\left((\omega_{0} + \epsilon)\mathrm{t}\right)\right) \nonumber \\
+	\cos^{2}\left((\omega_{0} + \epsilon)\mathrm{t}\right) & = & \frac{1}{2}\left(\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + \cos(0)\right) = \frac{1}{2}\left(\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + 1\right) \nonumber
+\eea
+L'\'{e}quation du mouvement devient alors en n\'{e}gligeant les fonctions de fr\'{e}quence $3(\omega_{0} + \epsilon)$ et les termes du second ordre $\epsilon^{2}$ :
+\bea
+	& & \cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\left(-\omega_{0}^{2}a_{0} - 2\omega_{0}\epsilon a_{0} + a_{0}\omega_{0}^{2} + \frac{h\omega_{0}^{2}}{2}a_{1} + h\omega_{0}^{2}c_{1}\right) \nonumber \\
+	& + & \sin\left((\omega_{0} + \epsilon)\mathrm{t}\right)\left(-\omega_{0}^{2}b_{0} - 2\omega_{0}\epsilon b_{0} + b_{0}\omega_{0}^{2} + \frac{h\omega_{0}^{2}}{2}b_{1}\right) \nonumber \\
+	& + & \cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right)\left(-4\omega_{0}^{2}a_{1} - 8\omega_{0}\epsilon a_{1} + a_{1}\omega_{0}^{2} + \frac{h\omega_{0}^{2}}{2}a_{0}\right) \nonumber \\
+	& + & \sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right)\left(-4\omega_{0}^{2}b_{1} - 8\omega_{0}\epsilon b_{1} + b_{1}\omega_{0}^{2} + \frac{h\omega_{0}^{2}}{2}b_{0}\right) \nonumber \\
+	& + & \omega_{0}^{2}c_{1} + \frac{h\omega_{0}^{2}a_{0}}{2} = 0 \nonumber
+\eea
+Pour les termes associ\'{e}s \`{a} la fr\'{e}quence $2(\omega_{0} + \epsilon)$, nous ne gardons que les infiniments petits du premier ordre. L'\'{e}quation pr\'{e}c\'{e}dente peut alors s'\'{e}crire :
+\bea
+	& & \cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\left(-2\omega_{0}\epsilon a_{0} + \frac{h\omega_{0}^{2}}{2}a_{1} + h\omega_{0}^{2}c_{1}\right) \nonumber \\
+	& + & \sin\left((\omega_{0} + \epsilon)\mathrm{t}\right)\left(-2\omega_{0}\epsilon b_{0} + \frac{h\omega_{0}^{2}}{2}b_{1}\right) \nonumber \\
+	& + & \cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right)\left(-3\omega_{0}^{2}a_{1} + \frac{h\omega_{0}^{2}}{2}a_{0}\right) \nonumber \\
+	& + & \sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right)\left(-3\omega_{0}^{2}b_{1} + \frac{h\omega_{0}^{2}}{2}b_{0}\right) \nonumber \\
+	& + & \omega_{0}^{2}c_{1} + \frac{h\omega_{0}^{2}a_{0}}{2} = 0 \nonumber
+\eea
+et elle ne peut \^{e}tre r\'{e}solue que dans le cas o\`{u}, $\forall\mathrm{t}$, tous les c{\oe}fficients s'annulent. Ainsi, la cinqui\`{e}me relation donne $c_{1} = -ha_{0}/2$, la quatri\`{e}me $b_{1} = hb_{0}/6$ et la troisi\`{e}me $a_{1} = ha_{0}/6$. La premi\`{e}re relation se r\'{e}duit alors \`{a} :
+\benn
+	-2\omega_{0}\epsilon a_{0} + \frac{h^{2}\omega_{0}^{2}}{12}a_{0} - \frac{h^{2}\omega_{0}^{2}}{2}a_{0} = 0 \Rightarrow \epsilon_{-} = \frac{-5h^{2}\omega_{0}}{24}
+\eenn
+Alors que la deuxi\`{e}me relation permet d'en d\'{e}duire :
+\benn
+	-2\omega_{0}\epsilon b_{0} + \frac{h^{2}\omega_{0}^{2}}{12}b_{0} = 0 \Rightarrow \epsilon_{+} = \frac{h^{2}\omega_{0}}{24}
+\eenn
+Nous avons donc bien les deux limites du domaine d'instabilit\'{e}.
 
 \subsection{Conditions de r\'{e}sonance param\'{e}trique}
