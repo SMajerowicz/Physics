@@ -1108,3 +1108,28 @@ Alors que la deuxi\`{e}me relation permet d'en d\'{e}duire :
 Nous avons donc bien les deux limites du domaine d'instabilit\'{e}.
 
 \subsection{Conditions de r\'{e}sonance param\'{e}trique}
+
+Il s'agit ici de d\'{e}termine les conditions de la r\'{e}sonance param\'{e}trique dans le cadre du pendule d\'{e}crit dans l'exercice (\ref{PAR:5_EX3c}) dont la fonction de Lagrange calcul\'{e}e est :
+\benn
+	L = \frac{ml^{2}}{2}\dot{\varphi}^{2} + mla\gamma^{2}\cos(\gamma\mathrm{t})\cos\varphi + mgl\cos\varphi
+\eenn
+Elle permet d'en d\'{e}duire l'\'{e}quation du mouvement :
+\benn
+	\frac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial L}{\partial\dot{\varphi}}\right) = \frac{\partial L}{\partial\varphi} \Leftrightarrow ml^{2}\ddot{\varphi} = -mla\gamma^{2}\cos(\gamma\mathrm{t})\sin\varphi - mgl\sin\varphi
+\eenn
+Dans le cadre de petites oscillations alors $\sin\varphi\approx\varphi$ et nous pouvons \'{e}crire :
+\benn
+	ml^{2}\ddot{\varphi} + ml\left(a\gamma^{2}\cos(\gamma\mathrm{t}) + g\right)\varphi = 0 \Leftrightarrow \ddot{\varphi} + \frac{g}{l}\left(\frac{a\gamma^{2}}{g}\cos(\gamma\mathrm{t}) + 1\right)\varphi = 0
+\eenn
+soit en d\'{e}finissant $\omega_{0}^{2} = g/l$ et $\gamma = 2\omega_{0}$ :
+\benn
+	\ddot{\varphi} + \omega_{0}^{2}\left(1 + \frac{4a}{l}\cos(2\omega_{0}\mathrm{t})\right)\varphi = 0
+\eenn
+Dans le contexte de la r\'{e}sonance param\'{e}trique, i.e. en ajoutant un inifiniment petit de fr\'{e}quence $\epsilon$, nous obtenons :
+\benn
+	\ddot{\varphi} + \omega_{0}^{2}\left(1 + \frac{4a}{l}\cos((2\omega_{0} + \epsilon)\mathrm{t})\right)\varphi = 0
+\eenn
+qui est similaire \`{a} l'\'{e}quation (\ref{EQ:27_8}) avec $h=4a/l$ et $\omega_{0}^{2} = g/l$ et pour laquelle le domaine de fr\'{e}quence a d\'{e}j\`{a} \'{e}t\'{e} identifi\'{e} dans la relation (\ref{EQ:27_11}) :
+\benn
+	-\frac{4a}{l}\frac{\sqrt{g}}{2\sqrt{l}} < \epsilon < \frac{4a}{l}\frac{\sqrt{g}}{2\sqrt{l}} \Leftrightarrow -2\frac{a\sqrt{g}}{l^{\frac{3}{2}}} < \epsilon < 2\frac{a\sqrt{g}}{l^{\frac{3}{2}}} \Leftrightarrow \lvert\epsilon\rvert < 2\frac{a\sqrt{g}}{l^{\frac{3}{2}}}
+\eenn
