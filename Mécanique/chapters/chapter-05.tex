@@ -208,7 +208,7 @@ En comptant l'\'energie potentielle par rapport \`a sa valeur minimale et parce 
 \ee
 Sachant que $\partial x_{i}x_{j} = \partial x_{j}x_{i}$ alors $k_{ij} = k_{ji}$, les c{\oe}fficients sont sym\'etriques.
 
-L'\'equation (\ref{EQ:5_5}) montre que l'\'energie cin\'etique s'\'ecrit sous la forme $\frac{1}{2}\sum_{i,j}a_{ij}{q}\dot{q}_{i}\dot{q}_{j}$. En faisant l'approximation suivante : $a_{ij}(q) = a_{ij}(q_{0}) = m_{ij} = m_{ji}$ avec $q_{0} = \begin{Bmatrix}q_{i_{0}}\end{Bmatrix}$ et $\forall i\text{, }\dot{q}_{i} = \dot{x}_{i}$, alors l'\'energie cin\'etique est la format quadratique d\'efinie positive\footnote{Soit, $\forall x\text{, }T(x) \ge 0$ et $T(x) = 0 \Rightarrow x = 0$.} :
+L'\'equation (\ref{EQ:5_5}) montre que l'\'energie cin\'etique s'\'ecrit sous la forme $\frac{1}{2}\sum_{i,j}a_{ij}{q}\dot{q}_{i}\dot{q}_{j}$. En faisant l'approximation suivante : $a_{ij}(q) = a_{ij}(q_{0}) = m_{ij} = m_{ji}$ avec $q_{0} = \begin{Bmatrix}q_{i_{0}}\end{Bmatrix}$ et $\forall i\text{, }\dot{q}_{i} = \dot{x}_{i}$, alors l'\'energie cin\'etique est la forme quadratique d\'efinie positive\footnote{Soit, $\forall x\text{, }T(x) \ge 0$ et $T(x) = 0 \Rightarrow x = 0$.} :
 \be
 	T = \dfrac{1}{2}\sum_{i,j}m_{ij}\dot{x}_{i}\dot{x}_{j} \label{EQ:23_3}
 \ee
@@ -783,7 +783,7 @@ Le module de $\mu_{1}$ et $\mu_{2}$ doit donc \^{e}tre \'{e}gal \`{a} l'unit\'{e
 
 En allant plus loin et en supposons $(\mu_{1},\mu_{2})\in\mathbb{R}^{2}$ alors, comme $\mu_{1}\mu_{2} = 1$, nous pouvons \'{e}crire $\mu_{1} = 1/\mu_{2}$ et les relations (\ref{EQ:27_3}) peuvent se simplifier telles que :
 \benn
-	x_{1}(\mathrm{t}) = \mu^{\mathrm{t}/T}\Pi_{1}(\mathrm{t})\text{, }x_{2}(\mathrm{t}) = \Pi_{2}(\mathrm{t})/\mu^{\mathrm{t}/T} = \mu^{-\mathrm{t}/T}\Pi_{2}(\mathrm{t})\ref{EQ:27_6}
+	x_{1}(\mathrm{t}) = \mu^{\mathrm{t}/T}\Pi_{1}(\mathrm{t})\text{, }x_{2}(\mathrm{t}) = \Pi_{2}(\mathrm{t})/\mu^{\mathrm{t}/T} = \mu^{-\mathrm{t}/T}\Pi_{2}(\mathrm{t})\label{EQ:27_6}
 \eenn
 avec $\mu > 0$ ou $\mu < 0$ mais diff\'{e}rent de l'unit\'{e} pour \'{e}viter le cas trivial. Dans tous les cas, nous avons des fonctions exponentielles du temps et ou $x_{1}$, ou $x_{2}$, va cro\^{i}tre exponentiellement avec le temps. L'\'{e}tat de repos du syst\`{e}me sera donc instable car le moindre petit \'{e}cart de la position d'\'{e}quilibre va engendrer un d\'{e}placement exponentiel de $x$. Il s'agit de la \emph{r\'{e}sonance param\'{e}trique}.
 
@@ -867,7 +867,7 @@ qui a une solution non triviale si et seulement si le d\'{e}terminant est nul, s
 	\Leftrightarrow s^{2} = \frac{1}{4}\left(\frac{\omega_{0}h}{2} - \epsilon\right)\left(\frac{\omega_{0}h}{2} + \epsilon\right) & \Leftrightarrow & s^{2} = \frac{1}{4}\left(\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2}\right) \label{EQ:27_10}
 \eea
 
-Le raisonnement d\'{e}rivant des relations (\ref{EQ:27_6}) am\`{e}ne \`{a} la r\'{e}sonance param\'{e}trique si le c{\oe}fficient $\mu \in \mathbb{R}$, soit dans le cas pr\'{e}sent, si $s^{2} \in \mathbb{r}$ et plus pr\'{e}cis\`{e}ment $s^{2} > 0$. Donc la r\'{e}sonance param\'{e}trique a lieu pour :
+Le raisonnement d\'{e}rivant des relations (\ref{EQ:27_6}) am\`{e}ne \`{a} la r\'{e}sonance param\'{e}trique si le c{\oe}fficient $\mu \in \mathbb{R}$, soit dans le cas pr\'{e}sent, si $s^{2} \in \mathbb{R}$ et plus pr\'{e}cis\`{e}ment $s^{2} > 0$. Donc la r\'{e}sonance param\'{e}trique a lieu pour :
 \be
 	\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2} > 0 \Leftrightarrow -\frac{h\omega_{0}}{2} < \epsilon < +\frac{h\omega_{0}}{2} \label{EQ:27_11}
 \ee
@@ -895,3 +895,42 @@ qui n'est possible que pour $\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{
 \eenn
 
 \section {Oscillations anharmoniques}
+
+La th\'{e}orie des petites oscillations pr\'{e}sent\'{e}e jusque maintenant est bas\'{e}e sur un d\'{e}veloppement des \'{e}nergies cin\'{e}tique et potentielle par rapport aux positions et aux vitesses du syst\`{e}me o\`{u} seuls les termes du deuxi\`{e}me ordre ont \'{e}t\'{e} conserv\'{e}s. Cela a permis d'obtenir des \'{e}quations du mouvement lin\'{e}aires. Dans ce cadre th\'{e}orique, nous avons ainsi discuter des \emph{oscillations lin\'{e}aires}, cadre tout \`{a} fait l'\'{e}gitime pour des oscillations suffisamment petites. Prendre en compte les approximations suivantes, i.e. \emph{l'anharmonicit\'{e}} ou \emph{non-lin\'{e}arit\'{e}} des oscillations conduit \`{a} l'apparition de particularit\'{e}s qualitativement nouvelles.
+
+Effectuons le d\'{e}veloppement de la fonction de Lagrange jusqu'au troisi\`{e}me ordre, extension du paragraphe (\ref{PAR:23}), en utilisant le d\'{e}veloppement de Taylor en coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es $q_{i}$ par rapport \`{a} la position d'\'{e}quilibre $q_{i0}$ :
+\bea
+	U(\left\{q_{i}\right\}) = U(\left\{q_{i0}\right\}) + \sum_{i}\left(\frac{\partial U}{\partial\dot{q}_{i}}\right)_{q_{i}=q_{i0}}(q_{i} - q_{i0}) & + & \frac{1}{2}\sum_{i,j}\left(\frac{\partial^{2} U}{\partial\dot{q}_{i}\partial\dot{q}_{j}}\right)_{\begin{subarray}{l}q_{i}=q_{i0}\\q_{j}=q_{j0}\end{subarray}}(q_{i} - q_{i0})(q_{j} - q_{j0}) \nonumber \\
+	& + & \frac{1}{6}\sum_{i,j,k}\left(\frac{\partial^{3} U}{\partial\dot{q}_{i}\partial\dot{q}_{j}\partial\dot{q}_{k}}\right)_{\begin{subarray}{l}q_{i}=q_{i0}\\q_{j}=q_{j0}\\q_{k}=q_{k0}\end{subarray}}(q_{i} - q_{i0})(q_{j} - q_{j0})(q_{k} - q_{k0}) \nonumber
+\eea
+et comme nous avons choisi le syst\`{e}me \`{a} l'\'{e}quilibre en $\forall i\text{, }q_{i} = q_{i0}$ et $\forall i\text{, }U(q_{i0}) = 0$ alors l'\'{e}nergie potentielle se r\'{e}duit \`{a} :
+\benn
+	U(\left\{q_{i}\right\}) = \frac{1}{2}\sum_{i,j}\left(\frac{\partial^{2} U}{\partial\dot{q}_{i}\partial\dot{q}_{j}}\right)_{\begin{subarray}{l}q_{i}=q_{i0}\\q_{j}=q_{j0}\end{subarray}}(q_{i} - q_{i0})(q_{j} - q_{j0}) + \frac{1}{6}\sum_{i,j,k}\left(\frac{\partial^{3} U}{\partial\dot{q}_{i}\partial\dot{q}_{j}\partial\dot{q}_{k}}\right)_{\begin{subarray}{l}q_{i}=q_{i0}\\q_{j}=q_{j0}\\q_{k}=q_{k0}\end{subarray}}(q_{i} - q_{i0})(q_{j} - q_{j0})(q_{k} - q_{k0})
+\eenn
+que nous pouvons \'{e}crire ainsi :
+\benn
+	U = \frac{1}{2}\sum_{i,j}k_{ij}x_{i}x_{j} + \frac{1}{6}\sum_{i,j,k}l_{ijk}x_{i}x_{j}x_{k}
+\eenn
+De la m\^{e}me mani\`{e}re, l'\'{e}nergie cin\'{e}tique s'\'{e}crit avec les m\^{e}mes hypoth\`{e}ses au troisi\`{e}me ordre :
+\benn
+	T = \frac{1}{2}\sum_{i,j}m_{ij}\dot{x}_{i}\dot{x}_{j} + \frac{1}{6}\sum_{i,j,k}n_{ijk}\dot{x}_{i}\dot{x}_{j}\dot{x}_{k}
+\eenn
+Cela nous permet alors d'assembler pour \'{e}crire la fonction de Lagrange :
+\be
+	L = \frac{1}{2}\sum_{i,j}(m_{ij}\dot{x}_{i}\dot{x}_{j} - k_{ij}x_{i}x_{j}) + \frac{1}{6}\sum_{i,j,k}n_{ijk}\dot{x}_{i}\dot{x}_{j}\dot{x}_{k} - \frac{1}{6}\sum_{i,j,k}l_{ijk}x_{i}x_{j}x_{k}\label{EQ:28_1}
+\ee
+\emph{Pour cette formulation, je n'arrive pas \`{a} aboutir aux c{\oe}fficients obtenus dans le livre pour les termes du troisi\`{e}me ordre, \`{a} savoir $1/2$ pour $n_{ijk}$ et $-1/3$ pour $l_{ijk}$.}
+En utilisant les coordonn\'{e}es normales $Q_{\alpha}$ et en supposant que les transformations des coordonn\'{e}es quelconques \`{a} normales $x_{i} \rightarrow Q_{\alpha}$ et $\dot{x}_{i} \rightarrow \dot{Q}_{\alpha}$ soient lin\'{e}aires, alors la fonction de Lagrange devient :
+\be
+	L = \frac{1}{2}\sum_{\alpha}(\dot{Q}^{2}_{\alpha} - \omega_{\alpha}^{2}Q_{\alpha}^{2}) + \frac{1}{6}\sum_{\alpha,\beta,\gamma}\lambda_{\alpha\beta\gamma}\dot{Q}_{\alpha}\dot{Q}_{\beta}\dot{Q}_{\gamma} - \frac{1}{6}\sum_{\alpha,\beta,\gamma}\mu_{\alpha\beta\gamma}Q_{\alpha}Q_{\beta}Q_{\gamma}\label{EQ:28_2}
+\ee
+Quelque soit la coordonn\'{e}e normale, nous pouvons \'{e}crire son \'{e}quation du mouvement :
+\bea
+	& \forall\alpha\text{, } & \frac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial L}{\partial\dot{Q}_{\alpha}}\right) = \frac{\partial L}{\partial Q_{\alpha}} \nonumber \\
+	& \Leftrightarrow & \ddot{Q}_{\alpha} + \frac{1}{6}\sum_{\beta,\gamma}\lambda_{\alpha\beta\gamma}(\ddot{Q}_{\beta}\dot{Q}_{\gamma} + \dot{Q}_{\beta}\ddot{Q}_{\gamma}) = -\omega_{\alpha}^{2}Q_{\alpha}  - \frac{1}{6}\sum_{\beta,\gamma}\mu_{\alpha\beta\gamma}Q_{\beta}Q_{\gamma}) \nonumber
+\eea
+qui peut s'\'{e}crire sous la forme :
+\be
+	\forall\alpha\text{, }\ddot{Q}_{\alpha} + \omega_{\alpha}^{2}Q_{\alpha} = f_{\alpha}(Q,\dot{Q},\ddot{Q})\label{EQ:28_3}
+\ee
+avec $f_{\alpha}$ une fonction homog\`{e}ne du second ordre des coordonn\'{e}es normales $Q_{\alpha}$.
