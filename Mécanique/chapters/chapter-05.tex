@@ -894,7 +894,7 @@ qui n'est possible que pour $\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{
 	\left(\frac{\omega_{0}h_{k}}{2}\right)^{2} = 4\lambda^{2} \Leftrightarrow h_{k} = \frac{4\lambda}{\omega_{0}}
 \eenn
 
-\section {Oscillations anharmoniques}
+\section {Oscillations anharmoniques}\label{PAR:28}
 
 La th\'{e}orie des petites oscillations pr\'{e}sent\'{e}e jusque maintenant est bas\'{e}e sur un d\'{e}veloppement des \'{e}nergies cin\'{e}tique et potentielle par rapport aux positions et aux vitesses du syst\`{e}me o\`{u} seuls les termes du deuxi\`{e}me ordre ont \'{e}t\'{e} conserv\'{e}s. Cela a permis d'obtenir des \'{e}quations du mouvement lin\'{e}aires. Dans ce cadre th\'{e}orique, nous avons ainsi discuter des \emph{oscillations lin\'{e}aires}, cadre tout \`{a} fait l'\'{e}gitime pour des oscillations suffisamment petites. Prendre en compte les approximations suivantes, i.e. \emph{l'anharmonicit\'{e}} ou \emph{non-lin\'{e}arit\'{e}} des oscillations conduit \`{a} l'apparition de particularit\'{e}s qualitativement nouvelles.
 
@@ -933,4 +933,33 @@ qui peut s'\'{e}crire sous la forme :
 \be
 	\forall\alpha\text{, }\ddot{Q}_{\alpha} + \omega_{\alpha}^{2}Q_{\alpha} = f_{\alpha}(Q,\dot{Q},\ddot{Q})\label{EQ:28_3}
 \ee
-avec $f_{\alpha}$ une fonction homog\`{e}ne du second ordre des coordonn\'{e}es normales $Q_{\alpha}$.
+avec $f_{\alpha}$ une fonction homog\`{e}ne du second ordre des coordonn\'{e}es normales $Q_{\alpha}$ et de ses d\'{e}riv\'{e}es premi\`{e}re et seconde par rapport au temps.
+
+En appliquant la m\'{e}thode des approximations successives, nous allon chercher une solution du type :
+\be
+	Q_{\alpha} = Q_{\alpha}^{(1)} + Q_{\alpha}^{(2)}\label{EQ:28_4}
+\ee
+avec $Q_{\alpha}^{(2)} \ll Q_{\alpha}^{(1)}$ et o\`{u} les $Q_{\alpha}^{(1)}$ satisfont aux \'{e}quations non perturb\'{e}es, i.e. :
+\benn
+	\forall\alpha\text{, }\ddot{Q}_{\alpha}^{(1)} + \omega_{\alpha}^{2}Q_{\alpha}^{(1)} = 0
+\eenn
+qui ont pour solutions des oscillations harmoniques ordinaires telles que :
+\be
+	Q_{\alpha}^{(1)} = a_{\alpha}\cos(\omega_{\alpha}\mathrm{t} + \alpha_{\alpha})\label{EQ:28_5}
+\ee
+L'\'{e}quation (\ref{EQ:28_3}) devient pour son membre de gauche $\ddot{Q}_{\alpha} + \omega_{\alpha}^{2}Q_{\alpha} = \ddot{Q}_{\alpha}^{(1)} + \ddot{Q}_{\alpha}^{(2)} + \omega_{\alpha}^{2}Q_{\alpha}^{(1)} + \omega_{\alpha}^{2}Q_{\alpha}^{(2)} = \ddot{Q}_{\alpha}^{(2)} + \omega_{\alpha}^{2}Q_{\alpha}^{(2)}$. Pour son membre de droite qui correspond d\'{e}j\`{a} au troisi\`{e}me ordre des \'{e}nergies potentielle et cin\'{e}tique, il est suffisant de ne l'exprimer qu'\`{a} partir de la solution non perturb\'{e}e. Ainsi, nous avons :
+\be
+	\forall\alpha\text{, }\ddot{Q}_{\alpha}^{(2)} + \omega_{\alpha}^{2}Q_{\alpha}^{(2)} = f_{\alpha}(Q^{(1)},\dot{Q}^{(1)},\ddot{Q}^{(1)})\label{EQ:28_6}
+\ee
+qui sont des \'{e}quations diff\'{e}rentielles lin\'{e}aires non homog\`{e}nes pour lesquelles le second membre est compos\'{e} de sommes de fonctions p\'{e}riodiques simples. En effet, dans le cadre des solutions (\ref{EQ:28_5}), nous pouvons d\'{e}velopper par utilisation d'une des formules de Simpson :
+\bea
+	Q_{\alpha}^{(1)}Q_{\beta}^{(1)} & = & a_{\alpha}a_{\beta}\cos(\omega_{\alpha}\mathrm{t} + \alpha_{\alpha})\cos(\omega_{\beta}\mathrm{t} + \alpha_{\beta}) \nonumber \\
+	& = & \frac{1}{2}\left(\cos((\omega_{\alpha} + \omega_{\beta})\mathrm{t} + \alpha_{\alpha} + \alpha_{\beta}) + \cos((\omega_{\alpha} - \omega_{\beta})\mathrm{t} + \alpha_{\alpha} - \alpha_{\beta})\right) \nonumber
+\eea
+qui comprend donc des oscillations \'{e}gales \`{a} la somme et \`{a} la diff\'{e}rence des fr\'{e}quences propres du syst\`{e}me. Dans ce cas, nous pouvnos nous reporter aux oscillations forc\'{e}es du paragraphe (\ref{PAR:26}) o\`{u} la solution (\ref{EQ:26_4}), en plus de la fr\'{e}quence propre du syst\`{e}me $\omega_{0}$, comporte les fr\'{e}quences de la force ext\'{e}rieure, soient ici :
+\be
+	\omega_{\alpha} \pm \omega_{\beta}\label{EQ:28_7}
+\ee
+En particulier, si $\omega_{\alpha} = \omega_{\beta}$, les solutions sont soit les fr\'{e}quences double $2\omega_{\alpha}$ soit la fr\'{e}quence nulle, qui, elle, correspond \`{a} un d\'{e}placement constant. Il s'agit l\`{a} de \emph{fr\'{e}quences combinatoires}. De la m\^{e}me mani\`{e}re, par identification \`{a} (\ref{EQ:26_3}), les amplitudes des oscillations combinatoires sont proportionnelles \`{a} $a_{\alpha}a_{\beta}$.
+
+(https://github.com/SMajerowicz/Physics/issues/25)
