@@ -896,6 +896,8 @@ qui n'est possible que pour $\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{
 
 \section {Oscillations anharmoniques}\label{PAR:28}
 
+\subsection{Cas g\'{e}n\'{e}ral par la m\'{e}thode des approximations successives}
+
 La th\'{e}orie des petites oscillations pr\'{e}sent\'{e}e jusque maintenant est bas\'{e}e sur un d\'{e}veloppement des \'{e}nergies cin\'{e}tique et potentielle par rapport aux positions et aux vitesses du syst\`{e}me o\`{u} seuls les termes du deuxi\`{e}me ordre ont \'{e}t\'{e} conserv\'{e}s. Cela a permis d'obtenir des \'{e}quations du mouvement lin\'{e}aires. Dans ce cadre th\'{e}orique, nous avons ainsi discuter des \emph{oscillations lin\'{e}aires}, cadre tout \`{a} fait l'\'{e}gitime pour des oscillations suffisamment petites. Prendre en compte les approximations suivantes, i.e. \emph{l'anharmonicit\'{e}} ou \emph{non-lin\'{e}arit\'{e}} des oscillations conduit \`{a} l'apparition de particularit\'{e}s qualitativement nouvelles.
 
 Effectuons le d\'{e}veloppement de la fonction de Lagrange jusqu'au troisi\`{e}me ordre, extension du paragraphe (\ref{PAR:23}), en utilisant le d\'{e}veloppement de Taylor en coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es $q_{i}$ par rapport \`{a} la position d'\'{e}quilibre $q_{i0}$ :
@@ -965,3 +967,59 @@ En particulier, si $\omega_{\alpha} = \omega_{\beta}$, les solutions sont soit l
 Pour les approximations d'ordre sup\'{e}rieur de la fonction de Lagrange, et donc des \'{e}nergies cin\'{e}tique et potentielle, le second membre de l'\'{e}quation du mouvement voit appara\^{i}tre des termes dont les oscillations sont des combinaisons des fr\'{e}quences des solutions p\'{e}riodiques simples en utilisant les formules de Simpson. Ainsi les fr\'{e}quences combinatoires sont $\omega_{\alpha} \pm \omega_{\beta} \pm \omega_{\gamma} \pm \ldots$. Ainsi, parmi les fr\'{e}quences solution, nous trouvons des fr\'{e}quences co\"{i}ncidant avec celle des solutions non perturb\'{e}es $\omega_{\alpha}$. Dans ces cas, nous nous retrouvons avec des oscillations forc\'{e}es, voir paragraphe (\ref{PAR:22}), pour lesquelles la solution (\ref{EQ:22_5}) a une amplitude qui cro\^{i}t avec le temps. Ceci n'est \'{e}videmment pas possible dans notre contexte de syst\`{e}me isol\'{e}.
 
 Pour les approximations suivantes, la m\'{e}thode des approximations successives doit \^{e}tre modifi\'{e}e afin que les facteurs p\'{e}riodiques de la soltion contiennent d\`{e}s le d\'{e}but des valeurs exactes et non pas approch\'{e}es.
+
+\subsection{Cas particulier}
+
+Nous allons ici nous int\'{e}resser \`{a} l'application de la m\'{e}thode des oscillations anharmoniques avec la fonction de Lagrange \`{a} un degr\'{e} de libert\'{e} suivante :
+\be
+	L = \frac{m\dot{x}^{2}}{2} - \frac{m\omega_{0}^{2}}{2}x^{2} - \frac{m\alpha}{3}x^{3} - \frac{m\beta}{4}x^{4}\label{EQ:28_8}
+\ee
+L'\'{e}quation du mouvement d'\'{e}crire :
+\bea
+	& & \frac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial L}{\partial\dot{x}}\right) = \frac{\partial L}{\partial x} \nonumber \\
+	& \Leftrightarrow & m\ddot{x} = m\omega_{0}^{2}x - m\alpha x^{2} - m\beta x^{3} \nonumber \\
+	& \Leftrightarrow & \ddot{x} + \omega_{0}^{2}x = - \alpha x^{2} - \beta x^{3}\label{EQ:28_9}
+\eea
+\`{A} cette \'{e}quation, nous cherchons une solution sous la forme d'une s\'{e}rie d'approximations successives :
+\benn
+	x = x_{0} + x_{1} + x_{2}
+\eenn
+telle que :
+\be
+	x_{0}(\mathrm{t}) = a\cos(\omega\mathrm{t})\label{EQ:28_10}
+\ee
+et en choisissant l'origine du temps telle que la phase initiale de $x_{0}$ soit nulle et avec $\omega$ une valeur exacte que nous chercherons par la suite sous la forme d'une s'\'{e}rie $\omega_{0} + \omega_{1} + \ldots$.
+
+L'\'{e}quation (\ref{EQ:28_9}) s'\'{e}crit de mani\`{e}re \'{e}quivalente :
+\bea
+	\ddot{x} + \omega_{0}^{2}x & = & - \alpha x^{2} - \beta x^{3} \nonumber \\
+	\left(1 + \frac{\omega_{0}^{2}}{\omega^{2}} - \frac{\omega_{0}^{2}}{\omega^{2}}\right)\ddot{x} + \omega_{0}^{2}x & = & - \alpha x^{2} - \beta x^{3} \nonumber \\
+	\frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x} + \omega_{0}^{2}x & = & - \alpha x^{2} - \beta x^{3} - \left(1 - \frac{\omega_{0}^{2}}{\omega^{2}}\right)\ddot{x} \label{EQ:28_11}
+\eea
+qui permet d'avoir un premier membre nul pour $x = x_{0}$. Posons d\'{e}sormais $\omega = \omega_{0} + \omega_{1}$ et $x = x_{0} + x_{1}$ en n\'{e}gligeant les infiniments petits d'ordre sup\'{e}rieur. Dans ce cas, l'\'{e}quation (\ref{EQ:28_11}) peut se d\'{e}velopper ainsi :
+\benn
+	\frac{\omega_{0}^{2}}{\omega^{2}}(\ddot{x_{0}} + \ddot{x_{1}}) + \omega_{0}^{2}(x_{0} + x_{1}) = - \alpha (x_{0} + x_{1})^{2} - \beta (x_{0} + x_{1})^{3} - \left(1 - \frac{\omega_{0}^{2}}{\omega^{2}}\right)(\ddot{x}_{0} + \ddot{x}_{1})
+\eenn
+qui peut se r\'{e}quire \`{a} car $(x_{0} + x_{1})^{3}$ est d'ordre sup\'{e}rieur \`{a} 2 :
+\benn
+	\frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{0}} + \omega_{0}^{2}x_{0} + \frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\alpha x_{0}^{2} - \alpha x_{1}^{2} - 2\alpha x_{0}x_{1} - \left(\frac{\omega^{2} - \omega_{0}^{2}}{\omega^{2}}\right)\ddot{x}_{0} - \ddot{x}_{1} + \frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x}_{1}
+\eenn
+Or nous avons d'apr\`{e}s la relation (\ref{EQ:28_10}) $\ddot{x}_{0} + \omega_{0}^{2}x_{0} = 0$ et les termes en $x_{1}^{2}$ et $x_{0}x_{1}$ sont d'ordre sup\'{e}rieur \`{a} 2. Nous pouvons donc, en utilisant \'{e}galement le fait que $\omega = \omega_{0} + \omega_{1}$, encore r\'{e}duire l'\'{e}quation pr\'{e}c\'{e}dente \`{a} :
+\benn
+	\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\alpha a^{2}\cos^{2}(\omega\mathrm{t}) + a\cos(\omega\mathrm{t})\left(\frac{\omega_{0}^{2} + \omega_{1}^{2} + 2\omega_{0}\omega_{1} - \omega_{0}^{2}}{\omega^{2}}\right)
+\eenn
+Cela donne finalement car $\omega_{1}^{2}$ et $\cos^{2}a = (cos(2a) + 1)/2$ est insignifiant :
+\benn
+	\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\frac{\alpha a^{2}}{2} - -\frac{\alpha a^{2}}{2}\cos(2\omega\mathrm{t}) + 2\omega_{0}\omega_{1}\cos(\omega\mathrm{t})
+\eenn
+Pour interdire la r\'{e}sonance dans cette derni\`{e}re \'{e}quation, il est n\'{e}cessaire que dans le second membre, il n'y ait pas d'oscillations telles que $\omega = \omega_{0}$, ce qui donne la condition $\omega_{1} = 0$ pour annuler le terme en $\cos(\omega\mathrm{t})$. Cela permet d'en arriver \`{a} l'\'{e}quation lin\'{e}aire non homog\`{e}ne :
+\benn
+	\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\frac{\alpha a^{2}}{2} - \frac{\alpha a^{2}}{2}\cos(2\omega\mathrm{t})
+\eenn
+dont la solution est la somme de deux fonctions diff\'{e}rentes permettant de r\'{e}soudre par lin\'{e}arité :
+\benn
+	\begin{cases}
+		\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\frac{\alpha a^{2}}{2} \\
+		\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\frac{\alpha a^{2}}{2}\cos(2\omega\mathrm{t})
+	\end{cases}
+\eenn
