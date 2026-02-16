@@ -1032,4 +1032,28 @@ car $\omega^{2} = (\omega_{0} + \omega_{1})^{2} = \omega_{0}^{2}$ car $\omega_{1
 \be
 	x_{1}(\mathrm{t}) = -\frac{\alpha a^{2}}{2\omega_{0}^{2}} + -\frac{\alpha a^{2}}{6\omega_{0}^{2}}\cos(2\omega\mathrm{t})\label{EQ:28_12}
 \ee
-Passons d\'{e}sormais au troisi\`{e}me ordre tel que $x = x_{0} + x_{1} + x_{2}$ et $\omega = \omega_{0} + 0 + \omega_{2}$.
+Passons d\'{e}sormais au troisi\`{e}me ordre tel que $x = x_{0} + x_{1} + x_{2}$ et $\omega = \omega_{0} + 0 + \omega_{2}$. Alors l'\'{e}quation (\ref{EQ:28_11}) devient :
+\bea
+	\frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{0}} + \omega_{0}^{2}x_{0} + \frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{1}} + \omega_{0}^{2}x_{1} + \frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{2}} + \omega_{0}^{2}x_{2} & = & -\alpha x_{0}^{2} - \alpha x_{1}^{2} - \alpha x_{2}^{2} - 2\alpha x_{0}x_{1} - 2\alpha x_{0}x_{2} - 2\alpha x_{1}x_{2} \nonumber \\
+	& & -\beta x_{0}^{3} - \beta x_{1}^{3} - \beta x_{2}^{3} - 3\beta x_{0}^{2}x_{1} - 3\beta x_{0}^{2}x_{2} - 3\beta x_{1}^{2}x_{2} \nonumber \\
+	& & - 3\beta x_{1}x_{2}^{2} - 3\beta x_{0}x_{1}^{2} - 3\beta x_{0}x_{2}^{2} - 9\beta x_{0}x_{1}x_{2} \nonumber \\
+	& & - \frac{(\omega^{2} - \omega_{0}^{2})}{\omega^{2}}\ddot{x}_{0} - \frac{(\omega^{2} - \omega_{0}^{2})}{\omega^{2}}\ddot{x}_{1} - \ddot{x}_{2} + \frac{\omega_{0}^{2}}{\omega^{2}}x_{2} \nonumber
+\eea
+En supprimant les infiniments petits d'ordre sup\'{e}rieur \`{a} 3, l'\'{e}quation du mouvement devient :
+\bea
+	\frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{0}} + \omega_{0}^{2}x_{0} + \frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{1}} + \omega_{0}^{2}x_{1} + \frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{2}} + \omega_{0}^{2}x_{2} & = & -\alpha x_{0}^{2} - 2\alpha x_{0}x_{1} \nonumber \\
+	& & -\beta x_{0}^{3} \nonumber \\
+	& & - \frac{(\omega^{2} - \omega_{0}^{2})}{\omega^{2}}\ddot{x}_{0} - \frac{(\omega^{2} - \omega_{0}^{2})}{\omega^{2}}\ddot{x}_{1} - \ddot{x}_{2} + \frac{\omega_{0}^{2}}{\omega^{2}}x_{2} \nonumber
+\eea
+Mais nous savons \'{e}galement que, d'apr\`{e}s les relations (\ref{EQ:28_10}) et (\ref{EQ:28_12}) :
+\benn
+	\begin{cases}
+		\frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{0}} + \omega_{0}^{2}x_{0} = 0 \\
+		\frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\alpha x_{0}^{2} - \frac{(\omega^{2} - \omega_{0}^{2})}{\omega^{2}}\ddot{x}_{1} + 2\omega_{0}\omega_{1}x_{0}
+	\end{cases}
+\eenn
+Avec toujours $\omega_{1} = 0$ puis avec $\omega^{2} - \omega_{0}^{2} = \omega_{0}^{2} + \omega_{2}^{2} + 2\omega_{0}\omega_{2} - \omega_{0}^{2} \approx 2\omega_{0}\omega_{2}$, nous pouvons en d\'{e}duire l'\'{e}quation du mouvement :
+\bea
+	-\alpha x_{0}^{2} + \ddot{x}_{2} + \omega_{0}^{2}x_{2} & = & -\alpha x_{0}^{2} - 2\alpha x_{0}x_{1} - \beta x_{0}^{3} + 2\omega_{0}\omega_{2}x_{0} \nonumber \\
+	\Leftrightarrow  \ddot{x}_{2} + \omega_{0}^{2}x_{2} & = & -2\alpha x_{0}x_{1} - \beta x_{0}^{3} + 2\omega_{0}\omega_{2}x_{0} \nonumber
+\eea
