@@ -1030,7 +1030,7 @@ Pour la premi\`{e}re \'{e}quation, la solution est \'{e}videmment $-\alpha a^{2}
 \eea
 car $\omega^{2} = (\omega_{0} + \omega_{1})^{2} = \omega_{0}^{2}$ car $\omega_{1}$ reste nulle. Nous obtenons finalement :
 \be
-	x_{1}(\mathrm{t}) = -\frac{\alpha a^{2}}{2\omega_{0}^{2}} + -\frac{\alpha a^{2}}{6\omega_{0}^{2}}\cos(2\omega\mathrm{t})\label{EQ:28_12}
+	x_{1}(\mathrm{t}) = -\frac{\alpha a^{2}}{2\omega_{0}^{2}} + \frac{\alpha a^{2}}{6\omega_{0}^{2}}\cos(2\omega\mathrm{t})\label{EQ:28_12}
 \ee
 Passons d\'{e}sormais au troisi\`{e}me ordre tel que $x = x_{0} + x_{1} + x_{2}$ et $\omega = \omega_{0} + 0 + \omega_{2}$. Alors l'\'{e}quation (\ref{EQ:28_11}) devient :
 \bea
@@ -1057,3 +1057,40 @@ Avec toujours $\omega_{1} = 0$ puis avec $\omega^{2} - \omega_{0}^{2} = \omega_{
 	-\alpha x_{0}^{2} + \ddot{x}_{2} + \omega_{0}^{2}x_{2} & = & -\alpha x_{0}^{2} - 2\alpha x_{0}x_{1} - \beta x_{0}^{3} + 2\omega_{0}\omega_{2}x_{0} \nonumber \\
 	\Leftrightarrow  \ddot{x}_{2} + \omega_{0}^{2}x_{2} & = & -2\alpha x_{0}x_{1} - \beta x_{0}^{3} + 2\omega_{0}\omega_{2}x_{0} \nonumber
 \eea
+En y ins\'{e}rant les approximations du premier et du deuxi\`{e}me ordres, (\ref{EQ:28_10}) et (\ref{EQ:28_12}), l'\'{e}quation pr\'{e}c\'{e}dente devient :
+\bea
+	\ddot{x}_{2} + \omega_{0}^{2}x_{2} & = & \frac{2\alpha^{2}a^{3}}{2\omega_{0}^{2}}\cos(\omega\mathrm{t}) - \frac{2\alpha^{2}a^{3}}{6\omega_{0}^{2}}\cos(\omega\mathrm{t})\cos(2\omega\mathrm{t}) - \beta a^{3}\cos^{3}(\omega\mathrm{t}) + 2\omega_{0}\omega_{2}a\cos(\omega\mathrm{t}) \nonumber \\
+	& = & \frac{\alpha^{2}a^{3}}{\omega_{0}^{2}}\cos(\omega\mathrm{t}) - \frac{\alpha^{2}a^{3}}{6\omega_{0}^{2}}\left(\cos(3\omega\mathrm{t}) + \cos(-\omega\mathrm{t})\right) - \frac{\beta a^{3}}{2}\cos(\omega\mathrm{t})\left(\cos(2\omega\mathrm{t}) + 1\right) \nonumber \\
+	& & + 2\omega_{0}\omega_{2}a\cos(\omega\mathrm{t}) \nonumber \\
+	& = & \frac{\alpha^{2}a^{3}}{\omega_{0}^{2}}\cos(\omega\mathrm{t}) - \frac{\alpha^{2}a^{3}}{6\omega_{0}^{2}}\cos(3\omega\mathrm{t}) - \frac{\alpha^{2}a^{3}}{6\omega_{0}^{2}}\cos(\omega\mathrm{t}) - \frac{\beta a^{3}}{2}\cos(\omega\mathrm{t}) \nonumber \\
+	& & - \frac{\beta a^{3}}{4}\left(\cos(3\omega\mathrm{t}) + \cos(-\omega\mathrm{t})\right) + 2\omega_{0}\omega_{2}a\cos(\omega\mathrm{t}) \nonumber \\
+	& = & \left(\frac{\alpha^{2}a^{2}}{\omega_{0}^{2}} - \frac{\alpha^{2}a^{2}}{6\omega_{0}^{2}} - \frac{\beta a^{2}}{2} - \frac{\beta a^{2}}{4} + 2\omega_{0}\omega_{2}\right)a\cos(\omega\mathrm{t}) - \left(\frac{\alpha^{2}}{6\omega_{0}^{2}} + \frac{\beta}{4}\right)a^{3}\cos(3\omega\mathrm{t}) \nonumber \\
+	& = & \left(\frac{5\alpha^{2}a^{2}}{6\omega_{0}^{2}} - \frac{3\beta a^{2}}{4\omega_{0}^{2}} + 2\omega_{0}\omega_{2}\right)a\cos(\omega\mathrm{t}) - \left(\frac{\alpha^{2}}{6\omega_{0}^{2}} + \frac{\beta}{4}\right)a^{3}\cos(3\omega\mathrm{t}) \nonumber
+\eea
+Le terme en $\cos(\omega\mathrm{t})$ dans le second membre est \`{a} annuler car la premi\`{e}re approximation $x_{0}$ contient d\'{e}j\`{a} cette pulsation $\omega$. Cela permet d'\'{e}crire :
+\bea
+	\frac{5\alpha^{2}a^{2}}{6\omega_{0}^{2}} - \frac{3\beta a^{2}}{4} + 2\omega_{0}\omega_{2} & = & 0 \nonumber \\
+	\Leftrightarrow \omega_{2} & = & \left(\frac{3\beta}{8} - \frac{5\alpha^{2}}{12\omega_{0}^{2}}\right)\frac{a^{2}}{\omega_{0}} \label{EQ:28_13}
+\eea
+Cela donne enfin pour l'approximation du troisi\`{e}me ordre, la r\'{e}solution de l'\'{e}quation suivante :
+\benn
+	\ddot{x}_{2} + \omega_{0}^{2}x_{2} = -\left(\frac{\alpha^{2}}{6\omega_{0}^{2}} + \frac{\beta}{4}\right)a^{3}\cos(3\omega\mathrm{t})
+\eenn
+En supposant $x_{2} = x_{20}\cos(3\omega\mathrm{t})$, nous obtenons :
+\bea
+	-9x_{20}\omega^{2}\cos(3\omega\mathrm{t}) + \omega_{0}^{2}x_{20}\cos(3\omega\mathrm{t}) & = &  -\left(\frac{\alpha^{2}}{6\omega_{0}^{2}} + \frac{\beta}{4}\right)a^{3}\cos(3\omega\mathrm{t}) \nonumber \\
+	\Leftrightarrow (\omega_{0}^{2} - 9\omega^{2})x_{20} & = & -\left(\frac{\alpha^{2}}{6\omega_{0}^{2}} + \frac{\beta}{4}\right)a^{3} \nonumber
+\eea
+or nous avons toujours $\omega^{2} \approx \omega_{0}^{2}$, donc :
+\benn
+	x_{20} = \left(\frac{\alpha^{2}}{3\omega_{0}^{2}} + \frac{\beta}{2}\right)\frac{a^{3}}{16\omega_{0}^{2}}
+\eenn
+Finalement, nous pouvons donc \'{e}crire la solution approch\'{e}e \`{a} l'ordre 3 :
+\bea
+	\omega & = & \omega_{0} + \left(\frac{3\beta}{8} - \frac{5\alpha^{2}}{12\omega_{0}^{2}}\right)\frac{a^{2}}{\omega_{0}} \nonumber \\
+	x & = & a\cos(\omega\mathrm{t}) - \frac{\alpha a^{2}}{2\omega_{0}^{2}} + -\frac{\alpha a^{2}}{6\omega_{0}^{2}}\cos(2\omega\mathrm{t}) + \left(\frac{\alpha^{2}}{3\omega_{0}^{2}} + \frac{\beta}{2}\right)\frac{a^{3}}{16\omega_{0}^{2}}\cos(3\omega\mathrm{t}) \label{EQ:28_14}
+\eea
+
+!!! FAIRE GRAPHIQUE POUR PLUSIEURS VALEURS DE W0
+
+\section{R\'{e}sonance dans les oscillations non lin\'{e}aires}\label{PAR:29}
