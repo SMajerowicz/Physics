@@ -1119,4 +1119,24 @@ o\`{u} $\xi$ est une constante s'exprimant en fonction des c{\oe}fficients d'anh
 \benn
 	\xi = \frac{3\beta}{8\omega_{0}} - \frac{5\alpha^{2}}{12\omega_{0}^{3}}
 \eenn
-L'expression (\ref{EQ:29_2}) devient dans ce cas, en rempla\c{c}ant $\epsilon$ par son pendant non-lin\'{e}aire, i.e. en rempla\c{c}ant $\gamma = \omega_{0}$ par $\gamma - \omega_{0} - \xi b^{2} = \epsilon - \xi b^{2}$
+L'expression (\ref{EQ:29_2}) devient dans ce cas, en rempla\c{c}ant $\epsilon$ par son pendant non-lin\'{e}aire, i.e. en rempla\c{c}ant $\gamma = \omega_{0}$ par $\gamma - \omega_{0} - \xi b^{2} = \epsilon - \xi b^{2}$ :
+\be
+	b^{2}\left[(\epsilon - \xi b^{2})^{2} + \lambda^{2}\right] = \frac{f^{2}}{4m^{2}\omega_{0}^{2}} \label{EQ:29_4}
+\ee
+qui permet d'en d\'{e}duire $\epsilon$ pour $-2\lambda m\omega_{0}b < f < 2\lambda m\omega_{0}b$ :
+\benn
+	(\epsilon - \xi b^{2})^{2} = \left(\frac{f}{2m\omega_{0}}\right)^{2} - \lambda^{2} \Leftrightarrow \epsilon = \xi b^{2} \pm \sqrt{\left(\frac{f}{2m\omega_{0}}\right)^{2} - \lambda^{2}}
+\eenn
+
+\subsection{Relation entre l'amplitude des oscillations et la fr\'{e}quence de for\c{c}age}
+
+L'\'{e}quation (\ref{EQ:29_4}) est du troisi\`{e}me degr\'{e} par rapport \`{a} $b^{2}$ et ses racines r\'{e}lles d'{e}terminent l'amplitude des oscillations forc\'{e}es. Ainsi l'{e}quation (\ref{EQ:29_4}) est \'{e}quivalente \`{a} :
+\bea
+	b^{2}\left(\epsilon^{2} + \xi^{2}b^{4} - 2\epsilon\xi b^{2} + \lambda^{2}\right) & = & \frac{f^{2}}{4m^{2}\omega_{0}^{2}} \nonumber \\
+	\xi^{2}b^{6} - 2\epsilon\xi b^{4} + (\epsilon^{2} + \lambda^{2})b^{2} = \frac{f^{2}}{4m^{2}\omega_{0}^{2}} \nonumber
+\eea
+En supposant $f \rightarrow 0$, i.e. un for\c{c}age de faible intensit\'{e}, nous pouvons n\'{e}gliger le terme d'ordre sup\'{e}rieure \`{a} 2 pour $b$ et nous revenons ainsi \`{a} la formule (\ref{EQ:29_2}) avec $b > 0$, soit :
+\benn
+	b = \frac{f}{2m\omega_{0}\sqrt{\lambda^{2} + \epsilon^{2}}}
+\eenn
+avec $b_{max} = b(\epsilon = 0) = \frac{f}{2m\omega_{0}\lambda}$.
