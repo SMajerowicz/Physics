@@ -1130,10 +1130,10 @@ qui permet d'en d\'{e}duire $\epsilon$ pour $-2\lambda m\omega_{0}b < f < 2\lamb
 
 \subsection{Relation entre l'amplitude des oscillations et la fr\'{e}quence de for\c{c}age}
 
-L'\'{e}quation (\ref{EQ:29_4}) est du troisi\`{e}me degr\'{e} par rapport \`{a} $b^{2}$ et ses racines r\'{e}lles d'{e}terminent l'amplitude des oscillations forc\'{e}es. Ainsi l'{e}quation (\ref{EQ:29_4}) est \'{e}quivalente \`{a} :
+L'\'{e}quation (\ref{EQ:29_4}) est du troisi\`{e}me degr\'{e} par rapport \`{a} $b^{2}$ et ses racines r\'{e}lles d\'{e}terminent l'amplitude des oscillations forc\'{e}es. Ainsi l'{e}quation (\ref{EQ:29_4}) est \'{e}quivalente \`{a} :
 \bea
 	b^{2}\left(\epsilon^{2} + \xi^{2}b^{4} - 2\epsilon\xi b^{2} + \lambda^{2}\right) & = & \frac{f^{2}}{4m^{2}\omega_{0}^{2}} \nonumber \\
-	\xi^{2}b^{6} - 2\epsilon\xi b^{4} + (\epsilon^{2} + \lambda^{2})b^{2} = \frac{f^{2}}{4m^{2}\omega_{0}^{2}} \nonumber
+	\xi^{2}b^{6} - 2\epsilon\xi b^{4} + (\epsilon^{2} + \lambda^{2})b^{2} & = & \frac{f^{2}}{4m^{2}\omega_{0}^{2}} \nonumber
 \eea
 En supposant $f \rightarrow 0$, i.e. un for\c{c}age de faible intensit\'{e}, nous pouvons n\'{e}gliger le terme d'ordre sup\'{e}rieure \`{a} 2 pour $b$ et nous revenons ainsi \`{a} la formule (\ref{EQ:29_2}) avec $b > 0$, soit :
 \benn
@@ -1153,6 +1153,50 @@ qui a pour racines en $b^{2}$ :
 \begin{figure}[htb!]
         \begin{center}
                 \includegraphics[width=10cm]{chapter_05_paragraph_29}
-		\caption{Amplitude $b$ de la solution pr\'{e}c\'{e}dente avec des valeurs de l'amplitude de la force ext\'{e}rieure comprise entre 0 et 0.01 et $\lambda = 0.01$, $\omega_{0} = 0.1$, $x = 0.05$ et $m = 0.25$}\label{FIG:5_29}
+		\caption{Amplitude $b$ de la solution pr\'{e}c\'{e}dente avec des valeurs de l'amplitude de la force ext\'{e}rieure comprise entre 0.001 et 0.1 et $\lambda = 0.01$, $\omega_{0} = 0.1$, $x = 0.05$ et $m = 0.25$}\label{FIG:5_29}
         \end{center}
 \end{figure}
+
+$b^{2}$ est une quantit\'{e} par d\'{e}finition toujours positive. Dans le cas o\`{u} :
+\benn
+	b^{2} = \frac{(\epsilon^{2} + \lambda^{2}) + \sqrt{(\epsilon^{2} + \lambda^{2})^{2} - \frac{2\xi\epsilon f^{2}}{m^{2}\omega_{0}^{2}}}}{4\xi\epsilon}
+\eenn
+alors ce n'est r\'{e}alisable que si $\epsilon > 0$. Car $\forall \epsilon \in \mathbb{R}^{*}$, le num\'{e}rateur est toujours positif alors que le d\'{e}nominateur est n\'{e}gatif si $\epsilon < 0$.
+Dans l'autre cas, \`{a} savoir :
+\benn
+	b^{2} = \frac{(\epsilon^{2} + \lambda^{2}) - \sqrt{(\epsilon^{2} + \lambda^{2})^{2} - \frac{2\xi\epsilon f^{2}}{m^{2}\omega_{0}^{2}}}}{4\xi\epsilon}
+\eenn
+alors $b^{2} > 0$ si et seulement si :
+\begin{itemize}
+ \item $\epsilon > 0$ et $(\epsilon^{2} + \lambda^{2}) - \sqrt{(\epsilon^{2} + \lambda^{2})^{2} - \frac{2\xi\epsilon f^{2}}{m^{2}\omega_{0}^{2}}} > 0$, ce qui est toujours vrai car $\epsilon^{2} + \lambda^{2} > \sqrt{(\epsilon^{2} + \lambda^{2})^{2} - \frac{2\xi\epsilon f^{2}}{m^{2}\omega_{0}^{2}}}$ puisque $\epsilon > 0$
+ \item $\epsilon < 0$ et $(\epsilon^{2} + \lambda^{2}) - \sqrt{(\epsilon^{2} + \lambda^{2})^{2} - \frac{2\xi\epsilon f^{2}}{m^{2}\omega_{0}^{2}}} < 0$, ce qui est toujours vrai car $\epsilon^{2} + \lambda^{2} < \sqrt{(\epsilon^{2} + \lambda^{2})^{2} - \frac{2\xi\epsilon f^{2}}{m^{2}\omega_{0}^{2}}}$ puisque $\epsilon < 0$
+\end{itemize}
+
+\begin{figure}[htb!]
+        \begin{center}
+                \includegraphics[width=15cm]{chapter_05_paragraph_29_book}
+		\caption{Graphiques repris du livre}\label{FIG:5_29_BOOK}
+        \end{center}
+\end{figure}
+
+Il existe une valeur limite de $f$ not\'{e}e $f_{k}$ telle que pour $f < f_{k}$, seule une racine sur les trois de l'\'{e}quation (\ref{EQ:29_4}) est réelle, alors que pour $f > f_{k}$, les trois racines sont bien toutes r\'{e}elles. Ces derni\`{e}res d\'{e}finissent le domaine (BCDE) sur la courbe (c) de la figure (\ref{FIG:5_29_BOOK}). Il y a l\`{a} un \emph{effet de repliement}. Ce domaine permet de le contraindre avec :
+\benn
+	\begin{cases}
+		\epsilon_{B} = \epsilon_{D} \\
+		\epsilon_{C} = \epsilon_{E}
+	\end{cases}
+	\text{, }\frac{\mathrm{d}b}{\mathrm{d}\epsilon}\rvert_{C} = \frac{\mathrm{d}b}{\mathrm{d}\epsilon}\rvert_{D} = -\infty
+\eenn
+Maintenant, d\'{e}rivons par rapport \`{a} $\epsilon$ l'\'{e}quation (\ref{EQ:29_4}) :
+\bea
+	\frac{\mathrm{d}\left(b^{2}\left[(\epsilon - \xi b^{2})^{2} + \lambda^{2}\right]\right)}{\mathrm{dt}} & = & 0 \nonumber \\
+	\Leftrightarrow \frac{\mathrm{d}}{\mathrm{dt}}\left[b^{2}\epsilon^{2} + \xi^{2}b^{6} - 2\xi\epsilon b^{4} + \lambda^{2}b^{2}\right] & = & 0 \nonumber \\
+	\Leftrightarrow 2\epsilon b^{2} + 2\epsilon^{2}b\frac{\mathrm{d}b}{\mathrm{d}\epsilon} + 6\xi^{2}b^{5}\frac{\mathrm{d}b}{\mathrm{d}\epsilon} - 2\xi b^{4} - 8\xi\epsilon b^{3}\frac{\mathrm{d}b}{\mathrm{d}\epsilon} + 2\lambda^{2}b\frac{\mathrm{d}b}{\mathrm{d}\epsilon} & = & 0 \nonumber \\
+	\Leftrightarrow (2\epsilon^{2}b + 6\xi^{2}b^{5} - 8\xi\epsilon b^{3} + 2\lambda^{2}b)\frac{\mathrm{d}b}{\mathrm{d}\epsilon} & = & -2\epsilon b^{2} + 2\xi b^{4} \nonumber \\
+	\Leftrightarrow \frac{\mathrm{d}b}{\mathrm{d}\epsilon} & = & \frac{2b(-\epsilon b + \xi b^{3})}{2b(\epsilon^{2} + 3\xi^{2}b^{4} - 4\xi\epsilon b^{2} + \lambda^{2})} \nonumber \\
+	\Leftrightarrow \frac{\mathrm{d}b}{\mathrm{d}\epsilon} & = & \frac{-\epsilon b + \xi b^{3}}{3\xi^{2}b^{4} - 4\xi\epsilon b^{2} + \epsilon^{2} + \lambda^{2}} \nonumber
+\eea
+Ainsi vouloir r\'{e}soudre l'\'{e}quation $\frac{\mathrm{d}b}{\mathrm{d}\epsilon} = -\infty$ n\'{e}cessite de poser le d\'{e}nominateur du second membre pr\'{e}c\'{e}dent \`{a} 0, soit :
+\be
+	3\xi^{2}b^{4} - 4\xi\epsilon b^{2} + \epsilon^{2} + \lambda^{2} = 0 \label{EQ:29_5}
+\ee
