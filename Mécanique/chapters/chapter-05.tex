@@ -1211,3 +1211,35 @@ or $\forall \alpha \in [0;1]$, $1 > \sqrt{1 - \alpha}$, donc les deux valeurs po
 	\epsilon b = \xi b^{3} \Leftrightarrow \epsilon = \xi b^{2}
 \eenn
 valeur pour $\epsilon$ que nous pouvons injecter dans la relation (\ref{EQ:29_4}) pour obtenir :
+\bea
+	b_{max}^{2}\left[(\xi b_{max}^{2} - \xi b_{max}^{2}) + \lambda^{2}\right] & = & \frac{f^{2}}{4m^{2}\omega_{0}^{2}} \nonumber \\
+	\Leftrightarrow b_{max} & = & \frac{f}{2m\omega_{0}\lambda} \label{EQ:29_6}
+\eea
+qui est \'{e}galement la valeur maximale de la fonction $b(\epsilon)$ issue de la relation (\ref{EQ:29_2}) pour l'approximation lin\'{e}aire.
+
+La pr\'{e}sence d'un domaine de fr\'{e}quence, entre $\epsilon_{B} = \epsilon_{D}$ et $\epsilon_{C} = \epsilon_{E}$, admettant deux amplitudes diff\'{e}rentes pour une fr\'{e}quence donn\'{e}e est une particularit\'{e} remarquable. Lorsque la fr\'{e}quence de la force ext\'{e}rieure $\gamma = \omega_{0} + \epsilon$ augmente, l'amplitude des oscillations forc\'{e}es augmente et suit la courbe $(ABC)$. Le point $C$ est une rupture de l'amplitude qui tombe \`{a} la valeur $b(\epsilon_{E})$ puis elle varie le long de la courbe $(EF)$ lorsque la fr\'{e}quence continue d'augmenter.
+
+Pour le chemin inverse, si la fr\'{e}quence de la force ext\'{e}rieure diminue depuis $F$, alors le point de rupture est $D$ et l'amplitude saute de $D$ \`{a} $B$, puis d\'{e}cro\^{i}t selon $(BA)$.
+
+Pour calculer $f_{k}$, il est n\'{e}cessaire que l'\'{e}quation (\ref{EQ:29_5}) n'est qu'une seule racine en $\xi b^{2}$. Soit, en d'autres termes que son discriminant soit nul, i.e. :
+\benn
+	0 = 16\epsilon_{k}^{2} - 12(\epsilon_{k}^{2} + \lambda^{2}) \Leftrightarrow \epsilon_{k}^{2} = 3\lambda^{2}
+\eenn
+et, de fait, sa racine unique est :
+\benn
+	\xi b_{k}^{2} = \frac{4\epsilon_{k}}{12} \Leftrightarrow \xi b_{k}^{2} = \frac{2}{3}\epsilon_{k}
+\eenn
+En reportant $\epsilon_{k}$ et $b_{k}$ dans l'\'{e}quation (\ref{EQ:29_4}), nous pouvons calculer :
+\bea
+	\frac{2\epsilon_{k}}{3\xi}\left(\frac{1}{9}\epsilon_{k}^{2} + \lambda^{2}\right) & = & \frac{f_{k}^{2}}{4m^{2}\omega_{0}^{2}} \nonumber \\
+	\Leftrightarrow \frac{2\lambda}{\sqrt{3}\xi}\left(\frac{1}{3}\lambda^{2} + \lambda^{2}\right) & = & \frac{f_{k}^{2}}{4m^{2}\omega_{0}^{2}} \nonumber \\
+	\Leftrightarrow \frac{8\lambda^{3}}{3\sqrt{3}\xi} & = & \frac{f_{k}^{2}}{4m^{2}\omega_{0}^{2}} \nonumber \\
+	\Leftrightarrow f_{k}^{2} & = & \frac{32m^{2}\omega_{0}^{2}\lambda^{3}}{3\sqrt{3}\xi} \nonumber
+\eea
+qui n'est effectivement possible que pour des valeurs $\xi$ positives. Pour g\'{e}n\'{e}raliser, nous pouvons \'{e}crire :
+\be
+	f_{k}^{2} = \frac{32m^{2}\omega_{0}^{2}\lambda^{3}}{3\sqrt{3}\lvert\xi\rvert} \label{EQ:29_7}
+\ee
+Ainsi pour des fr\'{e}quences $\omega_{0}$ de la force ext\'{e}rieure proches de la fr\'{e}quence propre du syst\`{e}me, les ph\'{e}nom\`{e}nes de r\'{e}sonance sont particuliers avec l'apparition des oscillations non-lin\'{e}aires.
+
+\subsection{Cas d'une force ext\'{e}rieure dont la fr\'{e}quence diff\`{e}re largement de $\omega_{0}$ : $\gamma = \omega_{0}/2$}
