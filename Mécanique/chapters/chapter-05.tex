@@ -1242,11 +1242,11 @@ qui n'est effectivement possible que pour des valeurs $\xi$ positives. Pour g\'{
 \ee
 Ainsi pour des fr\'{e}quences $\omega_{0}$ de la force ext\'{e}rieure proches de la fr\'{e}quence propre du syst\`{e}me, les ph\'{e}nom\`{e}nes de r\'{e}sonance sont particuliers avec l'apparition des oscillations non-lin\'{e}aires.
 
-\subsection{Cas d'une force ext\'{e}rieure dont la fr\'{e}quence diff\`{e}re largement de $\omega_{0}$ : $\gamma \approxeq \omega_{0}/2$}
+\subsection{Cas d'une force ext\'{e}rieure dont la fr\'{e}quence diff\`{e}re largement de $\omega_{0}$ : $\gamma \approx \omega_{0}/2$}
 
-Observons maintenant ce qui arrive dans le cas o\`{u} la fr\'{e}quence de la force ext\'{e}rieure diff\`{e}re sensiblement de $\omega_{0}$. Nous choisissons ici $\gamma \approxeq \omega_{0}/2$ ou encore $\gamma = \omega_{0}/2 + \epsilon$.
+Observons maintenant ce qui arrive dans le cas o\`{u} la fr\'{e}quence de la force ext\'{e}rieure diff\`{e}re sensiblement de $\omega_{0}$. Nous choisissons ici $\gamma \approx \omega_{0}/2$ ou encore $\gamma = \omega_{0}/2 + \epsilon$.
 
-Dans l'approximation lin\'{e}aire, i.e. celle du premier ordre, \'{e}tudi\'{e}e dans le paragraph (\ref{PAR:22}) et en appliquant la solution (\ref{EQ:22_4}) sachant que $\omega_{0}^{2} - \gamma^{2} = \omega_{0}^{2} - \omega_{0}^{2}/4 - \epsilon^{2} + 2\omega_{0}\epsilon \approxeq 3\omega_{0}^{2}/4$ en premi\`{e}re approximation, nous avons :
+Dans l'approximation lin\'{e}aire, i.e. celle du premier ordre, \'{e}tudi\'{e}e dans le paragraph (\ref{PAR:22}) et en appliquant la solution (\ref{EQ:22_4}) sachant que $\omega_{0}^{2} - \gamma^{2} = \omega_{0}^{2} - \omega_{0}^{2}/4 - \epsilon^{2} + 2\omega_{0}\epsilon \approx 3\omega_{0}^{2}/4$ en premi\`{e}re approximation, nous avons :
 \benn
 	x_{0} = \frac{4f}{3m\omega_{0}^{2}}\cos\left((\omega_{0}/2 + \epsilon)\mathrm{t}\right)
 \eenn
@@ -1267,14 +1267,30 @@ qui ne diff\`{e}re de l'\'{e}quation (\ref{EQ:29_1}) que par le fait que l'ampli
 	b^{2}\left[(2\epsilon - \xi b^{2})^{2} + \lambda^{2}\right] = \frac{1}{4m^{2}\omega_{0}^{2}}\frac{64\alpha^{2}f^{4}}{81m^{2}\omega_{0}^{8}} = \frac{16\alpha^{2}f^{4}}{81m^{2}\omega_{0}^{10}} \label{EQ:29_9}
 \ee
 
-\subsection{Cas d'une force ext\'{e}rieure dont la fr\'{e}quence diff\`{e}re largement de $\omega_{0}$ : $\gamma \approxeq 2\omega_{0}$}
+\subsection{Cas d'une force ext\'{e}rieure dont la fr\'{e}quence diff\`{e}re largement de $\omega_{0}$ : $\gamma \approx 2\omega_{0}$}
 
-En utilisant la m\^{e}me m\'{e}thodologie que pr\'{e}c\'{e}demment, nous avons $\omega_{0}^{2} - \gamma^{2}= \omega_{0}^{2} - 4\omega_{0}^{2} - \epsilon^{2} - 4\omega_{0}\epsilon \approxeq -3\omega_{0}^{2}$ en premi\`{e}re approximation. Soit en appliquant la solution (\ref{EQ:22_4}) :
+En utilisant la m\^{e}me m\'{e}thodologie que pr\'{e}c\'{e}demment, nous avons $\omega_{0}^{2} - \gamma^{2}= \omega_{0}^{2} - 4\omega_{0}^{2} - \epsilon^{2} - 4\omega_{0}\epsilon \approx -3\omega_{0}^{2}$ en premi\`{e}re approximation. Soit en appliquant la solution (\ref{EQ:22_4}) :
 \benn
 	x_{0} = -\frac{f}{3m\omega_{0}^{2}}\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right)
 \eenn
 Consid\'{e}rons $x = x_{0} + x_{1}$ dans l'\'{e}quation (\ref{EQ:29_1}) :
 \bea
 	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x & = & \frac{f}{m}\cos(\gamma\mathrm{t}) - \alpha x^{2} - \beta x^{3} \nonumber \\
-	
+	\Leftrightarrow \ddot{x}_{0} + 2\lambda\dot{x}_{0} + \omega_{0}^{2}x_{0} + \ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} & = & \frac{f}{m}\cos(\gamma\mathrm{t}) - \alpha(x_{0}^{2} + x_{1}^{2} + 2x_{0}x_{1}) - \beta(x_{0}^{3} + x_{1}^{3} + 3x_{0}^{2}x_{1} + 3x_{0}x_{1}^{2}) \nonumber
 \eea
+Or $x_{0}$ est solution de l'\'{e}quation :
+\benn
+	\ddot{x}_{0} + 2\lambda\dot{x}_{0} + \omega_{0}^{2}x_{0} = \frac{f}{m}\cos(\gamma\mathrm{t})
+\eenn
+Donc nous pouvons en d\'{e}duire la relation suivante :
+\benn
+	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} + \alpha x_{1}^{2} + \beta x_{1}^{3} = - \alpha x_{0}^{2} - 2\alpha x_{0}x_{1} - \beta x_{0}^{3} - \beta(3x_{0}^{2}x_{1} + 3x_{0}x_{1}^{2})
+\eenn
+Les termes $-\alpha x_{0}^{2}$ et $-\beta x_{0}^{3}$ ne peuvent \^{e}tre interpr\^{e}t\'{e}s comme des forces ext\'{e}rieures de r\'{e}sonance comme cela a pu \^{e}tre le cas dans l'\'{e}quation (\ref{EQ:29_8}) car leur fr\'{e}quence sont de l'ordre de $4\omega_{0}$ et de $6\omega_{0}$. Le terme $-2\alpha x_{0}x_{1}$ fait, lui, \'{e}merger une r\'{e}sonance param\'{e}trique car l'\'{e}quation pr\'{e}cedente devient avec l'expression de $x_{0}$ et en ne gardant que ce terme proportionnel \`{a} $x_{0}x_{1}$ :
+\be
+	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}\left[1 - \frac{2\alpha f}{3m\omega_{0}^{4}}\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right)\right]x_{1} = 0 \label{EQ:29_10}
+\ee
+Cette derni\`{e}re \'{e}quation est similaire \`{a} l'\'{e}quation (\ref{EQ:27_8}) \`{a} la diff\'{e}rence qu'elle prend en consid\'{e}ration le frottement. Elle conduit \`{a} une instabilit\'{e} dans un intervalle de fr\'{e}quences d\'{e}termin\'{e} Toutefois, cette \'{e}quation n'est pas suffisance pour d\'{e}terminer l'amplitude r\'{e}sultante des oscillations. En effet, cette amplitude d\'{e}pend des effets de non-lin\'{e}arit\'{e} dont il faut garder les termes :
+\be
+	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} + \alpha x_{1}^{2} + \beta x_{1}^{3} = \frac{2f}{3m\omega_{0}^{2}}\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right)x_{1} \label{EQ:29_11}
+\ee
