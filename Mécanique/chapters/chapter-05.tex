@@ -685,7 +685,7 @@ Et enfin, nous pouvons \'{e}crire :
 \ee
 permettant de conclure que la surface sous $I(\epsilon)$ ne d\'{e}pend du c{\oe}fficient d'ammortissement du syst\`{e}me.
 
-\section{R\'{e}sonance param\'{e}trique}
+\section{R\'{e}sonance param\'{e}trique}\label{PAR:27}
 
 \subsection{Cas g\'{e}n\'{e}ral}
 
@@ -1320,8 +1320,8 @@ En supposant $b \neq 0$, nous pouvons d\'{e}velopper la relation pr\'{e}c\'{e}de
 \eenn
 En supposant \'{e}galement $\left(\frac{\alpha f}{6m\omega_{0}^{3}}\right)^{2} > \lambda^{2}$, nous avons pour solution :
 \bea
-	b^{2} & = & \frac{1}{\xi}\left[\frac{\epsilon}{2} + \sqrt{\left(\frac{\alpha f}{6m\omega_{0}^{3}}\right)^{2} - \lambda^{2}}\right] \label{EQ:29_13} \\
-	b^{2} & = & \frac{1}{\xi}\left[\frac{\epsilon}{2} - \sqrt{\left(\frac{\alpha f}{6m\omega_{0}^{3}}\right)^{2} - \lambda^{2}}\right] \label{EQ:29_14}
+	b_{+}^{2} & = & \frac{1}{\xi}\left[\frac{\epsilon}{2} + \sqrt{\left(\frac{\alpha f}{6m\omega_{0}^{3}}\right)^{2} - \lambda^{2}}\right] \label{EQ:29_13} \\
+	b_{-}^{2} & = & \frac{1}{\xi}\left[\frac{\epsilon}{2} - \sqrt{\left(\frac{\alpha f}{6m\omega_{0}^{3}}\right)^{2} - \lambda^{2}}\right] \label{EQ:29_14}
 \eea
 
 \begin{figure}[htb!]
@@ -1330,3 +1330,23 @@ En supposant \'{e}galement $\left(\frac{\alpha f}{6m\omega_{0}^{3}}\right)^{2} >
 		\caption{Solutions $b$ (\ref{EQ:29_12}), (\ref{EQ:29_13}) et (\ref{EQ:29_14}) pour $\sqrt{\left(\frac{\alpha f}{6m\omega_{0}^{3}}\right)^{2} - \lambda^{2}} = 1$ et $\xi = 0.2$.}\label{FIG:5_29.33}
         \end{center}
 \end{figure}
+
+Concentrons-nous sur le cas $\xi > 0$, sachant que dans le cas inverse il s'agira de prendre l'argumentaire dans le sens oppos\'{e}. La quantit\'{e} $b^{2}$ s'annule si et seulement si :
+\benn
+	\frac{\epsilon_{+-}}{2} \pm \sqrt{\left(\frac{\alpha f}{6m\omega_{0}^{3}}\right)^{2} - \lambda^{2}} \Leftrightarrow \epsilon_{+-} = \pm \sqrt{\left(\frac{\alpha f}{6m\omega_{0}^{3}}\right)^{2} - \lambda^{2}}
+\eenn
+Ainsi pour $\epsilon < \epsilon_{-}$, l'amplitude $b$ est nulle, il n'y a pas de r\'{e}sonance et les oscillations de fr\'{e}quence $\approx\omega_{0}$ ne sont pas exit\'{e}es. Pour $\epsilon_{-} < \epsilon < \epsilon_{+}$, il y a deux racines, \`{a} savoir : $b = 0$ et $b = b_{+}$. Cet intervalle correspond au domaine de r\'{e}sonance param\'{e}trique identifi\'{e} dans l'in\'{e}galit\'{e} (\ref{EQ:27_12}). En comparant les relations (\ref{EQ:29_10}) et (\ref{EQ:27_8}), nous avons la correspondance $h = \lvert-\frac{2\alpha f}{3m\omega_{0}^{4}}\rvert$. Or pour l'existence de $\epsilon$, il faut :
+\benn
+	\left(\frac{\alpha f}{3m\omega_{0}^{3}}\right)^{2} > 4\lambda^{2} \Leftrightarrow \lvert\frac{\alpha f}{3m\omega_{0}^{3}}\rvert > 2\lambda \Leftrightarrow \frac{\omega_{0}h}{2} > 2\lambda \Leftrightarrow h > \frac{4\lambda}{\omega_{0}}
+\eenn
+Nous retrouvons ici la condition \'{e}nonc\'{e}e \`{a} la fin du paragraphe (\ref{PAR:27}).
+
+Dans cet intervalle, la r\'{e}sonance param\'{e}trique est donc privil\'{e}gi\'{e}e par le syst\`{e}me et de fait, la solution $b = 0$ y est instable.
+
+Pour $\epsilon > \epsilon_{+}$, les trois racines $b \in \{0,b_{-},b_{+}\}$ sont possibles. Dans le cours, il est indiqu\'{e} que la solution $b_{-}$ y est instable. Nous n'avons pas trouvé, encore, le chemin pour justifier ce point.
+
+Suivons le comportement d'un syst\`{e}me initialement en r\'{e}gime nominal des faibles oscillations de fr\'{e}quence $\gamma$ lorsque nous diminuons la fr\'{e}quence de la force ext\'{e}rieure et en nous appuyant sur la figure (\ref{FIG:5_29.33}). Avant d'arriver au point $C$, l'amplitude $b$ est toujours nulle. Puis, il se produit une rupture pour passer sur la branche $(EB)$. La valeur de $\epsilon$ continuant de diminuer, l'amplitude des oscillations d\'{e}cro\^{i}t \'{e}galement jusque z\'{e}ro et le point $B$. Si la fr\'{e}quence augmente ensuite, alors l'amplitude parcoura la branche $(BE)$.
+
+Les cas de r\'{e}sonance envisag\'{e}s ici sont les cas fondamentaux se produisant dans un syst\`{e}me \`{a} oscillations non-lin\'{e}aires. Aux approximations sup\'{e}rieures, des ph\'{e}nom\`{e}nes de r\'{e}sonance apparaissent sur d'autres fr\'{e}quences. Surtout, il doit y avoir r\'{e}sonance pour toute fr\'{e}quence $\gamma$ telle que $n\gamma + m\omega_{0} = \omega_{0}$ pour $(n,m) \in \mathbb{N}$, i.e. telle que $\gamma = p\omega_{0} / q$ avec $(p,q) \in \mathbb{N}$. Toutefois, l'intensit\'{e} des ph\'{e}nom\`{e}nes de r\'{e}sonance ainsi que la largeur des domaines de fr\'{e}quences de ces r\'{e}sonances diminuent tr\`{e}s rapidement avec le degr\'{e} d'approximation. De sorte qu'en r\'{e}alit\'{e}, seules sont observables les r\'{e}sonances pour des fr\'{e}quences $\gamma \approx p\omega_{0} / q$ avec $p$ et $q$ petits.
+
+\section{Mouvement dans un champ \`{a} oscillations rapides}\label{PAR:30}
