@@ -1294,3 +1294,23 @@ Cette derni\`{e}re \'{e}quation est similaire \`{a} l'\'{e}quation (\ref{EQ:27_8
 \be
 	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} + \alpha x_{1}^{2} + \beta x_{1}^{3} = \frac{2f}{3m\omega_{0}^{2}}\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right)x_{1} \label{EQ:29_11}
 \ee
+Pour simplifier l'\'{e}tude du probl\`{e}me, posons le second membre tel que :
+\benn
+	\frac{2f}{3m\omega_{0}^{2}}\cos\left((2\omega_{0} + \epsilon)\mathrm{t}\right) \times b\cos\left((\omega_{0} + \epsilon/2)\mathrm{t} + \delta\right)
+\eenn
+avec $b$ l'amplitude des oscillations de r\'{e}sonance cherch\'{e}e et $\delta$ un d\'{e}phasage constant. Comme $\cos a\cos b = (\cos(a + b) + \cos(a - b))/2$, le second membre s'\'{e}crit :
+\benn
+	\frac{2f}{3m\omega_{0}^{2}}\left[\cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t} + \delta\right) + \cos\left((\omega_{0} + \epsilon/2)\mathrm{t} - \delta\right)\right]
+\eenn
+Le terme de r\'{e}sonance ordinaire par rapport \`{a} $\omega_{0}$ est donc $\frac{2f}{3m\omega_{0}^{2}}\cos\left((\omega_{0} + \epsilon/2)\mathrm{t} - \delta\right)$. Et l'\'{e}quation (\ref{EQ:29_11}) devient donc :
+\benn
+	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} + \alpha x_{1}^{2} + \beta x_{1}^{3} = \frac{2f}{3m\omega_{0}^{2}}\cos\left((\omega_{0} + \epsilon/2)\mathrm{t} - \delta\right) - \alpha x_{1}^{2} - \beta x_{1}^{3}
+\eenn
+qui est, \`{a} la valeur de l'amplitude de la force ext\'{e}rieure pr\`{e}s : $\frac{2f}{3m\omega_{0}^{2}}$ au lieu de $\frac{f}{m}$ et $\epsilon/2$ au lieu de $\epsilon$, identique \`{a} l'\'{e}quation (\ref{EQ:29_1}). Faisons donc la substitution dans (\ref{EQ:29_4}) et obtenons :
+\benn
+	b^{2}\left[(\frac{\epsilon}{2} - \xi b^{2})^{2} + \lambda^{2}\right] = \frac{\alpha^{2}f^{2}b^{2}}{36m^{2}\omega_{0}^{6}}
+\eenn
+qui a pour solution triviale :
+\be
+	b = 0 \label{EQ:29_12}
+\ee
