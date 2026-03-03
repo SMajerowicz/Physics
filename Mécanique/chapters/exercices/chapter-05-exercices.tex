@@ -1134,7 +1134,7 @@ qui est similaire \`{a} l'\'{e}quation (\ref{EQ:27_8}) avec $h=4a/l$ et $\omega_
 	-\frac{4a}{l}\frac{\sqrt{g}}{2\sqrt{l}} < \epsilon < \frac{4a}{l}\frac{\sqrt{g}}{2\sqrt{l}} \Leftrightarrow -2\frac{a\sqrt{g}}{l^{\frac{3}{2}}} < \epsilon < 2\frac{a\sqrt{g}}{l^{\frac{3}{2}}} \Leftrightarrow \lvert\epsilon\rvert < 2\frac{a\sqrt{g}}{l^{\frac{3}{2}}}
 \eenn
 
-\section{Exemple de r\'{e}sonance dans les oscillations non lin\'{e}aires}
+\section{Exemple de r\'{e}sonance dans les oscillations non lin\'{e}aires}\label{PAR:29_EX1}
 
 D\'{e}terminons l'amplitude $b(\epsilon)$ pour une r\'{e}sonance aux fr\'{e}quances $\gamma \approx 3\omega_{0}$. Posons $\gamma = 3\omega_{0} + \epsilon$. De la m\^{e}me mani\`{e}re qu'au paragraphe (\ref{PAR:29}), nous calculons et approchons au premier ordre $\omega_{0}^{2} - \gamma^{2} = \omega_{0}^{2} - 9\omega_{0}^{2} - \epsilon^{2} - 6\omega_{0}\epsilon \approx -8\omega_{0}^{2}$. Ainsi, en application de la relation (\ref{EQ:22_4}), la premi\`{e}re approximation $x_{0}$ est :
 \benn
@@ -1173,3 +1173,23 @@ Reprenons l'\'{e}quation (\ref{EQ:29_4}) en r\'{e}alisant les deux changements d
 	\end{cases}
 \eenn
 et cela nous donne :
+\benn
+	b^{2}\left[(\epsilon/3 - \xi b^{2})^{2} + \lambda^{2}\right] = \frac{1}{4m\omega_{0}^{2}}\frac{9\beta^{2}f^{2}b^{4}}{2^{10}m^{2}\omega_{0}{4}} = \frac{9\beta^{2}f^{2}}{2^{12}m^{2}\omega_{0}{6}}b^{4} = Ab^{2}
+\eenn
+dont $b = 0$ est une solution triviale. Pour $b \neq 0$, nous pouvons d\'{e}velopper ainsi :
+\benn
+	\frac{\epsilon^{2}}{9} + \xi^{2}b^{4} - \frac{2}{3}\epsilon\xi b^{2} + \lambda^{2} = Ab^{2} \Leftrightarrow \xi^{2}b^{4} - \left(\frac{2}{3}\epsilon\xi + A\right)b^{2} + \frac{\epsilon^{2}}{9} + \lambda^{2} = 0
+\eenn
+qui est une \'{e}quation du second degr\'{e} en $b^{2}$ dont les solutions sont :
+\bea
+	b_{\pm} & = & \frac{\left(\frac{2}{3}\epsilon\xi + A\right) \pm \sqrt{\left(\frac{2}{3}\epsilon\xi + A\right)^{2} - 4\xi^{2}\left(\frac{\epsilon^{2}}{9} + \lambda^{2}\right)}}{2\xi^{2}} \nonumber \\
+	& = & \frac{\epsilon}{3\xi} + \frac{A}{2\xi^{2}} \pm \frac{1}{2\xi^{2}}\sqrt{\frac{4}{9}\xi^{2}\epsilon^{2} + A^{2} - \frac{4}{3}A\xi\epsilon - \frac{4}{9}\xi^{2}\epsilon^{2} - 4\xi^{2}\lambda^{2}} \nonumber \\
+	& = & \frac{\epsilon}{3\xi} + \frac{A}{2\xi^{2}} \pm \frac{1}{\xi}\sqrt{\frac{A^{2}}{4\xi^{2}} + \frac{A\epsilon}{3\xi} - \lambda^{2}} \nonumber
+\eea
+
+\begin{figure}[htb!]
+        \begin{center}
+                \includegraphics[width=15cm]{chapter_05_paragraph_29_exercice_1}
+		\caption{Solutions $b$ pour $A = 0.1$ et $\xi = 2$ du paragraphe (\ref{PAR:29_EX1}).}\label{FIG:5_29_EX1}
+        \end{center}
+\end{figure}
