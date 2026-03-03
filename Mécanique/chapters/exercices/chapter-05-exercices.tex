@@ -1133,3 +1133,43 @@ qui est similaire \`{a} l'\'{e}quation (\ref{EQ:27_8}) avec $h=4a/l$ et $\omega_
 \benn
 	-\frac{4a}{l}\frac{\sqrt{g}}{2\sqrt{l}} < \epsilon < \frac{4a}{l}\frac{\sqrt{g}}{2\sqrt{l}} \Leftrightarrow -2\frac{a\sqrt{g}}{l^{\frac{3}{2}}} < \epsilon < 2\frac{a\sqrt{g}}{l^{\frac{3}{2}}} \Leftrightarrow \lvert\epsilon\rvert < 2\frac{a\sqrt{g}}{l^{\frac{3}{2}}}
 \eenn
+
+\section{Exemple de r\'{e}sonance dans les oscillations non lin\'{e}aires}
+
+D\'{e}terminons l'amplitude $b(\epsilon)$ pour une r\'{e}sonance aux fr\'{e}quances $\gamma \approx 3\omega_{0}$. Posons $\gamma = 3\omega_{0} + \epsilon$. De la m\^{e}me mani\`{e}re qu'au paragraphe (\ref{PAR:29}), nous calculons et approchons au premier ordre $\omega_{0}^{2} - \gamma^{2} = \omega_{0}^{2} - 9\omega_{0}^{2} - \epsilon^{2} - 6\omega_{0}\epsilon \approx -8\omega_{0}^{2}$. Ainsi, en application de la relation (\ref{EQ:22_4}), la premi\`{e}re approximation $x_{0}$ est :
+\benn
+	x_{0} = -\frac{f}{8m\omega_{0}^{2}}\cos\left((3\omega_{0} + \epsilon)\mathrm{t}\right)
+\eenn
+D\'{e}veloppons d\'{e}sormais l'\'{e}quation du mouvement (\ref{EQ:29_1}) en posant $x = x_{0} + x_{1}$. Nous arrivons avec tous les termes d\'{e}velopp\'{e}s, voir le paragraphe (\ref{PAR:29}) pour le d\'{e}tail :
+\bea
+	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} & = & -\alpha(x_{0}^{2} + x_{1}^{2} + 2\alpha x_{0}x_{1}) - \beta(x_{0}^{3} + x_{1}^{3} + 3x_{0}^{2}x_{1} + 3x_{0}x_{1}^{2}) \nonumber \\
+	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} + \alpha x_{1}^{2} + \beta x_{1}^{3} & = & -\alpha x_{0}^{2} - 2\alpha x_{0}x_{1} - \beta x_{0}^{3} - 3\beta x_{0}^{2}x_{1} - 3\beta x_{0}x_{1}^{2} \nonumber
+\eea
+La r\'{e}sonance au second ordre s'\'{e}tablit pour $\approx 6\omega_{0}$ et dans les termes du second ordre, seul celui en $x_{0}x_{1}^{2}$ permet \`{a} $x_{1}$ de pouvoir \^{e}tre une oscillation de fr\'{e}quence non nulle et non \'{e}gale \`{a} $3\omega_{0}$ qui est d\'{e}j\`{a} port\'{e}e par $x_{0}$. En effet, la fr\'{e}quence du terme :
+\begin{itemize}
+	\item $x_{0}x_{1}$ est de $3\omega_{0}$ plus la fr\'{e}quence de $x_{1}$ qui ne peut donc \^{e}tre que $3\omega_{0}$
+	\item $x_{0}^{2}x_{1}$ ne laisse pas de possibilit\'{e} pour $x_{1}$ car la fr\'{e}quence de $x_{0}^{2}$ est d\'{e}j\`{a} de $6\omega_{0}$
+\end{itemize}
+Pour \'{e}tudier la r\'{e}sonance envisag\'{e}e, nous pouvons donc r\'{e}duire l'\'{e}quation de seconde approximation \`{a} :
+\benn
+	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} + \alpha x_{1}^{2} + \beta x_{1}^{3} = -3\beta x_{0}x_{1}^{2}
+\eenn
+Pour la suite, supposons que le second membre s'\'{e}crive ainsi :
+\bea
+	-3\beta \times \left[b\cos\left((\omega_{0} + \epsilon/3)\mathrm{t} + \delta\right)\right]^{2} & = & \frac{3\beta fb^{2}}{8m\omega_{0}^{2}}\cos\left((3\omega_{0} + \epsilon)\mathrm{t}\right)\cos^{2}\left((\omega_{0} + \epsilon/3)\mathrm{t} + \delta\right) \nonumber \\
+	& = & \frac{3\beta fb^{2}}{16m\omega_{0}^{2}}\cos\left((3\omega_{0} + \epsilon)\mathrm{t}\right)\left[\cos\left(2(\omega_{0} + \epsilon/3)\mathrm{t} + 2\delta\right) + 1\right] \nonumber \\
+	& = & \frac{3\beta fb^{2}}{16m\omega_{0}^{2}}\bigg(\cos\left((3\omega_{0} + \epsilon)\mathrm{t}\right) + \frac{1}{2}\big[\cos\left((5\omega_{0} + 5\epsilon/3)\mathrm{t} + 2\delta\right) \nonumber \\
+	& & + \cos\left((\omega_{0} + \epsilon/3)\mathrm{t} - 2\delta\right)\big]\bigg) \nonumber
+\eea
+Le terme de r\'{e}sonance avec $\omega_{0}$ est donc :
+\benn
+	\frac{3\beta fb^{2}}{32m\omega_{0}^{2}}\cos\left((\omega_{0} + \epsilon/3)\mathrm{t} - 2\delta\right)
+\eenn
+Reprenons l'\'{e}quation (\ref{EQ:29_4}) en r\'{e}alisant les deux changements de variables suivants :
+\benn
+	\begin{cases}
+		f \rightarrow \frac{3\beta fb^{2}}{32m\omega_{0}^{2}} \\
+		\epsilon \rightarrow \epsilon/3
+	\end{cases}
+\eenn
+et cela nous donne :
