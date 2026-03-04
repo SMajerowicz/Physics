@@ -1193,3 +1193,22 @@ qui est une \'{e}quation du second degr\'{e} en $b^{2}$ dont les solutions sont 
 		\caption{Solutions $b$ pour $A = 0.1$ et $\xi = 2$ du paragraphe (\ref{PAR:29_EX1}).}\label{FIG:5_29_EX1}
         \end{center}
 \end{figure}
+
+Sur la figure (\ref{FIG:5_29_EX1}), nous voyons un point de rebroussement de l'amplitude en $\epsilon = \epsilon_{k}$ tel que $b(\epsilon_{k}) = b_{k}$. En ce point, la d\'{e}riv\'{e}e de $b$ en fonction de $\epsilon$ \`{a} une valeur infinie. Or :
+\benn
+	\frac{\mathrm{d}b^{2}}{\mathrm{d}\epsilon} = \frac{1}{3\xi} \pm \frac{\frac{A}{3\xi}}{\xi\sqrt{\frac{A^{2}}{4\xi^{2}} + \frac{A\epsilon}{3\xi} - \lambda^{2}}}
+\eenn
+qui tend vers l'infini si et seulement si la quantit\'{e} $\frac{A^{2}}{4\xi^{2}} + \frac{A\epsilon}{3\xi} - \lambda^{2}$ tend vers 0 quand $\epsilon \rightarrow \epsilon_{k}$. Donc $\epsilon_{k}$ est solution de l'\'{e}quation :
+\benn
+	\frac{A^{2}}{4\xi^{2}} + \frac{A\epsilon}{3\xi} - \lambda^{2} = 0
+\eenn
+qui se d\'{e}veloppe ainsi :
+\benn
+	\epsilon_{k} = \frac{3\xi\lambda^{2}}{A} - \frac{3A}{4\xi} = \frac{3(4\xi^{2}\lambda^{2} - A^{2})}{4\xi A}
+\eenn
+qui permet d'obtenir la valeur de $b_{k}^{2}$ :
+\bea
+	b_{k}^{2} & = & b^{2}(\epsilon_{k}) = \frac{\epsilon_{k}}{3\xi} + \frac{A}{2\xi^{2}} = \frac{3(4\xi^{2}\lambda^{2} - A^{2})}{12\xi^{2}A} + \frac{6A^{2}}{12\xi^{2}A} \nonumber \\
+	& = & \frac{4\xi^{2}\lambda^{2} - A^{2} + 2A^{2}}{4\xi^{2}A} = \frac{4\xi^{2}\lambda^{2} + A^{2}}{4\xi^{2}A}
+\eea
+Le r\'{e}gime oscillatoire n'existe que pour $\epsilon > \epsilon_{k}$ et n\'{e}cessite une impulsion initiale pour sortir du r\'{e}gime stable $b = 0$.
