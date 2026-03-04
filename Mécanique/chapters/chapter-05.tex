@@ -1378,3 +1378,26 @@ Puisque $\xi$ est petit devant $X$, nous pouvons donc utiliser le d\'{e}veloppem
 		f(X+\xi,\mathrm{t}) = f(X,\mathrm{t}) + \xi\frac{\partial f}{\partial X}
 	\end{cases}
 \eenn
+Cela permet d'\'{e}crire l'\'{e}quation du mouvement ainsi :
+\be
+	m\ddot{X} + m\ddot{\xi} = -\frac{\mathrm{d}U}{\mathrm{d}X} - \xi\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}} + f(X,\mathrm{t}) + \xi\frac{\partial f}{\partial X} \label{EQ:30_4}
+\ee
+Le second membre se compse de deux parties distinctes :
+\begin{itemize}
+	\item une non perturb\'{e}e $-\frac{\mathrm{d}U}{\mathrm{d}X}$
+	\item une oscillante $- \xi\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}} + f(X,\mathrm{t}) + \xi\frac{\partial f}{\partial X}$ qui peut \^{e}tre r\'{e}duite \`{a} $f(X,\mathrm{t})$ puisque $\xi$ est par d\'{e}finition petit
+\end{itemize}
+Ainsi la partie oscillante peut se calculer en r\'{e}solvant :
+\be
+	m\ddot{\xi} = f(X,\mathrm{t}) \label{EQ:30_5}
+\ee
+qui peut se d\'{e}composer en :
+\benn
+	m\ddot{\xi} = f_{1}(X)\cos(\omega\mathrm{t}) + f_{2}(X)\sin(\omega\mathrm{t})
+\eenn
+qui donne par int\'{e}gration double et en supposant comme nulle les constantees d'int\'{e}gration, nous arrivons \`{a} :
+\bea
+	m\dot{\xi} & = & \frac{f_{1}(X)}{\omega}\sin(\omega\mathrm{t}) - \frac{f_{2}(X)}{\omega}\cos(\omega\mathrm{t}) \nonumber \\
+	\Leftrightarrow m\xi & = & -\frac{f_{1}(X)}{\omega^{2}}\cos(\omega\mathrm{t}) - \frac{f_{2}(X)}{\omega^{2}}\sin(\omega\mathrm{t}) \nonumber \\
+	\Leftrightarrow \xi & = & -\frac{f(X,\mathrm{t})}{m\omega^{2}} \label{EQ:30_6}
+\eea
