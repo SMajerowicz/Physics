@@ -1350,3 +1350,31 @@ Suivons le comportement d'un syst\`{e}me initialement en r\'{e}gime nominal des 
 Les cas de r\'{e}sonance envisag\'{e}s ici sont les cas fondamentaux se produisant dans un syst\`{e}me \`{a} oscillations non-lin\'{e}aires. Aux approximations sup\'{e}rieures, des ph\'{e}nom\`{e}nes de r\'{e}sonance apparaissent sur d'autres fr\'{e}quences. Surtout, il doit y avoir r\'{e}sonance pour toute fr\'{e}quence $\gamma$ telle que $n\gamma + m\omega_{0} = \omega_{0}$ pour $(n,m) \in \mathbb{N}$, i.e. telle que $\gamma = p\omega_{0} / q$ avec $(p,q) \in \mathbb{N}$. Toutefois, l'intensit\'{e} des ph\'{e}nom\`{e}nes de r\'{e}sonance ainsi que la largeur des domaines de fr\'{e}quences de ces r\'{e}sonances diminuent tr\`{e}s rapidement avec le degr\'{e} d'approximation. De sorte qu'en r\'{e}alit\'{e}, seules sont observables les r\'{e}sonances pour des fr\'{e}quences $\gamma \approx p\omega_{0} / q$ avec $p$ et $q$ petits.
 
 \section{Mouvement dans un champ \`{a} oscillations rapides}\label{PAR:30}
+
+Ici, nous allonw consid\'{e}rer le mouvement d'une particule soumise simultan\'{e}ment \`{a} l'action d'un champ constant $U$ et d'une force ext\'{e}rieure d\'{e}finie telle que :
+\be
+	f = f_{1}\cos(\omega\mathrm{t}) + f_{2}\sin(\omega\mathrm{t}) \label{EQ:30_1}
+\ee
+qui varie avec le temps \`{a} une fr\'{e}quence $\omega$ \'{e}lev\'{e}e et avec $f_{1}$ et $f_{2}$ qui ne d\'{e}pendent que des seules coordonn\'{e}es. Nous entendons par fr\'{e}quence \'{e}lev\'{e}e la condition $\omega \gg 1/T$ o\`{u} $T$ est l'ordre de grandeur de la p\'{e}riode des oscillations si la particule n'\'{e}tait soumise qu'au champ $U$. Nous supposons tout de m\^{e}me que le d\'{e}placement oscillatoire de la particule provoqu\'{e} par $f$, not\'{e} par le suite $\xi$, est petit.
+
+Pour simplifier, nous consid\'{e}rons le mouvement lin\'{e}aire dans un champ d\'{e}pendant d'une seule dimension spatiale. L'\'{e}quation du mouvement est alors :
+\be
+	m\ddot{x} = -\frac{\mathrm{d}U}{\mathrm{d}x} + f \label{EQ:30_2}
+\ee
+L'hypoth\`{e}se des petits d\'{e}placements provoqu\'{e}s par $f$ nous invite \`{a} \'{e}crire $x(\mathrm{t})$ tel que :
+\be
+	x(\mathrm{t}) = X(\mathrm{t}) + \xi(\mathrm{t}) \label{EQ:30_3}
+\ee
+$\xi(\mathrm{t})$ \'{e}tant une oscillation, sa valeur moyenne calcul\'{e}e sur sa p\'{e}riode $2\pi/\omega$ est nulle, alors que $X(\mathrm{t})$ aura vari\'{e} faiblement. \`{A} partir de cette remarque, nous pouvons d\'{e}duire que $\overline{x} = \overline{T}$, i.e. $X$ d\'{e}crit le mouvement non perturb\'{e} moyen de la particule par rapport aux oscillations rapides. La m\'{e}thode de d\'{e}termination de l'\'{e}quation du mouvement a \'{e}t\'{e} d\'{e}crite par Piotr Kapitsa en 1951.
+
+En utilisation $x(\mathrm{t})$ d\'{e}finie par la relation (\ref{EQ:30_4}) dans l'\'{e}quation (\ref{EQ:30_2}), nous \'{e}crivons :
+\benn
+	m\ddot{x} = -\frac{\mathrm{d}U}{\mathrm{d}x} + f(x,\mathrm{t}) \Leftrightarrow m\ddot{X} + m\ddot{\xi} = -\frac{\mathrm{d}U}{\mathrm{d}(X+\xi)} + f(X+\xi,\mathrm{t})
+\eenn
+Puisque $\xi$ est petit devant $X$, nous pouvons donc utiliser le d\'{e}veloppement de Taylor au premier ordre tel que :
+\benn
+	\begin{cases}
+		\frac{\mathrm{d}U}{\mathrm{d}(X+\xi)} = \frac{\mathrm{d}U}{\mathrm{d}X} + \xi\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}} \\
+		f(X+\xi,\mathrm{t}) = f(X,\mathrm{t}) + \xi\frac{\partial f}{\partial X}
+	\end{cases}
+\eenn
