@@ -1401,3 +1401,31 @@ qui donne par int\'{e}gration double et en supposant comme nulle les constantees
 	\Leftrightarrow m\xi & = & -\frac{f_{1}(X)}{\omega^{2}}\cos(\omega\mathrm{t}) - \frac{f_{2}(X)}{\omega^{2}}\sin(\omega\mathrm{t}) \nonumber \\
 	\Leftrightarrow \xi & = & -\frac{f(X,\mathrm{t})}{m\omega^{2}} \label{EQ:30_6}
 \eea
+Maintenant, calculons la moyenne dans le temps de l'\'{e}quation (\ref{EQ:30_4}) :
+\bea
+	m\ddot{X} + m\ddot{\xi} & = & -\frac{\mathrm{d}U}{\mathrm{d}X} - \xi\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}} + f(X,\mathrm{t}) + \xi\frac{\partial f}{\partial X} \nonumber \\
+	m\ddot{X} - f(X,\mathrm{t}) & = & -\frac{\mathrm{d}U}{\mathrm{d}X} - \xi\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}} + f(X,\mathrm{t}) + \xi\frac{\partial f}{\partial X} \nonumber
+\eea
+or $\overline{f} = 0$ donc $\overline{\xi} = 0$ par la relation (\ref{EQ:30_6}). Aussi, comme $U$ n'est pas fonction du temps, alors sa moyenne est \'{e}gale \`{a} sa propre valeur, donc :
+\benn
+	\begin{cases}
+		\overline{\frac{\mathrm{d}U}{\mathrm{d}X}} = \frac{\mathrm{d}U}{\mathrm{d}X} \\
+		\overline{\xi\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}}} = \overline{\xi}\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}} = 0
+	\end{cases}
+\eenn
+Ainsi, la moyenne de l'\'{e}quation (\ref{EQ:30_4}) se r\'{e}duit \`{a} :
+\benn
+	m\ddot{X} = -\frac{\mathrm{d}U}{\mathrm{d}X} - \overline{\xi\frac{\partial f}{\partial X}}
+\eenn
+que nous pouvons r\'{e}\'{e}crire comme :
+\be
+	m\ddot{X} = -\frac{\mathrm{d}U_{eff}}{\mathrm{d}X} \label{EQ:30_7}
+\ee
+avec $U_{eff}$ l'\'{e}nergie potentielle effective d\'{e}finie comme $U_{eff} = U + \frac{1}{2m\omega^{2}}\overline{f^{2}}$. En effet :
+\benn
+	\frac{\mathrm{d}U_{eff}}{\mathrm{d}X} = \frac{\mathrm{d}U}{\mathrm{d}X} + \frac{1}{2m\omega^{2}}\overline{\frac{\partial f^{2}}{\partial X}} = \frac{\mathrm{d}U}{\mathrm{d}X} + \frac{1}{m\omega^{2}}\overline{f\frac{\partial f}{\partial X}}
+\eenn
+et comme $f^{2} = f_{1}^{2}\cos^{2}(\omega\mathrm{t}) + f_{2}^{2}\sin^{2}(\omega\mathrm{t}) + 2f_{1}f_{2}\cos(\omega\mathrm{t})\sin(\omega\mathrm{t})$ alors $f^{2} = f_{1}^{2}/2 + f_{2}^{2}/2$. L'\'{e}nergie potentielle effective s'exprime donc ainsi :
+\be
+	U_{eff} = U + \frac{1}{4m\omega^{2}}(f_{1}^{2} + f_{2}^{2}) \label{EQ:30_8}
+\ee
