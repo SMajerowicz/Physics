@@ -1357,6 +1357,8 @@ Ici, nous allonw consid\'{e}rer le mouvement d'une particule soumise simultan\'{
 \ee
 qui varie avec le temps \`{a} une fr\'{e}quence $\omega$ \'{e}lev\'{e}e et avec $f_{1}$ et $f_{2}$ qui ne d\'{e}pendent que des seules coordonn\'{e}es. Nous entendons par fr\'{e}quence \'{e}lev\'{e}e la condition $\omega \gg 1/T$ o\`{u} $T$ est l'ordre de grandeur de la p\'{e}riode des oscillations si la particule n'\'{e}tait soumise qu'au champ $U$. Nous supposons tout de m\^{e}me que le d\'{e}placement oscillatoire de la particule provoqu\'{e} par $f$, not\'{e} par le suite $\xi$, est petit.
 
+\subsection{Cas unidimensionnel}
+
 Pour simplifier, nous consid\'{e}rons le mouvement lin\'{e}aire dans un champ d\'{e}pendant d'une seule dimension spatiale. L'\'{e}quation du mouvement est alors :
 \be
 	m\ddot{x} = -\frac{\mathrm{d}U}{\mathrm{d}x} + f \label{EQ:30_2}
@@ -1425,7 +1427,36 @@ avec $U_{eff}$ l'\'{e}nergie potentielle effective d\'{e}finie comme $U_{eff} = 
 \benn
 	\frac{\mathrm{d}U_{eff}}{\mathrm{d}X} = \frac{\mathrm{d}U}{\mathrm{d}X} + \frac{1}{2m\omega^{2}}\overline{\frac{\partial f^{2}}{\partial X}} = \frac{\mathrm{d}U}{\mathrm{d}X} + \frac{1}{m\omega^{2}}\overline{f\frac{\partial f}{\partial X}}
 \eenn
-et comme $f^{2} = f_{1}^{2}\cos^{2}(\omega\mathrm{t}) + f_{2}^{2}\sin^{2}(\omega\mathrm{t}) + 2f_{1}f_{2}\cos(\omega\mathrm{t})\sin(\omega\mathrm{t})$ alors $f^{2} = f_{1}^{2}/2 + f_{2}^{2}/2$. L'\'{e}nergie potentielle effective s'exprime donc ainsi :
+et comme $f^{2} = f_{1}^{2}\cos^{2}(\omega\mathrm{t}) + f_{2}^{2}\sin^{2}(\omega\mathrm{t}) + 2f_{1}f_{2}\cos(\omega\mathrm{t})\sin(\omega\mathrm{t})$ alors $\overline{f^{2}} = f_{1}^{2}/2 + f_{2}^{2}/2$. L'\'{e}nergie potentielle effective s'exprime donc ainsi :
 \be
 	U_{eff} = U + \frac{1}{4m\omega^{2}}(f_{1}^{2} + f_{2}^{2}) \label{EQ:30_8}
+\ee
+
+Par d\'{e}rivation de la relation (\ref{EQ:30_6}), nous pouvons \'{e}crire :
+\bea
+	\dot{\xi} & = & -\frac{\dot{f}}{m\omega^{2}} = -\frac{1}{m\omega^{2}}(-f_{1}\omega\sin(\omega\mathrm{t}) + f_{2}\omega\cos(\omega\mathrm{t})) \nonumber \\
+	\Leftrightarrow \dot{\xi}^{2} & = & \frac{1}{m^{2}\omega^{4}}(f_{1}^{2}\omega^{2}\sin^{2}(\omega\mathrm{t}) + f_{2}^{2}\omega^{2}\cos^{2}(\omega\mathrm{t}) - 2f_{1}f_{2}\cos(\omega\mathrm{t})\sin(\omega\mathrm{t})) \nonumber \\
+	\Leftrightarrow \overline{\dot{\xi}^{2}} & = & \frac{1}{2m^{2}\omega^{2}}(f_{1}^{2} + f_{2}^{2}) = \frac{2}{m}(U_{eff} - U) \nonumber \\
+	\Leftrightarrow U_{eff} & = & U + \frac{m}{2}\overline{\dot{\xi}^{2}} \label{EQ:30_9}
+\eea
+
+$\overline{\dot{\xi}^{2}}$ est justement l'expression de l'\'{e}nergie cin\'{e}tique moyenne du mouvement oscillatoire, qui, par d\'{e}finition, est constante par rapport au temps. Le mouvement moyen de la particule par rapport aux oscillations s'effectue comme si, en plus du champ $U$, aggissait un champ suppl\'{e}mentaire constant et d\'{e}pendant du carr\'{e} de l'amplitude d'un champ variable.
+
+\subsection{G\'{e}n\'{e}ralisation \`{a} un nombre quelconque de degr\'{e}s de libert\'{e}}
+
+Reprenons le raisonnement du paragraphe pr\'{e}c\'{e}dent mais en utilisant les coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es. Alors nous pouvons \'{e}tendre l'\'{e}quation (\ref{EQ:30_2}) comme ceci apr\`{e}s avoir d\'{e}fini $f_{i} = f_{1i}\cos(\omega\mathrm{t}) + f_{2i}\sin(\omega\mathrm{t})$ :
+\benn
+	\forall i\text{, }a_{i}\ddot{q}_{i} = -\frac{\mathrm{d}U}{\mathrm{d}q_{i}} + \sum_{j}f_{j}
+\eenn
+En posant $q_{i} = Q_{i} + \xi_{i}$, la relation (\ref{EQ:30_4}) devient :
+\benn
+	\forall i\text{, }a_{i}\ddot{Q}_{i} + a_{i}\ddot{\xi}_{i} = -\frac{\mathrm{d}U}{\mathrm{d}q_{i}} - \xi_{i}\frac{\mathrm{d}^{2}U}{\mathrm{d}q_{i}^{2}} + \sum_{j}f_{j} + \sum_{j}\xi_{j}\frac{\partial f_{j}}{\partial q_{j}}
+\eenn
+En moyennant cette derni\`{e}re, nous pouvons d\'{e}velopper tel que :
+\benn
+	\forall i\text{, }a_{i}\ddot{Q}_{i} = -\frac{\mathrm{d}U}{\mathrm{d}q_{i}} + \overline{\sum_{j}\xi_{j}\frac{\partial f_{j}}{\partial q_{i}}} = -\frac{\mathrm{d}U}{\mathrm{d}q_{i}} + \frac{1}{\omega^{2}}\overline{\sum_{j,k}\frac{f_{j}}{a_{jk}}\frac{\partial f_{k}}{\partial q_{i}}}
+\eenn
+Pour les m\^{e}mes raisons que pour arriver aux \'{e}quations (\ref{EQ:30_8}) et (\ref{EQ:30_9}), nous pouvons d\'{e}finir une \'{e}nergie potentielle effective telle que :
+\be
+	U_{eff} = U + \frac{1}{\omega^{2}}\sum_{jk}a_{j,k}^{-1}\overline{f_{j}f_{k}} = U + \sum_{j,k}\frac{a_{jk}}{2}\overline{\dot{\xi}_{j}\dot{\xi}_{k}} \label{EQ:30_10}
 \ee
