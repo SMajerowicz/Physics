@@ -1212,3 +1212,37 @@ qui permet d'obtenir la valeur de $b_{k}^{2}$ :
 	& = & \frac{4\xi^{2}\lambda^{2} - A^{2} + 2A^{2}}{4\xi^{2}A} = \frac{4\xi^{2}\lambda^{2} + A^{2}}{4\xi^{2}A}
 \eea
 Le r\'{e}gime oscillatoire n'existe que pour $\epsilon > \epsilon_{k}$ et n\'{e}cessite une impulsion initiale pour sortir du r\'{e}gime stable $b = 0$.
+
+\section{Mouvement dans un champ \`{a} oscillations rapides}
+
+\subsection{Positions d'\'{e}quilibre stable pour un pendule \`{a} oscillations verticales}
+
+Il s'agit ici de d\'{e}terminer les positions d'\'{e}quilibre stable pour un pendule dont le point de suspension effectue des oscillations verticales de fr\'{e}quence $\gamma$ \'{e}lev\'{e}e telle que $\gamma \gg \sqrt{g/l}$. Voir le paragraphe (\ref{PAR:5_EX3c}) pour la d\'{e}termination de la fonction de Lagrange du syst\`{e}me :
+\benn
+	L = \frac{ml^{2}}{2}\dot{\varphi}^{2} + mla\gamma^{2}\cos(\gamma\mathrm{t})\cos\varphi + mgl\sin\varphi
+\eenn
+La formule (\ref{EQ:5_8}) qui lie l'\'{e}nergie potentielle et la force qui l'engendre, ou vice-versa, permet d'\'{e}crire la force ext\'{e}rieure variable ainsi :
+\benn
+	f = -ma\gamma^{2}\cos(\gamma\mathrm{t})\sin\varphi
+\eenn
+pour en d\'{e}duire :
+\benn
+	\overline{f^{2}} = m^{2}a^{2}\gamma^{4}\sin^{2}\varphi\overline{\cos^{2}(\gamma\mathrm{t})} = \frac{1}{2}m^{2}a^{2}\gamma^{2}\sin^{2}\varphi
+\eenn
+En nous servant de la relation (\ref{EQ:30_8}) d\'{e}finissant $U_{eff}$, nous pouvons \'{e}crire :
+\benn
+	U_{eff} = -mgl\cos\varphi + \frac{m^{2}a^{2}\gamma^{4}}{4m\gamma^{2}}\sin^{2}\varphi = -mgl\left[-\cos\varphi + \frac{a^{2}\gamma^{2}}{4gl}\sin^{2}\varphi\right]
+\eenn
+
+Recherchons d\'{e}sormais les positions d'\'{e}quilibre stable qui correspondent aux minimas possibles pour l'\'{e}nergie potentielle effective $U_{eff}$. Les extrema sont d\'{e}finis par l'\'{e}quation suivante :
+\bea
+	\frac{\mathrm{d}U_{eff}}{\mathrm{d}\varphi} = 0 & \Leftrightarrow & -mgl\left[\sin\varphi + \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\sin\varphi\right] \nonumber \\
+	& \Leftrightarrow & \sin\varphi\left[1 + \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\right] = 0 \nonumber
+\eea
+dont les solutions possibles sont :
+\begin{itemize}
+	\item $\varphi \in \{0;\pi\}$
+	\item $\varphi$ est solution de l'\'{e}quation : $1 + \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi = 0$, soit $\cos\varphi = -\frac{a^{2}\gamma^{2}}{2gl}$. Cette derni\`{e}re solution n'est envisageable que si et seulement si $\frac{a^{2}\gamma^{2}}{2gl} < 1 \Leftrightarrow 2gl < a^{2}\gamma^{2}$
+\end{itemize}
+
+\subsection{Positions d'\'{e}quilibre stable pour un pendule \`{a} oscillations horizontales}
