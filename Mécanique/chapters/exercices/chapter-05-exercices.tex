@@ -1215,7 +1215,7 @@ Le r\'{e}gime oscillatoire n'existe que pour $\epsilon > \epsilon_{k}$ et n\'{e}
 
 \section{Mouvement dans un champ \`{a} oscillations rapides}
 
-\subsection{Positions d'\'{e}quilibre stable pour un pendule \`{a} oscillations verticales}
+\subsection{Positions d'\'{e}quilibre stable pour un pendule \`{a} oscillations verticales}\label{PAR:29_EX1}
 
 Il s'agit ici de d\'{e}terminer les positions d'\'{e}quilibre stable pour un pendule dont le point de suspension effectue des oscillations verticales de fr\'{e}quence $\gamma$ \'{e}lev\'{e}e telle que $\gamma \gg \sqrt{g/l}$. Voir le paragraphe (\ref{PAR:5_EX3c}) pour la d\'{e}termination de la fonction de Lagrange du syst\`{e}me :
 \benn
@@ -1231,7 +1231,7 @@ pour en d\'{e}duire :
 \eenn
 En nous servant de la relation (\ref{EQ:30_8}) d\'{e}finissant $U_{eff}$, nous pouvons \'{e}crire :
 \benn
-	U_{eff} = -mgl\cos\varphi + \frac{m^{2}a^{2}\gamma^{4}}{4m\gamma^{2}}\sin^{2}\varphi = -mgl\left[-\cos\varphi + \frac{a^{2}\gamma^{2}}{4gl}\sin^{2}\varphi\right]
+	U_{eff} = -mgl\cos\varphi + \frac{m^{2}a^{2}\gamma^{4}}{4m\gamma^{2}}\sin^{2}\varphi = mgl\left[-\cos\varphi + \frac{a^{2}\gamma^{2}}{4gl}\sin^{2}\varphi\right]
 \eenn
 
 Recherchons d\'{e}sormais les positions d'\'{e}quilibre stable qui correspondent aux minimas possibles pour l'\'{e}nergie potentielle effective $U_{eff}$. Les extrema sont d\'{e}finis par l'\'{e}quation suivante :
@@ -1242,7 +1242,44 @@ Recherchons d\'{e}sormais les positions d'\'{e}quilibre stable qui correspondent
 dont les solutions possibles sont :
 \begin{itemize}
 	\item $\varphi \in \{0;\pi\}$
-	\item $\varphi$ est solution de l'\'{e}quation : $1 + \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi = 0$, soit $\cos\varphi = -\frac{a^{2}\gamma^{2}}{2gl}$. Cette derni\`{e}re solution n'est envisageable que si et seulement si $\frac{a^{2}\gamma^{2}}{2gl} < 1 \Leftrightarrow 2gl < a^{2}\gamma^{2}$
+	\item $\varphi$ est solution de l'\'{e}quation : $1 + \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi = 0$, soit $\cos\varphi = -\frac{a^{2}\gamma^{2}}{2gl}$. Cette derni\`{e}re solution n'est envisageable que si et seulement si $\frac{a^{2}\gamma^{2}}{2gl} > -1 \Leftrightarrow 2gl < a^{2}\gamma^{2}$
 \end{itemize}
 
-\subsection{Positions d'\'{e}quilibre stable pour un pendule \`{a} oscillations horizontales}
+Pour conclure quant \`{a} la stabilit\'{e} des positions, nous allons calculer la d\'{e}riv\'{e}e seconde par rapport \`{a} $\varphi$ de l'\'{e}nergie potentielle effective, soit :
+\bea
+	\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}} & = & mgl\cos\varphi\left(1 + \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\right) + mgl\sin\varphi\left(0 - \frac{a^{2}\gamma^{2}}{2gl}\sin\varphi\right) \nonumber \\
+	& = & mgl\left(\cos\varphi + \frac{a^{2}\gamma^{2}}{2gl}\cos^{2}\varphi - \frac{a^{2}\gamma^{2}}{2gl}\sin^{2}\varphi\right) = mgl\left(\cos\varphi + \frac{a^{2}\gamma^{2}}{2gl}\left(2\cos^{2}\varphi - 1\right)\right) \nonumber
+\eea
+Nous pouvons en d\'{e}terminer sa valeur en $\varphi = 0$ et $\varphi = \pi$ :
+\bea
+	\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(0) & = & mgl\left(1 + \frac{a^{2}\gamma^{2}}{2gl}\right) \nonumber \\
+	\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(\pi) & = & mgl\left(-1 + \frac{a^{2}\gamma^{2}}{2gl}\right) \nonumber
+\eea
+donc $\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(0)$ est syst\'{e}matiquement positif donc la position $\varphi = 0$ est stable. Alors que $\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(\pi)$ est positif si et seulement si $\frac{a^{2}\gamma^{2}}{2gl} > 1 \Leftrightarrow a^{2}\gamma^{2} > 2gl$. Alors la position $\varphi = \pi$ n'est stable que si la condition pr\'{e}c\'{e}dente est v\'{e}rifi\'{e}e.
+
+\subsection{Positions d'\'{e}quilibre stable pour un pendule \`{a} oscillations horizontales}\label{PAR:29_EX2}
+
+La fonction de Lagrange est d'ors et d\'{e}j\`{a} \'{e}tudi\'{e}e au paragraphe (\ref{PAR:5_EX3b}) et de la m\^{e}me mani\`{e}re que dans l'exercice pr\'{e}c\'{e}dent, nous pouvons d\'{e}finir la force ext\'{e}rieure comme :
+\benn
+	f = ma\gamma^{2}\cos(\gamma\mathrm{t}))\cos\varphi
+\eenn
+et l'\'{e}nergie potentielle effective ainsi :
+\benn
+	U_{eff} = mgl\left(-\cos\varphi + \frac{a^{2}\gamma^{2}}{2gl}\cos^{2}\varphi\right)
+\eenn
+D\'{e}terminons les positions d\'{e}quilibre :
+\benn
+	\frac{\mathrm{d}U_{eff}}{\mathrm{d}\varphi} = mgl\left(\sin\varphi - \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\sin\varphi\right) = mgl\sin\varphi\left(1 - \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\right)
+\eenn
+et $\frac{\mathrm{d}U_{eff}}{\mathrm{d}\varphi} = 0$ si et seulement si $\varphi \in \{0;\pi\}$ ou $1 - \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi = 0 \Leftrightarrow \cos\varphi = \frac{a^{2}\gamma^{2}}{2gl}$.
+Quant \`{a} leur stabilit\'{e} :
+\bea
+	\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}} & = & mgl\left[\cos\varphi\left(1 - \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\right) + \sin\varphi\left(0 + \frac{a^{2}\gamma^{2}}{2gl}\sin\varphi\right)\right] \nonumber \\
+	& = & mgl\left[\cos\varphi + \frac{a^{2}\gamma^{2}}{2gl}(\sin^{2}\varphi - \cos^{2}\varphi)\right] = mgl\left[\cos\varphi + \frac{a^{2}\gamma^{2}}{2gl}(1 - 2\cos^{2}\varphi)\right] \nonumber
+\eea
+Nous pouvons en d\'{e}terminer sa valeur en $\varphi = 0$ et $\varphi = \pi$ :
+\bea
+	\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(0) & = & mgl\left(1 - \frac{a^{2}\gamma^{2}}{2gl}\right) \nonumber \\
+	\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(\pi) & = & mgl\left(-1 - \frac{a^{2}\gamma^{2}}{2gl}\right) \nonumber
+\eea
+Comme $\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(\pi)$ est toujours n\'{e}gatif, la position $\varphi = \pi$ est instable. Quant \`{a} la position $\varphi = 0$, elle est stable si et seulement si $2gl > a^{2}\gamma^{2}$.
