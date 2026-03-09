@@ -14,19 +14,37 @@ Par application des formules (\ref{EQ:7_5}) et (\ref{EQ:7_7}) pour l'impulsion, 
 \ee
 or :
 \benn
-	\mathrm{d}\left(\sum_{i}p_{i}\dot{q}_{i}\right) = \sum_{i}\mathrm{d}p_{i}\dot{q}_{i} + \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} \Leftrightarrow \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} = \mathrm{d}\left(\sum_{i}p_{i}\dot{q}_{i}\right - \sum_{i}\dot{q}_{i}\mathrm{d}p_{i}
+	\mathrm{d}\left(\sum_{i}p_{i}\dot{q}_{i}\right) = \sum_{i}\mathrm{d}p_{i}\dot{q}_{i} + \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} \Leftrightarrow \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} = \mathrm{d}\left(\sum_{i}p_{i}\dot{q}_{i}\right) - \sum_{i}\dot{q}_{i}\mathrm{d}p_{i}
 \eenn
 Ainsi, nous obtenons :
 \bea
 	\mathrm{d}L & = & \sum_{i}\dot{p}_{i}\mathrm{d}q_{i} + \mathrm{d}\left(\sum_{i}p_{i}\dot{q}_{i}\right) - \sum_{i}\dot{q}_{i}\mathrm{d}p_{i} \nonumber \\
-	\Leftarrowright \mathrm{d}\left(\sum_{i}\dot{p}_{i}\mathrm{d}q_{i} - L\right) & = & \sum_{i}\dot{q}_{i}\mathrm{d}p_{i} - \sum_{i}\dot{p}_{i}\mathrm{d}q_{i} \nonumber
+	\Leftrightarrow \mathrm{d}\left(\sum_{i}\dot{p}_{i}\mathrm{d}q_{i} - L\right) & = & \sum_{i}\dot{q}_{i}\mathrm{d}p_{i} - \sum_{i}\dot{p}_{i}\mathrm{d}q_{i} \nonumber
 \eea
 Or $\sum_{i}\dot{p}_{i}\mathrm{d}q_{i} - L$ est la d\'{e}finition de l'\'{e}nergie totale $E$ du syst\`{e}me comme pr\'{e}sent\'{e} au paragraphe (\ref{PAR:6}). Son expression en fonction des coordonn\'{e}es et des impulsions est appel\'{e}e \emph{fonction de Hamilton} du syst\`{e}me et s'exprime ainsi :
 \be
-	H(q,p,t} ) = \sum_{i}p_{i}\dot{q}_{i} - L \label{EQ:40_2}
+	H(q,p,t) = \sum_{i}p_{i}\dot{q}_{i} - L \label{EQ:40_2}
 \ee
 qui ob\'{e}it \`{a} :
 \be
 	\mathrm{d}H = -\sum_{i}\dot{p}_{i}\mathrm{d}q_{i} + \sum_{i}\dot{q}_{i}\mathrm{d}p_{i} \label{EQ:40_3}
 \ee
-pour laquelle les variables ind\'{e}pendants sont les coordonn\'{e}es et les impulsions g\'{e}n\'{e}ralis\'{e}es.
+pour laquelle les variables ind\'{e}pendantes sont les coordonn\'{e}es et les impulsions g\'{e}n\'{e}ralis\'{e}es. Par d\'{e}finition :
+\benn
+	\mathrm{d}H = \sum_{i}\frac{\partial H}{\partial q_{i}}\mathrm{d}q_{i} + \sum_{i}\frac{\partial H}{\partial p_{i}}\mathrm{d}p_{i}
+\eenn
+ce qui permet d'en d\'{e}duire :
+\be
+	\forall i\text{, }\dot{q}_{i} = \sum_{i}\frac{\partial H}{\partial p_{i}}\text{ et }\dot{p}_{i} = -\sum_{i}\frac{\partial H}{\partial q_{i}} \label{EQ:40_4}
+\ee
+Ces deux \'{e}quations sont les \'{e}quations du mouvement recherch\'{e}es et sont appel\'{e}es les \emph{\'{e}quations de Hamilton}. Elles constituent pour un syst\`{e}me \`{a} $s$ degr\'{e}s de libert\'{e}, $2s$ \'{e}quations diff\'{e}rentielles du premier ordre \`{a} $2s$ fonctions inconnues : $q(\mathrm{t})$ et $p(\mathrm{t})$. Elles remplacent les $s$ \'{e}quations du second ordre obtenues par la m\'{e}thode de Lagrange, voir les relations (\ref{EQ:2_6}). Les \'{e}quations de Hamilton sont dites \emph{canoniques} de par leur simplicit\'{e} et leur sym\'{e}trie.
+
+La d\'{e}riv\'{e}e totale par rapport au temps de la fonction de Hamilton vaut :
+\benn
+	\frac{\mathrm{d}H}{\mathrm{dt}} = \frac{\partial H}{\partial\mathrm{t}} + \sum_{i}\frac{\partial H}{\partial q_{i}}\frac{\mathrm{d}q_{i}}{\mathrm{dt}} + \sum_{i}\frac{\partial H}{\partial p_{i}}\frac{\mathrm{d}p_{i}}{\mathrm{dt}} = \frac{\partial H}{\partial\mathrm{t}} + \sum_{i}\frac{\partial H}{\partial q_{i}}\dot{q}_{i} + \sum_{i}\frac{\partial H}{\partial p_{i}}\dot{p}_{i}
+\eenn
+Connaissant les \'{e}quations (\ref{EQ:40_4}), nous avons alors :
+\be
+	\frac{\mathrm{d}H}{\mathrm{dt}} = \frac{\partial H}{\partial\mathrm{t}} + \sum_{i}\frac{\partial H}{\partial q_{i}}\frac{\partial H}{\partial p_{i}} - \sum_{i}\frac{\partial H}{\partial p_{i}}\frac{\partial H}{\partial q_{i}} = \frac{\partial H}{\partial\mathrm{t}} \label{EQ:40_5}
+\ee
+Si la fonction de Hamilton ne d\'{e}pend pas explicitement du temps alors $\frac{\partial H}{\partial\mathrm{t}} = 0$ et nous retrouvons la loi de conservation de l'\'{e}nergie vue au paragraphe (\ref{PAR:6}).
