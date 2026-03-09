@@ -1,1 +1,32 @@
 \chapter{\'{E}quations canoniques}
+
+La formulation des lois de la M\'{e}canique \`{a} l'aide de la fonction de Lagrange suppose, pour d\'{e}crire l'\'{e}tat m\'{e}canique d'un syst\`{e}me, les coordonn\'{e}es et les vitesses g\'{e}n\'{e}ralis\'{e}es de celui-ci. Sa description \`{a} l'aide des coordonn\'{e}es et des impulsions g\'{e}n\'{e}ralis\'{e}es pr\'{e}sente des avantages, notamment pour l'\'{e}tude de probl\`{e}mes g\'{e}n\'{e}raux de M\'{e}canique. Reste donc \`{a} d\'{e}termine les \'{e}quations du mouvement correspondant \`{a} cette m\'{e}thode.
+
+En math\'{e}matique, la transformation de Legendre permet de passer d'un choix de variables ind\'{e}pendantes \`{a} un autre. Nous \'{e}tudierons cela ci-dessous.
+
+La fonction de Lagrange est fonction des couples $(\{q_{i}\},\{\dot{q}_{i})$ donc :
+\benn
+	\mathrm{d}L = \sum_{i}\frac{\partial L}{\partial q_{i}}\mathrm{d}q_{i} + \sum_{i}\frac{\partial L}{\partial \dot{q}_{i}}\mathrm{d}\dot{q}_{i}
+\eenn
+Par application des formules (\ref{EQ:7_5}) et (\ref{EQ:7_7}) pour l'impulsion, nous pouvons \'{e}crire :
+\be
+	\mathrm{d}L = \sum_{i}\dot{p}_{i}\mathrm{d}q_{i} + \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} \label{EQ:40_1}
+\ee
+or :
+\benn
+	\mathrm{d}\left(\sum_{i}p_{i}\dot{q}_{i}\right) = \sum_{i}\mathrm{d}p_{i}\dot{q}_{i} + \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} \Leftrightarrow \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} = \mathrm{d}\left(\sum_{i}p_{i}\dot{q}_{i}\right - \sum_{i}\dot{q}_{i}\mathrm{d}p_{i}
+\eenn
+Ainsi, nous obtenons :
+\bea
+	\mathrm{d}L & = & \sum_{i}\dot{p}_{i}\mathrm{d}q_{i} + \mathrm{d}\left(\sum_{i}p_{i}\dot{q}_{i}\right) - \sum_{i}\dot{q}_{i}\mathrm{d}p_{i} \nonumber \\
+	\Leftarrowright \mathrm{d}\left(\sum_{i}\dot{p}_{i}\mathrm{d}q_{i} - L\right) & = & \sum_{i}\dot{q}_{i}\mathrm{d}p_{i} - \sum_{i}\dot{p}_{i}\mathrm{d}q_{i} \nonumber
+\eea
+Or $\sum_{i}\dot{p}_{i}\mathrm{d}q_{i} - L$ est la d\'{e}finition de l'\'{e}nergie totale $E$ du syst\`{e}me comme pr\'{e}sent\'{e} au paragraphe (\ref{PAR:6}). Son expression en fonction des coordonn\'{e}es et des impulsions est appel\'{e}e \emph{fonction de Hamilton} du syst\`{e}me et s'exprime ainsi :
+\be
+	H(q,p,t} ) = \sum_{i}p_{i}\dot{q}_{i} - L \label{EQ:40_2}
+\ee
+qui ob\'{e}it \`{a} :
+\be
+	\mathrm{d}H = -\sum_{i}\dot{p}_{i}\mathrm{d}q_{i} + \sum_{i}\dot{q}_{i}\mathrm{d}p_{i} \label{EQ:40_3}
+\ee
+pour laquelle les variables ind\'{e}pendants sont les coordonn\'{e}es et les impulsions g\'{e}n\'{e}ralis\'{e}es.
