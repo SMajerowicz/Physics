@@ -48,3 +48,31 @@ Connaissant les \'{e}quations (\ref{EQ:40_4}), nous avons alors :
 	\frac{\mathrm{d}H}{\mathrm{dt}} = \frac{\partial H}{\partial\mathrm{t}} + \sum_{i}\frac{\partial H}{\partial q_{i}}\frac{\partial H}{\partial p_{i}} - \sum_{i}\frac{\partial H}{\partial p_{i}}\frac{\partial H}{\partial q_{i}} = \frac{\partial H}{\partial\mathrm{t}} \label{EQ:40_5}
 \ee
 Si la fonction de Hamilton ne d\'{e}pend pas explicitement du temps alors $\frac{\partial H}{\partial\mathrm{t}} = 0$ et nous retrouvons la loi de conservation de l'\'{e}nergie vue au paragraphe (\ref{PAR:6}).
+
+En plus des couples $(q,\dot{q})$ pour la fonction de Lagrange et $(q,p)$ pour la fonction de Hamilton, ces deux fonctions peuvent \'{e}galement contenir des param\`{e}tres autres caract\'{e}risant le syst\`{e}me : param\`{e}tres intrinsi\`{e}ques ou champ ext\'{e}rieur\footnote{Le c{\oe}fficient de frottement ou l'amplitude de la force ext\'{e}rieure en sont deux exemples d\'{e}j\`{a} \'{e}voqu\'{e}s dans ce document.}. Soit $\lambda$ un de ces param\`{e}tres que nous consid\'{e}rons comme variable. La relation (\ref{EQ:40_1}) s'\'{e}crit alors :
+\benn
+	\mathrm{d}L = \sum_{i}\dot{p}_{i}\mathrm{d}q_{i} + \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} + \frac{\partial L}{\partial\lambda}\mathrm{d}\lambda
+\eenn
+et (\ref{EQ:40_3}) :
+\benn
+	\mathrm{d}H = -\sum_{i}\dot{q}_{i}\mathrm{d}q_{i} + \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} + \frac{\partial H}{\partial\lambda}\mathrm{d}\lambda
+\eenn
+Donc en reprenant la d\'{e}finition (\ref{EQ:40_2}) de $H$ :
+\bea
+	\mathrm{d}H & = & \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} + \sum_{i}\dot{q}_{i}\mathrm{d}p_{i} - \mathrm{d}L \Leftrightarrow \left(\frac{\partial H}{\partial\lambda}\right)_{q,p}\mathrm{d}\lambda = \left(\frac{\partial L}{\partial\lambda}\right)_{q,\dot{q}}\mathrm{d}\lambda \nonumber \\
+	\Leftrightarrow \left(\frac{\partial H}{\partial\lambda}\right)_{q,p} & = & \left(\frac{\partial L}{\partial\lambda}\right)_{q,\dot{q}} \label{EQ:40_6}
+\eea
+sachant que les quantit\'{e}s $\left(\frac{\partial H}{\partial\lambda}\right)_{q,p}$ est calcul\'{e}e pour $q$ et $p$ contants et $\left(\frac{\partial L}{\partial\lambda}\right)_{q,\dot{q}}$ pour $q$ et $\dot{q}$ constants.
+
+De la m\^{e}me mani\`{e}re, si $L = L_{0} + L'$ est la fonction de Lagrange d'un syst\`{e}me telle que $L'$ est une quantit\'{e} petite compar\'{e} \`{a} la fonction fondamentale $L_{0}$. En utilisant (\ref{EQ:40_2}) :
+\benn
+	H = \sum_{i}p_{i}\dot{q}_{i} - L = \sum_{i}p_{i}\dot{q}_{i} - L_{0} - L' = H_{0} - L'
+\eenn
+Nous pouvons donc \'{e}crire avec la m\^{e}me notation que :
+\be
+	\left(H'\right)_{q,p} = -\left(L'\right)_{q,\dot{q}} \label{EQ:40_7}
+\ee
+Lors du passage des relations (\ref{EQ:40_1}) \`{a} (\ref{EQ:40_3}), le temps n'a pas \'{e}t\'{e} pris en compte. Il joue le r\^{o}le d'un param\`{e}tre comme pr\'{e}sent\'{e} dans la relation (\ref{EQ:40_6}) et nous avons de fait :
+\be
+	\left(\frac{\partial H}{\partial\mathrm{t}}\right)_{q,p} = \left(\frac{\partial L}{\partial\mathrm{t}}\right)_{q,\dot{q}} \label{EQ:40_8}
+\ee
