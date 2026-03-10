@@ -2,6 +2,44 @@
 
 \subsection{Calcul de la fonction de Hamilton en coordonn\'{e}es cart\'{e}siennes}
 
+Pour un point mat\'{e}riel, nous nous basons sur le calcul de la fonction de Lagrange de la formule (\ref{EQ:4_5}) qui donne :
+\benn
+	L = \frac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) - U(x,y,z)
+\eenn
+Or, par d\'{e}finition des composantes de l'impulsion, voir la formule (\ref{EQ:7_5}), \`{a} savoir :
+\benn
+	\forall i\text{, }p_{i} = \frac{\partial L}{\partial \dot{q}_{i}}
+\eenn
+donc en coordonn\'{e}es cart\'{e}siennes, cela nous donne :
+\bea
+	p_{x} & = & \frac{\partial L}{\partial \dot{x}} = m\dot{x} \nonumber \\
+	p_{y} & = & \frac{\partial L}{\partial \dot{y}} = m\dot{y} \nonumber \\
+	p_{z} & = & \frac{\partial L}{\partial \dot{z}} = m\dot{z} \nonumber
+\eea
+La d\'{e}finition de la fonction de Hamilton donn\'{e}e par la formule (\ref{EQ:40_2}) permet d'\'{e}crire :
+\bea
+	H & = & m\dot{x}^{2} + m\dot{y}^{2} + m\dot{z}^{2} - \frac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) + U(x,y,z) = \frac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) + U(x,y,z) \nonumber \\
+	& = & \frac{1}{2m}(p_{x}^{2} + p_{y}^{2} + p_{z}^{2}) + U(x,y,z) \nonumber
+\eea
+
 \subsection{Calcul de la fonction de Hamilton en coordonn\'{e}es cylindriques}
 
-\subsection{calcul de la fonction de Hamilton en coordonn\'{e}es sph\'{e}riques}
+En reprenant la m\^{e}me logique que dans l'exemple des coordonn\'{e}es cart\'{e}siennes mais en nous appuyant sur la d\'{e}finition de la fonction de Lagrange en coordonn\'{e}es cylindriques donn\'{e}e dans la formule (\ref{EQ:4_6}) :
+\benn
+	L = \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2} + \dot{z}^{2}) - U(x,y,z)
+\eenn
+Les composantes de l'impulsion sont alors :
+\bea
+	p_{r} & = & \frac{\partial L}{\partial \dot{r}} = m\dot{r} \nonumber \\
+	p_{\varphi} & = & \frac{\partial L}{\partial \dot{\varphi}} = mr^{2}\dot{\varphi} \nonumber \\
+        p_{z} & = & \frac{\partial L}{\partial \dot{z}} = m\dot{z} \nonumber
+\eea
+Et la fonction de Hamilton en est d\'{e}duite :
+\bea
+	H & = & p_{r}\dot{r} + p_{\varphi}\dot{\varphi} + p_{z}\dot{z} - \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2} + \dot{z}^{2}) + U(r,\varphi,z) \nonumber \\
+	& = & m\dot{r}^{2} + mr^{2}\dot{\varphi}^{2} + m\dot{z}^{2} - \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2} + \dot{z}^{2}) + U(r,\varphi,z) \nonumber \\
+	& = & \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2} + \dot{z}^{2}) + U(r,\varphi,z) \nonumber \\
+	& = & \frac{1}{2m}\left(p_{r}^{2} + \frac{p_{\varphi}}{r^{2}}i + p_{z}\right)  + U(r,\varphi,z) \nonumber
+\eea
+
+\subsection{Calcul de la fonction de Hamilton en coordonn\'{e}es sph\'{e}riques}
