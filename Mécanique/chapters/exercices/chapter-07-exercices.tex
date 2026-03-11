@@ -2,7 +2,7 @@
 
 \subsection{Calcul de la fonction de Hamilton en coordonn\'{e}es cart\'{e}siennes}
 
-Pour un point mat\'{e}riel, nous nous basons sur le calcul de la fonction de Lagrange de la formule (\ref{EQ:4_5}) qui donne :
+Pour un point mat\'{e}riel, nous nous basons sur le calcul de la fonction de Lagrange de la formule (\ref{EQ:4_4}) qui donne :
 \benn
 	L = \frac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) - U(x,y,z)
 \eenn
@@ -24,7 +24,7 @@ La d\'{e}finition de la fonction de Hamilton donn\'{e}e par la formule (\ref{EQ:
 
 \subsection{Calcul de la fonction de Hamilton en coordonn\'{e}es cylindriques}
 
-En reprenant la m\^{e}me logique que dans l'exemple des coordonn\'{e}es cart\'{e}siennes mais en nous appuyant sur la d\'{e}finition de la fonction de Lagrange en coordonn\'{e}es cylindriques donn\'{e}e dans la formule (\ref{EQ:4_6}) :
+En reprenant la m\^{e}me logique que dans l'exemple des coordonn\'{e}es cart\'{e}siennes mais en nous appuyant sur la d\'{e}finition de la fonction de Lagrange en coordonn\'{e}es cylindriques donn\'{e}e dans la formule (\ref{EQ:4_5}) :
 \benn
 	L = \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2} + \dot{z}^{2}) - U(x,y,z)
 \eenn
@@ -43,3 +43,31 @@ Et la fonction de Hamilton en est d\'{e}duite :
 \eea
 
 \subsection{Calcul de la fonction de Hamilton en coordonn\'{e}es sph\'{e}riques}
+
+Nous allons nous baser ici sur la fonction de Lagrange en coordonn\'{e}es sph\'{e}riques de la formule (\ref{EQ:4_6}) :
+\benn
+	L = \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\theta}^{2} + r^{2}\sin^{2}\theta\dot{\varphi}^{2}) - U(x,y,z)
+\eenn
+Les composantes de l'impulsion dans ce syst\`{e}me de coordonn\'{e}es sont :
+\bea
+        p_{r} & = & \frac{\partial L}{\partial \dot{r}} = m\dot{r} \nonumber \\
+        p_{\theta} & = & \frac{\partial L}{\partial \dot{\theta}} = mr^{2}\dot{\theta} \nonumber \\
+	p_{\varphi} & = & \frac{\partial L}{\partial \dot{\varphi}} = mr^{2}\sin^{2}\theta\dot{\varphi} \nonumber
+\eea
+Et la fonction de Hamilton se calcule ainsi :
+\bea
+	H & = & _{r}\dot{r} + p_{\theta}\dot{\theta} + p_{\varphi}\dot{\varphi} - \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\theta}^{2} + r^{2}\sin^{2}\theta\dot{\varphi}^{2}) + U(r,\theta,\varphi) \nonumber \\
+	& = & m\dot{r}^{2} + mr^{2}\dot{\theta}^{2} + mr^{2}\sin^{2}\theta\dot{\varphi}^{2} - \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\theta}^{2} + r^{2}\sin^{2}\theta\dot{\varphi}^{2}) + U(r,\theta,\varphi) \nonumber \\
+	& = & \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\theta}^{2} + r^{2}\sin^{2}\theta\dot{\varphi}^{2}) + U(r,\theta,\varphi) \nonumber \\
+	& = & \frac{1}{2m}\left(p_{r}^{2} + \frac{p_{\theta}^{2}}{r^{2}} + \frac{p_{\varphi}^{2}}{r^{2}\sin^{2}\theta}\right) + U(r,\theta,\varphi) \nonumber
+\eea
+
+\subsection{Cas d'un syst\`{e}me anim\'{e} d'une rotation uniforme}
+
+\subsection{Cas d'un syst\`{e}me \`{a} $n+1$ particules}
+
+Nous allons ici calculer la fonction de Hamilton dans le cas o\`{u} le syst\`{e}me est compos\'{e} d'une particule de masse $M$ et de $n$ particules de masses $m$ sachant que le mouvement est rapport\'{e} au r\'{e}f\'{e}rentiel du centre d'inertie. Nous nous r\'{e}f\'{e}rons alors \`{a} la fonction de Lagrange calcul\'{e}e dans le paragraphe (\ref{PAR:13}) qui donne :
+\bea
+	L & = & \frac{m}{2}\sum_{a}\dot{\vec{r}}_{a}^{\,2} - \frac{m^{2}}{2(M + nm)}\left(\sum_{a}\dot{\vec{r}}_{a}\right)^{2} - U \nonumber \\
+	& = & \frac{m}{2}\sum_{a}\vec{v}_{a}^{\,2} - \frac{m^{2}}{2(M + nm)}\left(\sum_{a}\vec{v}_{a}\right)^{2} - U \nonumber
+\eea
