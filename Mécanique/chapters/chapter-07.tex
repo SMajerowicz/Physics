@@ -78,3 +78,39 @@ Lors du passage des relations (\ref{EQ:40_1}) \`{a} (\ref{EQ:40_3}), le temps n'
 \ee
 
 \subsection{Fonction de Routh}\label{PAR:41}
+
+Dans certains cas, pour le passage du couple de coordonn\'{e}es $(q,\dot{q})$ au couple $(q,p)$, il peut \^{e}tre utile de ne pas remplacer toutes les vitesses g\'{e}n\'{e}ralis\'{e}es par les impulsions mais seulement pour quelques unes.
+
+Pour simplifier l'\'{e}criture et la d\'{e}monstration, nous supposons d'abord que nous n'avons que deux coordonn\'{e}es $q$ et $\xi$ et nous effectuons la transformation des variables $(q,\xi,\dot{q},\dot{\xi})$ vers les variables $(q,\xi,p,\dot{\xi})$ avec $p$ l'impulsion g\'{e}n\'{e}ralis\'{e}e correspondant \`{a} la variable $q$.
+
+Le diff\'{e}rentiel de la fonction de Lagrange dans ce cas s'exprime ainsi :
+\bea
+	\mathrm{d} L & = & \frac{\partial L}{\partial q}\mathrm{d}q + \frac{\partial L}{\partial \dot{q}}\mathrm{d}\dot{q} + \frac{\partial L}{\partial \xi}\mathrm{d}\xi + \frac{\partial L}{\partial \dot{q}}\mathrm{d}\dot{\xi} \nonumber \\
+	& = & \dot{p}\mathrm{d}q + p\mathrm{d}\dot{q} + \frac{\partial L}{\partial \xi}\mathrm{d}\xi + \frac{\partial L}{\partial \dot{q}}\mathrm{d}\dot{\xi} \nonumber
+\eea
+Et :
+\benn
+	\mathrm{d}(L - p\dot{q}) = \mathrm{d}L - \dot{q}\mathrm{d}p - p\mathrm{d}\dot{q} = \dot{p}\mathrm{d}q - \dot{q}\mathrm{d}p + \frac{\partial L}{\partial \xi}\mathrm{d}\xi + \frac{\partial L}{\partial \dot{q}}\mathrm{d}\dot{\xi}
+\eenn
+Nous introduisons d\'{e}sormais la \emph{fonction de Routh} :
+\be
+	R(q,p,\xi,\dot{\xi}) = p\dot{q} - L \label{EQ:41_1}
+\ee
+Par diff\'{e}renciation, nous \'{e}crivons :
+\bea
+	\mathrm{d}R & = & p\mathrm{d}\dot{q} + \dot{q}\mathrm{d}p - \dot{p}\mathrm{d}q - p\mathrm{d}\dot{q} - \frac{\partial L}{\partial \xi}\mathrm{d}\xi - \frac{\partial L}{\partial \dot{q}}\mathrm{d}\dot{\xi} \nonumber \\
+	\Leftrightarrow \mathrm{d}R & = & -\dot{p}\mathrm{d}q + \dot{q}\mathrm{d}p - \frac{\partial L}{\partial \xi}\mathrm{d}\xi - \frac{\partial L}{\partial \dot{q}}\mathrm{d}\dot{\xi} \label{EQ:41_2}
+\eea
+et comme par d\'{e}finition de $R$, nous avons :
+\benn
+	\mathrm{d}R = \frac{\partial R}{\partial q}\mathrm{d}q + \frac{\partial L}{\partial \dot{q}}\mathrm{d}\dot{q} + \frac{\partial L}{\partial \xi}\mathrm{d}\xi + \frac{\partial L}{\partial \dot{q}}\mathrm{d}\dot{\xi}
+\eenn
+cela permet, par identification, de conclure \`{a} :
+\bea
+	\dot{q} = \frac{\partial R}{\partial p} & \text{ et } & \dot{p} = -\frac{\partial R}{\partial q} \label{EQ:41_3} \\
+	\frac{\partial R}{\partial\xi} = -\frac{\partial L}{\partial\xi} & \text{ et } & \frac{\partial R}{\partial\dot{\xi}} = -\frac{\partial L}{\partial\dot{\xi}} \label{EQ:41_4}
+\eea
+Comme l\'{e}quation de Lagrange pour la coordonn\'{e}e $\xi$ et d\'{e}finie par l'\'{e}quation (\ref{EQ:2_6}) est :
+\be
+	\frac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial L}{\partial\dot{\xi}}\right) = \frac{\partial L}{\partial\xi} \Rightarrow \frac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial R}{\partial\dot{\xi}}\right) = \frac{\partial R}{\partial\xi} \label{EQ:41_5}
+\ee
