@@ -71,3 +71,36 @@ Nous allons ici calculer la fonction de Hamilton dans le cas o\`{u} le syst\`{e}
 	L & = & \frac{m}{2}\sum_{a}\dot{\vec{r}}_{a}^{\,2} - \frac{m^{2}}{2(M + nm)}\left(\sum_{a}\dot{\vec{r}}_{a}\right)^{2} - U \nonumber \\
 	& = & \frac{m}{2}\sum_{a}\vec{v}_{a}^{\,2} - \frac{m^{2}}{2(M + nm)}\left(\sum_{a}\vec{v}_{a}\right)^{2} - U \nonumber
 \eea
+L'impulsion de la particule $a$ a pour d\'{e}finition :
+\benn
+	\vec{p}_{a} = \frac{\partial L}{\partial \vec{v}_{a}}
+\eenn
+Et en notant que :
+\benn
+	\frac{\partial(\sum_{a}\vec{v}_{a})^{2}}{\partial\vec{v}_{a}} = 2\sum_{a}\vec{v}_{a}\times\frac{\partial\vec{v}_{a}}{\partial\vec{v}_{a}} = 2\sum_{a}\vec{v}_{a}
+\eenn
+alors l'impulsion se d\'{e}veloppe ainsi :
+\benn
+	\vec{p}_{a} = m\vec{v}_{a} - \frac{m^{2}}{M + nm}\sum_{a}\vec{v}_{a} \Rightarrow \sum_{a}\vec{p}_{a} = m\sum_{a}\vec{v}_{a} - \frac{nm^{2}}{M + nm}\sum_{a}\vec{v}_{a}
+\eenn
+car $\sum_{a}(\sum_{a}\vec{v}_{a}) = n\sum_{a}\vec{v}_{a}$. Nous en d\'{e}duisons donc :
+\benn
+	\sum_{a}\vec{p}_{a} = \frac{m}{M + nm}(M + nm - nm)\sum_{a}\vec{v}_{a} = \frac{mM}{M + nm}\sum_{a}\vec{v}_{a}
+\eenn
+et :
+\benn
+	\vec{p}_{a} = m\vec{v}_{a} - \frac{m^{2}}{M + nm}\sum_{a}\vec{v}_{a} = m\vec{v}_{a} - \frac{m}{M}\sum_{a}\vec{p}_{a} \Leftrightarrow \vec{v}_{a} = \frac{\vec{p}_{a}}{m} + \frac{\sum_{a}\vec{p}_{a}}{M}
+\eenn
+\`{A} partir de tous ces \'{e}l\'{e}ments, la fonction de Lagrange devient alors en l'\'{e}crivant en fonction des impulsions :
+\bea
+	L & = & \frac{m}{2}\sum_{a}\left(\frac{\vec{p}_{a}}{m} + \frac{\sum_{a}\vec{p}_{a}}{M}\right)^{2} - \frac{m^{2}}{2(M + nm)}\left(\frac{M + nm}{mM}\sum_{a}\vec{p}_{a}\right)^{2} - U \nonumber \\
+	& = & \frac{1}{2m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{m}{2M^{2}}\sum_{a}(\sum_{a}\vec{p}_{a})^{2} + \frac{1}{M}\sum_{a}(\vec{p}_{a}\sum_{a}\vec{p}_{a}) - \frac{M + nm}{2M^{2}}(\sum_{a}\vec{p}_{a})^{2} - U \nonumber \\
+	& = & \frac{1}{2m}\sum_{a}\vec{p}_{a}^{\,2} - \frac{1}{2M}(\sum_{a}\vec{p}_{a})^{2} + \frac{1}{M}\sum_{a}(\vec{p}_{a}\sum_{a}\vec{p}_{a}) - U \nonumber
+\eea
+ce qui nous permet de calculer la fonction de Hamilton du syst\`{e}me :
+\bea
+	H & = & \sum_{a}\vec{p}_{a}\vec{v}_{a} - L \nonumber \\
+	& = & \sum_{a}\vec{p}_{a}\left(\frac{\vec{p}_{a}}{m} + \frac{\sum_{a}\vec{p}_{a}}{M}\right) - \frac{1}{2m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{1}{2M}(\sum_{a}\vec{p}_{a})^{2} - \frac{1}{M}\sum_{a}(\vec{p}_{a}\sum_{a}\vec{p}_{a}) + U \nonumber \\
+	& = & \frac{1}{m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{1}{M}\sum_{a}\left(\vec{p}_{a}\sum_{a}\vec{p}_{a}\right) - \frac{1}{2m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{1}{2M}\left(\sum_{a}\vec{p}_{a}\right)^{2} - \frac{1}{M}\sum_{a}\left(\vec{p}_{a}\sum_{a}\vec{p}_{a}\right) + U \nonumber \\
+	& = & \frac{1}{2m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{1}{2M}\left(\sum_{a}\vec{p}_{a}\right)^{2} + U \nonumber
+\eea
