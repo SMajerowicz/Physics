@@ -134,3 +134,24 @@ Ainsi, les impulsions associ\'{e}es aux coordonn\'{e}es cycliques sont constante
 	\dot{q} = \frac{\partial R(p,\xi,\dot{\xi})}{\partial p}
 \eenn
 permettant ainsi de d\'{e}terminer $q(\mathrm{t})$ par int\'{e}gration directe.
+
+\section{Crochets de Poisson}
+
+Nous consid\'{e}rons $f(q,p,\mathrm{t})$ une fonction des coordonn\'{e}es, des impulsions et du temps. Sa d\'{e}riv\'{e}e totale par rapport au temps s'\'{e}crit :
+\bea
+	\frac{\mathrm{d}f}{\mathrm{dt}} & = & \frac{\partial f}{\partial\mathrm{t}} + \sum_{k}\frac{\partial f}{\partial q_{k}}\dot{q}_{k} + \sum_{k}\frac{\partial f}{\partial p_{k}}\dot{p}_{k} \nonumber \\
+	& = & \frac{\partial f}{\partial\mathrm{t}} + \sum_{k}\left(\frac{\partial f}{\partial q_{k}}\dot{q}_{k} + \frac{\partial f}{\partial p_{k}}\dot{p}_{k}\right) \nonumber
+\eea
+En utilisant les \'{e}quations de Hamilton en (\ref{EQ:40_4}), on a :
+\benn
+	\frac{\mathrm{d}f}{\mathrm{dt}} = \frac{\partial f}{\partial\mathrm{t}} + \sum_{k}\left(\frac{\partial H}{\partial p_{k}}\frac{\partial f}{\partial q_{k}} - \frac{\partial H}{\partial q_{k}}\frac{\partial f}{\partial p_{k}}\right)
+\eenn
+que nous pouvons \'{e}crire ainsi :
+\be
+	\frac{\mathrm{d}f}{\mathrm{dt}} = \frac{\partial f}{\partial\mathrm{t}} + \{H,j\} \label{EQ:42_1}
+\ee
+en introduisant les \emph{crochets de Poisson} pour $H$ et $f$ tels que :
+\be
+	\{H,j\} = \sum_{k}\left(\frac{\partial H}{\partial p_{k}}\frac{\partial f}{\partial q_{k}} - \frac{\partial H}{\partial q_{k}}\frac{\partial f}{\partial p_{k}}\right) \label{EQ:42_2}
+\ee
+De telles fonctions des variables dynamiques qui restent constantes dans le mouvement constituent des intégrales premi\`{e}res, voir le paragraphe (\ref{PAR:6}).
