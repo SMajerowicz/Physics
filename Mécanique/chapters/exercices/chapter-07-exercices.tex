@@ -110,3 +110,29 @@ ce qui nous permet de calculer la fonction de Hamilton du syst\`{e}me :
 Il s'agit ici de trouver la fonction de Routh dans le cadre du mouvement d'une toupie sym\'{e}trique dans un champ ext\'{e}rieur $U(\varphi,\theta)$ en \'{e}liminant la coordonn\'{e}e cyclique $\psi$ sachant que $\varphi$, $\theta$ et $\psi$ sont les angles d'Euler qui ont \'{e}t\'{e} \'{e}tudi\'{e}s dans le paragraphe (\ref{PAR:35}).
 
 La fonction de Lagrange est donn\'{e}e par la r\'{e}solution de l'exercice (\ref{PAR:35_EX1}) :
+\benn
+	L = \frac{I'_{1}}{2}(\dot{\theta}^{2} + \sin^{2}\theta\dot{\varphi}^{2}) + \frac{I_{3}}{2}(\dot{\psi} + \cos\theta\dot{\varphi})^{2} - U(\theta,\varphi)
+\eenn
+La d\'{e}finition de la fonction de Routh permet d\'{e}crire pour notre cas :
+\benn
+	R = p_{\theta}\dot{\theta} + p_{\varphi}\dot{\varphi} + p_{\psi}\dot{\psi} - L
+\eenn
+Les impulsions se calculent ainsi :
+\bea
+	p_{\theta} & = & \frac{\partial L}{\partial\dot{q}_{\theta}} = I'_{1}\dot{\theta} \nonumber \\
+	p_{\varphi} & = & \frac{\partial L}{\partial\dot{q}_{\varphi}} = I'_{1}\sin^{2}\theta\dot{\varphi} + I_{3}\sin^{2}\theta\dot{\varphi} + I_{3}\cos\theta\dot{\psi} \nonumber \\
+	p_{\psi} & = & \frac{\partial L}{\partial\dot{q}_{\psi}} = I_{3}\dot{\psi} + I_{3}\cos\theta\dot{\varphi} \nonumber
+\eea
+La coordonn\'{e}e $\psi$ est cylique donc $\frac{\partial L}{\partial q_{\psi}} = 0$ et $p_{\psi} = \frac{\partial L}{\partial\dot{q}_{\psi}}$ a une valeur constante, ce qui permet d'en d\'{e}duire :
+\benn
+	\dot{\psi} = \frac{p_{\psi}}{I_{3}} - \cos\theta\dot{\varphi}
+\eenn
+Le calcul de la fonction de Routh du syst\`{e}me se r\'{e}alise ainsi :
+\bea
+	R & = & I'_{1}\dot{\theta}^{2} + I'_{1}\sin^{2}\theta\dot{\varphi}^{2} + I_{3}\cos^{2}\theta\dot{\varphi}^{2} + I_{3}\cos\theta\dot{\varphi}\dot{\psi} + p_{\psi}\dot{\psi} \nonumber \\
+	& & - \frac{I'_{1}}{2}\dot{\theta}^{2} - \frac{I'_{1}}{2}\sin^{2}\theta\dot{\varphi}^{2} - \frac{I_{3}}{2}\dot{\psi}^{2} - I_{3}\cos\theta\dot{\varphi}\dot{\psi} - \frac{I_{3}}{2}\cos^{2}\theta\dot{\varphi}^{2} + U \nonumber \\
+	& = & \frac{I'_{1}}{2}\dot{\theta}^{2} + \frac{I'_{1}}{2}\sin^{2}\theta\dot{\varphi}^{2} + \frac{I_{3}}{2}\cos^{2}\theta\dot{\varphi}^{2} + p_{\psi}\dot{\psi} - \frac{I_{3}}{2}\dot{\psi}^{2} + U \nonumber \\
+	& = & \frac{I'_{1}}{2}(\dot{\theta}^{2} + \sin^{2}\theta\dot{\varphi}^{2}) + \frac{I_{3}}{2}\cos^{2}\theta\dot{\varphi}^{2} + p_{\psi}\left(\frac{p_{\psi}}{I_{3}} - \cos\theta\dot{\varphi}\right) - \frac{I_{3}}{2}\left(\frac{p_{\psi}^{2}}{I_{3}^{2}} + \cos^{2}\theta\dot{\varphi}^{2} - 2\frac{p_{\psi}}{I_{3}}\cos\theta\dot{\varphi}\right) + U \nonumber \\
+	\Leftrightarrow R & = & \frac{I'_{1}}{2}(\dot{\theta}^{2} + \sin^{2}\theta\dot{\varphi}^{2}) + \frac{p_{\psi}^{2}}{2I_{3}} + U \nonumber
+\eea
+Nous arrivons ici \`{a} une fonction de Routh bien diff\'{e}rente de celle de la solution dans le livre de Landau ...
