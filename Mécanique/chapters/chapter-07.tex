@@ -152,6 +152,40 @@ que nous pouvons \'{e}crire ainsi :
 \ee
 en introduisant les \emph{crochets de Poisson} pour $H$ et $f$ tels que :
 \be
-	\{H,j\} = \sum_{k}\left(\frac{\partial H}{\partial p_{k}}\frac{\partial f}{\partial q_{k}} - \frac{\partial H}{\partial q_{k}}\frac{\partial f}{\partial p_{k}}\right) \label{EQ:42_2}
+	\{H,f\} = \sum_{k}\left(\frac{\partial H}{\partial p_{k}}\frac{\partial f}{\partial q_{k}} - \frac{\partial H}{\partial q_{k}}\frac{\partial f}{\partial p_{k}}\right) \label{EQ:42_2}
 \ee
-De telles fonctions des variables dynamiques qui restent constantes dans le mouvement constituent des intégrales premi\`{e}res, voir le paragraphe (\ref{PAR:6}).
+De telles fonctions des variables dynamiques qui restent constantes dans le mouvement constituent des intégrales premi\`{e}res, voir le paragraphe (\ref{PAR:6}). Dans le cas (\ref{EQ:42_1}), $f$ est int\'{e}grale premi\`{e}re du mouvement si et seulement si :
+\be
+	\frac{\mathrm{d}f}{\mathrm{dt}} = 0 \Leftrightarrow \frac{\partial f}{\partial\mathrm{t}} + \{H,f\} = 0 \label{EQ:42_3}
+\ee
+ou encore si $f$ ne d\'{e}pend pas explicitement du temps :
+\be
+	\{H,f\} = 0 \label{EQ:42_4}
+\ee
+De mani\`{e}re triviale, les crochets de Poisson de deux grandeurs quelconques vallent :
+\be
+	\{f,g\} = \sum_{k}\left(\frac{\partial f}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) \label{EQ:42_5}
+\ee
+D\'{e}terminons d\'{e}sormais quelques propri\'{e}t\'{e}s :
+\benn
+        \{f,g\} = \sum_{k}\left(\frac{\partial f}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) = - \sum_{k}\left(\frac{\partial f}{\partial q_{k}}\frac{\partial g}{\partial p_{k}} - \frac{\partial f}{\partial p_{k}}\frac{\partial g}{\partial q_{k}}\right)
+\eenn
+soit :
+\be
+	\{f,g\} = -\{f,g\} \label{EQ:42_6}
+\ee
+Si $c$ est une constante alors :
+\be
+	\forall k\text{, } \frac{\partial c}{\partial q_{k}} = \frac{\partial c}{\partial p_{k}} = 0 \Rightarrow \{f,c\} = 0 \label{EQ:42_7}
+\ee
+Par lin\'{e}arit\'{e} de la d\'{e}rivation :
+\be
+	\{f_{1} + f_{2},g\} = \{f_{1},g\} + \{f_{2},g\} \label{EQ:42_8}
+\ee
+De plus :
+\bea
+	\{f_{1}f_{2},g\} & = & \sum_{k}\left(\frac{\partial f_{1}f_{2}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f_{1}f_{2}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) \nonumber \\
+	& = & \sum_{k}\left(f_{2}\frac{\partial f_{1}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} + f_{1}\frac{\partial f_{2}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - f_{2}\frac{\partial f_{1}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}} - f_{1}\frac{\partial f_{2}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) \nonumber \\
+	& = & f_{1}\sum_{k}\left(\frac{\partial f_{2}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f_{2}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) + f_{2}\sum_{k}\left(\frac{\partial f_{1}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f_{1}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) \nonumber \\
+	\Leftrightarrow \{f_{1}f_{2},g\} & = & f_{1}\{f_{2},g\} + f_{2}\{f_{1},g\} \label{EQ:42_8}
+\eea
