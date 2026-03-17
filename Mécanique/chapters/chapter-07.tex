@@ -189,3 +189,56 @@ De plus :
 	& = & f_{1}\sum_{k}\left(\frac{\partial f_{2}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f_{2}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) + f_{2}\sum_{k}\left(\frac{\partial f_{1}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f_{1}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) \nonumber \\
 	\Leftrightarrow \{f_{1}f_{2},g\} & = & f_{1}\{f_{2},g\} + f_{2}\{f_{1},g\} \label{EQ:42_8}
 \eea
+De plus, en appliquant la d\'{e}riv\'{e}e partielle par rapport au temps :
+\bea
+	\frac{\partial\{f,g\}}{\partial\mathrm{t}} & = & \sum_{k}\left(\frac{\partial}{\partial\mathrm{t}}\left(\frac{\partial f}{\partial p_{k}}\right)\frac{\partial g}{\partial q_{k}} + \frac{\partial f}{\partial p_{k}}\frac{\partial}{\partial\mathrm{t}}\left(\frac{\partial g}{\partial q_{k}}\right) - \frac{\partial}{\partial\mathrm{t}}\left(\frac{\partial f}{\partial q_{k}}\right)\frac{\partial g}{\partial p_{k}} - \frac{\partial f}{\partial q_{k}}\frac{\partial}{\partial\mathrm{t}}\left(\frac{\partial g}{\partial p_{k}}\right)\right) \nonumber \\
+	& = & \sum_{k}\left(\frac{\partial}{\partial p_{k}}\left(\frac{\partial f}{\partial\mathrm{t}}\right)\frac{\partial g}{\partial q_{k}} - \frac{\partial}{\partial q_{k}}\left(\frac{\partial f}{\partial\mathrm{t}}\right)\frac{\partial g}{\partial p_{k}} + \frac{\partial f}{\partial p_{k}}\frac{\partial}{\partial q_{k}}\left(\frac{\partial g}{\partial\mathrm{t}}\right) - \frac{\partial f}{\partial q_{k}}\frac{\partial}{\partial p_{k}}\left(\frac{\partial g}{\partial\mathrm{t}}\right)\right) \nonumber \\
+	\Leftrightarrow \frac{\partial\{f,g\}}{\partial\mathrm{t}} & = & \left\{\frac{\partial f}{\partial\mathrm{t}},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}}\right\} \label{EQ:42:10}
+\eea
+Prenons d\'{e}sormais quelques cas particuliers en remarquant que $\forall i\text{, }\frac{\partial q_{i}}{\partial p_{i}} = 0$ et $\forall i\ne k\text{, }\frac{\partial q_{i}}{\partial q_{k}} = 0$ :
+\begin{itemize}
+	\item si $g = q_{k}$ alors :
+\be
+	\{f,q_{k}\} = \frac{\partial f}{\partial p_{k}}\frac{\partial q_{k}}{\partial q_{k}} - 0 \Leftrightarrow \{f,q_{k}\} = \frac{\partial f}{\partial p_{k}} \label{EQ:42_11}
+\ee
+	\item si $g = p_{k}$ alors :
+\be
+	\{f,p_{k}\} = 0 - \frac{\partial f}{\partial q_{k}}\frac{\partial p_{k}}{\partial p_{k}} \Leftrightarrow \{f,p_{k}\} = -\frac{\partial f}{\partial q_{k}} \label{EQ:42:12}
+\ee
+	\item par extension :
+\be
+	\begin{cases}
+		\forall i,k\text{, }\{q_{i},q_{k}\} = \frac{\partial q_{i}}{\partial p_{k}} = 0 \nonumber \\
+		\forall i,k\text{, }\{p_{i},p_{k}\} = -\frac{\partial p_{i}}{\partial p_{k}} = 0 \nonumber \\
+		\forall i,k\text{, }\{p_{i},q_{k}\} = \frac{\partial p_{i}}{\partial p_{k}} = \delta_{ik} \label{EQ:42:13}
+	\end{cases}
+\ee
+\end{itemize}
+Nous allons maintenant \'{e}tudier la relation entre les crochets de Poisson form\'{e}s par trois fonctions, \`{a} savoir : $\{f,\{g,h\}\} + \{g,\{h,f\}\} + \{h,\{g,f\}\}$ dans le cas g\'{e}n\'{e}ral d'un syst\`{e}me compos\'{e} de $n$ particules.
+Tout d'abord, calculons cette expression dans le cas particulier d'une unique particule. Le premier terme se d\'{e}veloppe ainsi :
+\bea
+	\{f,\{g,h\}\}_{n=0} & = & \frac{\partial f}{\partial p_{0}}\frac{\partial}{\partial q_{0}}\left(\frac{\partial g}{\partial p_{0}}\frac{\partial h}{\partial q_{0}} - \frac{\partial g}{\partial q_{0}}\frac{\partial h}{\partial p_{0}}\right) - \frac{\partial f}{\partial q_{0}}\frac{\partial}{\partial p_{0}}\left(\frac{\partial g}{\partial p_{0}}\frac{\partial h}{\partial q_{0}} - \frac{\partial g}{\partial q_{0}}\frac{\partial h}{\partial p_{0}}\right) \nonumber \\
+	& = & \frac{\partial f}{\partial p_{0}}\left(\frac{\partial^{2}g}{\partial q_{0}\partial p_{0}}\frac{\partial h}{\partial q_{0}} + \frac{\partial g}{\partial p_{0}}\frac{\partial^{2}h}{\partial q_{0}^{2}} - \frac{\partial^{2}g}{\partial q_{0}^{2}}\frac{\partial h}{\partial p_{0}} - \frac{\partial g}{\partial q_{0}}\frac{\partial^{2}h}{\partial q_{0}p_{0}}\right) \nonumber \\
+	& & -\frac{\partial f}{\partial q_{0}}\left(\frac{\partial^{2}g}{\partial p_{0}^{2}}\frac{\partial h}{\partial q_{0}} + \frac{\partial g}{\partial p_{0}}\frac{\partial^{2}h}{\partial q_{0}p_{0}} - \frac{\partial^{2}g}{\partial q_{0}p_{0}}\frac{\partial h}{\partial p_{0}} - \frac{\partial g}{\partial q_{0}}\frac{\partial^{2}h}{\partial p_{0}^{2}}\right) \nonumber
+\eea
+Le deuxi\`{e}me terme se d\'{e}veloppe ainsi :
+\bea
+	\{g,\{h,f\}\}_{n=0} & = & \frac{\partial g}{\partial p_{0}}\frac{\partial}{\partial q_{0}}\left(\frac{\partial h}{\partial p_{0}}\frac{\partial f}{\partial q_{0}} - \frac{\partial h}{\partial q_{0}}\frac{\partial f}{\partial p_{0}}\right) - \frac{\partial g}{\partial q_{0}}\frac{\partial}{\partial p_{0}}\left(\frac{\partial h}{\partial p_{0}}\frac{\partial f}{\partial q_{0}} - \frac{\partial h}{\partial q_{0}}\frac{\partial f}{\partial p_{0}}\right) \nonumber \\
+        & = & \frac{\partial g}{\partial p_{0}}\left(\frac{\partial^{2}h}{\partial q_{0}\partial p_{0}}\frac{\partial f}{\partial q_{0}} + \frac{\partial h}{\partial p_{0}}\frac{\partial^{2}f}{\partial q_{0}^{2}} - \frac{\partial^{2}h}{\partial q_{0}^{2}}\frac{\partial f}{\partial p_{0}} - \frac{\partial h}{\partial q_{0}}\frac{\partial^{2}f}{\partial q_{0}p_{0}}\right) \nonumber \\
+        & & -\frac{\partial g}{\partial q_{0}}\left(\frac{\partial^{2}h}{\partial p_{0}^{2}}\frac{\partial f}{\partial q_{0}} + \frac{\partial h}{\partial p_{0}}\frac{\partial^{2}f}{\partial q_{0}p_{0}} - \frac{\partial^{2}h}{\partial q_{0}p_{0}}\frac{\partial f}{\partial p_{0}} - \frac{\partial h}{\partial q_{0}}\frac{\partial^{2}f}{\partial p_{0}^{2}}\right) \nonumber
+\eea
+Et enfin le troisi\`{e}me crochet :
+\bea
+        \{h,\{f,g\}\}_{n=0} & = & \frac{\partial h}{\partial p_{0}}\frac{\partial}{\partial q_{0}}\left(\frac{\partial f}{\partial p_{0}}\frac{\partial g}{\partial q_{0}} - \frac{\partial f}{\partial q_{0}}\frac{\partial g}{\partial p_{0}}\right) - \frac{\partial h}{\partial q_{0}}\frac{\partial}{\partial p_{0}}\left(\frac{\partial f}{\partial p_{0}}\frac{\partial g}{\partial q_{0}} - \frac{\partial f}{\partial q_{0}}\frac{\partial g}{\partial p_{0}}\right) \nonumber \\
+        & = & \frac{\partial h}{\partial p_{0}}\left(\frac{\partial^{2}f}{\partial q_{0}\partial p_{0}}\frac{\partial g}{\partial q_{0}} + \frac{\partial f}{\partial p_{0}}\frac{\partial^{2}g}{\partial q_{0}^{2}} - \frac{\partial^{2}f}{\partial q_{0}^{2}}\frac{\partial g}{\partial p_{0}} - \frac{\partial f}{\partial q_{0}}\frac{\partial^{2}g}{\partial q_{0}p_{0}}\right) \nonumber \\
+        & & -\frac{\partial h}{\partial q_{0}}\left(\frac{\partial^{2}f}{\partial p_{0}^{2}}\frac{\partial g}{\partial q_{0}} + \frac{\partial f}{\partial p_{0}}\frac{\partial^{2}g}{\partial q_{0}p_{0}} - \frac{\partial^{2}f}{\partial q_{0}p_{0}}\frac{\partial g}{\partial p_{0}} - \frac{\partial f}{\partial q_{0}}\frac{\partial^{2}g}{\partial p_{0}^{2}}\right) \nonumber
+\eea
+et nous remarquons que pour la somme des trois \'{e}l\'{e}ments, tous les termes s'annulent deux \`{a} deux et :
+\benn
+	\{f,\{g,h\}\}_{n=0} = 0
+\eenn
+Cette identit\'{e} est valable pour n'importe quel syst\`{e}me n'ayant qu'une unique particule.
+En proc\'{e}dant de la m\^{e}me mani\`{e}re, le calcul de la diff\'{e}rence $\{f,\{g,h\}\}_{n+1} - \{f,\{g,h\}\}_{n}$ donne la valeur du crochet de Poisson pour la particule identifi\'{e}e $n+1$ qui est nulle, comme d\'{e}montr\'{e}e pr\'{e}c\'{e}demment. Nous pouvons donc en conclure que :
+\be
+	\{f,\{g,h\}\} + \{g,\{h,f\}\} + \{h,\{g,f\}\} = 0 \label{EQ:42_14}
+\ee
