@@ -136,3 +136,26 @@ Le calcul de la fonction de Routh du syst\`{e}me se r\'{e}alise ainsi :
 	\Leftrightarrow R & = & \frac{I'_{1}}{2}(\dot{\theta}^{2} + \sin^{2}\theta\dot{\varphi}^{2}) + \frac{p_{\psi}^{2}}{2I_{3}} + U \nonumber
 \eea
 Nous arrivons ici \`{a} une fonction de Routh bien diff\'{e}rente de celle de la solution dans le livre de Landau ...
+
+\section{Crochets de Poisson}
+
+\subsection{Impulsion et moment cin\'{e}tique}
+
+Nous allons ici d\'{e}terminer les crochets de Poisson pour l'impulsion $\vec{p}$ et le moment cin\'{e}tique $\vec{M}$ en composantes cart\'{e}siennes. Par d\'{e}finition, le moment cin\'{e}tique vaut :
+\benn
+	\vec{M} = \vec{r}\wedge\vec{p} = \begin{pmatrix} yp_{z} - zp_{y} \\ zp_{x} - xp_{z} \\ xp_{y} - yp_{x} \end{pmatrix}
+\eenn
+donc :
+\bea
+	\{M_{x},p_{x}\} & = & \frac{\partial M_{x}}{\partial p_{x}}\frac{\partial p_{x}}{\partial x} - \frac{\partial M_{x}}{\partial x}\frac{\partial p_{x}}{\partial p_{x}} + \frac{\partial M_{x}}{\partial p_{y}}\frac{\partial p_{x}}{\partial y} - \frac{\partial M_{x}}{\partial y}\frac{\partial p_{x}}{\partial p_{y}} + \frac{\partial M_{x}}{\partial p_{z}}\frac{\partial p_{x}}{\partial z} - \frac{\partial M_{x}}{\partial z}\frac{\partial p_{x}}{\partial p_{z}} \nonumber \\
+	& = & -\frac{\partial M_{x}}{\partial x} = 0 \nonumber \\
+	\{M_{x},p_{y}\} & = & \frac{\partial M_{x}}{\partial p_{x}}\frac{\partial p_{y}}{\partial x} - \frac{\partial M_{x}}{\partial x}\frac{\partial p_{y}}{\partial p_{x}} + \frac{\partial M_{x}}{\partial p_{y}}\frac{\partial p_{y}}{\partial y} - \frac{\partial M_{x}}{\partial y}\frac{\partial p_{y}}{\partial p_{y}} + \frac{\partial M_{x}}{\partial p_{z}}\frac{\partial p_{y}}{\partial z} - \frac{\partial M_{x}}{\partial z}\frac{\partial p_{y}}{\partial p_{z}} \nonumber \\
+	& = & -\frac{\partial M_{x}}{\partial y} = -p_{z} \nonumber \\
+	\{M_{x},p_{z}\} & = & \frac{\partial M_{x}}{\partial p_{x}}\frac{\partial p_{z}}{\partial x} - \frac{\partial M_{x}}{\partial x}\frac{\partial p_{z}}{\partial p_{x}} + \frac{\partial M_{x}}{\partial p_{y}}\frac{\partial p_{z}}{\partial y} - \frac{\partial M_{x}}{\partial y}\frac{\partial p_{z}}{\partial p_{y}} + \frac{\partial M_{x}}{\partial p_{z}}\frac{\partial p_{z}}{\partial z} - \frac{\partial M_{x}}{\partial z}\frac{\partial p_{z}}{\partial p_{z}} \nonumber \\ 
+        & = & -\frac{\partial M_{x}}{\partial z} = 0 \nonumber
+\eea
+Par rotation des indices, nous arrivons \`{a} :
+\bea
+	\{M_{y},p_{x}\} & = & -\frac{\partial M_{y}}{\partial x} = p_{z}\text{, }\{M_{y},p_{y}\} = -\frac{\partial M_{y}}{\partial y} = 0\text{ et }\{M_{y},p_{z}\} = -\frac{\partial M_{y}}{\partial z} = -p_{x} \nonumber \\
+	\{M_{z},p_{x}\} & = & -\frac{\partial M_{z}}{\partial x} = p_{y}\text{, }\{M_{z},p_{y}\} = -\frac{\partial M_{z}}{\partial y} = -p_{x}\text{ et }\{M_{z},p_{z}\} = -\frac{\partial M_{z}}{\partial z} = 0 \nonumber
+\eea
