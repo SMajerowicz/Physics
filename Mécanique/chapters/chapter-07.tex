@@ -187,13 +187,13 @@ De plus :
 	\{f_{1}f_{2},g\} & = & \sum_{k}\left(\frac{\partial f_{1}f_{2}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f_{1}f_{2}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) \nonumber \\
 	& = & \sum_{k}\left(f_{2}\frac{\partial f_{1}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} + f_{1}\frac{\partial f_{2}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - f_{2}\frac{\partial f_{1}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}} - f_{1}\frac{\partial f_{2}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) \nonumber \\
 	& = & f_{1}\sum_{k}\left(\frac{\partial f_{2}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f_{2}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) + f_{2}\sum_{k}\left(\frac{\partial f_{1}}{\partial p_{k}}\frac{\partial g}{\partial q_{k}} - \frac{\partial f_{1}}{\partial q_{k}}\frac{\partial g}{\partial p_{k}}\right) \nonumber \\
-	\Leftrightarrow \{f_{1}f_{2},g\} & = & f_{1}\{f_{2},g\} + f_{2}\{f_{1},g\} \label{EQ:42_8}
+	\Leftrightarrow \{f_{1}f_{2},g\} & = & f_{1}\{f_{2},g\} + f_{2}\{f_{1},g\} \label{EQ:42_9}
 \eea
 De plus, en appliquant la d\'{e}riv\'{e}e partielle par rapport au temps :
 \bea
 	\frac{\partial\{f,g\}}{\partial\mathrm{t}} & = & \sum_{k}\left(\frac{\partial}{\partial\mathrm{t}}\left(\frac{\partial f}{\partial p_{k}}\right)\frac{\partial g}{\partial q_{k}} + \frac{\partial f}{\partial p_{k}}\frac{\partial}{\partial\mathrm{t}}\left(\frac{\partial g}{\partial q_{k}}\right) - \frac{\partial}{\partial\mathrm{t}}\left(\frac{\partial f}{\partial q_{k}}\right)\frac{\partial g}{\partial p_{k}} - \frac{\partial f}{\partial q_{k}}\frac{\partial}{\partial\mathrm{t}}\left(\frac{\partial g}{\partial p_{k}}\right)\right) \nonumber \\
 	& = & \sum_{k}\left(\frac{\partial}{\partial p_{k}}\left(\frac{\partial f}{\partial\mathrm{t}}\right)\frac{\partial g}{\partial q_{k}} - \frac{\partial}{\partial q_{k}}\left(\frac{\partial f}{\partial\mathrm{t}}\right)\frac{\partial g}{\partial p_{k}} + \frac{\partial f}{\partial p_{k}}\frac{\partial}{\partial q_{k}}\left(\frac{\partial g}{\partial\mathrm{t}}\right) - \frac{\partial f}{\partial q_{k}}\frac{\partial}{\partial p_{k}}\left(\frac{\partial g}{\partial\mathrm{t}}\right)\right) \nonumber \\
-	\Leftrightarrow \frac{\partial\{f,g\}}{\partial\mathrm{t}} & = & \left\{\frac{\partial f}{\partial\mathrm{t}},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}}\right\} \label{EQ:42:10}
+	\Leftrightarrow \frac{\partial\{f,g\}}{\partial\mathrm{t}} & = & \left\{\frac{\partial f}{\partial\mathrm{t}},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}}\right\} \label{EQ:42_10}
 \eea
 Prenons d\'{e}sormais quelques cas particuliers en remarquant que $\forall i\text{, }\frac{\partial q_{i}}{\partial p_{i}} = 0$ et $\forall i\ne k\text{, }\frac{\partial q_{i}}{\partial q_{k}} = 0$ :
 \begin{itemize}
@@ -242,3 +242,27 @@ En proc\'{e}dant de la m\^{e}me mani\`{e}re, le calcul de la diff\'{e}rence $\{f
 \be
 	\{f,\{g,h\}\} + \{g,\{h,f\}\} + \{h,\{g,f\}\} = 0 \label{EQ:42_14}
 \ee
+qui est \emph{l'identit\'{e} de Jacobi}.
+
+Une propri\'{e}t\'{e} importante des crochets de Poisson consiste en ce que, si $f$ et $g$ sont deux int\'{e}grales premi\`{e}res du mouvement alors leurs crochets de Poisson l'est aussi. C'est la \emph{th\'{e}or\`{e}me de Poisson}. Pour le d\'{e}motrer, nous commen\c{c}ons par appliquer l'identi\'{e} de Jacobi (\ref{EQ:42_14}) en identifiant $h$ \`{a} la fonction de Hamilton $H$, soit :
+\benn
+	\{f,\{g,H\}\} + \{g,\{H,f\}\} + \{H,\{g,f\}\} = 0
+\eenn
+La d\'{e}finition (\ref{EQ:42_1}) donne :
+\benn
+	\frac{\mathrm{d}}{\mathrm{dt}}\left(\{f,g\}\right) = \frac{\partial}{\partial\mathrm{t}}\left(\{f,g\}\right) + \{H,\{f,g\}\} = \left\{\frac{\partial f}{\partial\mathrm{t}},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}}\right\} + \{H,\{f,g\}\}
+\eenn
+par application de la formule (\ref{EQ:42_10}). L'identi\'{e} (\ref{EQ:42_14}) permet de d\'{e}velopper la relation pr\'{e}c\'{e}dente telle que :
+\bea
+	\frac{\mathrm{d}}{\mathrm{dt}}\left(\{f,g\}\right) & = & \left\{\frac{\partial f}{\partial\mathrm{t}},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}}\right\} - \{f,\{g,H\}\} - \{g,\{H,f\}\} \nonumber \\
+	& = & \left\{\frac{\partial f}{\partial\mathrm{t}},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}}\right\} + \{\{H,g\},f\} + \{\{H,f\},g\} \nonumber \\
+	& = & \left\{\frac{\partial f}{\partial\mathrm{t}} + \{H,f\},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}} + \{H,g\}\right\} \nonumber \\
+	\Leftrightarrow \frac{\mathrm{d}}{\mathrm{dt}}\left(\{f,g\}\right) & = & \left\{\frac{\mathrm{d}f}{\mathrm{dt}},g\right\} + \left\{f,\frac{\mathrm{d}g}{\mathrm{dt}}\right\} \label{EQ:42_16}
+\eea
+Or $f$ et $g$ sont des int\'{e}grales premi\`{e}res, i.e. $\frac{\mathrm{d}f}{\mathrm{dt}} = \frac{\mathrm{d}g}{\mathrm{dt}} = 0$ donc :
+\benn
+	\frac{\mathrm{d}}{\mathrm{dt}}\left(\{f,g\}\right) = 0
+\eenn
+$\{f,g\}$ est donc bien une int\'{e}grale premi\`{e}re si $f$ et $g$ le sont aussi. Ce th\'{e}or\`{e}me s'applique \'{e}galement si $f$ et $g$ ne d\'{e}pendent pas explicitement du temps.
+
+Enfin et parce que dans un syst\`{e}me fini compos\'{e} de $s$ degr\'{e} de libert\'{e}, le nombre maximal d'int\'{e}grales premi\`{e}res est de $2s - 1$, voir le paragraphe (\ref{PAR:6}), alors le th\'{e}or\`{e}me de Poisson ne permet donc pas toujours d'obtenir de nouvelles int\'{e}grales premi\`{e}res.
