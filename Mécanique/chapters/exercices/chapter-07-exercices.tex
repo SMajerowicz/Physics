@@ -176,6 +176,47 @@ Par application de la d\'{e}fintion des crochets de Poisson, voir (\ref{EQ:42_1}
         & = & -M_{y} \nonumber
 \eea
 
-\subsection{Crochets de Poisson entre une fonction scalaire et le moment cin\'{e}tique}
+\subsection{Crochets de Poisson entre une fonction scalaire et le moment cin\'{e}tique}\label{PAR:42_EX2}
 
 \subsection{Crochets de Poisson entre une fonction vectorielle et le moment cin\'{e}tique}
+
+Soit $\vec{f}$ une fonction vectorielle des coordonn\'{e}es et de l'impulsion d'une particule et $\vec{i}$, $\vec{j}$ et $\vec{k}$ les vecteurs unitaires respectivement pour les axes $x$, $y$ et $z$. La fonction $\vec{f}$ peut se d\'{e}composer de cette mani\`{e}re dans le r\'{e}f\'{e}rentiel des coordonn\'{e}es cart\'{e}siennes car $\vec{r}$, $\vec{p}$ et $\vec{r}\wedge\vec{p}$ sont orthogonaux entre eux :
+\benn
+	\vec{f} = f_{1}\vec{r} + f_{2}\vec{p} + f_{3}\vec{r}\wedge\vec{p}
+\eenn
+avec $f_{1}$, $f_{2}$ et $f_{3}$ trois fonctions scalaires des coordonn\'{e}es et de l'impulsion.
+
+Nous rappelons que :
+\begin{itemize}
+	\item le moment cin\'{e}tique $\vec{M}$ vaut exactement $\vec{r}\wedge\vec{p}$, soit :
+\benn
+	\vec{M} = \begin{pmatrix} yp_{z} - zp_{y} \\ zp_{x} - xp_{z} \\ xp_{y} - yp_{x}  \end{pmatrix}
+\eenn
+	\item en conclusion de l'exercice pr\'{e}c\'{e}dent (\ref{PAR:42_EX2}), soit $f$ une fonction scalaire des coordonn\'{e}es et de l'impulsion, alors $\{f,M_{z}\} = 0$
+\end{itemize}
+Nous pouvons donc d\'{e}velopper la quantit\'{e} en appliquant la lin\'{e}arit\'{e} des crochets de Poisson, voir (\ref{EQ:42_8}) puis la formule (\ref{EQ:42_9}) :
+\bea
+	\{\vec{f},M_{z}\} & = & \{f_{1}\vec{r},M_{z}\} + \{f_{2}\vec{p},M_{z}\} + \{f_{3}\vec{r}\wedge\vec{p},M_{z}\} \nonumber \\
+	& = & f_{1}\{\vec{r},M_{z}\} + \vec{r}\{f_{1},M_{z}\} + f_{2}\{\vec{p},M_{z}\} + \vec{p}\{f_{2},M_{z}\} + f_{3}\{\vec{r}\wedge\vec{p},M_{z}\} + \vec{r}\wedge\vec{p}\{f_{3},M_{z}\} \nonumber
+\eea
+Et en suivant le second rappel plus haut, soit $\{f_{1},M_{z}\} = \{f_{2},M_{z}\} = \{f_{3},M_{z}\} = 0$, nous avons :
+\benn
+	\{\vec{f},M_{z}\} = f_{1}\{\vec{r},M_{z}\} + f_{2}\{\vec{p},M_{z}\} + f_{3}\{\vec{r}\wedge\vec{p},M_{z}\}
+\eenn
+En appliquant la formule (\ref{EQ:42_11}), nous pouvons \'{e}crire :
+\benn
+	\{\vec{r},M_{z}\} = -\frac{\partial M_{z}}{\partial\vec{p}} = -\frac{\partial M_{z}}{\partial p_{x}}\vec{i} - \frac{\partial M_{z}}{\partial p_{y}}\vec{j} - \frac{\partial M_{z}}{\partial p_{z}}\vec{k} = y\vec{i} - x\vec{j}
+\eenn
+En appliquant, cette fois-ci, la formule (\ref{EQ:42_12}) :
+\benn
+	\{\vec{p},M_{z}\} = \frac{\partial M_{z}}{\partial\vec{r}} = \frac{\partial M_{z}}{\partial x}\vec{i} + \frac{\partial M_{z}}{\partial y}\vec{j} + \frac{\partial M_{z}}{\partial z}\vec{k} = p_{y}\vec{i} - p_{x}\vec{j}
+\eenn
+Nous devons maintenant calculer la quantit\'{e} :
+\benn
+	\{\vec{M},M_{z}\} = \frac{\partial\vec{M}}{\partial p_{x}}\frac{\partial M_{z}}{\partial x} - \frac{\partial\vec{M}}{\partial x}\frac{\partial M_{z}}{\partial p_{x}} + \frac{\partial\vec{M}}{\partial p_{y}}\frac{\partial M_{z}}{\partial y} - \frac{\partial\vec{M}}{\partial y}\frac{\partial M_{z}}{\partial p_{y}} + \frac{\partial\vec{M}}{\partial p_{z}}\frac{\partial M_{z}}{\partial z} - \frac{\partial\vec{M}}{\partial z}\frac{\partial M_{z}}{\partial p_{z}}
+\eenn
+sachant qu'avec la d\'{e}composition de $\vec{M}$, nous pouvons en d\'{e}duire :
+\bea
+	\frac{\partial\vec{M}}{\partial x} & = & -p_{z}\vec{j} + p_{y}\vec{k} \text{, } \frac{\partial\vec{M}}{\partial y} = p_{z}\vec{i} - p_{x}\vec{k} \text{ et } \frac{\partial\vec{M}}{\partial z} = -p_{y}\vec{i} + p_{x}\vec{j} \nonumber \\
+	\frac{\partial\vec{M}}{\partial p_{x}} & = & z\vec{j} - y\vec{k} \text{, } \frac{\partial\vec{M}}{\partial p_{y}} = -z\vec{i} + x\vec{k} \text{ et } \frac{\partial\vec{M}}{\partial p_{z}} = y\vec{i} - x\vec{j} \nonumber
+\eea
