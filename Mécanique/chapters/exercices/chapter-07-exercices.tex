@@ -159,3 +159,23 @@ Par rotation des indices, nous arrivons \`{a} :
 	\{M_{y},p_{x}\} & = & -\frac{\partial M_{y}}{\partial x} = p_{z}\text{, }\{M_{y},p_{y}\} = -\frac{\partial M_{y}}{\partial y} = 0\text{ et }\{M_{y},p_{z}\} = -\frac{\partial M_{y}}{\partial z} = -p_{x} \nonumber \\
 	\{M_{z},p_{x}\} & = & -\frac{\partial M_{z}}{\partial x} = p_{y}\text{, }\{M_{z},p_{y}\} = -\frac{\partial M_{z}}{\partial y} = -p_{x}\text{ et }\{M_{z},p_{z}\} = -\frac{\partial M_{z}}{\partial z} = 0 \nonumber
 \eea
+
+\subsection{Crochets de Poisson des composantes du moment cin\'{e}tique}
+
+Par application de la d\'{e}fintion des crochets de Poisson, voir (\ref{EQ:42_1}) :
+\bea
+	\{M_{x},M_{x}\} & = & 0 \nonumber \\
+	\{M_{x},M_{y}\} & = & \frac{\partial M_{x}}{\partial p_{x}}\frac{\partial M_{y}}{\partial x} - \frac{\partial M_{x}}{\partial x}\frac{\partial M_{y}}{\partial p_{x}} + \frac{\partial M_{x}}{\partial p_{y}}\frac{\partial M_{y}}{\partial y} - \frac{\partial M_{x}}{\partial y}\frac{\partial M_{y}}{\partial p_{y}} + \frac{\partial M_{x}}{\partial p_{z}}\frac{\partial M_{y}}{\partial z} - \frac{\partial M_{x}}{\partial z}\frac{\partial M_{y}}{\partial p_{z}} \nonumber \\
+	& = & 0 - 0 + 0 - 0 + yp_{x} - (-p_{y})(-x) \nonumber \\
+        & = & -M_{z} \nonumber \\
+	\{M_{y},M_{z}\} & = & \frac{\partial M_{y}}{\partial p_{x}}\frac{\partial M_{z}}{\partial x} - \frac{\partial M_{y}}{\partial x}\frac{\partial M_{z}}{\partial p_{x}} + \frac{\partial M_{y}}{\partial p_{y}}\frac{\partial M_{z}}{\partial y} - \frac{\partial M_{y}}{\partial y}\frac{\partial M_{z}}{\partial p_{y}} + \frac{\partial M_{y}}{\partial p_{z}}\frac{\partial M_{z}}{\partial z} - \frac{\partial M_{y}}{\partial z}\frac{\partial M_{y}}{\partial p_{z}} \nonumber \\
+	& = & zp_{y} - (-p_{z})(-y) + 0 - 0 + 0 - 0 \nonumber \\
+        & = & -M_{x} \nonumber \\
+	\{M_{z},M_{x}\} & = & \frac{\partial M_{z}}{\partial p_{x}}\frac{\partial M_{x}}{\partial x} - \frac{\partial M_{z}}{\partial x}\frac{\partial M_{x}}{\partial p_{x}} + \frac{\partial M_{z}}{\partial p_{y}}\frac{\partial M_{x}}{\partial y} - \frac{\partial M_{z}}{\partial y}\frac{\partial M_{x}}{\partial p_{y}} + \frac{\partial M_{z}}{\partial p_{z}}\frac{\partial M_{x}}{\partial z} - \frac{\partial M_{z}}{\partial z}\frac{\partial M_{x}}{\partial p_{z}} \nonumber \\
+	& = & 0 - 0 + xp_{z} - (-p_{x})(-z) \nonumber \\
+        & = & -M_{y} \nonumber
+\eea
+
+\subsection{Crochets de Poisson entre une fonction scalaire et le moment cin\'{e}tique}
+
+\subsection{Crochets de Poisson entre une fonction vectorielle et le moment cin\'{e}tique}
