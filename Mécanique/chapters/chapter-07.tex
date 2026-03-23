@@ -300,3 +300,53 @@ et par voie de cons\'{e}quence :
 \ee
 
 \subsection{Cas o\`{u} la dur\'{e}e du mouvement est variable}
+
+De fa\c{c}on analogue, nous pouvons envisager l'action comme fonction explicite du temps. Dans ce cas, nous consid\'{e}rons les trajectoires partant \`{a} un instant donn\'{e} $\mathrm{t}_{1}$ d'une position $q^{(1)}$ pour aboutir \`{a} une position donn\'{e}e $q^{(2)}$ \`{a} des instants diff\'{e}rents $\mathrm{t}_{2} = \mathrm{t}$. $\frac{\partial S}{\partial\mathrm{t}}$ peut \^{e}tre d\'{e}termin\'{e}e au moyen d'une variation appropri\'{e}e de l'int\'{e}grale de la relation (\ref{EQ:2_5}).
+
+Par d\'{e}finition de l'action, voir la formule (\ref{EQ:2_1}), sa d\'{e}riv\'{e}e totale par rapport au temps le long des trajectoires vaut :
+\be
+	\frac{\mathrm{d}S}{\mathrm{dt}} = L \label{EQ:43_4}
+\ee
+Or :
+\benn
+	\frac{\mathrm{d}S}{\mathrm{dt}} = \frac{\partial S}{\partial\mathrm{t}} + \sum_{i}\frac{\partial S}{\partial q_{i}}\frac{\mathrm{d}q_{i}}{\mathrm{dt}}
+\eenn
+puisque, ici, $S$ n'est fonction que des coordonn\'{e}es. En appliquant la relation (\ref{EQ:43_3}), nous \'{e}crivons :
+\bea
+	\frac{\mathrm{d}S}{\mathrm{dt}} & = & \frac{\partial S}{\partial\mathrm{t}} + \sum_{i}p_{i}\dot{q}_{i} \Leftrightarrow \frac{\partial S}{\partial\mathrm{t}} = L - \sum_{i}p_{i}\dot{q}_{i} \nonumber \\
+	\Leftrightarrow \frac{\partial S}{\partial\mathrm{t}} & = & -H \label{EQ:43_5}
+\eea
+qui est en accord avec la d\'{e}finition de la fonction de Hamilton $H$ de la formule (\ref{EQ:40_2}).
+
+En prenant l'\'{e}galit\'{e} (\ref{EQ:43_3}), nous obtenons finalement :
+\bea
+	\frac{\mathrm{d}S}{\mathrm{dt}} & = & -H + \sum_{i}p_{i}\dot{q}_{i} = -H + \sum_{i}p_{i}\frac{\mathrm{d}q_{i}}{\mathrm{dt}} \nonumber \\
+	\Leftrightarrow \mathrm{d}S & = & \sum_{i}p_{i}\mathrm{d}q_{i} - H\mathrm{dt} \label{EQ:43_6}
+\eea
+qui donne la diff\'{e}rentielle totale de l'action comme fonction des coordonn\'{e}es et du temps \`{a} la limite sup\'{e}rieure de l'inté\'{e}grale (\ref{EQ:43_1}).
+
+\subsection{Cas o\`{u} les coordonn\'{e}es initiale et finale et le temps sont variables}
+
+Nous nous mettons dans le cadre o\`{u} les coordonn\'{e}es et le temps varient au d\'{e}but et \`{a} la fin du mouvement. La variation de l'action est donn\'{e}e par la diff\'{e}rence aux deux extremit\'{e}s de la relation (\ref{EQ:43_6}), soit :
+\be
+	\mathrm{d}S = \sum_{i}p_{i}^{(2)}\mathrm{d}q_{i}^{(2)} - H^{(2)}\mathrm{dt}^{(2)} - \sum_{i}p_{i}^{(1)}\mathrm{d}q_{i}^{(1)} + H^{(1)}\mathrm{dt}^{(1)} \label{EQ:43_7}
+\ee
+Quelle que soit l'action ext\'{e}rieure qui pourrait s'exercer sur le syst\`{e}me pedant son mouvement, l'\'{e}tat final du syst\`{e}me n'est pas une fonction arbitraire de son \'{e}tat initial. Seules sont possibles les trajectoires pour lesquelles la relation (\ref{EQ:43_7}) est une diff\'{e}rentielle totale exacte.
+
+De plus, le principe de moindre action, ind\'{e}pendamment de la fonction de Lagrange, impose \`{a} l'ensemble des trajectoires possibles des limites bien d\'{e}termin\'{e}es.
+
+\subsection{D\'{e}duction des \'{e}quations de Hamilton}
+
+L'int\'{e}grale (\ref{EQ:43_6}) permet d'\'{e}crire :
+\be
+	S = \int{\left(\sum_{i}p_{i}\mathrm{d}q_{i} - H\mathrm{dt}\right)} \label{EQ:43_8}
+\ee
+qui suppose que les coordonn\'{e}es et les impulsions sont des grandeurs ind\'{e}pendantes. Nous simplifions par la suite avec une coordonn\'{e}e et une impulsion :
+\benn
+	S = \int{\left(p\mathrm{d}q - H\mathrm{dt}\right)}
+\eenn
+et sa variation devient :
+\benn
+	\delta S = \int{\left(\delta p\mathrm{d}q + p\mathrm{d}(\delta q) - \delta H\mathrm{dt}\right)}
+\eenn
+car $\mathrm{d}(\delta\mathrm{t}) = 0$
