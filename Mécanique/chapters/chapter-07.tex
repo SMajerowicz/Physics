@@ -273,3 +273,30 @@ Or $f$ et $g$ sont des int\'{e}grales premi\`{e}res, i.e. $\frac{\mathrm{d}f}{\m
 $\{f,g\}$ est donc bien une int\'{e}grale premi\`{e}re si $f$ et $g$ le sont aussi. Ce th\'{e}or\`{e}me s'applique \'{e}galement si $f$ et $g$ ne d\'{e}pendent pas explicitement du temps.
 
 Enfin et parce que dans un syst\`{e}me fini compos\'{e} de $s$ degr\'{e} de libert\'{e}, le nombre maximal d'int\'{e}grales premi\`{e}res est de $2s - 1$, voir le paragraphe (\ref{PAR:6}), alors le th\'{e}or\`{e}me de Poisson ne permet donc pas toujours d'obtenir de nouvelles int\'{e}grales premi\`{e}res.
+
+\section{L'action en fonction des coordonn\'{e}es}
+
+L'action d\'{e}finie dans la relation (\ref{EQ:2_1}) est l'int\'{e}grale de la fonction de Lagrange du syst\`{e}me m\'{e}canique :
+\be
+	S = \int_{t_{1}}^{t_{2}}L\mathrm{dt} \label{EQ:43_1}
+\ee
+prise le long de la trajectoire entre deux positoins donn\'{e}es $q^{(1)}$ et $q^{(2)}$ occup\'{e}es par le syst\`{e}me aux instants $\mathrm{t}_{1}$ et $\mathrm{t}_{2}$. La comparaison des vlaurs de l'int\'{e}grale pour des trajectoires voisines ayant les m\^{e}mes limites $q(\mathrm{t}_{1})$ et $q(\mathrm{t}_{2})$ fait varier l'action. Une seule de ces trajectoires correspond au mouvement r\'{e}el, c'est celle pour laquelle l'action $S$ est minimum.
+
+\subsection{Cas o\`{u} seule la coordonn\'{e}e finale est variable}
+
+Nous allons d\'{e}sormais d\'{e}termine l'action $S$ comme une grandeur caract\'{e}risant le mouvement le long de trajectoires r\'{e}elles. Nous comparerons alors les valeurs de $S$ pour des trajectoires ayant une origine commune $q_{1} = q(\mathrm{t}_{1})$ mais passant \`{a} l'instant $\mathrm{t}_{2}$ par des positions diff\'{e}rentes. En d'autres termes, nous consid\'{e}rerons l'int\'{e}grale d'action pour des trajectoires r\'{e}elles comme fonction des coordonn\'{e}es \`{a} la limite sup\'{e}rieure d'int\'{e}gration.
+
+La variation de l'action lorsque nous passons d'une trajectoire \`{a} une trajectoire voisine est donn\'{e}e pour un seul degr\'{e} de libert\'{e} par la relation (\ref{EQ:2_5}) :
+\benn
+	\delta S = \left[\frac{\partial L}{\partial\dot{q}}\delta q\right]_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} - \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}}{\left(\frac{\partial L}{\partial q} - \frac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial L}{\partial\dot{q}}\right)\right)\delta q\mathrm{dt}}
+\eenn
+Puisque les trajectoires r\'{e}elles satisfont aux \'{e}quations de Lagrange alors l'int\'{e}grale de la relation pr\'{e}c\'{e}dente s'annule. Posons d\'{e}sormais $\delta q(\mathrm{t}_{1}) = 0$ et $\delta q(\mathrm{t}_{2}) = \delta q$ et puisque l'\'{e}quation d\'{e}finissant l'impulsion donne $p = \frac{\partial L}{\partial\dot{q}}$, nous avons $\delta S = p\delta q$ qui s'\'{e}crit pour un nombre quelconque de degr\'{e}s de libert\'{e} :
+\be
+	\delta S = \sum_{i}p_{i}\delta q_{i} \label{EQ:43_2}
+\ee
+et par voie de cons\'{e}quence :
+\be
+	\forall i\text{, }\frac{\partial S}{\partial q_{i}} = p_{i} \label{EQ:43_3}
+\ee
+
+\subsection{Cas o\`{u} la dur\'{e}e du mouvement est variable}
