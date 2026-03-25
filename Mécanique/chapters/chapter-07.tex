@@ -349,4 +349,37 @@ et sa variation devient :
 \benn
 	\delta S = \int{\left(\delta p\mathrm{d}q + p\mathrm{d}(\delta q) - \delta H\mathrm{dt}\right)}
 \eenn
-car $\mathrm{d}(\delta\mathrm{t}) = 0$
+car $\mathrm{d}(\delta\mathrm{t}) = 0$. Or :
+\benn
+	\delta H = \frac{\partial H}{\partial q}\delta q + \frac{\partial H}{\partial p}\delta p
+\eenn
+qui permet d'\'{e}crire la variation de l'action telle que :
+\bea
+	\delta S & = & \int{\left(\delta p\mathrm{d}q + p\delta(\mathrm{d}q) - \frac{\partial H}{\partial q}\delta q\mathrm{dt} - \frac{\partial H}{\partial p}\delta p\mathrm{dt} \right)} \nonumber \\
+	& = & \int{\left(\mathrm{d}q - \frac{\partial H}{\partial p}\mathrm{dt}\right)\delta p} + \int p\mathrm{d}(\delta q) - \int{\frac{\partial H}{\partial q}\delta q\mathrm{dt}} \nonumber
+\eea
+Une int\'{e}gration par partie de la quantit\'{e} $\int p\mathrm{d}(\delta q)$ donne :
+\benn
+	\int p\mathrm{d}(\delta q) = \left[p\delta q\right] - \int\delta q\mathrm{d}p
+\eenn
+que nous pouvons injecter dans la variation de l'action et obtenir :
+\benn
+	\delta S = \int{\delta p\left(\mathrm{d}q - \frac{\partial H}{\partial p}\mathrm{dt}\right)} + \left[p\delta q\right] - \int{\delta q\left(\mathrm{d}p - \frac{\partial H}{\partial q}\mathrm{dt}\right)}
+\eenn
+Nous posons $\left[p\delta q\right] = $ par choix des conditions aux limites. Et par application du principe de moindre action (\ref{EQ:2_4}), \`{a} savoir $\delta S = 0$, et puisque les quantit\'{e} $\delta q$ et $\delta p$ sont ind\'{e}pendantes et arbitraires, alors il est n\'{e}cessaire de poser :
+\bea
+	\mathrm{d}q - \frac{\partial H}{\partial p}\mathrm{dt} = 0 & \text{ et } & \mathrm{d}p - \frac{\partial H}{\partial q}\mathrm{dt} = 0 \nonumber \\
+	\frac{\partial H}{\partial p} = \dot{q} & \text{ et } & \frac{\partial H}{\partial q} = -\dot{p} \nonumber
+\eea
+Nous retrouvons donc bien les \'{e}quations de Hamilton d\'{e}finies par les relations (\ref{EQ:40_4}).
+
+\subsection{Principe de Maupertius}
+
+Le mouvement d'un syst\`{e}me m\'{e}canique est enti\`{e}rement d\'{e}termin\'{e} par le principe de moindre action. En r\'{e}solvant les \'{e}quations du mouvement qui en d\'{e}coule, nous d\'{e}terminons la forme de la trajectoire ainsi que la relation entre la position et le temps \'{e}coul\'{e}.
+
+Nous nous concentrons maintenant et uniquement sur la question plus restreinte de la d\'{e}termination de la forme de la trajectoire. Dnas notre cas pr\'{e}cis, les fonctions de Lagrange et de Hamilton ne d\'{e}pendent pas explicitement du temps et par cons\'{e}quent, l'\'{e}nergie du syst\`{e}me se conserve : $H(p,q) = E$.
+
+Le principe de moindre action stipule que pour des valeurs initiale et finale des coordonn\'{e}es et du temps donn\'{e}es, la variation de l'action est nulle. Mais si nous autorisons la variation de l'instant final $\mathrm{t}$, les coordonn\'{e}es initiale et finale restant toujours fixes, alors la relation (\ref{EQ:43_5}) s'applique :
+\be
+	\delta S = -H\delta\mathrm{t} \label{EQ:44_1}
+\ee
