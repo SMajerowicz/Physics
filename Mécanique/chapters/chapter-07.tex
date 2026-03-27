@@ -407,4 +407,29 @@ Ainsi l'action r\'{e}duite a un minimum sur l'ensemble des trajectoires satisfai
 
 Pour utiliser le principe variationnel exprim\'{e} en (\ref{EQ:44_5}), il nous faut d'abord exprimer les impulsions en fonction des coordonn\'{e}es $q$ et de leurs diff\'{e}rentielles $\mathrm{d}q$. Ce principe variationnel est appel\'{e} \emph{principe de Maupertuis}.
 
-Reprenons la formule de la fonction de Lagrange (\ref{EQ:5_5})
+Reprenons la formule de la fonction de Lagrange (\ref{EQ:5_5}) :
+\benn
+	L = \frac{1}{2}\sum_{i,j}a_{ij}(q)\dot{q}_{i}\dot{q}_{j} - U(q)
+\eenn
+avec les impulsions :
+\bea
+	p_{i} & = & \frac{\partial L}{\partial\dot{q}_{i}} = \frac{1}{2}\sum_{i,j}a_{ij}\frac{\partial\dot{q}_{i}\dot{q}_{j}}{\partial\dot{q}_{i}} = \frac{1}{2}\sum_{i=j}a_{ij}\frac{\partial\dot{q}_{i}^{2}}{\partial\dot{q}_{i}} \nonumber \\
+	\Leftrightarrow p_{i} & = & \sum_{i,j}a_{ij}\dot{q}_{j} \nonumber
+\eea
+et l'\'{e}nergie constante :
+\benn
+	E = \frac{1}{2}\sum_{i,j}a_{ij}(q)\dot{q}_{i}\dot{q}_{j} + U(q) = \frac{1}{2}\sum_{i,j}a_{ij}(q)\frac{\mathrm{d}q_{i}}{\mathrm{dt}}\frac{\mathrm{d}q_{j}}{\mathrm{dt}} + U(q)
+\eenn
+qui permet d\'{e}crire la diff\'{e}rientelle en temps comme :
+\be
+	\mathrm{dt} = \sqrt{\frac{\sum_{i,j}a_{ij}\mathrm{d}q_{i}\mathrm{d}q_{j}}{2(E - U})} \label{EQ:44_8}
+\ee
+Nous pouvons alors d\'{e}velopper la diff\'{e}rentielle de l'action r\'{e}duite :
+\bea
+	\mathrm{d}S_{0} & = & \sum_{i}p_{i}\mathrm{d}q_{i} = \sum_{i,j}a_{ij}\dot{q}_{j}\mathrm{d}q_{i} = \sum_{i,j}a_{ij}\frac{\mathrm{d}q_{j}}{\mathrm{dt}}\mathrm{d}q_{i} \nonumber \\
+	& = & \sqrt{2(E - U)}\frac{\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}{\sqrt{\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}} = \sqrt{2(E - U)\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}} \nonumber
+\eea
+Soit, finalement :
+\be
+	S_{0} = \int{\sqrt{2(E - U)\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}} \label{EQ:44_9}
+\ee
