@@ -373,7 +373,7 @@ Nous posons $\left[p\delta q\right] = $ par choix des conditions aux limites. Et
 \eea
 Nous retrouvons donc bien les \'{e}quations de Hamilton d\'{e}finies par les relations (\ref{EQ:40_4}).
 
-\subsection{Principe de Maupertius}
+\subsection{Principe de Maupertuis}
 
 Le mouvement d'un syst\`{e}me m\'{e}canique est enti\`{e}rement d\'{e}termin\'{e} par le principe de moindre action. En r\'{e}solvant les \'{e}quations du mouvement qui en d\'{e}coule, nous d\'{e}terminons la forme de la trajectoire ainsi que la relation entre la position et le temps \'{e}coul\'{e}.
 
@@ -383,3 +383,28 @@ Le principe de moindre action stipule que pour des valeurs initiale et finale de
 \be
 	\delta S = -H\delta\mathrm{t} \label{EQ:44_1}
 \ee
+Dans le cadre de la conservation de l'\'{e}nergie, la relation pr\'{e}c\'{e}dente (\ref{EQ:44_1}) devient :
+\be
+	\delta S + E\delta\mathrm{t} = 0 \label{EQ:44_2}
+\ee
+et la relation (\ref{EQ:43_8}) devient : $S = \int(\sum_{i}p_{i}\mathrm{d}q_{i} - H\mathrm{dt}) = \int\sum_{i}p_{i}\mathrm{d}q_{i} - E\int\mathrm{dt}$ ou encore :
+\be
+	S = \int\sum_{i}p_{i}\mathrm{d}q_{i} - E(\mathrm{t} - \mathrm{t}_{0}) \label{EQ:44_3}
+\ee
+\`{A} partir de maintenant, nous d\'{e}finissons l'\emph{action r\'{e}duite} telle que :
+\be
+	S_{0} = \int\sum_{i}p_{i}\mathrm{d}q_{i} \label{EQ:44_4}
+\ee
+et la formule (\ref{EQ:44_3}) se r\'{e}\'{e}crit :
+\benn
+	\delta S = \delta S_{0} - E\mathrm{dt}
+\eenn
+Or, en accord avec la relation (\ref{EQ:44_2}), nous pouvons en d\'{e}duire :
+\be
+	\delta S_{0} = 0 \label{EQ:44_5}
+\ee
+Ainsi l'action r\'{e}duite a un minimum sur l'ensemble des trajectoires satisfaisant \`{a} la loi de conservation de l'\'{e}nergie et passant par le point final \`{a} un instant arbitraire.
+
+Pour utiliser le principe variationnel exprim\'{e} en (\ref{EQ:44_5}), il nous faut d'abord exprimer les impulsions en fonction des coordonn\'{e}es $q$ et de leurs diff\'{e}rentielles $\mathrm{d}q$. Ce principe variationnel est appel\'{e} \emph{principe de Maupertuis}.
+
+Reprenons la formule de la fonction de Lagrange (\ref{EQ:5_5})
