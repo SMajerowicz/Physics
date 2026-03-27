@@ -433,3 +433,39 @@ Soit, finalement :
 \be
 	S_{0} = \int{\sqrt{2(E - U)\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}} \label{EQ:44_9}
 \ee
+Prenons l'exemple d'un point mat\'{e}riel de masse $m$. Son \'{e}nergie cin\'{e}tique est $T = \frac{m}{2}\left(\frac{\mathrm{d}l}{\mathrm{dt}}\right)^{2}$ avec $\mathrm{d}l$ un \'{e}l\'{e}ment de longueur le long de la trajectoire. Le principe variationnel donne :
+\benn
+	\delta S_{0} = \delta\left(\int{\sqrt{2(E - U)m(\mathrm{d}l)^{2}}}\right) = \delta\left(\int{\sqrt{2m(E - U)}\mathrm{d}l}\right)
+\eenn
+soit, par application de la formule (\ref{EQ:44_8}) :
+\be
+	\delta\left(\int{\sqrt{2m(E - U)}\mathrm{d}l}\right) = 0 \label{EQ:44_10}
+\ee
+o\`{u} l'int\'{e}grale est calcul\'{e}e entre deux points donn\'{e}es de l'espace.
+
+Pour le mouvement libre d'une particule, soit tel que $U = 0$, l'\'{e}quation (\ref{EQ:44_10}) devient :
+\benn
+	\delta\left(\int{\sqrt{2mE}\mathrm{d}l}\right) = 0 \Leftrightarrow \delta\left(\int\mathrm{d}l\right) = 0
+\eenn
+car $E$ et $m$ sont des constantes par rapport au temps. Ainsi la particule suit le chemin le plus court, \`{a} savoir une droite.
+
+Nous reprenons maintenant l'expression (\ref{EQ:44_3}) et nous op\'{e}rons une variation par rapport \`{a} l'\'{e}nergie $E$ :
+\benn
+	S = S_{0} - E(\mathrm{t} - \mathrm{t}_{0}) \Rightarrow \delta S = \frac{\partial S_{0}}{\partial E}\delta E - \delta E(\mathrm{t} - \mathrm{t}_{0}) - E\delta\mathrm{t}
+\eenn
+Or la relation (\ref{EQ:44_2}) donne $\delta S = -E\delta\mathrm{t}$, donc nous obtenons :
+\be
+	\frac{\partial S_{0}}{\partial E} = \mathrm{t} - \mathrm{t}_{0} \label{EQ:44_11}
+\ee
+En prenant l'action r\'{e}duite sous sa forme (\ref{EQ:44_9}), nous \'{e}crivons :
+\bea
+	\frac{\partial S_{0}}{\partial E} & = & \frac{\partial}{\partial E}\left(\int{\sqrt{2(E - U)\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}}\right) = \int{\frac{\partial}{\partial E}\left(\sqrt{2(E - U)\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}\right)} \nonumber \\
+	& = & \int{\sqrt{\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}\frac{\partial}{\partial E}\left(\sqrt{2(E - U)}\right)} = \int{\frac{\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}{\sqrt{2(E - U)}}} \nonumber
+\eea
+Ainsi la relation (\ref{EQ:44_11}) devient dans ce cadre :
+\be
+	\int{\frac{\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}{\sqrt{2(E - U)}}} = \mathrm{t} - \mathrm{t}_{0} \label{EQ:44_12}
+\ee
+qui n'est rien d'autre que l'int\'{e}grale de la relation (\ref{EQ:44_8}).
+
+Avec l'\'{e}quation de la trajectoire, l'int\'{e}grale d\'{e}termine enti\`{e}rement le mouvement.
