@@ -223,4 +223,51 @@ sachant qu'avec la d\'{e}composition de $\vec{M}$, nous pouvons en d\'{e}duire :
 
 \subsection{Principe de Maupertuis}
 
-L'objectif est ici de d\'{e}terminer l'\'{e}quation diff\'{e}rentielle de la trajectoire \`{a} partir du principe variationnel trouv\'{e} en (\ref{EQ:44_10}) : $\delta\left(\int{\sqrt{2m(E - U)}\mathrm{d}l}\right) = 0$.
+L'objectif est ici de d\'{e}terminer l'\'{e}quation diff\'{e}rentielle de la trajectoire \`{a} partir du principe variationnel trouv\'{e} en (\ref{EQ:44_10}) : $\delta\left(\int{\sqrt{2m(E - U)}\mathrm{d}l}\right) = 0$. D\'{e}veloppons la variation :
+\benn
+	\delta\left(\int{\sqrt{2m(E - U)}\mathrm{d}l}\right) = \int{\frac{\partial}{\partial\vec{r}}(\sqrt{2m(E - U)}\mathrm{d}l)\delta\vec{r}} = \int{\frac{\partial}{\partial\vec{r}}(\sqrt{2m(E - U)})\mathrm{d}l\delta\vec{r}} + \int{\sqrt{2m(E - U)}\frac{\partial\mathrm{d}l}{\partial\vec{r}}\delta\vec{r}}
+\eenn
+Parce que $E$ est constante et $U$ est une fonction uniquement de la position $\vec{r}$ alors :
+\benn
+	\int{\frac{\partial}{\partial\vec{r}}(\sqrt{2m(E - U))}\mathrm{d}l\delta\vec{r}} = -\int{\frac{\sqrt{m}\delta\vec{r}}{\sqrt{2(E - U)}}\frac{\partial U}{\partial\vec{r}}\mathrm{d}l}
+\eenn
+Par d\'{e}finition de l'\'{e}l\'{e}ment de longueur le long de la trajectoire : $\mathrm{d}l^{2} = \mathrm{d}\vec{r}^{\,2}$ donc :
+\bea
+	\delta(\mathrm{d}l^{2}) & = & \delta(\mathrm{d}\vec{r}^{\,2}) \Leftrightarrow 2\mathrm{d}l\delta(\mathrm{d}l) = 2\mathrm{d}\vec{r}\delta(\mathrm{d}\vec{r}) = 2\mathrm{d}\vec{r}\mathrm{d}(\delta\vec{r}) \nonumber \\
+	\Leftrightarrow \frac{\mathrm{d}\vec{r}}{\mathrm{d}l}\mathrm{d}(\delta\vec{r}) & = & \delta(\mathrm{d}l) = \mathrm{d}(\delta l) = \frac{\partial\delta l}{\partial\vec{r}}\mathrm{d}\vec{r} \nonumber
+\eea
+Donc la variation recherch\'{e}e se d\'{e}veloppe ainsi :
+\benn
+	\delta\left(\int{\sqrt{2m(E - U)}\mathrm{d}l}\right) = -\int{\frac{\sqrt{m}\delta\vec{r}}{\sqrt{2(E - U)}}\frac{\partial U}{\partial\vec{r}}\mathrm{d}l} + \int{\sqrt{2m(E - U)}\frac{\mathrm{d}\vec{r}}{\mathrm{d}l}\mathrm{d}(\delta\vec{r})}
+\eenn
+Nous pouvons utiliser l'int\'{e}gration par partie pour le second terme tel que :
+\benn
+	\int{\sqrt{2m(E - U)}\frac{\mathrm{d}\vec{r}}{\mathrm{d}l}\mathrm{d}(\delta\vec{r})} = \left[\sqrt{2m(E - U)}\mathrm{d}\vec{r}\delta\vec{r}\right] - \int{\frac{\mathrm{d}}{\mathrm{d}l}\left(\sqrt{2m(E - U)}\frac{\mathrm{d}\vec{r}}{\mathrm{d}l}\right)\delta\vec{r}\mathrm{d}l}
+\eenn
+Nous choisissons les conditions aux limites telles que le premier terme du second membre soit nul. Donc l'\'{e}galit\'{e} (\ref{EQ:44_10}) permet d'\'{e}crire :
+\bea
+	\delta\left(\int{\sqrt{2m(E - U)}\mathrm{d}l}\right) & = & 0 \nonumber \\
+	\Leftrightarrow -\int{\frac{\sqrt{m}\delta\vec{r}}{\sqrt{2(E - U)}}\frac{\partial U}{\partial\vec{r}}\mathrm{d}l} - \int{\frac{\mathrm{d}}{\mathrm{d}l}\left(\sqrt{2m(E - U)}\frac{\mathrm{d}\vec{r}}{\mathrm{d}l}\right)\delta\vec{r}\mathrm{d}l} &= & 0 \nonumber \\
+	\Leftrightarrow \sqrt{2m}\frac{\mathrm{d}}{\mathrm{d}l}\left(\sqrt{E - U}\frac{\mathrm{d}\vec{r}}{\mathrm{d}l}\right) & = & -\frac{\sqrt{m}}{2}\frac{\partial U}{\partial\vec{r}}\frac{1}{\sqrt{E - U}} \nonumber \\
+	\Leftrightarrow 2\sqrt{E - U}\frac{\mathrm{d}}{\mathrm{d}l}\left(\sqrt{E - U}\frac{\mathrm{d}\vec{r}}{\mathrm{d}l}\right) & = & -\frac{\partial U}{\partial\vec{r}} \nonumber
+\eea
+Nous pouvons remarquer que cette \'{e}quation ne d\'{e}pend pas de la masse de la particule en mouvement. Par d\'{e}finition, la quantit\'{e} $-\frac{\partial U}{\partial\vec{r}}$ est une force que nous appelons $\vec{F}$. Ainsi, nous \'{e}crivons :
+\bea
+	\frac{\mathrm{d}}{\mathrm{d}l}\left(\sqrt{E - U}\frac{\mathrm{d}\vec{r}}{\mathrm{d}l}\right) & = & \frac{\mathrm{d}}{\mathrm{d}l}\left(\sqrt{E - U}\right)\frac{\mathrm{d}\vec{r}}{\mathrm{d}l} + \sqrt{E - U}\frac{\mathrm{d}^{2}\vec{r}}{\mathrm{d}l^{2}} \nonumber \\
+	& = & \left(\frac{\mathrm{d}}{\mathrm{d}\vec{r}}\left(\sqrt{E - U}\right)\cdot\frac{\mathrm{d}\vec{r}}{\mathrm{d}l}\right)\cdot\frac{\mathrm{d}\vec{r}}{\mathrm{d}l} + \sqrt{E - U}\frac{\mathrm{d}^{2}\vec{r}}{\mathrm{d}l^{2}} \nonumber \\
+	& = & -\frac{\frac{\partial U}{\partial\vec{r}}\cdot\frac{\mathrm{d}\vec{r}}{\mathrm{d}l}}{2\sqrt{E - U}}\cdot\frac{\mathrm{d}\vec{r}}{\mathrm{d}l} + \sqrt{E - U}\frac{\mathrm{d}^{2}\vec{r}}{\mathrm{d}l^{2}} \nonumber
+\eea
+En posant $\vec{u}_{r} = \frac{\mathrm{d}\vec{r}}{\mathrm{d}l}$ le vecteur unitaire tangentiel \`{a} la trajectoire, alors l'\'{e}quation pr\'{e}c\'{e}dente devient :
+\bea
+	(\vec{F}\cdot\vec{u}_{r})\cdot\vec{u}_{r} + 2(E - U)\frac{\mathrm{d}^{2}\vec{r}}{\mathrm{d}l^{2}} & = & \vec{F} \nonumber \\
+	\Leftrightarrow \frac{\mathrm{d}^{2}\vec{r}}{\mathrm{d}l^{2}} & = & \frac{\vec{F} - (\vec{F}\cdot\vec{u}_{r})\cdot\vec{u}_{r}}{2(E - U)} \nonumber
+\eea
+o\`{u} $\vec{F} - (\vec{F}\cdot\vec{u}_{r})\cdot\vec{u}_{r}$ est la force \`{a} laquelle il est retir\'{e}e sa composante tangentielle, il s'agit donc de sa composante normale, orthogonale, \`{a} la trajectoire, soit $\vec{F}_{n}$. La g\'{e}om\'{e}trie diff\'{e}rentielle donne $\frac{\mathrm{d}^{2}\vec{r}}{\mathrm{d}l^{2}} = \frac{\vec{n}}{R}$ avec $\vec{n}$ le vecteur unitaire normal et $R$ le rayon de courbure de la trajectoire. Alors l'\'{e}quation devient :
+\benn
+	\frac{\vec{n}}{R} = \frac{\vec{F}_{n}}{2(E - U)}
+\eenn
+Mais par d\'{e}finition de l'\'{e}nergie totale du syst\`{e}me $E = T + U$, soit $E - U = T = \frac{1}{2}m\vec{v}^{\,2}$, ce qui donne finalement :
+\benn
+	\frac{m\vec{v}^{\,2}}{R}\vec{n} = \vec{F}_{n}
+\eenn
+qui correspond bien \`{a} l'acc\'{e}l\'{e}ration normale pour un mouvement le long d'une trajectoire courbe.
