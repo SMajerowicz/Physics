@@ -469,3 +469,66 @@ Ainsi la relation (\ref{EQ:44_11}) devient dans ce cadre :
 qui n'est rien d'autre que l'int\'{e}grale de la relation (\ref{EQ:44_8}).
 
 Avec l'\'{e}quation de la trajectoire, l'int\'{e}grale d\'{e}termine enti\`{e}rement le mouvement.
+
+\section{Transformations canoniques}
+
+\subsection{D\'{e}finitions}
+
+Le choix des coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es $q$ n'est limit\'{e} par aucune condition et nous pouvons prendre $s$ grandeurs quelconques d\'{e}finissant de fa\c{c}on univoque la position du syst\`{e}me \'{e}tudi\'{e} dans l'espace. Les \'{e}quations de Lagrange (\ref{EQ:2_6}) ne d\'{e}pendent pas de ce choix et nous pouvons en d\'{e}duire qu'elles sont invariantes par rapport \`{a} la transformation qui fait passer des coordonn\'{e}es $q_{1}$, $q_{2}$, $\ldots$, $q_{s}$ \`{a} d'autres grandeurs ind\'{e}pendants $Q_{1}$, $Q_{2}$, $\ldots$, $Q_{s}$. Les nouvelles coordonn\'{e}es $Q_{i}$ sont des fonctions de $q_{i}$. Admettons que cette relation contienne \'{e}galement le temps, i.e. :
+\be
+	\forall i\text{, }Q_{i} = Q_{i}(q,\mathrm{t}) \label{EQ:45_1}
+\ee
+qui sont $s$ \emph{transformations ponctuelles}.
+
+De la m\^{e}me mani\`{e}re que pour les \'{e}quatinos de Lagrange, la transformation (\ref{EQ:45_1}) laisse invariantes les \'{e}quations de Hamilton (\ref{EQ:40_4}).
+
+Toutefois, dans la m\'{e}thode de Hamilton, les impulsions $p$ jouent le r\^{o}le de variables ind\'{e}pendantes au m\^{e}me titre que les coordonn\'{e}es $q$. Ainsi la notion de transformation peut \^{e}tre \'{e}largie pour englober la transformation des $2s$ variables ind\'{e}pendantes $p$ et $q$ en les nouvelles variables $P$ et $Q$ suivant les formules :
+\be
+	\forall i\text{, }Q_{i} = Q_{i}(p,q,\mathrm{t})\text{ et }P_{i} = P_{i}(p,q,\mathrm{t}) \label{EQ:45_2}
+\ee
+D\'{e}gageons les conditions auxquelles doit ob\'{e}ir une transformation pour que les \'{e}quations du mouvement avec les nouvelles variables $P$ et $Q$ aient la forme connue :
+\be
+	\dot{Q}_{i} = \frac{\partial H'}{\partial P_{i}}\text{ et }\dot{P}_{i} = -\frac{\partial H'}{\partial Q_{i}} \label{EQ:45_3}
+\ee
+avec $H'(P,Q)$ une nouvelle fonction de Hamilton. De telles transformations sont dites \emph{transformations canoniques}. Elles ne changent que la forme des \'{e}quations de Hamilton.
+
+\subsection{Formules des transformations canoniques}
+
+\`{A} partir de la relation de l'action en fonction de la fonction de Hamilton (\ref{EQ:43_8}), nous avons retrouv\'{e} les \'{e}quations de Hamilton en utilisant le principe de moindre action tel que :
+\be
+	\delta\left(\int{\left(\sum_{i}p_{i}\mathrm{d}q_{i} - H\mathrm{dt}\right)}\right) = 0 \label{EQ:45_4}
+\ee
+Pour que $P$ et $Q$ satisfassent aussi aux \'{e}quations de Hamilton, elles doivent v\'{e}rifier le principe de moindre action :
+\be
+	\delta\left(\int{\left(\sum_{i}P_{i}\mathrm{d}Q_{i} - H'\mathrm{dt}\right)}\right) = 0 \label{EQ:45_5}
+\ee
+Les deux principes (\ref{EQ:45_4}) et (\ref{EQ:45_5}) ne sont \'{e}quivalents qu'\`{a} la condition que les expressions int\'{e}gr\'{e}es diff\`{e}rent par la diff\'{e}rentielle totale d'une fonction arbitraire $F$ des coordonn\'{e}es, des impulsions et du temps. La diff\'{e}rence des deux int\'{e}grales sera alors une constante dont la variation sera nulle, voir la relation (\ref{EQ:2_8}). Par cons\'{e}quent, nous pouvons en conclure :
+\benn
+	\sum_{i}p_{i}\mathrm{d}q_{i} - H\mathrm{dt} = \sum_{i}P_{i}\mathrm{d}Q_{i} - H'\mathrm{dt} + \mathrm{d}F
+\eenn
+Toute transformation canonique est caract\'{e}ris\'{e}e par sa fonction $F$ appel\'{e}e \emph{fonction g\'{e}n\'{e}ratrice de la transformation}. La relation devient alors :
+\be
+	\mathrm{d}F = \sum_{i}p_{i}\mathrm{d}q_{i} - \sum_{i}P_{i}\mathrm{d}Q_{i} + (H' - H)\mathrm{dt} \label{EQ:45_6}
+\ee
+Or par d\'{e}finition de la d\'{e}riv\'{e}e totale :
+\benn
+	\mathrm{d}F = \frac{\partial F}{\partial q_{i}}\mathrm{d}q_{i} + \frac{\partial F}{\partial p_{i}}\mathrm{d}p_{i} + \frac{\partial F}{\partial Q_{i}}\mathrm{d}Q_{i} + \frac{\partial F}{\partial P_{i}}\mathrm{d}P_{i} + \frac{\partial F}{\partial\mathrm{t}}\mathrm{dt}
+\eenn
+cela nous permet donc d'en d\'{e}duire :
+\be
+	p_{i} = \frac{\partial F}{\partial q_{i}}\text{, }P_{i} = \frac{\partial F}{\partial Q_{i}}\text{ et }H' = H + \frac{\partial F}{\partial\mathrm{t}} \label{EQ:45_7}
+\ee
+Nous voyons alors que la fonction g\'{e}n\'{e}ratrice est donn\'{e}e comme fonction des anciennes et des nouvelles coordonn\'{e}es et du temps : $F = F(q,Q,\mathrm{t})$.
+
+Nous \'{e}tablissons maintenant la fonction g\'{e}n\'{e}ratrice en fonction des anciennes coordonn\'{e}es $q$ et des nouvelles impulsions $P$. La relation (\ref{EQ:45_6}) peut \'{e}galement s'\'{e}crire :
+\bea
+	\mathrm{d}F & = & \sum_{i}p_{i}\mathrm{d}q_{i} - \left(\mathrm{d}(\sum_{i}P_{i}Q_{i}) - \sum_{i}Q_{i}\mathrm{d}P_{i}\right) + (H' - H)\mathrm{dt} \nonumber \\
+	\Leftrightarrow \mathrm{d}(F + \sum_{i}P_{i}Q_{i}) & = & \sum_{i}p_{i}\mathrm{d}q_{i} + \sum_{i}Q_{i}\mathrm{d}P_{i} + (H' - H)\mathrm{dt} \nonumber
+\eea
+La nouvelle fonction g\'{e}n\'{e}ratrice est $\Phi = F + \sum_{i}P_{i}Q_{i} = \Phi(q,P,\mathrm{t})$ avec :
+\be
+	p_{i} = \frac{\partial\Phi}{\partial q_{i}}\text{, }Q_{i} = \frac{\partial\Phi}{\partial P_{i}}\text{ et }H' = H + \frac{\partial \Phi}{\partial\mathrm{t}} \label{EQ:45_8}
+\ee
+Pour chaque transformation canonique, la diff\'{e}rence $H' - H$ est toujours \'{e}gale \`{a} la d\'{e}riv\'{e}e partielle par rapport au temps de la fonction g\'{e}n\'{e}ratrice. Dans le cas particulier o\`{u} cette derni\`{e}re ne d\'{e}pend pas du temps alors $H' = H$ et la nouvelle fonction de Hamilton s'obtient en portant dans $H$ les quantit\'{e}s $p$ et $q$ exprim\'{e}es en fonction des nouvelles variables $P$ et $Q$.
+
+\subsection{Grandeurs canoniques conjugu\'{e}es}
