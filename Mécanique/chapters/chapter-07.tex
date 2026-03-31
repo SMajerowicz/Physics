@@ -492,7 +492,7 @@ D\'{e}gageons les conditions auxquelles doit ob\'{e}ir une transformation pour q
 \ee
 avec $H'(P,Q)$ une nouvelle fonction de Hamilton. De telles transformations sont dites \emph{transformations canoniques}. Elles ne changent que la forme des \'{e}quations de Hamilton.
 
-\subsection{Formules des transformations canoniques}
+\subsection{Formules des transformations canoniques}\label{PAR:45}
 
 \`{A} partir de la relation de l'action en fonction de la fonction de Hamilton (\ref{EQ:43_8}), nous avons retrouv\'{e} les \'{e}quations de Hamilton en utilisant le principe de moindre action tel que :
 \be
@@ -532,3 +532,13 @@ La nouvelle fonction g\'{e}n\'{e}ratrice est $\Phi = F + \sum_{i}P_{i}Q_{i} = \P
 Pour chaque transformation canonique, la diff\'{e}rence $H' - H$ est toujours \'{e}gale \`{a} la d\'{e}riv\'{e}e partielle par rapport au temps de la fonction g\'{e}n\'{e}ratrice. Dans le cas particulier o\`{u} cette derni\`{e}re ne d\'{e}pend pas du temps alors $H' = H$ et la nouvelle fonction de Hamilton s'obtient en portant dans $H$ les quantit\'{e}s $p$ et $q$ exprim\'{e}es en fonction des nouvelles variables $P$ et $Q$.
 
 \subsection{Grandeurs canoniques conjugu\'{e}es}
+
+Avec la notion de transformation canonique dans la m\'{e}thode de Hamilton, les notions de coordonn\'{e}es et d'impulsions g\'{e}n\'{e}ralis\'{e}es perdent de leur sens physique initial. En effet, les transformations (\ref{EQ:45_2}) relient chaque grandeur $P$ et $Q$ aussi bien aux coordonn\'{e}es $q$ qu'aux impulsions $p$ et de fait, les variables ne peuvent plus \^{e}tre consid\'{e}r\'{e}es comme des coordonn\'{e}es purement spatiales. La diff\'{e}rence entre les deux groupes de variables est alors une question de nomenclature.
+
+Elle peut se manifester de mani\`{e}re concr\`{e}te en prenant par exemple la transformation $Q_{i} = p_{i}$ et $P_{i} = -q_{i}$ pour laquelle la d\'{e}finition de la fonction g\'{e}n\'{e}ratrice donne :
+\benn
+	\mathrm{d}F = \sum_{i}Q_{i}\mathrm{d}q_{i} - \sum_{i}(-q_{i})\mathrm{d}Q_{i} + (H' - H)\mathrm{dt} = \mathrm{d}(\sum_{i}q_{i}\mathrm{d}Q_{i}) + (H' - H)\mathrm{dt}
+\eenn
+Cela ne change pas la forme canonique des \'{e}quations mais interchange les noms des coordonn\'{e}es et des variables. Compte tenu de la convention de terminologie, les variables $p$ et $q$ sont appel\'{e}es dans la m\'{e}thode de Hamilton des \emph{grandeurs canoniquement conjugu\'{e}es}.
+
+La condition pour que des variables soient canoniquement conjugu\'{e}es peut \^{e}tre exprim\'{e}e avec des crochets de Poisson, voir le paragraphe (\ref{PAR:42}). Pour le d\'{e}montrer, nous commen\c{c}ons par le th\'{e}or\`{e}me d'invariance des crochets de Poisson aux transformations canoniques.
