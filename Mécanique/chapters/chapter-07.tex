@@ -584,3 +584,59 @@ relation identifiable \`{a} la d\'{e}finition de la fonction g\'{e}n\'{e}ratrice
 Alors $-S$ est la fonction g\'{e}n\'{e}ratrice de cette transformation canonique au cours du mouvement.
 
 \section{Th\'{e}or\`{e}me de Liouville}
+
+Pour l'interpr\'{e}tation g\'{e}om\'{e}trique des ph\'{e}nom\`{e}nes m\'{e}caniques, nous utilisons la notion d'\emph{espace des phases}. C'est un espace \`{a} $2s$ dimensions sur les axes duquel sont port\'{e}es les $s$ coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es et les $s$ impulsions du sys\`{e}me. Chaque point de cet espace correspond \`{a} un \'{e}tat d\'{e}termin\'{e} du syst\`{e}me. Lorsque le syst\`{e}me se meut, le point de l'espace des phases qui le repr\'{e}sente d\'{e}crit une ligne appel\'{e}e trajectoire dans l'espace des phases.
+
+Le produit des diff\'{e}rentielles $\mathrm{d}\Gamma = \mathrm{d}q_{1}\ldots\mathrm{d}q_{s}\mathrm{d}p_{1}\ldots\mathrm{d}p_{s}$ repr\'{e}sente un \'{e}l\'{e}ment de volume de l'espace des phases. Consid\'{e}rons $\int{\mathrm{d}\Gamma}$ prise sur un domaine quelconque de cet espace et repr\'{e}sentant le volume de ce domaine.
+
+Nous allons d\'{e}montrer que cette grandeur poss\`{e}de la propri\'{e}t\'{e} d'\^{e}tre invariante par rapport aux transformations canoniques. Ainsi si nous transformons canoniquement $p,q$ en $P,Q$, nous aurons :
+\be
+	\int\cdots\int\mathrm{d}q_{1}\ldots\mathrm{d}q_{s}\mathrm{d}p_{1}\ldots\mathrm{d}p_{s} = \int\cdots\int\mathrm{d}Q_{1}\ldots\mathrm{d}Q_{s}\mathrm{d}P_{1}\ldots\mathrm{d}P_{s} \label{EQ:46_1}
+\ee
+La transformation des variables dans une int\'{e}grale multiple s'effectue en utilisant la valeur absolue du d\'{e}terminant jacobien\footnote{Voir \emph{https://fr.wikipedia.org/wiki/Matrice\textunderscore jacobienne} pour quelques g\'{e}n\'{e}ralit\'{e}s} telle que :
+\benn
+	\int\cdots\int\mathrm{d}Q_{1}\ldots\mathrm{d}Q_{s}\mathrm{d}P_{1}\ldots\mathrm{d}P_{s} = \int\cdots\int\lvert J\rvert\mathrm{d}q_{1}\ldots\mathrm{d}q_{s}\mathrm{d}p_{1}\ldots\mathrm{d}p_{s}
+\eenn
+avec $J$ le d\'{e}terminant de la matrice jacobienne d\'{e}finie ainsi :
+\benn
+	\{J_{ij}\} = 
+	\begin{cases}
+		\frac{\partial Q_{i}}{\partial q_{j}}\text{ pour }i\le s\text{ et }j\le s \\
+		\frac{\partial P_{i}}{\partial q_{j}}\text{ pour }i > s\text{ et }j\le s \\
+		\frac{\partial Q_{i}}{\partial p_{j}}\text{ pour }i\le s\text{ et }j > s \\
+		\frac{\partial P_{i}}{\partial p_{j}}\text{ pour }i > s\text{ et }j > s
+	\end{cases}
+\eenn
+qui est ordinairement not\'{e}e :
+\benn
+	\{J\} = \frac{\partial(Q_{1},\ldots,Q_{s},P_{1},\ldots,P_{s})}{\partial(q_{1},\ldots,q_{s},p_{1},\ldots,p_{s})}
+\eenn
+Nous devons alors d\'{e}montrer que dans le cadre d'une transformation canonique quelconque :
+\be
+	\lvert J\rvert = 1 \label{EQ:46_3}
+\ee
+
+En utilisant certaines r\`{e}gles des jacobiens, nous pouvons d\'{e}velopper tel que :
+\bea
+	\{J\} & = & \frac{\partial(Q_{1},\ldots,Q_{s},P_{1},\ldots,P_{s})}{\partial(q_{1},\ldots,q_{s},P_{1},\ldots,P_{s})} \bigg/ \frac{\partial(Q_{1},\ldots,Q_{s},P_{1},\ldots,P_{s})}{\partial(q_{1},\ldots,q_{s},P_{1},\ldots,P_{s})} \nonumber \\
+	& = & \left\{\frac{(Q_{1},\ldots,Q_{s})}{q_{1},\ldots,q_{s}}\right\}_{P=cste} \bigg/ \left\{\frac{p_{1},\ldots,p_{s}}{P_{1},\ldots,P_{s}}\right\}_{q=cste} \label{EQ:46_4}
+\eea
+En \'{e}crivant les termes de la matrice jacobienne pour une fonction g\'{e}n\'{e}ratrice $\Phi$ et en s'appuyant sur les \'{e}galit\'{e}s (\ref{EQ:45_8}), nous pouvons \'{e}crire :
+\benn
+        \{J_{ij}\} =
+        \begin{cases}
+		\frac{\partial Q_{i}}{\partial q_{j}} = \frac{\partial^{2}\Phi}{\partial q_{j}\partial P_{i}}\text{ pour }i\le s\text{ et }j\le s \\
+                \frac{\partial P_{i}}{\partial q_{j}} = \frac{\partial^{2}\Phi}{\partial q_{j}\partial q_{i}}\text{ pour }i > s\text{ et }j\le s \\
+                \frac{\partial Q_{i}}{\partial p_{j}} = \frac{\partial^{2}\Phi}{\partial P_{j}\partial P_{i}}\text{ pour }i\le s\text{ et }j > s \\
+                \frac{\partial P_{i}}{\partial p_{j}} = \frac{\partial^{2}\Phi}{\partial P_{j}\partial q_{i}}\text{ pour }i > s\text{ et }j > s
+        \end{cases}
+\eenn
+Puisque nous avons des termes pour identiques car il y a juste une inversion des identifiants de lignes et de colonnes alors les d\'{e}terminants des deux matrices au num\'{e}rateur et au d\'{e}nominateur sont \'{e}gaux et nous avons donc bien $\lvert J\rvert = 1$.
+
+Par extension, nous avons :
+\be
+	\int\mathrm{d}\Gamma = cste/\mathrm{t} \Leftrightarrow \frac{\mathrm{d}\Gamma}{\mathrm{dt}} ) 0 \label{EQ:46_5}
+\ee
+L'invariance d'un volume de l'espace des phases par une transformation canonique est le \emph{th\'{e}or\`{e}me de Liouville}. Cela s'applique lors du mouvement puisque la variation au cours du temps de $p$ et $q$ est une transformation canonique de fonction g\'{e}n\'{e}ratrice $-S$ comme d\'{e}j\`{a} d\'{e}montr\'{e}e au paragraphe (\ref{PAR:45})
+
+\section{\'{E}quations de Hamilton-Jacobi}
