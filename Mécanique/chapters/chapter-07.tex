@@ -639,4 +639,49 @@ Par extension, nous avons :
 \ee
 L'invariance d'un volume de l'espace des phases par une transformation canonique est le \emph{th\'{e}or\`{e}me de Liouville}. Cela s'applique lors du mouvement puisque la variation au cours du temps de $p$ et $q$ est une transformation canonique de fonction g\'{e}n\'{e}ratrice $-S$ comme d\'{e}j\`{a} d\'{e}montr\'{e}e au paragraphe (\ref{PAR:45})
 
-\section{\'{E}quations de Hamilton-Jacobi}
+\section{\'{E}quations de Hamilton-Jacobi}\label{PAR:48}
+
+\subsection{G\'{e}n\'{e}ralit\'{e}s}
+
+Le paragraphe (\ref{PAR:43}) nous a permis de d\'{e}finir l'action comme fonction des coordonn\'{e}es et du temps. Nous avons aussi relier la d\'{e}riv\'{e}e partielle par rapport au temps de $S(q,\mathrm{t})$ \`{a} la fonction de Hamilton du syst\`{e}me telle, voir l'\'{e}quation (\ref{EQ:43_5}) :
+\benn
+	\frac{\partial S}{\partial\mathrm{t}} + H(q,p,\mathrm{t}) = 0
+\eenn
+Sachant que les impulsions sont le r\'{e}sultat de la d\'{e}riv\'{e}e partielle par rapport aux coordonn\'{e}es de l'action, voir les relations (\ref{EQ:43_3}), nous obtenons :
+\be
+	\frac{\partial S}{\partial\mathrm{t}} + H(q_{1},\ldots,q_{s},\frac{\partial S}{\partial q_{1}},\ldots,\frac{\partial S}{\partial q_{s}}) = 0 \label{EQ:47_1}
+\ee
+Cette \'{e}quation du premier ordre est appel\'{e}e \emph{\'{e}quation de Hamilton-Jacobi}. Toute \'{e}quation aux d\'{e}riv\'{e}es partielles du premier ordre poss\`{e}de une solution d\'{e}pendant d'une fonction arbitraire. Cette solution est l'int\'{e}grale g\'{e}n\'{e}rale de l'\'{e}quation. En m\'{e}canique, cette int\'{e}grale g\'{e}n\'{e}rale de l'\'{e}quation de Hamilton-Jacobi ne joue pas une r\^{o}le essentiel au contraire de l'\emph{int\'{e}grale compl\`{e}te} qui contient autant de constrantes arbitraires ind\'{e}pendantes qu'il y a de variables ind\'{e}pendantes.
+
+Dans l'\'{e}quation de Hamilton-Jacobi, ces variables ind\'{e}pendantes sont les coordonn\'{e}es et le temps. Par la suite, pour un syst\`{e}me de $s$ degr\'{e} de libert\'{e}, l'int\'{e}grale compl\`{e}te de cette \'{e}quation doit contenir $s+1$ constantes arbitraires.
+
+Puisque l'action $S$ ne figure dans l'\'{e}quation (\ref{EQ:47_1}) que par ses d\'{e}riv\'{e}es partielles, l'une des constantes arbitraires appara\^{i}t dans l'int\'{e}grale compl\`{e}te comme une grandeur additive. L'int\'{e}grale compl\`{e}te de l'\'{e}quation de hamilton-Jacobi prend donc la forme suivante :
+\be
+	S = f(q_{1},\ldots,q_{s},\alpha_{1},\ldots,\alpha_{s},\mathrm{t}) + A \label{EQ:47_2}
+\ee
+avec $i \in \{1,\ldots,s\}$ $\alpha_{i}$ et $A$ des constantes arbitraires.
+
+\subsection{Int\'{e}grale compl\`{e}te et solution des \'{e}quations du mouvement}
+
+R\'{e}alisons une transformation canonique des grandeurs $q$ et $p$ vers des nouvelles variables en choisissant comme fonction g\'{e}n\'{e}ratrice la fonction $f(\mathrm{t},q,\alpha)$ et comme nouvelle impulsions $\alpha_{1},\ldots,\alpha_{s}$. D\'{e}signons par $\beta_{1},\ldots,\beta_{s}$ les nouvelles coordonn\'{e}es. Puisque la fonction g\'{e}n\'{e}ratrice d\'{e}pend des anciennes coordonn\'{e}es et des nouvelles impulsions, nous utilisons les formules (\ref{EQ:43_8}) :
+\benn
+	p_{i} = \frac{\partial f}{\partial q_{i}}\text{, }\beta_{i} = \frac{\partial f}{\partial\alpha{i}}\text{ et }H' = H + \frac{\partial f}{\partial\mathrm{t}}
+\eenn
+Puisque la fonction g\'{e}n\'{e}ratrice satisfait \`{a} l'\'{e}quation de Hamilton-Jacobi alors cette derni\`{e}re nous permet d'\'{e}crire :
+\benn
+	\frac{\partial f}{\partial\mathrm{t}} + H = 0 \Rightarrow H' = 0
+\eenn
+Or les \'{e}quations du mouvement pour les nouvelles variables (\ref{EQ:45_3}) sont :
+\benn
+	\begin{cases}
+		\dot{\beta}_{i} = \frac{\mathrm{d}\beta}{\mathrm{dt}} = \frac{\partial H'}{\partial\alpha_{i}} = 0 \\
+		\dot{\alpha}_{i} = \frac{\mathrm{d}\alpha}{\mathrm{dt}} = -\frac{\partial H'}{\partial\beta_{i}} = 0
+	\end{cases}
+\eenn
+soit :
+\be
+	\forall i\in\{1,\ldots,s\}\text{, }\alpha_{i} = cste\text{ et }\beta_{i} = cste \label{EQ:47_3}
+\ee
+De plus, les $s$ \'{e}quations $\beta_{i} = \frac{\partial f}{\partial\alpha_{i}}$ permettent d'exprimer les $s$ coordonn\'{e}es $q$ en fonction des $2s$ constantes arbitraires $\alpha$ et $\beta$ et nous obtenons l'int\'{e}grale g\'{e}n\'{e}rale des \'{e}quations du mouvement.
+
+\subsection{M\'{e}thodologie}
