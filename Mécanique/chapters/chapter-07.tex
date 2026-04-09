@@ -685,3 +685,20 @@ soit :
 De plus, les $s$ \'{e}quations $\beta_{i} = \frac{\partial f}{\partial\alpha_{i}}$ permettent d'exprimer les $s$ coordonn\'{e}es $q$ en fonction des $2s$ constantes arbitraires $\alpha$ et $\beta$ et nous obtenons l'int\'{e}grale g\'{e}n\'{e}rale des \'{e}quations du mouvement.
 
 \subsection{M\'{e}thodologie}
+
+La solution du probl\`{e}me du mouvement d'un syst\`{e}me m\'{e}canique par la m\'{e}thode de Hamilton-Jacobi se r\'{e}alise avec les \'{e}tapes suivantes.
+
+En partant de la fonction de Hamilton, nous \'{e}crivons l'\'{e}quation de Hamilton-Jacobi pour chercher l'int\'{e}grale compl\`{e}te (\ref{EQ:47_2}). En la d\'{e}rivant par rapport aux constantes arbitraires $\alpha$ et en \'{e}galant ces d\'{e}riv\'{e}es aux nouvelles constantes $\beta$, nous obtenons $s$ \'{e}quations alg\'{e}briques :
+\be
+	\frac{\partial S}{\partial\alpha_{i}} = \beta_{i} \label{EQ:47_4}
+\ee
+La solution de ce syst\`{e}me nous donne les coordonn\'{e}es $q$ en fonction du temps et de $2s$ constantes arbitraires. Les relations $\frac{\partial S}{\partial q_{i}} = p_{i}$ nous donnent ensuite la relation entre l'impulsion et le temps.
+
+Dans le cas o\`{u} nous avons un syst\`{e}me conservatif, i.e. tel que la fonction de Hamilton ne d\'{e}pend explicitement du temps, alors la d\'{e}pendance de l'action par rapport au temps se r\'{e}duit au terme $-E\mathrm{t}$, voir la formule (\ref{EQ:44_2}), telle que :
+\be
+	S = S_{0}(q) - E\mathrm{t} \label{EQ:47_5}
+\ee
+En substituant cela dans l'\'{e}quation de Hamilton-Jacobi et puisque $\frac{\partial S}{\partial q_{i}} = \frac{\partial S_{0}}{\partial q_{i}}$, nous obtenons pour l'action r\'{e}duite :
+\be
+	H\left(q_{1},\ldots,q_{s},\frac{\partial S_{0}}{\partial q_{1}},\ldots,\frac{\partial S_{0}}{\partial q_{s}}\right) = E \label{EQ:47_6}
+\ee
