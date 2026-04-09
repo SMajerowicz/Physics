@@ -702,3 +702,40 @@ En substituant cela dans l'\'{e}quation de Hamilton-Jacobi et puisque $\frac{\pa
 \be
 	H\left(q_{1},\ldots,q_{s},\frac{\partial S_{0}}{\partial q_{1}},\ldots,\frac{\partial S_{0}}{\partial q_{s}}\right) = E \label{EQ:47_6}
 \ee
+
+\section{S\'{e}paration des variables}
+
+\subsection{G\'{e}n\'{e}ralit\'{e}s}
+
+La m\'{e}thode de \emph{s\'{e}paration des variables} permet dans certains cas de trouver l'int\'{e}grale compl\`{e}te de l'\'{e}quation de Hamilton-Jacobi.
+
+Nous admettons qu'une coordonn\'{e}e $q_{1}$ et que la d\'{e}riv\'{e}e $\frac{\partial S}{\partial q_{1}}$ n'entrent dans l'\'{e}quation de Hamilton-Jacobi que sous la forme d'une combinaison $\varphi\left(q_{1},\frac{\partial S}{\partial q_{1}}\right)$ ne contenant pas d'autres coordonn\'{e}es, ni d'autres d\'{e}riv\'{e}es, ni le temps. Autrement dit, nous admettons cons\'{e}cutivement que l'\'{e}quation soit sous la forme :
+\be
+	\forall i \in \{2,\ldots,s\}\text{, }\Phi\left\{q_{i},\mathrm{t},\frac{\partial S}{\partial q_{i}},\frac{\partial S}{\partial\mathrm{t}},\varphi\left(q_{1},\frac{\partial S}{\partial q_{1}}\right)\right\} = 0 \label{EQ:48_1}
+\ee
+Nous chercherons une solution sous la forme :
+\be
+	S = S'(q_{1},\ldots,q_{s},\mathrm{t}) + S_{1}(q_{1}) \label{EQ:48_2}
+\ee
+Comme :
+\benn
+	\frac{\partial S}{\partial q_{i}} = \frac{\partial S'}{\partial q_{i}}\text{, }\frac{\partial S}{\partial\mathrm{t}} = \frac{\partial S'}{\partial\mathrm{t}}\text{ et }\frac{\partial S}{\partial q_{1}} = \frac{\partial S_{1}}{\partial q_{1}}
+\eenn
+alors l'\'{e}quation (\ref{EQ:48_1}) devient :
+\be
+	\forall i \in \{2,\ldots,s\}\text{, }\Phi\left\{q_{i},\mathrm{t},\frac{\partial S'}{\partial q_{i}},\frac{\partial S'}{\partial\mathrm{t}},\varphi\left(q_{1},\frac{\partial S_{1}}{\partial q_{1}}\right)\right\} = 0 \label{EQ:48_3}
+\ee
+Comme l'action $S$ de (\ref{EQ:48_2}) est solution de (\ref{EQ:48_3}), l'identit\'{e} est valable quelque soit la valeur de $q_{1}$. Comme seule $\varphi$ d\'{e}pend de $q_{1}$ alors la relation (\ref{EQ:48_3}) n'est possible que si et seulement si $\varphi$ est constante. L'\'{e}quation (\ref{EQ:48_3}) peut alors se scinder en deux \'{e}quations :
+\bea
+	\varphi\left(q_{1},\frac{\partial S_{1}}{\partial q_{1}}\right) & = & \alpha_{1} \label{EQ:48_4} \\
+	\Phi\left\{q_{i},\mathrm{t},\frac{\partial S'}{\partial q_{i}},\frac{\partial S'}{\partial\mathrm{t}},\alpha_{1}\right\} = 0 \label{EQ:48_5}
+\eea
+avec $\alpha_{1}$ une constante arbitraire.
+
+L'\'{e}quation (\ref{EQ:48_4}) est une \'{e}quation diff\'{e}rentielle ordinaire \`{a} partir de laquelle la fonction $S_{1}(q_{1})$ peut \^{e}tre obtenue par int\'{e}gration. L'\'{e}quation (\ref{EQ:48_5}) reste une \'{e}quation aux d\'{e}riv\'{e}es partielles mais avec moins de variables ind\'{e}pendantes. S'il est possible de r\'{e}aliser la m\^{e}me s\'{e}paration successivement pour les $s$ coordonn\'{e}es et le temps, alors le calcul de l'int\'{e}grale compl\`{e}te de l'\'{e}quation de Hamilton-Jacobi se ram\`{e}nera \`{a} des calculs de primitives et d'int\'{e}grales.
+
+Pour un syst\`{e}me conservatif, il s'agit de s\'{e}parer les $s$ coordonn\'{e}es de l'\'{e}quation (\ref{EQ:47_6}). L'int\'{e}grale cherch\'{e}e a la forme suivante :
+\be
+	S = \sum_{i}S_{i}(q_{i},\alpha_{1},\ldots,\alpha_{s}) - E(\alpha_{1},\ldots,\alpha_{s})\mathrm{t} \label{EQ:48_6}
+\ee
+o\`{u} la fonction $S_{i}$ ne d\'{e}pend que de la coordonn\'{e}e $q_{i}$ et o\`{u} l'\'{e}nergie $E$ est une fonction des constantes arbitraires $\alpha_{i}$.
