@@ -719,15 +719,15 @@ Nous chercherons une solution sous la forme :
 \ee
 Comme :
 \benn
-	\frac{\partial S}{\partial q_{i}} = \frac{\partial S'}{\partial q_{i}}\text{, }\frac{\partial S}{\partial\mathrm{t}} = \frac{\partial S'}{\partial\mathrm{t}}\text{ et }\frac{\partial S}{\partial q_{1}} = \frac{\partial S_{1}}{\partial q_{1}}
+	\frac{\partial S}{\partial q_{i}} = \frac{\partial S'}{\partial q_{i}}\text{, }\frac{\partial S}{\partial\mathrm{t}} = \frac{\partial S'}{\partial\mathrm{t}}\text{ et }\frac{\partial S}{\partial q_{1}} = \frac{\partial S_{1}}{\partial q_{1}} = \frac{\mathrm{d}S_{1}}{\mathrm{d}q_{1}}
 \eenn
 alors l'\'{e}quation (\ref{EQ:48_1}) devient :
 \be
-	\forall i \in \{2,\ldots,s\}\text{, }\Phi\left\{q_{i},\mathrm{t},\frac{\partial S'}{\partial q_{i}},\frac{\partial S'}{\partial\mathrm{t}},\varphi\left(q_{1},\frac{\partial S_{1}}{\partial q_{1}}\right)\right\} = 0 \label{EQ:48_3}
+	\forall i \in \{2,\ldots,s\}\text{, }\Phi\left\{q_{i},\mathrm{t},\frac{\partial S'}{\partial q_{i}},\frac{\partial S'}{\partial\mathrm{t}},\varphi\left(q_{1},\frac{\mathrm{d}S_{1}}{\mathrm{d}q_{1}}\right)\right\} = 0 \label{EQ:48_3}
 \ee
 Comme l'action $S$ de (\ref{EQ:48_2}) est solution de (\ref{EQ:48_3}), l'identit\'{e} est valable quelque soit la valeur de $q_{1}$. Comme seule $\varphi$ d\'{e}pend de $q_{1}$ alors la relation (\ref{EQ:48_3}) n'est possible que si et seulement si $\varphi$ est constante. L'\'{e}quation (\ref{EQ:48_3}) peut alors se scinder en deux \'{e}quations :
 \bea
-	\varphi\left(q_{1},\frac{\partial S_{1}}{\partial q_{1}}\right) & = & \alpha_{1} \label{EQ:48_4} \\
+	\varphi\left(q_{1},\frac{\mathrm{d}S_{1}}{\mathrm{d}q_{1}}\right) & = & \alpha_{1} \label{EQ:48_4} \\
 	\Phi\left\{q_{i},\mathrm{t},\frac{\partial S'}{\partial q_{i}},\frac{\partial S'}{\partial\mathrm{t}},\alpha_{1}\right\} = 0 \label{EQ:48_5}
 \eea
 avec $\alpha_{1}$ une constante arbitraire.
@@ -738,4 +738,42 @@ Pour un syst\`{e}me conservatif, il s'agit de s\'{e}parer les $s$ coordonn\'{e}e
 \be
 	S = \sum_{i}S_{i}(q_{i},\alpha_{1},\ldots,\alpha_{s}) - E(\alpha_{1},\ldots,\alpha_{s})\mathrm{t} \label{EQ:48_6}
 \ee
-o\`{u} la fonction $S_{i}$ ne d\'{e}pend que de la coordonn\'{e}e $q_{i}$ et o\`{u} l'\'{e}nergie $E$ est une fonction des constantes arbitraires $\alpha_{i}$.
+o\`{u} la fonction $S_{i}$ ne d\'{e}pend que de la coordonn\'{e}e $q_{i}$ et o\`{u} l'\'{e}nergie $E$ est une fonction des constantes arbitraires $\alpha_{i}$. $E$ s'obtient en portant $S_{0} = \sum_{i}S_{i}$ dans l'\'{e}quation (\ref{EQ:48_6}).
+
+\subsection{Cas particulier avec une variable cyclique}
+
+Nous prenons l'hypoth\`{e}se que la coordonn\'{e}e $q_{1}$ est cyclique, i.e. $\frac{\partial L}{\partial q_{1}} = 0$. La d\'{e}finition de la fonction de Hamilton (\ref{EQ:40_2}), $H = \sum_{i}p_{i}\dot{q}_{i} - L$ donne :
+\benn
+	\frac{\partial H}{\partial q_{1}} = 0 - \frac{\partial L}{\partial q_{1}} = 0
+\eenn
+Donc $q_{1}$ n'est pas une variable explicite de la fonction de Hamilton et elle n'entre donc pas dans l'\'{e}quation de Hamilton-Jacobi. De fait, la fonction $\varphi\left(q_{1},\frac{\partial S}{\partial q_{1}}\right)$ ne peut pas d\'{e}pendre de $q_{1}$. La fonction $\varphi$ peut alors s'\'{e}crire simplement $\frac{\partial S}{\partial q_{1}} = \frac{\mathrm{d}S_{1}}{\mathrm{d}q_{1}}$.
+
+L'\'{e}quation (\ref{EQ:48_4}) donne alors :
+\benn
+	\frac{\mathrm{d}S_{1}}{\mathrm{d}q_{1}} = \alpha_{1} \Leftrightarrow S_{1} = \alpha_{1}q_{1}
+\eenn
+de telle sorte que la relation (\ref{EQ:48_2}) s'\'{e}crit alors :
+\be
+	S = S'(q_{i},\mathrm{t}) + \alpha_{1}q_{1}\text{ pour }i \ne 1 \label{EQ:48_7}
+\ee
+La relation (\ref{EQ:43_3}) nous donne $\frac{\partial S}{\partial q_{1}} = \frac{\partial S_{1}}{\partial q_{1}} = p_{1}$ ainsi $\alpha_{1}$ est ici la valeur constante de l'impulsion correspondant \`{a} la coordonn\'{e}e cyclique.
+
+Dans un syst\`{e}me conservatif, nous avons par d\'{e}finition $\frac{\partial H}{\partial\mathrm{t}} = 0$. Alors la s\'{e}paration du temps dans le terme $-E\mathrm{t}$ correspond \`{a} la m\'{e}thode de s\'{e}paration des variables en prenant $\mathrm{t}$ pour variable cyclique.
+
+\subsection{Exemples concrets}
+
+Pour s\'{e}parer les variables dans l'\'{e}quation de Hamilton-Jacobi, il est essentiel de bien choisir les coordonn\'{e}es. Nous \'{e}tudierons par la suite plusieurs cas d'un point mat\'{e}riel de masse $m$ dans un syst\`{e}me conservatif.
+
+\subsubsection{Coordonn\'{e}es sph\'{e}riques}
+
+L'exercice (\ref{PAR:40_EX3}) nous donne la fonction de Hamilton en fonction de $(r,\theta,\varphi)$ telle que :
+\benn
+	H = \frac{1}{2m}\left(p_{r}^{2} + \frac{p_{\theta}^{2}}{r^{2}} + \frac{p_{\varphi}^{2}}{r^{2}\sin^{2}\theta}\right) + U(r,\theta,\varphi)
+\eenn
+Les variables $r$, $\theta$ et $\varphi$ peuvent \^{e}tre s\'{e}par\'{e}es si et seulement si l'\'{e}nergie potentielle s'\'{e}crit sous la forme :
+\benn
+	U(r,\theta,\varphi) = a(r) + \frac{b(\theta)}{r^{2}} + \frac{c(\varphi)}{r^{2}\sin^{2}\theta}
+\eenn
+avec $a(r)$, $b(\theta)$ et $c(\varphi)$ des fonctions arbitraires.
+
+La plupart des ph\'{e}nom\`{e}nes physiques ont une sym\'{e}trie axiale et dans ce cadre, nous pouvons donc r\'{e}duire la formulation de l'\'{e}nergie potentielle \`{a} : $U(r,\theta,\varphi) = a(r) + \frac{b(\theta)}{r^{2}}$.
