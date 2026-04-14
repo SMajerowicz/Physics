@@ -776,4 +776,28 @@ Les variables $r$, $\theta$ et $\varphi$ peuvent \^{e}tre s\'{e}par\'{e}es si et
 \eenn
 avec $a(r)$, $b(\theta)$ et $c(\varphi)$ des fonctions arbitraires.
 
-La plupart des ph\'{e}nom\`{e}nes physiques ont une sym\'{e}trie axiale et dans ce cadre, nous pouvons donc r\'{e}duire la formulation de l'\'{e}nergie potentielle \`{a} : $U(r,\theta,\varphi) = a(r) + \frac{b(\theta)}{r^{2}}$.
+La plupart des ph\'{e}nom\`{e}nes physiques ont une sym\'{e}trie axiale et dans ce cadre, nous pouvons donc r\'{e}duire la formulation de l'\'{e}nergie potentielle \`{a} : $U(r,\theta,\varphi) = a(r) + \frac{b(\theta)}{r^{2}}$. En utilisant les relations (\ref{EQ:43_3}), nous pouvons en d\'{e}duire la fonction de Hamilton :
+\benn
+	H = \frac{1}{2m}\left[\left(\frac{\partial S}{\partial r}\right)^{2} + \frac{1}{r^{2}}\left(\frac{\partial S}{\partial\theta}\right)^{2} + \frac{1}{r^{2}\sin^{2}\theta}\left(\frac{\partial S}{\partial\varphi}\right)^{2}\right] + a(r) + \frac{b(\theta)}{r^{2}}
+\eenn
+Donc l'\'{e}quation de Hamilton-Jacobi devient en utilisant la relation (\ref{EQ:47_5}) : $S = S_{0}(r,\theta,\varphi) - E\mathrm{t}$, soit $\frac{\partial S}{\partial\mathrm{t}} = E$ :
+\bea
+	& & \frac{\partial S}{\partial\mathrm{t}} + H = 0 \nonumber \\
+	& \Leftrightarrow & \frac{1}{2m}\left(\frac{\partial S_{0}}{\partial r}\right)^{2} + a(r) + \frac{1}{2mr^{2}}\left[\left(\frac{\partial S_{0}}{\partial\theta}\right)^{2} + 2mb(\theta)\right] + \frac{1}{2mr^{2}\sin^{2}\theta}\left(\frac{\partial S_{0}}{\partial\varphi}\right)^{2} = E \nonumber
+\eea
+Dans notre hypoth\`{e}se de sym\'{e}trie axiale, la variable $\varphi$ est cyclique. Nous cherchons alors une solution telle que d\'{e}j\`{a} d\'{e}finie en (\ref{EQ:48_7}) : $S_{0} = p_{\varphi}\varphi + S_{1}(r) + S_{2}(\theta)$. Nous avons toujours :
+\benn
+	\frac{\mathrm{d}S_{1}}{\mathrm{d}r} = \frac{\partial S}{\partial r}\text{, }\frac{\mathrm{d}S_{1}}{\mathrm{d}\theta} = \frac{\partial S}{\partial\theta}\text{ et }\frac{\partial S}{\partial\varphi} = p_{\varphi}
+\eenn
+donc l'\'{e}quation de Hamilton-Jacobi devient :
+\benn
+	\frac{1}{2m}\left(\frac{\mathrm{d}S_{1}}{\mathrm{d}r}\right)^{2} + a(r) + \frac{1}{2mr^{2}}\left[\left(\frac{\mathrm{d}S_{2}}{\mathrm{d}\theta}\right)^{2} + 2mb(\theta)\right] + \frac{1}{2mr^{2}\sin^{2}\theta}p_{\varphi}^{2} = E
+\eenn
+Nous devons alors s\'{e}quentiellement r\'{e}soudre l'\'{e}quation :
+\benn
+	\left(\frac{\mathrm{d}S_{2}}{\mathrm{d}\theta}\right)^{2} + 2mb(\theta) + \frac{p_{\varphi}^{2}}{\sin^{2}\theta} = \beta
+\eenn
+puis :
+\benn
+	\frac{1}{2m}\left(\frac{\mathrm{d}S_{1}}{\mathrm{d}r}\right)^{2} + a(r) + \frac{\beta}{2mr^{2}} = E
+\eenn
