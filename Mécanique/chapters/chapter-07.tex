@@ -703,9 +703,9 @@ En substituant cela dans l'\'{e}quation de Hamilton-Jacobi et puisque $\frac{\pa
 	H\left(q_{1},\ldots,q_{s},\frac{\partial S_{0}}{\partial q_{1}},\ldots,\frac{\partial S_{0}}{\partial q_{s}}\right) = E \label{EQ:47_6}
 \ee
 
-\section{S\'{e}paration des variables}
+\section{S\'{e}paration des variables}\label{PAR:48}
 
-\subsection{G\'{e}n\'{e}ralit\'{e}s}
+\subsection{G\'{e}n\'{e}ralit\'{e}s}\label{PAR:48_1}
 
 La m\'{e}thode de \emph{s\'{e}paration des variables} permet dans certains cas de trouver l'int\'{e}grale compl\`{e}te de l'\'{e}quation de Hamilton-Jacobi.
 
@@ -740,7 +740,7 @@ Pour un syst\`{e}me conservatif, il s'agit de s\'{e}parer les $s$ coordonn\'{e}e
 \ee
 o\`{u} la fonction $S_{i}$ ne d\'{e}pend que de la coordonn\'{e}e $q_{i}$ et o\`{u} l'\'{e}nergie $E$ est une fonction des constantes arbitraires $\alpha_{i}$. $E$ s'obtient en portant $S_{0} = \sum_{i}S_{i}$ dans l'\'{e}quation (\ref{EQ:48_6}).
 
-\subsection{Cas particulier avec une variable cyclique}
+\subsection{Cas particulier avec une variable cyclique}\label{PAR:48_2}
 
 Nous prenons l'hypoth\`{e}se que la coordonn\'{e}e $q_{1}$ est cyclique, i.e. $\frac{\partial L}{\partial q_{1}} = 0$. La d\'{e}finition de la fonction de Hamilton (\ref{EQ:40_2}), $H = \sum_{i}p_{i}\dot{q}_{i} - L$ donne :
 \benn
@@ -760,11 +760,11 @@ La relation (\ref{EQ:43_3}) nous donne $\frac{\partial S}{\partial q_{1}} = \fra
 
 Dans un syst\`{e}me conservatif, nous avons par d\'{e}finition $\frac{\partial H}{\partial\mathrm{t}} = 0$. Alors la s\'{e}paration du temps dans le terme $-E\mathrm{t}$ correspond \`{a} la m\'{e}thode de s\'{e}paration des variables en prenant $\mathrm{t}$ pour variable cyclique.
 
-\subsection{Exemples concrets}
+\subsection{Exemples concrets}\label{PAR:48_3}
 
 Pour s\'{e}parer les variables dans l'\'{e}quation de Hamilton-Jacobi, il est essentiel de bien choisir les coordonn\'{e}es. Nous \'{e}tudierons par la suite plusieurs cas d'un point mat\'{e}riel de masse $m$ dans un syst\`{e}me conservatif.
 
-\subsubsection{Coordonn\'{e}es sph\'{e}riques}
+\subsubsection{Coordonn\'{e}es sph\'{e}riques}\label{PAR:48_3_1}
 
 L'exercice (\ref{PAR:40_EX3}) nous donne la fonction de Hamilton en fonction de $(r,\theta,\varphi)$ telle que :
 \benn
@@ -801,3 +801,34 @@ puis :
 \benn
 	\frac{1}{2m}\left(\frac{\mathrm{d}S_{1}}{\mathrm{d}r}\right)^{2} + a(r) + \frac{\beta}{2mr^{2}} = E
 \eenn
+La premi\`{e}re donne :
+\benn
+	S_{2} = \int{\sqrt{\beta - 2mb(\theta) - \frac{p_{\varphi}^{2}}{\sin^{2}(\theta)}}\mathrm{d}\theta}
+\eenn
+et la seconde :
+\benn
+	S_{1} = \int{\sqrt{2m(E- a(r)) - \frac{\beta}{r^{2}}}\mathrm{d}r}
+\eenn
+ce qui nous permet d'obtenir pour l'action :
+\be
+	S = p_{\varphi}\varphi + \int{\sqrt{2m(E- a(r)) - \frac{\beta}{r^{2}}}\mathrm{d}r} + \int{\sqrt{\beta - 2mb(\theta) - \frac{p_{\varphi}^{2}}{\sin^{2}(\theta)}}\mathrm{d}\theta} - E\mathrm{t} \label{EQ:48_9}
+\ee
+qui est l'int\'{e}grale compl\`{e}te de l'\'{e}quation de Hamilton-Jacobi. Les constantes arbitraires sont $p_{\varphi}$, $\beta$ et $E$.
+
+\subsubsection{Coordonn\'{e}es paraboliques}\label{PAR:48_3_2}
+
+Le passage des coordonn\'{e}es cylindriques $(\rho,\varphi,z)$ aux coordonn\'{e}es paraboliques $(\xi,\eta,\varphi)$ s'op\`{e}re au moyen des formules de transformations suivantes :
+\be
+	z = \frac{1}{2}(\xi - \eta)\text{ et }\rho = \sqrt{\xi\eta} \label{EQ:48_10}
+\ee
+Les coordonn\'{e}es $\xi$ et $\eta$ appartiennent toutes les deux \`{a} $\mathbb{R}^{+}$. En utilisant le rayon $r$, nous avons :
+\be
+	r = \sqrt{z^{2} + \rho^{2}} = \sqrt{\frac{1}{4}(\xi^{2} + \eta^{2} - 2\xi\eta) + \xi\eta} = \frac{1}{2}(\xi + \eta) \label{EQ:48_11}
+\ee
+et encore :
+\be
+	\begin{cases}
+		r + z = \frac{1}{2}(\xi + \eta) + \frac{1}{2}(\xi - \eta) = \xi \nonumber \\
+		r - z = \frac{1}{2}(\xi + \eta) - \frac{1}{2}(\xi - \eta) = \eta \label{EQ:48_12}
+	\end{cases}
+\ee
