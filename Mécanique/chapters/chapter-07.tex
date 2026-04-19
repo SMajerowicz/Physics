@@ -896,3 +896,55 @@ L'action du syst\`{e}me en coordonn\'{e}es paraboliques, int\'{e}grale compl\`{e
 avec $p_{\varphi}$, $\beta$ et $E$ des constantes arbitraires.
 
 \subsubsection{Coordonn\'{e}es elliptiques}\label{PAR:48_3_3}
+
+Les coordonn\'{e}es elliptiques $(\xi,\eta,\varphi)$ d\'{e}coulent des formules :
+\be
+	\begin{cases}
+		\rho = \sigma\sqrt{(\xi^{2} - 1)(1 - \eta^{2})} \nonumber \\
+		z = \sigma\xi\eta \label{EQ:48_17}
+	\end{cases}
+\ee
+La constante $\sigma$ est la param\`{e}tre de la transformation. $\xi$ varie dans $[1;+\infty[$ et $\eta$ dans $[-1;1]$. D'un point de vue g\'{e}om\'{e}trique, la quantit\'{e} $r_{1} = \sqrt{(z - \sigma)^{2} + \rho^{2}}$, respectivement $r_{2} = \sqrt{(z - \sigma)^{2} + \rho^{2}}$, est la distance au point $A_{1}$, respectivement $A_{2}$, de l'axe $z$, qui a pour coordonn\'{e}e $z = \sigma$, respectivement $z = -\sigma$. Nous avons alors :
+\be
+	\begin{cases}
+		r_{1} = \sqrt{(\sigma\xi\eta - \sigma)^{2} + \sigma^{2}(\xi^{2} - 1)(1 - \eta^{2})} = \sigma\sqrt{\xi^{2}\eta^{2} + 1 - 2\xi\eta + \xi^{2} - \xi^{2}\eta^{2} - 1 - \eta^{2}} \nonumber \\
+		= \sigma\sqrt{\xi^{2} + \eta^{2} - 2\xi\eta} = \sigma(\xi - \eta) \nonumber \\
+		r_{1} = \sqrt{(\sigma\xi\eta + \sigma)^{2} + \sigma^{2}(\xi^{2} - 1)(1 - \eta^{2})} = \sigma\sqrt{\xi^{2}\eta^{2} + 1 + 2\xi\eta + \xi^{2} - \xi^{2}\eta^{2} - 1 - \eta^{2}} \nonumber \\
+		= \sigma\sqrt{\xi^{2} + \eta^{2} + 2\xi\eta} = \sigma(\xi + \eta) \nonumber \\
+		\xi = \frac{r_{2} + r_{1}}{2\sigma}\text{ et }\eta = \frac{r_{2} - r_{1}}{2\sigma} \label{EQ:48_18}
+	\end{cases}
+\ee
+La fonction de Lagrange en coordonn\'{e}es cylindriques est, voir la formule (\ref{EQ:4_5}) :
+\benn
+	L = \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2} + \dot{z}^{2}) - R(r,\varphi,z)
+\eenn
+o\`{u} la coordonn\'{e}e $r$ est identifiable \`{a} $\rho$, alors :
+\bea
+	\dot{r} & = & \dot{\rho} = \sigma\frac{\left(2\xi\dot{\xi}(1 - \eta^{2}) - 2\eta\dot{\eta}(\xi^{2} - 1)\right)}{2\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}} = \sigma\frac{\left(\xi\dot{\xi}(1 - \eta^{2}) - \eta\dot{\eta}(\xi^{2} - 1)\right)}{\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}} \nonumber \\
+	\dot{z} & = & \sigma(\dot{\xi}\eta + \xi\dot{\eta}) \nonumber
+\eea
+et la fonction de Lagrange se d\'{e}veloppe :
+\benn
+	L = \frac{m}{2}\left[\sigma^{2}\frac{\left(\xi\dot{\xi}(1 - \eta^{2}) - \eta\dot{\eta}(\xi^{2} - 1)\right)^{2}}{(\xi^{2} - 1)(1 - \eta^{2})} + \sigma^{2}(\xi^{2} - 1)(1 - \eta^{2})\dot{\varphi}^{2} + \sigma^{2}(\dot{\xi}\eta + \xi\dot{\eta})^{2}\right] - U(\xi,\eta\varphi)
+\eenn
+Il nous est n\'{e}cessaire de faire un focus sur la quantit\'{e} :
+\bea
+	\left(\xi\dot{\xi}(1 - \eta^{2} - \eta\dot{\eta}(\xi^{2} - 1)\right)^{2} & = & \xi^{2}\dot{\xi}^{2}(1 - \eta^{2}) + \eta^{2}\dot{\eta}^{2}(\xi^{2} - 1)^{2} - 2\xi\dot{\xi}\eta\dot{\eta}(\xi^{2} - 1)(1 - \eta^{2}) \nonumber \\
+	& & + (\dot{\xi}^{2}\eta^{2} + \xi^{2}\dot{\eta}^{2} + 2\xi\dot{\xi}\eta\dot{\eta})(\xi^{2} - 1)(1 - \eta^{2}) \nonumber \\
+	& = & \xi^{2}\dot{\xi}^{2} + \xi^{2}\dot{\xi}^{2}\eta^{4} - 2\xi^{2}\dot{\xi}^{2}\eta^{2} + \eta^{2}\dot{\eta}^{2}\xi^{4} + \eta^{2}\dot{\eta}^{2} - 2\xi^{2}\eta^{2}\dot{\eta}^{2} \nonumber \\
+	& & + (\dot{\xi}{2}\eta^{2} + \xi^{2}\dot{\eta}^{2})(\xi^{2} + \eta^{2} - \xi^{2}\eta^{2} - 1) \nonumber \\
+	& = & \xi^{2}\dot{\xi}^{2} + \xi^{2}\dot{\xi}^{2}\eta^{4} - 2\xi^{2}\dot{\xi}^{2}\eta^{2} + \eta^{2}\dot{\eta}^{2}\xi^{4} + \eta^{2}\dot{\eta}^{2} - 2\xi^{2}\eta^{2}\dot{\eta}^{2} \nonumber \\
+	& & \xi^{2}\dot{\xi}^{2}\eta^{2} + \dot{\xi}^{2}\eta^{4} - \xi^{2}\dot{\xi}^{2}\eta^{4} - \dot{\xi}^{2}\eta^{2} + \xi^{4}\dot{\xi}^{2} + \xi^{2}\eta^{2}\dot{\xi}^{2} - \xi^{4}\eta^{2}\dot{\eta}^{2} - \xi^{2}\dot{\eta}^{2} \nonumber \\
+	& = & \dot{\xi}^{2}(\xi^{2} - 2\xi^{2}\eta^{2} + \xi^{2}\eta^{2} + \eta^{4} - \eta^{2}) + \dot{\eta}^{2}(\eta^{2} - 2\xi^{2}\eta^{2} + \xi^{4} + \xi^{2}\eta^{2} - \xi^{2}) \nonumber \\
+	& = & \dot{\xi}^{2}(\eta^{4} - \eta^{2} - \xi^{2}\eta^{2} + \xi^{2}) + \dot{\eta}^{2}(\eta^{4} - \eta^{2} - \xi^{2}\eta^{2} + \eta^{2}) \nonumber \\
+	& = & \dot{\xi}^{2}(1 - \eta^{2})(\xi^{2} - \eta^{2}) + \dot{\eta}^{2}(\xi^{2} - 1)(\xi^{2} - \eta^{2}) \nonumber
+\eea
+qui permet d'\'{e}crire la fonction de Lagrange et de la d\'{e}velopper ainsi :
+\bea
+	L & = & \frac{m\sigma^{2}}{2}\left[\frac{\dot{\xi}^{2}(1 - \eta^{2})(\xi^{2} - \eta^{2}) + \dot{\eta}^{2}(\xi^{2} - 1)(\xi^{2} - \eta^{2})}{(\xi^{2} - 1)(1 - \eta^{2})}\right] + \frac{m\sigma^{2}}{2}(\xi^{2} - 1)(1 - \eta^{2})\dot{\varphi}^{2} - U(\xi,\eta,\varphi) \nonumber \\
+	\Leftrightarrow L & = & \frac{m\sigma^{2}}{2}(\xi^{2} - \eta^{2})\left(\frac{\dot{\xi}^{2}}{(\xi^{2} - 1)} + \frac{\dot{\eta}^{2}}{(1 - \eta^{2})}\right) + \frac{m\sigma^{2}}{2}(\xi^{2} - 1)(1 - \eta^{2})\dot{\varphi}^{2} - U(\xi,\eta,\varphi) \label{EQ:48_19}
+\eea
+La d\'{e}finition de la fonction de Hamilton (\ref{EQ:40_2}) donne :
+\bea
+	H & = & p_{\xi}\dot{\xi} + p_{\eta}\dot{\eta} + p_{\varphi}\dot{\varphi} - L \nonumber \\
+\eea
