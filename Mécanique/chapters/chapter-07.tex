@@ -947,4 +947,31 @@ qui permet d'\'{e}crire la fonction de Lagrange et de la d\'{e}velopper ainsi :
 La d\'{e}finition de la fonction de Hamilton (\ref{EQ:40_2}) donne :
 \bea
 	H & = & p_{\xi}\dot{\xi} + p_{\eta}\dot{\eta} + p_{\varphi}\dot{\varphi} - L \nonumber \\
+	& = & \frac{(\xi^{2} - 1)}{m\sigma^{2}(\xi^{2} - \eta^{2})}p_{\xi}^{2} + \frac{(1 - \eta^{2})}{m\sigma^{2}(\xi^{2} - \eta^{2})}p_{\eta}^{2} + \frac{p_{\varphi}^{2}}{m\sigma^{2}(\xi^{2} - 1)(1 - \eta^{2})} - \frac{m\sigma^{2}(\xi^{2} - \eta^{2})}{2(\xi^{2} - 1)}\frac{(\xi^{2} - 1)^{2}}{m^{2}\sigma^{4}(\xi^{2} - \eta^{2})^{2}}p_{\xi}^{2} \nonumber \\
+	& & -\frac{m\sigma^{2}(\xi^{2} - \eta^{2})}{2(1 - \eta^{2})}\frac{(1 - \eta^{2})^{2}}{m^{2}\sigma^{4}(\xi^{2} - \eta^{2})^{2}}p_{\eta}^{2} - \frac{m\sigma^{2}}{2}(\xi^{2} - 1)(1 - \eta^{2})\frac{p_{\varphi}^{2}}{m^{2}\sigma^{4}(\xi^{2} - 1)^{2}(1 - \eta^{2})^{2}} + U(\xi,\eta,\varphi) \nonumber \\
+	& = & \frac{(\xi^{2} - 1)}{2m\sigma^{2}(\xi^{2} - \eta^{2})}p_{\xi}^{2} + \frac{(1 - \eta^{2})}{2m\sigma^{2}(\xi^{2} - \eta^{2})}p_{\eta}^{2} + \frac{p_{\varphi}^{2}}{2m\sigma^{2}(\xi^{2} - 1)(1 - \eta^{2})} + U(\xi,\eta,\varphi) \nonumber
+\eea
+Or :
+\benn
+	\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2}} = \frac{\xi^{2} - \eta^{2}}{(\xi^{2} - 1)(1 - \eta^{2})}
+\eenn
+Donc la fonction de Hamilton devient :
+\be
+	H = \frac{1}{2m\sigma^{2}(\xi^{2} - \eta^{2})}\left[(\xi^{2} - 1)p_{\xi}^{2} + (1 - \eta^{2})p_{\eta}^{2} + \left(\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2}\right] + U(\xi,\eta,\varphi) \label{EQ:48_20}
+\ee
+En s'appuyant sur la sym\'{e}trie tr\`{e}s g\'{e}n\'{e}ralement axiale des ph\'{e}nom\`{e}nes physiques, i.e $\varphi$ est une variable cyclique, et en appliquant la m\'{e}thode de s\'{e}paration des variables, nous pouvons supposer que l'\'{e}nergie potentielle peut s'\'{e}crire sous la forme :
+\be
+	U = \frac{a(\xi) + b(\eta)}{\xi^{2} - \eta^{2}} = \frac{\sigma^{2}}{r_{1}r_{2}}\left(a\left(\frac{r_{2} + r_{1}}{2}\right) + b\left(\frac{r_{2} - r_{1}}{2}\right)\right) \label{EQ:48_21}
+\ee
+o\`{u} $a(\xi)$ et $b(\eta)$ sont des fonctions arbitraires.
+
+En reprenant les m\^{e}mes hypoth\`{e}ses que dans le paragraphe (\ref{PAR:48_3_2}), \`{a} savoir $S = S_{0}(\xi,\eta,\varphi) - E\mathrm{t}$ et donc :
+\benn
+	p_{\xi} = \frac{\partial S}{\partial\xi} = \frac{\partial S_{0}}{\partial\xi}\text{, }p_{\eta} = \frac{\partial S}{\partial\eta} = \frac{\partial S_{0}}{\partial\eta}\text{, }p_{\varphi} = \frac{\partial S}{\partial\varphi} = \frac{\partial S_{0}}{\partial\varphi}\text{ et }\frac{\partial S}{\partial\mathrm{t}} = -E
+\eenn
+alors l'\'{e}quation de Hamilton-Jacobi s'\'{e}crit :
+\bea
+	\frac{1}{2m\sigma^{2}(\xi^{2} - \eta^{2})}\left[(\xi^{2} - 1)\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + (1 - \eta^{2})\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + \left(\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2}\right] + \frac{a(\xi) + b(\eta)}{\xi^{2} - \eta^{2}} & = & E \nonumber \\
+	(\xi^{2} - 1)\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + \left(\frac{1}{\xi^{2} - 1}\right)p_{\varphi}^{2} + 2m\sigma^{2}a(\xi) - 2m\sigma^{2}\xi^{2}E & & \nonumber \\
+	+(1 - \eta^{2})\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + \left(\frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2} + 2m\sigma^{2}b(\eta) + 2m\sigma^{2}\eta^{2}E & = & 0 \nonumber
 \eea
