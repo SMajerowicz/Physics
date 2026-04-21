@@ -878,7 +878,7 @@ La coordonn\'{e}e $\varphi$ est cyclique par sym\'{e}trie axiale, elle se s\'{e}
 	\Leftrightarrow 2\xi\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + ma(\xi) - mE\xi + \frac{p_{\varphi}^{2}}{2\xi} & & \nonumber \\
 	2\eta\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + mb(\eta) - mE\eta + \frac{p_{\varphi}^{2}}{2\eta} & = & 0 \nonumber
 \eea
-En posant $S_{0} = p_{\varphi}\varphi + S_{1}(\xi) + S_{2}(\eta)$, cela implique $\frac{\partial S_{0}}{\partial\xi} = \frac{\partial S_{1}}{\partial\xi} = \frac{\mathrm{d}S_{0}}{\mathrm{d}\xi}$ et $\frac{\partial S_{0}}{\partial\eta} = \frac{\partial S_{2}}{\partial\xi} = \frac{\mathrm{d}S_{2}}{\mathrm{d}\xi}$. Nous avons donc \`{a} r\'{e}soudre s\'{e}quentiellement les deux \'{e}quations suivantes :
+En posant $S_{0} = p_{\varphi}\varphi + S_{1}(\xi) + S_{2}(\eta)$, cela implique $\frac{\partial S_{0}}{\partial\xi} = \frac{\partial S_{1}}{\partial\xi} = \frac{\mathrm{d}S_{1}}{\mathrm{d}\xi}$ et $\frac{\partial S_{0}}{\partial\eta} = \frac{\partial S_{2}}{\partial\xi} = \frac{\mathrm{d}S_{2}}{\mathrm{d}\xi}$. Nous avons donc \`{a} r\'{e}soudre s\'{e}quentiellement les deux \'{e}quations suivantes :
 \bea
 	2\xi\left(\frac{\mathrm{d}S_{1}}{\mathrm{d}\xi}\right)^{2} + ma(\xi) - mE\xi + \frac{p_{\varphi}^{2}}{2\xi} & = & \beta \nonumber \\
 	2\eta\left(\frac{\mathrm{d}S_{2}}{\mathrm{d}\eta}\right)^{2} + mb(\eta) - mE\eta + \frac{p_{\varphi}^{2}}{2\eta} & = & -\beta \nonumber
@@ -974,4 +974,23 @@ alors l'\'{e}quation de Hamilton-Jacobi s'\'{e}crit :
 	\frac{1}{2m\sigma^{2}(\xi^{2} - \eta^{2})}\left[(\xi^{2} - 1)\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + (1 - \eta^{2})\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + \left(\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2}\right] + \frac{a(\xi) + b(\eta)}{\xi^{2} - \eta^{2}} & = & E \nonumber \\
 	(\xi^{2} - 1)\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + \left(\frac{1}{\xi^{2} - 1}\right)p_{\varphi}^{2} + 2m\sigma^{2}a(\xi) - 2m\sigma^{2}\xi^{2}E & & \nonumber \\
 	+(1 - \eta^{2})\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + \left(\frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2} + 2m\sigma^{2}b(\eta) + 2m\sigma^{2}\eta^{2}E & = & 0 \nonumber
+\eea
+Nous posons alors $S_{0} = p_{\varphi}\varphi + S_{1}(\xi) + S_{2}(\eta)$ qui nous permet d'\'{e}crire :
+\benn
+	\frac{\partial S_{0}}{\partial\xi} = \frac{\partial S_{1}}{\partial\xi} = \frac{\mathrm{d}S_{1}}{\mathrm{d}\xi}\text{ et }\frac{\partial S_{0}}{\partial\eta} = \frac{\partial S_{2}}{\partial\xi} = \frac{\mathrm{d}S_{2}}{\mathrm{d}\xi}
+\eenn
+Nous avons donc \`{a} r\'{e}soudre s\'{e}quentiellement les deux \'{e}quations suivantes :
+\bea
+	(\xi^{2} - 1)\left(\frac{\mathrm{d}S_{1}}{\mathrm{d}\xi}\right)^{2} + \left(\frac{1}{\xi^{2} - 1}\right)p_{\varphi}^{2} + 2m\sigma^{2}a(\xi) - 2m\sigma^{2}\xi^{2}E & = & \beta \nonumber \\
+	(1 - \eta^{2})\left(\frac{\mathrm{d}S_{2}}{\mathrm{d}\xi}\right)^{2} + \left(\frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2} + 2m\sigma^{2}b(\eta) + 2m\sigma^{2}\eta^{2}E & = & -\beta \nonumber
+\eea
+Nous obtenons donc :
+\bea
+	S_{1} & = & \int{\sqrt{\frac{2m\sigma^{2}\xi^{2}}{\xi^{2} - 1}E + \frac{\beta - 2m\sigma^{2}a(\xi)}{\xi^{2} - 1} - \frac{p_{\varphi}^{2}}{(\xi^{2} - 1)^{2}}}\mathrm{d}\xi} \nonumber \\
+	S_{1} & = & \int{\sqrt{\frac{2m\sigma^{2}\eta^{2}}{1 - \eta^{2}}E - \frac{\beta + 2m\sigma^{2}b(\eta)}{1 - \eta^{2}} - \frac{p_{\varphi}^{2}}{(1 - \eta^{2})^{2}}}\mathrm{d}\eta} \nonumber
+\eea
+Le r\'{e}sultat de l'\'{e}quation de Hamilton-Jacobi est donc l'int\'{e}grale compl\`{e}te suivante\footnote{Nous obtenons ici une expression diff\'{e}rente par rapport au livre sur le facteur multiplicatif de l'\'{e}nergie.} :
+\bea
+	S & = & -E\mathrm{t} + p_{\varphi}\varphi + \int{\sqrt{\frac{2m\sigma^{2}\xi^{2}}{\xi^{2} - 1}E + \frac{\beta - 2m\sigma^{2}a(\xi)}{\xi^{2} - 1} - \frac{p_{\varphi}^{2}}{(\xi^{2} - 1)^{2}}}\mathrm{d}\xi} \nonumber \\
+	& & + \int{\sqrt{\frac{2m\sigma^{2}\eta^{2}}{1 - \eta^{2}}E - \frac{\beta + 2m\sigma^{2}b(\eta)}{1 - \eta^{2}} - \frac{p_{\varphi}^{2}}{(1 - \eta^{2})^{2}}}\mathrm{d}\eta} \label{EQ:48_22}
 \eea
