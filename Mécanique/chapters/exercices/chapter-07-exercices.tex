@@ -1,4 +1,6 @@
-\section{\'{E}quations canoniques}
+\chapter{\'{E}quations canoniques}
+
+\section{Fonction de Hamilton}
 
 \subsection{Calcul de la fonction de Hamilton en coordonn\'{e}es cart\'{e}siennes}
 
@@ -221,7 +223,7 @@ sachant qu'avec la d\'{e}composition de $\vec{M}$, nous pouvons en d\'{e}duire :
 	\frac{\partial\vec{M}}{\partial p_{x}} & = & z\vec{j} - y\vec{k} \text{, } \frac{\partial\vec{M}}{\partial p_{y}} = -z\vec{i} + x\vec{k} \text{ et } \frac{\partial\vec{M}}{\partial p_{z}} = y\vec{i} - x\vec{j} \nonumber
 \eea
 
-\subsection{Principe de Maupertuis}
+\section{Principe de Maupertuis}
 
 L'objectif est ici de d\'{e}terminer l'\'{e}quation diff\'{e}rentielle de la trajectoire \`{a} partir du principe variationnel trouv\'{e} en (\ref{EQ:44_10}) : $\delta\left(\int{\sqrt{2m(E - U)}\mathrm{d}l}\right) = 0$. D\'{e}veloppons la variation :
 \benn
@@ -271,3 +273,23 @@ Mais par d\'{e}finition de l'\'{e}nergie totale du syst\`{e}me $E = T + U$, soit
 	\frac{m\vec{v}^{\,2}}{R}\vec{n} = \vec{F}_{n}
 \eenn
 qui correspond bien \`{a} l'acc\'{e}l\'{e}ration normale pour un mouvement le long d'une trajectoire courbe.
+
+\section{S\'{e}paration des variables}
+
+\subsection{Superposition d'un champ coulombien et d'un champ homog\`{e}ne}
+
+Il s'agit ici de trouver l'int\'{e}grale compl\`{e}te de l'\'{e}quation de Hamilton-Jacobi pour une particule de masse $m$ en mouvement dans un champ compos\'{e} d'un champ coulombien et d'un champ homog\`{e}ne tel que :
+\benn
+	U = \frac{\alpha}{r} - Fz
+\eenn
+En utilisant les coordonn\'{e}es paraboliques (\ref{EQ:48_10}) et (\ref{EQ:48_11}), nous pouvons r\'{e}\'{e}crire l'\'{e}nergie potentielle telle que :
+\benn
+	U(\xi,\eta) = \frac{2\alpha}{\xi + \eta} - \frac{F}{2}(\xi - \eta) = \frac{\alpha - \frac{F}{2}\xi^{2} + \alpha + \frac{F}{2}\eta^{2}}{\xi +\eta}
+\eenn
+En identifiant cette relation avec (\ref{EQ:48_15}), nous obtenons :
+\benn
+	a(\xi) = \alpha - \frac{F}{2}\xi^{2}\text{ et }b(\eta) = \alpha + \frac{F}{2}\eta^{2}
+\eenn
+L'utilisation de la relation (\ref{EQ:48_16}) nous donne de fait l'int\'{e}grale compl\`{e}te solution de l'\'{e}quation de Hamilton-Jacobi. Les \'{e}quations issues de la m\'{e}thode de s\'{e}paration des variables sont :
+
+\subsection{Superposition de deux champs coulombiens}
