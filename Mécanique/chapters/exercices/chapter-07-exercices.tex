@@ -291,5 +291,24 @@ En identifiant cette relation avec (\ref{EQ:48_15}), nous obtenons :
 	a(\xi) = \alpha - \frac{F}{2}\xi^{2}\text{ et }b(\eta) = \alpha + \frac{F}{2}\eta^{2}
 \eenn
 L'utilisation de la relation (\ref{EQ:48_16}) nous donne de fait l'int\'{e}grale compl\`{e}te solution de l'\'{e}quation de Hamilton-Jacobi. Les \'{e}quations issues de la m\'{e}thode de s\'{e}paration des variables sont :
+\bea
+	2\xi p_{\xi}^{2} + ma(\xi) - m\xi E +\frac{p_{\varphi}^{2}}{2\xi} & = & \beta \nonumber \\
+	2\eta p_{\eta}^{2} + mb(\eta) - m\eta E + \frac{p_{\varphi}^{2}}{2\eta} & = & -\beta \nonumber
+\eea
+
+La conservation de l'\'{e}nergie nous apporte :
+\benn
+	H = E \Leftrightarrow \frac{2}{m}\frac{\xi p_{\xi}^{2} + \eta p_{\eta}^{2}}{\xi + \eta} + \frac{p_{\varphi}^{2}}{2m\xi\eta} + \frac{\alpha}{r} - Fz = E
+\eenn
+alors que la diff\'{e}rence des deux \'{e}quations issues de la s\'{e}paration des variables va nous permettre d'acc\'{e}der \`{a} la quantit\'{e} $\beta$ :
+\bea
+	2\beta & = & 2\xi p_{\xi}^{2} - 2\eta p_{\eta}^{2} + m(a(\xi) - b(\eta)) + mE(\eta - \xi) + \frac{p_{\varphi}^{2}}{2}\left(\frac{1}{\xi} - \frac{1}{\eta}\right) \nonumber \\
+	& = & 2\xi p_{\xi}^{2} - 2\eta p_{\eta}^{2} - \frac{mF}{2}(\xi^{2} + \eta^{2}) + \frac{p_{\varphi}^{2}}{2}\frac{(\eta - \xi)}{\xi\eta} + m(\eta - \xi)\left(\frac{2}{m}\frac{\xi p_{\xi}^{2} + \eta p_{\eta}^{2}}{\xi + \eta} + \frac{p_{\varphi}^{2}}{2m\xi\eta} + \frac{\alpha}{r} - Fz\right) \nonumber \\
+	& = & 2\xi p_{\xi}^{2} - 2\eta p_{\eta}^{2} - \frac{mF}{2}(\xi^{2} + \eta^{2}) + \frac{p_{\varphi}^{2}}{2}\frac{(\eta - \xi)}{\xi\eta} \nonumber \\
+	& & -2\frac{(\xi - \eta)}{(\xi + \eta)}(\xi p_{\xi}^{2} + \eta p_{\eta}^{2}) - \frac{(\xi - \eta)}{2\xi\eta}p_{\varphi}^{2} - m(\xi - \eta)\left(\frac{\alpha}{r} - Fz\right) \nonumber \\
+	& = & \nonumber
+\eea
 
 \subsection{Superposition de deux champs coulombiens}
+
+
