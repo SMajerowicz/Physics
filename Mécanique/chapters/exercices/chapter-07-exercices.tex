@@ -306,7 +306,21 @@ alors que la diff\'{e}rence des deux \'{e}quations issues de la s\'{e}paration d
 	& = & 2\xi p_{\xi}^{2} - 2\eta p_{\eta}^{2} - \frac{mF}{2}(\xi^{2} + \eta^{2}) + \frac{p_{\varphi}^{2}}{2}\frac{(\eta - \xi)}{\xi\eta} + m(\eta - \xi)\left(\frac{2}{m}\frac{\xi p_{\xi}^{2} + \eta p_{\eta}^{2}}{\xi + \eta} + \frac{p_{\varphi}^{2}}{2m\xi\eta} + \frac{\alpha}{r} - Fz\right) \nonumber \\
 	& = & 2\xi p_{\xi}^{2} - 2\eta p_{\eta}^{2} - \frac{mF}{2}(\xi^{2} + \eta^{2}) + \frac{p_{\varphi}^{2}}{2}\frac{(\eta - \xi)}{\xi\eta} \nonumber \\
 	& & -2\frac{(\xi - \eta)}{(\xi + \eta)}(\xi p_{\xi}^{2} + \eta p_{\eta}^{2}) - \frac{(\xi - \eta)}{2\xi\eta}p_{\varphi}^{2} - m(\xi - \eta)\left(\frac{\alpha}{r} - Fz\right) \nonumber \\
-	& = & \nonumber
+	& = & 2\xi p_{\xi}^{2}\left(1 - \frac{\xi - \eta}{\xi + \eta}\right) - 2\eta p_{\eta}^{2}\left(1 + \frac{\xi - \eta}{\xi + \eta}\right) - \frac{mF}{2}(\xi^{2} + \eta^{2}) + mFz(\xi - \eta) \nonumber \\
+	& & -m(\xi - \eta)\frac{\alpha}{r} - \frac{\xi - \eta}{\xi\eta}p_{\varphi}^{2} \nonumber
+\eea
+Or nous calculons les facteurs suivants de l'\'{e}quation pr\'{e}c\'{e}dente :
+\bea
+	1 - \frac{\xi - \eta}{\xi + \eta} & = & 2\frac{\eta}{\xi + \eta} \nonumber \\
+	1 + \frac{\xi - \eta}{\xi + \eta} & = & 2\frac{\xi}{\xi + \eta} \nonumber \\
+	-\frac{mF}{2}(\xi^{2} + \eta^{2}) + mFz(\xi - \eta) & = & -\frac{mF}{2}\left(2(\rho^{2} + 2z^{2}) - 4z^{2})\right) = -m\rho^{2}F \nonumber \\
+	-m(\xi - \eta)\frac{\alpha}{r} & = & -2m\alpha\frac{z}{\rho} \nonumber \\
+	-\frac{\xi - \eta}{\xi\eta} & = & -2\frac{z}{\rho^{2}} \nonumber
+\eea
+Le passage aux coordonn\'{e}es $\rho$ et $z$ demande les calculs suivants des impulsions sachant que $\rho = \sqrt{\xi\eta}$ et $z = \frac{1}{2}(\xi - \eta)$ :
+\bea
+	p_{\xi} & = & \frac{\partial S(\xi,\eta)}{\partial\xi} = \frac{\partial S(\rho,z)}{\partial\rho}\frac{\partial\rho}{\partial\xi} + \frac{\partial S(\rho,z)}{\partial z}\frac{\partial z}{\partial\eta} = p_{\rho}\frac{\eta}{2\sqrt{\xi\eta}} + \frac{p_{z}}{2} = \frac{r - z}{2\rho}p_{\rho} + \frac{p_{z}}{2} \nonumber \\
+	p_{\eta} & = & \frac{\partial S(\xi,\eta)}{\partial\eta} = \frac{\partial S(\rho,z)}{\partial\rho}\frac{\partial\rho}{\partial\eta} + \frac{\partial S(\rho,z)}{\partial z}\frac{\partial z}{\partial\eta} = p_{\rho}\frac{\xi}{2\sqrt{\xi\eta}} - \frac{p_{z}}{2} = \frac{r + z}{2\rho}p_{\rho} + \frac{p_{z}}{2} \nonumber
 \eea
 
 \subsection{Superposition de deux champs coulombiens}
