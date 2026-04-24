@@ -390,3 +390,43 @@ Or, nous avons :
 	& = & \frac{1}{(\xi^{2} - 1)(1 - \eta^{2})}\left[2 - (\xi^{2} + \eta^{2}) - \frac{\xi^{2} + \eta^{2}}{\xi^{2} - \eta^{2}}(\xi^{2} - \eta^{2})\right] \nonumber \\
 	& = & 2\frac{\left(1 - (\xi^{2} + \eta^{2})\right)}{(\xi^{2} - 1)(1 - \eta^{2})} \nonumber
 \eea
+Donc :
+\bea
+	2\beta & = & -2\frac{(\xi^{2} - 1)}{\xi^{2} - \eta^{2}}\eta^{2}p_{\xi}^{2} - 2\frac{(1 - \eta^{2})}{\xi^{2} - \eta^{2}}\xi^{2}p_{\eta}^{2} - 2\frac{\left(1 - (\xi^{2} + \eta^{2})\right)}{(\xi^{2} - 1)(1 - \eta^{2})}p_{\varphi}^{2} - 4\frac{m\sigma\xi\eta}{\xi^{2} - \eta^{2}}\left(\alpha_{1}(\xi + \eta) + \alpha_{2}(\eta - \xi)\right) \nonumber \\
+	& = & -\frac{\xi^{2} - 1}{\xi^{2} - \eta^{2}}\eta^{2}p_{\xi}^{2} - \frac{1 - \eta^{2}}{\xi^{2} - \eta^{2}}\xi^{2}p_{\eta}^{2} - \frac{1 - (\xi^{2} + \eta^{2})}{(\xi^{2} - 1)(1 - \eta^{2})}p_{\varphi}^{2} - 2\frac{m\sigma\xi\eta}{\xi^{2} - \eta^{2}}\left(\alpha_{1}(\xi + \eta) + \alpha_{2}(\eta - \xi)\right) \nonumber
+\eea
+Nous allons d\'{e}sormais changer de variables pour passer de $(\xi,\eta)$ \`{a} $(\rho,z)$ :
+\bea
+	p_{\xi} & = & \frac{\partial S(\xi,\eta)}{\partial\xi} = \frac{\partial S(\rho,z)}{\partial\rho}\frac{\partial\rho}{\partial\xi} + \frac{\partial S(\rho,z)}{\partial z}\frac{\partial z}{\partial\xi} = \frac{\sigma(1 - \eta^{2})\xi}{\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}p_{\rho} + \sigma\eta p_{z} \nonumber \\
+	p_{\eta} & = & \frac{\partial S(\xi,\eta)}{\partial\eta} = \frac{\partial S(\rho,z)}{\partial\rho}\frac{\partial\rho}{\partial\eta} + \frac{\partial S(\rho,z)}{\partial z}\frac{\partial z}{\partial\eta} = -\frac{\sigma(\xi^{2} - 1)\eta}{\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}p_{\rho} + \sigma\xi p_{z} \nonumber
+\eea
+car $\rho = \sqrt{(\xi^{2} - 1)(1 - \eta^{2})}$ et $z = \sigma\xi\eta$. Le carr\'{e} de ces impulsions sont :
+\bea
+	p_{\xi}^{2} & = & \frac{\sigma^{2}(1 - \eta^{2})^{2}}{(\xi^{2} - 1)(1 - \eta^{2})}\xi^{2}p_{\rho}^{2} + \sigma^{2}\eta^{2}p_{z}^{2} + 2\frac{\sigma^{2}(1 - \eta^{2})}{\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}\xi\eta p_{\rho}p_{z} \nonumber \\
+	& = & \frac{\sigma^{2}(1 - \eta^{2})}{(\xi^{2} - 1)}\xi^{2}p_{\rho}^{2} + \sigma^{2}\eta^{2}p_{z}^{2} + 2\frac{\sigma^{2}(1 - \eta^{2})}{\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}\xi\eta p_{\rho}p_{z} \nonumber \\
+	p_{\eta}^{2} & = & \frac{\sigma^{2}(\xi^{2} - 1)^{2}}{(\xi^{2} - 1)(1 - \eta^{2})}\eta^{2}p_{\rho}^{2} + \sigma^{2}\xi^{2}p_{z}^{2} - 2\frac{\sigma^{2}(\xi^{2} - 1)}{\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}\xi\eta p_{\rho}p_{z} \nonumber \\
+	& = & \frac{\sigma^{2}(\xi^{2} - 1)}{(1 - \eta^{2})}\eta^{2}p_{\rho}^{2} + \sigma^{2}\xi^{2}p_{z}^{2} - 2\frac{\sigma^{2}(\xi^{2} - 1)}{\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}\xi\eta p_{\rho}p_{z} \nonumber
+\eea
+Nous examinons d'abord le terme facteur de $p_{\rho}^{2}$ dans $\beta$ :
+\bea
+	-\frac{\xi^{2} - 1}{\xi^{2} - \eta^{2}}\eta^{2}\times\frac{\sigma^{2}(1 - \eta^{2})}{\xi^{2} - 1}\xi^{2} - \frac{1 - \eta^{2}}{\xi^{2} - \eta^{2}}\xi^{2}\times\frac{\sigma^{2}(\xi^{2} - 1)}{1 - \eta^{2}}\eta^{2} & = & -\frac{\sigma^{2}(1 - \eta^{2})}{\xi^{2} - \eta^{2}}\xi^{2}\eta^{2} - \frac{\sigma^{2}(\xi^{2} - 1)}{\xi^{2} - \eta^{2}}\xi^{2}\eta^{2} \nonumber \\
+	& = & -\frac{\sigma^{2}\xi^{2}\eta^{2}}{\xi^{2} - \eta^{2}}(1 - \eta^{2} + \xi^{2} - 1) = -\sigma^{2}\xi^{2}\eta^{2} \nonumber \\
+	& = & -z^{2} \nonumber
+\eea
+alors que le terme facteur de $p_{z}^{2}$ devient :
+\bea
+	-\frac{\xi^{2} - 1}{\xi^{2} - \eta^{2}}\eta^{2}\sigma^{2}\eta^{2} - \frac{1 - \eta^{2}}{\xi^{2} - \eta^{2}}\xi^{2}\sigma^{2}\xi^{2} & = & -\frac{\sigma^{2}}{\xi^{2} - \eta^{2}}\left((\xi^{2} - 1)\eta^{4} + (1 - \eta^{2})\xi^{4}\right) \nonumber \\
+	& = & -\frac{\sigma^{2}}{\xi^{2} - \eta^{2}}(\xi^{2}\eta^{4} - \eta^{4} + \xi^{4} - \xi^{4}\eta^{2}) = -\frac{\sigma^{2}}{\xi^{2} - \eta^{2}}\left(\xi^{4} - \eta^{4} - \xi^{2}\eta^{2}(\xi^{2} - \eta^{2})\right) \nonumber \\
+	& = & -\frac{\sigma^{2}}{\xi^{2} - \eta^{2}}\left((\xi^{2} + \eta^{2})(\xi^{2} - \eta^{2}) - \xi^{2}\eta^{2}(\xi^{2} - \eta^{2})\right) = -\sigma^{2}(\xi^{2} + \eta^{2} - \xi^{2}\eta^{2}) \nonumber \\
+	& = & -\rho^{2} - \sigma^{2} - z^{2} + z^{2} = -(\rho^{2} + \sigma^{2}) \nonumber
+\eea
+car :
+\benn
+	\rho^{2} = \sigma^{2}(\xi^{2} - 1)(1 - \eta^{2}) = \sigma^{2}(\xi^{2} - \xi^{2}\eta^{2} - 1 + \eta^{2}) = \sigma^{2}(\xi^{2} + \eta^{2}) - \sigma^{2} - z^{2}
+\eenn
+et celui facteur de $p_{\rho}p_{z}$ :
+\bea
+	& & -\frac{\xi^{2} - 1}{\xi^{2} - \eta^{2}}\eta^{2}\times\frac{2\sigma^{2}(1 - \eta^{2})}{\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}\xi\eta - \frac{1 - \eta^{2}}{\xi^{2} - \eta^{2}}\xi^{2}\times\frac{-2\sigma^{2}(\xi^{2} - 1)}{\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}\xi\eta \nonumber \\
+	& = & 2\frac{(\xi^{2} - 1)(1 - \eta^{2})\sigma^{2}}{(\xi^{2} - \eta^{2})\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}\xi\eta(-\eta^{2} + \xi^{2}) = 2\sigma^{2}\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}\xi\eta \nonumber \\
+	& = & 2\rho z \nonumber
+\eea
