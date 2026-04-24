@@ -368,3 +368,25 @@ La soustraction de la premi\`{e}re par la seconde donne :
 \benn
 	2\beta = (\xi^{2} - 1)p_{\xi}^{2} - (1 - \eta^{2})p_{\eta}^{2} + \left(\frac{1}{\xi^{2} - 1} - \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2} + 2m\sigma^{2}\left(a(\xi) - b(\eta)\right) - 2m\sigma^{2}E(\xi^{2} + \eta^{2})
 \eenn
+La conservation de l'\'{e}nergie du syst\`{e}me, $H = E$, permet d'\'{e}crire en prenant appui sur l'expression de la fonction de Hamilont (\ref{EQ:48_20}) :
+\bea
+	E & = & \frac{1}{2m\sigma^{2}(\xi^{2} - \eta^{2})}\left[(\xi^{2} - 1)p_{\xi}^{2} + (1 - \eta^{2})p_{\eta}^{2} + \left(\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2}\right] \nonumber \\
+	& & + \frac{(\alpha_{1} + \alpha_{2})\xi}{\sigma(\xi^{2} - \eta^{2})} + \frac{(\alpha_{1} - \alpha_{2})\eta}{\sigma(\xi^{2} - \eta^{2})} \nonumber
+\eea
+Cela nous permet de d\'{e}velopper l'expression de la variable $\beta$ :
+\bea
+	2\beta & = & (\xi^{2} - 1)p_{\xi}^{2} - (1 - \eta^{2})p_{\eta}^{2} + \left(\frac{1}{\xi^{2} - 1} - \frac{1}{1 - \eta^{2})}\right)p_{\varphi}^{2} + 2m\sigma^{2}\left(\frac{(\alpha_{1} + \alpha_{2})\xi}{\sigma} - \frac{(\alpha_{1} - \alpha_{2})\eta}{\sigma}\right) \nonumber \\
+	& & -2m\sigma^{2}(\xi^{2} + \eta^{2})\Bigg[\frac{1}{2m\sigma^{2}(\xi^{2} - \eta^{2})}\left[(\xi^{2} - 1)p_{\xi}^{2} + (1 - \eta^{2})p_{\eta}^{2} + \left(\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2}\right] \nonumber \\
+	& & + \frac{(\alpha_{1} + \alpha_{2})\xi}{\sigma(\xi^{2} - \eta^{2})} + \frac{(\alpha_{1} - \alpha_{2})\eta}{\sigma(\xi^{2} - \eta^{2})}\Bigg] \nonumber \\
+	& = & \left[(\xi^{2} - 1) - \frac{(\xi^{2} + \eta^{2})(\xi^{2} - 1)}{\xi^{2} - \eta^{2})}\right]p_{\xi}^{2} - \left[(1 - \eta^{2}) + \frac{(\xi^{2} + \eta^{2})(1 - \eta^{2})}{\xi^{2} - \eta^{2})}\right]p_{\eta}^{2} \nonumber \\
+	& & \left[\frac{1}{\xi^{2} - 1} - \frac{1}{1 - \eta^{2})} - \frac{\xi^{2} + \eta^{2}}{\xi^{2} - \eta^{2}}\left(\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2})}\right)\right]p_{\varphi}^{2} \nonumber \\
+	& & + 2m\sigma(\alpha_{1} + \alpha_{2})\xi\left(1 - \frac{\xi^{2} + \eta^{2}}{\xi^{2} - \eta^{2}}\right) - 2m\sigma(\alpha_{1} - \alpha_{2})\eta\left(1 + \frac{\xi^{2} + \eta^{2}}{\xi^{2} - \eta^{2}}\right) \nonumber
+\eea
+Or, nous avons :
+\bea
+	1 - \frac{\xi^{2} + \eta^{2}}{\xi^{2} - \eta^{2}} & = & -2\frac{\eta^{2}}{\xi^{2} - \eta^{2}} \nonumber \\
+	1 + \frac{\xi^{2} + \eta^{2}}{\xi^{2} - \eta^{2}} & = & 2\frac{\xi^{2}}{\xi^{2} - \eta^{2}} \nonumber \\
+	\frac{1}{\xi^{2} - 1} - \frac{1}{1 - \eta^{2})} - \frac{\xi^{2} + \eta^{2}}{\xi^{2} - \eta^{2}}\left(\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2})}\right) & = & \frac{1 - \eta^{2} - \xi^{2} + 1}{(\xi^{2} - 1)(1 - \eta^{2})} - \frac{\xi^{2} + \eta^{2}}{\xi^{2} - \eta^{2}}\left(\frac{1 - \eta^{2} + \xi^{2} - 1}{(\xi^{2} - 1)(1 - \eta^{2})}\right) \nonumber \\
+	& = & \frac{1}{(\xi^{2} - 1)(1 - \eta^{2})}\left[2 - (\xi^{2} + \eta^{2}) - \frac{\xi^{2} + \eta^{2}}{\xi^{2} - \eta^{2}}(\xi^{2} - \eta^{2})\right] \nonumber \\
+	& = & 2\frac{\left(1 - (\xi^{2} + \eta^{2})\right)}{(\xi^{2} - 1)(1 - \eta^{2})} \nonumber
+\eea
