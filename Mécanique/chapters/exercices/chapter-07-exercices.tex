@@ -322,7 +322,49 @@ Le passage aux coordonn\'{e}es $\rho$ et $z$ demande les calculs suivants des im
 	p_{\xi} & = & \frac{\partial S(\xi,\eta)}{\partial\xi} = \frac{\partial S(\rho,z)}{\partial\rho}\frac{\partial\rho}{\partial\xi} + \frac{\partial S(\rho,z)}{\partial z}\frac{\partial z}{\partial\eta} = p_{\rho}\frac{\eta}{2\sqrt{\xi\eta}} + \frac{p_{z}}{2} = \frac{r - z}{2\rho}p_{\rho} + \frac{p_{z}}{2} \nonumber \\
 	p_{\eta} & = & \frac{\partial S(\xi,\eta)}{\partial\eta} = \frac{\partial S(\rho,z)}{\partial\rho}\frac{\partial\rho}{\partial\eta} + \frac{\partial S(\rho,z)}{\partial z}\frac{\partial z}{\partial\eta} = p_{\rho}\frac{\xi}{2\sqrt{\xi\eta}} - \frac{p_{z}}{2} = \frac{r + z}{2\rho}p_{\rho} + \frac{p_{z}}{2} \nonumber
 \eea
+Nous avons besoin de l'expression de leur carr\'{e}, soit :
+\bea
+	p_{\xi}^{2} & = & \frac{(r - z)^{2}}{4\rho^{2}}p_{\rho}^{2} + \frac{p_{z}^{2}}{4} + \frac{(r - z)}{2\rho}p_{\rho}p_{z} = \frac{r^{2}}{4\rho^{2}}p_{\rho}^{2} + \frac{z^{2}}{4\rho^{2}}p_{\rho}^{2} - \frac{rz}{2\rho^{2}}p_{\rho}p_{z} + \frac{p_{z}^{2}}{4} - \frac{r}{2\rho}p_{\rho}p_{z} - \frac{z}{2\rho}p_{\rho}p_{z} \nonumber \\
+	p_{\eta}^{2} & = & \frac{(r + z)^{2}}{4\rho^{2}}p_{\rho}^{2} + \frac{p_{z}^{2}}{4} - \frac{(r + z)}{2\rho}p_{\rho}p_{z} = \frac{r^{2}}{4\rho^{2}}p_{\rho}^{2} + \frac{z^{2}}{4\rho^{2}}p_{\rho}^{2} + \frac{rz}{2\rho^{2}}p_{\rho}p_{z} + \frac{p_{z}^{2}}{4} - \frac{r}{2\rho}p_{\rho}p_{z} - \frac{z}{2\rho}p_{\rho}p_{z} \nonumber
+\eea
+qui nous donne pour :
+\benn
+	p_{\xi}^{2} - p_{\eta}^{2} = -\frac{rz}{\rho^{2}}p_{\rho}^{2} + \frac{r}{\rho}p_{\rho}p_{z}
+\eenn
+Ces expressions sont utilis\'{e}es dans le d\'{e}veloppement de la quantité $\beta$ :
+\bea
+	2\beta & = & \frac{4\rho^{2}}{2r}\left(\frac{r}{\rho}p_{\rho}p_{z} - \frac{rz}{\rho^{2}}p_{\rho}^{2}\right) - \frac{2z}{\rho^{2}}p_{\varphi}^{2} - 2m\alpha\frac{r}{z} - m\rho^{2}F \nonumber \\
+	\Leftrightarrow \beta & = & \rho p_{\rho}p_{z} - zp_{\rho}^{2} - \frac{z}{\rho^{2}}p_{\varphi}^{2} - m\alpha\frac{z}{r} - \frac{m}{2}\rho^{2}F \nonumber \\
+	\Leftrightarrow \beta & = & -m\left(\frac{\alpha z}{r} + \frac{p_{\rho}}{m}(zp_{\rho} - \rho p_{z}) + \frac{p_{\varphi}^{2}}{m\rho^{2}}z\right) - \frac{m}{2}F\rho^{2} \nonumber
+\eea
+L'expression entre parenth\`{e}ses correspond \`{a} l'int\'{e}grale premi`{e}re d'un champ purement coulombien d\'{e}fini \`{a} la formule (\ref{EQ:15_17}) et correspondant \`{a} $F = 0$ dans notre exercice.
 
 \subsection{Superposition de deux champs coulombiens}
 
+Nous consid\'{e}rons le champ potentiel suivant :
+\benn
+	U = \frac{\alpha_{1}}{r_{1}} + \frac{\alpha_{2}}{r_{2}}
+\eenn
+de deux centres immobiles distants de $2\sigma$ l'un de l'autre.
 
+\`{A} la vue de l'\'{e}nonc\'{e}, nous utilisons les coordonn\'{e}es elliptiques du paragraphe (\ref{PAR:48_3_3}), soit :
+\benn
+	r_{1} = \sigma(\xi - \eta)\text{ et }r_{2} = \sigma(\xi + \eta)
+\eenn
+qui nous permet d\'{e}crire l'\'{e}nergie potentielle ainsi :
+\benn
+	U = \frac{\alpha_{1}}{\sigma(\xi - \eta)} + \frac{\alpha_{2}}{\sigma(\xi + \eta)} = \frac{(\alpha_{1} + \alpha_{2})\xi + (\alpha_{1} - \alpha_{2})\eta}{\sigma(\xi^{2} - \eta^{2})}
+\eenn
+En s'appuyant sur la m\'{e}thode de s\'{e}paration des variables pour l'\'{e}nergie potentielle, voir la formule (\ref{EQ:48_2}), nous obtenons les deux fonctions suivantes :
+\benn
+	a(\xi) = \frac{(\alpha_{1} + \alpha_{2})}{\sigma}\xi\text{ et }b(\eta) = \frac{(\alpha_{1} - \alpha_{2})}{\sigma}\eta
+\eenn
+L'action du syst\`{e}me s'obtient donc en ins\'{e}rant $a(\xi)$ et $b(\eta)$ dans la formule (\ref{EQ:48_22}). Pour le sens de la quantit\'{e} $\beta$, nous repartons des deux \'{e}quations issues du paragraphe (\ref{PAR:48_3_3}), soit :
+\bea
+	(\xi^{2} - 1)p_{\xi}^{2} + \frac{1}{\xi^{2} - 1}p_{\varphi}^{2} + 2m\sigma^{2}a(\xi) - 2m\sigma^{2}E\xi^{2} & = & \beta \nonumber \\
+	(1 - \eta^{2})p_{\eta}^{2} + \frac{1}{1 - \eta^{2}}p_{\varphi}^{2} + 2m\sigma^{2}b(\eta) + 2m\sigma^{2}E\eta^{2} & = & -\beta \nonumber
+\eea
+La soustraction de la premi\`{e}re par la seconde donne :
+\benn
+	2\beta = (\xi^{2} - 1)p_{\xi}^{2} - (1 - \eta^{2})p_{\eta}^{2} + \left(\frac{1}{\xi^{2} - 1} - \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2} + 2m\sigma^{2}\left(a(\xi) - b(\eta)\right) - 2m\sigma^{2}E(\xi^{2} + \eta^{2})
+\eenn
