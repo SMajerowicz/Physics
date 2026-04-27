@@ -430,3 +430,32 @@ et celui facteur de $p_{\rho}p_{z}$ :
 	& = & 2\frac{(\xi^{2} - 1)(1 - \eta^{2})\sigma^{2}}{(\xi^{2} - \eta^{2})\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}}\xi\eta(-\eta^{2} + \xi^{2}) = 2\sigma^{2}\sqrt{(\xi^{2} - 1)(1 - \eta^{2})}\xi\eta \nonumber \\
 	& = & 2\rho z \nonumber
 \eea
+Nous calculons maintenant le terme facteur de $\alpha_{1}$ :
+\benn
+	-2m\sigma\frac{\xi\eta}{\xi^{2} - \eta^{2}}(\eta + \xi) = -2m\sigma\frac{(r_{2}^{2} - r_{1}^{2})}{4\sigma}\times\frac{\sigma^{2}}{r_{1}r_{2}}\times\frac{r^{2}}{\sigma} = -m\sigma\frac{r_{2}^{2} - r_{1}^{2}}{2r_{1}}
+\eenn
+car nous avons toujours les formules de transformation suivantes :
+\benn
+	\begin{cases}
+		r_{1} = \sigma(\xi - \eta) \\
+		r_{2} = \sigma(\xi + \eta) \\
+		r_{1}r_{2} = \sigma^{2}(\xi^{2} - \eta^{2}) \\
+		\xi = \frac{r_{1} + r_{2}}{2\sigma} \\
+		\eta = \frac{r_{2} - r_{1}}{2\sigma} \\
+		\rho^{2} = \sigma^{2}(\xi^{2} - 1)(1 - \eta^{2}) = \sigma^{2}(\xi^{2} - \eta^{2}) - \sigma^{2} - z^{2} \\
+		z = \sigma\xi\eta = \frac{r_{2}^{2} - r_{1}}{4\sigma}
+	\end{cases}
+\eenn
+Et le terme facteur de $\alpha_{2}$ est :
+\benn
+	-2m\sigma\frac{\xi\eta}{\xi^{2} - \eta^{2}}(\eta - \xi) = 2m\sigma\frac{\xi\eta}{\xi^{2} - \eta^{2}}(\xi - \eta) = 2m\sigma\frac{(r_{2}^{2} - r_{1}^{2})}{4\sigma}\times\frac{\sigma^{2}}{r_{1}r_{2}}\times\frac{r_{1}}{\sigma} = m\sigma\frac{r_{2}^{2} - r_{1}^{2}}{2r_{2}}
+\eenn
+Enfin le terme facteur de $p_{\varphi}^{2}$ est :
+\benn
+	-\frac{\left[1 - (\xi^{2} + \eta^{2})\right]}{(\xi^{2} - 1)(1 - \eta^{2})}= -\frac{\left[1 - \left(\frac{\rho^{2}}{\sigma^{2}} + 1 + \frac{z^{2}}{\sigma^{2}}\right)\right]}{\rho^{2}/\sigma^{2}} = -\frac{\sigma^{2} - \rho^{2} - \sigma^{2} - z^{2}}{\rho^{2}} = 1 + \frac{z^{2}}{\rho^{2}}
+\eenn
+Finalement, nous pouvons formuler la variable $\beta$ ainsi :
+\benn
+	\beta = -z^{2}p_{\rho}^{2} - (\rho^{2} + z^{2})p_{z}^{2} + 2\rho zp_{\rho}p_{z} + \left(1 + \frac{z^{2}}{\rho^{2}}\right)p_{\varphi}^{2} - m\sigma\left[\frac{r_{2}^{2} - r_{1}^{2}}{2r_{1}}\alpha_{1} - \frac{r_{2}^{2} - r_{1}^{2}}{2r_{2}}\alpha_{2}\right]
+\eenn
+Cette expression est l\'{e}g\`{e}rement diff\'{e}rente \`{a} celle exprim\'{e}e dans le livre.
