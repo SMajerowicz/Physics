@@ -1005,4 +1005,38 @@ Nous faisons l'hypoth\`{e}se que $\lambda$ est \emph{adiabatique}, i.e. qu'il va
 \ee
 Avec $\lambda$ constant, le syst\`{e}me serait ferm\'{e} et effectuerait un mouvement strictement p\'{e}riodique d'\'{e}nergie constante $E$ et de p\'{e}riode $T(E)$ parfaitement d\'{e}termin\'{e} par le paragraphe (\ref{PAR:11}). Lorsque $\lambda$ est variable, le syst\`{e}me n'est pas ferm\'{e} et son \'{e}nergie ne se conserve pas.
 
-Puisque $\lambda$ varie lentement ici, la vitesse de variation de l'\'{e}nergie $\dot{E}$ sera faible \'{e}galement. En prenant la moyenne de cette vitesse sur une p\'{e}riode $T$, les variations rapides en sont liss\'{e}es et la valeur $\overline{\dot{E}}$ d\'{e}termine alors la vitesse de variation lente de l'\'{e}nergie du syst\`{e}me. Nous pouvons en d\'{e}duire que $\overline{\dot{E}}$ sera proportionnelle \`{a} la vitesse $\dot{\lambda}$.
+Puisque $\lambda$ varie lentement ici, la vitesse de variation de l'\'{e}nergie $\dot{E}$ sera faible \'{e}galement. En prenant la moyenne de cette vitesse sur une p\'{e}riode $T$, les variations rapides en sont liss\'{e}es et la valeur $\overline{\dot{E}}$ d\'{e}termine alors la vitesse de variation lente de l'\'{e}nergie du syst\`{e}me. Nous pouvons en d\'{e}duire que $\overline{\dot{E}}$ sera proportionnelle \`{a} la vitesse $\dot{\lambda}$. Donc la grandeur $E$ varie dans le sens indiqu\'{e} par la variation de $\lambda$ et la d\'{e}pendance de $E$ par rapport \`{a} $\lambda$ peut \^{e}tre traduite comme une combinaison de $E$ et de $\lambda$.
+
+Soit $H(p,q,\lambda)$ la fonction de Hamilton du syst\`{e}me d\'{e}pendant du param\`{e}tre $\lambda$. L'\'{e}quation (\ref{EQ:40_5}) nous donne :
+\bea
+	\frac{\mathrm{d}H}{\mathrm{dt}} & = & \frac{\partial H}{\partial\mathrm{t}} \Leftrightarrow \frac{\mathrm{d}E}{\mathrm{dt}} = \frac{\partial H}{\partial\mathrm{t}} \nonumber \\
+	\frac{\mathrm{d}E}{\mathrm{dt}} & = & \frac{\partial H}{\partial\lambda}\frac{\mathrm{d}\lambda}{\mathrm{dt}} \label{EQ:49_2}
+\eea
+car $\lambda$ ne d\'{e}pend pas explicitement du temps.
+
+Mais la fonction de Hamilton d\'{e}pend des coordonn\'{e}es et des impulsions qui sont toutes les deux rapidement variables. Pour rendre plus \'{e}vidente la variation lente de l'\'{e}nergie, nous allons moyenner la relation (\ref{EQ:49_3}) sur une p\'{e}riode du mouvement telle que :
+\benn
+	\overline{\frac{\mathrm{d}E}{\mathrm{dt}}} = \overline{\left(\frac{\partial H}{\partial\lambda}\frac{\mathrm{d}\lambda}{\mathrm{dt}}\right)} = \overline{\frac{\partial H}{\partial\lambda}}\frac{\mathrm{d}\lambda}{\mathrm{dt}} + \frac{\partial H}{\partial\lambda}\overline{\frac{\mathrm{d}\lambda}{\mathrm{dt}}}
+\eenn
+Or, nous avons $\overline{\frac{\mathrm{d}\lambda}{\mathrm{dt}}}\approx 0$ car $\lambda$ varie lentement donc :
+\be
+	\overline{\frac{\mathrm{d}E}{\mathrm{dt}}} = \overline{\frac{\partial H}{\partial\lambda}}\frac{\mathrm{d}\lambda}{\mathrm{dt}} \label{EQ:49_3}
+\ee
+Encore une fois, $\lambda$ variant peu sur une p\'{e}riode du mouvement du syst\`{e}me, la quantit\'{e} $\overline{\frac{\partial H}{\partial\lambda}}$ peut \^{e}tre consid\'{e}r\'{e}e comme fonction de $p$ et $q$ uniquement. La valeur de cette quantit\'{e} se calcule ainsi :
+\benn
+	\overline{\frac{\partial H}{\partial\lambda}} = \frac{1}{T}\int_{0}^{T}{\frac{\partial H}{\partial\lambda}\mathrm{dt}}
+\eenn
+Or les \'{e}quations de Hamilton (\ref{EQ:40_4}) nous permettent d'\'{e}crire :
+\benn
+	\dot{q} = \frac{\mathrm{d}q}{\mathrm{dt}} = \frac{\partial H}{\partial p} \Leftrightarrow \mathrm{dt} = \left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q
+\eenn
+qui, dans le calcul de la p\'{e}riode $T$, nous donne :
+\be
+	T = \int_{0}^{T}{\mathrm{dt}} = \oint{\left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q} \label{EQ:49_4}
+\ee
+o\`{u} le symbole $\oint$ d\'{e}signe l'int\'{e}gration par rapport \`{a} la variation totale de la coordonn\'{e}e au cours de la p\'{e}riode. Par exemple, si le syst\`{e}me effectue une rotation et si $q$ est l'angle du mouvement de rotation, alors l'int\'{e}gration par rapport \`{a} $\mathrm{d}q$ est r\'{e}alis\'{e}e entre $0$ et $2\pi$.
+
+La relation (\ref{EQ:49_3}) peut se r\'{e}\'{e}crire ainsi :
+\be
+	\overline{\frac{\mathrm{d}E}{\mathrm{dt}}} = \frac{\mathrm{d}\lambda}{\mathrm{dt}}\frac{\oint\left(\frac{\partial H}{\partial\lambda}\right)\left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q}{\oint{\left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q}} \label{EQ:49_5}
+\ee
