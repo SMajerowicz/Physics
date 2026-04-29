@@ -997,6 +997,8 @@ Le r\'{e}sultat de l'\'{e}quation de Hamilton-Jacobi est donc l'int\'{e}grale co
 
 \section{Invariant adiabatiques}\label{PAR:49}
 
+\subsection{Cas g\'{e}n\'{e}ral}\label{PAR:49_1}
+
 Nous consid\'{e}rons un syst\`{e}me m\'{e}canique anim\'{e} d'un mouvement lin\'{e}aire fini et caract\'{e}ris\'{e} par un param\`{e}tre $\lambda$ qui d\'{e}finit les propri\'{e}t\'{e}s du syst\`{e}me lui-m\^{e}me ou d'un champ ext\'{e}rieur dans lequel le syst\`{e}me se trouve.
 
 Nous faisons l'hypoth\`{e}se que $\lambda$ est \emph{adiabatique}, i.e. qu'il varie peu au cours d'une p\'{e}riode $T$ du mouvement du syst\`{e}me lors d'une transformation. Hypoth\`{e}se que nous pouvons exprimer ainsi :
@@ -1005,7 +1007,7 @@ Nous faisons l'hypoth\`{e}se que $\lambda$ est \emph{adiabatique}, i.e. qu'il va
 \ee
 Avec $\lambda$ constant, le syst\`{e}me serait ferm\'{e} et effectuerait un mouvement strictement p\'{e}riodique d'\'{e}nergie constante $E$ et de p\'{e}riode $T(E)$ parfaitement d\'{e}termin\'{e} par le paragraphe (\ref{PAR:11}). Lorsque $\lambda$ est variable, le syst\`{e}me n'est pas ferm\'{e} et son \'{e}nergie ne se conserve pas.
 
-Puisque $\lambda$ varie lentement ici, la vitesse de variation de l'\'{e}nergie $\dot{E}$ sera faible \'{e}galement. En prenant la moyenne de cette vitesse sur une p\'{e}riode $T$, les variations rapides en sont liss\'{e}es et la valeur $\overline{\dot{E}}$ d\'{e}termine alors la vitesse de variation lente de l'\'{e}nergie du syst\`{e}me. Nous pouvons en d\'{e}duire que $\overline{\dot{E}}$ sera proportionnelle \`{a} la vitesse $\dot{\lambda}$. Donc la grandeur $E$ varie dans le sens indiqu\'{e} par la variation de $\lambda$ et la d\'{e}pendance de $E$ par rapport \`{a} $\lambda$ peut \^{e}tre traduite comme une combinaison de $E$ et de $\lambda$.
+Puisque $\lambda$ varie lentement ici, la vitesse de variation de l'\'{e}nergie $\dot{E}$ sera faible \'{e}galement. En prenant la moyenne de cette vitesse sur une p\'{e}riode $T$, les variations rapides en sont liss\'{e}es et la valeur $\overline{\dot{E}}$ d\'{e}termine alors la vitesse de variation lente de l'\'{e}nergie du syst\`{e}me. Nous pouvons en d\'{e}duire que $\overline{\dot{E}}$ sera proportionnelle \`{a} la vitesse $\dot{\lambda}$. Donc la grandeur $E$ varie dans le sens indiqu\'{e} par la variation de $\lambda$ et la d\'{e}pendance de $E$ par rapport \`{a} $\lambda$ peut \^{e}tre traduite comme une combinaison de $E$ et de $\lambda$. Cette combinaison qui reste constante pendant le mouvement d'un syst\`{e}me pour lequel les param\`{e}tres varient lentement se nomme \emph{invariant adiabatique}.
 
 Soit $H(p,q,\lambda)$ la fonction de Hamilton du syst\`{e}me d\'{e}pendant du param\`{e}tre $\lambda$. L'\'{e}quation (\ref{EQ:40_5}) nous donne :
 \bea
@@ -1040,3 +1042,51 @@ La relation (\ref{EQ:49_3}) peut se r\'{e}\'{e}crire ainsi :
 \be
 	\overline{\frac{\mathrm{d}E}{\mathrm{dt}}} = \frac{\mathrm{d}\lambda}{\mathrm{dt}}\frac{\oint\left(\frac{\partial H}{\partial\lambda}\right)\left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q}{\oint{\left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q}} \label{EQ:49_5}
 \ee
+Comme indiqu\'{e} pr\'{e}c\'{e}demment, les int\'{e}grales sont prises le long de la trajectoire, $\lambda$ \'{e}tant consid\'{e}r\'{e} comme constant. Le long de la trajectoire, la fonction de Hamilton conserve l'\'{e}nergie $E$ constante, puisque le param\`{e}tre $\lambda$ est consid\'{e}r\'{e} comme constant, et l'impulson est une fonction d\'{e}finie de la coordonn\'{e}e variable $q$ et des deux param\`{e}tres $\lambda$ et $E$.
+
+La conservation de l'\'{e}nergie nous donne :
+\bea
+	H(p,q,\lambda) & = & E \Leftrightarrow \frac{\mathrm{d}H(h,p,\lambda)}{\mathrm{d}\lambda} = 0 \Leftrightarrow \frac{\partial H}{\partial\lambda} + \frac{\partial H}{\partial p}\frac{\partial p}{\partial\lambda} = 0 \nonumber \\
+	\Leftrightarrow \frac{\partial p}{\partial\lambda} & = & -\frac{\partial H}{\partial\lambda}\left(\frac{\partial H}{\partial p}\right)^{-1}
+\eea
+Nous portons ce r\'{e}sultat dans la relation (\ref{EQ:49_5}) pour obtenir :
+\benn
+	\overline{\frac{\mathrm{d}E}{\mathrm{dt}}} = -\frac{\mathrm{d}\lambda}{\mathrm{dt}}\frac{\oint{\frac{\partial p}{\partial\lambda}\mathrm{d}q}}{\oint{\frac{\partial p}{\partial E}\mathrm{d}q}}
+\eenn
+que nous pouvons d\'{e}velopper ainsi :
+\benn
+	\overline{\frac{\mathrm{d}E}{\mathrm{dt}}}\oint{\frac{\partial p}{\partial E}\mathrm{d}q} + \frac{\mathrm{d}\lambda}{\mathrm{dt}}\oint{\frac{\partial p}{\partial\lambda}\mathrm{d}q} \Leftrightarrow \oint{\left(\overline{\frac{\mathrm{d}E}{\mathrm{dt}}}\frac{\partial p}{\partial E} + \frac{\mathrm{d}\lambda}{\mathrm{dt}}\frac{\partial p}{\partial\lambda}\right)\mathrm{d}q} = 0
+\eenn
+Cette derni\`{e}re \'{e}galit\'{e} peut aussi s'\'{e}crire :
+\be
+	\overline{\frac{\mathrm{d}I}{\mathrm{dt}}} = 0 \label{EQ:49_6}
+\ee
+De plus comme l'impulsion est fonction de $q$, $\lambda$ et $E$ alors :
+\benn
+	\dot{p} = \frac{\mathrm{d}p}{\mathrm{dt}} = \frac{\partial p}{\partial E}\frac{\mathrm{d}E}{\mathrm{dt}} + \frac{\partial p}{\partial\lambda}\frac{\mathrm{d}\lambda}{\mathrm{dt}} + \frac{\partial p}{\partial q}\frac{\mathrm{d}q}{\mathrm{dt}} \nonumber
+\eenn
+En utilisant les \'{e}quations de Hamilton (\ref{EQ:40_4}), $\dot{q} = \frac{\partial H}{\partial p}$ et $\dot{p} = -\frac{\partial H}{\partial q}$, le relation se d\'{e}veloppe ainsi :
+\bea
+	\dot{p} & = & \frac{\partial p}{\partial E}\frac{\mathrm{d}E}{\mathrm{dt}} + \frac{\partial p}{\partial\lambda}\frac{\mathrm{d}\lambda}{\mathrm{dt}} + \frac{\partial p}{\partial q}\frac{\partial H}{\partial p} = \frac{\partial p}{\partial E}\frac{\mathrm{d}E}{\mathrm{dt}} + \frac{\partial p}{\partial\lambda}\frac{\mathrm{d}\lambda}{\mathrm{dt}} - \dot{p} \nonumber \\
+	\Leftrightarrow 2\dot{p} & = & \frac{\partial p}{\partial E}\frac{\mathrm{d}E}{\mathrm{dt}} + \frac{\partial p}{\partial\lambda}\frac{\mathrm{d}\lambda}{\mathrm{dt}} \nonumber \\
+	\Leftrightarrow \overline{\frac{\mathrm{d}p}{\mathrm{dt}}} & = & \frac{\partial p}{\partial E}\overline{\frac{\mathrm{d}E}{\mathrm{dt}}} + \frac{\partial p}{\partial\lambda}\frac{\mathrm{d}\lambda}{\mathrm{dt}} \nonumber
+\eea
+Cette derni\`{e}re relation permet d'identifier et de d\'{e}finir la quantit\'{e} :
+\be
+	I = \frac{1}{2\pi}\oint{p\mathrm{d}q} \label{EQ:49_7}
+\ee
+en ajoutant un facteur de normalisation $\pi$. $I$ est une int\'{e}grale prise le long de la trajectoire pour $E$ et $\lambda$ donn\'{e}es.
+
+Dans l'approximation consid\'{e}r\'{e}e, la quantit\'{e} $I$ reste donc constante quand $\lambda$ varie. $I$ est donc un avariant adiabatique qui est fonction de l'\'{e}nergie du syst\`{e}me et du param\`{e}tre $\lambda$.
+
+\`{A} partir de ces nouveaux \'{e}l\'{e}ments, la p\'{e}riode $T$, voir la formule (\ref{EQ:49_4}) peut \^{e}tre \'{e}crite diff\'{e}remment :
+\be
+	T = \oint{\left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q} = \oint{\left(\frac{\partial E}{\partial p}\right)\mathrm{d}q} = \oint{\frac{\partial p}{\partial E}\mathrm{d}q} = -2\pi\frac{\partial I}{\partial E} \label{EQ:49_8}
+\ee
+Or par d\'{e}finition, la pulsation se d\'{e}finit comme $\omega = 2\pi/T$ donc :
+\be
+	\omega = \left(\frac{\partial I}{\partial E}\right)^{-1} = \frac{\partial E}{\partial I} \label{EQ:49_9}
+\ee
+Ainsi la d\'{e}riv\'{e}e de l'invariant adiabatique $I$ par rapport \`{a} l'\'{e}nergie d\'{e}termine la p\'{e}riode du mouvement.
+
+\subsection{Cas \`{a} un unique degr\'{e} de libert\'{e}}\label{PAR:49_2}
