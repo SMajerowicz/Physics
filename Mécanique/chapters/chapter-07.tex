@@ -1116,6 +1116,40 @@ Nous consid\'{e}rons maintenant que le param\`{e}tre $\lambda$ introduit au para
 
 Par d\'{e}finition de l'action r\'{e}duite pour un syst\`{e}me ferm\'{e}, voir la formule (\ref{EQ:44_4}) :
 \be
-	S_{0}(q,E,\lambda) = \int{p(q,E,\lambda)\mathrm{d}q}
+	S_{0}(q,E,\lambda) = \int{p(q,E,\lambda)\mathrm{d}q} \label{EQ:50_1}
 \ee
 avec les quantit\'{e}s $E$ et $\lambda$ donn\'{e}es par les propri\'{e}t\'{e}s du syst\`{e}me.
+
+Le syst\`{e}me \'{e}tant ferm\'{e}, la fonction de Hamilton est constante et \'{e}gale \`{a} $E$ le long de la trajectoire. L'invariant adiabatique $I$ est alors fonction de la seule \'{e}nergie. L'action r\'{e}duite $S_{0}$ peut alors tout \`{a} fait s'exprimer sur la forme $S_{0}(q,I,\lambda)$ et par cons\'{e}quent $p = \left(\frac{\partial S_{0}}{\partial q}\right)_{E}$ prise \`{a} $E$ constante. Suivant la remarque pr\'{e}c\'{e}dente, $\left(\frac{\partial S_{0}}{\partial q}\right)_{E}$ co\"{i}ncide avec $\left(\frac{\partial S_{0}}{\partial q}\right)_{I}$ prise \`{a} $I$ constante. Ainsi :
+\be
+	p = \frac{\partial S_{0}(q,I,\lambda)}{\partial q} \label{EQ:50_2}
+\ee
+Cela correspond \`{a} la premi\`{e}re des formules de transformation canonique de (\ref{EQ:45_8}). La seconde formule d\'{e}finit une nouvelle coordonn\'{e}e que nous notons $w$ :
+\be
+	w = \frac{\partial S_{0}(q,I,\lambda)}{\partial I} \label{EQ:50_3}
+\ee
+$I$ et $w$ sont appel\'{e}s des \emph{variables canoniques} telles que $I$ est la \emph{variable d'action} et $w$, la \emph{variable d'angle} ou encore \emph{variable angulaire}.
+
+Puisque $S_{0}$ ne d\'{e}pend pas explicitement du temps alors la troisi\`{e}me formule dans (\ref{EQ:45_8}) nous permet d'affirmer que la nouvelle fonction de Hamilton $H'$ co\"{i}ncide avec l'ancienne $H$ exprim\'{e}e \`{a} l'aide des nouvelles variables. En d'autres termes, $H'$ repr\'{e}sente l'\'{e}nergie du syst\`{e}me qui est fonction de la variable d'action, soit $E(I)$. Les \'{e}quations de Hamilton pour les nouvelles variables sont :
+\be
+	\dot{w} = \frac{\partial H'}{\partial I} = \frac{\partial E(I)}{\partial I} = \frac{\mathrm{d}E(I)}{\mathrm{d}I}\text{ et }I = -\frac{\partial H'}{\partial w} = -\frac{\partial E(I)}{\partial w} = 0 \label{EQ:50_4}
+\ee
+Ainsi, tout comme l'\'{e}nergie du syst\`{e}me ferm\'{e}, la valeur de $I$ est constante par rapport au temps et la variable angulaire est fonction lin\'{e}aire du temps :
+\be
+	w = \frac{\mathrm{d}E(I)}{\mathrm{d}I}\mathrm{t} + cste = \omega(I)\mathrm{t} + cste \label{EQ:50_5}
+\ee
+en utilisant la d\'{e}finition (\ref{EQ:49_9}). $w$ constitue la phase des oscillations. Son accroissement pendant une p\'{e}riode de temps vaut :
+\bea
+	\Delta w & = & w(\mathrm{t} = T) - w(\mathrm{t} = 0) = w(I)T + cste - cste = w(I)\frac{2\pi}{w(I)} \nonumber \\
+	\Leftrightarrow \Delta w & = & 2\pi \label{EQ:50_7}
+\eea
+Ainsi la variation de l'action r\'{e}duite $\Delta S_{0}$ pendant la m\^{e}me dur\'{e}e vaut en utilisant la formule (\ref{EQ:50_1}) avec les nouvelles variables :
+\bea
+	\Delta S_{0} & = & S_{0}(w,I,\lambda)_{\mathrm{t} = T} - S_{0}(w,I,\lambda)_{\mathrm{t} = 0} = \left(\int{I(E)\mathrm{d}w}\right)_{\mathrm{t} = T} - \left(\int{I(E)\mathrm{d}w}\right)_{\mathrm{t} = 0} = Iw(T)T \nonumber \\
+	\Leftrightarrow \Delta S_{0} & = & 2\pi I \label{EQ:50_6}
+\eea
+L'action r\'{e}duite ne reprend ainsi pas sa valeur initiale mais cro\^{i}t avec le temps.
+
+En exprimant les variables $p$ et $q$, ou toute fonction univoque de ces deux variables, \`{a} l'aide des variables canoniques d'action et d'angle, alors leur valeur respective reste inchang\'{e}e lorsque $w$ varie de $2\pi$ pour une valeur donn\'{e}e de $I$. En d'autres termes, toute fonction univoque de $p$ et $q$ exprim\'{e}e au moyen de variables canoniques est une fonction p\'{e}riodique de la variable angulaire $w$ et de p\'{e}riode $2\pi$.
+
+\subsection{Syst\`{e}me ouvert}
