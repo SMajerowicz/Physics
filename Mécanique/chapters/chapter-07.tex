@@ -1090,3 +1090,32 @@ Or par d\'{e}finition, la pulsation se d\'{e}finit comme $\omega = 2\pi/T$ donc 
 Ainsi la d\'{e}riv\'{e}e de l'invariant adiabatique $I$ par rapport \`{a} l'\'{e}nergie d\'{e}termine la p\'{e}riode du mouvement.
 
 \subsection{Cas \`{a} un unique degr\'{e} de libert\'{e}}\label{PAR:49_2}
+
+L'int\'{e}grale (\ref{EQ:49_7}) a une interpr\'{e}tation g\'{e}om\'{e}trique dans l'espace des phases. Dans le cas \`{a} un seul degr\'{e} de libert\'{e}, l'espace des phase est le syst\`{e}me de coordonn\'{e}es $(p,q)$ \`{a} deux dimensions. Pour un mouvement p\'{e}riodique, la trajectoire dans l'espace des phases est une courbe ferm\'{e}e. L'int\'{e}grale dans l'\'{e}galit\'{e} (\ref{EQ:49_7}) prise le long de cette courbe repr\'{e}sente la surface int\'{e}rieure et l'invariant adiabatique se calcule aussi de cette mani\`{e}re :
+\be
+	I = \frac{1}{2\pi}\iint{\mathrm{d}p\mathrm{d}q} \label{EQ:49_10}
+\ee
+Nous prenons \`{a} partir de maintenant l'exemple de la d\'{e}termination de l'invariant adiabatique pour un oscillateur lin\'{e}aire. Ce dernier a \'{e}t\'{e} \'{e}tudi\'{e} au paragraphe (\ref{PAR:21}) et l'\'{e}nergie calcul\'{e}e nous permet d'\'{e}crire la fonction de Hamilton dans le cas de la conservation d'\'{e}nergie :
+\be
+	H = \frac{p^{2}}{2m} + \frac{m\omega^{2}}{2}q^{2} \label{EQ:49_11}
+\ee
+avec $\omega$ la fr\'{e}quence propre du syst\`{e}me. La trajectoire dans l'espace des phases est donn\'{e}e par :
+\benn
+	H(p,q) = E \Leftrightarrow \frac{p^{2}}{\left(\sqrt{2mE}\right)^{2}} + \frac{q^{2}}{\left(\sqrt{\frac{2E}{m\omega^{2}}}\right)^{2}} = 1
+\eenn
+Il s'agit donc d'une ellipse dont les demi-axes ont pour longueur $\sqrt{2mE}$ et $\sqrt{\frac{2E}{m\omega^{2}}}$. Sa surface vaut $\pi\sqrt{2mE}\sqrt{\frac{2E}{m\omega^{2}}} = \frac{2\pi E}{\omega}$ et l'invariant adiabatique $I$ d\'{e}fini en (\ref{EQ:49_10}) est \'{e}gal \`{a} :
+\be
+	I = \frac{E}{\omega} \label{EQ:49_12}
+\ee
+
+\section{Variables canoniques}\label{PAR:50}
+
+\subsection{Syst\`{e}me conservatif}\label{PAR:50_1}
+
+Nous consid\'{e}rons maintenant que le param\`{e}tre $\lambda$ introduit au paragraphe (\ref{PAR:49}) est constant et que le syst\`{e}me est ferm\'{e}. Nous allons r\'{e}aliser une transformation canonique, voir le paragraphe (\ref{PAR:45}), des variables $(p,q)$ vers la nouvelle impulsion qui sera $I$, l'invariant adiabatique d\'{e}fini au paragraphe (\ref{PAR:49}). Nous allons d\'{e}montrer que la fonction g\'{e}n\'{e}ratrice de cette transformation canonique est l'action r\'{e}duite $S_{0}$ exprim\'{e}e en fonction de la coordonn\'{e}e $q$ et de la nouvelle impulsion $I$. $S_{0}(q,I,\lambda)$ doit alors se conformer aux relations (\ref{EQ:45_8}) et en particulier \`{a} : $p = \frac{\partial S_{0}(q,I,\lambda)}{\partial q}$.
+
+Par d\'{e}finition de l'action r\'{e}duite pour un syst\`{e}me ferm\'{e}, voir la formule (\ref{EQ:44_4}) :
+\be
+	S_{0}(q,E,\lambda) = \int{p(q,E,\lambda)\mathrm{d}q}
+\ee
+avec les quantit\'{e}s $E$ et $\lambda$ donn\'{e}es par les propri\'{e}t\'{e}s du syst\`{e}me.
