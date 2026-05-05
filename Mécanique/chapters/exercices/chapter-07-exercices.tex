@@ -486,3 +486,39 @@ Nous notons que la fr\'{e}quence $\omega(\mathrm{t})$ joue le r\^{o}le de la var
 	& = & -\sqrt{\frac{I}{2m}}\omega^{-3/2}\sin(w)\mathrm{d}\omega + \sqrt{\frac{1}{2m\omega}}I^{-1/2}\sin(w)\mathrm{d}I + \sqrt{\frac{2I}{m\omega}}\cos(w)\mathrm{d}w \nonumber
 \eea
 donc la quantit\'{e} $p\mathrm{d}q$ vaut :
+\bea
+	p\mathrm{d}q & = & -\sqrt{2m\omega I}\sqrt{\frac{I}{2m}}w^{-3/2}\cos(w)\sin(w)\mathrm{d}\omega + \sqrt{2m\omega I}\sqrt{\frac{1}{2m\omega}}I^{-1/2}\cos(w)\sin(w)\mathrm{d}I \nonumber \\
+	& & + \sqrt{2m\omega I}\sqrt{\frac{2I}{m\omega}}\cos^{2}(w)\mathrm{d}w \nonumber \\
+	& = & -\frac{I}{\omega}\cos(w)\sin(w)\mathrm{d}\omega + \cos(w)\sin(w)\mathrm{d}I + 2I\cos^{2}(w)\mathrm{d}w \nonumber \\
+	& = & \left(\mathrm{d}I - \frac{I}{\omega}\mathrm{d}\omega\right)\cos(w)\sin(w) + 2I\cos^{2}(w)\mathrm{d}w \nonumber
+\eea
+or la relation (\ref{EQ:49_12}) donne :
+\benn
+	I = \frac{E}{\omega} \Leftrightarrow \mathrm{d}I = -\frac{E}{\omega^{2}}\mathrm{d}\omega = -\frac{I}{\omega}\mathrm{d}\omega
+\eenn
+donc :
+\benn
+	p\mathrm{d}q = 2I\cos^{2}(w)\mathrm{d}w = \left(\frac{\partial q}{\partial w}\right)_{\omega,I}\mathrm{d}q
+\eenn
+et finalement :
+\benn
+	S_{0} = 2I\int{cos^{2}(w)\mathrm{d}w}
+\eenn
+Par d\'{e}finition (\ref{EQ:50_9}), $\Lambda= \left(\frac{\partial S_{0}}{\partial\omega}\right)_{q,I}$ que nous pouvons d\'{e}composer pour son calcul en :
+\benn
+	\Lambda = \left(\frac{\partial S_{0}}{\partial w}\right)_{I}\cdot\left(\frac{\partial w}{\partial\omega}\right)_{q}
+\eenn
+or $\frac{\partial S_{0}}{\partial w} = 2I\cos^{2}(w)$ et comme $q = \sqrt{\frac{2I}{m\omega}}\sin(w)$, alors :
+\bea
+	\frac{\partial w}{\partial\omega} & = & \frac{\partial\sin(w)}{\partial\omega}\cdot\frac{\partial w}{\partial\sin(w)} = \frac{\partial\sin(w)}{\partial\omega}\cdot\left(\frac{\partial\sin(w)}{\partial w}\right)^{-1} = \frac{1}{2}\sqrt{\frac{m}{2I\omega}}q\times\frac{1}{\cos(w)} \nonumber \\
+	& = & \frac{1}{2}\sqrt{\frac{m}{2I\omega}}\sqrt{\frac{2I}{m\omega}}\frac{\sin(w)}{\cos(w)} = \frac{1}{2\omega}\frac{\sin(w)}{\cos(w)} \nonumber
+\eea
+Alors, la quantit\'{e} $\Lambda$ vaut :
+\benn
+	\Lambda = 2I\cos^{2}(w)\times\frac{1}{2\omega}\frac{\sin(w)}{\cos(w)} = \frac{I}{\omega}\cos(w)\sin(w) = \frac{I}{2\omega}\sin(2w)
+\eenn
+par application de la formule de Simpson : $\sin(a + b) = \sin(a)\cos(b) + \cos(a)\sin(b)$. Les \'{e}quations de Hamilton sont donn\'{e}es pour les variables canoniques par les formules (\ref{EQ:50_10}) et (\ref{EQ:50_11}), soient :
+\bea
+	\dot{I} & = & -\left(\frac{\partial\Lambda}{\partial w}\right)_{I,\omega}\dot{\omega} = -I\frac{\dot{\omega}}{\omega}\cos(2w) \nonumber \\
+	\dot{\omega} & = & \omega + \left(\frac{\partial\Lambda}{\partial I}\right)_{w,\omega}\dot{\omega} = \omega + \frac{\dot{\omega}}{2\omega}\sin(2w) \nonumber
+\eea
