@@ -459,3 +459,30 @@ Finalement, nous pouvons formuler la variable $\beta$ ainsi :
 	\beta = -z^{2}p_{\rho}^{2} - (\rho^{2} + z^{2})p_{z}^{2} + 2\rho zp_{\rho}p_{z} + \left(1 + \frac{z^{2}}{\rho^{2}}\right)p_{\varphi}^{2} - m\sigma\left[\frac{r_{2}^{2} - r_{1}^{2}}{2r_{1}}\alpha_{1} - \frac{r_{2}^{2} - r_{1}^{2}}{2r_{2}}\alpha_{2}\right]
 \eenn
 Cette expression est l\'{e}g\`{e}rement diff\'{e}rente \`{a} celle exprim\'{e}e dans le livre.
+
+\section{Variables canoniques}
+
+Nous devons \'{e}crire l'\'{e}quation du mouvement d'un oscillateur harmonique \`{a} fr\'{e}quence d\'{e}pendant du temps en utilisant les variables canoniques comme pr\'{e}sent\'{e}es dans le paragraphe (\ref{PAR:50}) et en particulier la d\'{e}finition des \'{e}quations de Hamilton dans les formules (\ref{EQ:50_4}).
+
+La fonction de Hamilton du syst\`{e}me est celle obtenue dans le r\'{e}sultat (\ref{EQ:49_11}) :
+\benn
+	H = \frac{p^{2}}{2m} + \frac{m\omega^{2}}{2}q^{2}
+\eenn
+En application de la conservation de l'\'{e}nergie le long de la trajectoire :
+\benn
+	H = E \Leftrightarrow \frac{p^{2}}{2mE} + \frac{m\omega^{2}}{2E}q^{2} = 1
+\eenn
+qui est l'\'{e}quation d'une ellipse dans l'espace des phases. Son \'{e}quation peut aussi s'\'{e}crire avec la variable d'angle $w$ en s'appuyant sur $\cos^{2}w + \sin^{2}w = 1$. Nous obtenons les \'{e}galit\'{e}s suivantes :
+\bea
+	p^{2} & = & 2mE\cos^{2}(w) \Leftrightarrow p = \pm\sqrt{2mE}\cos(w) = \pm\sqrt{2m\omega I}\cos(w) \nonumber \\
+	q^{2} & = & \frac{2E}{m\omega^{2}}\sin^{2}(w) \Leftrightarrow q = \pm\sqrt{\frac{2E}{m\omega^{2}}}\sin(w) = \pm\sqrt{\frac{2I}{m\omega}}\sin(w)
+\eea
+car $E = I\omega$ dans la relation (\ref{EQ:49_12}).
+
+Nous notons que la fr\'{e}quence $\omega(\mathrm{t})$ joue le r\^{o}le de la variable $\lambda$ de la formule (\ref{EQ:50_2}). Par d\'{e}finition (\ref{EQ:50_1}), $S_{0} = \int{p\mathrm{d}q}$ or :
+\bea
+	\mathrm{d}q & = & \left(\frac{\partial q}{\partial\omega}\right)_{I,w}\mathrm{d}\omega + \left(\frac{\partial q}{\partial I}\right)_{q,I}\mathrm{d}I + \left(\frac{\partial q}{\partial w}\right)_{I,\omega}\mathrm{d}w \nonumber \\
+	& = & \sqrt{\frac{2I}{m}}\cdot\left(-\frac{1}{2}\right)\omega^{-3/2}\sin(w)\mathrm{d}\omega + \sqrt{\frac{2}{m\omega}}\cdot\frac{1}{2}I^{-1/2}\sin(w)\mathrm{d}I + \sqrt{\frac{2I}{m\omega}}\cos(w)\mathrm{d}w \nonumber \\
+	& = & -\sqrt{\frac{I}{2m}}\omega^{-3/2}\sin(w)\mathrm{d}\omega + \sqrt{\frac{1}{2m\omega}}I^{-1/2}\sin(w)\mathrm{d}I + \sqrt{\frac{2I}{m\omega}}\cos(w)\mathrm{d}w \nonumber
+\eea
+donc la quantit\'{e} $p\mathrm{d}q$ vaut :
