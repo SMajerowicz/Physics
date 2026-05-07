@@ -1174,3 +1174,31 @@ et en appliquant la d\'{e}finition (\ref{EQ:49_9}), soit $\omega = \left(\frac{\
 \be
 	\dot{I} = -\frac{\partial H'}{\partial w} = -\frac{\partial E(I,\lambda)}{\partial w} - \left(\frac{\partial\Lambda}{\partial w}\right)_{I,\lambda}\dot{\lambda} = -\left(\frac{\partial\Lambda}{\partial w}\right)_{I,\lambda}\dot{\lambda} \label{EQ:50_10}
 \ee
+
+\section{Exactitude de conservation d'invariant adiabatique}\label{PAR:51}
+
+L'\'{e}quation du mouvement (\ref{EQ:50_10}) permet de s'assurer que la variable d'action est un invariant adiabatique. Nous avons vu dans le paragraphe (\ref{PAR:50_1}) que $S_{0}(q,I,\lambda)$ est une fonction non unidorme de la coordonn\'{e}e $q$ : lorsque cette coordonn\'{e}e reprend sa valeur initiale, la valeur de $S_{0}$ est augment\'{e}e d'un multiple entier non nul de la quantit\'{e} $2\pi I$ comme d\'{e}montr\'{e} en (\ref{EQ:50_6}).
+
+De plus, la quantit\'{e} $\Lambda$ d\'{e}finie dans la formule (\ref{EQ:50_9}) est une fonction uniforme en $q$ car la d\'{e}riv\'{e}e de sa d\'{e}finition est r\'{e}alis\'{e}e \`{a} $I$ constant. Donc les accroissements en $I$ qui s'ajoutent \`{a} $S_{0}$ disparaissent dans le calcul de $\Lambda$.
+
+Une des conclusions du paragraphe (\ref{PAR:50_1}) est que toute fonction uniforme exprim\'{e}e \`{a} l'aide des varaibles canoniques est une fonction p\'{e}riodique de $w$ et de p\'{e}riode $2\pi$. Donc la valeur moyenne sur une telle p\'{e}riode de la quantit\'{e} $\frac{\partial\Lambda}{\partial w}$ est nulle. Par extension et en utilisant l'\'{e}quation du mouvement (\ref{EQ:50_10}) et parce que $\lambda$ \'{e}volue lentement avec le temps, i.e. $\overline{\dot{\lambda}} \approx \dot{\lambda}$, alors :
+\be
+	\overline{\dot{I}} = -\left(\overline{\frac{\partial\Lambda}{\partial w}}\right)_{I}\dot{\lambda} = 0 \label{EQ:51_1}
+\ee
+Cela d\'{e}montre donc bien que $I$ est un invariant adiabatique.
+
+Les \'{e}quations du mouvement exprim\'{e}es avec les variables canoniques (\ref{EQ:50_10}) et (\ref{EQ:50_11}) permettent d'examiner le probl\`{e}me d'exactitude avec laquelle se conserve l'invariant adiabatique. Pour r\'{e}pondre \`{a} cette question, nous nous pla\c{c}ons dans les hypoth\`{e}ses suivantes :
+\benn
+	\lambda(\mathrm{t})\underset{\mathrm{t}\rightarrow -\infty}{\longrightarrow}\lambda_{-}\text{, }\lambda(\mathrm{t})\underset{\mathrm{t}\rightarrow +\infty}{\longrightarrow}\lambda_{+}\text{ et }I(\mathrm{t}\rightarrow -\infty) = I_{-}
+\eenn
+Il nous faut alors d\'{e}terminer l'accroissement $\Delta I = I_{+} - I_{-}$ pour $\mathrm{t}\rightarrow +\infty$.
+
+En utilisant la relation (\ref{EQ:50_10}), nous pouvons \'{e}crire :
+\be
+	\Delta I = -\int_{-\infty}^{+\infty}{\frac{\partial\Lambda}{\partial w}\dot{\lambda}\mathrm{dt}} \label{EQ:51_2}
+\ee
+Comme d\'{e}montr\'{e} plus haut dans ce paragraphe, $\Lambda$ est $2\pi$ p\'{e}riodique par rapport \`{a} la variable $w$. En d\'{e}veloppant $\Lambda$ en s\'{e}rie de Fourier, nous \'{e}crivons :
+\be
+	\Lambda = \sum_{n = -\infty}^{n = +\infty}e^{inw}\Lambda_{n} \label{EQ:50_3}
+\ee
+Sachant que $\Lambda$ est une fonction aux valeurs r\'{e}elles et que les c{\oe}fficients $\Lambda_{n}$ ne le sont pas alors nous en d\'{e}duisons que $\Lambda_{-n} = \Lambda_{n}^{*}$ qui est le conjugu\'{e} de $\Lambda_{n}$.
