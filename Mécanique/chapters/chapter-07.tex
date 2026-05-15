@@ -1201,4 +1201,37 @@ Comme d\'{e}montr\'{e} plus haut dans ce paragraphe, $\Lambda$ est $2\pi$ p\'{e}
 \be
 	\Lambda = \sum_{n = -\infty}^{n = +\infty}e^{inw}\Lambda_{n} \label{EQ:50_3}
 \ee
-Sachant que $\Lambda$ est une fonction aux valeurs r\'{e}elles et que les c{\oe}fficients $\Lambda_{n}$ ne le sont pas alors nous en d\'{e}duisons que $\Lambda_{-n} = \Lambda_{n}^{*}$ qui est le conjugu\'{e} de $\Lambda_{n}$.
+Sachant que $\Lambda$ est une fonction aux valeurs r\'{e}elles et que les c{\oe}fficients $\Lambda_{n}$ ne le sont pas alors nous en d\'{e}duisons que $\Lambda_{-n} = \Lambda_{n}^{*}$ qui est le conjugu\'{e} de $\Lambda_{n}$. La d\'{e}riv\'{e}e de $\Lambda$ par rapport \`{a} $w$ sachant que les c{\oe}fficients $\Lambda_{n}$ sont constants est :
+\bea
+	\frac{\partial\Lambda}{\partial w} & = & \sum_{n=-\infty}^{+\infty}ine^{inw}\Lambda_{n} + \sum_{n=-\infty}^{+\infty}e^{inw}\frac{\partial\Lambda_{n}}{\partial w} = \sum_{n=-\infty}^{+\infty}ine^{inw}\Lambda_{n} \nonumber \\
+	& = & \sum_{n=-\infty}^{0}ine^{inw}\Lambda_{n} + \sum_{n=1}^{+\infty}ine^{inw}\Lambda_{n} = \sum_{n=-\infty}^{-1}ine^{inw}\Lambda_{n} + \sum_{n=1}^{+\infty}ine^{inw}\Lambda_{n} \nonumber \\
+	& = & -\sum_{n=1}^{+\infty}ine^{-inw}\Lambda_{-n} + \sum_{n=1}^{+\infty}ine^{inw}\Lambda_{n} = \sum_{n=1}^{+\infty}\left(e^{inw}\Lambda_{n} - e^{-inw}\Lambda_{-n}\right)in \nonumber
+\eea
+Supposons que $\Lambda_{n} = \alpha_{n} + i\beta_{n}$ et nous avons toujours $\Lambda_{-n} = \Lambda_{n}^{*} = \alpha_{n} - i\beta_{n}$, donc en d\'{e}composant les parties r\'{e}elles et imaginaires de l'expression pr\'{e}c\'{e}dente, nous avons :
+\bea
+	\frac{\partial\Lambda}{\partial w} & = & \sum_{n=1}^{+\infty}in\left[\left(\cos(nw) + i\sin(nw)\right)(\alpha_{n} + i\beta_{n}) - \left(\cos(-nw) + i\sin(-nw)\right)(\alpha_{n} - i\beta_{n})\right] \nonumber \\
+	& = & \sum_{n=1}^{+\infty}in\bigg[\alpha_{n}\cos(nw) + i\beta_{n}\cos(nw) + i\alpha_{n}\sin(nw) - \beta_{n}\sin(nw) \nonumber \\
+	& & -\left(\alpha_{n}\cos(nw) - i\beta_{n}\cos(nw) - i\alpha_{n}\sin(nw) - \beta_{n}\sin(nw)\right)\bigg] \nonumber \\
+	& = & \sum_{n=1}^{+\infty}in\left[2i\beta_{n}\cos(nw) + 2i\alpha_{n}\sin(nw)\right] = -2\sum_{n=1}^{+\infty}n\left[\alpha_{n}\sin(nw) + \beta_{n}\cos(nw)\right] \nonumber
+\eea
+Or :
+\bea
+	ie^{inw}\Lambda_{n} & = & i\left(\cos(nw) + i\sin(nw)\right)(\alpha_{n} + i\beta_{n}) \nonumber \\
+	& = & i\alpha_{n}\cos(nw) - \beta_{n}\cos(nw) - i\alpha_{n}\sin(nw) - i\beta_{n}\sin(nw) \nonumber
+\eea
+Donc :
+\benn
+	\Re\left(ie^{inw}\Lambda_{n}\right) = -\left(\alpha_{n}\sin(nw) + \beta_{n}\cos(nw)\right)
+\eenn
+Et finalement, nous obtenons :
+\be
+	\frac{\partial\Lambda}{\partial w} = 2\sum_{n=1}^{+\infty}n\Re\left(ie^{inw}\Lambda_{n}\right) = 2\Re\left(\sum_{n=1}^{+\infty}ine^{inw}\Lambda_{n}\right) \label{EQ:51_4}
+\ee
+La formule (\ref{EQ:50_11}) qui donne $\dot{w}$ en fonction de $\omega$ et de $\dot{\lambda}$ nous permet d\'{e}crire que si $\dot{\lambda}$ est suffisamment petit alors $\dot{w}$ est positif puisque par d\'{e}finition $\omega$ l'est aussi. Donc $w$ est une fonction croissante avec le temps. Cela permet d'\'{e}crire diff\'{e}remment l'int\'{e}gration (\ref{EQ:51_2}) en ne changeant pas les bornes mais en faisant intervenir $\mathrm{d}w$, soit :
+\be
+	\Delta I = -\int_{-\infty}^{+\infty}{\frac{\partial\Lambda}{\partial w}\frac{\mathrm{d}\lambda}{\mathrm{dt}}\mathrm{dt}} = -\int_{-\infty}^{+\infty}{\frac{\partial\Lambda}{\partial w}\frac{\mathrm{d}\lambda}{\mathrm{dt}}\frac{\mathrm{dt}}{\mathrm{d}w}\mathrm{d}w} \label{EQ:51_5}
+\ee
+qui peut se d\'{e}velopper en utilisant (\ref{EQ:51_4}) ainsi :
+\benn
+	\Delta I = -2\Re\left[\sum_{n=1}^{+\infty}\int_{-\infty}^{\infty}{ine^{inw}\Lambda_{n}\frac{\mathrm{d}\lambda}{\mathrm{dt}}\frac{\mathrm{dt}}{\mathrm{d}w}\mathrm{d}w}\right]
+\eenn
