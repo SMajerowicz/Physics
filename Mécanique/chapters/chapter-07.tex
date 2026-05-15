@@ -1199,7 +1199,7 @@ En utilisant la relation (\ref{EQ:50_10}), nous pouvons \'{e}crire :
 \ee
 Comme d\'{e}montr\'{e} plus haut dans ce paragraphe, $\Lambda$ est $2\pi$ p\'{e}riodique par rapport \`{a} la variable $w$. En d\'{e}veloppant $\Lambda$ en s\'{e}rie de Fourier, nous \'{e}crivons :
 \be
-	\Lambda = \sum_{n = -\infty}^{n = +\infty}e^{inw}\Lambda_{n} \label{EQ:50_3}
+	\Lambda = \sum_{n = -\infty}^{n = +\infty}e^{inw}\Lambda_{n} \label{EQ:51_3}
 \ee
 Sachant que $\Lambda$ est une fonction aux valeurs r\'{e}elles et que les c{\oe}fficients $\Lambda_{n}$ ne le sont pas alors nous en d\'{e}duisons que $\Lambda_{-n} = \Lambda_{n}^{*}$ qui est le conjugu\'{e} de $\Lambda_{n}$. La d\'{e}riv\'{e}e de $\Lambda$ par rapport \`{a} $w$ sachant que les c{\oe}fficients $\Lambda_{n}$ sont constants est :
 \bea
@@ -1235,3 +1235,41 @@ qui peut se d\'{e}velopper en utilisant (\ref{EQ:51_4}) ainsi :
 \benn
 	\Delta I = -2\Re\left[\sum_{n=1}^{+\infty}\int_{-\infty}^{\infty}{ine^{inw}\Lambda_{n}\frac{\mathrm{d}\lambda}{\mathrm{dt}}\frac{\mathrm{dt}}{\mathrm{d}w}\mathrm{d}w}\right]
 \eenn
+L'int\'{e}grale se calcule sur le chemin de l'axe r\'{e}el pour $w$. En prenant $w$ comme une variable complexe et en supposant qu'aucune int\'{e}gration ne poss\`{e}de de points singuliers pour la partie r\'{e}elle de $w$, nous d\'{e}pl\c{c}ons le chmin d'int\'{e}gration dans la partie imaginaire telle sch\'{e}matis\'{e}e sur la figure (\ref{FIG:51_1}). Le chemin d'int\'{e}gration rencontre alors les points singuliers de $w$ et s'y accroche en quelque sorte.
+
+Pour $w \in \mathbb{C}$ tel que $w = a + ib$ alors :
+\benn
+	ine^{inw} = ine^{ina}e^{-nb} = ne^{-nb}\left[icos(na) - sin(na)\right]
+\eenn
+donc :
+\benn
+	\Re\left(ine^{inw}\right) = -nsin(na)e^{-nb} \propto e^{-\Im(w)}
+\eenn
+Soit $w_{0}$ le point singulier le plus proche de l'axe r\'{e}el, et qui a par cons\'{e}quent la partie imaginaire la plus petite de l'ensemble des points singuliers.
+
+La contribution de chacun des termes de la relation (\ref{EQ:51_4}) \`{a} l'int\'{e}grale (\ref{EQ:51_5}) est alors maximale pour $w_{0}$ dont la partie imaginaire est minimale. Ainsi pour $\Delta I$, la contribution maximale est pour $n = 1$ telle que :
+\be
+	\Delta I \propto e^{-\Im(w_{0})} \label{EQ:51_6}
+\ee
+Soit $\mathrm{t}_{0}$, le << temps >>, en nombre complexe, tel que $w(\mathrm{t}_{0}) = w_{0}$ et qui correspond au temps caract\'{e}ristique de variation des param\`{e}tres du syst\`{e}me. Nous d\'{e}signons cet intervalle de temps par $\tau$. Ainsi, en prenant l'\'{e}quation de Hamilton (\ref{EQ:50_11}), nous avons :
+\be
+	\Im(w_{0}) \approx \omega\tau \approx \frac{\tau}{T} \label{EQ:51_7}
+\ee
+avec $T$ qui est la p\'{e}riode du mouvement d\'{e}finie en (\ref{EQ:49_8}). Par d\'{e}finition, les param\`{e}tres du syst\`{e}me \'{e}voluent lentement donc $\tau \gg T$. Par cons\'{e}quent, $\Delta I = I_{+} - I_{-} \propto e^{-\Im(w_{0})}$ d\'{e}cro\^{i}t exponentiellement avec la vitesse de variation des param\`{e}tres du syst\`{e}me.
+
+Pour calculer $w_{0}$ en premi\`{e}re approximation par rapport \`{a} $\frac{T}{\tau} = \left(\frac{\tau}{T}\right)^{-1}$, nous partons de l'\'{e}quation de Hamilton (\ref{EQ:50_11}) dans laquelle nous n\'{e}gligeons le terme en $\dot{\lambda}$, soit :
+\be
+	\frac{\mathrm{d}w}{\mathrm{dt}} = \omega(I,\lambda(\mathrm{t})) \label{EQ:51_8}
+\ee
+En supposant que pour le calcul de $w_{0}$, la valeur de $I$ reste constante, alors :
+\be
+	w_{0} = \int^{\mathrm{t}_{0}}{\omega(I,\lambda(\mathrm{t}))\mathrm{dt}} \label{EQ:51_9}
+\ee
+En ins\'{e}rant l'\'{e}quation (\ref{EQ:51_8}) dans la formulation de $\Delta I$ en (\ref{EQ:51_5}), nous avons :
+\benn
+	\Delta I = -2\int_{-\infty}^{+\infty}{\Re\left[\sum_{n=1}^{+\infty}ine^{inw}\right]\dot{\lambda}\frac{\mathrm{d}\omega}{\omega(I,\lambda)}}
+\eenn
+qui permet, en prenant le terme de la s\'{e}rie pour $n = 1$, s'\'{e}crire :
+\be
+	\Delta I \propto \Re\left[\int_{-\infty}^{+\infty}{ie^{inw}\dot{\lambda}\frac{\mathrm{d}\omega}{\omega(I,\lambda)}}\right] \label{EQ:51_10}
+\ee
