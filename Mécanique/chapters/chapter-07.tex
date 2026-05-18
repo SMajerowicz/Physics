@@ -1273,3 +1273,47 @@ qui permet, en prenant le terme de la s\'{e}rie pour $n = 1$, s'\'{e}crire :
 \be
 	\Delta I \propto \Re\left[\int_{-\infty}^{+\infty}{ie^{inw}\dot{\lambda}\frac{\mathrm{d}\omega}{\omega(I,\lambda)}}\right] \label{EQ:51_10}
 \ee
+
+\section{Mouvement quasi-pr\'{e}riodique}\label{PAR:52}
+
+\subsection{G\'{e}n\'{e}ralit\'{e}s}\label{PAR:52_1}
+
+Nous consid\'{e}rons un syst\`{e}me ferm\'{e} \`{a} plusieurs degr\'{e}s de libert\'{e} qui effectue un mouvement fini pour toutes ses coordonn\'{e}es. Nous supposons alors que le probl\`{e}me admette une s\'{e}paration des variables compl\`{e}te selon la m\'{e}thode de Hamilton-Jacobi comme d\'{e}crite dans le paragraphe (\ref{PAR:48}). Ainsi la d\'{e}finition (\ref{EQ:48_6}) indique que pour un choix convenable de coordonn\'{e}es, l'action r\'{e}duite du syst\`{e}me est une somme de fonctions ne d\'{e}pendant chacune que d'une seule coordonn\'{e}e :
+\be
+	S_{0} = \sum_{i}S_{i}(q_{i}) \label{EQ:52_1}
+\ee
+Par d\'{e}finition et en utilisant la formule (\ref{EQ:43_3}), $p_{i} = \frac{\partial S_{i}}{\partial q_{i}} = \frac{\partial S_{0}}{\partial q_{i}}$ et comme nous avons la relation (\ref{EQ:44_4}) alors $S_{0} = \int{\sum_{i}p_{i}\mathrm{d}q_{i}}$. Cela nous donne finalement :
+\be
+	S_{i} = \int{p_{i}\mathrm{d}q_{i}} \label{EQ:52_2}
+\ee
+Par hypoth\`{e}se initiale, le mouvement est fini donc chaque coordonn\'{e}e prend des valeurs born\'{e}es. Pour chaque coordonn\'{e}e, lorsqu'elle revient \`{a} sont point d'origine apr\`{e}s avoir atteint ses bornes minimales et maximales alors la relation (\ref{EQ:50_6}) nous $\Delta S_{i} = 2\pi I_{i}$ et par voie de cons\'{e}quence :
+\be
+	\Delta S_{0} = \sum_{i}\Delta_{i} = 2\pi\sum_{i}I_{i} \label{EQ:52_3}
+\ee
+o\`{u} $I_{i}$ est l'int\'{e}grale :
+\be
+	I_{i} = \frac{1}{2\pi}\oint{p_{i}\mathrm{d}q_{i}} \label{EQ:52_4}
+\ee
+conform\'{e}mement \`{a} la d\'{e}finition (\ref{EQ:49_7}).
+
+Nous r\'{e}alisons d\'{e}sormais la transformation canonique en \'{e}tendant celle op\'{e}r\'{e}e au paragraphe (\ref{PAR:50}) pour un unique degr\'{e} de libert\'{e}. Nous obtenons les variables d'action $I_{i}$ et les variables d'angle :
+\be
+	w_{i} = \frac{\partial S_{0}(q,I)}{\partial I_{i}} = \sum_{j}\frac{\partial S_{j}(q_{j},I)}{\partial I_{i}} \label{EQ:52_5}
+\ee
+Nous avons de nouveau l'action exprim\'{e}e en fonction des coordonn\'{e}es et des variables d'action $I_{i}$ qui jouent le r\^{o}le de fonction g\'{e}n\'{e}ratrice de la transformation. Les \'{e}quations du mouvement sont alors pour chaque degr\'{e} de libert\'{e} s\'{e}par\'{e} et en adaptant les relations (\ref{EQ:50_4}) :
+\be
+	\dot{I}_{i} = 0\text{ et }\dot{w}_{i} = \frac{\partial E(I)}{\partial I_{i}} \label{EQ:52_6}
+\ee
+qui nous donnent conform\'{e}ment \`{a} la relation (\ref{EQ:50_5}) :
+\bea
+	I_{i} & = & cste \nonumber \\
+	w_{i} & = & \frac{\partial E(I)}{\partial I_{i}}\mathrm{t} + cste \label{EQ:52_7}
+\eea
+De mani\`{e}re \'{e}vidente et analogue \`{a} (\ref{EQ:50_7}), nous avons pour une variation compl\`{e}te de $q_{i}$ :
+\be
+	\Delta w_{i} = 2\pi \label{EQ:52_7}
+\ee
+Les grandeurs $w_{i}(q,I)$ peuvent varier d'un multiple de $2\pi$ lorsque les coordonn\'{e}es reprennent leur valeur initiale.
+
+Par d\'{e}finition (\ref{EQ:52_4}), les quantit\'{e}s $I_{i}$ sont des fonctions univoques de $p$ et $q$ si nous les exprimons avec ces variables. En portant $I_{i}(p,q)$ dans l'expression de $w_{i}(q,I)$ alors $w_{i}(p,q)$ est obtenue et elle varie d'un multiple de $2\pi$ (ou de 0) lorsqu'elle parcourt une courbe ferm\'{e}e quelconque dans l'espace des phases.
+Ainsi toute fonction univoque $F(p,q)$ de l'\'{e}tat du syst\`{e}me que nous exprimons \`{a} l'aide des variables canoniques est fonction p\'{e}riodique des variables angulaires de p\'{e}riode $2\pi$ pour chacune d'elles.
