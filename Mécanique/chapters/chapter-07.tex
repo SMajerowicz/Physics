@@ -1311,9 +1311,59 @@ qui nous donnent conform\'{e}ment \`{a} la relation (\ref{EQ:50_5}) :
 \eea
 De mani\`{e}re \'{e}vidente et analogue \`{a} (\ref{EQ:50_7}), nous avons pour une variation compl\`{e}te de $q_{i}$ :
 \be
-	\Delta w_{i} = 2\pi \label{EQ:52_7}
+	\Delta w_{i} = 2\pi \label{EQ:52_8}
 \ee
 Les grandeurs $w_{i}(q,I)$ peuvent varier d'un multiple de $2\pi$ lorsque les coordonn\'{e}es reprennent leur valeur initiale.
 
 Par d\'{e}finition (\ref{EQ:52_4}), les quantit\'{e}s $I_{i}$ sont des fonctions univoques de $p$ et $q$ si nous les exprimons avec ces variables. En portant $I_{i}(p,q)$ dans l'expression de $w_{i}(q,I)$ alors $w_{i}(p,q)$ est obtenue et elle varie d'un multiple de $2\pi$ (ou de 0) lorsqu'elle parcourt une courbe ferm\'{e}e quelconque dans l'espace des phases.
-Ainsi toute fonction univoque $F(p,q)$ de l'\'{e}tat du syst\`{e}me que nous exprimons \`{a} l'aide des variables canoniques est fonction p\'{e}riodique des variables angulaires de p\'{e}riode $2\pi$ pour chacune d'elles.
+Ainsi toute fonction univoque $F(p,q)$ de l'\'{e}tat du syst\`{e}me que nous exprimons \`{a} l'aide des variables canoniques est fonction p\'{e}riodique des variables angulaires de p\'{e}riode $2\pi$ pour chacune d'elles. Nous pouvons donc la d\'{e}velopper en s\'{e}rie de Fourier telle que :
+\benn
+	F = \sum_{n_{1}}\cdots\sum_{n_{s}}A_{n_{1}\cdots n_{s}}\exp{\left(i\mathrm{t}(n_{1}w_{1} + \cdots + n_{s}w_{s})\right)}
+\eenn
+avec $(n_{1},\cdots,n_{s}) \in \mathbb{Z}^{s}$. Nous ins\'{e}rons la d\'{e}finition (\ref{EQ:52_7}) des variables d'angle et obtenons :
+\be
+	F = \sum_{n_{1}}\cdots\sum_{n_{s}}A_{n_{1}\cdots n_{s}}\exp{\left(i\mathrm{t}\left(n_{1}\frac{\partial E}{\partial I_{1}} + \cdots + n_{s}\frac{\partial E}{\partial I_{s}}\right)\right)} \label{EQ:52_9}
+\ee
+Ainsi chaque terme de la somme pr\'{e}c\'{e}dente est une fonctoin p\'{e}riodique du temps avec pour fr\'{e}quence :
+\be
+	\sum_{n_{i}=1}^{s}n_{i}\omega_{i} \label{EQ:52_10}
+\ee
+qui est la somme de multiples entiers de fr\'{e}quences fondamentales :
+\be
+	\omega_{i} = \frac{\partial E}{\partial I_{i}} \label{EQ:52_11}
+\ee
+En g\'{e}n\'{e}ral, ces fr\'{e}quences ne sont pas des multiples entiers de l'une d'entre elles. L'ensemble n'est donc pas strictement p\'{e}riodique, que ce soit pour les coordonn\'{e}es $q$ que pour les impulsions $p$. Le syst\`{e}me, apr\`{e}s \^{e}tre pass\'{e} par un \'{e}tat, ne repassera pas forc\`{e}ment par ce m\^{e}me \'{e}tat apr\`{e}s un temps fini. Toutefois, apr\`{e}s un temps suffisamment long, le syst\`{e}me passera aussi pr\`{e}s que souhait\'{e} de cet \'{e}tat. Un tel mouvement est dit \emph{quasi-p\'{e}riodique}.
+
+Si deux ou plus des fr\'{e}quences fondamentales $\omega_{i}$ sont commensurables, i.e. telles que leur rapport entre elles est un nombre rationnel, alors il s'agit de cas de \emph{d\'{e}g\'{e}n\'{e}rescence}. Si toutes les fr\'{e}quences sont commensurables alors le mouvement du syst\`{e}me est dit \emph{compl\`{e}tement d\'{e}g\'{e}n\'{e}r\'{e}}. Dans ce dernier cas, le mouvement est rigoureusement p\'{e}riodique et la trajectoire de toutes les particules est ferm\'{e}e.
+
+\subsection{Propri\'{e}t\'{e}s particuli\`{e}res}\label{PAR:52_2}
+
+\subsubsection{Diminution des grandeurs ind\'{e}pendantes}\label{PAR:52_2_1}
+
+Soient $\omega_{1}$ et $\omega_{2}$ deux fr\'{e}quences commensurables. Elles sont donc li\'{e}es par une relation telle que, avec $n_{1}$ et $n_{2}$ deux entiers non nuls, $n_{1}\omega_{1} = n_{2}\omega_{2}$. Cela nous donne par d\'{e}finition :
+\be
+	n_{1}\frac{\partial E}{\partial I_{1}} = n_{2}\frac{\partial E}{\partial I_{2}} \label{EQ:52_12}
+\ee
+Cette relation nous donne $n_{1}\partial I_{2} = n_{2}\partial I_{1}$. Ainsi les variables d'action $I_{1}$ et $I_{2}$ n'apparaissent dans la formulation de l'\'{e}nergie $E$ que sous la forme $n_{1}I_{2} + n_{2}I_{1}$. De fait, cela diminue le nombre de grandeurs ind\'{e}pendantes $\{I_{i}\}$.
+
+\subsubsection{Cons\'{e}quences sur les int\'{e}grales premi\`{e}res}\label{PAR:52_2_2}
+
+Au paragraphe (\ref{PAR:6}), nous avons vu qu'il y a $2s-1$ int\'{e}grales du mouvement pour un syst\`{e}me ferm\'{e} \`{a} $s$ degr\'{e}s de libert\'{e} et non d\'{e}g\'{e}n\'{e}r\'{e}. Les relations $\dot{I}_{i} = 0$ des \'{e}quations du mouvement (\ref{EQ:52_6}) nous donne d\'{e}j\`{a} $s$ int\'{e}grales uniformes, i.e. toutes les quantit\'{e}s $I_{i}$ sont constantes lors du mouvement. Les \'{e}quations du mouvement pour les variables angulaires donnent $\dot{w}_{i} = \frac{\partial E}{\partial I_{i}}$ donc pour $i \ne j$, nous avons :
+\benn
+	\dot{w}_{i}\frac{\partial E}{\partial I_{j}} - \dot{w}_{j}\frac{\partial E}{\partial I_{i}} = 0 \Leftrightarrow \frac{\mathrm{d}}{\mathrm{dt}}\left(w_{i}\frac{\partial E}{\partial I_{j}} - w_{j}\frac{\partial E}{\partial I_{i}}\right) = 0
+\eenn
+Donc les $s - 1$ quantit\'{e}s :
+\be
+	\forall i \ne j\text{, }w_{i}\frac{\partial E}{\partial I_{j}} - w_{j}\frac{\partial E}{\partial I_{i}} \label{EQ:52_13}
+\ee
+sont des int\'{e}grales mais elles ne sont pas uniformes car les cariables angulaires ne le sont pas au regard de l'\'{e}galit\'{e} (\ref{EQ:52_8}).
+
+Dans le cas de la d\'{e}g\'{e}n\'{e}rescence abord\'{e}e au paragraphe (\ref{PAR:52_2_1}), nous \'{e}tudions la d\'{e}riv\'{e}e totale par rapport au temps de la quantit\'{e} $w_{1}n_{2} - w_{2}n_{1}$, soit :
+\benn
+	\frac{\mathrm{d}}{\mathrm{dt}}(w_{1}n_{2} - w_{2}n_{1}) = \frac{\partial E}{\partial I_{1}}n_{2} - \frac{\partial E}{\partial I_{2}}n_{1} = \frac{\partial E}{\partial I_{2}}\left(\frac{n_{2}^{2}}{n_{1}} - n_{1}\right) \propto \dot{w}_{2}
+\eenn
+en utilisant la relation (\ref{EQ:52_12}). Nous obtenons alors que la quantit\'{e} :
+\be
+	w_{1}n_{2} - w_{2}n_{1} \label{EQ:52_14}
+\ee
+est proportionnelle \`{a} $\dot{w}_{2}$. L'int\'{e}grale (\ref{EQ:52_14}) n'est pas uniforme mais comme la non-uniformit\'{e} de $w_{2}$ se r\'{e}duit \`{a} un multiple de $2\pi$, voir (\ref{EQ:52_8}), alors il suffit de choisir une fonction trigonom\'{e}trique ajust\'{e}e pour que, \`{a} partir de (\ref{EQ:52_14}), nous ayons une int\'{e}grale premi\`{e}re uniforme.
