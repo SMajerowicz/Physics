@@ -550,3 +550,46 @@ Le calcul de l'int\'{e}grale $\int\omega\mathrm{dt}$ montre que la valeur minima
 L'exercice (\ref{PAR:50_EX}) a permis de montrer que pour un oscillateur harmonique $\Lambda \propto \sin(2w)$. Ainsi la s\'{e}rie de Fourier de $\Lambda$ en (\ref{EQ:51_3}) s'arr\^{e}te exactement \`{a} $n = \pm 2$ et donc $\Delta I \propto e^{-2\Im(w_{0})}$ en adaptant (\ref{EQ:51_6}).
 
 \section{Mouvement quasi-p\'{e}riodique}\label{PAR:52_EX}
+
+Nous allons calculer la variable d'action pour un mouvement elliptique dans un champ d\'{e}fini par : $U = -\alpha/r$ \'{e}tudi\'{e} au paragraphe (\ref{PAR:15}) en tant que probl\`{e}me de Kepler. Le mouvement se r\'{e}alise dans un plan pour lequel nous choisissons les coordonn\'{e}es polaires $(r,\varphi)$.
+
+Par d\'{e}finition (\ref{EQ:49_7}), la variable d'action suivant $\varphi$ vaut :
+\benn
+	I_{\varphi} = \frac{1}{2\pi}\int_{0}^{2\pi}{p_{\varphi}\mathrm{d}\varphi}
+\eenn
+or $p_{\varphi}$ est donn\'{e}e par la formule (\ref{EQ:14_2}) et est \'{e}gale \`{a} $mr^{2}\dot{\varphi}$. Nous obtenons donc :
+\benn
+	I_{\varphi} = \frac{1}{2\pi}mr^{2}\dot{\varphi}\int_{0}^{2\pi}{\mathrm{d}\varphi} = mr^{2}\dot{\varphi} = M
+\eenn
+o\`{u} $M$ est la valeur du moment cin\'{e}tique de la particule. $M$ est constante avec le temps par conservation, voir le paragraphe (\ref{PAR:9}).
+
+De la m\^{e}me mani\`{e}re, la variable d'action suivant $r$ vaut :
+\benn
+	I_{r} = \frac{1}{2\pi}\oint{p_{r}\mathrm{d}r} = 2\times\frac{1}{2\pi}\int_{r_{min}}^{r_{max}}{p_{r}\mathrm{d}r}
+\eenn
+En reprenant l'expression de la fonction de Lagrange (\ref{EQ:14_1}) dans notre cas pr\'{e}cis alors :
+\benn
+	p_{r} = \frac{\partial L}{\partial \dot{r}} = m\dot{r}
+\eenn
+La conservation de l'\'{e}nergie \'{e}tudi\'{e}e au paragraphe (\ref{PAR:6}) donne pour $E$ l'\'{e}nergie du syst\`{e}me, voir (\ref{EQ:14_4}) :
+\bea
+	E & = & \frac{m}{2}\left(\dot{r}^{\,2} + r^{2}\dot{\varphi}^{\,2}\right) - \frac{\alpha}{r} = \frac{m}{2}\dot{r}^{\,2} + \frac{M^{2}}{2mr^{2}} - \frac{\alpha}{r} \nonumber \\
+	\Leftrightarrow \dot{r} & = & \sqrt{\frac{2}{m}\left(E + \frac{\alpha}{r} - \frac{M^{2}}{m^{2}r^{2}}\right)} \nonumber
+\eea
+Nous en d\'{e}duisons donc que :
+\benn
+	I_{r} = \frac{1}{\pi}\int_{r_{min}}^{r_{max}}{\sqrt{2m\left(E + \frac{\alpha}{r}\right) - \frac{M^{2}}{r^{2}}}\mathrm{d}r}
+\eenn
+Pour le calcul explicite de l'int\'{e}grale : \emph{https://github.com/SMajerowicz/Physics/issues/30} :
+\bea
+	I_{r} & = & -M + \alpha\sqrt{\frac{m}{2\lvert E\rvert}} = -I_{\varphi} + \alpha\sqrt{\frac{m}{2\lvert E\rvert}} \nonumber \\
+	\Leftrightarrow \left(\frac{I_{r} + I_{\varphi}}{\alpha}\right)^{2} & = & \frac{m}{2E} \Leftrightarrow E = \frac{m\alpha^{2}}{2(I_{r} + I_{\varphi})^{2}}
+\eea
+L'\'{e}nergie ne d\'{e}pend que de la somme $I_{r} + I_{\varphi}$ ainsi le mouvement est d\'{e}g\'{e}n\'{e}r\'{e} comme d\'{e}montr\'{e} en cons\'{e}quence de la relation (\ref{EQ:52_12}). Les deux fr\'{e}quences fondamentales, par rapport \`{a} $r$ et $\varphi$, co\"{i}ncident donc.
+
+Les relations (\ref{EQ:15_4}) expriment les param\`{e}tres $p$ et $e$ de l'orbite et ils peuvent se calculer en fonction de $I_{r}$ et de $I_{\varphi}$ :
+\bea
+	p & = & \frac{M^{2}}{m\alpha} = \frac{I_{\varphi}^{2}}{m\alpha} \nonumber \\
+	e^{2} & = & 1 + 2\frac{EM^{2}}{m\alpha^{2}} = 1 - 2\frac{I_{\varphi}^{2}}{m\alpha^{2}}\frac{m\alpha^{2}}{2(I_{r} + I_{\varphi})^{2}} = 1 - \left(\frac{I_{\varphi}}{I_{r} + I_{\varphi}}\right)^{2} \nonumber
+\eea
+$I_{r}$ et $I_{\varphi}$ sont des invariant adiabatiques. Aussi, l'excentricit\'{e} reste inchang\'{e}e quand le c{\oe}fficient $\alpha$ ou la masse $m$ varie lentement. Les dimensions de l'orbite, voir les d\'{e}finitions (\ref{EQ:15_6a}) et (\ref{EQ:15_6b}) o\`{u} $a$ et $b$ sont proportionnels \`{a} $p$, sont inversement proportionnelles \`{a} $m$ et $\alpha$.
