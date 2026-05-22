@@ -17,13 +17,13 @@ Pour un point mat\'eriel, nous avons en coordonn\'ees cart\'esiennes :
 	\eenn
 \end{itemize}
 
-Les coordonn\'ees cart\'esiennes ne sont pas toujours les plus adapt\'ees. Un autre syt\`eme de coordonn\'ees peut \^etre plus commode \`a utiliser. Il convient de choisir alors $s$ grandeurs quelconques $\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1}$ pour d\'efinir la position d'un syst\`eme ($s$ degr\'es de libert\'es), ce sont ses \emph{coordonn\'ees g\'en\'eralis\'ees} et les d\'eriv\'ees $\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}$, ses \emph{vitesses g\'en\'eralis\'ees}.
+Les coordonn\'ees cart\'esiennes ne sont pas toujours les plus adapt\'ees. Un autre syt\`eme de coordonn\'ees peut \^etre plus commode \`a utiliser. Il convient de choisir alors $s$ grandeurs quelconques $\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1}$ pour d\'efinir la position d'un syst\`eme. Ce sont ses \emph{coordonn\'ees g\'en\'eralis\'ees} et les d\'eriv\'ees $\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}$, ses \emph{vitesses g\'en\'eralis\'ees}. Le syst\`{e}me \`{a} alors $s$ degr\'{e}s de libert\'{e}.
 
 Les relations qui lient les acc\'el\'erations aux coordonn\'ees et aux vitesses sont appel\'ees les \emph{\'equations du mouvement}.
 
 \section{Le principe de moindre action}
 
-La formule la plus g\'en\'erale de la loi du mouvement des syst\`emes mécaniques est celle du \emph{principe de moindre action} (ou principe de Hamilton). Il introduit la \emph{fonction de Lagrange} d\'efinie telle que :
+La formule la plus g\'en\'erale de la loi du mouvement des syst\`emes mécaniques est celle du \emph{principe de moindre action} \'{e}galement intitul\'{e} principe de Hamilton. Il introduit la \emph{fonction de Lagrange} d\'efinie telle que :
 \benn
 	L(\begin{Bmatrix}q_{i}\end{Bmatrix}^{s}_{1},\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}^{s}_{1}, \mathrm{t}) = L(q,\dot{q},\mathrm{t})
 \eenn
@@ -37,7 +37,7 @@ Partons d'un seul degr\'e de libert\'e et d\'efinissons $q=q(\mathrm{t})$ telle 
 \be
 	q(\mathrm{t}) \rightarrow q(\mathrm{t})+\delta q(\mathrm{t}) \label{EQ:2_2}
 \ee
-avec $\delta q(\mathrm{t})$ est la variation de $q(\mathrm{t})$. Or en $\mathrm{t}_{1}$ et $\mathrm{t}_{2}$, toutes les fonctions $q(\mathrm{t})$ doivent avoir des valeurs identiques (les trajectoires diff\`erent mais pas les conditions initiales, ni finales). Donc $\forall q(\mathrm{t})$, nous avons :
+avec $\delta q(\mathrm{t})$ est la variation de $q(\mathrm{t})$. Or en $\mathrm{t}_{1}$ et $\mathrm{t}_{2}$, toutes les fonctions $q(\mathrm{t})$ doivent avoir des valeurs identiques, i.e. les trajectoires diff\`erent mais pas les conditions initiales, ni finales. Donc $\forall q(\mathrm{t})$, nous avons :
 \be
 	\delta q(\mathrm{t}_{1})=\delta q(\mathrm{t}_{2})=0 \label{EQ:2_3}
 \ee
@@ -49,7 +49,7 @@ Or par d\'efinition, nous avons :
 \benn
 	\delta L(q,\dot{q},\mathrm{t}) = \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q} + \dfrac{\partial L}{\partial \mathrm{t}}\delta \mathrm{t}
 \eenn
-Mais puisque $\delta \mathrm{t}=0$, cela donne, au premier ordre (développement en s\'erie de Taylor) :
+Mais puisque $\delta \mathrm{t}=0$, cela donne, au premier ordre en utilisant le développement en s\'{e}rie de Taylor :
 \benn
 	L(q+\delta q, \dot{q}+\delta \dot{q}, \mathrm{t}) \approx L(q,\dot{q},\mathrm{t}) + \dfrac{\partial L}{\partial q}\delta q + \dfrac{\partial L}{\partial \dot{q}}\delta \dot{q}
 \eenn
@@ -82,7 +82,7 @@ L'\'equation (\ref{EQ:2_4}) s'\'ecrit donc :
 	\delta S & = & \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \dfrac{\partial L}{\partial q}\delta q \mathrm{dt} + \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} - \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right) \delta q\mathrm{dt} \nonumber \\
 	& = & \left[\dfrac{\partial L}{\partial \dot{q}}\delta q\right]_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} - \int_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q\mathrm{dt} \label{EQ:2_5}
 \eea
-or l'application de (\ref{EQ:2_3}) dans (\ref{EQ:2_5}) implique directement :
+et l'application de (\ref{EQ:2_3}) dans (\ref{EQ:2_5}) implique directement :
 \benn
 	\delta S = \bigintsss_{\mathrm{t}_{1}}^{\mathrm{t}_{2}} \left(\dfrac{\partial L}{\partial q}-\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q}}\right)\right) \delta q\mathrm{dt}
 \eenn
@@ -94,7 +94,7 @@ ce qui donne les \emph{\'equations de Lagrange} lorsqu'il y a $s$ degr\'es de li
 \be
 	\forall i \in \left(1, 2, \ldots, s\right), \dfrac{\partial L}{\partial q_{i}}-\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{q_{i}}}\right) = 0\label{EQ:2_6}
 \ee
-c'est-\`a-dire $s$ \'equations diff\'erentielles du second ordre à $s$ inconnues, $q_{i}(\mathrm{t})$.
+Ce sont $s$ \'equations diff\'erentielles du second ordre à $s$ inconnues, $q_{i}(\mathrm{t})$.
 
 Si (A) et (B) sont deux syst\`emes ferm\'es suffisamment \'eloign\'es pour n\'egliger leur interaction mutuelle alors :
 \be
@@ -115,7 +115,7 @@ et impliquent que le principe de moindre action $\delta S = 0$ co\"incide avec $
 
 \section{Le principe de relativit\'e de Galil\'ee}
 
-Il est n\'ecessaire de choisir un syst\`eme de r\'ef\'erence pour \'etudier les ph\'enom\`enes m\'ecaniques et il est pr\'ef\'erable de le choisir afin que les lois de la m\'ecanique y soit les plus simples possibles. Et il est toujours possible de trouver un r\'ef\'erentiel tel que l'espace est homog\`ene et isotrope et le temps uniforme. En d'autres termes, la fonction de Lagrange d'un point mat\'eriel se mouvant librement dans un syst\`eme galil\'een en coordonn\'ees cart\'esiennes :
+Il est n\'ecessaire de choisir un syst\`eme de r\'ef\'erence pour \'etudier les ph\'enom\`enes m\'ecaniques et il est pr\'ef\'erable de le choisir afin que les lois de la m\'ecanique y soient les plus simples possibles. Et il est toujours possible de trouver un r\'ef\'erentiel tel que l'espace est homog\`ene et isotrope et le temps uniforme. En d'autres termes, la fonction de Lagrange d'un point mat\'eriel se mouvant librement dans un syst\`eme galil\'een en coordonn\'ees cart\'esiennes donne par :
 \begin{itemize}
 	\item homog\'en\'it\'e de l'espace : $L(\vec{r},\vec{v},\mathrm{t}) \Rightarrow L(\vec{v},\mathrm{t})$
 	\item uniformit\'e du temps : $L(\vec{v},\mathrm{t}) \Rightarrow L(\vec{v})$
@@ -129,7 +129,7 @@ ce qui implique que $\dfrac{\partial L}{\partial \vec{r}} = 0$. Et par applicati
 \benn
 	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \vec{v}}\right) = 0
 \eenn
-et comme la fonction de Lagrange n'est fonction que de la vitesse, ou encore $\dfrac{\partial L({\vec{v}}^{\,2})}{\partial \vec{v}} \propto \vec{v}$ (voir \ref{EQ:3_1}), dans ce cas alors :
+Comme la fonction de Lagrange n'est fonction que de la vitesse, ou encore $\dfrac{\partial L({\vec{v}}^{\,2})}{\partial \vec{v}} \propto \vec{v}$ (voir \ref{EQ:3_1}), dans ce cas alors :
 \be
 	\vec{v} = \vec{Cte} \label{EQ:3_2}
 \ee
@@ -152,13 +152,13 @@ L' = L(\vec{v'}^{\,2}) & = & L(\vec{v}^{\,2} + 2\vec{v}\cdot\vec{\epsilon} + \ve
 \eea
 en supprimant les ordres sup\'erieurs à 2 en $\vec{\epsilon}$ dans le d\'eveloppement en s\'erie de Taylor de :
 \benn
-	L(\vec{v}^{\,2} + 2\vec{v}\cdot\vec{\epsilon} + \vec{\epsilon}^{\,2}) \approx L(\vec{v}^{\,2} + \dfrac{\partial L}{\partial \vec{v}^{\,2}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2}) + \dfrac{\partial L}{2\partial \vec{v}^{\,4}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2})^{2} + \ldots
+	L(\vec{v}^{\,2} + 2\vec{v}\cdot\vec{\epsilon} + \vec{\epsilon}^{\,2}) \approx L(\vec{v}^{\,2} + \dfrac{\partial L}{\partial \vec{v}^{\,2}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2}) + \dfrac{\partial^{2} L}{2\partial \vec{v}^{\,4}}.(2\vec{v}\cdot\vec{\epsilon}+\vec{\epsilon}^{\,2})^{2} + \ldots
 \eenn
-En reprenant la fonction de Lagrange qui peut se d\'efinir comme (\ref{EQ:2_8}), nous pouvons pos\'e :
+En reprenant la fonction de Lagrange qui peut se d\'efinir comme (\ref{EQ:2_8}), nous pouvons poser :
 \benn
 	\dfrac{\partial L}{\partial \vec{v}^{\,2}}2\vec{v}\cdot\vec{\epsilon} = \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}} \Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{\mathrm{d}\vec{r}}{\mathrm{dt}}\cdot\vec{\epsilon} = \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}} \Leftrightarrow 2\dfrac{\partial L}{\partial \vec{v}^{\,2}}\dfrac{\mathrm{d}(\vec{r}\cdot\vec{\epsilon})}{\mathrm{dt}} = \dfrac{\mathrm{d}f(\vec{r},t)}{\mathrm{dt}}
 \eenn
-n'est vraie que si et seulement si $\dfrac{\partial L}{\partial \vec{v}^{\,2}} = \alpha$, avec $\alpha$ une constante. Or nous avons \ref{EQ:3_1}, qui implique :
+Cette derni\`{e}re relation n'est vraie que si et seulement si $\dfrac{\partial L}{\partial \vec{v}^{\,2}} = \alpha$, avec $\alpha$ une constante. Or nous avons \ref{EQ:3_1}, qui implique :
 \benn
 	L = L(\vec{v}^{\,2}) = \alpha\vec{v}^{\,2}
 \eenn
@@ -206,13 +206,13 @@ Cela permet d'\'ecrire la fonction de Lagrange :
 
 \section{Fonction de Lagrange d'un syst\`eme de points mat\'eriels}
 
-Dans ce cas, un syst\`eme est ferm\'e s'il est compos\'e de points mat\'erielsr\'eagissant les uns avec les autres mais isol\'es de tout corps ext\'erieur. L'int\'eraction entre les points mat\'eriels peut \^etre d\'ecrite en ajoutant à la fonction de Lagrange une fonction d\'ependante des seules coordonn\'ees des particules. Ainsi, en reprenant (\ref{EQ:4_2}) :
+Dans ce cas, un syst\`eme est ferm\'e s'il est compos\'e de points mat\'eriels r\'eagissant les uns avec les autres mais isol\'es de tout corps ext\'erieur. L'int\'eraction entre les points mat\'eriels peut \^etre d\'ecrite en ajoutant à la fonction de Lagrange une fonction d\'ependante des seules coordonn\'ees des particules. Ainsi, en reprenant (\ref{EQ:4_2}) :
 \be
 	L = \sum_{a}\dfrac{m_{a}\vec{v_{a}}^{\,2}}{2} - U\left(\begin{Bmatrix}\vec{r_{i}}\end{Bmatrix}_{1}^{s}\right) = T - U \label{EQ:5_1}
 \ee
 avec $T$ l'\'energie cin\'etique et $U$ l'\'energie potentielle du syst\`eme.
 
-En m\'ecanique classique, les int\'eractions entre particules sont instantan\'ees (uniformit\'e du temps et relativit\'e de Galil\'ee). De la m\^eme mani\`ere, le changement de $t$ en $-t$ ne change ne la fonction de Lagrange, ni les \'equations du mouvement, c'est la r\'eversibili\'e de la m\'ecanique classique.
+En m\'ecanique classique, les int\'eractions entre particules sont instantan\'ees (uniformit\'e du temps et relativit\'e de Galil\'ee). De la m\^eme mani\`ere, le changement de $t$ en $-t$ ne change ni la fonction de Lagrange, ni les \'equations du mouvement, c'est la r\'eversibili\'e de la m\'ecanique classique.
 
 En passant l'\'equation (\ref{EQ:2_6}) des coordonn\'ees g\'en\'eralis\'ees en coordonn\'ees cart\'esiennes, nous avons pour la particule $a$ :
 \be
@@ -243,7 +243,7 @@ Pour passer des coordonn\'ees cart\'esiennes au coordonn\'ees g\'en\'eralis\'ees
 	x_{a} & = & f_{a}\left(\begin{Bmatrix}\dot{q}_{i}\end{Bmatrix}_{1}^{s}\right) \nonumber \\
 	\Rightarrow \dot{x}_{a} = \dfrac{\mathrm{d}x_{a}}{\mathrm{dt}} & = & \sum_{k=1}^{s}\dfrac{\partial f_{a}(q_{k})}{\partial q_{k}}\dfrac{\mathrm{d}q_{k}}{\mathrm{dt}} \nonumber
 \eea
-en employant la diff\'erentiel totale.
+en employant la diff\'erentielle totale.
 
 En reportant cela dans l'\'equation (\ref{EQ:5_1}), nous avons :
 \bea
@@ -260,7 +260,7 @@ avec :
 \benn
 	a_{ij}(q) = \sum_{a}m_{a}\left[\dfrac{\partial f_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial f_{a}(q_{j})}{\partial q_{j}} + \dfrac{\partial g_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial g_{a}(q_{j})}{\partial q_{j}} + \dfrac{\partial h_{a}(q_{i})}{\partial q_{i}}\dfrac{\partial h_{a}(q_{j})}{\partial q_{j}}\right]
 \eenn
-o\`u les c{\oe}fficients $a_{ij}$ ne d\'ependent que des coordonn\'ees. Aussi dans un syst\`eme de coordonn\'ees g\'en\'eralis\'ees, l'\'energie cin\'etique est fonction quadratique des vitesses mais peut aussi d\'ependre des coordon\'ees.
+o\`u les c{\oe}fficients $a_{ij}$ ne d\'ependent que des coordonn\'ees. Aussi dans un syst\`eme de coordonn\'ees g\'en\'eralis\'ees, l'\'energie cin\'etique est fonction quadratique des vitesses mais peut aussi d\'ependre des coordonn\'ees.
 
 Consid\'erons le syst\`eme $A$ non ferm\'e et interagissant avec le syst\`eme $B$ anim\'e d'un mouvement potentiellement fonction du temps. $A$ se meut dans le champ cr\'e\'e par $B$ et le syst\`eme $A+B$ est ferm\'e. La fonction de Lagrange s'\'ecrit alors :
 \benn
