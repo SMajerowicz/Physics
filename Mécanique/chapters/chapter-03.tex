@@ -359,7 +359,7 @@ Et cette derni\`ere in\'egalit\'e n'est vraie que dans deux situations et impliq
 
 \subsection{G\'en\'eralit\'es}
 
-L'\'etude du champ central inversement proportionnel \`a $r$ est tr\`es important\footnote{Cela correspond \`a une force inversement proportionnel au carr\'e de la distance, voir l'\'equation (\ref{EQ:7_4}) donnant $\vec{F} = \dfrac{\partial L}{\partial U}$} car il s'agit du champ gravitationnel, attractif, et du champ \'electrostatique de Coulomb, attractif ou r\'epulsif. Ainsi, d\'efinissons un champ d'attraction tel que :
+L'\'etude du champ central inversement proportionnel \`a $r$ est tr\`es important\footnote{Cela correspond \`a une force inversement proportionnel au carr\'e de la distance, voir l'\'equation (\ref{EQ:7_6}) donnant $F = \dfrac{\partial L}{\partial U}$} car il s'agit du champ gravitationnel, attractif, et du champ \'electrostatique de Coulomb, attractif ou r\'epulsif. Ainsi, d\'efinissons un champ d'attraction tel que :
 \be
 	U(r) = -\dfrac{\alpha}{r} \label{EQ:15_1}
 \ee
@@ -376,10 +376,9 @@ qui est repr\'esent\'ee sur la figure (\ref{FIG:3_10}).
 	\end{center}
 \end{figure}
 Le minimum de la fonction pr\'ec\'edente s'obtient avec :
-\bea
-	\dfrac{\mathrm{d}U_{eff}(r)}{\mathrm{d}r} & = & 0 \Leftrightarrow \dfrac{\alpha}{r^{2}} - \dfrac{2M^{2}}{2mr^{3}} = 0 \nonumber \\
-	\Leftrightarrow \dfrac{\alpha}{r^{2}} & = & \dfrac{M^{2}}{mr^{3}} \Leftrightarrow r = \dfrac{M^{2}}{\alpha m} \nonumber
-\eea
+\benn
+	\dfrac{\mathrm{d}U_{eff}(r)}{\mathrm{d}r} = 0 \Leftrightarrow \dfrac{\alpha}{r^{2}} - \dfrac{2M^{2}}{2mr^{3}} = 0 \Leftrightarrow \dfrac{\alpha}{r^{2}} = \dfrac{M^{2}}{mr^{3}} \Leftrightarrow r = \dfrac{M^{2}}{\alpha m}
+\eenn
 et par cons\'equence, nous avons :
 \be
 	(U_{eff})_{min} = -\dfrac{\alpha^{2}m}{2M^{2}} \label{EQ:15_3}
@@ -458,10 +457,10 @@ qui est l'\'equation d'une section conique ayant son foyer \`a l'origine des coo
 			\put(25,65){\vector(0,1){110}}
 			\put(20,55){$2b$}
 			\put(125,10){\vector(-1,0){50}}
-			\put(135,10){\vector(1,0){190}}
+			\put(140,10){\vector(1,0){185}}
 			\put(126,8){$2a$}
 			\put(215,60){\vector(-1,0){15}}
-			\put(225,60){\vector(1,0){25}}
+			\put(230,60){\vector(1,0){20}}
 			\put(215,58){$ae$}
 			\put(225,155){\vector(0,1){15}}
 			\put(225,145){\vector(0,-1){45}}
@@ -471,24 +470,24 @@ qui est l'\'equation d'une section conique ayant son foyer \`a l'origine des coo
 	\end{center}
 \end{figure}
 
-Le choix pr\'ec\'edemment fait pour avoir la constante d'int\'egration nulle correspond au point le plus proche du centre du champ et il correspond \`a $\varphi = 0$ d'apr\`es l'\'equation de la trajectoire (\ref{EQ:15_5}). Ce point est appel\'e les \emph{p\'erih\'elie} de l'orbite.
+Le choix pr\'ec\'edemment fait pour avoir la constante d'int\'egration nulle correspond au point le plus proche du centre du champ et il correspond \`a $\varphi = 0$ d'apr\`es l'\'equation de la trajectoire (\ref{EQ:15_5}). Ce point est appel\'e le \emph{p\'erih\'elie} de l'orbite.
 
 Dans le cas o\`u deux corps interagissent selon le champ d'attraction (\ref{EQ:15_1}), alors l'orbite de chacun des deux corps est une section conique dont le foyer se trouve \`a leur centre d'inertie commun, voir les \'equations (\ref{EQ:8_3}) et (\ref{EQ:13_2}).
 
 \subsection{Cas de la trajectoire elliptique}
 
-D'apr\`es la relation (\ref{EQ:15_4}), il est \'evident que si $-\frac{m\alpha^{2}}{2M^{2}} \le E < 0$ alors $e < 1$. L'orbite est alors une ellipse telle que montr\'ee sur la figure (\ref{FIG:3_11}) et le mouvement est fini et la trajectoire ferm\'ee. Dans ce cas pr\'ecis et en utilisant $\lvert E \rvert$, le grand demi-axe $a$ s'\'ecrit :
+D'apr\`es la relation (\ref{EQ:15_4}), il est \'evident que si $-\frac{m\alpha^{2}}{2M^{2}} \le E < 0$ alors $e < 1$. L'orbite est alors une ellipse telle que montr\'ee sur la figure (\ref{FIG:3_11}). Le mouvement est fini et la trajectoire ferm\'ee. Dans ce cas pr\'ecis et en utilisant $\lvert E \rvert$, le grand demi-axe $a$ s'\'ecrit :
 \bea
 	a & = & \dfrac{p}{1 - e^{2}} = \dfrac{M^{2}}{m\alpha\left(1 - 1 - \dfrac{2EM^{2}}{m\alpha^{2}}\right)} = \dfrac{M^{2}}{\dfrac{2\lvert E \rvert M^{2}}{m\alpha}} \nonumber \\
-	& = & \dfrac{\alpha}{2\lvert E \rvert} \label{EQ:15_6a}
+	\Leftrightarrow a & = & \dfrac{\alpha}{2\lvert E \rvert} \label{EQ:15_6a}
 \eea
 et le petit demi-axe $b$ :
 \bea
 	b & = & \dfrac{p}{\sqrt{1 - e^{2}}} = \dfrac{M^{2}}{m\alpha\sqrt{1 - 1 - \dfrac{2EM^{2}}{m\alpha^{2}}}} = \dfrac{M^{2}}{m\alpha\sqrt{\dfrac{2\lvert E \rvert M^{2}}{m\alpha^{2}}}} \nonumber \\
-	& = & \dfrac{M}{\sqrt{2m\lvert E \rvert}} \label{EQ:15_6b}
+	\Leftrightarrow b & = & \dfrac{M}{\sqrt{2m\lvert E \rvert}} \label{EQ:15_6b}
 \eea
 
-De plus, la plus petite valeur de l'\'energie co\"incide avec l'\'energie cin\'etique nulle et par consé\'equent avec $(U_{eff})_{min}$, voir l'\'equation (\ref{EQ:15_3}). Dans ce cas, l'excentricit\'e $e$ de la section conique est \'egale \`a 1, correspond \`a un cercle dont le rayon vaut $p$. Pour d'autres valeurs de l'\'energie telle que $E < 0$, les distances minimum et maximum au centre du champ central s'obtiennent en r\'esolvant l'\'equation $E = U_{eff}(r)$ qui s'\'ecrit :
+De plus, la plus petite valeur de l'\'energie co\"incide avec l'\'energie cin\'etique nulle et par cons\'equent avec $(U_{eff})_{min}$, voir l'\'equation (\ref{EQ:15_3}). Dans ce cas, l'excentricit\'e $e$ de la section conique est \'egale \`a 1 et elle correspond \`a un cercle dont le rayon vaut $p$. Pour d'autres valeurs de l'\'energie telle que $E < 0$, les distances minimum et maximum au centre du champ central s'obtiennent en r\'esolvant l'\'equation $E = U_{eff}(r)$ qui s'\'ecrit :
 \benn
 	Er^{2} = -\alpha r + \dfrac{M^{2}}{2m} \Leftrightarrow Er^{2} + \alpha r - \dfrac{M^{2}}{2m} = 0
 \eenn
@@ -499,9 +498,9 @@ qui est une \'equation du second degr\'e\footnote{Les deux solutions de l'\'equa
 		r_{max} = \dfrac{\alpha + \sqrt{\alpha^{2}\left(1 + \dfrac{2EM^{2}}{m\alpha^{2}}\right)}}{2\lvert E \rvert} = a(1 + e) \label{EQ:15_7}
 	\end{cases}
 \ee
-avec $r_{min}$ le pr\'erih\'elie de la trajectoire.
+avec $r_{min}$ le p\'erih\'elie de la trajectoire.
 
-Dans notre cas qui nous occupe, il est aussi int\'eressant de d\'etermine la p\'eriode de r\'evolution $T$ sur l'orbite de la particule. La loi de conservation du mouvement associ\'ee \`a la loi des aires (\ref{EQ:14_3}) permet d'\'ecrire :
+Dans notre cas qui nous occupe, il est aussi int\'eressant de d\'eterminer la p\'eriode de r\'evolution $T$ sur l'orbite de la particule. La loi de conservation du mouvement associ\'ee \`a la loi des aires (\ref{EQ:14_3}) permet d'\'ecrire :
 \bea
 	M & = & 2m\dot{f} \Leftrightarrow \int_{0}^{T} M\mathrm{dt} = 2m\int_{0}^{T} \dot{f}\mathrm{dt} \Leftrightarrow MT = 2m\int_{0}^{T} \mathrm{d}f \nonumber \\
 	\Leftrightarrow T & = & \dfrac{2m}{M}\pi ab \nonumber
@@ -510,7 +509,7 @@ car $\int_{0}^{T} \mathrm{d}f$ vaut par d\'efinition la surface totale de l'elli
 \be
 	T = \dfrac{2m}{M}\pi \dfrac{\alpha}{2\lvert E \rvert} \dfrac{M}{\sqrt{2m\lvert E \rvert}} = \alpha\pi\sqrt{\dfrac{m}{2{\lvert E \rvert}^{3}}} \label{EQ:15_8}
 \ee
-Au-del\`a du fait que la p\'eriode ne d\'epend que de l'\'energie de la particule, nous retrouvons la troisi\`eme loi de Kepler \'enonc\'ee dans l'\'equation (\ref{EQ:10_KEPLER}).
+Au-del\`a du fait que la p\'eriode ne d\'epende que de l'\'energie de la particule, nous retrouvons la troisi\`eme loi de Kepler \'enonc\'ee dans l'\'equation (\ref{EQ:10_KEPLER}).
 
 \subsection{Cas de la trajectoire hyperbolique}
 
