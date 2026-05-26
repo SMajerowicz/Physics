@@ -1,0 +1,73 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[autolanguage]{numprint}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{bigints}
+
+\allowdisplaybreaks
+
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\cotan}{cotan}
+
+\usepackage[pdftex]{pict2e}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+
+\graphicspath{
+    {chapters/graphics/}
+	{chapters/exercices/graphics/}
+}
+
+\setcounter{tocdepth}{3}
+
+\setlength{\paperwidth}{21cm}
+\setlength{\paperheight}{29.7cm}
+\setlength{\evensidemargin}{-1.0cm}
+\setlength{\oddsidemargin}{-1.5cm}
+\setlength{\topmargin}{-2cm}
+\setlength{\headsep}{0.15cm}
+\setlength{\headheight}{0.7cm}
+\setlength{\textheight}{26cm}
+\setlength{\textwidth}{19cm}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\benn}{\begin{equation*}}
+\newcommand{\eenn}{\end{equation*}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\trint}{\mathop{\int\!\!\!\int\!\!\!\int}\limits}
+\newcommand{\dint}{\mathop{\int\!\!\!\int}\limits}
+
+\title{\'Etapes de calcul, d\'emonstrations et exercices du livre << Introduction au calcul tensoriel >> de Claude Senay et Bernard Silvestre-Brac}
+\author{S\'ebastien Majerowicz}
+\date{2026 -- 202X}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	Ce document est un condens\'{e} du livre en titre mais aussi une aide pour les d\'{e}monstration et la correction des exercices fournis.
+
+	Une grandeur physique poss\`{e}de une existence intrins\`{e}que, ind\'{e}pendante de tout syst\`{e}me de r\'{e}f\'{e}rence.
+
+	Le calcul tensoriel est la formalisme math\'{e}matique qui permet d'exprimer les lois de la physique sous une forme ind\'{e}pendante du syst\`{e}me de r\'{e}f\'{e}rence choisi.
+\end{abstract}
+
+\tableofcontents
+\listoffigures
+
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\include{chapters/chapter-01}
+
+\end{document}
