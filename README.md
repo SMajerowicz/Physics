@@ -6,7 +6,11 @@ Les livres abordées sont :
  * Introduction au calcul tensoriel (978-2-10-084051-9)
 
 # Outils nécessaires
-Les graphiques sont réalisés avec le logiciel GNU - Octave téléchargeable ici : https://octave.org/
+ * Octave téléchargeable ici : https://octave.org/
+ * Xfig
+ * SageMath
+ * Vim
+ * LaTeX
 
 Vous pouvez cloner ce répertoire et après avoir installé MikTex (https://miktex.org/download) afin de pouvoir compiler les fichiers LaTeX des livres en un document PDF consultable et partageable.
 
