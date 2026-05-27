@@ -540,7 +540,7 @@ Au-del\`a du fait que la p\'eriode ne d\'epende que de l'\'energie de la particu
 	\end{center}
 \end{figure}
 
-Pour $E \le 0$, le mouvement est infini et plus pr\'ecis\'ement pour $E > 0$, l'excentricit\'e $e > 1$ et la trajectoire est alors une hyperbole, voir la figure (\ref{FIG:3_12}). Dans ce cas, le p\'erih\'lie est :
+Pour $E \ge 0$, le mouvement est infini et plus pr\'ecis\'ement pour $E > 0$, l'excentricit\'e $e > 1$ et la trajectoire est alors une hyperbole, voir la figure (\ref{FIG:3_12}). Dans ce cas, le p\'erih\'{e}lie est :
 \be
 	r_{min} = a(e - 1) = \frac{p}{1 + e} \label{EQ:15_9}
 \ee
@@ -580,7 +580,7 @@ En choisissant l'origine du temps telle que la constante d'int\'egration soit nu
 \ee
 L'instant $t = 0$ est \'equivalent \`a $(\xi - e\sin\xi) = 0$ qui n'est possible que pour $\xi = 0$. Cela correspond exactement \`a la position du p\'erih\'elie car $r = a(1 - e) = r_{min}$.
 
-Dans le plan de la trajectoire, en coordonn\'ees cart\'esiennes telles que les axes $x$ et $y$ suivent respectivement le grand et le petit demi-axe de l'ellipse, alors :
+Dans le plan de la trajectoire, en coordonn\'ees cart\'esiennes telles que les axes $x$ et $y$ suivent respectivement le grand et le petit demi-axes de l'ellipse, alors :
 \benn
 	\begin{cases}
 		x = r\cos\varphi \\
@@ -606,17 +606,16 @@ et comme $y^{2} = r^{2} - x^{2}$, nous avons :
 	& = & a^{2}(1 + e^{2} - e^{2}\sin^{2}\xi - e^{2} - 1 + \sin^{2}\xi) \nonumber \\
 	& = & a^{2}(- e^{2}\sin^{2}\xi + \sin^{2}\xi) \nonumber
 \eea
-Nous pouvons en conclure :
+Nous pouvons en conclure que :
 \be
 	x = a(\cos\xi - 1)\text{ et }y = a\sqrt{1 - e^{2}}\sin\xi \label{EQ:15_11}
 \ee
 et nous pouvons observer que le parcours de $\xi$ de $0$ \`a $2\pi$ permet de d\'ecrire une r\'evolution compl\`ete sur l'ellipse.
 
 Cherchons de la m\^eme mani\`ere \`a d\'eterminer la repr\'esentation param\'etrique de la trajectoire dans le cas de la solution hyperbolique, \`a savoir $E > 0$. La relation (\ref{EQ:14_6}) reste :
-\bea
-	\mathrm{t} & = & \bigintsss{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} \nonumber \\
-	& = & \sqrt{\dfrac{m}{2E}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} + \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}}}} \nonumber
-\eea
+\benn
+	\mathrm{t} = \bigintsss{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} =  \sqrt{\dfrac{m}{2E}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} + \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}}}}
+\eenn
 Maintenant, en posant :
 \benn
 	\begin{cases}
@@ -635,7 +634,7 @@ Aussi, nous pouvons poursuivre avec $\mathrm{t}$ avec \'egalement\footnote{En aj
 	& = & \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{\left(a(e\cosh\xi - 1) + a\right)^{2} - a^{2}e^{2}}}} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{a^{2}e^{2}\cosh^{2}\xi - a^{2}e^{2}}}} \nonumber \\
 	& = & \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi - 1)ae\sin\xi\mathrm{d}\xi}{ae\sqrt{\cosh^{2}\xi - 1}}} = \sqrt{\dfrac{ma}{\alpha}}\dfrac{a^{2}e}{ae}\int{(e\cosh\xi - 1)\mathrm{d}\xi} \nonumber \\
 	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(e\cosh\xi - 1)\mathrm{d}\xi} \nonumber \\
-	\mathrm{t} & = & \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi - \xi) \nonumber
+	\Leftrightarrow \mathrm{t} & = & \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi - \xi) \nonumber
 \eea
 Avec la m\^eme hypoth\`ese que dans le cas elliptique qui permet d'\'ecrire $x = r\cos\varphi$ et $y = r\sin\varphi$ et sachant (\ref{EQ:15_9}), nous avons :
 \benn
@@ -689,10 +688,11 @@ Dans le cas d'un champ d'\'energie potentielle r\'epulsif, champ de Coulomb entr
 \be
 	U(r) = \dfrac{\alpha}{r} \label{EQ:15_13}
 \ee
-avec $\alpha > 0$. Alors par analogie, l'\'equation (\ref{EQ:14_8}) peut s'\'ecrire et une illustration est partag\'ee sur la figure (\ref{FIG:3_13a}) :
+avec $\alpha > 0$. Alors par analogie, l'\'equation (\ref{EQ:14_8}) peut s'\'ecrire ainsi :
 \benn
 	U_{eff}(r) = \dfrac{\alpha}{r} + \dfrac{M^{2}}{2mr^{2}}
 \eenn
+et une illustration est partag\'ee sur la figure (\ref{FIG:3_13a}).
 
 \begin{figure}[htb!]
 	\begin{center}
@@ -719,11 +719,11 @@ dont une repr\'esentation est sur la figure (\ref{FIG:3_13}). Nous pouvons aussi
 	r_{min} = \dfrac{p}{e - 1} = a(1 + e) \label{EQ:15_15}
 \ee
 car $a = \frac{\alpha}{2E}$.
-L'\'equation (\ref{EQ:14_6}) se d\'eveloppe :
+L'\'equation (\ref{EQ:14_6}) se d\'eveloppe en :
 \benn
 	\mathrm{t} = \bigintsss{\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - \dfrac{\alpha}{r}\right) - \dfrac{M^{2}}{m^{2}r^{2}}}}} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{r\mathrm{d}r}{\sqrt{r^{2} - \dfrac{\alpha}{E}r - \dfrac{M^{2}}{2mE}}}}
 \eenn
-En remarquant que :
+Nous faisons la remarque que :
 \bea
 	a^{2}e^{2} - (r - a)^{2} & = & a^{2}e^{2} - r^{2} - a^{2} + 2ar \nonumber \\
 	& = & \dfrac{\alpha^{2}}{4E^{2}}\left(1 + \dfrac{2EM^{2}}{m\alpha^{2}}\right) - r^{2} - \dfrac{\alpha^{2}}{4E^{2}} + \dfrac{2\alpha r}{2E} \nonumber \\
@@ -744,7 +744,7 @@ nous prolongeons en :
 \bea
 	\mathrm{t} & = & \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi + 1)ae\sin\xi\mathrm{d}\xi}{\sqrt{a^{2}e^{2}\cosh^{2}\xi - a^{2}e^{2}}}} = \sqrt{\dfrac{ma}{\alpha}}\bigintsss{\dfrac{a(e\cosh\xi + 1)ae\sin\xi\mathrm{d}\xi}{ae\sqrt{\cosh^{2}\xi - 1}}} \nonumber \\
 	& = & \sqrt{\dfrac{ma^{3}}{\alpha}}\int{(e\cosh\xi + 1)\mathrm{d}\xi} \nonumber \\
-	\mathrm{t} & = & \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi + \xi) \nonumber
+	\Leftrightarrow \mathrm{t} & = & \sqrt{\dfrac{ma^{3}}{\alpha}}(e\sinh\xi + \xi) \nonumber
 \eea
 Avec la m\^eme technique calculatoire que pr\'ec\'edemment, nous posons $x = r\cos\varphi$ et $y = r\sin\varphi$ et sachant (\ref{EQ:15_14}), nous avons :
 \benn
@@ -771,24 +771,24 @@ avec $\xi \in ]-\infty ; +\infty[$. Nous avons ainsi la trajectoire param\'etriq
 
 \subsection{Int\'egrale sp\'ecifique du champ en $\alpha/r$}
 
-Cherchons une int\'egrale premi\`ere, i.e. constante dans le temps, sp\'ecifique \`a ce type de champ en $\frac{\alpha}{r}$ avec $\alpha\in\mathbb{R}$ en remarquant que :
+Cherchons une int\'egrale premi\`ere, i.e. constante dans le temps, sp\'ecifique \`a ce type de champ en $\frac{\alpha}{r}$ avec $\alpha\in\mathbb{R}$ Nous faisons d'abord la remarque suivante :
 \bea
-	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\vec{v}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{r}\right) & = & \vec{\dot{v}}\wedge\vec{M} + \vec{v}\wedge\vec{\dot{M}} + \dfrac{\alpha}{r}\vec{\dot{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r}) \nonumber \\
-	& = & \vec{\dot{v}}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{\dot{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r}) \nonumber
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\vec{v}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{r}\right) & = & \dot{\vec{v}}\wedge\vec{M} + \vec{v}\wedge\dot{\vec{M}} + \dfrac{\alpha}{r}\dot{\vec{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r}) \nonumber \\
+	& = & \dot{\vec{v}}\wedge\vec{M} + \dfrac{\alpha}{r}\dot{\vec{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r}) \nonumber
 \eea
 car il y a toujours conservation du moment cin\'etique et donc $\vec{\dot{M}} = \vec{0}$. De plus $\vec{M} = m\vec{r}\wedge\vec{v}$ donc :
 \benn
-	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\vec{v}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{r}\right)  = m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m(\vec{\dot{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r})
+	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\vec{v}\wedge\vec{M} + \dfrac{\alpha}{r}\vec{r}\right)  = m(\dot{\vec{v}}\cdot\vec{v})\vec{r} - m(\dot{\vec{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\dot{\vec{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r})
 \eenn
 En revenant à l'\'equation du mouvement (\ref{EQ:5_3}) :
 \benn
-	m\vec{\dot{v}} = -\dfrac{\partial U}{\partial\vec{r}} = \dfrac{\alpha}{r^{3}}\vec{r}
+	m\dot{\vec{v}} = -\dfrac{\partial U}{\partial\vec{r}} = \dfrac{\alpha}{r^{3}}\vec{r}
 \eenn
 La quantit\'e :
 \bea
-	m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m(\vec{\dot{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r}) & = & m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m(\vec{\dot{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} - m\vec{\dot{v}}(\vec{v}\cdot\vec{r}) \nonumber \\
-	& = & m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m\vec{\dot{v}}(\vec{v}\cdot\vec{r}) - (m\vec{\dot{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} \nonumber \\
-	& = & m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - m(\vec{\dot{v}}\cdot\vec{v})\vec{r} - \dfrac{\alpha}{r}\vec{v} + \dfrac{\alpha}{r}\vec{\dot{r}} \nonumber \\
+	m(\dot{\vec{v}}\cdot\vec{v})\vec{r} - m(\dot{\vec{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\dot{\vec{r}} - \dfrac{\alpha}{r^{3}}\vec{r}(\vec{v}\cdot\vec{r}) & = & m(\dot{\vec{v}}\cdot\vec{v})\vec{r} - m(\dot{\vec{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\dot{\vec{r}} - m\dot{\vec{v}}(\vec{v}\cdot\vec{r}) \nonumber \\
+	& = & m(\dot{\vec{v}}\cdot\vec{v})\vec{r} - m\dot{\vec{v}}(\vec{v}\cdot\vec{r}) - (m\dot{\vec{v}}\cdot\vec{r})\vec{v} + \dfrac{\alpha}{r}\dot{\vec{r}} \nonumber \\
+	& = & m(\dot{\vec{v}}\cdot\vec{v})\vec{r} - m(\dot{\vec{v}}\cdot\vec{v})\vec{r} - \dfrac{\alpha}{r}\vec{v} + \dfrac{\alpha}{r}\dot{\vec{r}} \nonumber \\
 	& = & \vec{0} \nonumber
 \eea
 Ainsi le vecteur :
@@ -810,4 +810,4 @@ car $v_{\varphi} = r_{min}\dot{\varphi}$. La quantité :
 	& = & \dfrac{M^{2}(e - 1)m\alpha}{mM^{2}} + \alpha = (e - 1)\alpha + \alpha \nonumber \\
 	& = & \alpha e \nonumber
 \eea
-en prenant pour r\'ef\'erence pour la valeur du param\`etre $p$ la relation (\ref{EQ:15_15}). Le vecteur d\'efini en (\ref{EQ:15_17}) est donc constant en norme qui est \'egale \`a $\alpha e$. L'int\'egrale premi\`ere (\ref{EQ:15_17}) comme les lois de conservation de l'\'energie et du moment cin\'etique est une fonction uniforme de l'\'etat de la particule, position et vitesse. L'apparition de l'int\'egrale (\ref{EQ:15_17}) suppl\'ementaire est due à la d\'eg\'en\'erescence du mouvement, \'etudi\'e au paragraphe (\ref{PAR:52}).
+en prenant pour r\'ef\'erence pour la valeur du param\`etre $p$ la relation (\ref{EQ:15_15}). Le vecteur d\'efini en (\ref{EQ:15_17}) est donc constant en norme qui est \'egale \`a $\alpha e$. L'int\'egrale premi\`ere (\ref{EQ:15_17}) comme les lois de conservation de l'\'energie et du moment cin\'etique est une fonction uniforme de l'\'etat de la particule, position et vitesse. L'apparition de l'int\'egrale suppl\'ementaire (\ref{EQ:15_17}) est due à la d\'eg\'en\'erescence du mouvement, \'etudi\'e au paragraphe (\ref{PAR:52}).
