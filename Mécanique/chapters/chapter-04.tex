@@ -2,14 +2,13 @@
 
 \section{D\'esint\'egration des particules}
 
-Les lois de conservations ne d\'ependent absolument pas de l'esp\`ece d'interaction entre les particules et permettent ainsi d'arriver \`a des conclusions pourtant importantes pour les processus m\'ecaniques en jeu.
+Les lois de conservations ne d\'ependent absolument pas de l'esp\`ece d'interaction entre les particules et elles permettent ainsi d'arriver \`a des conclusions pourtant importantes pour les processus m\'ecaniques en jeu.
 
-Pour commencer, choisissons la d\'esint\'egration spontan\'ee, i.e. non provoqu\'ee par des forces ext\'erieures, d'une particule en deux autres particules se d\'epla\c{c}ant apr\`es la d\'esint\'egration ind\'ependamment l'une de l'autre. Sa forme la plus simple est quand il est consid\'er\'e dans un syst\`eme de r\'ef\'erence o\`u la particule initiale est au repos. La conservation d' l'impulsions implique :
-\bea
-	\vec{p}_{1} + \vec{p}_{2} & = & \vec{0} \nonumber \\
-	\vec{p}_{1} & = & -\vec{p}_{2} \nonumber
-\eea
-ainsi les particules r\'esultantes de la d\'esint\'egration s'\'eloignent l'une de l'autre avec des impulsions \'egales, ,$\lVert \vec{p}_{1} \rVert = \lVert \vec{p}_{2} \rVert = p_{0}$ et dirig\'ees en sens inverse.
+Pour commencer, choisissons la d\'esint\'egration spontan\'ee, i.e. non provoqu\'ee par des forces ext\'erieures, d'une particule en deux autres particules se d\'epla\c{c}ant apr\`es la d\'esint\'egration ind\'ependamment l'une de l'autre. Sa forme la plus simple est quand elle est consid\'er\'{e}e dans un syst\`eme de r\'ef\'erence o\`u la particule initiale est au repos. La conservation de l'impulsion implique :
+\benn
+	\vec{p}_{1} + \vec{p}_{2} = \vec{0} \Leftrightarrow \vec{p}_{1} = -\vec{p}_{2}
+\eenn
+ainsi les particules r\'esultantes de la d\'esint\'egration s'\'eloignent l'une de l'autre avec des impulsions \'egales en norme : $\lVert \vec{p}_{1} \rVert = \lVert \vec{p}_{2} \rVert = p_{0}$ et dirig\'ees en sens oppos\'{e}.
 
 En utilisant la loi de conservation de l'\'energie et en particulier l'\'equation (\ref{EQ:8_4}) et parce que l'\'energie cin\'etique de la particule initiale est nulle, nous pouvons \'ecrire :
 \benn
@@ -77,14 +76,13 @@ avec $m = \dfrac{m_{1} + m_{2}}{m_{1}m_{2}}$ qui est la masse r\'eduite du syst\
 	\item le syst\`eme du laboratoire ou <<~l~>>,
 	\item le syst\`eme du centre d'inertie ou <<~c~>> dans lequel, par d\'efinition, la somme des impulsions est nulle, voir le paragraphe (\ref{PAR:8}).
 \end{itemize}
-Pour une des particules r\'esultantes de la d\'esint\'egration, d\'efinissions $\vec{v}$ sa vitesse dans le syst\`eme <<~l~>> et $\vec{v}_{0}$, sa vitesse dans le syst\`eme <<~c~>>. Par construction, nous avons $\vec{v} = \vec{V} + \vec{v}_{0} \Leftrightarrow \vec{v}_{0} = \vec{v} + \vec{V}$. De plus, la formule d'Al-Kashi donne directement :
-\bea
-	v_{0}{2} & = & v^{2} + V^{2} + 2vV\cos(\langle \vec{v},\vec{V}\rangle) \nonumber \\
-	& = & v^{2} + V^{2} + 2vV\cos(\theta) \nonumber
-\eea
-en se basant sur la figure (\ref{FIG:4_14})et o\`u l'angle $\theta$ est l'angle de d\'eviation dans <<~l~>>. La repr\'esentation g\'eom\'etrique (\ref{FIG:4_14}) montre deux cas distincts :
+Pour une des particules r\'esultantes de la d\'esint\'egration, d\'efinissions $\vec{v}$ sa vitesse dans le syst\`eme <<~l~>> et $\vec{v}_{0}$, sa vitesse dans le syst\`eme <<~c~>>. Par construction, nous avons $\vec{v} = \vec{V} + \vec{v}_{0} \Leftrightarrow \vec{v}_{0} = \vec{v} - \vec{V}$. De plus, la formule d'Al-Kashi donne directement :
+\benn
+	v_{0}{2} = v^{2} + V^{2} + 2vV\cos(\langle \vec{v},\vec{V}\rangle) = v^{2} + V^{2} + 2vV\cos(\theta)
+\eenn
+en se basant sur la figure (\ref{FIG:4_14}) o\`u l'angle $\theta$ est l'angle de d\'eviation dans <<~l~>>. La repr\'esentation g\'eom\'etrique (\ref{FIG:4_14}) montre deux cas distincts :
 \begin{itemize}
-	\item $V < v_{0}$ o\`u l'angle $\theta$ peut alors prendre une valeur quelconque
+	\item $V < v_{0}$ o\`u l'angle $\theta$ peut alors prendre une valeur quelconque,
 	\item $V > v_{0}$ o\`u la particule r\'esultante est limit\'ee dans sa direction par la tangente au cercle de rayon $\lVert \vec{v}_{0} \rVert$ depuis le point A. Cela permet d'\'ecrire :
 	\be
 		\sin\theta_{max} = \dfrac{v_{0}}{V} \label{EQ:16_4}
@@ -134,15 +132,14 @@ Dans la plupart des applications physiques, ce sont de nombreuses particules qui
 \ee
 Pour obtenir la r\'epartition dans le r\'ef\'erentiel <<~l~>>, partons du calcul de l'\'energie cin\'etique et de sa distribution. Nous savons que :
 \bea
-	\vec{v} & = & \vec{V} + \vec{v}_{0} \nonumber \\
-	\Leftrightarrow v^{2} & = & v_{0}^{2} + V^{2} + 2v_{0}V\cos\theta_{0} \nonumber \\
+	\vec{v} & = & \vec{V} + \vec{v}_{0} \Leftrightarrow v^{2} = v_{0}^{2} + V^{2} + 2v_{0}V\cos\theta_{0} \nonumber \\
 	\Leftrightarrow \cos\theta_{0} & = & \dfrac{v^{2} - v_{0}^{2} - V^{2}}{2v_{0}V} \nonumber
 \eea
-Or par rapport \`a $\theta_{0}$, les quantit\'es $\lVert\vec{v}_{0}\rVert$ et $\lVert\vec{V}\rVert$ sont constantes au contraire de $\lVert\vec{v}\rVert$ aussi, nous pouvons en conclure que :
+Or par rapport \`a $\theta_{0}$, les quantit\'es $\lVert\vec{v}_{0}\rVert$ et $\lVert\vec{V}\rVert$ sont constantes au contraire de $\lVert\vec{v}\rVert$. Aussi, nous pouvons en conclure que :
 \benn
-	\mathrm{d}\cos\theta_{0} = -\sin\theta_{0}\mathrm{d}\theta_{0} = \dfrac{\mathrm{d}(v^{2})}{2v_{0}V}
+	\mathrm{d}\left(\cos\theta_{0}\right) = -\sin\theta_{0}\mathrm{d}\theta_{0} = \dfrac{\mathrm{d}(v^{2})}{2v_{0}V}
 \eenn
-Or l'\'energie cin\'etique d'une particule r\'esultante de masse $m$ s\'ecrit $T = \frac{1}{2}mv^{2} \Leftrightarrow \mathrm{d}T = \frac{1}{2}m\mathrm{d}(v^{2})$. Donc en reprenant l'\'equation (\ref{EQ:16_7}) :
+Or l'\'energie cin\'etique d'une particule r\'esultante de masse $m$ s'\'ecrit $T = \frac{1}{2}mv^{2} \Leftrightarrow \mathrm{d}T = \frac{1}{2}m\mathrm{d}(v^{2})$. Donc en reprenant l'\'equation (\ref{EQ:16_7}) :
 \bea
 	\dfrac{\mathrm{d}\omega_{0}}{4\pi} & = & \dfrac{1}{2}\pi\sin\theta_{0}\mathrm{d}\theta_{0} = -\dfrac{\mathrm{d}(v^{2})}{4v_{0}V} \nonumber \\
 	\Leftrightarrow \dfrac{\mathrm{d}\omega_{0}}{4\pi} & = & -\dfrac{\mathrm{d}(T)}{4mv_{0}V} \label{EQ:16_8}
@@ -154,7 +151,7 @@ En reprenant $v^{2} = v_{0}^{2} + V^{2} + 2v_{0}V\cos\theta_{0}$, nous en d\'edu
 \end{itemize}
 et dans cet intervalle, l'\'energie cin\'etique se distribue suivant la relation (\ref{EQ:16_8}).
 
-Si la d\'esint\'egration donne plus de deux composantes, cela complexifie l'\'etude et en particulier, l'\'energie des composantes est loin d'\^etre unique dans le r\'ef\'erentiel <<~c~>>. Toutefois il existe une valeur maximale de l'\'energie cin\'etique pour chaque particule r\'esultante. Parmi l'ensemble des particules r\'esultants, consid\'erons-en une de masse $m_{1}$ et en posant $E_{int}'$, l'\'energie <<~interne~>> de l'ensemble des particules restantes moins $m_{1}$. Puisque cette situation permet de revenir \`a un probl\`eme \`a deux corps, la formule (\ref{EQ:16_1}) permet d'\'ecrire :
+Si la d\'esint\'egration donne plus de deux composantes, cela complexifie l'\'etude et en particulier, l'\'energie des composantes est loin d'\^etre unique dans le r\'ef\'erentiel <<~c~>>. Toutefois il existe une valeur maximale de l'\'energie cin\'etique pour chaque particule r\'esultante. Parmi l'ensemble des particules r\'esultantes, consid\'erons-en une de masse $m_{1}$ et en posant $E_{int}'$, l'\'energie <<~interne~>> de l'ensemble des particules restantes moins $m_{1}$. Puisque cette situation permet de revenir \`a un probl\`eme \`a deux corps, la formule (\ref{EQ:16_1}) permet d'\'ecrire :
 \benn
 	E_{int} = E_{int}' + T' + T_{10} + E_{1int}
 \eenn
