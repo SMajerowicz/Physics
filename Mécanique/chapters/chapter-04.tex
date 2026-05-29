@@ -313,7 +313,7 @@ Sur la figure (\ref{FIG:4_15}) est trac\'e le cercle de rayon $mv$. Les vecteurs
 	\end{center}
 \end{figure}
 
-Si la particule de masse $m_{2}$ est au repos avant le choc, cela se traduit par $v_{2} = \vec{0} = p_{2}$. Nous avons aussi :
+Si la particule de masse $m_{2}$ est au repos avant le choc, cela se traduit par $\vec{v}_{2} = \vec{0} = \vec{p}_{2}$. Nous avons aussi :
 \benn
 	\vec{OB} = \dfrac{m_{2}}{m_{1} + m_{2}}(\vec{p}_{1} + \vec{p}_{2}) = \frac{m_{1}m_{2}}{m_{1} + m_{2}}\vec{v}_{1} = m\vec{v}_{1} = m\vec{v}
 \eenn
@@ -329,9 +329,9 @@ Les points $A$, $O$ et $B$ se situant sur la m\^eme droite, nous pouvons en d\'e
 \eenn
 Par cons\'equent :
 \begin{itemize}
-	\item si $m_{1} < m_{2}$ alors le point $A$ se situe \`a l'int\'erieur du cercle
-	\item si $m_{1} = m_{2}$ alors le point $A$ se situe sur le cercle
-	\item si $m_{1} > m_{2}$ alors le point $A$ se situe \`a l'ext\'erieur du cercle
+	\item si $m_{1} < m_{2}$ alors le point $A$ se situe \`a l'int\'erieur du cercle,
+	\item si $m_{1} = m_{2}$ alors le point $A$ se situe sur le cercle,
+	\item si $m_{1} > m_{2}$ alors le point $A$ se situe \`a l'ext\'erieur du cercle.
 \end{itemize}
 Ces cas sont repr\'esent\'es sur la figure (\ref{FIG:4_16}). Sur celle-ci, les angles $\theta_{1}$ et $\theta_{2}$ sont les angles de d\'eviation dans <<~l~>> par rapport \`a la direction du choc, d\'efinie par $\vec{p}_{1}$ et $\xi$ est l'angle de d\'eviation de la particule de masse $m_{1}$ dans <<~c~>>. Les angles $\theta_{1}$ et $\theta_{2}$ peuvent \^etre calcul\'es ainsi :
 \be
@@ -342,9 +342,9 @@ Ces cas sont repr\'esent\'es sur la figure (\ref{FIG:4_16}). Sur celle-ci, les a
 	\end{cases}
 \ee
 
-D\'eterminons ensuite la valeur de la vitesse apr\`es le choc pour les deux particules dans <<~l~>>. Nous avons d\'ej\`a vu que $\vec{v'}_{1} = \vec{v'}_{10} + \vec{\dot{R'}}$ sachant que $\vec{\dot{R'}} = \vec{\dot{R}}$, aussi :
+D\'eterminons ensuite la valeur de la vitesse apr\`es le choc pour les deux particules dans <<~l~>>. Nous avons d\'ej\`a vu que $\vec{v'}_{1} = \vec{v'}_{10} + \dot{\vec{R'}}$ sachant que $\dot{\vec{R'}} = \dot{\vec{R}}$, aussi :
 \benn
-	{v'}_{1}^{\,2} = {v'}_{10}^{\,2} + {\lVert \vec{\dot{R}} \rVert}^{2} + 2v'_{10}\lVert \vec{\dot{R}} \rVert\cos\theta_{10}
+	{v'}_{1}^{\,2} = {v'}_{10}^{\,2} + {\lVert \dot{\vec{R}} \rVert}^{2} + 2v'_{10}\lVert \dot{\vec{R}} \rVert\cos\theta_{10}
 \eenn
 or $\theta_{10} = \xi$ par d\'efinition, donc :
 \benn
@@ -354,9 +354,9 @@ et comme $v_{1} = v$, nous avons :
 \be
 	v'_{1} = \dfrac{\sqrt{m_{1}^{2} + m_{2}^{2} + 2m_{1}m_{2}\cos\xi}}{m_{1} + m_{2}}v \label{EQ:17_5A}
 \ee
-De mani\`ere similaire pour $v'_{2}$, nous avons $\vec{v'}_{1} = \vec{v'}_{10} + \vec{\dot{R}}$, soit :
+De mani\`ere similaire pour $v'_{2}$, nous avons $\vec{v'}_{1} = \vec{v'}_{10} + \dot{\vec{R}}$, soit :
 \bea
-	{v'}_{2}^{\,2} & = & {v'}_{20}^{\,2} + {\lVert \vec{\dot{R}} \rVert}^{2} + 2v'_{20}\lVert \vec{\dot{R}} \rVert\cos(\langle \vec{v'}_{20},\vec{\dot{R}} \rangle) \nonumber \\
+	{v'}_{2}^{\,2} & = & {v'}_{20}^{\,2} + {\lVert \dot{\vec{R}} \rVert}^{2} + 2v'_{20}\lVert \dot{\vec{R}} \rVert\cos(\langle \vec{v'}_{20},\dot{\vec{R}} \rangle) \nonumber \\
 	& = & \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v^{2} + \dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}v_{1}^{2} + 2\dfrac{m_{1}^{2}}{(m_{1} + m_{2})^{2}}vv_{1}\cos\theta_{20} \nonumber
 \eea
 et comme $v_{1} = v$ et $\theta_{20} = \pi - \xi$ :
@@ -385,8 +385,8 @@ Dans le cas contraire o\`u $m_{1} > m_{2}$ alors $\theta_{1} + \theta_{2} < \fra
 
 Examinons le cas o\`u les deux particules se meuvent apr\`es le choc sur une m\^eme droite, i.e. $\xi = \pi$, en gardant l'hypoth\`ese $\vec{v}_{2} = \vec{0}$. En reprenant la figure (\ref{FIG:4_15}), nous pouvons positionner les points tels que :
 \begin{itemize}
-	\item si $m_{1} < m_{2}$ : A, O, B puis C impliquant que dans ce cas, les vecteurs $\vec{p'}_{1}$ et $\vec{p'}_{2}$ sont de sens oppos\'e
-	\item si $m_{1} > m_{2}$ : A, C, O et B impliquant que dans ce cas, les vecteurs $\vec{p'}_{1}$ et $\vec{p'}_{2}$ sont de m\^eme sens
+	\item si $m_{1} < m_{2}$ : A, O, B puis C impliquant que dans ce cas, les vecteurs $\vec{p'}_{1}$ et $\vec{p'}_{2}$ sont de sens oppos\'e,
+	\item si $m_{1} > m_{2}$ : A, C, O et B impliquant que dans ce cas, les vecteurs $\vec{p'}_{1}$ et $\vec{p'}_{2}$ sont de m\^eme sens.
 \end{itemize}
 En utilisant les relations (\ref{EQ:17_5A}) et (\ref{EQ:17_5B}) avec $\xi = \pi$, nous obtenons :
 \bea
@@ -401,7 +401,7 @@ nous pouvons en d\'eduire que $v'_{2} > v'_{1}$ donc l'\'energie maximale de la 
 \benn
 	E'_{2max} = \dfrac{m_{2}}{2}{v'}_{2}^{2} = 2\dfrac{m_{1}^{2}m_{2}}{(m_{1} + m_{2})^{2}}v^{2} = 2\dfrac{m_{2}m_{1}^{2}v_{1}^{2}}{(m_{1} + m_{2})^{2}} = 4\dfrac{m_{1}m_{2}}{(m_{1} + m_{2})^{2}}E_{1} \label{EQ:17_7}
 \eenn
-avec $E_{1} = \dfrac{1}{2}m_{1}v_{1}^{2}$ qui est l'\'energie initiale de la particule incident, de masse $m_{1}$.
+avec $E_{1} = \dfrac{1}{2}m_{1}v_{1}^{2}$ qui est l'\'energie initiale de la particule incidente, de masse $m_{1}$.
 
 \subsection{Cas d'un choc entre deux particules de même masse dont l'une au repos avant le choc}
 
@@ -436,7 +436,7 @@ Dans ce cas et comme d\'ej\`a montr\'e pr\'ec\'edemment, les points $A$ et $B$ s
 \be
 	\theta_{1} = \dfrac{\xi}{2}\text{ et }\theta_{2} = \dfrac{\pi - \xi}{2} \label{EQ:17_9}
 \ee
-et remarquons que $\theta_{2} - \theta_{1} = \frac{\pi}{2}$, i.e. que les deux particules s'éloignent l'une de l'autre sous un angle droit. Enfin, dans ce triangle rectangle, nous pouvons noter :
+Nous remarquons aussi que $\theta_{2} - \theta_{1} = \frac{\pi}{2}$, i.e. que les deux particules s'éloignent l'une de l'autre sous un angle droit. Enfin, dans ce triangle rectangle, nous pouvons noter :
 \be
 	\begin{cases}
 		p'_{1} = mv'_{1} = mv\cos\frac{\xi}{2} \Leftrightarrow v'_{1} = v\cos\frac{\xi}{2} \\
@@ -446,7 +446,7 @@ et remarquons que $\theta_{2} - \theta_{1} = \frac{\pi}{2}$, i.e. que les deux p
 
 \section{Diffusion des particules}
 
-Dans le paragraphe pr\'ec\'edent, nous avons \'etudi\'e les param\`etres de la trajectoire des particules apr\`es le choc \`a partir des \'el\'ements avant le choc. Mais pour d\'eterminer pleinement le r\'esultat du choc, il faut tenir compte de la loi d'interaction entre les particules. Consid\'erons d'abord la d\'eviation d'une particule de masse $m$ dans un champ d'\'energie potentielle $U(r)$ o\`u` le centre de force\footnote{Le centre de force est le point tel que $r = 0$  dans le champ de force, i.e. le champ d'\'energie potentielle} est immobile, i.e. plac\'e \`a la position du centre d'inertie du syst\`eme de particules.
+Dans le paragraphe pr\'ec\'edent, nous avons \'etudi\'e les param\`etres de la trajectoire des particules apr\`es le choc \`a partir des \'el\'ements avant le choc. Mais pour d\'eterminer pleinement le r\'esultat du choc, il faut tenir compte de la loi d'interaction entre les particules. Nous consid\'erons d'abord la d\'eviation d'une particule de masse $m$ dans un champ d'\'energie potentielle $U(r)$ o\`u le centre de force\footnote{Le centre de force est le point tel que $r = 0$  dans le champ de force, i.e. le champ d'\'energie potentielle} est immobile, i.e. plac\'e \`a la position du centre d'inertie du syst\`eme de particules.
 
 Le point de rebroussement d\'efini par $\dot{r} = 0$ entre les \'equations (\ref{EQ:14_8}) et (\ref{EQ:14_10}) implique que la trajectoire est sym\'etrique par rapport à ce point, qui, de facto correspond au p\'erih\'elie de la trajectoire, voir la figure (\ref{FIG:4_18}). Sur celle-ci, $\xi$ correspond \`a l'angle de d\'eviation par rapport \`a la direction initiale de la particule. $\varphi_{0}$ est l'angle de d\'eviation lorsque la particule passe au plus pr\`es du centre du champ de force, soit le p\'erih\'elie. Par construction, nous avons :
 \be
@@ -454,9 +454,9 @@ Le point de rebroussement d\'efini par $\dot{r} = 0$ entre les \'equations (\ref
 \ee
 et par application de l'\'equation (\ref{EQ:14_7}) :
 \be
-	\varphi_{0} = \bigintsss{r_{min}}^{+\infty}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:18_2}
+	\varphi_{0} = \bigintsss_{r_{min}}^{+\infty}{\dfrac{\frac{M}{r^{2}}\mathrm{d}r}{\sqrt{2m(E - U(r)) - \frac{M^{2}}{r^{2}}}}} \label{EQ:18_2}
 \ee
-Dans le cadre d'un mouvement infini, il est commode d'\'ecrire l'\'energie $E$ et le moment cin\'etique $M$ en fonction de $v_{\infty}$, la vitesse de la particule incidente pour $r\leftarrow\infty$, et $\rho$, la \emph{distance de vis\'ee}, i.e., la distance minimale par rapport au centre de force s'il n'y avait pas de champ de force. Par conservation de l'\'energie, et parce que $U(\infty) = 0$, et du moment cin\'etique et en accord avec les d\'efinitinos pr\'ec\'edentes, la particule incidente poss\`ede les caract\'eristiques du mouvement suivantes :
+Dans le cadre d'un mouvement infini, il est commode d'\'ecrire l'\'energie $E$ et le moment cin\'etique $M$ en fonction de $v_{\infty}$, la vitesse de la particule incidente pour $r\rightarrow\infty$, et $\rho$, la \emph{distance de vis\'ee}, i.e., la distance minimale par rapport au centre de force s'il n'y avait pas de champ de force. Par conservation de l'\'energie, et parce que $U(\infty) = 0$, et du moment cin\'etique et en accord avec les d\'efinitions pr\'ec\'edentes, la particule incidente poss\`ede les caract\'eristiques du mouvement suivantes :
 \be
 	E = \dfrac{mv_{\infty}^{2}}{2}\text{ et } M = m\rho v_{\infty} \label{EQ:18_3}
 \ee
@@ -500,7 +500,7 @@ Soit $\mathrm{d}N$ le nombre de particules diffus\'ees par unit\'e de temps dans
 \ee
 o\`u $n$ est le nombre de particules traversant l'unit\'e de surface d'une section droite du faisceau incident par unit\'e de temps\footnote{Restons dans l'hypoth\`ese d'un faisceau homog\`ene sur toute sa section.}. Alors la quantit\'e $\mathrm{d}\sigma$ a la dimension d'une surface et est appel\'ee la \emph{section efficace du faisceau}. Ce param\`etre est la caract\'eristique la plus importante du processus de diffusion.
 
-Consid\'erons par hypoth\`ese que $\xi$ et $\rho$ sont r\'eciproquement univoque. D\'emontrons que c'est vrai lorsque $\xi$ est une fonction monotone et d\'ecroissante de $\rho$, i.e. $\forall\rho$, $\frac{\mathrm{d}\xi}{\mathrm{d}\rho} < 0$ et $\forall\xi$, $\frac{\mathrm{d}\rho}{\mathrm{d}\xi} < 0$, donc au premier ordre, le d\'eveloppement de Taylor donne :
+Nous consid\'erons par hypoth\`ese que $\xi$ et $\rho$ sont r\'eciproquement univoques. D\'emontrons que c'est vrai lorsque $\xi$ est une fonction monotone et d\'ecroissante de $\rho$, i.e. $\forall\rho$, $\frac{\mathrm{d}\xi}{\mathrm{d}\rho} < 0$ et $\forall\xi$, $\frac{\mathrm{d}\rho}{\mathrm{d}\xi} < 0$, donc au premier ordre, le d\'eveloppement de Taylor donne :
 \benn
 	\begin{cases}
 		\xi(\rho + \delta\rho) = \xi(\rho) + \frac{\mathrm{d}\xi}{\mathrm{d}\rho}\delta\rho \Rightarrow \xi(\rho + \delta\rho) < \xi(\rho) \\
@@ -528,10 +528,10 @@ Comme la plupart du temps la valeur de $\frac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi
 Revenons au cas d'un faisceau de particules diffus\'ees par d'autres particules initialement au repos. Dans la relation (\ref{EQ:18_7}), la section efficace $\mathrm{d}\sigma$ est d\'efinie dans le cadre d'un champ de force positionn\'e au centre d'inertie des particules. $\mathrm{d}\sigma$ est donc bien la section efficace dans le r\'ef\'erentiel <<~c~>> et exprim\'ee en fonction de l'angle de d\'eviation $\xi$. Pour l'exprimer dans le cadre du r\'ef\'erentiel du laboratoire <<~l~>>, nous revenons aux relations (\ref{EQ:17_4}). En fonction de $\theta_{1}$, l'angle de d\'eviation dans <<~l~>> pour les particules du faisceau incident, nous avons :
 \bea
 	\tan\theta_{1} = \dfrac{m_{2}\sin\xi}{m_{1} + m_{2}\cos\xi} & \Leftrightarrow & \dfrac{\sin^{2}\theta_{1}}{\cos^{2}\theta_{1}} = \dfrac{m_{2}^{2}\sin^{2}\xi}{(m_{1} + m_{2}\cos\xi)^{2}} \nonumber \\
-	\sin^{2}\theta_{1}(m_{1}^{2} + m_{2}^{2}\cos^{2}\xi + 2m_{1}m_{2}\cos\xi) & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{2}^{2}\cos^{2}\theta_{1}\cos^{2}\xi \nonumber \\
-	m_{1}^{2}\sin^{2}\theta_{1} + m_{2}^{2}\sin^{2}\theta_{1}\cos^{2}\xi + 2m_{1}m_{2}\sin^{2}\theta_{1}\cos\xi & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{2}^{2}\cos^{2}\theta_{1}\cos^{2}\xi \nonumber \\
-	(\sin^{2}\theta_{1} + \cos^{2}\theta_{1})m_{2}^{2}\cos^{2}\xi + 2m_{1}m_{2}\sin^{2}\theta_{1}\cos\xi & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{1}^{2}\sin^{2}\theta_{1} \nonumber \\
-	\cos^{2}\xi + 2\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1}\cos\xi + \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1} - \cos^{2}\theta_{1} & = & 0 \nonumber
+	\Leftrightarrow \sin^{2}\theta_{1}(m_{1}^{2} + m_{2}^{2}\cos^{2}\xi + 2m_{1}m_{2}\cos\xi) & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{2}^{2}\cos^{2}\theta_{1}\cos^{2}\xi \nonumber \\
+	\Leftrightarrow m_{1}^{2}\sin^{2}\theta_{1} + m_{2}^{2}\sin^{2}\theta_{1}\cos^{2}\xi + 2m_{1}m_{2}\sin^{2}\theta_{1}\cos\xi & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{2}^{2}\cos^{2}\theta_{1}\cos^{2}\xi \nonumber \\
+	\Leftrightarrow (\sin^{2}\theta_{1} + \cos^{2}\theta_{1})m_{2}^{2}\cos^{2}\xi + 2m_{1}m_{2}\sin^{2}\theta_{1}\cos\xi & = & m_{2}^{2}\cos^{2}\theta_{1} - m_{1}^{2}\sin^{2}\theta_{1} \nonumber \\
+	\Leftrightarrow \cos^{2}\xi + 2\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1}\cos\xi + \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1} - \cos^{2}\theta_{1} & = & 0 \nonumber
 \eea
 une \'equation du second degr\'e en $\cos\xi$ dont les solutions sont :
 \bea
