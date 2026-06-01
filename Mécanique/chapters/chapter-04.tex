@@ -78,7 +78,7 @@ avec $m = \dfrac{m_{1} + m_{2}}{m_{1}m_{2}}$ qui est la masse r\'eduite du syst\
 \end{itemize}
 Pour une des particules r\'esultantes de la d\'esint\'egration, d\'efinissions $\vec{v}$ sa vitesse dans le syst\`eme <<~l~>> et $\vec{v}_{0}$, sa vitesse dans le syst\`eme <<~c~>>. Par construction, nous avons $\vec{v} = \vec{V} + \vec{v}_{0} \Leftrightarrow \vec{v}_{0} = \vec{v} - \vec{V}$. De plus, la formule d'Al-Kashi donne directement :
 \benn
-	v_{0}{2} = v^{2} + V^{2} + 2vV\cos(\langle \vec{v},\vec{V}\rangle) = v^{2} + V^{2} + 2vV\cos(\theta)
+	v_{0}^{2} = v^{2} + V^{2} + 2vV\cos(\langle \vec{v},\vec{V}\rangle) = v^{2} + V^{2} + 2vV\cos(\theta)
 \eenn
 en se basant sur la figure (\ref{FIG:4_14}) o\`u l'angle $\theta$ est l'angle de d\'eviation dans <<~l~>>. La repr\'esentation g\'eom\'etrique (\ref{FIG:4_14}) montre deux cas distincts :
 \begin{itemize}
@@ -546,7 +546,7 @@ Et en fonction de $\theta_{2}$ l'angle de d\'eviation dans <<~l~>> pour les part
 
 \section{Formule de Rutherford}
 
-Int\'eressons-nous d\'esormais à la diffusion de particules charg\'ees dans un champ Coulombien, i.e. tel que $U(r) = \alpha / r$ pour $\alpha > 0$. En appliquant la relation (\ref{EQ:18_4}) pour une particule de masse $m$, nous avons pour $\varphi_{0}$, qui est ,pour rappel, l'angle de d\'eviation au plus pr\`es du centre du champ, i.e. pour $r = r_{min}$ :
+Int\'eressons-nous d\'esormais à la diffusion de particules charg\'ees dans un champ Coulombien, i.e. tel que $U(r) = \alpha / r$ pour $\alpha > 0$. En appliquant la relation (\ref{EQ:18_4}) pour une particule de masse $m$, nous avons pour $\varphi_{0}$, qui est, pour rappel, l'angle de d\'eviation au plus pr\`es du centre du champ, i.e. pour $r = r_{min}$ :
 \benn
 	\varphi_{0} = \bigintsss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2\alpha}{mv_{\infty}^{2}r}}}}
 \eenn
@@ -591,7 +591,7 @@ dont plusieurs repr\'esentations sont visibles sur la figure (\ref{FIG:4_19}).
 Poursuivons le raisonnement :
 \bea
 	\cos\varphi_{0}\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}} & = & \dfrac{\alpha}{mv_{\infty}^{2}\rho} \Leftrightarrow \cos^{2}\varphi_{0} = \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}(1 - \cos^{2}\varphi_{0}) \nonumber \\
-	\cos\varphi_{0}\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}} & = & \dfrac{\alpha}{mv_{\infty}^{2}\rho} \Leftrightarrow \cos^{2}\varphi_{0} = \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}(1 - \cos^{2}\varphi_{0}) \nonumber \\
+	\Leftrightarrow \cos\varphi_{0}\sqrt{1 + \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}} & = & \dfrac{\alpha}{mv_{\infty}^{2}\rho} \Leftrightarrow \cos^{2}\varphi_{0} = \left(\dfrac{\alpha}{mv_{\infty}^{2}\rho}\right)^{2}(1 - \cos^{2}\varphi_{0}) \nonumber \\
 	\Leftrightarrow \tan^{2}\varphi_{0} & = & \left(\dfrac{mv_{\infty}^{2}\rho}{\alpha}\right)^{2} \Leftrightarrow \rho^{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\tan^{2}\varphi_{0} \nonumber
 \eea
 et en utilisant l'\'equation (\ref{EQ:18_1}) : $\xi = \lvert \pi - 2\varphi_{0} \rvert \Leftrightarrow \varphi_{0} = (\pi - \xi)/2$ et parce que :
@@ -603,10 +603,9 @@ nous avons :
 	\rho^{2} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{1}{\tan\left(\frac{\xi}{2}\right)} \label{EQ:19_1}
 \ee
 En partant de l'\'equation (\ref{EQ:18_7}), et parce que :
-\bea
-	\left(\dfrac{1}{\tan\theta}\right)^{'} & = & -\dfrac{\tan'\theta}{\tan^{2}\theta} = -\dfrac{1}{\cos^{2}\theta}\dfrac{\cos^{2}\theta}{\sin^{2}\theta} = -\dfrac{1}{\sin^{2}\theta} \nonumber \\
-	\Leftrightarrow \left(\dfrac{1}{\tan(\theta/2)}\right)^{'} & = & -\dfrac{1}{2\sin^{2}(\theta/2)} \nonumber
-\eea
+\benn
+	\left(\dfrac{1}{\tan\theta}\right)^{'} = -\dfrac{\tan'\theta}{\tan^{2}\theta} = -\dfrac{1}{\cos^{2}\theta}\dfrac{\cos^{2}\theta}{\sin^{2}\theta} = -\dfrac{1}{\sin^{2}\theta} \Leftrightarrow \left(\dfrac{1}{\tan(\theta/2)}\right)^{'} = -\dfrac{1}{2\sin^{2}(\theta/2)}
+\eenn
 nous pouvons calculer :
 \bea
 	\mathrm{d}\sigma & = & 2\pi\rho(\xi)\Bigg\lvert \dfrac{\mathrm{d}\rho(\xi)}{\mathrm{d}\xi} \Bigg\rvert \mathrm{d}\xi = 2\pi\dfrac{\alpha}{mv_{\infty}^{2}}\dfrac{\cos^{2}(\xi/2)}{\sin^{2}(\xi/2)}\Bigg\lvert -\dfrac{1}{2\sin^{2}(\theta/2)} \Bigg\rvert\dfrac{\alpha}{mv_{\infty}^{2}}\mathrm{d}\xi \nonumber \\
@@ -630,11 +629,11 @@ Dans le cas g\'en\'eral, pour les particules incidentes, il faut repartir de :
 \benn
 	\tan\theta_{1} = \dfrac{m_{2}\sin\xi}{m_{1} + m_{2}\cos\xi}
 \eenn
-qui ne permet pas de trouver une relation entre $\xi$ et $\theta_{1}$ facilement. Nous nous concentrerons sur deux cas particuliers dans les paragraphes (\ref{PAR:19_1}) et (\ref{PAR:19_2}). D\'esormais, prenons le pendant de l'\'energie perdue \`a la suite du choc par les particules diffus\'ees, de masse $m_{1}$ qui, par conservation de l'\'energie du syst\`eme, est \'egale \`a l'\'energie gagn\'ee par la particule diffusante, qui \'etait au repos initialement. La relation (\ref{EQ:17_5B}) nous donne dans <<~c~>> la vitesse apr\`es le choc $v'_{2}$ de la particule de masse $m_{2}$ initialement au repos :
+qui ne permet pas de trouver une relation entre $\xi$ et $\theta_{1}$ facilement. Nous nous concentrerons sur les deux cas particuliers dans les paragraphes (\ref{PAR:19_1}) et (\ref{PAR:19_2}). D\'esormais, prenons le pendant de l'\'energie perdue \`a la suite du choc par les particules diffus\'ees, de masse $m_{1}$ qui, par conservation de l'\'energie du syst\`eme, est \'egale \`a l'\'energie gagn\'ee par la particule diffusante, qui \'etait au repos initialement. La relation (\ref{EQ:17_5B}) nous donne dans <<~c~>> la vitesse apr\`es le choc $v'_{2}$ de la particule de masse $m_{2}$ initialement au repos :
 \benn
 	v'_{2} = \dfrac{2m_{1}v_{\infty}}{m_{1} + m_{2}}\sin(\xi/2)
 \eenn
-L'\'energie acquise par cette particule vaut $\frac{m_{2}}{2}{v'}_{2}^{2}$ qui est l'\'energie perdue $\epsilon$ par $m_{1}$, aussi :
+L'\'energie acquise par cette particule vaut $m_{2}{v'}_{2}^{2}/2$ qui est l'\'energie perdue $\epsilon$ par $m_{1}$, aussi :
 \be
 	\epsilon = \dfrac{m_{2}}{2}\dfrac{4m_{1}^{2}v_{\infty}^{2}}{(m_{1} + m_{2})^{2}}\sin^{2}(\xi/2) = 2\dfrac{m^{2}}{m_{2}}v_{\infty}^{2}\sin^{2}(\xi/2)
 \ee
@@ -656,7 +655,7 @@ L'hypoth\`ese de d\'epart permet de faire l'approximation $m \approx m_{2}$ et $
 \be
 	\mathrm{d}\sigma_{1} = \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega_{1}}{\sin^{4}(\theta_{1}/2)} = \left(\dfrac{\alpha}{4E_{1}}\right)^{2}\dfrac{\mathrm{d}\omega_{1}}{\sin^{4}(\theta_{1}/2)} \label{EQ:19_5}
 \ee
-car l'\'energie des particules incidents est $E_{1} = \frac{m_{1}}{2}v_{\infty}^{2}$
+car l'\'energie des particules incidentes est $E_{1} = \frac{m_{1}}{2}v_{\infty}^{2}$
 
 \subsection{Section efficace dans <<~l~>> pour $m_{2} = m_{1}$}\label{PAR:19_2}
 
@@ -667,7 +666,7 @@ Dans ce cas, la masse r\'eduite $m$ vaut $m_{1}/2$. L'\'equation (\ref{EQ:17_9})
 \eea
 avec toujours $E_{1} = \frac{m_{1}}{2}v_{\infty}^{2}$ et $\mathrm{d}\omega_{1} = 2\pi\sin\theta_{1}\mathrm{d}\theta_{1}$.
 
-Si en plus de leur masse, les particules initialement au repos et incidentes sont identiques alors il n'est plus n'\'ecessaire de distinguer apr\`es la diffusion les particules. Avec $\theta = \theta_{1} = \theta_{2}$ et en utilisant les relations (\ref{EQ:19_4}) et (\ref{EQ:19_6}), nous pouvons calculer la surface efficace telle que :
+Si en plus de leur masse, les particules initialement au repos et incidentes sont identiques alors il n'est plus n\'{e}cessaire de distinguer apr\`es la diffusion les particules. Avec $\theta = \theta_{1} = \theta_{2}$ et en utilisant les relations (\ref{EQ:19_4}) et (\ref{EQ:19_6}), nous pouvons calculer la surface efficace telle que :
 \bea
 	\mathrm{d}\sigma & = & \mathrm{d}\sigma_{1} + \mathrm{d}\sigma_{2} = \left(\dfrac{\alpha}{E_{1}}\right)^{2}\dfrac{\cos\theta_{1}}{\sin^{4}\theta_{1}} \mathrm{d}\omega_{1} + \left(\dfrac{\alpha}{mv_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega_{2}}{\cos^{3}\theta_{2}} \nonumber \\
 	& = & \left(\dfrac{\alpha}{E_{1}}\right)^{2}\dfrac{\cos\theta}{\sin^{4}\theta} \mathrm{d}\omega + \left(\dfrac{2\alpha}{m_{1}v_{\infty}^{2}}\right)^{2}\dfrac{\mathrm{d}\omega}{\cos^{3}\theta} = \left(\dfrac{1}{\sin^{4}\theta} + \dfrac{1}{\cos^{4}\theta}\right)\left(\dfrac{\alpha}{E_{1}}\right)^{2}\cos\theta\mathrm{d}\omega \label{EQ:19_7}
