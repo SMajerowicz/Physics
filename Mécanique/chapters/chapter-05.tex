@@ -354,13 +354,13 @@ Pour r\'esoudre le probl\`eme m\'ecanique des oscillations d'une mol\'ecule, il 
 
 \subsection{\'Elimination de la translation}
 
-Pour se faire, il est n\'ecessaire de se placer dans le r\'ef\'erentiel du centre d'intertie dans lequel l'impulsion totale du syst\`eme est nulle, voir le paragraphe (\ref{PAR:8}). Cela s'\'ecrit en reprenant la relation (\ref{EQ:8_3}) et en posant $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ o\`u $\vec{r}_{a0}$ est la position d'\'equilibre immobile et $\vec{u}_{a}$ l'\'ecart par rapport \`a la position d'\'equilibre :
+Pour se faire, il est n\'ecessaire de se placer dans le r\'ef\'erentiel du centre d'inertie dans lequel l'impulsion totale du syst\`eme est nulle, voir le paragraphe (\ref{PAR:8}). Cela s'\'ecrit en reprenant la relation (\ref{EQ:8_3}) :
 \benn
 	\dfrac{\mathrm{d}\vec{R}}{\mathrm{dt}} = \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\sum_{a}m_{a}\vec{r}_{a}}{\sum_{a}m_{a}}\right) = \vec{0} \Leftrightarrow \sum_{a}m_{a}\vec{\dot{r}}_{a} = \vec{0}
 \eenn
-En posant $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ avec $\vec{r}_{a0}$ la position immobile, donc constant dans le temps, de l'atome $a$ \`a l'\'equilibre et $\vec{u}_{a}$, l'\'ecart par rapport \`a l'\'equilibre, nous obtenons :
+En posant $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ avec $\vec{r}_{a0}$ la position immobile, donc constante dans le temps, de l'atome $a$ \`a l'\'equilibre et $\vec{u}_{a}$, l'\'ecart par rapport \`a l'\'equilibre, nous obtenons :
 \be
-	\sum_{a}m_{a}\vec{\dot{u}}_{a} = \vec{0} \Leftrightarrow \sum_{a}m_{a}\vec{u}_{a} = \vec{cste} = \vec{0} \label{EQ:24_1}
+	\sum_{a}m_{a}\dot{\vec{u}}_{a} = \vec{0} \Leftrightarrow \sum_{a}m_{a}\vec{u}_{a} = \vec{cste} = \vec{0} \label{EQ:24_1}
 \ee
 par choix de la condition initiale.
 
@@ -368,7 +368,7 @@ par choix de la condition initiale.
 
 De la m\^eme mani\`ere, il est n\'ecessaire de trouver un r\'ef\'erentiel ou une transformation pour laquelle le moment cin\'etique s'annule. En gardant la d\'efinition $\vec{r}_{a} = \vec{r}_{a0} + \vec{u}_{a}$ alors le moment cin\'etique du syst\`eme :
 \benn
-	\vec{M} = \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v}_{a} = \sum_{a}m_{a}(\vec{r}_{a0} + \vec{u}_{a}\wedge\vec{\dot{r}}_{a} \approx \sum_{a}m_{a}\vec{r}_{a0}\wedge\dfrac{\mathrm{d}\vec{\dot{u}_{a}}}{\mathrm{dt}}
+	\vec{M} = \sum_{a}m_{a}\vec{r}_{a}\wedge\vec{v}_{a} = \sum_{a}m_{a}(\vec{r}_{a0} + \vec{u}_{a})\wedge\dot{\vec{r}}_{a} \approx \sum_{a}m_{a}\vec{r}_{a0}\wedge\dfrac{\mathrm{d}\dot{\vec{u}}_{a}}{\mathrm{dt}}
 \eenn
 pour rester dans le cadre des petits d\'eplacements ou oscillations. Cela nous donne alors :
 \be
@@ -377,36 +377,33 @@ pour rester dans le cadre des petits d\'eplacements ou oscillations. Cela nous d
 
 \subsection{Mol\'ecule dans un plan}
 
-Si les $n$ atomes d'une mol\'ecule sont dans un plan, nous pouvons distinguer les oscillations normales qui laissent les atomes dans le plan de celles qui les fait sortir. Dans un mouvement plan, il y a $2n$ degr\'es de libert\'e dont 2 de translations, le long des deux axes d\'efinissant le plan, et 1 de rotation, par rapport \`a un axe perpendiculaire au plan en question. Le nombre des oscillations normales laissant les atomes dans le plan est donc \'egal \`a $2n - 3$. Le nombre de degr\'es vibratoires faisant sortir les atomes du plan est donc de $(3n - 6) - (2n - 3) = n - 3$.
+Si les $n$ atomes d'une mol\'ecule sont dans un plan, nous pouvons distinguer les oscillations normales qui laissent les atomes dans le plan de celles qui les fait sortir. Dans un mouvement plan, il y a $2n$ degr\'es de libert\'e dont deux de translations, le long des deux axes d\'efinissant le plan, et une de rotation, par rapport \`a un axe perpendiculaire au plan en question. Le nombre des oscillations normales laissant les atomes dans le plan est donc \'egal \`a $2n - 3$. Le nombre de degr\'es vibratoires faisant sortir les atomes du plan est donc de $(3n - 6) - (2n - 3) = n - 3$.
 
 \subsection{Mol\'ecule lin\'eaire}
 
-Il existe deux types d'oscillations : celles qui sont longitudinales et celles qui \'ecartent les atomes de la forme rectiligne de la mol\'ecule. Sur une droite, il y a $n$ degr\'es de libert\'e dont 1 de translation. Le nombre d'oscillations longitudinales est de $n - 1$. Nous avons vu pr\'ec\'edemment que le nombre de degr\'es vibratoires total pour une mol\'ecule lin\'eaire est de $3n - 5$. Il reste donc $(3n - 5) - (n - 1) = 2n - 4$ degr\'es de libert\'e vibratoires faisant sortir les atomes de la forme rectiligne de la mol\'ecule. Ces $2n - 4 = 2(n - 2)$ oscillations correspondant \`a $n - 2$ fr\'equences distinctes dans deux plans orthogonaux entre eux, correspondant \`a des oscillations normales.
+Il existe deux types d'oscillations : celles qui sont longitudinales et celles qui \'ecartent les atomes de la forme rectiligne de la mol\'ecule. Sur une droite, il y a $n$ degr\'es de libert\'e dont un de translation. Le nombre d'oscillations longitudinales est de $n - 1$. Nous avons vu pr\'ec\'edemment que le nombre de degr\'es vibratoires total pour une mol\'ecule lin\'eaire est de $3n - 5$. Il reste donc $(3n - 5) - (n - 1) = 2n - 4$ degr\'es de libert\'e vibratoires faisant sortir les atomes de la forme rectiligne de la mol\'ecule. Ces $2n - 4 = 2(n - 2)$ oscillations correspondant \`a $n - 2$ fr\'equences distinctes dans deux plans orthogonaux entre eux, correspondant \`a des oscillations normales.
 
 \section{Oscillations amorties}\label{PAR:25}
 
-En r\'{e}alit\'{e}, tout corps se meut dans un milieu qui lui offre un r\'{e}sistance. L'\'{e}nergie dissip\'{e}e se transforme alors en chaleur et se dissipe. Le mouvement n'est plus dans ces conditions un processus purement m\'{e}canique et son \'{e}tude exige aussi celle du mouvement du milieu, celle de son \'{e}tat interne et de celle du corps. Il existe cependant une cat\'{e}gorie de cas o\`{u} le mouvement dans un milieu peut \^{e}tre d\'{e}crit approximativement \`{a} l'aide des \'{e}quations de la M\'{e}canique en introduisant des termes suppl\'{e}mentaires, comme une force de frottement d\'{e}pendant uniquement de la vitesse dans un milieu homog\`{e}ne. Avec $x$, une coordonn\'{e}e g\'{e}n\'{e}ralis\'{e}e, nous pouvons supposer la force de frottement dans le cas de petites oscillations lin\'{e}aires telle que :
+En r\'{e}alit\'{e}, tout corps se meut dans un milieu qui lui offre une r\'{e}sistance. L'\'{e}nergie dissip\'{e}e se transforme alors en chaleur et se dissipe. Le mouvement n'est plus dans ces conditions un processus purement m\'{e}canique et son \'{e}tude exige aussi celle du mouvement du milieu, celle de son \'{e}tat interne et de celle du corps. Il existe cependant une cat\'{e}gorie de cas o\`{u} le mouvement dans un milieu peut \^{e}tre d\'{e}crit approximativement \`{a} l'aide des \'{e}quations de la M\'{e}canique en introduisant des termes suppl\'{e}mentaires, comme une force de frottement d\'{e}pendant uniquement de la vitesse dans un milieu homog\`{e}ne. Avec $x$, une coordonn\'{e}e g\'{e}n\'{e}ralis\'{e}e, nous pouvons supposer la force de frottement dans le cas de petites oscillations lin\'{e}aires telle que :
 \benn
 	f(\dot{x}) = f(0) + \dfrac{\mathrm{d}f}{\mathrm{d}\dot{x}}\bigg|_{\dot{x}=0}(\dot{x} - 0) = \dfrac{\mathrm{d}f}{\mathrm{d}\dot{x}}\bigg|_{\dot{x}=0}\dot{x} = -\alpha\dot{x}
 \eenn
-avec $alpha > 0$ car la force de frottement agit contre le mouvement libre.
+avec $\alpha > 0$ car la force de frottement agit contre le mouvement libre.
 
 Par extension de l'\'{e}quation (\ref{EQ:21_4}), nous obtenons :
 \be
 	m\ddot{x} = -kx  - \alpha\dot{x} \label{EQ:25_1}
 \ee
-En d\'{e}finissant $\omega_{0}$ comme la fr\'{e}quence des oscillations libres et $\lambda$ comme le \emph{c{\oe}fficient d'ammortissement}, telles que :
+En d\'{e}finissant $\omega_{0}$ comme la fr\'{e}quence des oscillations libres et $\lambda$ comme le \emph{c{\oe}fficient d'amortissement}, tels que :
 \be
-	\begin{cases}
-		\omega_{0}^{2} = \dfrac{k}{m} \\
-		2\lambda = \dfrac{\alpha}{m}
-	\end{cases} \label{EQ:25_2}
+	\omega_{0}^{2} = \dfrac{k}{m}\text{ et } 2\lambda = \dfrac{\alpha}{m}
 \ee
 alors l'\'{e}quation (\ref{EQ:25_1}) s'\'{e}crit :
 \be
 	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x = 0 \label{EQ:25_3}
 \ee
-En suivant les r\`{e}gles g\'{e}n\'{e}rales de r\'{e}solution des \'{e}quations lin\'{e}aires \`{a} c{\oe}fficients constants, nous posons $x = e^{r\mathrm{t}}$ qui, introduit dans l'{e}quation (\ref{EQ:25_3}) permet d'\'{e}crire l'\'{e}quation caract\'{e}ristique :
+En suivant les r\`{e}gles g\'{e}n\'{e}rales de r\'{e}solution des \'{e}quations lin\'{e}aires \`{a} c{\oe}fficients constants, nous posons $x = e^{r\mathrm{t}}$ qui, introduit dans l'{e}quation (\ref{EQ:25_3}), permet d'\'{e}crire l'\'{e}quation caract\'{e}ristique :
 \benn
 	r^{2} + 2\lambda r + \omega_{0}^{2} = 0
 \eenn
@@ -418,7 +415,7 @@ La solution g\'{e}n\'{e}rale \`{a} l'\'{e}quation (\ref{EQ:25_3}) est donc :
 \benn
 	x = c_{1}e^{r_{1}\mathrm{t}} + c_{2}e^{r_{2}\mathrm{t}}
 \eenn
-Trois cas sont alors possibles et sont discut\'{e}s ici.
+Trois cas sont alors possibles et sont discut\'{e}s ci-apr\`{e}s.
 
 \subsection{$\lambda < \omega_{0}$}
 
@@ -437,11 +434,11 @@ La solution $x$ peut donc s'\'{e}crire comme :
 \ee
 avec $\omega = \sqrt{\omega_{0}^{2} - \lambda^{2}}$ et $(a;\varphi) \in \mathbb{R}^{2}$. Il s'agit d'\emph{oscillations amorties} qui correspondent \`{a} une oscillation harmonique dont l'amplitude diminue exponentiellement et avec une fr\'{e}quence $\omega$ inf\'{e}rieure \`{a} $\omega_{0}$, la fr\'{e}quence des oscillations libres.
 
-Dans le cadre o\`{u} le c{\oe}fficient d'ammortissement n\'{e}gligeable devant la fr\'{e}quence propre du syst\`{e}me, i.e. $\lambda \ll \omega_{0}$ alors $\omega = \omega_{0}\sqrt{1 - \lambda^{2}/\omega_{0}^{2}}$ diff\`{e}re de $\omega_{0}$ d'un infinimement petit du second ordre. Avec $\lambda \ll \omega_{0}$, sur une p\'{e}riode $2\pi/\omega$, le facteur d'ammortissement $e^{-2\pi\lambda/\omega}$ est proche de 1. Alors sur cette p\'{e}riode, les carr\'{e}s de la coordonn\'{e}e et de la vitesse, soit l'\'{e}nergie totale du syst\`{e}me, sont proportionnels \`{a} $(e^{-\lambda\mathrm{t}})^{2} = e^{-2\lambda\mathrm{t}}$. Ceci peut s'\'{e}crire :
+Dans le cadre o\`{u} le c{\oe}fficient d'amortissement n\'{e}gligeable devant la fr\'{e}quence propre du syst\`{e}me, i.e. $\lambda \ll \omega_{0}$ alors $\omega = \omega_{0}\sqrt{1 - \lambda^{2}/\omega_{0}^{2}}$ diff\`{e}re de $\omega_{0}$ d'un infinimement petit du second ordre. Avec $\lambda \ll \omega_{0}$, sur une p\'{e}riode $2\pi/\omega$, le facteur d'amortissement $e^{-2\pi\lambda/\omega}$ est proche de 1. Alors sur cette p\'{e}riode, les carr\'{e}s de la coordonn\'{e}e et de la vitesse, soit l'\'{e}nergie totale du syst\`{e}me, sont proportionnels \`{a} $(e^{-\lambda\mathrm{t}})^{2} = e^{-2\lambda\mathrm{t}}$. Ceci peut s'\'{e}crire :
 \be
 	\overline{E} = E_{0}e^{-2\lambda\mathrm{t}} \label{EQ:25_5}
 \ee
-L'\'{e}nergie du moyenne du syst\`{e}me diminue depuis sa valeur initiale $E_{0}$, dissip\'{e}e par les frottements.
+L'\'{e}nergie moyenne du syst\`{e}me diminue depuis sa valeur initiale $E_{0}$, dissip\'{e}e par les frottements.
 
 \subsection{$\lambda > \omega_{0}$}
 
@@ -468,7 +465,8 @@ et nous avons alors \`{a} partir du premier membre de l'\'{e}quation (\ref{EQ:25
 \bea
 	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x & = & \ddot{x} +2\lambda\dot{x} + \lambda^{2}x \nonumber \\
 	& = & -\lambda c_{2}e^{-\lambda\mathrm{t}} - \lambda c_{2}e^{-\lambda\mathrm{t}} + \lambda^{2}(c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}} + 2\lambda c_{2}e^{-\lambda\mathrm{t}} - 2\lambda^{2}(c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}} \nonumber \\
-	& & + \lambda^{2}(c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}} = 0 \nonumber
+	& & + \lambda^{2}(c_{1} + c_{2}\mathrm{t})e^{-\lambda\mathrm{t}} \nonumber \\
+	& = & 0 \nonumber
 \eea
 La solution repr\'{e}sente \'{e}galement un amortissement ap\'{e}riodique, i.e. sans caract\`{e}re oscillatoire.
 
@@ -480,7 +478,7 @@ L'expression de la force de frottement vue pr\'{e}c\'{e}demment, \`{a} savoir $f
 \ee
 qui est la force de frottement agissant sur la coordonn\'{e}e g\'{e}n\'{e}ralis\'{e}e $x_{i}$. Les m\'{e}thodes de physique statistiques abord\'{e}es au paragraphe (\ref{PAR:123}) permettent de montrer que :
 \benn
-	\forall i,k\text{, }\alpha_{ik} = \alpha_{ki} \label{EQ:25_9}
+	\forall (i,k)\text{, }\alpha_{ik} = \alpha_{ki} \label{EQ:25_9}
 \eenn
 Les expressions (\ref{EQ:25_8}) peuvent \^{e}tre repr\'{e}sent\'{e}es comme les d\'{e}riv\'{e}es d\'{e}finies comme :
 \be
@@ -494,13 +492,13 @@ qui est appel\'{e}e la \emph{fonction de dissipation}. Le c{\oe}fficient $\frac{
 \benn
 	-\dfrac{\partial}{\partial \dot{x}_{i}}\left(\frac{1}{2}\dot{x}^{\,2}\right) = -\alpha\dot{x}
 \eenn
-L'\'{e}quation de Lagrange pour la coordonn\'{e}e $x_{i}$ est alors en g\'{e}n\'{e}ralisant l'\'{e}quation (\ref{EQ:25_1}) est alors :
+L'\'{e}quation de Lagrange pour la coordonn\'{e}e $x_{i}$ est alors, en g\'{e}n\'{e}ralisant l'\'{e}quation (\ref{EQ:25_1}) :
 \be
 	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial \dot{x}_{i}}\right) = \dfrac{\partial L}{\partial x_{i}} - \dfrac{\partial F}{\partial\dot{x}_{i}} \label{EQ:25_12}
 \ee
 L'\'{e}nergie du syt\`{e}me d\'{e}finie par \'{e}quation (\ref{EQ:6_1}) est $E = \sum_{i}\dot{x}_{i}\frac{\partial L}{\partial\dot{x}_{i}} - L$ et sa variation avec le temps s'\'{e}crit :
 \benn
-	\dfrac{\mathrm{d}E}{\mathrm{dt}} = \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i}\dot{x}_{i}\frac{\partial L}{\partial\dot{x}_{i}}\right) - \dfrac{\mathrm{d}L}{\mathrm{dt}} = \sum_{i}\ddot{x}_{i}\dfrac{\partial L}{\partial\dot{x}_{i}} + \sum_{i}\dot{x}_{i}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i}\frac{\partial L}{\partial\dot{x}_{i}}\right) - \dfrac{\mathrm{d}L}{\mathrm{dt}}
+	\dfrac{\mathrm{d}E}{\mathrm{dt}} = \dfrac{\mathrm{d}}{\mathrm{dt}}\left(\sum_{i}\dot{x}_{i}\frac{\partial L}{\partial\dot{x}_{i}}\right) - \dfrac{\mathrm{d}L}{\mathrm{dt}} = \sum_{i}\ddot{x}_{i}\dfrac{\partial L}{\partial\dot{x}_{i}} + \sum_{i}\dot{x}_{i}\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial L}{\partial\dot{x}_{i}}\right) - \dfrac{\mathrm{d}L}{\mathrm{dt}}
 \eenn
 et en appliquant la relation (\ref{EQ:25_12}), nous pouvons continuer \`{a} d\'{e}velopper :
 \bea
@@ -535,7 +533,7 @@ et en conclusion :
 \be
 	\dfrac{\mathrm{d}E}{\mathrm{dt}} = -2F \label{EQ:25_13}
 \ee
-Ainsi la fonction de dissipation a une importance physique significative puisqu'elle d\'{e}termine l'intensit\'{e} de la dissipation d'\'{e}nergie dans le syst\`{e}me qui est deux fois la valeur de la fonction de dissipation. Le ph\'{e}nom\`{e}ne de dissipation entra\^{i}ne toujours une diminution de l'\'{e}nergie avec le temps. Par voie de cons\'{e}quence, nous avons toujours $F > 0$ et la forme quadratique (\ref{EQ:25_11} est donc essentiellement positive, i.e. pas chacun des termes mais au moins sa somme totale.
+Ainsi la fonction de dissipation a une importance physique significative puisqu'elle d\'{e}termine l'intensit\'{e} de la dissipation d'\'{e}nergie dans le syst\`{e}me qui est deux fois la valeur de la fonction de dissipation. Le ph\'{e}nom\`{e}ne de dissipation entra\^{i}ne toujours une diminution de l'\'{e}nergie avec le temps. Par voie de cons\'{e}quence, nous avons toujours $F > 0$ et la forme quadratique (\ref{EQ:25_11}) est donc essentiellement positive, i.e. pas tous ses termes mais au moins la somme totale de tous ses termes.
 
 En reprenant les \'{e}quations (\ref{EQ:23_5}) et en y ajoutant au second membre les forces ext\`{e}rieures d\'{e}finies dans la relation (\ref{EQ:25_8}), cela permet d'obtenir les \'{e}quations des petites oscillations en pr\'{e}sence de frottements :
 \be
@@ -554,7 +552,7 @@ qui est une \'{e}quation de degr\'{e} $2s$ par rapport \`{a} $r$. L'\'{e}quation
 
 \section{Oscillations forc\'{e}es avec frottement}\label{PAR:26}
 
-Nous allons nous focaliser sur le cas cas la force ext\'{e}rieure qui provoque les oscillations est p\'{e}riodique.
+Nous allons nous focaliser sur le cas o\`{u} la force ext\'{e}rieure qui provoque les oscillations est p\'{e}riodique.
 
 \subsection{Cas g\'{e}n\'{e}ral}
 
@@ -582,11 +580,11 @@ qui permet en \'{e}crivant $B = be^{i\delta} = b(\cos\delta + i\sin\delta)$ d'av
 \begin{figure}[htb!]
 	\begin{center}
 		\includegraphics[width=10cm]{chapter_05_paragraph_26}
-		\caption{Amplitude de la solution (\ref{EQ:26_3}) avec des valeurs du c{\oe}fficient de frottement compris entre 0.01 et 1.0 et $\omega_{0} = 1$, $f = 2$ et $m = 5$}\label{FIG:5_26}
+		\caption{Amplitude de la solution (\ref{EQ:26_3}) avec des valeurs du c{\oe}fficient de frottement comprises entre 0.01 et 1.0 et $\omega_{0} = 1$, $f = 2$ et $m = 5$}\label{FIG:5_26}
 	\end{center}
 \end{figure}
 
-De fait, la partie r\'{e}elle de la solution $x = Be^{i\gamma\mathrm{t}} = be^{i\gamma\mathrm{t} + \delta}$ est l'int\'{e}grale particuli\`{e}re de l'\'{e}quation (\ref{EQ:26_1}), i.e. $\cos(\gamma\mathrm{t} + \delta)$ alors que la solution de l'\'{e}quation sans second membre est celle obtenue en (\ref{EQ:25_4}), i.e. $ae^{-\lambda\mathrm{t}}\cos(\omega\mathrm{t} + \alpha)$ avec $\omega = \sqrt{\omega_{0}^{2} - \lambda^{2}}$dans le cas o\`{u} $\lambda < \omega_{0}$. Ainsi la solution est :
+De fait, la partie r\'{e}elle de la solution $x = Be^{i\gamma\mathrm{t}} = be^{i\gamma\mathrm{t} + \delta}$ est l'int\'{e}grale particuli\`{e}re de l'\'{e}quation (\ref{EQ:26_1}), i.e. $\cos(\gamma\mathrm{t} + \delta)$ alors que la solution de l'\'{e}quation sans second membre est celle obtenue en (\ref{EQ:25_4}), i.e. $ae^{-\lambda\mathrm{t}}\cos(\omega\mathrm{t} + \alpha)$ avec $\omega = \sqrt{\omega_{0}^{2} - \lambda^{2}}$ dans le cas o\`{u} $\lambda < \omega_{0}$. Ainsi la solution est :
 \be
 	x = ae^{-\lambda\mathrm{t}}\cos(\omega\mathrm{t} + \alpha) + b\cos(\gamma\mathrm{t} + \delta) \label{EQ:26_4}
 \ee
@@ -597,8 +595,7 @@ avec $\omega = \sqrt{\omega_{0}^{2} - \lambda^{2}}$. Elle devient après un temp
 Lorsque les valeurs de $\gamma$ et $\omega_{0}$ se rapprochent, l'amplitude des oscillations forc\'{e}es obtenues dans la relation (\ref{EQ:26_3}) augmente mais ne tend pas vers l'infini comme cela est le cas en l'absence de frottement, voir la relation (\ref{EQ:22_5}). Quelque soit la valeur de l'amplitude $f$ de la force ext\'{e}rieure, l'amplitude de l'oscillation $b$ est maximale si et seulement si la quantit\'{e} $(\omega_{0}^{2} - \gamma^{2})^{2} + 4\lambda^{2}\gamma^{2}$ est minimale, i.e. :
 \bea
 	\dfrac{\partial\left((\omega_{0}^{2} - \gamma^{2})^{2} + 4\lambda^{2}\gamma^{2}\right)}{\partial\gamma^{2}} & = & 0 \nonumber \\
-	\Leftrightarrow 2\gamma^{2} + 4\lambda^{2} - 2\omega_{0}^{2} & = & 0 \nonumber \\
-	\Leftrightarrow \gamma = \sqrt{\omega_{0}^{2} - 2\lambda^{2}} \nonumber
+	\Leftrightarrow 2\gamma^{2} + 4\lambda^{2} - 2\omega_{0}^{2} & = & 0 \Leftrightarrow \gamma = \sqrt{\omega_{0}^{2} - 2\lambda^{2}} \nonumber
 \eea
 ce qui permet de remarquer que dans la cas o\`{u} $\lambda \ll \omega_{0}$ alors la valeur de $\gamma$ ne diff\`{e}re de celle de $\omega_{0}$ que par un infiniment petit du second ordre.
 
@@ -643,9 +640,9 @@ Une fois le mouvement stabilis\'{e}, l'oscillation est r\'{e}gie par l'\'{e}quat
 
 Si $I(\gamma)$ est la quanti\'{e} d'\'{e}nergie dissip\'{e}e en moyenne par unit\'{e} de temps et en fonction de la fr\'{e}quence de la force ext\'{e}rieure, alors l'\'{e}quation (\ref{EQ:25_13}) s'applique et donne :
 \benn
-	\dfrac{\mathrm{d}E}{\mathrm{t}} = -2F \Rightarrow \dfrac{\Delta E}{\Delta\mathrm{r}} = 2\overline{F} = I(\Gamma)
+	\dfrac{\mathrm{d}E}{\mathrm{dt}} = -2F \Rightarrow \dfrac{\Delta E}{\Delta\mathrm{r}} = 2\overline{F} = I(\gamma)
 \eenn
-avec $\overline{F}$ la valeur moyenne sur la p\'{e}riode d'une oscillation de la fonction de dissipation, voir (\ref{EQ:25_11}). Pour un unique degr\'{e} de libert\'{e}, cetter derni\`{e}re relation donne $F = \frac{\alpha}{2}\dot{x}^{\,2}$. En comparant les \'{e}quations (\ref{EQ:26_1}) et (\ref{EQ:25_14}) avec $(i,j) = (1,1)$, nous posons la relation $m\ddot{x} + kx + \alpha\dot{x} = m\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x$ qui est vraie si et seulement si  $\alpha = 2\lambda m$, impliquant que $F = \lambda m\dot{x}^{\,2}$.
+avec $\overline{F}$ la valeur moyenne sur la p\'{e}riode d'une oscillation de la fonction de dissipation, voir (\ref{EQ:25_11}). Pour un unique degr\'{e} de libert\'{e}, cette derni\`{e}re relation donne $F = \frac{\alpha}{2}\dot{x}^{\,2}$. En comparant les \'{e}quations (\ref{EQ:26_1}) et (\ref{EQ:25_14}) avec $(i,j) = (1,1)$, nous posons la relation $m\ddot{x} + kx + \alpha\dot{x} = m\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x$ qui est vraie si et seulement si  $\alpha = 2\lambda m$, impliquant que $F = \lambda m\dot{x}^{\,2}$.
 
 Puisque le mouvement est stabilis\'{e}, l'\'{e}quation (\ref{EQ:26_5}) est exploitable et permet d'\'{e}crire :
 \benn
@@ -660,7 +657,7 @@ Au voisinage de la r\'{e}sonance, $b$ est donn\'{e} par la relation (\ref{EQ:26_
 	I(\epsilon) & = & \dfrac{\lambda mf^{2}}{4m^{2}\omega_{0}^{2}(\epsilon^{2} + \lambda^{2})}(\omega_{0} + \epsilon)^{2} = \dfrac{\lambda f^{2}}{4m(\epsilon^{2} + \lambda^{2})}\left(1 + \dfrac{\epsilon}{\omega_{0}}\right)^{2} \nonumber \\
 	\Leftrightarrow I(\epsilon) & = & \dfrac{f^{2}\lambda}{4m(\epsilon^{2} + \lambda^{2})}\text{ car }\epsilon \ll \omega_{0} \label{EQ:26_9}
 \eea
-Cette forme de relation entre \'{e}nergie dissip\'{e}e, absorb\'{e}e, et la fr\'{e}quence $\epsilon$ est appel\'{e}e \emph{dispersive}. La valeur maximale de $I$ est atteinte quand $\epsilon$ vaut mieux et elle est de :
+Cette forme de relation entre \'{e}nergie dissip\'{e}e, absorb\'{e}e, et la fr\'{e}quence $\epsilon$ est appel\'{e}e \emph{dispersive}. La valeur maximale de $I$ est atteinte quand $\epsilon$ est nul et elle est de :
 \benn
 	I(0) = \dfrac{f^{2}}{4m\lambda}
 \eenn
@@ -668,7 +665,7 @@ De m\^{e}me, la demi-largueur de la courbe, i.e. la largeur à demi-hauteur, se 
 \benn
 	I(\epsilon) = \frac{I(0)}{2} \Leftrightarrow \dfrac{f^{2}\lambda}{4m(\epsilon^{2} + \lambda^{2})} = \dfrac{f^{2}}{8m\lambda} \Leftrightarrow 2\lambda^{2} = \epsilon^{2} + \lambda^{2} \Leftrightarrow \epsilon = \pm \lambda
 \eenn
-Ainsi, si le c{\oe}fficient d'ammortissement $\lambda$ diminue, alors la hauteur de la courbe de r\'{e}sonance devient plus importante mais sa demi-largeur diminue. D\'{e}montrons que la surface sous $I(\gamma)$ est invariable par rapport au c{\oe}fficient d'ammortissement $\lambda$.
+Ainsi, si le c{\oe}fficient d'amortissement $\lambda$ diminue, alors la hauteur de la courbe de r\'{e}sonance devient plus importante mais sa demi-largeur diminue. D\'{e}montrons que la surface sous $I(\gamma)$ est invariable par rapport au c{\oe}fficient d'amortissement $\lambda$.
 
 Comme $\gamma = \omega_{0} + \epsilon$, alors $\mathrm{d}\gamma = \mathrm{d}\epsilon$. Cela permet d'\'{e}crire :
 \benn
@@ -683,7 +680,7 @@ Et enfin, nous pouvons \'{e}crire :
 \be
 	\int_{-\infty}^{+\infty}I(\epsilon)\mathrm{d}\epsilon = \dfrac{f^{2}\pi}{4m} \label{EQ:26_10}
 \ee
-permettant de conclure que la surface sous $I(\epsilon)$ ne d\'{e}pend du c{\oe}fficient d'ammortissement du syst\`{e}me.
+permettant de conclure que la surface sous $I(\epsilon)$ ne d\'{e}pend pas du c{\oe}fficient d'amortissement du syst\`{e}me.
 
 \section{R\'{e}sonance param\'{e}trique}\label{PAR:27}
 
@@ -877,7 +874,7 @@ Dans les \'{e}quations (\ref{EQ:27_7}) et (\ref{EQ:27_7}), $\gamma$ peut \^{e}tr
 
 \subsection{Cas \`{a} faible c{\oe}fficient de frottement}
 
-Le paragraphe (\ref{PAR:25}) et en particulier la solution (\ref{EQ:25_4}) montrent que le frottement induit un ammortissement exponentiel de l'amplitude des oscillations, en $e^{-\lambda\mathrm{t}}$. En reprenant le cheminement pour arriver à l'\'{e}quation (\ref{EQ:27_10}), l'amplitude des oscillations dans la r\'{e}sonnance param\'{e}trique suit une loi en $e^{(s-\lambda)\mathrm{t}}$ avec $s > 0$. La limite du domaine d'instabilit\'{e} est donn\'{e} par $s - \lambda = 0$. L'\'{e}quation (\ref{EQ:27_10}) devient dans ce cas pr\'{e}cis :
+Le paragraphe (\ref{PAR:25}) et en particulier la solution (\ref{EQ:25_4}) montrent que le frottement induit un amortissement exponentiel de l'amplitude des oscillations, en $e^{-\lambda\mathrm{t}}$. En reprenant le cheminement pour arriver à l'\'{e}quation (\ref{EQ:27_10}), l'amplitude des oscillations dans la r\'{e}sonnance param\'{e}trique suit une loi en $e^{(s-\lambda)\mathrm{t}}$ avec $s > 0$. La limite du domaine d'instabilit\'{e} est donn\'{e} par $s - \lambda = 0$. L'\'{e}quation (\ref{EQ:27_10}) devient dans ce cas pr\'{e}cis :
 \benn
 	(s - \lambda)^{2} = \frac{1}{4}\left(\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2}\right) \Leftrightarrow s^{2} - 2\lambda s + \lambda^{2} - \frac{1}{4}\left(\left(\frac{\omega_{0}h}{2}\right)^{2} - \epsilon^{2}\right) = 0
 \eenn
@@ -1102,7 +1099,7 @@ Finalement, nous pouvons donc \'{e}crire la solution approch\'{e}e \`{a} l'ordre
 
 \subsection{\'{E}quation de l'amplitude des oscillations forc\'{e}es}
 
-En ajoutant une force ext\'{e}rieure oscillante de fr\'{e}quence $\gamma$ comme celle de l'{e}quation (\ref{EQ:26_1}) et une force de frottement avec un c{\oe}fficient d'ammortissement $\lambda$ \`{a} l'{e}quation (\ref{EQ:28_9}), cette derni\`{e}re devient :
+En ajoutant une force ext\'{e}rieure oscillante de fr\'{e}quence $\gamma$ comme celle de l'{e}quation (\ref{EQ:26_1}) et une force de frottement avec un c{\oe}fficient d'amortissement $\lambda$ \`{a} l'{e}quation (\ref{EQ:28_9}), cette derni\`{e}re devient :
 \be
 	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x = \frac{f}{m}\cos(\gamma\mathrm{t}) - \alpha x^{2} - \beta x^{3} \label{EQ:29_1}
 \ee
