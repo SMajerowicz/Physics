@@ -691,7 +691,7 @@ Dans le cas d'un syst\`{e}me \`{a} une dimension et sans force ext\'{e}rieure, l
 	\dfrac{\mathrm{d}}{\mathrm{dt}}\left(\dfrac{\partial L}{\partial\dot{x}}\right) = \dfrac{\partial L}{\partial x} \Leftrightarrow \dfrac{\mathrm{d}(m\dot{x})}{\mathrm{dt}} + kx = 0 \label{EQ:27_1}
 \ee
 
-Maintenant, introduisons la variable $\tau$ d\'{e}finie telle que $m\mathrm{d}\tau = \mathrm{t}$ avec $m$ une fonction du temps. Cela permet d'\'{e}crire :
+Maintenant, introduisons la variable $\tau$ d\'{e}finie telle que $m(\mathrm{t})\mathrm{d}\tau = \mathrm{dt}$ avec $m$ une fonction du temps. Cela permet d'\'{e}crire :
 \bea
 	\dfrac{\mathrm{d}}{\mathrm{d}\mathrm{t}}(m\dot{x}) & = & \dfrac{\mathrm{d}m}{\mathrm{d}\mathrm{t}}\dot{x} + m\dfrac{\mathrm{d}\dot{x}}{\mathrm{d}\mathrm{t}} = \dfrac{\mathrm{d}m}{\mathrm{d}\mathrm{t}}\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{t}} + m\dfrac{\mathrm{d}}{\mathrm{d}\mathrm{t}}\left(\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{t}}\right) \nonumber \\
 	& = & \dfrac{\mathrm{d}m}{m\mathrm{d}\mathrm{\tau}}\dfrac{\mathrm{d}x}{m\mathrm{d}\mathrm{\tau}} + m\dfrac{\mathrm{d}}{m\mathrm{d}\mathrm{\tau}}\left(\dfrac{\mathrm{d}x}{m\mathrm{d}\mathrm{\tau}}\right) = \dfrac{1}{m^{2}}\dfrac{\mathrm{d}m}{\mathrm{d}\mathrm{\tau}}\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{\tau}} + \dfrac{\mathrm{d}}{\mathrm{d}\mathrm{\tau}}\left(\dfrac{1}{m}\right)\dfrac{\mathrm{d}x}{\mathrm{d}\mathrm{\tau}} + \dfrac{1}{m}\dfrac{\mathrm{d}^{2}x}{\mathrm{d}\mathrm{\tau}^{2}} \nonumber \\
@@ -707,7 +707,7 @@ o\`{u} la masse variable avec le temps $m$ n'est plus pr\'{e}sente dans la d\'{e
 \ee
 mais cette fois-ci avec la masse $m$ constante avec le temps.
 
-Faisons l'hypoth\`{e}se que $\omega(\mathrm{t})$ soit une fonction de fr\'{e}quence $\omega$ et de p\'{e}riode $T = 2\pi/\omega$. Par d\'{e}finion, $\omega(\mathrm{t} + T) = \omega(t)$ et en cons\'{e}quence, l'\'{e}quation (\ref{EQ:27_2}) est invariante lors de la transformation $\mathrm{t} \rightarrow \mathrm{t} + T$. Donc si $x(\mathrm{t})$ est une solution de cette m\^{e}me \'{e}quation alors $x(\mathrm{t} + T)$ l'est tout autant. En d'autres termes, si $x_{1}(\mathrm{t})$ et $x_{2}(\mathrm{t})$ sont deux int\'{e}grales particuli\`{e}res de l'\'{e}quation (\ref{EQ:27_2}) alors elles se transforment lin\'{e}airement l'une dans l'autre en rempla\c{c}ant $\mathrm{t}$ par $\mathrm{t} + T$.
+Faisons l'hypoth\`{e}se que $\omega(\mathrm{t})$ soit une fonction de fr\'{e}quence $\omega$ et de p\'{e}riode $T = 2\pi/\omega$. Par d\'{e}finition, $\omega(\mathrm{t} + T) = \omega(t)$ et en cons\'{e}quence, l'\'{e}quation (\ref{EQ:27_2}) est invariante lors de la transformation $\mathrm{t} \rightarrow \mathrm{t} + T$. Donc si $x(\mathrm{t})$ est une solution de cette m\^{e}me \'{e}quation alors $x(\mathrm{t} + T)$ l'est tout autant. En d'autres termes, si $x_{1}(\mathrm{t})$ et $x_{2}(\mathrm{t})$ sont deux int\'{e}grales particuli\`{e}res de l'\'{e}quation (\ref{EQ:27_2}) alors elles se transforment lin\'{e}airement l'une dans l'autre en rempla\c{c}ant $\mathrm{t}$ par $\mathrm{t} + T$.
 
 Choisissons $x_{1}(\mathrm{t})$ et $x_{2}(\mathrm{t})$ de mani\`{e}re \`{a} ce qu'en rempla\c{c}ant $\mathrm{t}$ par $\mathrm{t} + T$ cela revient \`{a} la multiplication par un facteur constant, i.e. :
 \benn
@@ -717,7 +717,7 @@ La forme la plus g\'{e}n\'{e}rale des fonctions poss\'{e}dant cette propri\'{e}t
 \be
 	x_{1}(\mathrm{t}) = \mu_{1}^{\mathrm{t}/T}\Pi_{1}(\mathrm{t})\text{, }x_{2}(\mathrm{t}) = \mu_{2}^{\mathrm{t}/T}\Pi_{2}(\mathrm{t})\label{EQ:27_3}
 \ee
-o\`{u} les fonctions $\Pi_{i}(\mathrm{t})$ sont purement p\'{e}riodiques du temps et de de p\'{e}riode $T$. Les constantes $\mu_{i}$ doivent \^{e}tre li\'{e}es par une relation d\'{e}termin\'{e}e. Ainsi, pour $i = 2$, l'\'{e}quation (\ref{EQ:27_2}) donne :
+o\`{u} les fonctions $\Pi_{i}(\mathrm{t})$ sont purement p\'{e}riodiques du temps et de p\'{e}riode $T$. Les constantes $\mu_{i}$ doivent \^{e}tre li\'{e}es par une relation d\'{e}termin\'{e}e. Ainsi, pour $i = 2$, l'\'{e}quation (\ref{EQ:27_2}) donne :
 \benn
 	\begin{cases}
 		\ddot{x_{1}} + w^{2}(\mathrm{t})x_{1} = 0 \\
@@ -729,7 +729,7 @@ o\`{u} les fonctions $\Pi_{i}(\mathrm{t})$ sont purement p\'{e}riodiques du temp
 		\ddot{x_{2}}x_{1} + w^{2}(\mathrm{t})x_{2}x_{1} = 0
 	\end{cases}
 \eenn
-implique en soustrayant la seconde\`{a} la premi\`{e}re :
+Cela implique en soustrayant la seconde \`{a} la premi\`{e}re :
 \bea
 	\ddot{x_{1}}x_{2} - \ddot{x_{2}}x_{1} = 0 & \Leftrightarrow & \ddot{x_{1}}x_{2} + \dot{x_{1}}\dot{x_{2}} - \ddot{x_{2}}x_{1} - \dot{x_{1}}\dot{x_{2}} = 0 \nonumber \\
 	& \Leftrightarrow & \dfrac{\mathrm{d}(\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}})}{\mathrm{dt}} = 0 \nonumber
@@ -749,7 +749,7 @@ car par d\'{e}finition $\Pi_{i}(\mathrm{t} + T) = \Pi_{i}(\mathrm{t})$. Reprenon
 \bea
 	(\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}})\big|_{\mathrm{t}} & = & (\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}})\big|_{\mathrm{t} + T} \nonumber \\
 	\Leftrightarrow \dot{x_{1}}x_{2} - x_{1}\dot{x_{2}} & = & \mu_{1}\mu_{2}\dot{x_{1}}x_{2} - \mu_{1}\mu_{2}x_{1}\dot{x_{2}} = \mu_{1}\mu_{2}(\dot{x_{1}}x_{2} - x_{1}\dot{x_{2}}) \nonumber \\
-	\Leftrightarrow \mu_{1}\mu_{2} = 1 \label{EQ:27_5}
+	\Leftrightarrow \mu_{1}\mu_{2} & = & 1 \label{EQ:27_5}
 \eea
 
 \subsection{Conclusions sur la r\'{e}sonance param\'{e}trique}
@@ -765,7 +765,7 @@ qui n'est possible qu'aux conditions suivantes :
 		\ddot{b}(\mathrm{t}) + \omega^{2}(\mathrm{t})b(\mathrm{t}) = 0
 	\end{cases}
 \eenn
-Le conjugu\'{e} $\overline{x} = a(\mathrm{t}) + ib(\mathrm{t})$ permet d'\'{e}crire :
+Le conjugu\'{e} $\overline{x} = a(\mathrm{t}) - ib(\mathrm{t})$ permet d'\'{e}crire :
 \benn
 	\dfrac{\mathrm{d}^{2}\overline{x}}{\mathrm{dt}^{2}} + w(\mathrm{t})^{2}(\mathrm{t})\overline{x} = \ddot{a}(\mathrm{t}) - i\ddot{b}(\mathrm{t}) + \omega^{2}(\mathrm{t})a(\mathrm{t}) - i\omega^{2}(\mathrm{t})b(\mathrm{t})
 \eenn
@@ -800,7 +800,7 @@ pour laquelle nous chercherons la solution sous la forme :
 \be
 	x(\mathrm{t}) = a(\mathrm{t})\cos\left[\left(\omega_{0} + \frac{\epsilon}{2}\right)\mathrm{t}\right] + b(\mathrm{t})\sin\left[\left(\omega_{0} + \frac{\epsilon}{2}\right)\mathrm{t}\right]\label{EQ:27_9}
 \ee
-o\`{u} $a(\mathrm{t})$ et $b(\mathrm{t})$ sont des fonctions du temps variant avec des pulsations bien plus faibles que $\omega_{0}$. La solution exacte \`{a} l'\'{e}quation (\ref{EQ:27_8}) contient \'{e}rgalement des termes dont la fr\'{e}quence est multiple de la quantit\'{e} $2\omega_{0} + \epsilon$, ce qui en fait des infiniments petits d'ordre sup\'{e}rieur et n\'{e}gligeable en premi\`{e}re approximation (voir exercice (\ref{PAR:27_EX1})).
+o\`{u} $a(\mathrm{t})$ et $b(\mathrm{t})$ sont des fonctions du temps variant avec des pulsations bien plus faibles que $\omega_{0}$. La solution exacte \`{a} l'\'{e}quation (\ref{EQ:27_8}) contient \'{e}galement des termes dont la fr\'{e}quence est multiple de la quantit\'{e} $2\omega_{0} + \epsilon$, ce qui en fait des infiniments petits d'ordre sup\'{e}rieur et n\'{e}gligeables en premi\`{e}re approximation (voir exercice (\ref{PAR:27_EX1})).
 
 Connaissant la relation (\ref{EQ:27_9}), et en d\'{e}veloppant d'abord :
 \bea
@@ -846,7 +846,7 @@ En prenant les hypoth\`{e}ses suivantes : $\dot{a}\approxeq\epsilon a$ et $\dot{
 		2\dot{a}(\mathrm{t}) + \epsilon b(\mathrm{t}) + b(\mathrm{t})\frac{\omega_{0}h}{2} = 0
 	\end{cases}
 \eenn
-soient deux \'{e}quations diff\'{e}rentielles lin\'{e}aires. Recherchons une paire de solution telle que $a(\mathrm{t}) = ae^{s\mathrm{t}}$ et $b(\mathrm{t}) = be^{s\mathrm{t}}$. Les deux \'{e}quations pr\'{e}c\'{e}dentes deviennent alors, quelque soit $\mathrm{t}$ :
+soient deux \'{e}quations diff\'{e}rentielles lin\'{e}aires. Nous recherchons une paire de solutions telle que $a(\mathrm{t}) = ae^{s\mathrm{t}}$ et $b(\mathrm{t}) = be^{s\mathrm{t}}$. Les deux \'{e}quations pr\'{e}c\'{e}dentes deviennent alors, quelque soit $\mathrm{t}$ :
 \benn
 	\begin{cases}
 		2bs - \left(\epsilon - \frac{\omega_{0}h}{2}\right)a = 0 \\
@@ -886,7 +886,7 @@ avec \'{e}videmment $\epsilon < \frac{\omega_{0}h}{2}$ qui est donn\'{e} par les
 \be
 	-\sqrt{\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{2}} < \epsilon < \sqrt{\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{2}} \label{EQ:27_12}
 \ee
-qui n'est possible que pour $\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{2} > 0$. Il y a done un seuil d'amplitude au-dessus duquel la r\'{e}sonance n'est pas possible. Cette valeur $h_{k}$ est :
+qui n'est possible que pour $\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{2} > 0$. Il y a donc un seuil d'amplitude au-dessus duquel la r\'{e}sonance n'est pas possible. Cette valeur $h_{k}$ est :
 \benn
 	\left(\frac{\omega_{0}h_{k}}{2}\right)^{2} = 4\lambda^{2} \Leftrightarrow h_{k} = \frac{4\lambda}{\omega_{0}}
 \eenn
@@ -895,9 +895,9 @@ qui n'est possible que pour $\left(\frac{\omega_{0}h}{2}\right)^{2} - 4\lambda^{
 
 \subsection{Cas g\'{e}n\'{e}ral par la m\'{e}thode des approximations successives}
 
-La th\'{e}orie des petites oscillations pr\'{e}sent\'{e}e jusque maintenant est bas\'{e}e sur un d\'{e}veloppement des \'{e}nergies cin\'{e}tique et potentielle par rapport aux positions et aux vitesses du syst\`{e}me o\`{u} seuls les termes du deuxi\`{e}me ordre ont \'{e}t\'{e} conserv\'{e}s. Cela a permis d'obtenir des \'{e}quations du mouvement lin\'{e}aires. Dans ce cadre th\'{e}orique, nous avons ainsi discuter des \emph{oscillations lin\'{e}aires}, cadre tout \`{a} fait l'\'{e}gitime pour des oscillations suffisamment petites. Prendre en compte les approximations suivantes, i.e. \emph{l'anharmonicit\'{e}} ou \emph{non-lin\'{e}arit\'{e}} des oscillations conduit \`{a} l'apparition de particularit\'{e}s qualitativement nouvelles.
+La th\'{e}orie des petites oscillations pr\'{e}sent\'{e}e jusque maintenant est bas\'{e}e sur un d\'{e}veloppement des \'{e}nergies cin\'{e}tique et potentielle par rapport aux positions et aux vitesses du syst\`{e}me o\`{u} seuls les termes du deuxi\`{e}me ordre ont \'{e}t\'{e} conserv\'{e}s. Cela a permis d'obtenir des \'{e}quations du mouvement lin\'{e}aires. Dans ce cadre th\'{e}orique, nous avons ainsi discuter des \emph{oscillations lin\'{e}aires}, cadre tout \`{a} fait l\'{e}gitime pour des oscillations suffisamment petites. Prendre en compte les approximations suivantes, i.e. \emph{l'anharmonicit\'{e}} ou \emph{non-lin\'{e}arit\'{e}} des oscillations conduit \`{a} l'apparition de particularit\'{e}s qualitativement nouvelles.
 
-Effectuons le d\'{e}veloppement de la fonction de Lagrange jusqu'au troisi\`{e}me ordre, extension du paragraphe (\ref{PAR:23}), en utilisant le d\'{e}veloppement de Taylor en coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es $q_{i}$ par rapport \`{a} la position d'\'{e}quilibre $q_{i0}$ :
+Nous effectuons le d\'{e}veloppement de la fonction de Lagrange jusqu'au troisi\`{e}me ordre, extension du paragraphe (\ref{PAR:23}), en utilisant le d\'{e}veloppement de Taylor en coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es $q_{i}$ par rapport \`{a} la position d'\'{e}quilibre $q_{i0}$ :
 \bea
 	U(\left\{q_{i}\right\}) = U(\left\{q_{i0}\right\}) + \sum_{i}\left(\frac{\partial U}{\partial\dot{q}_{i}}\right)_{q_{i}=q_{i0}}(q_{i} - q_{i0}) & + & \frac{1}{2}\sum_{i,j}\left(\frac{\partial^{2} U}{\partial\dot{q}_{i}\partial\dot{q}_{j}}\right)_{\begin{subarray}{l}q_{i}=q_{i0}\\q_{j}=q_{j0}\end{subarray}}(q_{i} - q_{i0})(q_{j} - q_{j0}) \nonumber \\
 	& + & \frac{1}{6}\sum_{i,j,k}\left(\frac{\partial^{3} U}{\partial\dot{q}_{i}\partial\dot{q}_{j}\partial\dot{q}_{k}}\right)_{\begin{subarray}{l}q_{i}=q_{i0}\\q_{j}=q_{j0}\\q_{k}=q_{k0}\end{subarray}}(q_{i} - q_{i0})(q_{j} - q_{j0})(q_{k} - q_{k0}) \nonumber
@@ -934,7 +934,7 @@ qui peut s'\'{e}crire sous la forme :
 \ee
 avec $f_{\alpha}$ une fonction homog\`{e}ne du second ordre des coordonn\'{e}es normales $Q_{\alpha}$ et de ses d\'{e}riv\'{e}es premi\`{e}re et seconde par rapport au temps.
 
-En appliquant la m\'{e}thode des approximations successives, nous allon chercher une solution du type :
+En appliquant la m\'{e}thode des approximations successives, nous allons chercher une solution du type :
 \be
 	Q_{\alpha} = Q_{\alpha}^{(1)} + Q_{\alpha}^{(2)}\label{EQ:28_4}
 \ee
@@ -955,15 +955,15 @@ qui sont des \'{e}quations diff\'{e}rentielles lin\'{e}aires non homog\`{e}nes p
 	Q_{\alpha}^{(1)}Q_{\beta}^{(1)} & = & a_{\alpha}a_{\beta}\cos(\omega_{\alpha}\mathrm{t} + \alpha_{\alpha})\cos(\omega_{\beta}\mathrm{t} + \alpha_{\beta}) \nonumber \\
 	& = & \frac{1}{2}\left(\cos((\omega_{\alpha} + \omega_{\beta})\mathrm{t} + \alpha_{\alpha} + \alpha_{\beta}) + \cos((\omega_{\alpha} - \omega_{\beta})\mathrm{t} + \alpha_{\alpha} - \alpha_{\beta})\right) \nonumber
 \eea
-qui comprend donc des oscillations \'{e}gales \`{a} la somme et \`{a} la diff\'{e}rence des fr\'{e}quences propres du syst\`{e}me. Dans ce cas, nous pouvnos nous reporter aux oscillations forc\'{e}es du paragraphe (\ref{PAR:26}) o\`{u} la solution (\ref{EQ:26_4}), en plus de la fr\'{e}quence propre du syst\`{e}me $\omega_{0}$, comporte les fr\'{e}quences de la force ext\'{e}rieure, soient ici :
+qui comprend donc des oscillations \'{e}gales \`{a} la somme et \`{a} la diff\'{e}rence des fr\'{e}quences propres du syst\`{e}me. Dans ce cas, nous pouvons nous reporter aux oscillations forc\'{e}es du paragraphe (\ref{PAR:26}) o\`{u} la solution (\ref{EQ:26_4}), en plus de la fr\'{e}quence propre du syst\`{e}me $\omega_{0}$, comporte les fr\'{e}quences de la force ext\'{e}rieure, soient ici :
 \be
 	\omega_{\alpha} \pm \omega_{\beta}\label{EQ:28_7}
 \ee
-En particulier, si $\omega_{\alpha} = \omega_{\beta}$, les solutions sont soit les fr\'{e}quences double $2\omega_{\alpha}$ soit la fr\'{e}quence nulle, qui, elle, correspond \`{a} un d\'{e}placement constant. Il s'agit l\`{a} de \emph{fr\'{e}quences combinatoires}. De la m\^{e}me mani\`{e}re, par identification \`{a} (\ref{EQ:26_3}), les amplitudes des oscillations combinatoires sont proportionnelles \`{a} $a_{\alpha}a_{\beta}$.
+En particulier, si $\omega_{\alpha} = \omega_{\beta}$, les solutions sont soit les fr\'{e}quences doubles $2\omega_{\alpha}$ soit la fr\'{e}quence nulle, qui, elle, correspond \`{a} un d\'{e}placement constant. Il s'agit l\`{a} de \emph{fr\'{e}quences combinatoires}. De la m\^{e}me mani\`{e}re, par identification \`{a} (\ref{EQ:26_3}), les amplitudes des oscillations combinatoires sont proportionnelles \`{a} $a_{\alpha}a_{\beta}$.
 
-Pour les approximations d'ordre sup\'{e}rieur de la fonction de Lagrange, et donc des \'{e}nergies cin\'{e}tique et potentielle, le second membre de l'\'{e}quation du mouvement voit appara\^{i}tre des termes dont les oscillations sont des combinaisons des fr\'{e}quences des solutions p\'{e}riodiques simples en utilisant les formules de Simpson. Ainsi les fr\'{e}quences combinatoires sont $\omega_{\alpha} \pm \omega_{\beta} \pm \omega_{\gamma} \pm \ldots$. Ainsi, parmi les fr\'{e}quences solution, nous trouvons des fr\'{e}quences co\"{i}ncidant avec celle des solutions non perturb\'{e}es $\omega_{\alpha}$. Dans ces cas, nous nous retrouvons avec des oscillations forc\'{e}es, voir paragraphe (\ref{PAR:22}), pour lesquelles la solution (\ref{EQ:22_5}) a une amplitude qui cro\^{i}t avec le temps. Ceci n'est \'{e}videmment pas possible dans notre contexte de syst\`{e}me isol\'{e}.
+Pour les approximations d'ordre sup\'{e}rieur de la fonction de Lagrange, et donc des \'{e}nergies cin\'{e}tique et potentielle, le second membre de l'\'{e}quation du mouvement voit appara\^{i}tre des termes dont les oscillations sont des combinaisons des fr\'{e}quences des solutions p\'{e}riodiques simples en utilisant les formules de Simpson. Ainsi les fr\'{e}quences combinatoires sont $\omega_{\alpha} \pm \omega_{\beta} \pm \omega_{\gamma} \pm \ldots$. Et parmi les fr\'{e}quences solutions, nous trouvons des fr\'{e}quences co\"{i}ncidant avec celle des solutions non perturb\'{e}es $\omega_{\alpha}$. Dans ces cas, nous nous retrouvons avec des oscillations forc\'{e}es, voir paragraphe (\ref{PAR:22}), pour lesquelles la solution (\ref{EQ:22_5}) a une amplitude qui cro\^{i}t avec le temps. Ceci n'est \'{e}videmment pas possible dans notre contexte de syst\`{e}me isol\'{e}.
 
-Pour les approximations suivantes, la m\'{e}thode des approximations successives doit \^{e}tre modifi\'{e}e afin que les facteurs p\'{e}riodiques de la soltion contiennent d\`{e}s le d\'{e}but des valeurs exactes et non pas approch\'{e}es.
+Pour les approximations suivantes, la m\'{e}thode des approximations successives doit \^{e}tre modifi\'{e}e afin que les facteurs p\'{e}riodiques de la solution contiennent d\`{e}s le d\'{e}but des valeurs exactes et non pas approch\'{e}es.
 
 \subsection{Cas particulier}
 
@@ -985,7 +985,7 @@ telle que :
 \be
 	x_{0}(\mathrm{t}) = a\cos(\omega\mathrm{t})\label{EQ:28_10}
 \ee
-et en choisissant l'origine du temps telle que la phase initiale de $x_{0}$ soit nulle et avec $\omega$ une valeur exacte que nous chercherons par la suite sous la forme d'une s'\'{e}rie $\omega_{0} + \omega_{1} + \ldots$.
+et en choisissant l'origine du temps telle que la phase initiale de $x_{0}$ soit nulle et avec $\omega$ une valeur exacte que nous chercherons par la suite sous la forme d'une s\'{e}rie $\omega_{0} + \omega_{1} + \ldots$.
 
 L'\'{e}quation (\ref{EQ:28_9}) s'\'{e}crit de mani\`{e}re \'{e}quivalente :
 \bea
@@ -997,7 +997,7 @@ qui permet d'avoir un premier membre nul pour $x = x_{0}$. Posons d\'{e}sormais 
 \benn
 	\frac{\omega_{0}^{2}}{\omega^{2}}(\ddot{x_{0}} + \ddot{x_{1}}) + \omega_{0}^{2}(x_{0} + x_{1}) = - \alpha (x_{0} + x_{1})^{2} - \beta (x_{0} + x_{1})^{3} - \left(1 - \frac{\omega_{0}^{2}}{\omega^{2}}\right)(\ddot{x}_{0} + \ddot{x}_{1})
 \eenn
-qui peut se r\'{e}quire \`{a} car $(x_{0} + x_{1})^{3}$ est d'ordre sup\'{e}rieur \`{a} 2 :
+qui peut se r\'{e}quire \`{a}, puisque $(x_{0} + x_{1})^{3}$ est d'ordre sup\'{e}rieur \`{a} 2 :
 \benn
 	\frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{0}} + \omega_{0}^{2}x_{0} + \frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\alpha x_{0}^{2} - \alpha x_{1}^{2} - 2\alpha x_{0}x_{1} - \left(\frac{\omega^{2} - \omega_{0}^{2}}{\omega^{2}}\right)\ddot{x}_{0} - \ddot{x}_{1} + \frac{\omega_{0}^{2}}{\omega^{2}}\ddot{x}_{1}
 \eenn
@@ -1005,7 +1005,7 @@ Or nous avons d'apr\`{e}s la relation (\ref{EQ:28_10}) $\ddot{x}_{0} + \omega_{0
 \benn
 	\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\alpha a^{2}\cos^{2}(\omega\mathrm{t}) + a\cos(\omega\mathrm{t})\left(\frac{\omega_{0}^{2} + \omega_{1}^{2} + 2\omega_{0}\omega_{1} - \omega_{0}^{2}}{\omega^{2}}\right)
 \eenn
-Cela donne finalement car $\omega_{1}^{2}$ et $\cos^{2}a = (cos(2a) + 1)/2$ est insignifiant :
+Cela donne finalement car $\omega_{1}^{2}$ et $\cos^{2}a = (cos(2a) + 1)/2$ sont insignifiants :
 \benn
 	\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\frac{\alpha a^{2}}{2} - -\frac{\alpha a^{2}}{2}\cos(2\omega\mathrm{t}) + 2\omega_{0}\omega_{1}\cos(\omega\mathrm{t})
 \eenn
@@ -1020,12 +1020,12 @@ dont la solution est la somme de deux fonctions diff\'{e}rentes permettant de r\
 		\ddot{x_{1}} + \omega_{0}^{2}x_{1} = -\frac{\alpha a^{2}}{2}\cos(2\omega\mathrm{t})
 	\end{cases}
 \eenn
-Pour la premi\`{e}re \'{e}quation, la solution est \'{e}videmment $-\alpha a^{2}/(2\omega_{0}^{2})$. Pour la seconde, cherchons une solution en $x_{10}\cos(2\omega\mathrm{t})$ qui une fois inject\'{e}e donne :
+Pour la premi\`{e}re \'{e}quation, la solution est \'{e}videmment $-\alpha a^{2}/(2\omega_{0}^{2})$. Pour la seconde, nous cherchons une solution en $x_{10}\cos(2\omega\mathrm{t})$ qui, une fois inject\'{e}e, donne :
 \bea
 	-4x_{10}\omega^{2}\cos(2\omega\mathrm{t}) + \omega_{0}^{2}x_{10}\cos(2\omega\mathrm{t}) & = & -\frac{\alpha a^{2}}{2}\cos(2\omega\mathrm{t}) \nonumber \\
 	\Leftrightarrow x_{10} = \frac{\alpha a^{2}}{6\omega^{2}} & \Leftrightarrow & x_{10} = \frac{\alpha a^{2}}{6\omega_{0}^{2}}
 \eea
-car $\omega^{2} = (\omega_{0} + \omega_{1})^{2} = \omega_{0}^{2}$ car $\omega_{1}$ reste nulle. Nous obtenons finalement :
+car $\omega^{2} = (\omega_{0} + \omega_{1})^{2} = \omega_{0}^{2}$ puisque $\omega_{1}$ reste nulle. Nous obtenons finalement :
 \be
 	x_{1}(\mathrm{t}) = -\frac{\alpha a^{2}}{2\omega_{0}^{2}} + \frac{\alpha a^{2}}{6\omega_{0}^{2}}\cos(2\omega\mathrm{t})\label{EQ:28_12}
 \ee
