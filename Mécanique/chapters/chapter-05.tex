@@ -1349,7 +1349,7 @@ Les cas de r\'{e}sonance envisag\'{e}s ici sont les cas fondamentaux se produisa
 
 \section{Mouvement dans un champ \`{a} oscillations rapides}\label{PAR:30}
 
-Ici, nous allonw consid\'{e}rer le mouvement d'une particule soumise simultan\'{e}ment \`{a} l'action d'un champ constant $U$ et d'une force ext\'{e}rieure d\'{e}finie telle que :
+Ici, nous allons consid\'{e}rer le mouvement d'une particule soumise simultan\'{e}ment \`{a} l'action d'un champ constant $U$ et d'une force ext\'{e}rieure d\'{e}finie telle que :
 \be
 	f = f_{1}\cos(\omega\mathrm{t}) + f_{2}\sin(\omega\mathrm{t}) \label{EQ:30_1}
 \ee
@@ -1365,9 +1365,9 @@ L'hypoth\`{e}se des petits d\'{e}placements provoqu\'{e}s par $f$ nous invite \`
 \be
 	x(\mathrm{t}) = X(\mathrm{t}) + \xi(\mathrm{t}) \label{EQ:30_3}
 \ee
-$\xi(\mathrm{t})$ \'{e}tant une oscillation, sa valeur moyenne calcul\'{e}e sur sa p\'{e}riode $2\pi/\omega$ est nulle, alors que $X(\mathrm{t})$ aura vari\'{e} faiblement. \`{A} partir de cette remarque, nous pouvons d\'{e}duire que $\overline{x} = \overline{T}$, i.e. $X$ d\'{e}crit le mouvement non perturb\'{e} moyen de la particule par rapport aux oscillations rapides. La m\'{e}thode de d\'{e}termination de l'\'{e}quation du mouvement a \'{e}t\'{e} d\'{e}crite par Piotr Kapitsa en 1951.
+$\xi(\mathrm{t})$ \'{e}tant une oscillation, sa valeur moyenne calcul\'{e}e sur sa p\'{e}riode $2\pi/\omega$ est nulle, alors que $X(\mathrm{t})$ aura vari\'{e} faiblement. \`{A} partir de cette remarque, nous pouvons d\'{e}duire que $\overline{x} = \overline{X}$, i.e. $X$ d\'{e}crit le mouvement non perturb\'{e} moyen de la particule par rapport aux oscillations rapides. La m\'{e}thode de d\'{e}termination de l'\'{e}quation du mouvement a \'{e}t\'{e} d\'{e}crite par Piotr Kapitsa en 1951.
 
-En utilisation $x(\mathrm{t})$ d\'{e}finie par la relation (\ref{EQ:30_4}) dans l'\'{e}quation (\ref{EQ:30_2}), nous \'{e}crivons :
+En utilisation $x(\mathrm{t})$ d\'{e}finie par la relation (\ref{EQ:30_3}) dans l'\'{e}quation (\ref{EQ:30_2}), nous \'{e}crivons :
 \benn
 	m\ddot{x} = -\frac{\mathrm{d}U}{\mathrm{d}x} + f(x,\mathrm{t}) \Leftrightarrow m\ddot{X} + m\ddot{\xi} = -\frac{\mathrm{d}U}{\mathrm{d}(X+\xi)} + f(X+\xi,\mathrm{t})
 \eenn
@@ -1382,10 +1382,10 @@ Cela permet d'\'{e}crire l'\'{e}quation du mouvement ainsi :
 \be
 	m\ddot{X} + m\ddot{\xi} = -\frac{\mathrm{d}U}{\mathrm{d}X} - \xi\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}} + f(X,\mathrm{t}) + \xi\frac{\partial f}{\partial X} \label{EQ:30_4}
 \ee
-Le second membre se compse de deux parties distinctes :
+Le second membre se compose de deux parties distinctes :
 \begin{itemize}
-	\item une non perturb\'{e}e $-\frac{\mathrm{d}U}{\mathrm{d}X}$
-	\item une oscillante $- \xi\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}} + f(X,\mathrm{t}) + \xi\frac{\partial f}{\partial X}$ qui peut \^{e}tre r\'{e}duite \`{a} $f(X,\mathrm{t})$ puisque $\xi$ est par d\'{e}finition petit
+	\item une non perturb\'{e}e $-\frac{\mathrm{d}U}{\mathrm{d}X}$,
+	\item une oscillante $- \xi\frac{\mathrm{d}^{2}U}{\mathrm{d}X^{2}} + f(X,\mathrm{t}) + \xi\frac{\partial f}{\partial X}$ qui peut \^{e}tre r\'{e}duite \`{a} $f(X,\mathrm{t})$ puisque $\xi$ est par d\'{e}finition petit.
 \end{itemize}
 Ainsi la partie oscillante peut se calculer en r\'{e}solvant :
 \be
@@ -1395,7 +1395,7 @@ qui peut se d\'{e}composer en :
 \benn
 	m\ddot{\xi} = f_{1}(X)\cos(\omega\mathrm{t}) + f_{2}(X)\sin(\omega\mathrm{t})
 \eenn
-qui donne par int\'{e}gration double et en supposant comme nulle les constantees d'int\'{e}gration, nous arrivons \`{a} :
+qui donne par int\'{e}gration double et en supposant comme nulle les constantes d'int\'{e}gration, nous arrivons \`{a} :
 \bea
 	m\dot{\xi} & = & \frac{f_{1}(X)}{\omega}\sin(\omega\mathrm{t}) - \frac{f_{2}(X)}{\omega}\cos(\omega\mathrm{t}) \nonumber \\
 	\Leftrightarrow m\xi & = & -\frac{f_{1}(X)}{\omega^{2}}\cos(\omega\mathrm{t}) - \frac{f_{2}(X)}{\omega^{2}}\sin(\omega\mathrm{t}) \nonumber \\
@@ -1438,7 +1438,7 @@ Par d\'{e}rivation de la relation (\ref{EQ:30_6}), nous pouvons \'{e}crire :
 	\Leftrightarrow U_{eff} & = & U + \frac{m}{2}\overline{\dot{\xi}^{2}} \label{EQ:30_9}
 \eea
 
-$\overline{\dot{\xi}^{2}}$ est justement l'expression de l'\'{e}nergie cin\'{e}tique moyenne du mouvement oscillatoire, qui, par d\'{e}finition, est constante par rapport au temps. Le mouvement moyen de la particule par rapport aux oscillations s'effectue comme si, en plus du champ $U$, aggissait un champ suppl\'{e}mentaire constant et d\'{e}pendant du carr\'{e} de l'amplitude d'un champ variable.
+$\overline{\dot{\xi}^{2}}$ est justement l'expression de l'\'{e}nergie cin\'{e}tique moyenne du mouvement oscillatoire, qui, par d\'{e}finition, est constante par rapport au temps. Le mouvement moyen de la particule par rapport aux oscillations s'effectue comme si, en plus du champ $U$, agissait un champ suppl\'{e}mentaire constant et d\'{e}pendant du carr\'{e} de l'amplitude d'un champ variable.
 
 \subsection{G\'{e}n\'{e}ralisation \`{a} un nombre quelconque de degr\'{e}s de libert\'{e}}
 
