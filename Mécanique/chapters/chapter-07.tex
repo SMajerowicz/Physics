@@ -1,10 +1,10 @@
 \chapter{\'{E}quations canoniques}
 
-La formulation des lois de la M\'{e}canique \`{a} l'aide de la fonction de Lagrange suppose, pour d\'{e}crire l'\'{e}tat m\'{e}canique d'un syst\`{e}me, les coordonn\'{e}es et les vitesses g\'{e}n\'{e}ralis\'{e}es de celui-ci. Sa description \`{a} l'aide des coordonn\'{e}es et des impulsions g\'{e}n\'{e}ralis\'{e}es pr\'{e}sente des avantages, notamment pour l'\'{e}tude de probl\`{e}mes g\'{e}n\'{e}raux de M\'{e}canique. Reste donc \`{a} d\'{e}termine les \'{e}quations du mouvement correspondant \`{a} cette m\'{e}thode.
+La formulation des lois de la M\'{e}canique \`{a} l'aide de la fonction de Lagrange suppose, pour d\'{e}crire l'\'{e}tat m\'{e}canique d'un syst\`{e}me, les coordonn\'{e}es et les vitesses g\'{e}n\'{e}ralis\'{e}es de celui-ci. Sa description \`{a} l'aide des coordonn\'{e}es et des impulsions g\'{e}n\'{e}ralis\'{e}es pr\'{e}sente des avantages, notamment pour l'\'{e}tude de probl\`{e}mes g\'{e}n\'{e}raux de M\'{e}canique. Il reste donc \`{a} d\'{e}terminer les \'{e}quations du mouvement correspondant \`{a} cette m\'{e}thode.
 
 En math\'{e}matique, la transformation de Legendre permet de passer d'un choix de variables ind\'{e}pendantes \`{a} un autre. Nous \'{e}tudierons cela ci-dessous.
 
-La fonction de Lagrange est fonction des couples $(\{q_{i}\},\{\dot{q}_{i})$ donc :
+La fonction de Lagrange est fonction des couples $(\{q_{i}\},\{\dot{q}_{i})$) donc :
 \benn
 	\mathrm{d}L = \sum_{i}\frac{\partial L}{\partial q_{i}}\mathrm{d}q_{i} + \sum_{i}\frac{\partial L}{\partial \dot{q}_{i}}\mathrm{d}\dot{q}_{i}
 \eenn
@@ -37,7 +37,7 @@ ce qui permet d'en d\'{e}duire :
 \be
 	\forall i\text{, }\dot{q}_{i} = \sum_{i}\frac{\partial H}{\partial p_{i}}\text{ et }\dot{p}_{i} = -\sum_{i}\frac{\partial H}{\partial q_{i}} \label{EQ:40_4}
 \ee
-Ces deux \'{e}quations sont les \'{e}quations du mouvement recherch\'{e}es et sont appel\'{e}es les \emph{\'{e}quations de Hamilton}. Elles constituent pour un syst\`{e}me \`{a} $s$ degr\'{e}s de libert\'{e}, $2s$ \'{e}quations diff\'{e}rentielles du premier ordre \`{a} $2s$ fonctions inconnues : $q(\mathrm{t})$ et $p(\mathrm{t})$. Elles remplacent les $s$ \'{e}quations du second ordre obtenues par la m\'{e}thode de Lagrange, voir les relations (\ref{EQ:2_6}). Les \'{e}quations de Hamilton sont dites \emph{canoniques} de par leur simplicit\'{e} et leur sym\'{e}trie.
+Ces deux ensembles d'\'{e}quations sont les \'{e}quations du mouvement recherch\'{e}es et sont appel\'{e}es les \emph{\'{e}quations de Hamilton}. Elles constituent pour un syst\`{e}me \`{a} $s$ degr\'{e}s de libert\'{e}, $2s$ \'{e}quations diff\'{e}rentielles du premier ordre \`{a} $2s$ fonctions inconnues : $q(\mathrm{t})$ et $p(\mathrm{t})$. Elles remplacent les $s$ \'{e}quations du second ordre obtenues par la m\'{e}thode de Lagrange, voir les relations (\ref{EQ:2_6}). Les \'{e}quations de Hamilton sont dites \emph{canoniques} de par leur simplicit\'{e} et leur sym\'{e}trie.
 
 La d\'{e}riv\'{e}e totale par rapport au temps de la fonction de Hamilton vaut :
 \benn
@@ -49,7 +49,7 @@ Connaissant les \'{e}quations (\ref{EQ:40_4}), nous avons alors :
 \ee
 Si la fonction de Hamilton ne d\'{e}pend pas explicitement du temps alors $\frac{\partial H}{\partial\mathrm{t}} = 0$ et nous retrouvons la loi de conservation de l'\'{e}nergie vue au paragraphe (\ref{PAR:6}).
 
-En plus des couples $(q,\dot{q})$ pour la fonction de Lagrange et $(q,p)$ pour la fonction de Hamilton, ces deux fonctions peuvent \'{e}galement contenir des param\`{e}tres autres caract\'{e}risant le syst\`{e}me : param\`{e}tres intrinsi\`{e}ques ou champ ext\'{e}rieur\footnote{Le c{\oe}fficient de frottement ou l'amplitude de la force ext\'{e}rieure en sont deux exemples d\'{e}j\`{a} \'{e}voqu\'{e}s dans ce document.}. Soit $\lambda$ un de ces param\`{e}tres que nous consid\'{e}rons comme variable. La relation (\ref{EQ:40_1}) s'\'{e}crit alors :
+En plus des couples $(q,\dot{q})$ pour la fonction de Lagrange et $(q,p)$ pour la fonction de Hamilton, ces deux fonctions peuvent \'{e}galement contenir des param\`{e}tres autres caract\'{e}risant le syst\`{e}me : param\`{e}tres intrins\`{e}ques ou champ ext\'{e}rieur\footnote{Le c{\oe}fficient de frottement ou l'amplitude de la force ext\'{e}rieure en sont deux exemples d\'{e}j\`{a} \'{e}voqu\'{e}s dans ce document.}. Soit $\lambda$ un de ces param\`{e}tres que nous consid\'{e}rons comme variable. La relation (\ref{EQ:40_1}) s'\'{e}crit alors :
 \benn
 	\mathrm{d}L = \sum_{i}\dot{p}_{i}\mathrm{d}q_{i} + \sum_{i}p_{i}\mathrm{d}\dot{q}_{i} + \frac{\partial L}{\partial\lambda}\mathrm{d}\lambda
 \eenn
@@ -64,7 +64,7 @@ Donc en reprenant la d\'{e}finition (\ref{EQ:40_2}) de $H$ :
 \eea
 sachant que les quantit\'{e}s $\left(\frac{\partial H}{\partial\lambda}\right)_{q,p}$ est calcul\'{e}e pour $q$ et $p$ contants et $\left(\frac{\partial L}{\partial\lambda}\right)_{q,\dot{q}}$ pour $q$ et $\dot{q}$ constants.
 
-De la m\^{e}me mani\`{e}re, si $L = L_{0} + L'$ est la fonction de Lagrange d'un syst\`{e}me telle que $L'$ est une quantit\'{e} petite compar\'{e} \`{a} la fonction fondamentale $L_{0}$. En utilisant (\ref{EQ:40_2}) :
+De la m\^{e}me mani\`{e}re, si $L = L_{0} + L'$ est la fonction de Lagrange d'un syst\`{e}me telle que $L'$ est une quantit\'{e} petite compar\'{e}e \`{a} la fonction fondamentale $L_{0}$. En utilisant (\ref{EQ:40_2}) :
 \benn
 	H = \sum_{i}p_{i}\dot{q}_{i} - L = \sum_{i}p_{i}\dot{q}_{i} - L_{0} - L' = H_{0} - L'
 \eenn
@@ -110,7 +110,7 @@ cela permet, par identification, de conclure \`{a} :
 	\dot{q} = \frac{\partial R}{\partial p} & \text{ et } & \dot{p} = -\frac{\partial R}{\partial q} \label{EQ:41_3} \\
 	\frac{\partial R}{\partial\xi} = -\frac{\partial L}{\partial\xi} & \text{ et } & \frac{\partial R}{\partial\dot{\xi}} = -\frac{\partial L}{\partial\dot{\xi}} \label{EQ:41_4}
 \eea
-Comme l\'{e}quation de Lagrange pour la coordonn\'{e}e $\xi$ et d\'{e}finie par l'\'{e}quation (\ref{EQ:2_6}) est :
+Comme l'\'{e}quation de Lagrange pour la coordonn\'{e}e $\xi$ et d\'{e}finie par l'\'{e}quation (\ref{EQ:2_6}) est :
 \be
 	\frac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial L}{\partial\dot{\xi}}\right) = \frac{\partial L}{\partial\xi} \Rightarrow \frac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial R}{\partial\dot{\xi}}\right) = \frac{\partial R}{\partial\xi} \label{EQ:41_5}
 \ee
@@ -119,9 +119,9 @@ Par analogie avec les \'{e}quations du mouvement exprim\'{e}es avec la fonction 
 Par application de la d\'{e}finition de l'\'{e}nergie (\ref{EQ:6_1}), nous pouvons d\'{e}velopper :
 \bea
 	E & = & \dot{q}\frac{\partial L}{\partial\dot{q}} + \dot{\xi}\frac{\partial L}{\partial\dot{\xi}} - L = p\dot{q} + \dot{\xi}\frac{\partial L}{\partial\dot{\xi}} - L \nonumber \\
-	\Leftrightarrow E & = & R + \dot{\xi}\frac{\partial L}{\partial\dot{\xi}} \Leftrightarrow E = R - \dot{\xi}\frac{\partial L}{\partial\dot{\xi}} \label{EQ:41_6}
+	\Leftrightarrow E & = & R + \dot{\xi}\frac{\partial L}{\partial\dot{\xi}} \Leftrightarrow E = R - \dot{\xi}\frac{\partial R}{\partial\dot{\xi}} \label{EQ:41_6}
 \eea
-Par lin\'{e}rit\'{e} des \'{e}quations pr\'{e}c\'{e}dentes, l'extension des formules obtenues pour le cas de plusieurs coordonn\'{e}es $q$ et $\xi$ est triviale.
+Par lin\'{e}arit\'{e} des \'{e}quations pr\'{e}c\'{e}dentes, l'extension des formules obtenues pour le cas de plusieurs coordonn\'{e}es $q$ et $\xi$ est triviale.
 
 La fonction de Routh est particuli\`{e}rement utile lorsque nous avons des coordonn\'{e}es cycliques, i.e. telles que si $\lambda$ est cyclique alors $\frac{\partial L}{\partial\lambda} = 0$ et la fonction de Lagrange $L$ ne d\'{e}pend donc pas explicitement de la variable $\lambda$.
 
@@ -172,7 +172,7 @@ D\'{e}terminons d\'{e}sormais quelques propri\'{e}t\'{e}s :
 \eenn
 soit :
 \be
-	\{f,g\} = -\{f,g\} \label{EQ:42_6}
+	\{f,g\} = -\{g,f\} \label{EQ:42_6}
 \ee
 Si $c$ est une constante alors :
 \be
@@ -245,13 +245,13 @@ et nous remarquons que pour la somme des trois \'{e}l\'{e}ments, tous les termes
 	\{f,\{g,h\}\}_{n=0} = 0
 \eenn
 Cette identit\'{e} est valable pour n'importe quel syst\`{e}me n'ayant qu'une unique particule.
-En proc\'{e}dant de la m\^{e}me mani\`{e}re, le calcul de la diff\'{e}rence $\{f,\{g,h\}\}_{n+1} - \{f,\{g,h\}\}_{n}$ donne la valeur du crochet de Poisson pour la particule identifi\'{e}e $n+1$ qui est nulle, comme d\'{e}montr\'{e}e pr\'{e}c\'{e}demment. Nous pouvons donc en conclure que :
+En proc\'{e}dant de la m\^{e}me mani\`{e}re, le calcul de la diff\'{e}rence $\{f,\{g,h\}\}_{n+1} - \{f,\{g,h\}\}_{n}$ donne la valeur du crochet de Poisson pour la particule identifi\'{e}e $n+1$ qui est nulle, comme d\'{e}montr\'{e} pr\'{e}c\'{e}demment. Nous pouvons donc en conclure que :
 \be
 	\{f,\{g,h\}\} + \{g,\{h,f\}\} + \{h,\{g,f\}\} = 0 \label{EQ:42_14}
 \ee
 qui est \emph{l'identit\'{e} de Jacobi}.
 
-Une propri\'{e}t\'{e} importante des crochets de Poisson consiste en ce que, si $f$ et $g$ sont deux int\'{e}grales premi\`{e}res du mouvement alors leurs crochets de Poisson l'est aussi. C'est la \emph{th\'{e}or\`{e}me de Poisson}. Pour le d\'{e}motrer, nous commen\c{c}ons par appliquer l'identi\'{e} de Jacobi (\ref{EQ:42_14}) en identifiant $h$ \`{a} la fonction de Hamilton $H$, soit :
+Une propri\'{e}t\'{e} importante des crochets de Poisson consiste en ce que, si $f$ et $g$ sont deux int\'{e}grales premi\`{e}res du mouvement alors leurs crochets de Poisson l'est aussi. C'est le \emph{th\'{e}or\`{e}me de Poisson}. Pour le d\'{e}motrer, nous commen\c{c}ons par appliquer l'identit\'{e} de Jacobi (\ref{EQ:42_14}) en identifiant $h$ \`{a} la fonction de Hamilton $H$, soit :
 \benn
 	\{f,\{g,H\}\} + \{g,\{H,f\}\} + \{H,\{g,f\}\} = 0
 \eenn
@@ -259,7 +259,7 @@ La d\'{e}finition (\ref{EQ:42_1}) donne :
 \benn
 	\frac{\mathrm{d}}{\mathrm{dt}}\left(\{f,g\}\right) = \frac{\partial}{\partial\mathrm{t}}\left(\{f,g\}\right) + \{H,\{f,g\}\} = \left\{\frac{\partial f}{\partial\mathrm{t}},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}}\right\} + \{H,\{f,g\}\}
 \eenn
-par application de la formule (\ref{EQ:42_10}). L'identi\'{e} (\ref{EQ:42_14}) permet de d\'{e}velopper la relation pr\'{e}c\'{e}dente telle que :
+par application de la formule (\ref{EQ:42_10}). L'identit\'{e} (\ref{EQ:42_14}) permet de d\'{e}velopper la relation pr\'{e}c\'{e}dente telle que :
 \bea
 	\frac{\mathrm{d}}{\mathrm{dt}}\left(\{f,g\}\right) & = & \left\{\frac{\partial f}{\partial\mathrm{t}},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}}\right\} - \{f,\{g,H\}\} - \{g,\{H,f\}\} \nonumber \\
 	& = & \left\{\frac{\partial f}{\partial\mathrm{t}},g\right\} + \left\{f,\frac{\partial g}{\partial\mathrm{t}}\right\} + \{\{H,g\},f\} + \{\{H,f\},g\} \nonumber \\
@@ -272,7 +272,7 @@ Or $f$ et $g$ sont des int\'{e}grales premi\`{e}res, i.e. $\frac{\mathrm{d}f}{\m
 \eenn
 $\{f,g\}$ est donc bien une int\'{e}grale premi\`{e}re si $f$ et $g$ le sont aussi. Ce th\'{e}or\`{e}me s'applique \'{e}galement si $f$ et $g$ ne d\'{e}pendent pas explicitement du temps.
 
-Enfin et parce que dans un syst\`{e}me fini compos\'{e} de $s$ degr\'{e} de libert\'{e}, le nombre maximal d'int\'{e}grales premi\`{e}res est de $2s - 1$, voir le paragraphe (\ref{PAR:6}), alors le th\'{e}or\`{e}me de Poisson ne permet donc pas toujours d'obtenir de nouvelles int\'{e}grales premi\`{e}res.
+Enfin et parce que dans un syst\`{e}me fini compos\'{e} de $s$ degr\'{e}s de libert\'{e}, le nombre maximal d'int\'{e}grales premi\`{e}res est de $2s - 1$, voir le paragraphe (\ref{PAR:6}), alors le th\'{e}or\`{e}me de Poisson ne permet donc pas toujours d'obtenir de nouvelles int\'{e}grales premi\`{e}res.
 
 \section{L'action en fonction des coordonn\'{e}es}\label{PAR:43}
 
@@ -280,11 +280,11 @@ L'action d\'{e}finie dans la relation (\ref{EQ:2_1}) est l'int\'{e}grale de la f
 \be
 	S = \int_{t_{1}}^{t_{2}}L\mathrm{dt} \label{EQ:43_1}
 \ee
-prise le long de la trajectoire entre deux positoins donn\'{e}es $q^{(1)}$ et $q^{(2)}$ occup\'{e}es par le syst\`{e}me aux instants $\mathrm{t}_{1}$ et $\mathrm{t}_{2}$. La comparaison des vlaurs de l'int\'{e}grale pour des trajectoires voisines ayant les m\^{e}mes limites $q(\mathrm{t}_{1})$ et $q(\mathrm{t}_{2})$ fait varier l'action. Une seule de ces trajectoires correspond au mouvement r\'{e}el, c'est celle pour laquelle l'action $S$ est minimum.
+prise le long de la trajectoire entre deux positions donn\'{e}es $q^{(1)}$ et $q^{(2)}$ occup\'{e}es par le syst\`{e}me aux instants $\mathrm{t}_{1}$ et $\mathrm{t}_{2}$. La comparaison des valeurs de l'int\'{e}grale pour des trajectoires voisines ayant les m\^{e}mes limites $q(\mathrm{t}_{1})$ et $q(\mathrm{t}_{2})$ fait varier l'action. Une seule de ces trajectoires correspond au mouvement r\'{e}el, c'est celle pour laquelle l'action $S$ est minimum.
 
 \subsection{Cas o\`{u} seule la coordonn\'{e}e finale est variable}
 
-Nous allons d\'{e}sormais d\'{e}termine l'action $S$ comme une grandeur caract\'{e}risant le mouvement le long de trajectoires r\'{e}elles. Nous comparerons alors les valeurs de $S$ pour des trajectoires ayant une origine commune $q_{1} = q(\mathrm{t}_{1})$ mais passant \`{a} l'instant $\mathrm{t}_{2}$ par des positions diff\'{e}rentes. En d'autres termes, nous consid\'{e}rerons l'int\'{e}grale d'action pour des trajectoires r\'{e}elles comme fonction des coordonn\'{e}es \`{a} la limite sup\'{e}rieure d'int\'{e}gration.
+Nous allons d\'{e}sormais d\'{e}terminer l'action $S$ comme une grandeur caract\'{e}risant le mouvement le long de trajectoires r\'{e}elles. Nous comparerons alors les valeurs de $S$ pour des trajectoires ayant une origine commune $q_{1} = q(\mathrm{t}_{1})$ mais passant \`{a} l'instant $\mathrm{t}_{2}$ par des positions diff\'{e}rentes. En d'autres termes, nous consid\'{e}rerons l'int\'{e}grale d'action pour des trajectoires r\'{e}elles comme fonction des coordonn\'{e}es \`{a} la limite sup\'{e}rieure d'int\'{e}gration.
 
 La variation de l'action lorsque nous passons d'une trajectoire \`{a} une trajectoire voisine est donn\'{e}e pour un seul degr\'{e} de libert\'{e} par la relation (\ref{EQ:2_5}) :
 \benn
@@ -301,7 +301,7 @@ et par voie de cons\'{e}quence :
 
 \subsection{Cas o\`{u} la dur\'{e}e du mouvement est variable}
 
-De fa\c{c}on analogue, nous pouvons envisager l'action comme fonction explicite du temps. Dans ce cas, nous consid\'{e}rons les trajectoires partant \`{a} un instant donn\'{e} $\mathrm{t}_{1}$ d'une position $q^{(1)}$ pour aboutir \`{a} une position donn\'{e}e $q^{(2)}$ \`{a} des instants diff\'{e}rents $\mathrm{t}_{2} = \mathrm{t}$. $\frac{\partial S}{\partial\mathrm{t}}$ peut \^{e}tre d\'{e}termin\'{e}e au moyen d'une variation appropri\'{e}e de l'int\'{e}grale de la relation (\ref{EQ:2_5}).
+De fa\c{c}on analogue, nous pouvons envisager l'action comme fonction explicite du temps. Dans ce cas, nous consid\'{e}rons les trajectoires partant \`{a} un instant donn\'{e} $\mathrm{t}_{1}$ d'une position $q^{(1)}$ pour aboutir \`{a} une position donn\'{e}e $q^{(2)}$ \`{a} des instants diff\'{e}rents $\mathrm{t}_{2} = \mathrm{t}$. La quantit\'{e} $\frac{\partial S}{\partial\mathrm{t}}$ peut \^{e}tre d\'{e}termin\'{e}e au moyen d'une variation appropri\'{e}e de l'int\'{e}grale de la relation (\ref{EQ:2_5}).
 
 Par d\'{e}finition de l'action, voir la formule (\ref{EQ:2_1}), sa d\'{e}riv\'{e}e totale par rapport au temps le long des trajectoires vaut :
 \be
@@ -323,7 +323,7 @@ En prenant l'\'{e}galit\'{e} (\ref{EQ:43_3}), nous obtenons finalement :
 	\frac{\mathrm{d}S}{\mathrm{dt}} & = & -H + \sum_{i}p_{i}\dot{q}_{i} = -H + \sum_{i}p_{i}\frac{\mathrm{d}q_{i}}{\mathrm{dt}} \nonumber \\
 	\Leftrightarrow \mathrm{d}S & = & \sum_{i}p_{i}\mathrm{d}q_{i} - H\mathrm{dt} \label{EQ:43_6}
 \eea
-qui donne la diff\'{e}rentielle totale de l'action comme fonction des coordonn\'{e}es et du temps \`{a} la limite sup\'{e}rieure de l'inté\'{e}grale (\ref{EQ:43_1}).
+qui donne la diff\'{e}rentielle totale de l'action comme fonction des coordonn\'{e}es et du temps \`{a} la limite sup\'{e}rieure de l'int\'{e}grale (\ref{EQ:43_1}).
 
 \subsection{Cas o\`{u} les coordonn\'{e}es initiale et finale et le temps sont variables}
 
@@ -331,7 +331,7 @@ Nous nous mettons dans le cadre o\`{u} les coordonn\'{e}es et le temps varient a
 \be
 	\mathrm{d}S = \sum_{i}p_{i}^{(2)}\mathrm{d}q_{i}^{(2)} - H^{(2)}\mathrm{dt}^{(2)} - \sum_{i}p_{i}^{(1)}\mathrm{d}q_{i}^{(1)} + H^{(1)}\mathrm{dt}^{(1)} \label{EQ:43_7}
 \ee
-Quelle que soit l'action ext\'{e}rieure qui pourrait s'exercer sur le syst\`{e}me pedant son mouvement, l'\'{e}tat final du syst\`{e}me n'est pas une fonction arbitraire de son \'{e}tat initial. Seules sont possibles les trajectoires pour lesquelles la relation (\ref{EQ:43_7}) est une diff\'{e}rentielle totale exacte.
+Quelle que soit l'action ext\'{e}rieure qui pourrait s'exercer sur le syst\`{e}me pendant son mouvement, l'\'{e}tat final du syst\`{e}me n'est pas une fonction arbitraire de son \'{e}tat initial. Seules sont possibles les trajectoires pour lesquelles la relation (\ref{EQ:43_7}) est une diff\'{e}rentielle totale exacte.
 
 De plus, le principe de moindre action, ind\'{e}pendamment de la fonction de Lagrange, impose \`{a} l'ensemble des trajectoires possibles des limites bien d\'{e}termin\'{e}es.
 
@@ -366,7 +366,7 @@ que nous pouvons injecter dans la variation de l'action et obtenir :
 \benn
 	\delta S = \int{\delta p\left(\mathrm{d}q - \frac{\partial H}{\partial p}\mathrm{dt}\right)} + \left[p\delta q\right] - \int{\delta q\left(\mathrm{d}p - \frac{\partial H}{\partial q}\mathrm{dt}\right)}
 \eenn
-Nous posons $\left[p\delta q\right] = $ par choix des conditions aux limites. Et par application du principe de moindre action (\ref{EQ:2_4}), \`{a} savoir $\delta S = 0$, et puisque les quantit\'{e} $\delta q$ et $\delta p$ sont ind\'{e}pendantes et arbitraires, alors il est n\'{e}cessaire de poser :
+Nous posons $\left[p\delta q\right] = 0$ par choix des conditions aux limites. Et par application du principe de moindre action (\ref{EQ:2_4}), \`{a} savoir $\delta S = 0$, et puisque les quantit\'{e} $\delta q$ et $\delta p$ sont ind\'{e}pendantes et arbitraires, alors il devient n\'{e}cessaire de poser :
 \bea
 	\mathrm{d}q - \frac{\partial H}{\partial p}\mathrm{dt} = 0 & \text{ et } & \mathrm{d}p - \frac{\partial H}{\partial q}\mathrm{dt} = 0 \nonumber \\
 	\frac{\partial H}{\partial p} = \dot{q} & \text{ et } & \frac{\partial H}{\partial q} = -\dot{p} \nonumber
@@ -422,7 +422,7 @@ et l'\'{e}nergie constante :
 \eenn
 qui permet d\'{e}crire la diff\'{e}rientelle en temps comme :
 \be
-	\mathrm{dt} = \sqrt{\frac{\sum_{i,j}a_{ij}\mathrm{d}q_{i}\mathrm{d}q_{j}}{2(E - U})} \label{EQ:44_8}
+	\mathrm{dt} = \sqrt{\frac{\sum_{i,j}a_{ij}\mathrm{d}q_{i}\mathrm{d}q_{j}}{2(E - U)}} \label{EQ:44_8}
 \ee
 Nous pouvons alors d\'{e}velopper la diff\'{e}rentielle de l'action r\'{e}duite :
 \bea
