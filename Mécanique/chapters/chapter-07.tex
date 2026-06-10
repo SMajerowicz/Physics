@@ -375,9 +375,9 @@ Nous retrouvons donc bien les \'{e}quations de Hamilton d\'{e}finies par les rel
 
 \section{Principe de Maupertuis}\label{PAR:44}
 
-Le mouvement d'un syst\`{e}me m\'{e}canique est enti\`{e}rement d\'{e}termin\'{e} par le principe de moindre action. En r\'{e}solvant les \'{e}quations du mouvement qui en d\'{e}coule, nous d\'{e}terminons la forme de la trajectoire ainsi que la relation entre la position et le temps \'{e}coul\'{e}.
+Le mouvement d'un syst\`{e}me m\'{e}canique est enti\`{e}rement d\'{e}termin\'{e} par le principe de moindre action. En r\'{e}solvant les \'{e}quations du mouvement qui en d\'{e}coulent, nous d\'{e}terminons la forme de la trajectoire ainsi que la relation entre la position et le temps \'{e}coul\'{e}.
 
-Nous nous concentrons maintenant et uniquement sur la question plus restreinte de la d\'{e}termination de la forme de la trajectoire. Dnas notre cas pr\'{e}cis, les fonctions de Lagrange et de Hamilton ne d\'{e}pendent pas explicitement du temps et par cons\'{e}quent, l'\'{e}nergie du syst\`{e}me se conserve : $H(p,q) = E$.
+Nous nous concentrons maintenant uniquement sur la question plus restreinte de la d\'{e}termination de la forme de la trajectoire. Dans notre cas pr\'{e}cis, les fonctions de Lagrange et de Hamilton ne d\'{e}pendent pas explicitement du temps et par cons\'{e}quent, l'\'{e}nergie du syst\`{e}me se conserve : $H(p,q) = E$.
 
 Le principe de moindre action stipule que pour des valeurs initiale et finale des coordonn\'{e}es et du temps donn\'{e}es, la variation de l'action est nulle. Mais si nous autorisons la variation de l'instant final $\mathrm{t}$, les coordonn\'{e}es initiale et finale restant toujours fixes, alors la relation (\ref{EQ:43_5}) s'applique :
 \be
@@ -397,7 +397,7 @@ et la relation (\ref{EQ:43_8}) devient : $S = \int(\sum_{i}p_{i}\mathrm{d}q_{i} 
 \ee
 et la formule (\ref{EQ:44_3}) se r\'{e}\'{e}crit :
 \benn
-	\delta S = \delta S_{0} - E\mathrm{dt}
+	\delta S = \delta S_{0} - E\delta\mathrm{t}
 \eenn
 Or, en accord avec la relation (\ref{EQ:44_2}), nous pouvons en d\'{e}duire :
 \be
@@ -466,23 +466,21 @@ Ainsi la relation (\ref{EQ:44_11}) devient dans ce cadre :
 \be
 	\int{\frac{\sum_{i,j}a_{ij}\mathrm{d}q_{j}\mathrm{d}q_{i}}{\sqrt{2(E - U)}}} = \mathrm{t} - \mathrm{t}_{0} \label{EQ:44_12}
 \ee
-qui n'est rien d'autre que l'int\'{e}grale de la relation (\ref{EQ:44_8}).
-
-Avec l'\'{e}quation de la trajectoire, l'int\'{e}grale d\'{e}termine enti\`{e}rement le mouvement.
+qui n'est rien d'autre que l'int\'{e}grale de la relation (\ref{EQ:44_8}). Avec l'\'{e}quation de la trajectoire, l'int\'{e}grale d\'{e}termine enti\`{e}rement le mouvement.
 
 \section{Transformations canoniques}\label{PAR:45}
 
 \subsection{D\'{e}finitions}
 
-Le choix des coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es $q$ n'est limit\'{e} par aucune condition et nous pouvons prendre $s$ grandeurs quelconques d\'{e}finissant de fa\c{c}on univoque la position du syst\`{e}me \'{e}tudi\'{e} dans l'espace. Les \'{e}quations de Lagrange (\ref{EQ:2_6}) ne d\'{e}pendent pas de ce choix et nous pouvons en d\'{e}duire qu'elles sont invariantes par rapport \`{a} la transformation qui fait passer des coordonn\'{e}es $q_{1}$, $q_{2}$, $\ldots$, $q_{s}$ \`{a} d'autres grandeurs ind\'{e}pendants $Q_{1}$, $Q_{2}$, $\ldots$, $Q_{s}$. Les nouvelles coordonn\'{e}es $Q_{i}$ sont des fonctions de $q_{i}$. Admettons que cette relation contienne \'{e}galement le temps, i.e. :
+Le choix des coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es $q$ n'est limit\'{e} par aucune condition et nous pouvons prendre $s$ grandeurs quelconques d\'{e}finissant de fa\c{c}on univoque la position du syst\`{e}me \'{e}tudi\'{e} dans l'espace. Les \'{e}quations de Lagrange (\ref{EQ:2_6}) ne d\'{e}pendent pas de ce choix et nous pouvons en d\'{e}duire qu'elles sont invariantes par rapport \`{a} la transformation qui fait passer des coordonn\'{e}es $q_{1}$, $q_{2}$, $\ldots$, $q_{s}$ \`{a} d'autres grandeurs ind\'{e}pendantes $Q_{1}$, $Q_{2}$, $\ldots$, $Q_{s}$. Les nouvelles coordonn\'{e}es $Q_{i}$ sont des fonctions de $q_{i}$. Admettons que cette relation contienne \'{e}galement le temps, i.e. :
 \be
 	\forall i\text{, }Q_{i} = Q_{i}(q,\mathrm{t}) \label{EQ:45_1}
 \ee
 qui sont $s$ \emph{transformations ponctuelles}.
 
-De la m\^{e}me mani\`{e}re que pour les \'{e}quatinos de Lagrange, la transformation (\ref{EQ:45_1}) laisse invariantes les \'{e}quations de Hamilton (\ref{EQ:40_4}).
+De la m\^{e}me mani\`{e}re que pour les \'{e}quations de Lagrange, la transformation (\ref{EQ:45_1}) laisse invariantes les \'{e}quations de Hamilton (\ref{EQ:40_4}).
 
-Toutefois, dans la m\'{e}thode de Hamilton, les impulsions $p$ jouent le r\^{o}le de variables ind\'{e}pendantes au m\^{e}me titre que les coordonn\'{e}es $q$. Ainsi la notion de transformation peut \^{e}tre \'{e}largie pour englober la transformation des $2s$ variables ind\'{e}pendantes $p$ et $q$ en les nouvelles variables $P$ et $Q$ suivant les formules :
+Toutefois, dans la m\'{e}thode de Hamilton, les impulsions $p$ jouent le r\^{o}le de variables ind\'{e}pendantes au m\^{e}me titre que les coordonn\'{e}es $q$. Ainsi la notion de transformation peut \^{e}tre \'{e}largie pour englober la transformation des $2s$ variables ind\'{e}pendantes $p$ et $q$ en de nouvelles variables $P$ et $Q$ suivant les formules :
 \be
 	\forall i\text{, }Q_{i} = Q_{i}(p,q,\mathrm{t})\text{ et }P_{i} = P_{i}(p,q,\mathrm{t}) \label{EQ:45_2}
 \ee
@@ -566,7 +564,7 @@ Ces trois relations sont les conditions auxquelles doivent satisfaire les nouvel
 
 \subsection{Cas particulier du mouvement comme transformation canonique}\label{PAR:45_3}
 
-Il est \`{a} noter que la variation des grandeurs $p$ et $q$ lors du mouvement peut \^{e}tre consi\'{e}r\'{e}e comme une transformation canonique.
+Il est \`{a} noter que la variation des grandeurs $p$ et $q$ lors du mouvement peut \^{e}tre consid\'{e}r\'{e}e comme une transformation canonique.
 
 Soit $p_{\mathrm{t}}$ et $q_{\mathrm{t}}$ les valeurs des variables canoniques \`{a} l'instant $\mathrm{t}$ et $p_{\mathrm{t+\tau}}$ et $q_{\mathrm{t+\tau}}$ leurs valeurs \`{a} l'instant $\mathrm{t} + \tau$. Ces derni\`{e}res sont fonction des premi\`{e}res et de la valeur $\tau$ de l'intervalle de temps en tant que param\`{e}tre :
 \benn
@@ -585,9 +583,9 @@ Alors $-S$ est la fonction g\'{e}n\'{e}ratrice de cette transformation canonique
 
 \section{Th\'{e}or\`{e}me de Liouville}\label{PAR:46}
 
-Pour l'interpr\'{e}tation g\'{e}om\'{e}trique des ph\'{e}nom\`{e}nes m\'{e}caniques, nous utilisons la notion d'\emph{espace des phases}. C'est un espace \`{a} $2s$ dimensions sur les axes duquel sont port\'{e}es les $s$ coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es et les $s$ impulsions du sys\`{e}me. Chaque point de cet espace correspond \`{a} un \'{e}tat d\'{e}termin\'{e} du syst\`{e}me. Lorsque le syst\`{e}me se meut, le point de l'espace des phases qui le repr\'{e}sente d\'{e}crit une ligne appel\'{e}e trajectoire dans l'espace des phases.
+Pour l'interpr\'{e}tation g\'{e}om\'{e}trique des ph\'{e}nom\`{e}nes m\'{e}caniques, nous utilisons la notion d'\emph{espace des phases}. C'est un espace \`{a} $2s$ dimensions sur les axes desquel sont port\'{e}es les $s$ coordonn\'{e}es g\'{e}n\'{e}ralis\'{e}es et les $s$ impulsions du syst\`{e}me. Chaque point de cet espace correspond \`{a} un \'{e}tat d\'{e}termin\'{e} du syst\`{e}me. Lorsque le syst\`{e}me se meut, le point de l'espace des phases qui le repr\'{e}sente d\'{e}crit une ligne appel\'{e}e trajectoire dans l'espace des phases.
 
-Le produit des diff\'{e}rentielles $\mathrm{d}\Gamma = \mathrm{d}q_{1}\ldots\mathrm{d}q_{s}\mathrm{d}p_{1}\ldots\mathrm{d}p_{s}$ repr\'{e}sente un \'{e}l\'{e}ment de volume de l'espace des phases. Consid\'{e}rons $\int{\mathrm{d}\Gamma}$ prise sur un domaine quelconque de cet espace et repr\'{e}sentant le volume de ce domaine.
+Le produit des diff\'{e}rentielles $\mathrm{d}\Gamma = \mathrm{d}q_{1}\ldots\mathrm{d}q_{s}\mathrm{d}p_{1}\ldots\mathrm{d}p_{s}$ repr\'{e}sente un \'{e}l\'{e}ment de volume de l'espace des phases. Nous consid\'{e}rons $\int{\mathrm{d}\Gamma}$ pris sur un domaine quelconque de cet espace et repr\'{e}sentant le volume de ce domaine.
 
 Nous allons d\'{e}montrer que cette grandeur poss\`{e}de la propri\'{e}t\'{e} d'\^{e}tre invariante par rapport aux transformations canoniques. Ainsi si nous transformons canoniquement $p,q$ en $P,Q$, nous aurons :
 \be
@@ -631,11 +629,11 @@ En \'{e}crivant les termes de la matrice jacobienne pour une fonction g\'{e}n\'{
                 \frac{\partial P_{i}}{\partial p_{j}} = \frac{\partial^{2}\Phi}{\partial P_{j}\partial q_{i}}\text{ pour }i > s\text{ et }j > s
         \end{cases}
 \eenn
-Puisque nous avons des termes pour identiques car il y a juste une inversion des identifiants de lignes et de colonnes alors les d\'{e}terminants des deux matrices au num\'{e}rateur et au d\'{e}nominateur sont \'{e}gaux et nous avons donc bien $\lvert J\rvert = 1$.
+Puisque nous avons des termes identiques car il y a juste une inversion des identifiants de lignes et de colonnes alors les d\'{e}terminants des deux matrices au num\'{e}rateur et au d\'{e}nominateur sont \'{e}gaux et nous avons donc bien $\lvert J\rvert = 1$.
 
 Par extension, nous avons :
 \be
-	\int\mathrm{d}\Gamma = cste/\mathrm{t} \Leftrightarrow \frac{\mathrm{d}\Gamma}{\mathrm{dt}} ) 0 \label{EQ:46_5}
+	\int\mathrm{d}\Gamma = cste/\mathrm{t} \Leftrightarrow \frac{\mathrm{d}\Gamma}{\mathrm{dt}} = 0 \label{EQ:46_5}
 \ee
 L'invariance d'un volume de l'espace des phases par une transformation canonique est le \emph{th\'{e}or\`{e}me de Liouville}. Cela s'applique lors du mouvement puisque la variation au cours du temps de $p$ et $q$ est une transformation canonique de fonction g\'{e}n\'{e}ratrice $-S$ comme d\'{e}j\`{a} d\'{e}montr\'{e}e au paragraphe (\ref{PAR:45})
 
@@ -643,7 +641,7 @@ L'invariance d'un volume de l'espace des phases par une transformation canonique
 
 \subsection{G\'{e}n\'{e}ralit\'{e}s}
 
-Le paragraphe (\ref{PAR:43}) nous a permis de d\'{e}finir l'action comme fonction des coordonn\'{e}es et du temps. Nous avons aussi relier la d\'{e}riv\'{e}e partielle par rapport au temps de $S(q,\mathrm{t})$ \`{a} la fonction de Hamilton du syst\`{e}me telle, voir l'\'{e}quation (\ref{EQ:43_5}) :
+Le paragraphe (\ref{PAR:43}) nous a permis de d\'{e}finir l'action comme fonction des coordonn\'{e}es et du temps. Nous avons aussi reli\'{e} la d\'{e}riv\'{e}e partielle par rapport au temps de $S(q,\mathrm{t})$ \`{a} la fonction de Hamilton du syst\`{e}me telle, voir l'\'{e}quation (\ref{EQ:43_5}) :
 \benn
 	\frac{\partial S}{\partial\mathrm{t}} + H(q,p,\mathrm{t}) = 0
 \eenn
@@ -651,15 +649,15 @@ Sachant que les impulsions sont le r\'{e}sultat de la d\'{e}riv\'{e}e partielle 
 \be
 	\frac{\partial S}{\partial\mathrm{t}} + H(q_{1},\ldots,q_{s},\frac{\partial S}{\partial q_{1}},\ldots,\frac{\partial S}{\partial q_{s}}) = 0 \label{EQ:47_1}
 \ee
-Cette \'{e}quation du premier ordre est appel\'{e}e \emph{\'{e}quation de Hamilton-Jacobi}. Toute \'{e}quation aux d\'{e}riv\'{e}es partielles du premier ordre poss\`{e}de une solution d\'{e}pendant d'une fonction arbitraire. Cette solution est l'int\'{e}grale g\'{e}n\'{e}rale de l'\'{e}quation. En m\'{e}canique, cette int\'{e}grale g\'{e}n\'{e}rale de l'\'{e}quation de Hamilton-Jacobi ne joue pas une r\^{o}le essentiel au contraire de l'\emph{int\'{e}grale compl\`{e}te} qui contient autant de constrantes arbitraires ind\'{e}pendantes qu'il y a de variables ind\'{e}pendantes.
+Cette \'{e}quation du premier ordre est appel\'{e}e \emph{\'{e}quation de Hamilton-Jacobi}. Toute \'{e}quation aux d\'{e}riv\'{e}es partielles du premier ordre poss\`{e}de une solution d\'{e}pendant d'une fonction arbitraire. Cette solution est l'int\'{e}grale g\'{e}n\'{e}rale de l'\'{e}quation. En m\'{e}canique, cette int\'{e}grale g\'{e}n\'{e}rale de l'\'{e}quation de Hamilton-Jacobi ne joue pas une r\^{o}le essentiel au contraire de l'\emph{int\'{e}grale compl\`{e}te} qui contient autant de constantes arbitraires ind\'{e}pendantes qu'il y a de variables ind\'{e}pendantes.
 
 Dans l'\'{e}quation de Hamilton-Jacobi, ces variables ind\'{e}pendantes sont les coordonn\'{e}es et le temps. Par la suite, pour un syst\`{e}me de $s$ degr\'{e} de libert\'{e}, l'int\'{e}grale compl\`{e}te de cette \'{e}quation doit contenir $s+1$ constantes arbitraires.
 
-Puisque l'action $S$ ne figure dans l'\'{e}quation (\ref{EQ:47_1}) que par ses d\'{e}riv\'{e}es partielles, l'une des constantes arbitraires appara\^{i}t dans l'int\'{e}grale compl\`{e}te comme une grandeur additive. L'int\'{e}grale compl\`{e}te de l'\'{e}quation de hamilton-Jacobi prend donc la forme suivante :
+Puisque l'action $S$ ne figure dans l'\'{e}quation (\ref{EQ:47_1}) que par ses d\'{e}riv\'{e}es partielles, l'une des constantes arbitraires appara\^{i}t dans l'int\'{e}grale compl\`{e}te comme une grandeur additive. L'int\'{e}grale compl\`{e}te de l'\'{e}quation de Hamilton-Jacobi prend donc la forme suivante :
 \be
 	S = f(q_{1},\ldots,q_{s},\alpha_{1},\ldots,\alpha_{s},\mathrm{t}) + A \label{EQ:47_2}
 \ee
-avec $i \in \{1,\ldots,s\}$ $\alpha_{i}$ et $A$ des constantes arbitraires.
+avec $i \in \{1,\ldots,s\}$, $\alpha_{i}$ et $A$ des constantes arbitraires.
 
 \subsection{Int\'{e}grale compl\`{e}te et solution des \'{e}quations du mouvement}\label{PAR:47_1}
 
@@ -692,9 +690,9 @@ En partant de la fonction de Hamilton, nous \'{e}crivons l'\'{e}quation de Hamil
 \be
 	\frac{\partial S}{\partial\alpha_{i}} = \beta_{i} \label{EQ:47_4}
 \ee
-La solution de ce syst\`{e}me nous donne les coordonn\'{e}es $q$ en fonction du temps et de $2s$ constantes arbitraires. Les relations $\frac{\partial S}{\partial q_{i}} = p_{i}$ nous donnent ensuite la relation entre l'impulsion et le temps.
+La solution de ce syst\`{e}me nous donne les coordonn\'{e}es $q$ en fonction du temps et des $2s$ constantes arbitraires. Les relations $\frac{\partial S}{\partial q_{i}} = p_{i}$ nous donnent ensuite la relation entre l'impulsion et le temps.
 
-Dans le cas o\`{u} nous avons un syst\`{e}me conservatif, i.e. tel que la fonction de Hamilton ne d\'{e}pend explicitement du temps, alors la d\'{e}pendance de l'action par rapport au temps se r\'{e}duit au terme $-E\mathrm{t}$, voir la formule (\ref{EQ:44_2}), telle que :
+Dans le cas o\`{u} nous avons un syst\`{e}me conservatif, i.e. tel que la fonction de Hamilton ne d\'{e}pend explicitement pas du temps, alors la d\'{e}pendance de l'action par rapport au temps se r\'{e}duit au terme $-E\mathrm{t}$, voir la formule (\ref{EQ:44_2}), telle que :
 \be
 	S = S_{0}(q) - E\mathrm{t} \label{EQ:47_5}
 \ee
@@ -762,7 +760,7 @@ Dans un syst\`{e}me conservatif, nous avons par d\'{e}finition $\frac{\partial H
 
 \subsection{Exemples concrets}\label{PAR:48_3}
 
-Pour s\'{e}parer les variables dans l'\'{e}quation de Hamilton-Jacobi, il est essentiel de bien choisir les coordonn\'{e}es. Nous \'{e}tudierons par la suite plusieurs cas d'un point mat\'{e}riel de masse $m$ dans un syst\`{e}me conservatif.
+Pour s\'{e}parer les variables dans l'\'{e}quation de Hamilton-Jacobi, il est essentiel de bien choisir les coordonn\'{e}es. Nous \'{e}tudions par la suite plusieurs cas d'un point mat\'{e}riel de masse $m$ dans un syst\`{e}me conservatif.
 
 \subsubsection{Coordonn\'{e}es sph\'{e}riques}\label{PAR:48_3_1}
 
@@ -832,7 +830,7 @@ et encore :
 		r - z = \frac{1}{2}(\xi + \eta) - \frac{1}{2}(\xi - \eta) = \eta \label{EQ:48_12}
 	\end{cases}
 \ee
-La formule (\ref{EQ:4_5}) donne la fonction de Lagrange en coordonn\'{e}e cylindriques \`{a} laquelle nous ajoutons la partie relative \`{a} l'\'{e}nergie potentielle :
+La formule (\ref{EQ:4_5}) donne la fonction de Lagrange en coordonn\'{e}es cylindriques \`{a} laquelle nous ajoutons la partie relative \`{a} l'\'{e}nergie potentielle :
 \benn
 	L = \frac{m}{2}(\dot{\rho}^{2} + \rho^{2}\dot{\varphi}^{2} + \dot{z}^{2}) - U(\rho,\varphi,z)
 \eenn
@@ -876,7 +874,7 @@ La coordonn\'{e}e $\varphi$ est cyclique par sym\'{e}trie axiale, elle se s\'{e}
 \bea
 	2\xi\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + 2\eta\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + \frac{(\xi + \eta)}{2m\xi\eta}p_{\varphi}^{2} + ma(\xi) + mb(\eta)- mE(\xi + \eta) & = & 0 \nonumber \\
 	\Leftrightarrow 2\xi\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + ma(\xi) - mE\xi + \frac{p_{\varphi}^{2}}{2\xi} & & \nonumber \\
-	2\eta\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + mb(\eta) - mE\eta + \frac{p_{\varphi}^{2}}{2\eta} & = & 0 \nonumber
+	+ 2\eta\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + mb(\eta) - mE\eta + \frac{p_{\varphi}^{2}}{2\eta} & = & 0 \nonumber
 \eea
 En posant $S_{0} = p_{\varphi}\varphi + S_{1}(\xi) + S_{2}(\eta)$, cela implique $\frac{\partial S_{0}}{\partial\xi} = \frac{\partial S_{1}}{\partial\xi} = \frac{\mathrm{d}S_{1}}{\mathrm{d}\xi}$ et $\frac{\partial S_{0}}{\partial\eta} = \frac{\partial S_{2}}{\partial\xi} = \frac{\mathrm{d}S_{2}}{\mathrm{d}\xi}$. Nous avons donc \`{a} r\'{e}soudre s\'{e}quentiellement les deux \'{e}quations suivantes :
 \bea
@@ -904,7 +902,7 @@ Les coordonn\'{e}es elliptiques $(\xi,\eta,\varphi)$ d\'{e}coulent des formules 
 		z = \sigma\xi\eta \label{EQ:48_17}
 	\end{cases}
 \ee
-La constante $\sigma$ est la param\`{e}tre de la transformation. $\xi$ varie dans $[1;+\infty[$ et $\eta$ dans $[-1;1]$. D'un point de vue g\'{e}om\'{e}trique, la quantit\'{e} $r_{1} = \sqrt{(z - \sigma)^{2} + \rho^{2}}$, respectivement $r_{2} = \sqrt{(z - \sigma)^{2} + \rho^{2}}$, est la distance au point $A_{1}$, respectivement $A_{2}$, de l'axe $z$, qui a pour coordonn\'{e}e $z = \sigma$, respectivement $z = -\sigma$. Nous avons alors :
+La constante $\sigma$ est le param\`{e}tre de la transformation. $\xi$ varie dans $[1;+\infty[$ et $\eta$ dans $[-1;1]$. D'un point de vue g\'{e}om\'{e}trique, la quantit\'{e} $r_{1} = \sqrt{(z - \sigma)^{2} + \rho^{2}}$, respectivement $r_{2} = \sqrt{(z - \sigma)^{2} + \rho^{2}}$, est la distance au point $A_{1}$, respectivement $A_{2}$, de l'axe $z$, qui a pour coordonn\'{e}e $z = \sigma$, respectivement $z = -\sigma$. Nous avons alors :
 \be
 	\begin{cases}
 		r_{1} = \sqrt{(\sigma\xi\eta - \sigma)^{2} + \sigma^{2}(\xi^{2} - 1)(1 - \eta^{2})} = \sigma\sqrt{\xi^{2}\eta^{2} + 1 - 2\xi\eta + \xi^{2} - \xi^{2}\eta^{2} - 1 - \eta^{2}} \nonumber \\
@@ -972,7 +970,7 @@ En reprenant les m\^{e}mes hypoth\`{e}ses que dans le paragraphe (\ref{PAR:48_3_
 alors l'\'{e}quation de Hamilton-Jacobi s'\'{e}crit :
 \bea
 	\frac{1}{2m\sigma^{2}(\xi^{2} - \eta^{2})}\left[(\xi^{2} - 1)\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + (1 - \eta^{2})\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + \left(\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2}\right] + \frac{a(\xi) + b(\eta)}{\xi^{2} - \eta^{2}} & = & E \nonumber \\
-	(\xi^{2} - 1)\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + \left(\frac{1}{\xi^{2} - 1}\right)p_{\varphi}^{2} + 2m\sigma^{2}a(\xi) - 2m\sigma^{2}\xi^{2}E & & \nonumber \\
+	\Leftrightarrow (\xi^{2} - 1)\left(\frac{\partial S_{0}}{\partial\xi}\right)^{2} + \left(\frac{1}{\xi^{2} - 1}\right)p_{\varphi}^{2} + 2m\sigma^{2}a(\xi) - 2m\sigma^{2}\xi^{2}E & & \nonumber \\
 	+(1 - \eta^{2})\left(\frac{\partial S_{0}}{\partial\eta}\right)^{2} + \left(\frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2} + 2m\sigma^{2}b(\eta) + 2m\sigma^{2}\eta^{2}E & = & 0 \nonumber
 \eea
 Nous posons alors $S_{0} = p_{\varphi}\varphi + S_{1}(\xi) + S_{2}(\eta)$ qui nous permet d'\'{e}crire :
@@ -987,7 +985,7 @@ Nous avons donc \`{a} r\'{e}soudre s\'{e}quentiellement les deux \'{e}quations s
 Nous obtenons donc :
 \bea
 	S_{1} & = & \int{\sqrt{\frac{2m\sigma^{2}\xi^{2}}{\xi^{2} - 1}E + \frac{\beta - 2m\sigma^{2}a(\xi)}{\xi^{2} - 1} - \frac{p_{\varphi}^{2}}{(\xi^{2} - 1)^{2}}}\mathrm{d}\xi} \nonumber \\
-	S_{1} & = & \int{\sqrt{\frac{2m\sigma^{2}\eta^{2}}{1 - \eta^{2}}E - \frac{\beta + 2m\sigma^{2}b(\eta)}{1 - \eta^{2}} - \frac{p_{\varphi}^{2}}{(1 - \eta^{2})^{2}}}\mathrm{d}\eta} \nonumber
+	S_{2} & = & \int{\sqrt{\frac{2m\sigma^{2}\eta^{2}}{1 - \eta^{2}}E - \frac{\beta + 2m\sigma^{2}b(\eta)}{1 - \eta^{2}} - \frac{p_{\varphi}^{2}}{(1 - \eta^{2})^{2}}}\mathrm{d}\eta} \nonumber
 \eea
 Le r\'{e}sultat de l'\'{e}quation de Hamilton-Jacobi est donc l'int\'{e}grale compl\`{e}te suivante\footnote{Nous obtenons ici une expression diff\'{e}rente par rapport au livre sur le facteur multiplicatif de l'\'{e}nergie.} :
 \bea
