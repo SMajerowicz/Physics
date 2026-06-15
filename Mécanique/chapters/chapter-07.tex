@@ -993,7 +993,7 @@ Le r\'{e}sultat de l'\'{e}quation de Hamilton-Jacobi est donc l'int\'{e}grale co
 	& & + \int{\sqrt{\frac{2m\sigma^{2}\eta^{2}}{1 - \eta^{2}}E - \frac{\beta + 2m\sigma^{2}b(\eta)}{1 - \eta^{2}} - \frac{p_{\varphi}^{2}}{(1 - \eta^{2})^{2}}}\mathrm{d}\eta} \label{EQ:48_22}
 \eea
 
-\section{Invariant adiabatiques}\label{PAR:49}
+\section{Invariants adiabatiques}\label{PAR:49}
 
 \subsection{Cas g\'{e}n\'{e}ral}\label{PAR:49_1}
 
@@ -1010,7 +1010,7 @@ Puisque $\lambda$ varie lentement ici, la vitesse de variation de l'\'{e}nergie 
 Soit $H(p,q,\lambda)$ la fonction de Hamilton du syst\`{e}me d\'{e}pendant du param\`{e}tre $\lambda$. L'\'{e}quation (\ref{EQ:40_5}) nous donne :
 \bea
 	\frac{\mathrm{d}H}{\mathrm{dt}} & = & \frac{\partial H}{\partial\mathrm{t}} \Leftrightarrow \frac{\mathrm{d}E}{\mathrm{dt}} = \frac{\partial H}{\partial\mathrm{t}} \nonumber \\
-	\frac{\mathrm{d}E}{\mathrm{dt}} & = & \frac{\partial H}{\partial\lambda}\frac{\mathrm{d}\lambda}{\mathrm{dt}} \label{EQ:49_2}
+	\Leftrightarrow \frac{\mathrm{d}E}{\mathrm{dt}} & = & \frac{\partial H}{\partial\lambda}\frac{\mathrm{d}\lambda}{\mathrm{dt}} \label{EQ:49_2}
 \eea
 car $\lambda$ ne d\'{e}pend pas explicitement du temps.
 
@@ -1040,7 +1040,7 @@ La relation (\ref{EQ:49_3}) peut se r\'{e}\'{e}crire ainsi :
 \be
 	\overline{\frac{\mathrm{d}E}{\mathrm{dt}}} = \frac{\mathrm{d}\lambda}{\mathrm{dt}}\frac{\oint\left(\frac{\partial H}{\partial\lambda}\right)\left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q}{\oint{\left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q}} \label{EQ:49_5}
 \ee
-Comme indiqu\'{e} pr\'{e}c\'{e}demment, les int\'{e}grales sont prises le long de la trajectoire, $\lambda$ \'{e}tant consid\'{e}r\'{e} comme constant. Le long de la trajectoire, la fonction de Hamilton conserve l'\'{e}nergie $E$ constante, puisque le param\`{e}tre $\lambda$ est consid\'{e}r\'{e} comme constant, et l'impulson est une fonction d\'{e}finie de la coordonn\'{e}e variable $q$ et des deux param\`{e}tres $\lambda$ et $E$.
+Comme indiqu\'{e} pr\'{e}c\'{e}demment, les int\'{e}grales sont prises le long de la trajectoire, $\lambda$ \'{e}tant consid\'{e}r\'{e} comme constant. Le long de la trajectoire, la fonction de Hamilton conserve l'\'{e}nergie $E$ constante, puisque le param\`{e}tre $\lambda$ est consid\'{e}r\'{e} comme constant, et l'impulsion est une fonction d\'{e}finie de la coordonn\'{e}e variable $q$ et des deux param\`{e}tres $\lambda$ et $E$.
 
 La conservation de l'\'{e}nergie nous donne :
 \bea
@@ -1081,11 +1081,10 @@ Dans l'approximation consid\'{e}r\'{e}e, la quantit\'{e} $I$ reste donc constant
 \be
 	T = \oint{\left(\frac{\partial H}{\partial p}\right)^{-1}\mathrm{d}q} = \oint{\left(\frac{\partial E}{\partial p}\right)\mathrm{d}q} = \oint{\frac{\partial p}{\partial E}\mathrm{d}q} = -2\pi\frac{\partial I}{\partial E} \label{EQ:49_8}
 \ee
-Or par d\'{e}finition, la pulsation se d\'{e}finit comme $\omega = 2\pi/T$ donc :
+Ainsi la d\'{e}riv\'{e}e de l'invariant adiabatique $I$ par rapport \`{a} l'\'{e}nergie d\'{e}termine la p\'{e}riode du mouvement. Or par d\'{e}finition, la pulsation se d\'{e}finit comme $\omega = 2\pi/T$ donc :
 \be
 	\omega = \left(\frac{\partial I}{\partial E}\right)^{-1} = \frac{\partial E}{\partial I} \label{EQ:49_9}
 \ee
-Ainsi la d\'{e}riv\'{e}e de l'invariant adiabatique $I$ par rapport \`{a} l'\'{e}nergie d\'{e}termine la p\'{e}riode du mouvement.
 
 \subsection{Cas \`{a} un unique degr\'{e} de libert\'{e}}\label{PAR:49_2}
 
@@ -1101,7 +1100,7 @@ avec $\omega$ la fr\'{e}quence propre du syst\`{e}me. La trajectoire dans l'espa
 \benn
 	H(p,q) = E \Leftrightarrow \frac{p^{2}}{\left(\sqrt{2mE}\right)^{2}} + \frac{q^{2}}{\left(\sqrt{\frac{2E}{m\omega^{2}}}\right)^{2}} = 1
 \eenn
-Il s'agit donc d'une ellipse dont les demi-axes ont pour longueur $\sqrt{2mE}$ et $\sqrt{\frac{2E}{m\omega^{2}}}$. Sa surface vaut $\pi\sqrt{2mE}\sqrt{\frac{2E}{m\omega^{2}}} = \frac{2\pi E}{\omega}$ et l'invariant adiabatique $I$ d\'{e}fini en (\ref{EQ:49_10}) est \'{e}gal \`{a} :
+Il s'agit d'une ellipse dont les demi-axes ont pour longueur $\sqrt{2mE}$ et $\sqrt{\frac{2E}{m\omega^{2}}}$. Sa surface vaut $\pi\sqrt{2mE}\sqrt{\frac{2E}{m\omega^{2}}} = \frac{2\pi E}{\omega}$ et l'invariant adiabatique $I$ d\'{e}fini en (\ref{EQ:49_10}) est \'{e}gal \`{a} :
 \be
 	I = \frac{E}{\omega} \label{EQ:49_12}
 \ee
@@ -1175,11 +1174,11 @@ et en appliquant la d\'{e}finition (\ref{EQ:49_9}), soit $\omega = \left(\frac{\
 
 \section{Exactitude de conservation d'invariant adiabatique}\label{PAR:51}
 
-L'\'{e}quation du mouvement (\ref{EQ:50_10}) permet de s'assurer que la variable d'action est un invariant adiabatique. Nous avons vu dans le paragraphe (\ref{PAR:50_1}) que $S_{0}(q,I,\lambda)$ est une fonction non unidorme de la coordonn\'{e}e $q$ : lorsque cette coordonn\'{e}e reprend sa valeur initiale, la valeur de $S_{0}$ est augment\'{e}e d'un multiple entier non nul de la quantit\'{e} $2\pi I$ comme d\'{e}montr\'{e} en (\ref{EQ:50_6}).
+L'\'{e}quation du mouvement (\ref{EQ:50_10}) permet de s'assurer que la variable d'action est un invariant adiabatique. Nous avons vu dans le paragraphe (\ref{PAR:50_1}) que $S_{0}(q,I,\lambda)$ est une fonction non uniforme de la coordonn\'{e}e $q$ : lorsque cette coordonn\'{e}e reprend sa valeur initiale, la valeur de $S_{0}$ est augment\'{e}e d'un multiple entier non nul de la quantit\'{e} $2\pi I$ comme d\'{e}montr\'{e} en (\ref{EQ:50_6}).
 
 De plus, la quantit\'{e} $\Lambda$ d\'{e}finie dans la formule (\ref{EQ:50_9}) est une fonction uniforme en $q$ car la d\'{e}riv\'{e}e de sa d\'{e}finition est r\'{e}alis\'{e}e \`{a} $I$ constant. Donc les accroissements en $I$ qui s'ajoutent \`{a} $S_{0}$ disparaissent dans le calcul de $\Lambda$.
 
-Une des conclusions du paragraphe (\ref{PAR:50_1}) est que toute fonction uniforme exprim\'{e}e \`{a} l'aide des varaibles canoniques est une fonction p\'{e}riodique de $w$ et de p\'{e}riode $2\pi$. Donc la valeur moyenne sur une telle p\'{e}riode de la quantit\'{e} $\frac{\partial\Lambda}{\partial w}$ est nulle. Par extension et en utilisant l'\'{e}quation du mouvement (\ref{EQ:50_10}) et parce que $\lambda$ \'{e}volue lentement avec le temps, i.e. $\overline{\dot{\lambda}} \approx \dot{\lambda}$, alors :
+Une des conclusions du paragraphe (\ref{PAR:50_1}) est que toute fonction uniforme exprim\'{e}e \`{a} l'aide des variables canoniques est une fonction p\'{e}riodique de $w$ et de p\'{e}riode $2\pi$. Donc la valeur moyenne sur une telle p\'{e}riode de la quantit\'{e} $\frac{\partial\Lambda}{\partial w}$ est nulle. Par extension et en utilisant l'\'{e}quation du mouvement (\ref{EQ:50_10}) et parce que $\lambda$ \'{e}volue lentement avec le temps, i.e. $\overline{\dot{\lambda}} \approx \dot{\lambda}$, alors :
 \be
 	\overline{\dot{I}} = -\left(\overline{\frac{\partial\Lambda}{\partial w}}\right)_{I}\dot{\lambda} = 0 \label{EQ:51_1}
 \ee
@@ -1241,7 +1240,7 @@ qui peut se d\'{e}velopper en utilisant (\ref{EQ:51_4}) ainsi :
         \end{center}
 \end{figure}
 
-L'int\'{e}grale se calcule sur le chemin de l'axe r\'{e}el pour $w$. En prenant $w$ comme une variable complexe et en supposant qu'aucune int\'{e}gration ne poss\`{e}de de points singuliers pour la partie r\'{e}elle de $w$, nous d\'{e}pl\c{c}ons le chmin d'int\'{e}gration dans la partie imaginaire telle sch\'{e}matis\'{e}e sur la figure (\ref{FIG:51_1}). Le chemin d'int\'{e}gration rencontre alors les points singuliers de $w$ et s'y accroche en quelque sorte.
+L'int\'{e}grale se calcule sur le chemin de l'axe r\'{e}el pour $w$. En prenant $w$ comme une variable complexe et en supposant qu'aucune int\'{e}gration ne poss\`{e}de de points singuliers pour la partie r\'{e}elle de $w$, nous d\'{e}pla\c{c}ons le chemin d'int\'{e}gration dans la partie imaginaire telle sch\'{e}matis\'{e}e sur la figure (\ref{FIG:51_1}). Le chemin d'int\'{e}gration rencontre alors les points singuliers de $w$ et s'y accroche en quelque sorte.
 
 Pour $w \in \mathbb{C}$ tel que $w = a + ib$ alors :
 \benn
@@ -1275,7 +1274,7 @@ En ins\'{e}rant l'\'{e}quation (\ref{EQ:51_8}) dans la formulation de $\Delta I$
 \benn
 	\Delta I = -2\int_{-\infty}^{+\infty}{\Re\left[\sum_{n=1}^{+\infty}ine^{inw}\right]\dot{\lambda}\frac{\mathrm{d}\omega}{\omega(I,\lambda)}}
 \eenn
-qui permet, en prenant le terme de la s\'{e}rie pour $n = 1$, s'\'{e}crire :
+qui permet, en prenant le terme de la s\'{e}rie pour $n = 1$, d'\'{e}crire :
 \be
 	\Delta I \propto \Re\left[\int_{-\infty}^{+\infty}{ie^{inw}\dot{\lambda}\frac{\mathrm{d}\omega}{\omega(I,\lambda)}}\right] \label{EQ:51_10}
 \ee
@@ -1354,7 +1353,7 @@ Cette relation nous donne $n_{1}\partial I_{2} = n_{2}\partial I_{1}$. Ainsi les
 
 \subsubsection{Cons\'{e}quences sur les int\'{e}grales premi\`{e}res}\label{PAR:52_2_2}
 
-Au paragraphe (\ref{PAR:6}), nous avons vu qu'il y a $2s-1$ int\'{e}grales du mouvement pour un syst\`{e}me ferm\'{e} \`{a} $s$ degr\'{e}s de libert\'{e} et non d\'{e}g\'{e}n\'{e}r\'{e}. Les relations $\dot{I}_{i} = 0$ des \'{e}quations du mouvement (\ref{EQ:52_6}) nous donne d\'{e}j\`{a} $s$ int\'{e}grales uniformes, i.e. toutes les quantit\'{e}s $I_{i}$ sont constantes lors du mouvement. Les \'{e}quations du mouvement pour les variables angulaires donnent $\dot{w}_{i} = \frac{\partial E}{\partial I_{i}}$ donc pour $i \ne j$, nous avons :
+Au paragraphe (\ref{PAR:6}), nous avons vu qu'il y a $2s-1$ int\'{e}grales du mouvement pour un syst\`{e}me ferm\'{e} \`{a} $s$ degr\'{e}s de libert\'{e} et non d\'{e}g\'{e}n\'{e}r\'{e}. Les relations $\dot{I}_{i} = 0$ des \'{e}quations du mouvement (\ref{EQ:52_6}) nous donnent d\'{e}j\`{a} $s$ int\'{e}grales uniformes, i.e. toutes les quantit\'{e}s $I_{i}$ sont constantes lors du mouvement. Les \'{e}quations du mouvement pour les variables angulaires donnent $\dot{w}_{i} = \frac{\partial E}{\partial I_{i}}$ donc pour $i \ne j$, nous avons :
 \benn
 	\dot{w}_{i}\frac{\partial E}{\partial I_{j}} - \dot{w}_{j}\frac{\partial E}{\partial I_{i}} = 0 \Leftrightarrow \frac{\mathrm{d}}{\mathrm{dt}}\left(w_{i}\frac{\partial E}{\partial I_{j}} - w_{j}\frac{\partial E}{\partial I_{i}}\right) = 0
 \eenn
@@ -1362,7 +1361,7 @@ Donc les $s - 1$ quantit\'{e}s :
 \be
 	\forall i \ne j\text{, }w_{i}\frac{\partial E}{\partial I_{j}} - w_{j}\frac{\partial E}{\partial I_{i}} \label{EQ:52_13}
 \ee
-sont des int\'{e}grales mais elles ne sont pas uniformes car les cariables angulaires ne le sont pas au regard de l'\'{e}galit\'{e} (\ref{EQ:52_8}).
+sont des int\'{e}grales mais elles ne sont pas uniformes car les variables angulaires ne le sont pas au regard de l'\'{e}galit\'{e} (\ref{EQ:52_8}).
 
 Dans le cas de la d\'{e}g\'{e}n\'{e}rescence abord\'{e}e au paragraphe (\ref{PAR:52_2_1}), nous \'{e}tudions la d\'{e}riv\'{e}e totale par rapport au temps de la quantit\'{e} $w_{1}n_{2} - w_{2}n_{1}$, soit :
 \benn
