@@ -257,14 +257,14 @@ je n'arrive pas \`a aller jusqu'au bout et trouver le r\'esultat annonc\'e par l
 
 \section{Contraction de la fonction de Lagrange pour un syst\`eme de n + 1 particules}
 
-Consid\'erons un syst\`eme ferm\'e compos\'e de $n$ particules de masse $m$ dont chancune a pour rayon vecteur $\vec{R}_{a}$ et d'une particule de masse $M$ qui a pour rayon vecteur $\vec{R}$. Le fonction de Lagrange du syst\`eme s'\'ecrit alors :
+Consid\'erons un syst\`eme ferm\'e compos\'e de $n$ particules de masse $m$ dont chacune a pour rayon vecteur $\vec{R}_{a}$ et d'une particule de masse $M$ qui a pour rayon vecteur $\vec{R}$. Le fonction de Lagrange du syst\`eme s'\'ecrit alors :
 \benn
 	L = \dfrac{M}{2}\vec{\dot{R}}^{\,2} + \sum_{a=1}^{n}\dfrac{m}{2}\vec{\dot{R}}_{a}^{\,2} - U(\vec{R},\begin{Bmatrix}\vec{R}_{a}\end{Bmatrix}_{1}^{n})
 \eenn
 En d\'efinissant $\vec{r}_{a} = \vec{R}_{a} - \vec{R}$ et en appliquant le centre de masse en tant qu'origine du syst\`eme de coordonn\'ees alors $M\vec{R} + \sum_{a}m\vec{R}_{a} = \vec{0}$, cela permet d'avancer :
 \bea
 	M\vec{R} + m\sum_{a}\vec{R}_{a} & = & \vec{0} \Leftrightarrow M\vec{R} + m\sum_{a}(\vec{r}_{a} - \vec{R}) = \vec{0} \nonumber \\
-	m\sum_{a}\vec{r}_{a} & = & -(M + nm)\vec{R} \Leftrightarrow \vec{R} = \dfrac{-m}{M + nm}\sum_{a}\vec{r}_{a} \nonumber
+	\Leftrightarrow m\sum_{a}\vec{r}_{a} & = & -(M + nm)\vec{R} \Leftrightarrow \vec{R} = \dfrac{-m}{M + nm}\sum_{a}\vec{r}_{a} \nonumber
 \eea
 La fonction de Lagrange \'ecrite plus haut peut alors se d\'evelopper en :
 \bea
@@ -314,7 +314,7 @@ L'objectif des exercices ci-dessous est de trouver la solution g\'en\'erale par 
 			\qbezier(260,90),(270,90),(270,100)
 			\put(268,85){$\varphi$}
 		\end{picture}
-		\caption{Vues de face, \`gauche et du dessus, \`a droite du pendule sph\'erique}\label{FIG:3_EX1}
+		\caption{Vues de face, \`{a} gauche, et du dessus, \`a droite, du pendule sph\'erique}\label{FIG:3_EX1}
 	\end{center}
 \end{figure}
 
@@ -339,7 +339,7 @@ et nous pouvons continuer tel que :
 \bea
 	\dot{\theta} = \dfrac{\mathrm{d}\theta}{\mathrm{dt}} & = & \sqrt{\dfrac{2}{ml^{2}}\left(E - \left(\dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta\right)\right)} \nonumber \\
 	\Leftrightarrow \mathrm{dt} & = & \dfrac{\mathrm{d}\theta}{\sqrt{\dfrac{2}{ml^{2}}\left(E - U_{eff}(\theta)\right)}} \nonumber \\
-	\mathrm{t} & = & \int{\dfrac{\mathrm{d}\theta}{\sqrt{\dfrac{2}{ml^{2}}\left(E - U_{eff}(\theta)\right)}}} \nonumber
+	\Leftrightarrow \mathrm{t} & = & \int{\dfrac{\mathrm{d}\theta}{\sqrt{\dfrac{2}{ml^{2}}\left(E - U_{eff}(\theta)\right)}}} \nonumber
 \eea
 Nous avons donc la relation entre $\mathrm{r}$ et $\theta$ qui se trouve \^etre une int\'egrale elliptique de premi\`ere esp\`ece d\'efinie ici avec :
 \benn
@@ -353,16 +353,16 @@ Ensuite, nous avons $M_{z} = m(l\sin\theta)^{2}\dot{\varphi}$ qui permet d'arriv
 Connaissant $\mathrm{dt}$ en fonction de $\theta$, nous pouvons exprimer $\varphi$ telle que :
 \bea
 	\mathrm{d}\varphi & = & \dfrac{M_{z}\mathrm{d}\theta}{ml^{2}\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}} = \dfrac{M_{z}}{l\sqrt{2m}}\dfrac{\mathrm{d}\theta}{\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}} \nonumber \\
-	\varphi & = & \dfrac{M_{z}}{l\sqrt{2m}}\bigintss{\dfrac{\mathrm{d}\theta}{\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}}} \nonumber
+	\Leftrightarrow \varphi & = & \dfrac{M_{z}}{l\sqrt{2m}}\bigintss{\dfrac{\mathrm{d}\theta}{\sin^{2}\theta\sqrt{\dfrac{2}{ml^{2}}(E-U_{eff}(\theta))}}} \nonumber
 \eea
 Nous avons ici la relation entre $\varphi$ et $\theta$ qui est une int\'egrale elliptique de troisi\`eme esp\`ece. $\theta$ varie telle que $E - U_{eff}(\theta) > 0$ et ses valeurs limites se d\'efinissent telles que $E = U_{eff}(\theta)$, soit :
 \bea
 	E & = & \dfrac{M_{z}^{2}}{2ml^{2}\sin^{2}\theta} - mgl\cos\theta \nonumber \\
 	\Leftrightarrow lE(1-\cos^{2}\theta) & = & \dfrac{M_{z}^{2}}{2ml} - mgl^{2}(1-\cos^{2}\theta)\cos\theta \nonumber \\
 	\Leftrightarrow lE - lE\cos^{2}\theta & = & \dfrac{M_{z}^{2}}{2ml} - mgl^{2}\cos\theta + mgl^{2}\cos^{3}\theta \nonumber \\
-	\Leftrightarrow mgl^{2}\cos^{3}\theta + lE\cos^{2}\theta - mgl^{2}\cos\theta + \dfrac{M_{z}^{2}}{2ml} - lE & = & 0 \nonumber
+	\Leftrightarrow 0 & = & mgl^{2}\cos^{3}\theta + lE\cos^{2}\theta - mgl^{2}\cos\theta + \dfrac{M_{z}^{2}}{2ml} - lE \nonumber
 \eea
-est une \'equation du troisi\`eme degr\'e en $\cos\theta$ qui a implicitement deux racines dans l'intervalle $\left]-1;1\right[$. Il existe donc deux angles $\theta_{min}$ et $\theta_{max}$ qui d\'efinissent deux cercles respectifs entre lesqueles toute la trajectoire de la particule est comprise.
+est une \'equation du troisi\`eme degr\'e en $\cos\theta$ qui a implicitement deux racines dans l'intervalle $\left]-1;1\right[$. Il existe donc deux angles $\theta_{min}$ et $\theta_{max}$ qui d\'efinissent deux cercles respectifs entre lesquels toute la trajectoire de la particule est comprise.
 
 \subsection{Cas du pendule sur un c\^one}
 
@@ -424,8 +424,8 @@ Soit :
 \bea
 	\dfrac{mr^{2}sin^{2}\alpha}{M_{z}}\mathrm{d}\varphi & = & \dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}} \nonumber \\
 	\Leftrightarrow \mathrm{d}\varphi & = & \dfrac{M_{z}}{mr^{2}sin^{2}\alpha}\dfrac{\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E - U_{eff}(r)\right)}} \nonumber \\
-	\mathrm{d}\varphi & = & \dfrac{M_{z}}{\sqrt{2m}\sin^{2}\alpha}\dfrac{\mathrm{d}r}{r^{2}\sqrt{E - U_{eff}(r)}} \nonumber \\
-	\varphi & = & \dfrac{M_{z}}{\sqrt{2m}\sin^{2}\alpha}\bigintsss{\dfrac{\mathrm{d}r}{r^{2}\sqrt{E - U_{eff}(r)}}} \nonumber
+	\Leftrightarrow \mathrm{d}\varphi & = & \dfrac{M_{z}}{\sqrt{2m}\sin^{2}\alpha}\dfrac{\mathrm{d}r}{r^{2}\sqrt{E - U_{eff}(r)}} \nonumber \\
+	\Leftrightarrow \varphi & = & \dfrac{M_{z}}{\sqrt{2m}\sin^{2}\alpha}\bigintsss{\dfrac{\mathrm{d}r}{r^{2}\sqrt{E - U_{eff}(r)}}} \nonumber
 \eea
 
 Les limites de $r$ sont d\'efinies telles que $E = U_{eff}(r)$, i.e. :
@@ -442,12 +442,12 @@ Ici, nous reprenons le cas pr\'esent\'e sur la figure (\ref{FIG:1_2}) o\`u la fo
 \benn
 	L = \dfrac{m_{1} + m_{2}}{2}\dot{x}^{2} + \dfrac{m_{2}}{2}\left(l^{2}\dot{\varphi}^{2} + 2l\cos\varphi\dot{x}\dot{\varphi}\right) + m_{2}gl\cos\varphi
 \eenn
-La coordonn\'ee $x$ n'appara\^it pas dans la fonction de Lagrange et est donc une coordonn\'ee cyclique qui permet de conclure la constance dans le mouvement de l'impulsion g\'en\'eralis\'ee $p_{x}$ qui se d\'efinit ainsi\footnote{Dans ce cas, il n'y a pas de rotation donc l\'energie cin\'etique est \'evidemment nulle.} :
+La coordonn\'ee $x$ n'appara\^it pas dans la fonction de Lagrange et est donc une coordonn\'ee cyclique qui permet de conclure la constance dans le mouvement de l'impulsion g\'en\'eralis\'ee $p_{x}$ qui se d\'efinit ainsi\footnote{Dans ce cas, il n'y a pas de rotation donc l'\'{e}nergie cin\'etique est \'evidemment nulle.} :
 \benn
 	p_{x} = \dfrac{\partial L}{\partial\dot{x}} = (m_{1} + m_{2})\dot{x} + 2l\dfrac{m_{2}}{2}\dot{\varphi}\cos\varphi = (m_{1} + m_{2})\dot{x} + m_{2}l\dot{\varphi}\cos\varphi = cste
 \eenn
 
-Pour le mouvement du centre d'inertie du syst\`eme suivant l'horizontale, il y a $p_{x} = 0$ puisqu'il est immobile, au repos et permet d'\'ecrire :
+Pour le mouvement du centre d'inertie du syst\`eme suivant l'horizontale, il y a $p_{x} = 0$ puisqu'il est au repos et permet d'\'ecrire :
 \benn
 	\dot{x} = \dfrac{-m_{2}l\dot{\varphi}\cos\varphi}{(m_{1} + m_{2})}
 \eenn
@@ -479,7 +479,7 @@ L'ensemble des positions issues de $x_{2}$ et $y_{2}$ d\'efinissent une portion 
 
 \section{Probl\`eme de Kepler}
 
-\subsection{Repr\'esentation param\'trique pour $U = -\alpha/r$ et $E = 0$}
+\subsection{Repr\'esentation param\'{e}trique pour $U = -\alpha/r$ et $E = 0$}
 
 Nous sommes dans le cas parabolique o\`u $e = 1$ et $p = \dfrac{M^{2}}{m\alpha}$. La relation (\ref{EQ:14_6}) donne dans notre cas pr\'ecis :
 \benn
@@ -548,7 +548,7 @@ nous pouvons \'ecrire :
 \eea
 en choisissant la constante d'int\'egration telle qu'elle soit nulle.
 
-La relation (\ref{EQ:14_7}) permet de calculer $\varphi$ \`a partir de :`
+La relation (\ref{EQ:14_7}) permet de calculer $\varphi$ \`a partir de :
 \be
 	\varphi = \bigintss{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{\dfrac{2}{m}\left(E + \dfrac{\alpha}{r^{2}}\right) - \dfrac{M^{2}}{r^{2}}}}} = \bigintss{\dfrac{\dfrac{M}{r^{2}}\mathrm{d}r}{\sqrt{\dfrac{2}{m}E + (2m\alpha - M^{2})\dfrac{1}{r^{2}}}}} \label{EQ:15_EX2_1}
 \ee
@@ -650,7 +650,7 @@ or $\arccosh'u = \dfrac{1}{\sqrt{u^{2} - 1}}$ donc :
 \end{figure}
 Des repr\'esentations de trajectoires param\'etriques pour cette solution sont repr\'esent\'ees sur la figure (\ref{FIG:3_15_EX2C}).
 
-Dans les deux derniers \'etudi\'es, il est int\'eressant de notre que quand $\varphi \rightarrow +\infty$ alors $\frac{1}{r} \rightarrow +\infty$ et donc $r \rightarrow 0$. En s'appuyant sur l'\'equation (\ref{EQ:15_EX2_2}), le temps mis par la particule pour chuter de $r$ \`a 0 vaut :
+Dans les deux derniers cas \'etudi\'es, il est int\'eressant de noter que quand $\varphi \rightarrow +\infty$ alors $\frac{1}{r} \rightarrow +\infty$ et donc $r \rightarrow 0$. En s'appuyant sur l'\'equation (\ref{EQ:15_EX2_2}), le temps mis par la particule pour chuter de $r$ \`a 0 vaut :
 \benn
 	\Delta\mathrm{t} = \mathrm{t}(r) - \mathrm{t}(0) = \dfrac{m}{2}\dfrac{1}{E}\left(\sqrt{Er^{2} + \alpha - \dfrac{M^{2}}{2m}} - \sqrt{\alpha - \dfrac{M^{2}}{2m}}\right)
 \eenn
