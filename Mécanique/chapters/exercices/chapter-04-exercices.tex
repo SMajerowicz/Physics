@@ -206,14 +206,14 @@ De mani\`ere \'equivalente \`a l'\'equation (\ref{EQ:16_6}), pour $m_{1} > m_{2}
 	\end{center}
 \end{figure}
 
-L'objectif est de calculer la section efficace pour la diffusion de particules par une bille de rayon $a$ parfatiement solide, i.e. $U(r>a) = 0$ et $U(r<a) = \infty$. La figure (\ref{FIG:4_18_EX1}) illustre la trajectoire, \`a savoir que les particules incidentes se meuvent librement avant et apr\`es le choc, qui se compose de deux droites. D'apr\`es la m\^eme figure, nous pouvons \'etablir que :
+L'objectif est de calculer la section efficace pour la diffusion de particules par une bille de rayon $a$ parfaitement solide, i.e. $U(r>a) = 0$ et $U(r<a) = \infty$. La figure (\ref{FIG:4_18_EX1}) illustre la trajectoire, \`a savoir que les particules incidentes se meuvent librement avant et apr\`es le choc, qui se compose de deux droites. D'apr\`es la m\^eme figure, nous pouvons \'etablir que :
 \bea
 	\rho & = & a\sin\varphi_{0} = a\sin\left(\dfrac{\pi - \xi}{2}\right) = a\left(\cos\dfrac{\pi}{2}\sin\dfrac{-\xi}{2} + \sin\dfrac{\pi}{2}\cos\dfrac{-\xi}{2}\right) \nonumber \\
 	& = & a\cos\dfrac{\xi}{2} \nonumber
 \eea
 En reportant dans l'\'equation (\ref{EQ:18_7}), cela donne :
 \benn
-	\mathrm{d}\sigma = 2\pi a\cos\dfrac{\xi}{2}\bigg\lvert -\dfrac{a}{2}\sin\dfrac{\xi}{2} \bigg\rvert \mathrm{d}\xi = \pi a^{2}\cos\dfrac{\xi}{2}\sin\dfrac{\xi}{2}\mathrm{d}\xi
+	\mathrm{d}\sigma = 2\pi a\cos\dfrac{\xi}{2}\times\bigg\lvert -\dfrac{a}{2}\sin\dfrac{\xi}{2} \bigg\rvert \mathrm{d}\xi = \pi a^{2}\cos\dfrac{\xi}{2}\sin\dfrac{\xi}{2}\mathrm{d}\xi
 \eenn
 or $\sin\xi = \sin(\frac{\xi}{2} + \frac{\xi}{2}) = 2\cos\frac{\xi}{2}\sin\frac{\xi}{2}$, donc :
 \benn
@@ -223,11 +223,11 @@ et puisque l'angle solide se d\'efinit pour un anneau comme $\mathrm{d}\omega = 
 \benn
 	\mathrm{d}\sigma = \dfrac{a^{2}}{4}\mathrm{d}\omega
 \eenn
-Dans le r\'ef\'erentiel <<~c~>>, la distribution est donc isotrope, i.e. ne d\'epend pas de l'angle de d\'eviation, puisque :
+Dans le r\'ef\'erentiel <<~c~>>, la distribution est donc isotrope, i.e. qu'elle ne d\'epend pas de l'angle de d\'eviation, puisque :
 \benn
 	\sigma = \int_{0}^{4\pi}\dfrac{a^{2}}{4}\mathrm{d}\omega = \pi a^{2}
 \eenn
-et la section efficace est \'egale \`a la section de la bille et assez logiquement, une particule pour \^etre diffus\'ee doit avoir une distance de vis\'ee inf\'erieure au rayon\footnote{Les particules incdents sont consid\'er\'ees comme ponctuelles.} de la bille $a$. Pour d\'eterminer la section efficace $\mathrm{d}\sigma$ dans le r\'ef\'erentiel <<~l~>>, nous pouvons repartir des \'equations (\ref{EQ:17_4}) o\`u $m_{1}$ est la masse de la particule incidente et $m_{2}$ celle de la bille. Nous avons vu plus haut que :
+et la section efficace est \'egale \`a la section de la bille et assez logiquement, une particule pour \^etre diffus\'ee doit avoir une distance de vis\'ee inf\'erieure au rayon\footnote{Les particules incidentes sont consid\'er\'ees comme ponctuelles.} de la bille $a$. Pour d\'eterminer la section efficace $\mathrm{d}\sigma$ dans le r\'ef\'erentiel <<~l~>>, nous pouvons repartir des \'equations (\ref{EQ:17_4}) o\`u $m_{1}$ est la masse de la particule incidente et $m_{2}$ celle de la bille. Nous avons vu plus haut que :
 \benn
 	\mathrm{d}\sigma = \dfrac{\pi a^{2}}{2}\sin\xi\mathrm{d}\xi = -\dfrac{\pi a^{2}}{2}\mathrm{d}(\cos\xi)
 \eenn
@@ -258,7 +258,7 @@ et puisque $\mathrm{d}\omega_{1} = 2\pi\sin\theta_{1}\mathrm{d}\theta_{1}$, nous
 
 \subsubsection{$m_{1} > m_{2}$}
 
-Dans ce cas, il nous faut prendre les deux solutions de l'\'equation (\ref{EQ:18_9}). Nous pouvons reprendre celle avec le signe $+$ de la pr\'ec\'edente section et calculons la section efficace pour la seconde solution de $\cos\xi$, celle qui s'\'ecrit ainsi :
+Dans ce cas, il nous faut prendre les deux solutions de l'\'equation (\ref{EQ:18_9}). Nous pouvons reprendre celle avec le signe $+$ de la pr\'ec\'edente section et nous calculons la section efficace pour la seconde solution de $\cos\xi$, celle qui s'\'ecrit ainsi :
 \benn
 	\cos\xi = -\dfrac{m_{1}}{m_{2}}\sin^{2}\theta_{1} - \cos\theta_{1}\sqrt{1 - \dfrac{m_{1}^{2}}{m_{2}^{2}}\sin^{2}\theta_{1}}
 \eenn
@@ -278,7 +278,7 @@ Dans ce cas pr\'ecis, nous en d\'eduisons :
 	\mathrm{d}\sigma_{1} & = & \dfrac{a^{2}}{2}\dfrac{1 + \cos(2\theta_{1})}{\sqrt{1 - \sin^{2}\theta_{1}}}\mathrm{d}\omega_{1} = \dfrac{a^{2}}{2}\dfrac{1 + \cos^{2}\theta_{1} - \sin^{2}\theta_{1}}{\lvert \cos\theta_{1} \rvert}\mathrm{d}\omega_{1} = \dfrac{a^{2}}{2}\dfrac{1 + \cos^{2}\theta_{1} - 1 + \cos^{2}\theta_{1}}{\lvert \cos\theta_{1} \rvert}\mathrm{d}\omega_{1} \nonumber \\
 	& = & a^{2}\lvert \cos\theta_{1} \rvert\mathrm{d}\omega_{1} \nonumber
 \eea
-$\cos\theta_{1}$ n'est pas forc\`ement positif, aussi il nous faut utiliser sa valeur absolue car la section efficace reste une surface et donc a une valeur positive.
+$\cos\theta_{1}$ n'est pas forc\`ement positif, aussi il nous faut utiliser sa valeur absolue car la section efficace reste une surface et a donc une valeur positive.
 
 Enfin, dans le cas o\`u initialement, i.e. avant le choc, la bille de masse $m_{2}$ est immobile, comme $\xi = \pi - 2\theta_{2}$, alors :
 \bea
@@ -329,7 +329,7 @@ Nous allons d\'eterminer la relation entre la section efficace et $v_{\infty}$ d
 \benn
 	\dfrac{v'}{v} = \left(\dfrac{l'}{l}\right)^{-\dfrac{n}{2}}
 \eenn
-qui exprime la relation entre la vitesse et la longueur pour deux trajectoires diff\'erentes. Nous pouvons ainsi \'ecrire que $\rho\propto v^{-\frac{2}{n}}$ pour des trajectoires semblables. Ceci peut \^etre exprimer telle que $\rho = v_{\infty}^{-\frac{2}{n}}f(\xi)$ car pour chaque trajectoire semblable, l'angle de d\'eviation est identique. En substituant dans l'\'equation (\ref{EQ:18_6}), nous avons :
+qui exprime la relation entre la vitesse et la longueur pour deux trajectoires diff\'erentes. Nous pouvons ainsi \'ecrire que $\rho\propto v^{-\frac{2}{n}}$ pour des trajectoires semblables. Ceci peut \^etre exprim\'{e} telle que $\rho = v_{\infty}^{-\frac{2}{n}}f(\xi)$ car pour chaque trajectoire semblable, l'angle de d\'eviation est identique. En substituant dans l'\'equation (\ref{EQ:18_6}), nous avons :
 \benn
 	\mathrm{d}\sigma = 2\pi\rho\mathrm{d}\rho = 2\pi v_{\infty}^{-\frac{2}{n}}f(\xi)\cdot v_{\infty}^{-\frac{2}{n}}f'(\xi)\mathrm{d}\xi = 2\pi v_{\infty}^{-\frac{4}{n}}f(\xi)f'(\xi)\mathrm{d}\xi
 \eenn
@@ -344,7 +344,7 @@ soit :
 
 \subsection{Cas d'un champ $U = -\alpha / r^{2}$}
 
-Pour d\'eterminer la section efficace pour une <<~chute~>> de particules au centre d'un champ tel que $U = -\alpha / r^{2}$, nous pouvons reprendre la d\'emonstration r\'ealis\'ee à l'\'equation (\ref{EQ:14_11}) et puisque $n = 2$, les particules incidentes de masse $m$ <<~tombent~>> si et seulement si $\alpha > \frac{M^{2}}{2m}$. En utilisant la d\'efinition (\ref{EQ:18_3}) du moment cin\'etique telle $M = m\rho v_{\infty}$, nous avons :
+Pour d\'eterminer la section efficace pour une <<~chute~>> de particules au centre d'un champ tel que $U = -\alpha / r^{2}$, nous pouvons reprendre la d\'emonstration r\'ealis\'ee à l'\'equation (\ref{EQ:14_11}) et puisque $n = 2$, les particules incidentes de masse $m$ <<~tombent~>> si et seulement si $\alpha > \frac{M^{2}}{2m}$. En utilisant la d\'efinition (\ref{EQ:18_3}) du moment cin\'etique, soit $M = m\rho v_{\infty}$, nous avons :
 \benn
 	\alpha > \dfrac{M^{2}}{2m} \Leftrightarrow \alpha > \dfrac{m^{2}\rho^{2}v_{\infty}^{2}}{2m} \Leftrightarrow \rho^{2} < \dfrac{2\alpha}{mv_{\infty}^{2}}
 \eenn
@@ -390,7 +390,7 @@ et la section efficace de chute s'\'ecrit :
 
 \subsection{Cas d'un champ suivant la loi de Newton}
 
-Nous allons d\'eterminer la section efficace de particules de masse $m_{1}$ qui <<~chutent~>> sur la surface d'une corps sph\'erique de rayon $R$ et de masse $m_{2} \gg m_{1}$ vers lequel les premi\`eres sont attir\'ees suivant la loi de Newton, voir le paragraphe (\ref{PAR:15}). Le fait que $m_{2} \gg m_{1}$ permet de supposer que les r\'ef\'erentiels <<~l~>> et <<~c~>> se confondent. Les particules tombent sur la surface du corps central si et seulement si la distance $r_{min}$, i.e. le p\'erih\'elie, de leur trajectoire est inf\'erieure au rayon $R$ de la sph\`ere. Le p\'erih\'elie est d\'efini suivant la relation (\ref{EQ:14_8}) telle que l'\'energie de la particule incident $E$ est \'egale à son \'energie potentielle effective $U_{eff}$. Alors la distance de vis\'ee maximale est telle que $\rho_{max}$ est d\'efinie par $r_{min} = R$ ou encore $U_{eff}(R) = E$, soit :
+Nous allons d\'eterminer la section efficace de particules de masse $m_{1}$ qui <<~chutent~>> sur la surface d'une corps sph\'erique de rayon $R$ et de masse $m_{2} \gg m_{1}$ vers lequel les premi\`eres sont attir\'ees suivant la loi de Newton, voir le paragraphe (\ref{PAR:15}). Le fait que $m_{2} \gg m_{1}$, cela nous permet de supposer que les r\'ef\'erentiels <<~l~>> et <<~c~>> se confondent. Les particules tombent sur la surface du corps central si et seulement si la distance $r_{min}$, i.e. le p\'erih\'elie, de leur trajectoire est inf\'erieure au rayon $R$ de la sph\`ere. Le p\'erih\'elie est d\'efini suivant la relation (\ref{EQ:14_8}) telle que l'\'energie de la particule incident $E$ est \'egale à son \'energie potentielle effective $U_{eff}$. Alors la distance de vis\'ee maximale est telle que $\rho_{max}$ est d\'efinie par $r_{min} = R$ ou encore $U_{eff}(R) = E$, soit :
 \bea
 	\dfrac{M^{2}}{2m1R^{2}} - \dfrac{Gm_{1}m_{2}}{R} & = & \dfrac{m_{1}}{2}v_{\infty}^{2} \Leftrightarrow \dfrac{m_{1}^{2}v_{\infty}^{2}\rho_{max}^{2}}{2m_{1}R_{2}} - \dfrac{Gm_{1}m_{2}}{R} = \dfrac{m_{1}}{2}v_{\infty}^{2} \nonumber \\
 	\Leftrightarrow \dfrac{v_{\infty}^{2}\rho_{max}^{2}}{2R_{2}} & = & v_{\infty}^{2} + \dfrac{2Gm_{2}}{R} \Leftrightarrow \rho_{max}^{2} = R^{2}\left(1 + \dfrac{2Gm_{2}}{Rv_{\infty}^{2}}\right) \nonumber
@@ -407,7 +407,7 @@ et naturellement, nous remarquons que :
 
 \subsection{M\'ethode d'inversion de Firsov}
 
-Dans ce paragraphe, nous allons r\'ealiser l'op\'eration inverse qui va consister en la mesure du champ d'\'energie potentielle \`a partir de la section efficace et de l'angle de diffussion. L'\'energie $E$ est donn\'ee et nous supposons que $U(r)$ est une fonction montone et d\'ecroissante de $r$, i.e. u champ r\'epulsif avec $U(0) > E$ et $U(\infty) = 0$. Il s'agit de reproduire la d\'emonstration r\'ealis\'ee par Oleg Firsov en 1953 et cit\'e dans un article de 1971\footnote{Uniqueness of the Firsov Inversion Method and Focusing Potentials, Yu.N. Demkov, V.N. Ostrovskii, et N.B. Berezina}.
+Dans ce paragraphe, nous allons r\'ealiser l'op\'eration inverse qui va consister en la mesure du champ d'\'energie potentielle \`a partir de la section efficace et de l'angle de diffussion. L'\'energie $E$ est donn\'ee et nous supposons que $U(r)$ est une fonction monotone et d\'ecroissante de $r$, i.e. un champ r\'epulsif avec $U(0) > E$ et $U(\infty) = 0$. Il s'agit de reproduire la d\'emonstration r\'ealis\'ee par Oleg Firsov en 1953 et cit\'e dans un article de 1971\footnote{Uniqueness of the Firsov Inversion Method and Focusing Potentials, Yu.N. Demkov, V.N. Ostrovskii, et N.B. Berezina}.
 
 L'\'equation (\ref{EQ:18_7}) nous donne :
 \bea
@@ -422,11 +422,11 @@ Dans un champ r\'epulsif comme suppos\'e ici avec $U(0) > E$, obtenir un angle d
 \be
 	\int_{\xi}^{\pi}\dfrac{\mathrm{d}\sigma}{\mathrm{d}\xi}\mathrm{d}\xi = \pi\rho^{2}(\xi) \label{EQ:18_EX7_1}
 \ee
-Par la suite, d\'efinissons les variables suivantes :
+Par la suite, nous d\'efinissons les variables suivantes :
 \be
 	s = \dfrac{1}{r}\text{, }x = \dfrac{1}{\rho^{2}}\text{ et }w = \sqrt{1 - \dfrac{U}{E}} \label{EQ:18_EX7_2}
 \ee
-L'utilisation des formules (\ref{EQ:18_1}) et (\ref{EQ:18_2}) permettent d'\'ecrire :
+L'utilisation des formules (\ref{EQ:18_1}) et (\ref{EQ:18_2}) permet d'\'ecrire :
 \benn
 	\dfrac{\pi - \xi}{2} = \int_{r_{min}}^{\infty}{\dfrac{\dfrac{M}{r^{2}}{\mathrm{d}r}}{\sqrt{2m(E - U(r)) - \dfrac{M^{2}}{r^{2}}}}} = \int_{r_{min}}^{\infty}{\dfrac{m\rho v_{\infty}\dfrac{\mathrm{d}r}{r^{2}}}{\sqrt{2mE\left(1 - \dfrac{U(r)}{E}\right) - \dfrac{m^{2}\rho^{2} v_{\infty}^{2}}{r^{2}}}}}
 \eenn
@@ -510,7 +510,7 @@ et :
 	& = & \int_{rw}^{\infty}\int_{0}^{\rho}\dfrac{\mathrm{d}\rho\mathrm{d}\xi}{\sqrt{\rho^{2} - r^{2}w^{2}}} = \int_{rw}^{\infty}\dfrac{\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}}\int_{\xi(\infty)}^{\xi(\rho)}\mathrm{d}\xi = \int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber \\
 	\Leftrightarrow \ln w & = & \dfrac{1}{\pi}\int_{rw}^{\infty}\dfrac{\xi(\rho)\mathrm{d}\rho}{\sqrt{\rho^{2} - r^{2}w^{2}}} \nonumber
 \eea
-car $\xi(\rho \rightarrow \infty) = 0$, i.e. l'angle de d\'eviation devient nulle pour une distance de vis\'ee infinie. Nous avons ainsi obtenu \`a obtenir la fonction $w(r)$, \'equivalente \`a $U(r)$ pour $r > r_{min}$ et en fonction de l'angle de d\'eviation $\xi$.
+car $\xi(\rho \rightarrow \infty) = 0$, i.e. l'angle de d\'eviation devient nul pour une distance de vis\'ee infinie. Nous avons ainsi r\'{e}ussi \`a obtenir la fonction $w(r)$, \'equivalente \`a $U(r)$ pour $r > r_{min}$ et en fonction de l'angle de d\'eviation $\xi$.
 
 \section{Sections efficaces}
 
@@ -606,7 +606,7 @@ Exprimons la section efficace de diffusion dans le cas de la <<~cuvette de poten
 \benn
 	\dfrac{\sin\alpha}{\sin\beta} = \sqrt{1 + \dfrac{2U_{0}}{mv_{\infty}^{2}}} = n
 \eenn
-o\`u $n$ repr\'esente un indice de r\'efraction, en faisant une similitude avec l'optique. La figure (\ref{FIG:4_19_EX2}) nous permet d'exprimer l'angle de d\'eviation $\xi$ comme $2(\alpha - \beta)$. Aussi, l'\'equation pr\'ec\'dente se d\'eveloppe en :
+o\`u $n$ repr\'esente un indice de r\'efraction, en faisant une similitude avec l'optique. La figure (\ref{FIG:4_19_EX2}) nous permet d'exprimer l'angle de d\'eviation $\xi$ comme $2(\alpha - \beta)$. Aussi, l'\'equation pr\'ec\'{e}dente se d\'eveloppe en :
 \bea
 	&  & \dfrac{1}{n} = \dfrac{\sin\beta}{\sin\alpha} = \dfrac{\sin(\alpha - \xi/2)}{\sin\alpha} = \dfrac{\sin\alpha\cos(-\xi/2) + \cos\alpha\sin(-\xi/2)}{\sin\alpha} \nonumber \\
 	& \Leftrightarrow &\dfrac{1}{n} = \cos(\xi/2) - \dfrac{\sin(\xi/2)}{\tan\alpha} \Leftrightarrow \cos(\xi/2) - \dfrac{1}{n} = \dfrac{\sin(\xi/2)}{\tan\alpha} \nonumber \\
@@ -653,13 +653,13 @@ Quelques remarques :
 
 \section{Diffusion sous de petits angles}
 
-\subsection{D\'emonstration alternative pour l\'equation (\ref{EQ:20_3})}
+\subsection{D\'emonstration alternative pour l'\'equation (\ref{EQ:20_3})}
 
 L'objectif ici est de d\'emontrer l'\'equation (\ref{EQ:20_3}) \`a partir de la relation (\ref{EQ:18_4}), \`a savoir :
 \benn
 	\varphi_{0} = \bigintss_{r_{min}}^{+\infty}{\dfrac{\frac{\rho}{r^{2}}\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}}
 \eenn
-dans le cas particulier des petites d\'eviations. Tout d'abord, remarquons que :
+dans le cas particulier des petites d\'eviations. Tout d'abord, nous remarquons que :
 \benn
 	\dfrac{\partial\left(\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}\right)}{\partial \rho} = \dfrac{1}{2}\dfrac{-2\dfrac{\rho}{r^{2}}}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}} = \dfrac{-\dfrac{\rho}{r^{2}}}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}
 \eenn
@@ -674,13 +674,13 @@ Puisque nous sommes dans le cadre des petites d\'eviations, i.e. $U \rightarrow 
 Pour le premier terme, nous nous appuyons sur l'\'equation (\ref{EQ:18_4}) alors que pour le second, nous prenons l'expression de $\varphi_{0}$ sous forme d\'eriv\'ee, soit :
 \bea
 	\varphi_{0}(U(r)) & = & \bigintss_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{\partial}{\partial\rho}\bigints_{\rho}^{\infty}\left(\dfrac{\mathrm{\partial}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}} - \dfrac{2U(r)}{mv_{\infty}^{2}}}}{\partial U}\right)_{U(r)}\cdot U(r)\mathrm{d}r \nonumber \\
-	& = & \bigintss_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{-2}{2}\dfrac{1}{mv_{\infty}^{2}\dfrac{\partial}{\partial\rho}}\bigintss_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = I + \dfrac{1}{mv_{\infty}^{2}}\dfrac{\partial}{\partial\rho}J \nonumber
+	& = & \bigintss_{\rho}^{\infty}\dfrac{\rho\mathrm{d}r}{r^{2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} - \dfrac{-2}{2}\dfrac{1}{mv_{\infty}^{2}}\dfrac{\partial}{\partial\rho}\left(\bigintss_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}}\right) = I + \dfrac{1}{mv_{\infty}^{2}}\dfrac{\partial}{\partial\rho}J \nonumber
 \eea
 Pour le calcul de $I$, posons $u = \rho/r \Rightarrow \mathrm{d}u = -\rho\mathrm{d}r/r^{2}$ qui implique $r = \rho \Rightarrow u = 1$ et $r \rightarrow \infty \Rightarrow u = 0$ et \'ecrivons :
 \benn
 	I = - \int_{1}^{0}\dfrac{\mathrm{d}u}{1 - u^{2}} = - [-\arccos u]_{1}^{0} = \arccos(0) - \arccos(1) = \dfrac{\pi}{2}
 \eenn
-Pour l'int\'egrale J, r\'ealisons son int\'egration par partie :
+Pour l'int\'egrale J, nous r\'ealisons son int\'egration par partie :
 \bea
 	J & = & \bigintss_{\rho}^{\infty}\dfrac{U(r)\mathrm{d}r}{\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}} = \bigintsss_{\rho}^{\infty}\dfrac{U(r)r\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} \nonumber \\
 	& = & [U(r)\sqrt{r^{2} - \rho^{2}}]_{\rho}^{\infty} - \bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r = - \bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{r}}\sqrt{r^{2} - \rho^{2}}\mathrm{d}r \nonumber
@@ -691,11 +691,11 @@ car :
 \eenn
 Nous en concluons donc que :
 \benn
-	\varphi_{0} = \dfrac{\pi}{2} - \dfrac{\partial}{\partial\rho}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r
+	\varphi_{0} = \dfrac{\pi}{2} - \dfrac{\partial}{\partial\rho}\left(\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r\right)
 \eenn
 Et comme finalement, $\xi = \pi - 2\varphi_{0}$, et que dans notre cas de petites d\'eviations, $\theta_{1} \approx \xi$ alors :
 \bea
-	\theta_{1} & = & \pi - \pi + 2\dfrac{\partial}{\partial\rho}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r \nonumber \\
+	\theta_{1} & = & \pi - \pi + 2\dfrac{\partial}{\partial\rho}\left(\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\sqrt{r^{2} - \rho^{2}}}{mv_{\infty}^{2}}\mathrm{d}r\right) \nonumber \\
 	& = & \dfrac{-2\rho}{mv_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}U(r)}{\mathrm{d}r}\dfrac{\mathrm{d}r}{\sqrt{r^{2} - \rho^{2}}} \nonumber
 \eea
 correspondant \`a l'\'equation (\ref{EQ:20_3}).
@@ -706,7 +706,7 @@ De facto, nous avons :
 \benn
 	\dfrac{\mathrm{d}U}{\mathrm{d}r} = -\dfrac{\alpha n}{r^{n + 1}}
 \eenn
-qui permet d'exprimer $\theta_{1}$ de la formule (\ref{EQ:20_3}), pour une particule diffus\'ee de masse $m_{1}$ ainsi :
+qui permet d'exprimer $\theta_{1}$ de la formule (\ref{EQ:20_3}), pour une particule diffus\'ee de masse $m_{1}$. Ainsi :
 \benn
 	\theta_{1} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 1}\sqrt{r^{2} - \rho^{2}}} = \dfrac{2\alpha n\rho}{m_{1}v_{\infty}^{2}}\bigintsss_{\rho}^{\infty}\dfrac{\mathrm{d}r}{r^{n + 2}\sqrt{1 - \dfrac{\rho^{2}}{r^{2}}}}
 \eenn
