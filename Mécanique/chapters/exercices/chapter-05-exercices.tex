@@ -973,11 +973,11 @@ Nous allons ici d\'{e}terminer les oscillations d'un syst\`{e}me soumis à du fr
 \benn
 	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x = \dfrac{f_{0}}{m}e^{\alpha\mathrm{t}}\cos\gamma\mathrm{t}
 \eenn
-et peut \^{e}tre prolong\'{e}e dans $\mathbb{C}$ ainsi :
+et elle peut \^{e}tre prolong\'{e}e dans $\mathbb{C}$ ainsi :
 \benn
 	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x = \dfrac{f_{0}}{m}e^{\alpha\mathrm{t} + \gamma\mathrm{t}i}
 \eenn
-Supposons que l'int\'{e}grale particuli\`{e}re soit $x = Be^{(\alpha +i\gamma)\mathrm{t}}$, alors l'\'{e}quation du mouvement devient :
+Nous supposons que l'int\'{e}grale particuli\`{e}re soit $x = Be^{(\alpha +i\gamma)\mathrm{t}}$, alors l'\'{e}quation du mouvement devient :
 \bea
 	&  & (\alpha + i\gamma)^{2}B + 2\lambda(\alpha + i\gamma)B + \omega_{0}^{2}B = \dfrac{f_{0}}{m} \Leftrightarrow B = \dfrac{f_{0}}{m\left(\alpha^{2} - \gamma^{2} + 2i\alpha\gamma + 2\lambda\alpha + 2i\alpha\gamma + \omega_{0}^{2}\right)} \nonumber \\
 	& \Leftrightarrow & B  = \dfrac{f_{0}}{m\left(\alpha^{2} - \gamma^{2} + 2\lambda\alpha + 2\gamma(\alpha  + \lambda)i + \omega_{0}^{2}\right)} = \dfrac{f_{0}\left(\alpha^{2} - \gamma^{2} + 2\lambda\alpha + \omega_{0}^{2} - 2\gamma(\alpha  + \lambda)i\right)}{m\left((\alpha^{2} - \gamma^{2} + 2\lambda\alpha + \omega_{0}^{2})^{2} + 4\gamma^{2}(\alpha  + \lambda)^{2}\right)} \nonumber
@@ -998,7 +998,7 @@ Nous allons d\'{e}terminer les fronti\`{e}res de la r\'{e}sonance param\'{e}triq
 \benn
 	x(\mathrm{t}) = a_{0}(\mathrm{t})\cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) + b_{0}(\mathrm{t})\sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right) + a_{1}(\mathrm{t})\cos\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right) + b_{1}(\mathrm{t})\sin\left(3(\omega_{0} + \epsilon/2)\mathrm{t}\right)
 \eenn
-Comme nous nous bornons \`{a} d\'{e}terminer les bornes du domaine de r\'{e}sonance param\'{e}trique, nous pouvons consid\'{e}rer $a_{0}$, $b_{0}$, $a_{1}$ et $b_{1}$ constants par rapport au temps, voir la d\'{e}monstration des in\'{e}galit\'{e}s (\ref{EQ:27_11}).
+Comme nous nous restreignons \`{a} d\'{e}terminer les bornes du domaine de r\'{e}sonance param\'{e}trique, nous pouvons consid\'{e}rer $a_{0}$, $b_{0}$, $a_{1}$ et $b_{1}$ constants par rapport au temps, voir la d\'{e}monstration des in\'{e}galit\'{e}s (\ref{EQ:27_11}).
 
 Nous avons donc en d\'{e}veloppant l'\'{e}quation (\ref{EQ:27_8}) :
 \bea
@@ -1056,11 +1056,11 @@ en ne prenant pas en consid\'{e}ration le terme en $\epsilon^{2}$ car infiniment
 
 \subsection{Limites du domaine d'instabilit\'{e}}
 
-Il s'agit ici de d\'{e}terminer le domaine d'instabilit\'{e} pour une r\'{e}sonance autour de $\Gamma = \omega_{0}$, et non plus $\Gamma = 2\omega_{0}$ comme dans l'exercice pr\'{e}c\'{e}dent. Dans ce cas, l'\'{e}quation (\ref{EQ:27_8}) s'\'{e}crit :
+Il s'agit ici de d\'{e}terminer le domaine d'instabilit\'{e} pour une r\'{e}sonance autour de $\gamma = \omega_{0}$, et non plus $\gamma = 2\omega_{0}$ comme dans l'exercice pr\'{e}c\'{e}dent. Dans ce cas, l'\'{e}quation (\ref{EQ:27_8}) s'\'{e}crit :
 \benn
 	\ddot{x} + \omega_{0}^{2}\left(1 + h\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\right) = 0
 \eenn
-pour laquelle nous chercherons alors une solution telle que :
+pour laquelle nous cherchons alors une solution telle que :
 \benn
 	x(\mathrm{t}) = a_{0}(\mathrm{t})\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right) + b_{0}(\mathrm{t})\sin\left((\omega_{0} + \epsilon)\mathrm{t}\right) + a_{1}(\mathrm{t})\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + b_{1}(\mathrm{t})\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + c_{1}
 \eenn
@@ -1125,7 +1125,7 @@ soit en d\'{e}finissant $\omega_{0}^{2} = g/l$ et $\gamma = 2\omega_{0}$ :
 \benn
 	\ddot{\varphi} + \omega_{0}^{2}\left(1 + \frac{4a}{l}\cos(2\omega_{0}\mathrm{t})\right)\varphi = 0
 \eenn
-Dans le contexte de la r\'{e}sonance param\'{e}trique, i.e. en ajoutant un inifiniment petit de fr\'{e}quence $\epsilon$, nous obtenons :
+Dans le contexte de la r\'{e}sonance param\'{e}trique, i.e. en ajoutant un infiniment petit de fr\'{e}quence $\epsilon$, nous obtenons :
 \benn
 	\ddot{\varphi} + \omega_{0}^{2}\left(1 + \frac{4a}{l}\cos((2\omega_{0} + \epsilon)\mathrm{t})\right)\varphi = 0
 \eenn
@@ -1235,7 +1235,7 @@ En nous servant de la relation (\ref{EQ:30_8}) d\'{e}finissant $U_{eff}$, nous p
 	U_{eff} = -mgl\cos\varphi + \frac{m^{2}a^{2}\gamma^{4}}{4m\gamma^{2}}\sin^{2}\varphi = mgl\left[-\cos\varphi + \frac{a^{2}\gamma^{2}}{4gl}\sin^{2}\varphi\right]
 \eenn
 
-Recherchons d\'{e}sormais les positions d'\'{e}quilibre stable qui correspondent aux minimas possibles pour l'\'{e}nergie potentielle effective $U_{eff}$. Les extrema sont d\'{e}finis par l'\'{e}quation suivante :
+Nous recherchons d\'{e}sormais les positions d'\'{e}quilibre stable qui correspondent aux minima possibles pour l'\'{e}nergie potentielle effective $U_{eff}$. Les extrema sont d\'{e}finis par l'\'{e}quation suivante :
 \bea
 	\frac{\mathrm{d}U_{eff}}{\mathrm{d}\varphi} = 0 & \Leftrightarrow & -mgl\left[\sin\varphi + \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\sin\varphi\right] \nonumber \\
 	& \Leftrightarrow & \sin\varphi\left[1 + \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\right] = 0 \nonumber
@@ -1256,7 +1256,7 @@ Nous pouvons en d\'{e}terminer sa valeur en $\varphi = 0$ et $\varphi = \pi$ :
 	\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(0) & = & mgl\left(1 + \frac{a^{2}\gamma^{2}}{2gl}\right) \nonumber \\
 	\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(\pi) & = & mgl\left(-1 + \frac{a^{2}\gamma^{2}}{2gl}\right) \nonumber
 \eea
-donc $\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(0)$ est syst\'{e}matiquement positif donc la position $\varphi = 0$ est stable. Alors que $\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(\pi)$ est positif si et seulement si $\frac{a^{2}\gamma^{2}}{2gl} > 1 \Leftrightarrow a^{2}\gamma^{2} > 2gl$. Alors la position $\varphi = \pi$ n'est stable que si la condition pr\'{e}c\'{e}dente est v\'{e}rifi\'{e}e.
+Parce que la quantit\'{e} $\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(0)$ est syst\'{e}matiquement positif alors la position $\varphi = 0$ est stable. Alors que $\frac{\mathrm{d}^{2}U_{eff}}{\mathrm{d}\varphi^{2}}(\pi)$ est positif si et seulement si $\frac{a^{2}\gamma^{2}}{2gl} > 1 \Leftrightarrow a^{2}\gamma^{2} > 2gl$. La position $\varphi = \pi$ n'est donc stable que si la condition pr\'{e}c\'{e}dente est v\'{e}rifi\'{e}e.
 
 \subsection{Positions d'\'{e}quilibre stable pour un pendule \`{a} oscillations horizontales}\label{PAR:29_EX2}
 
@@ -1268,7 +1268,7 @@ et l'\'{e}nergie potentielle effective ainsi :
 \benn
 	U_{eff} = mgl\left(-\cos\varphi + \frac{a^{2}\gamma^{2}}{2gl}\cos^{2}\varphi\right)
 \eenn
-D\'{e}terminons les positions d\'{e}quilibre :
+Nous d\'{e}terminons les positions d\'{e}quilibre :
 \benn
 	\frac{\mathrm{d}U_{eff}}{\mathrm{d}\varphi} = mgl\left(\sin\varphi - \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\sin\varphi\right) = mgl\sin\varphi\left(1 - \frac{a^{2}\gamma^{2}}{2gl}\cos\varphi\right)
 \eenn
