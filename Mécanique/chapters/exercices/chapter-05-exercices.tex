@@ -178,17 +178,17 @@ De plus, sachant que pour un angle $\alpha$, $\sin\alpha = \sqrt{1 - \cos^{2}\al
 \begin{figure}[htb!]
 	\begin{center}
 		\includegraphics[width=10cm]{chapter_05_paragraph_21_exercice_6}
-		\caption{Exemples de trajectoire pour diff\'erentes valeurs de fr\'equence telle que cette derni\`ere ne d\'epende pas de l'amplitude)}\label{FIG:5_21_EX6}
+		\caption{Exemples de trajectoires pour diff\'erentes valeurs de fr\'equence telle que cette derni\`ere ne d\'epende pas de l'amplitude)}\label{FIG:5_21_EX6}
 	\end{center}
 \end{figure}
 
 \section{Oscillations forc\'ees}
 
-Dans les excercices suivants, le syt\`eme se trouve \`a l'\'equilibre et au repos \`a l'instant $t = 0$, i.e. $x(t = 0) = 0$ et $\dot{x}(t = 0) = 0$.
+Dans les excercices suivants, le syt\`eme se trouve \`a l'\'equilibre et au repos \`a l'instant $t = 0$, i.e. $x(\mathrm{t} = 0) = 0$ et $\dot{x}(\mathrm{t} = 0) = 0$.
 
 \subsection{Mouvement dans le cas d'une force ext\'erieure non born\'ee dans le temps}
 
-Il s'agit de d\'eterminer les oscillations forc\'ees, $x(t)$, d'un syst\`eme dues \`a une force $F(t)$ dans diff\'erents cas pr\'ecis.
+Il s'agit de d\'eterminer les oscillations forc\'ees, $x(\mathrm{t})$, d'un syst\`eme dues \`a une force $F(\mathrm{t})$ dans diff\'erents cas pr\'ecis.
 
 \subsubsection{$F = F_{0}$}\label{PAR:23_EX2a}
 
@@ -199,7 +199,7 @@ Dans ce cas, l'\'equation (\ref{EQ:22_2}) s'\'ecrit :
 dont la solution g\'en\'erale sans second membre peut s'\'ecrire : $a\cos(\omega t + \alpha)$ et une int\'egrale particulière constante, dont la d\'eriv\'ee seconde par rapport au temps est \'evidemment nulle, telle que $\omega^{2}x = \frac{F_{0}}{m} \Leftrightarrow x = \frac{F_{0}}{m\omega^{2}}$. Les conditions initiales permettent de d\'eduire :
 \benn
 	\begin{cases}
-		\dot(x)(0) = 0 \Leftrightarrow -\frac{F_{0}}{m\omega^{2}}\omega\sin\alpha = 0 \Leftrightarrow \sin\alpha = 0 \Leftrightarrow \alpha = 0 \\
+		\dot{x}(0) = 0 \Leftrightarrow -\frac{F_{0}}{m\omega^{2}}\omega\sin\alpha = 0 \Leftrightarrow \sin\alpha = 0 \Leftrightarrow \alpha = 0 \\
 		x(0) = 0 \Leftrightarrow a + \frac{F_{0}}{m\omega^{2}} = 0
 	\end{cases}
 \eenn
@@ -215,7 +215,7 @@ La solution de l'\'equation (\ref{EQ:22_2}) est consiste en :
 	\item la solution g\'en\'erale sans second membre : $x_{0} = a\cos(\omega t + \alpha)$
 	\item l'int\'egrale particuli\`ere : $x_{1} = bt$ qui permet d'arriver \`a : $0 + \omega^{2}bt = \frac{F_{0}}{m}t \Leftrightarrow b = \frac{F_{0}}{m\omega^{2}}$
 \end{itemize}
-Les condtions initialies permettent les d\'eductions suivantes :
+Les conditions initiales permettent les d\'eductions suivantes :
 \benn
 	\begin{cases}
 		x(0) = 0 \Leftrightarrow \Leftrightarrow a\cos\alpha = 0 \Leftrightarrow \alpha = \pm\frac{\pi}{2} \\
@@ -229,11 +229,11 @@ donc :
 
 \subsubsection{$F = F_{0}e^{-\alpha t}$}
 
-Dans ce cas, l'int\'egrale particuli`ere est de la forme $be^{-\alpha t}$. En l'injectant dans l'\'equation (\ref{EQ:22_2}) :
+Dans ce cas, l'int\'egrale particuli\`{e}re est de la forme $be^{-\alpha t}$. En l'injectant dans l'\'equation (\ref{EQ:22_2}) :
 \benn
 	\alpha^{2}be^{-\alpha t} + \omega^{2}be^{-\alpha t} = \dfrac{F_{0}}{m}e^{-\alpha t} \Leftrightarrow b = \dfrac{F_{0}}{m(\omega^{2} + \alpha^{2})}
 \eenn
-ce qui permet d'\'ecrire le mouvement ainsi :
+cela nous permet d'\'ecrire le mouvement ainsi :
 \benn
 	x(t) = a_{1}\cos(\omega t) + a_{2}\sin(\omega t) + \dfrac{F_{0}}{m(\omega^{2} + \alpha^{2})}e^{-\alpha t}
 \eenn
@@ -260,13 +260,13 @@ permettent de conclure :
 
 Dans ce cas pr\'ecis, en remarquant que $F = \Re{(\overline{F})} = \Re{(F_{0}e^{-\alpha t}e^{i\beta t})} = \Re{(F_{0}e^{(i\beta - \alpha)t})}$, nous utiliserons les formes complexes, alors :
 \begin{itemize}
-	\item la solution g\'n\'erale sans second membre est $\overline{x_{0}} = \overline{a}e^{i\omega t + \varphi}$
+	\item la solution g\'{e}n\'{e}rale sans second membre est $\overline{x_{0}} = \overline{a}e^{i\omega t + \varphi}$
 	\item l'int\'egrale particuli\`ere est $\overline{x_{1}} = \overline{b}e^{(i\beta - \alpha)t}$
 \end{itemize}
 avec $\{a;b\} \in \mathbb{C}$. La relation (\ref{EQ:22_2}) permet d'\'ecrire :
 \bea
 	\dfrac{F_{0}}{m}e^{i(\beta - \alpha)t} & = & \overline{b}(i\beta - \alpha)^{2}e^{i(\beta - \alpha)t} + \omega^{2}\overline{b}e^{i(\beta - \alpha)t} \Leftrightarrow \overline{b} = \dfrac{F_{0}}{m(\omega^{2} + (i\beta - \alpha)^{2})} \nonumber \\
-	\overline{b} & = & \dfrac{F_{0}}{m(\omega^{2} - \beta^{2} + \alpha^{2} - 2i\alpha\beta)} = \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2} + 2i\alpha\beta)}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)} \nonumber
+	\Leftrightarrow \overline{b} & = & \dfrac{F_{0}}{m(\omega^{2} - \beta^{2} + \alpha^{2} - 2i\alpha\beta)} = \dfrac{F_{0}(\omega^{2} - \beta^{2} + \alpha^{2} + 2i\alpha\beta)}{m\left((\omega^{2} - \beta^{2} + \alpha^{2})^{2} + 4\alpha^{2}\beta^{2}\right)} \nonumber
 \eea
 La solution pour les oscillations forcées dans le domaine complexe s'\'ecrit alors en posant $a = a_{1} + ia_{2}$ avec $\{a_{2};a_{2}\} \in \mathbb{R}$ :
 \bea
@@ -315,7 +315,7 @@ Ainsi le mouvement est d\'ecrit par :
 
 \subsection{Mouvement dans le cas d'une force ext\'erieure born\'ee dans le temps}
 
-Dans cette suite d'exercices, l'objectif est de calculer l'amplitude finale des oscillations d'un système apr\`es l'action d'une force ext\'erieure telle que $F = 0$ pour $t < 0$ et qu'\`a $t = 0$, le syt\`eme est au repos et \`a l'\'equilibre, i.e. $x(t = 0) = 0$ et $\dot{x}(t = 0) = 0$.
+Dans cette suite d'exercices, l'objectif est de calculer l'amplitude finale des oscillations d'un système apr\`es l'action d'une force ext\'erieure telle que $F = 0$ pour $t < 0$ et qu'\`a $t = 0$, le syt\`eme est au repos et \`a l'\'equilibre, i.e. $x(\mathrm{t} = 0) = 0$ et $\dot{x}(\mathrm{t} = 0) = 0$.
 
 \subsubsection{Premier exemple}
 
@@ -405,7 +405,7 @@ Dans ce dernier cas, la force ext\'erieure s'exprime telle que :
 	\item $F = F_{0}\sin(\omega t)$ pour $t \in [0;T]$
 	\item $F = 0$ pour $t > T = 2\pi/\omega$
 \end{itemize}
-ainsi l'exercice de la force ext\'erieure ainsi que la dur\'ee d\'ependent d'ors et d\'ej\`a de la fr\'equence propre du syst\`eme. Par d\'efinition, $\sin(\omega t) = (e^{i\omega t} - e^{-i\omega t})/2i$ donc nous pouvons \'ecrire la force ext\'erieure comme $F(t) = \frac{F_{0}}{2i}(e^{i\omega t} - e^{-i\omega t})$ pour $t < T$. Les conditions initiales retenues impliquent que $\xi(t = 0) = 0$ aussi la relation (\ref{EQ:22_10}) donne :
+ainsi l'exercice de la force ext\'erieure et de la dur\'ee d\'ependent d'ors et d\'ej\`a de la fr\'equence propre du syst\`eme. Par d\'efinition, $\sin(\omega t) = (e^{i\omega t} - e^{-i\omega t})/2i$ donc nous pouvons \'ecrire la force ext\'erieure comme $F(t) = \frac{F_{0}}{2i}(e^{i\omega t} - e^{-i\omega t})$ pour $t < T$. Les conditions initiales retenues impliquent que $\xi(t = 0) = 0$ aussi la relation (\ref{EQ:22_10}) donne :
 \bea
 	\xi(T) & = & \dfrac{F_{0}}{2mi}e^{i\omega T}\int_{0}^{T}\left(e^{i\omega t} - e^{-i\omega t}\right)e^{-i\omega t}\mathrm{d}t = \dfrac{F_{0}}{2mi}e^{i\omega T}\int_{0}^{T}\left(1 - e^{-2i\omega t}\right)\mathrm{d}t \nonumber \\
 	& = & \dfrac{F_{0}}{2mi}e^{i\omega T}\left(T + \dfrac{1}{2i\omega}\left(e^{-2i\omega T} - 1\right)\right) = -\dfrac{F_{0}}{2m}ie^{i\omega T}\left(T - \dfrac{i}{2\omega}\left(e^{-2i\omega T} - 1\right)\right) \nonumber
@@ -450,13 +450,13 @@ En prenant, $\omega^{2} = \omega_{1}^{2}$ nous obtenons $A_{x} = A_{y}$ alors qu
 		x = \dfrac{1}{\sqrt{2}}(Q_{1} - Q_{2})
 	\end{cases}
 \eenn
-Les c{\oe}fficients $1/\sqrt{2}$ permettent d'obtenir les c{\oe}fficient $1/2$ devant les carr\'es des vitesses dans la fonction de Lagrange du syst\`eme.
+Les c{\oe}fficients $1/\sqrt{2}$ permettent d'obtenir les c{\oe}fficients $1/2$ devant les carr\'es des vitesses dans la fonction de Lagrange du syst\`eme.
 
 Dans le cas particulier o\`u $\alpha \ll \omega^{2}$ alors $\omega^{2} = \omega_{0}^{2} \pm \alpha = \omega_{0}^{2}(1 \pm \alpha/\omega_{0}^{2}) \approx \omega_{0}^{2}(1 \pm \alpha/(2\omega_{0}))$. Les degr\'es de libert\'e $x$ et $y$ sont l'addition de deux oscillations de fr\'equence voisine, avec un battement de $\omega_{2} - \omega_{1} = \alpha/\omega_{0}$.
 
 \subsection{Oscillations d'un pendule double oscillant dans un plan}
 
-Dans cet exercice, nous reprenons le pendule double introduit dans le paragraphe (\ref{PAR:5_EX1}) et illustr\'e sur la figure (\ref{FIG:1_1})) pour lequel la fonction de Lagrange du syst\`eme est :
+Dans cet exercice, nous reprenons le pendule double introduit dans le paragraphe (\ref{PAR:5_EX1}), illustr\'e sur la figure (\ref{FIG:1_1}) et pour lequel la fonction de Lagrange du syst\`eme est :
 \benn
 	L = \dfrac{m_{1}+m_{2}}{2}l_{1}^{2}\dot{\varphi_{1}}^{2} + \dfrac{m_{2}}{2}l_{2}^{2}\dot{\varphi_{2}}^{2} + m_{2}l_{1}l_{2}\cos(\varphi_{1} - \varphi_{2})\dot{\varphi_{1}}\dot{\varphi_{2}} + (m_{1}+m_{2})gl_{1}\cos(\varphi_{1}) + m_{2}gl_{2}\cos(\varphi_{2})
 \eenn
@@ -493,8 +493,8 @@ En posant $\varphi_{1} = A_{1}e^{i\omega t}$ et $\varphi_{2} = A_{2}e^{i\omega t
 L'\'equation caract\'eristique du syst\`eme est alors :
 \bea
 	(g - l_{1}\omega^{2})(g - l_{2}\omega^{2})(m_{1} + m_{2}) - m_{2}l_{1}l_{2}\omega^{4} & = & 0 \nonumber \\
-	(m_{1} + m_{2})(g^{2} - (l_{1} + l_{2})g\omega^{2} + l_{1}l_{2}\omega^{4}) - m_{2}l_{1}l_{2}\omega^{4} & = & 0 \nonumber \\
-	m_{1}l_{1}l_{2}\omega^{4} - (m_{1} + m_{2})(l_{1} + l_{2})g\omega^{2} + (m_{1} + m_{2})g^{2} & = & 0 \nonumber
+	\Leftrightarrow (m_{1} + m_{2})(g^{2} - (l_{1} + l_{2})g\omega^{2} + l_{1}l_{2}\omega^{4}) - m_{2}l_{1}l_{2}\omega^{4} & = & 0 \nonumber \\
+	\Leftrightarrow m_{1}l_{1}l_{2}\omega^{4} - (m_{1} + m_{2})(l_{1} + l_{2})g\omega^{2} + (m_{1} + m_{2})g^{2} & = & 0 \nonumber
 \eea
 et ses deux solutions sont :
 \bea
@@ -511,7 +511,7 @@ et ses deux solutions sont :
 
 \subsection{Trajectoire dans un champ central $\propto r^{2}$}\label{PAR:23_EX3}
 
-La trajectoire d'une particule dans un champ telle que l'\'energie potentielle $U$ soit \'egale \`a $\frac{kr^{2}}{2} = \frac{k(x^{2} + y^{2}}{2}$ s'effectue dans un plan. La relation (\ref{EQ:23_15}) donne pour la fonction de Lagrange de la particule :
+La trajectoire d'une particule dans un champ tel que l'\'energie potentielle $U$ soit \'egale \`a $\frac{kr^{2}}{2} = \frac{k(x^{2} + y^{2})}{2}$ s'effectue dans un plan. La relation (\ref{EQ:23_15}) donne pour la fonction de Lagrange de la particule :
 \benn
 	L = \dfrac{m}{2}(\dot{x}^{2} + \dot{y}^{2}) - \dfrac{k}{2}(x^{2} + y^{2})
 \eenn
@@ -529,15 +529,15 @@ En posant $x = A_{x}e^{i\omega t}$ et $y = A_{y}e^{i\omega t}$, le syst\`eme d'\
 		-m\omega^{2}A_{y} + kA_{y} = 0
 	\end{cases}
 \eenn
-ce qui nous donne directement $\omega^{2} = \sqrt{k/m}$. En posant $x = a\cos(\omega t)$ et $y = b\cos(\omega t + \alpha) = b\cos(\omega t)\cos\alpha - b\sin(\omega t)\sin\alpha$, sachant que $y$ peut \^etre d\'ephas\'e par rapport \`a $x$, alors :
+ce qui nous donne directement $\omega^{2} = \sqrt{k/m}$. En posant $x = a\cos(\omega t)$ et $y = b\cos(\omega t + \alpha) = b\cos(\omega t)\cos\alpha - b\sin(\omega t)\sin\alpha$, sachant que la coordonn\'{e}e $y$ peut \^etre d\'ephas\'ee par rapport \`a $x$, alors :
 \benn
 	\cos(\omega t) = \dfrac{x}{a}\text{ et }\sin(\omega t) = \dfrac{b\cos(\omega t)\cos\alpha - y}{b\sin\alpha} = \dfrac{bx\cos\alpha - ay}{ab\sin\alpha}
 \eenn
 Enfin, en s'appuyant sur l'\'egalit\'e $\cos^{2}(\omega t) + \sin^{2}(\omega t) = 1$, nous pouvons \'ecrire :
 \bea
 	\dfrac{x^{2}}{a^{2}} + \dfrac{b^{2}x^{2}\cos^{2}\alpha + a^{2}y^{2} - 2abxy\cos\alpha}{a^{2}b^{2}\sin^{2}\alpha} & = & 1 \nonumber \\
-	b^{2}x^{2}\sin^{2}\alpha + b^{2}x^{2}\cos^{2}\alpha + a^{2}y^{2} - 2abxy\cos\alpha & = & a^{2}b^{2}\sin^{2}\alpha \nonumber \\
-	b^{2}x^{2} + a^{2}y^{2} - 2abxy\cos\alpha = a^{2}b^{2}\sin^{2}\alpha \Leftrightarrow \dfrac{x^{2}}{a^{2}} + \dfrac{y^{2}}{a^{2}} - \dfrac{2xy}{ab}\cos\alpha & = & \sin^{2}\alpha \nonumber
+	\Leftrightarrow b^{2}x^{2}\sin^{2}\alpha + b^{2}x^{2}\cos^{2}\alpha + a^{2}y^{2} - 2abxy\cos\alpha & = & a^{2}b^{2}\sin^{2}\alpha \nonumber \\
+	\Leftrightarrow b^{2}x^{2} + a^{2}y^{2} - 2abxy\cos\alpha = a^{2}b^{2}\sin^{2}\alpha \Leftrightarrow \dfrac{x^{2}}{a^{2}} + \dfrac{y^{2}}{a^{2}} - \dfrac{2xy}{ab}\cos\alpha & = & \sin^{2}\alpha \nonumber
 \eea
 qui correspond \`a une ellipse dont le centre est positionn\'e \`a l'origine des coordonn\'ees.
 
@@ -577,13 +577,13 @@ Dans les trois probl\`emes suivants, il s'agit de trouver les fr\'equences des o
 			%molecule #3
 			\put(0,47){b)}
 			\linethickness{0.05mm}
-			\put(25,50){\line(1,0){150}}
-			\put(25,150){\circle*{5}}
-			\put(100,150){\circle*{5}}
-			\put(175,150){\circle*{5}}
+			\put(30,50){\line(1,0){150}}
+			\put(30,150){\circle*{5}}
+			\put(105,150){\circle*{5}}
+			\put(180,150){\circle*{5}}
 			\linethickness{0.5mm}
-			\put(25,50){\vector(-1,0){15}}
-			\put(175,50){\vector(1,0){15}}
+			\put(30,50){\vector(-1,0){15}}
+			\put(180,50){\vector(1,0){15}}
 			%molecule #4
 			\put(0,-3){c)}
 			\linethickness{0.05mm}
@@ -751,7 +751,7 @@ Nous restons dans le cas sym\'etrique o\`u $m_{A} = m_{C}$. La relation (\ref{EQ
 	\end{center}
 \end{figure}
 
-Et la relation (\ref{EQ:24_2}) permet, elle d'en d\'eduire :
+Et la relation (\ref{EQ:24_2}) permet, elle, d'en d\'eduire :
 \bea
 	& & m_{A}\begin{pmatrix}l\sin\alpha \\ l\cos\alpha \\ 0\end{pmatrix}\wedge\begin{pmatrix}x_{1} \\ y_{1} \\ 0\end{pmatrix} + m_{B}\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}\wedge\begin{pmatrix}x_{2} \\ y_{2} \\ 0\end{pmatrix} + m_{A}\begin{pmatrix}-l\sin\alpha \\ l\cos\alpha \\ 0\end{pmatrix}\wedge\begin{pmatrix}x_{3} \\ y_{3} \\ 0\end{pmatrix} = 0 \nonumber \\
 	& \Leftrightarrow & m_{A}ly_{1}\sin\alpha - m_{A}lx_{1}\cos\alpha - m_{A}ly_{3}\sin\alpha - m_{A}lx_{3}\cos\alpha = 0 \nonumber \\
@@ -787,7 +787,7 @@ Et la fonction de Lagrange de la mol\'ecule se d\'ecompose ainsi :
 	& & - \dfrac{k_{l}}{2}\left[\left[(x_{1} - x_{2})\sin\alpha + (y_{1} - y_{2})\cos\alpha\right]^{2} + \left[(x_{3} - x_{2})\cos\alpha + (y_{3} - y_{2})\sin\alpha\right]^{2}\right] \nonumber \\
 	& & - \dfrac{k_{t}}{2}l^{2}\left[(x_{1} - x_{2})\cos\alpha - (y_{1} - y_{2})\sin\alpha - (x_{3} - x_{2})\cos\alpha + (y_{3} - y_{2})\sin\alpha\right]^{2} \nonumber
 \eea
-Maintenant, introduisons les coordonn\'ees suivantes : $Q_{a} = x_{1} + x_{3}$, $q_{s1} = x_{1} - x_{3}$ et $q_{s2} = y_{1} + y_{3}$ et \'ecrivons :
+Maintenant, nous introduisons les coordonn\'ees suivantes : $Q_{a} = x_{1} + x_{3}$, $q_{s1} = x_{1} - x_{3}$ et $q_{s2} = y_{1} + y_{3}$ et \'ecrivons :
 \benn
 	\begin{cases}
 		Q_{a} + q_{s1} = 2x_{1} \Leftrightarrow x_{1} = \frac{1}{2}(Q_{a} + q_{s1}) \\
@@ -808,7 +808,7 @@ et l'\'equation (\ref{EQ:24_EX2_2}) \`a :
 		-Q_{a}\cos\alpha + (y_{1} - q_{s2} + y_{3})\sin\alpha = 0 \Leftrightarrow y_{1} = \frac{1}{2}(q_{s2} + Q_{a}\cotan\alpha)
 	\end{cases}
 \eenn
-On arrive alors \`a obtenir une fonction de Lagrange telle que celle obtenue \`a la relation (\ref{EQ:23_12}) pour la coordonn\'ee normale $Q_{a}$ d\'efinie avec :
+Nous arrivons alors \`a obtenir une fonction de Lagrange telle que celle obtenue \`a la relation (\ref{EQ:23_12}) pour la coordonn\'ee normale $Q_{a}$ d\'efinie avec :
 \benn
 	\omega_{0}^{2} = \dfrac{\dfrac{k_{l}}{4}\left(\dfrac{2m_{A}}{m_{B}} + \dfrac{1}{\sin^{2}\alpha}\right)\left(1 + \dfrac{2m_{A}}{m_{B}}\sin^{2}\alpha\right)}{\dfrac{m_{A}}{4}\left(\dfrac{2m_{A}}{m_{B}} + \dfrac{1}{\sin^{2}\alpha}\right)} = \dfrac{k_{l}}{m_{A}}\left(1 + \dfrac{2m_{A}}{m_{B}}\sin^{2}\alpha\right)
 \eenn
@@ -861,7 +861,7 @@ En remarquant que :
 	\left(\frac{2m_{A}}{m_{B}} + \frac{1}{\sin^{2}\alpha}\right)\left(1 + \frac{2m_{A}}{m_{B}}\sin^{2}\alpha\right) & = & \frac{2m_{A}}{m_{B}} + \frac{4m_{A}^{2}}{m_{B}^{2}}\sin^{2}\alpha + \frac{1}{\sin^{2}\alpha} + \frac{2m_{A}}{m_{B}} \nonumber \\
 	& = & 4\left(\frac{m_{A}}{m_{B}} + \frac{m_{A}^{2}}{m_{B}^{2}}\sin^{2}\alpha + \frac{1}{4\sin^{2}\alpha}\right) \nonumber
 \eea
-alors la fonction de Lagrance pr\'{e}c\'{e}dente s'\'{e}crit finalement :
+alors la fonction de Lagrange pr\'{e}c\'{e}dente s'\'{e}crit finalement :
 \bea
 	L & = & \frac{m_{A}}{4}\left(\frac{1}{\sin^{2}\alpha} + 2\frac{m_{A}}{m_{B}}\right)\dot{Q}_{a}^{\,2} + \frac{m_{A}}{4}\dot{q}_{s1}^{2} + \frac{m_{A}\mu}{4m_{B}}\dot{q}_{s2}^{2} - \frac{k_{l}}{4}\left(\frac{2m_{A}}{m_{B}} + \frac{1}{\sin^{2}\alpha}\right)\left(1 + \frac{2m_{A}}{m_{B}}\sin^{2}\alpha\right)Q_{a}^{2} \nonumber \\
 	& & - \left(k_{l}\sin^{2}\alpha + 2k_{t}\cos^{2}\alpha\right)\frac{q_{s1}^{2}}{4} - \left(k_{l}\cos^{2}\alpha + 2k_{t}\sin^{2}\alpha\right)\frac{\mu^{2}}{4m_{B}^{2}}q_{s2}^{2} + \frac{\mu}{2m_{B}}\cos\alpha\sin\alpha\left(2k_{t} - k_{l}\right)q_{s1}q_{s2} \nonumber
@@ -967,13 +967,13 @@ or $x_{2} = -\frac{m_{A}}{m_{B}}x_{1} - \frac{m_{C}}{m_{B}}x_{3}$ donc la foncti
 
 to be continued ...
 
-\section{Oscillation forc\'{e}es avec frottement}
+\section{Oscillations forc\'{e}es avec frottement}
 
 Nous allons ici d\'{e}terminer les oscillations d'un syst\`{e}me soumis à du frottement en pr\'{e}sence d'une force ext\'{e}rieure exprim\'{e}e ainsi : $f = f_{0}e^{\alpha\mathrm{t}}\cos\gamma\mathrm{t}$. L'\'{e}quation (\ref{EQ:26_1}) devient dans ce cas :
 \benn
 	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x = \dfrac{f_{0}}{m}e^{\alpha\mathrm{t}}\cos\gamma\mathrm{t}
 \eenn
-et peut d'\^{e}tre prolong\'{e}e dans $\mathbb{C}$ ainsi :
+et peut \^{e}tre prolong\'{e}e dans $\mathbb{C}$ ainsi :
 \benn
 	\ddot{x} + 2\lambda\dot{x} + \omega_{0}^{2}x = \dfrac{f_{0}}{m}e^{\alpha\mathrm{t} + \gamma\mathrm{t}i}
 \eenn
@@ -1023,7 +1023,7 @@ Le dernier d\'{e}veloppement se sert des formules de Simpson :
 		\cos(a)\sin(b) = \frac{1}{2}\left(\sin(a + b) - \sin(a - b)\right)
 	\end{cases}
 \eenn
-En supprimant les ordres de fr\'{e}quence sup\'{e}rieurs \`{a} $3(\omega_{0} + \epsilon/2)$, nous arrivons, en regroupant les termes, \`{a} :
+En supprimant les ordres de fr\'{e}quences sup\'{e}rieurs \`{a} $3(\omega_{0} + \epsilon/2)$, nous arrivons, en regroupant les termes, \`{a} :
 \bea
 	& & \cos\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-a_{0}\omega_{0}^{2} - a_{0}\frac{\epsilon^{2}}{4} - 2a_{0}\omega_{0}\frac{\epsilon}{2} + a_{0}\omega_{0}^{2} + \frac{a_{0}\omega_{0}^{2}h}{2} + \frac{a_{1}\omega_{0}^{2}h}{2}\right) \nonumber \\
 	& + & \sin\left((\omega_{0} + \epsilon/2)\mathrm{t}\right)\left(-b_{0}\omega_{0}^{2} - b_{0}\frac{\epsilon^{2}}{4} - 2b_{0}\omega_{0}\frac{\epsilon}{2} + b_{0}\omega_{0}^{2} - \frac{b_{0}\omega_{0}^{2}h}{2} + \frac{b_{1}\omega_{0}^{2}h}{2}\right) \nonumber \\
@@ -1056,7 +1056,7 @@ en ne prenant pas en consid\'{e}ration le terme en $\epsilon^{2}$ car infiniment
 
 \subsection{Limites du domaine d'instabilit\'{e}}
 
-Il s'agit ici de d\'{e}terminer le domaine d'instabilit\'{e} pour une r\'{e}sonnance autour de $\Gamma = \omega_{0}$, et non plus $\Gamma = 2\omega_{0}$ comme dans l'exercice pr\'{e}c\'{e}dent. Dans ce cas, l'\'{e}quation (\ref{EQ:27_8}) s'\'{e}crit :
+Il s'agit ici de d\'{e}terminer le domaine d'instabilit\'{e} pour une r\'{e}sonance autour de $\Gamma = \omega_{0}$, et non plus $\Gamma = 2\omega_{0}$ comme dans l'exercice pr\'{e}c\'{e}dent. Dans ce cas, l'\'{e}quation (\ref{EQ:27_8}) s'\'{e}crit :
 \benn
 	\ddot{x} + \omega_{0}^{2}\left(1 + h\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right)\right) = 0
 \eenn
@@ -1064,7 +1064,7 @@ pour laquelle nous chercherons alors une solution telle que :
 \benn
 	x(\mathrm{t}) = a_{0}(\mathrm{t})\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right) + b_{0}(\mathrm{t})\sin\left((\omega_{0} + \epsilon)\mathrm{t}\right) + a_{1}(\mathrm{t})\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + b_{1}(\mathrm{t})\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) + c_{1}
 \eenn
-Comme pour l'exercice pr\'{e}c\'{e}dent, nous consid\'{e}rons les c{\oe}fficients constants pour faciliter le calcul des bornes du domaine de r\'{e}sonnance param\'{e}trique. L'\'{e}quation du mouvement devient :
+Comme pour l'exercice pr\'{e}c\'{e}dent, nous consid\'{e}rons les c{\oe}fficients constants pour faciliter le calcul des bornes du domaine de r\'{e}sonance param\'{e}trique. L'\'{e}quation du mouvement devient :
 \bea
 	& & -(\omega_{0} + \epsilon)^{2}a_{0}\cos\left((\omega_{0} + \epsilon)\mathrm{t}\right) - (\omega_{0} + \epsilon)^{2}b_{0}\sin\left((\omega_{0} + \epsilon)\mathrm{t}\right) \nonumber \\
 	& & - 4(\omega_{0} + \epsilon)^{2}a_{1}\cos\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) - 4(\omega_{0} + \epsilon)^{2}b_{1}\sin\left(2(\omega_{0} + \epsilon)\mathrm{t}\right) \nonumber \\
@@ -1109,7 +1109,7 @@ Nous avons donc bien les deux limites du domaine d'instabilit\'{e}.
 
 \subsection{Conditions de r\'{e}sonance param\'{e}trique}
 
-Il s'agit ici de d\'{e}termine les conditions de la r\'{e}sonance param\'{e}trique dans le cadre du pendule d\'{e}crit dans l'exercice (\ref{PAR:5_EX3c}) dont la fonction de Lagrange calcul\'{e}e est :
+Il s'agit ici de d\'{e}terminer les conditions de la r\'{e}sonance param\'{e}trique dans le cadre du pendule d\'{e}crit dans l'exercice (\ref{PAR:5_EX3c}) dont la fonction de Lagrange calcul\'{e}e est :
 \benn
 	L = \frac{ml^{2}}{2}\dot{\varphi}^{2} + mla\gamma^{2}\cos(\gamma\mathrm{t})\cos\varphi + mgl\cos\varphi
 \eenn
@@ -1136,19 +1136,19 @@ qui est similaire \`{a} l'\'{e}quation (\ref{EQ:27_8}) avec $h=4a/l$ et $\omega_
 
 \section{Exemple de r\'{e}sonance dans les oscillations non lin\'{e}aires}\label{PAR:29_EX1}
 
-D\'{e}terminons l'amplitude $b(\epsilon)$ pour une r\'{e}sonance aux fr\'{e}quances $\gamma \approx 3\omega_{0}$. Posons $\gamma = 3\omega_{0} + \epsilon$. De la m\^{e}me mani\`{e}re qu'au paragraphe (\ref{PAR:29}), nous calculons et approchons au premier ordre $\omega_{0}^{2} - \gamma^{2} = \omega_{0}^{2} - 9\omega_{0}^{2} - \epsilon^{2} - 6\omega_{0}\epsilon \approx -8\omega_{0}^{2}$. Ainsi, en application de la relation (\ref{EQ:22_4}), la premi\`{e}re approximation $x_{0}$ est :
+D\'{e}terminons l'amplitude $b(\epsilon)$ pour une r\'{e}sonance aux fr\'{e}quences $\gamma \approx 3\omega_{0}$. Posons $\gamma = 3\omega_{0} + \epsilon$. De la m\^{e}me mani\`{e}re qu'au paragraphe (\ref{PAR:29}), nous calculons et approchons au premier ordre $\omega_{0}^{2} - \gamma^{2} = \omega_{0}^{2} - 9\omega_{0}^{2} - \epsilon^{2} - 6\omega_{0}\epsilon \approx -8\omega_{0}^{2}$. Ainsi, en application de la relation (\ref{EQ:22_4}), la premi\`{e}re approximation $x_{0}$ est :
 \benn
 	x_{0} = -\frac{f}{8m\omega_{0}^{2}}\cos\left((3\omega_{0} + \epsilon)\mathrm{t}\right)
 \eenn
 D\'{e}veloppons d\'{e}sormais l'\'{e}quation du mouvement (\ref{EQ:29_1}) en posant $x = x_{0} + x_{1}$. Nous arrivons avec tous les termes d\'{e}velopp\'{e}s, voir le paragraphe (\ref{PAR:29}) pour le d\'{e}tail :
 \bea
 	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} & = & -\alpha(x_{0}^{2} + x_{1}^{2} + 2\alpha x_{0}x_{1}) - \beta(x_{0}^{3} + x_{1}^{3} + 3x_{0}^{2}x_{1} + 3x_{0}x_{1}^{2}) \nonumber \\
-	\ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} + \alpha x_{1}^{2} + \beta x_{1}^{3} & = & -\alpha x_{0}^{2} - 2\alpha x_{0}x_{1} - \beta x_{0}^{3} - 3\beta x_{0}^{2}x_{1} - 3\beta x_{0}x_{1}^{2} \nonumber
+	\Leftrightarrow \ddot{x}_{1} + 2\lambda\dot{x}_{1} + \omega_{0}^{2}x_{1} + \alpha x_{1}^{2} + \beta x_{1}^{3} & = & -\alpha x_{0}^{2} - 2\alpha x_{0}x_{1} - \beta x_{0}^{3} - 3\beta x_{0}^{2}x_{1} - 3\beta x_{0}x_{1}^{2} \nonumber
 \eea
 La r\'{e}sonance au second ordre s'\'{e}tablit pour $\approx 6\omega_{0}$ et dans les termes du second ordre, seul celui en $x_{0}x_{1}^{2}$ permet \`{a} $x_{1}$ de pouvoir \^{e}tre une oscillation de fr\'{e}quence non nulle et non \'{e}gale \`{a} $3\omega_{0}$ qui est d\'{e}j\`{a} port\'{e}e par $x_{0}$. En effet, la fr\'{e}quence du terme :
 \begin{itemize}
 	\item $x_{0}x_{1}$ est de $3\omega_{0}$ plus la fr\'{e}quence de $x_{1}$ qui ne peut donc \^{e}tre que $3\omega_{0}$
-	\item $x_{0}^{2}x_{1}$ ne laisse pas de possibilit\'{e} pour $x_{1}$ car la fr\'{e}quence de $x_{0}^{2}$ est d\'{e}j\`{a} de $6\omega_{0}$
+	\item $x_{0}^{2}x_{1}$ ne laisse pas de possibilit\'{e}s pour $x_{1}$ car la fr\'{e}quence de $x_{0}^{2}$ est d\'{e}j\`{a} de $6\omega_{0}$
 \end{itemize}
 Pour \'{e}tudier la r\'{e}sonance envisag\'{e}e, nous pouvons donc r\'{e}duire l'\'{e}quation de seconde approximation \`{a} :
 \benn
@@ -1173,10 +1173,11 @@ Reprenons l'\'{e}quation (\ref{EQ:29_4}) en r\'{e}alisant les deux changements d
 	\end{cases}
 \eenn
 et cela nous donne :
-\benn
-	b^{2}\left[(\epsilon/3 - \xi b^{2})^{2} + \lambda^{2}\right] = \frac{1}{4m\omega_{0}^{2}}\frac{9\beta^{2}f^{2}b^{4}}{2^{10}m^{2}\omega_{0}{4}} = \frac{9\beta^{2}f^{2}}{2^{12}m^{2}\omega_{0}{6}}b^{4} = Ab^{2}
-\eenn
-dont $b = 0$ est une solution triviale. Pour $b \neq 0$, nous pouvons d\'{e}velopper ainsi :
+\bea
+	b^{2}\left[(\epsilon/3 - \xi b^{2})^{2} + \lambda^{2}\right] & = & \frac{1}{4m\omega_{0}^{2}}\frac{9\beta^{2}f^{2}b^{4}}{2^{10}m^{2}\omega_{0}^{4}} = \frac{9\beta^{2}f^{2}}{2^{12}m^{2}\omega_{0}^{6}}b^{4} \nonumber \\
+	\Leftrightarrow (\epsilon/3 - \xi b^{2})^{2} + \lambda^{2} & = & Ab^{2} \nonumber
+\eea
+dont $b = 0$ est une solution triviale. En exluant cette possibilit\'{e}, nous permettant de diviser par $b^{2}$, nous pouvons d\'{e}velopper ainsi :
 \benn
 	\frac{\epsilon^{2}}{9} + \xi^{2}b^{4} - \frac{2}{3}\epsilon\xi b^{2} + \lambda^{2} = Ab^{2} \Leftrightarrow \xi^{2}b^{4} - \left(\frac{2}{3}\epsilon\xi + A\right)b^{2} + \frac{\epsilon^{2}}{9} + \lambda^{2} = 0
 \eenn
