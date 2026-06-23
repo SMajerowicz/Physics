@@ -4,7 +4,7 @@
 
 \subsection{Calcul de la fonction de Hamilton en coordonn\'{e}es cart\'{e}siennes}\label{PAR:40_EX1}
 
-Pour un point mat\'{e}riel, nous nous basons sur le calcul de la fonction de Lagrange de la formule (\ref{EQ:4_4}) qui donne :
+Pour un point mat\'{e}riel, nous nous basons sur le calcul de la fonction de Lagrange issu de la formule (\ref{EQ:4_4}) qui donne :
 \benn
 	L = \frac{m}{2}(\dot{x}^{2} + \dot{y}^{2} + \dot{z}^{2}) - U(x,y,z)
 \eenn
@@ -41,12 +41,12 @@ Et la fonction de Hamilton en est d\'{e}duite :
 	H & = & p_{r}\dot{r} + p_{\varphi}\dot{\varphi} + p_{z}\dot{z} - \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2} + \dot{z}^{2}) + U(r,\varphi,z) \nonumber \\
 	& = & m\dot{r}^{2} + mr^{2}\dot{\varphi}^{2} + m\dot{z}^{2} - \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2} + \dot{z}^{2}) + U(r,\varphi,z) \nonumber \\
 	& = & \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\varphi}^{2} + \dot{z}^{2}) + U(r,\varphi,z) \nonumber \\
-	& = & \frac{1}{2m}\left(p_{r}^{2} + \frac{p_{\varphi}}{r^{2}}i + p_{z}\right)  + U(r,\varphi,z) \nonumber
+	& = & \frac{1}{2m}\left(p_{r}^{2} + \frac{p_{\varphi}^{2}}{r^{2}} + p_{z}\right)  + U(r,\varphi,z) \nonumber
 \eea
 
 \subsection{Calcul de la fonction de Hamilton en coordonn\'{e}es sph\'{e}riques}\label{PAR:40_EX3}
 
-Nous allons nous baser ici sur la fonction de Lagrange en coordonn\'{e}es sph\'{e}riques de la formule (\ref{EQ:4_6}) :
+Nous allons nous baser ici sur la fonction de Lagrange en coordonn\'{e}es sph\'{e}riques issue de la formule (\ref{EQ:4_6}) :
 \benn
 	L = \frac{m}{2}(\dot{r}^{2} + r^{2}\dot{\theta}^{2} + r^{2}\sin^{2}\theta\dot{\varphi}^{2}) - U(x,y,z)
 \eenn
@@ -69,10 +69,9 @@ Et la fonction de Hamilton se calcule ainsi :
 \subsection{Cas d'un syst\`{e}me \`{a} $n+1$ particules}\label{PAR:40_EX5}
 
 Nous allons ici calculer la fonction de Hamilton dans le cas o\`{u} le syst\`{e}me est compos\'{e} d'une particule de masse $M$ et de $n$ particules de masses $m$ sachant que le mouvement est rapport\'{e} au r\'{e}f\'{e}rentiel du centre d'inertie. Nous nous r\'{e}f\'{e}rons alors \`{a} la fonction de Lagrange calcul\'{e}e dans le paragraphe (\ref{PAR:13}) qui donne :
-\bea
-	L & = & \frac{m}{2}\sum_{a}\dot{\vec{r}}_{a}^{\,2} - \frac{m^{2}}{2(M + nm)}\left(\sum_{a}\dot{\vec{r}}_{a}\right)^{2} - U \nonumber \\
-	& = & \frac{m}{2}\sum_{a}\vec{v}_{a}^{\,2} - \frac{m^{2}}{2(M + nm)}\left(\sum_{a}\vec{v}_{a}\right)^{2} - U \nonumber
-\eea
+\benn
+	L = \frac{m}{2}\sum_{a}\dot{\vec{r}}_{a}^{\,2} - \frac{m^{2}}{2(M + nm)}\left(\sum_{a}\dot{\vec{r}}_{a}\right)^{2} - U = \frac{m}{2}\sum_{a}\vec{v}_{a}^{\,2} - \frac{m^{2}}{2(M + nm)}\left(\sum_{a}\vec{v}_{a}\right)^{2} - U
+\eenn
 L'impulsion de la particule $a$ a pour d\'{e}finition :
 \benn
 	\vec{p}_{a} = \frac{\partial L}{\partial \vec{v}_{a}}
@@ -102,7 +101,7 @@ et :
 ce qui nous permet de calculer la fonction de Hamilton du syst\`{e}me :
 \bea
 	H & = & \sum_{a}\vec{p}_{a}\vec{v}_{a} - L \nonumber \\
-	& = & \sum_{a}\vec{p}_{a}\left(\frac{\vec{p}_{a}}{m} + \frac{\sum_{a}\vec{p}_{a}}{M}\right) - \frac{1}{2m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{1}{2M}(\sum_{a}\vec{p}_{a})^{2} - \frac{1}{M}\sum_{a}(\vec{p}_{a}\sum_{a}\vec{p}_{a}) + U \nonumber \\
+	& = & \sum_{a}\vec{p}_{a}\left(\frac{\vec{p}_{a}}{m} + \frac{\sum_{a}\vec{p}_{a}}{M}\right) - \frac{1}{2m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{1}{2M}(\sum_{a}\vec{p}_{a})^{\,2} - \frac{1}{M}\sum_{a}(\vec{p}_{a}\sum_{a}\vec{p}_{a}) + U \nonumber \\
 	& = & \frac{1}{m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{1}{M}\sum_{a}\left(\vec{p}_{a}\sum_{a}\vec{p}_{a}\right) - \frac{1}{2m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{1}{2M}\left(\sum_{a}\vec{p}_{a}\right)^{2} - \frac{1}{M}\sum_{a}\left(\vec{p}_{a}\sum_{a}\vec{p}_{a}\right) + U \nonumber \\
 	& = & \frac{1}{2m}\sum_{a}\vec{p}_{a}^{\,2} + \frac{1}{2M}\left(\sum_{a}\vec{p}_{a}\right)^{2} + U \nonumber
 \eea
@@ -337,7 +336,7 @@ Ces expressions sont utilis\'{e}es dans le d\'{e}veloppement de la quantité $\b
 	\Leftrightarrow \beta & = & \rho p_{\rho}p_{z} - zp_{\rho}^{2} - \frac{z}{\rho^{2}}p_{\varphi}^{2} - m\alpha\frac{z}{r} - \frac{m}{2}\rho^{2}F \nonumber \\
 	\Leftrightarrow \beta & = & -m\left(\frac{\alpha z}{r} + \frac{p_{\rho}}{m}(zp_{\rho} - \rho p_{z}) + \frac{p_{\varphi}^{2}}{m\rho^{2}}z\right) - \frac{m}{2}F\rho^{2} \nonumber
 \eea
-L'expression entre parenth\`{e}ses correspond \`{a} l'int\'{e}grale premi`{e}re d'un champ purement coulombien d\'{e}fini \`{a} la formule (\ref{EQ:15_17}) et correspondant \`{a} $F = 0$ dans notre exercice.
+L'expression entre parenth\`{e}ses correspond \`{a} l'int\'{e}grale premi\`{e}re d'un champ purement coulombien d\'{e}fini \`{a} la formule (\ref{EQ:15_17}) et correspondant \`{a} $F = 0$ dans notre exercice.
 
 \subsection{Superposition de deux champs coulombiens}\label{PAR:44_EX2}
 
@@ -368,7 +367,7 @@ La soustraction de la premi\`{e}re par la seconde donne :
 \benn
 	2\beta = (\xi^{2} - 1)p_{\xi}^{2} - (1 - \eta^{2})p_{\eta}^{2} + \left(\frac{1}{\xi^{2} - 1} - \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2} + 2m\sigma^{2}\left(a(\xi) - b(\eta)\right) - 2m\sigma^{2}E(\xi^{2} + \eta^{2})
 \eenn
-La conservation de l'\'{e}nergie du syst\`{e}me, $H = E$, permet d'\'{e}crire en prenant appui sur l'expression de la fonction de Hamilont (\ref{EQ:48_20}) :
+La conservation de l'\'{e}nergie du syst\`{e}me, $H = E$, permet d'\'{e}crire en prenant appui sur l'expression de la fonction de Hamilton (\ref{EQ:48_20}) :
 \bea
 	E & = & \frac{1}{2m\sigma^{2}(\xi^{2} - \eta^{2})}\left[(\xi^{2} - 1)p_{\xi}^{2} + (1 - \eta^{2})p_{\eta}^{2} + \left(\frac{1}{\xi^{2} - 1} + \frac{1}{1 - \eta^{2}}\right)p_{\varphi}^{2}\right] \nonumber \\
 	& & + \frac{(\alpha_{1} + \alpha_{2})\xi}{\sigma(\xi^{2} - \eta^{2})} + \frac{(\alpha_{1} - \alpha_{2})\eta}{\sigma(\xi^{2} - \eta^{2})} \nonumber
@@ -538,7 +537,9 @@ Pour obtenir $\Delta I$ \`{a} partir de l'approximation (\ref{EQ:51_10}), il nou
 	\Leftrightarrow \frac{\dot{\lambda}}{\omega} & = & \frac{\alpha}{2}\frac{(a - 1)}{\left(a + e^{-\alpha\mathrm{t}}\right)\left(1 + e^{-\alpha\mathrm{t}}\right)} \nonumber
 \eea
 Cette fonction obtenue a deux p\^{o}les tels que $e^{-\alpha\mathrm{t}} = -1$ et $e^{-\alpha\mathrm{t}} = -a$.
+
 (Voir \emph{https://github.com/SMajerowicz/Physics/issues/31} pour le calcul de $\int w\mathrm{dt}$)
+
 Le calcul de l'int\'{e}grale $\int\omega\mathrm{dt}$ montre que la valeur minimale pour $\Im(w_{0})$ est obtenue pour $\alpha\mathrm{t}_{0} = -\ln(-a)$ et elle vaut :
 \benn
 	\Im(w_{0}) =
@@ -592,4 +593,4 @@ Les relations (\ref{EQ:15_4}) expriment les param\`{e}tres $p$ et $e$ de l'orbit
 	p & = & \frac{M^{2}}{m\alpha} = \frac{I_{\varphi}^{2}}{m\alpha} \nonumber \\
 	e^{2} & = & 1 + 2\frac{EM^{2}}{m\alpha^{2}} = 1 - 2\frac{I_{\varphi}^{2}}{m\alpha^{2}}\frac{m\alpha^{2}}{2(I_{r} + I_{\varphi})^{2}} = 1 - \left(\frac{I_{\varphi}}{I_{r} + I_{\varphi}}\right)^{2} \nonumber
 \eea
-$I_{r}$ et $I_{\varphi}$ sont des invariant adiabatiques. Aussi, l'excentricit\'{e} reste inchang\'{e}e quand le c{\oe}fficient $\alpha$ ou la masse $m$ varie lentement. Les dimensions de l'orbite, voir les d\'{e}finitions (\ref{EQ:15_6a}) et (\ref{EQ:15_6b}) o\`{u} $a$ et $b$ sont proportionnels \`{a} $p$, sont inversement proportionnelles \`{a} $m$ et $\alpha$.
+$I_{r}$ et $I_{\varphi}$ sont des invariants adiabatiques. Aussi, l'excentricit\'{e} reste inchang\'{e}e quand le c{\oe}fficient $\alpha$ ou la masse $m$ varie lentement. Les dimensions de l'orbite, voir les d\'{e}finitions (\ref{EQ:15_6a}) et (\ref{EQ:15_6b}) o\`{u} $a$ et $b$ sont proportionnels \`{a} $p$, sont inversement proportionnelles \`{a} $m$ et $\alpha$.
